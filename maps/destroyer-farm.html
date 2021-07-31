@@ -1,0 +1,114 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160103677-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-160103677-1');
+	</script>
+	<title> Destroyer Farm </title>
+	<script>
+		var last_modified = document.lastModified,
+			css_version = '<link id = "css-version" rel ="stylesheet" type="text/css" href="../styles.css?v='+ last_modified + '">',
+			js_version = '<script type ="text/javascript" src = "../script.js?v=' + last_modified + '">'+'</'+'script>';
+		document.write(css_version);
+		document.write(js_version);
+	</script>
+	<link rel = "shortcut icon" href = "../images/assets/peu-choya.png">
+</head>
+<body>
+	<div id = "nav"></div>
+
+	<div id = "subNav" class = "page-box">
+	</div>
+
+	<div class = "page-title">
+		<h1> Destroyer Farm </h1>
+	</div>
+
+	<!-- Add nav bar here -->
+
+	<div class = "page-box">
+
+		<div class = "page-header">
+			<h1> Farming </h1>
+			<h2> Potential Gold Per Hour </h2>
+		</div>
+
+		<div class = "page-links">
+			<p1><a href="../benchmarks.html"> Full list of benchmarks </a></p1>
+			<br><br>
+			<p1><a href="https://docs.google.com/spreadsheets/d/1HOBKHgaPbmc1uMAqupeta824hQzjhiaXBWhPXjORAZs/edit#gid=728296753" target = "_blank"> Spreadsheet </a></p1>
+		</div>
+
+		<!-- Benchmark table -->
+		<table class = "benchmark-table"> 
+			<thead> 
+				<tr>
+					<th> Farm Type </th>
+					<th> Farm </th>
+					<th> Benchmark </th>
+				</tr>
+			</thead>
+			<tbody id = "benchmark-table"></tbody>
+		</table>
+
+		<!-- 
+			HTML notation:
+			getBenchmark("[table-name]","[Name of farm 1]", etc);
+			The name of the farm has to match the name in the spreadsheet EXACTLY (spaces and all)
+		-->
+		<script> getBenchmark("benchmark-table", "Destroyer Farm"); </script>
+
+		<div class = "small-description">
+			<p1 style = "font-weight: bold;"> More details of this farm is coming soon! </p1>
+		</div>
+
+		<div class = "page-header">
+			<div class = "small-description">
+				<span style = "font-weight: bold;"> How to: </span>
+				<br>
+				<p1> Follow the <a href = "#recommendation-events" style = "text-decoration: underline;"> recommended priority of events.</a> This was a very experimental farm. At a time that Destroyer Lodestones were extremely spiking in price, I came up with this. This is essentially Draconis Mons meets Ember Bay. These are the only two maps that have a large quantity of events with Destroyers. I did a round of the meta in Draconis Mons, then went to Ember Bay to do the Karka escort, and the Molten Dominator event. Afterwards, we head back to Draconis Mons to do another meta. 
+				</p1>
+
+				</p1>
+			</div>
+		</div>
+
+	</div> <!-- End of page-box -->
+
+	<div class = "footer">
+		<div class = "inner-footer">
+
+			<div class = "footer-third">
+				<h1> Created by:  </h1>
+				<a href = "../resources/about-me.html"> Peureki.3647 </a>
+				<a href = "../resources/about-me.html"> Peureki#5452 </a>
+				<a href = "mailto: peureseachcenter@gmail.com"> peuresearchcenter@gmail.com </a>
+				<h1 style = "margin-top: 10px;"> Artwork by: </h1>
+				<a href = "https://www.twitter.com/tiffymew"> @tiffymew </a>
+			</div>
+
+			<div class = "footer-third">
+				<h1> Support </h1>
+				<a href="../supporters.html" style = "margin-bottom: 10px;"> List of supporters </a>
+				<a href="https://www.patreon.com/peureki" target = "_blank"> Patreon </a>
+				<a href="https://www.paypal.me/peureki" target = "_blank">Paypal </a>
+
+			</div>
+
+			<div class = "footer-third">
+				<h1></h1>
+				<h1></h1>
+				<h1 style = "font-weight: normal; font-size: 15px;"> Associated logos, renderings, images, and other related content are registered trademarks to ArenaNet or NCSOFT. 
+			</div>
+		</div>
+	</div>
+
+	<script> insertNav('nav', 2); </script>
+</body>
+</html>

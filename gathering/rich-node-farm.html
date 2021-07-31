@@ -1,0 +1,205 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160103677-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-160103677-1');
+	</script>
+	<title> Rich Node Farm</title>
+	<script>
+		var last_modified = document.lastModified,
+			css_version = '<link id = "css-version" rel ="stylesheet" type="text/css" href="../styles.css?v='+ last_modified + '">',
+			js_version = '<script type ="text/javascript" src = "../script.js?v=' + last_modified + '">'+'</'+'script>';
+		document.write(css_version);
+		document.write(js_version);
+	</script>
+	<link rel = "shortcut icon" href = "../images/assets/parachute-choya.png">
+</head>
+<body>
+	<div class = "nav">
+		<ul>
+			<li><a href = "../index.html">Home</a></li>
+			<li><a href = "../resources.html">Resources</a></li>
+			<li><a href = "../benchmarks.html">Benchmarks</a></li>
+			<li><a href = "../timers.html">Timers</a></li>
+			<li><a href = "../research.html">Research</a></li>
+			<li><a href = "../maps.html">Maps</a></li>
+			<li><a href = "../gathering.html">Gathering</a></li>
+		</ul>
+	</div>
+
+	<!-- Main header -->
+	<div class = "border-top">
+	</div>
+
+	<div class = "page-title">
+		<h1> Rich Node Farm </h1>
+	</div>
+
+	<div class = "border-bottom">
+	</div>
+
+	<!-- Main box -->
+	<div class = "page-box">
+
+		<div class = "page-header">
+			<h2> Potential Gold Per Hour </h2>
+		</div>
+
+		<div class = "page-links">
+			<p1><a href="../benchmarks.html"> Full list of benchmarks </a></p1>
+			<br><br>
+			<p1><a href="../gathering.html"> Full list of gathering benchmarks </a></p1>
+		</div>
+
+		<!-- Benchmark table -->
+		<table class = "benchmark-table" style = "margin-bottom: 30px;"> 
+			<thead> 
+				<tr>
+					<th> Farm </th>
+					<th> Benchmark </th>
+					<th> Time </th>
+					<th> <img style="vertical-align:middle; width: 50%;" src = "../images/assets/Unbound_Magic.png"> </th>
+					<th> <img style="vertical-align:middle; width: 50%;" src = "../images/assets/Volatile_Magic.png"></th>
+				</tr>
+			</thead>
+			<tbody id = "benchmark-table"></tbody>
+		</table>
+
+		<div class = "small-description">
+			<span style = "font-weight: bold;"> Disclaimer:</span>
+			<br>
+			Unlike regular nodes, rich nodes do not respawn in 1 hour after gathering them. You are able to switch characters/instances (if given the chance), to gather them again. The cooldown for the rich nodes are around 23-24 hours from when you gathered them. This farm does include gathering nearby nodes such as Iron, Platinum, and herbs.  
+			<br><br>
+			For Rich Iron, there is a 50% chance to each strike to obtain 2 Iron Ores instead of 1. I gathered this farm in 4 characters to reach at least an hour worth of time.   
+			
+			<br><br>
+			<b> Spreadsheet</b>
+			<br>
+			To find averages, specific loots, and more, check out the  <a href = "https://docs.google.com/spreadsheets/d/1HOBKHgaPbmc1uMAqupeta824hQzjhiaXBWhPXjORAZs/edit#gid=687162245" target = "_blank"><u> spreadsheet</u></a>.
+
+			<br><br>
+			<b> Node Farm Calculator</b>
+			<br>
+			While this farm uses specific Glyphs, check out the <a href = "../gathering.html#calculator" target = "_blank"><u> Node Farm Calcaulator</u></a> to test out the estimated profits with different Glyphs. What are displayed in the benchmarks are not neccessarily the best Glyphs to use for maximum profits.
+
+			<br><br>
+			Thanks to Loki.6081 for the suggestion of a much better route!
+		
+		</div>
+
+		<table class = "text-picture">
+			<tr>
+				<td> <b>Brisband Wildland:</b> Gallowfields Waypoint [&BGMAAAA=]. </td>
+				<td> <img style = "width: 50%;" src = "../images/rich-node-farm/brisband.jpg"></td>
+			</tr>
+			<tr>
+				<td> <b>Kessex Hills:</b> Overlord's Waypoint [&BAQAAAA=] (west side). If this rich node is Silver, then the two rich nodes in the east side will both be Iron. If this rich node is Iron, then one of the two rich nodes in the east side will be Iron. Check the closest rich node near the east waypoint to see if it's Iron. If not, then the last rich Iron is in a cave marked as a circle on the map. 
+				<br><br>
+				East: Cereboth Waypoint [&BBIAAAA=] </td>
+				<td> <img style = "width: 90%;" src = "../images/rich-node-farm/kessex.jpg"></td>
+			</tr>
+			<tr>
+				<td> <b>Harathi Hinterlands:</b> Demetra Waypoint [&BKsAAAA=] </td>
+				<td> <img style = "width: 40%;" src = "../images/rich-node-farm/harathi.jpg"></td>
+			</tr>
+			<tr>
+				<td> <b>Gendarran Fields:</b> Icegate Waypoint [&BJMBAAA=] </td>
+				<td> <img style = "width: 60%;" src = "../images/rich-node-farm/gendarran.jpg"></td>
+			</tr>
+			<tr> 
+				<td> <b>Lonar's Pass</b>: Icedevil's Waypoint [&BFEGAAA=] </td>
+				<td> <img style = "width: 50%;" src = "../images/rich-node-farm/lornar.jpg"></td>
+			</tr>
+			<tr>
+				<td> <b>Snowden's Drift:</b> Snowhawk Landing Waypoint [&BL8AAAA=] </td>
+				<td> <img style = "width: 50%;" src = "../images/rich-node-farm/snowden.jpg"></td>
+			</tr>
+			<tr>
+				<td> <b>Diessa Plateu:</b> Oldgate Waypoint [&BF4BAAA=]</td>
+				<td> <img style = "width: 60%;" src = "../images/rich-node-farm/diessa.jpg"></td>
+			</tr>
+			<tr>
+				<td> <b>Fireheart Rise:</b> Rustbowl Waypoint [&BB4CAAA=]
+					 <br><br> Breaktooth's Waypoint [&BBoCAAA=] </td>
+				<td> <img style = "width: 70%;" src = "../images/rich-node-farm/fireheart.jpg"></td>
+			</tr>
+			<tr>
+				<td> <b>Iron Marches:</b> Gladefall Waypoint [&BO4BAAA=] 
+					 <br><br> Grostogg's Kraal Waypoint [&BO8BAAA=]</td>
+				<td> <img style = "width: 80%;" src = "../images/rich-node-farm/iron.jpg"></td>
+			</tr>
+			<tr>
+				<td> <b>Blazeridge Steppes:</b> Behem Waypoint [&BP0BAAA=]</td>
+				<td> <img style = "width: 80%;" src = "../images/rich-node-farm/blazeridge.jpg"></td>
+			</tr>
+			<tr>
+				<td> <b>Field of Ruins:</b> Helliot Mine Waypoint [&BEsBAAA=]</td>
+				<td> <img style = "width: 50%;" src = "../images/rich-node-farm/field.jpg"></td>
+			</tr>
+			<tr>
+				<td> <b>Dredgehaunt Cliffs:</b> Wyrmblood Waypoint [&BGUCAAA=]</td>
+				<td> <img style = "width: 50%;" src = "../images/rich-node-farm/dredgehaunt.jpg"></td>
+			</tr>
+			<tr>
+				<td> <b>Bloodtide Coast:</b> Mournful Waypoint [&BK0BAAA=] </td>
+				<td> <img style = "width: 50%;" src = "../images/rich-node-farm/bloodtide.jpg"></td>
+			</tr>
+			<tr>
+				<td> <b>Sparkfly Fen:</b> Ocean's Gullet Waypoint [&BMkBAAA=]
+					 <br><br> The west waypoint's node is guarded by a Champion Spider. If you can avoid the champ, it's worth it. Otherwise, skip this. 
+					 <br><br> Saltflood Waypoint [&BMcBAAA=] </td>
+				<td> <img style = "width: 80%;" src = "../images/rich-node-farm/sparkfly.jpg"></td>
+			</tr>
+			<tr>
+				<td> <b>Timberline Falls:</b> Gentle River Waypoint [&BFACAAA=] </td>
+				<td> <img style = "width: 60%;" src = "../images/rich-node-farm/timberline.jpg"></td>
+			</tr>
+			<tr>
+				<td> <b>Mount Maelstrom:</b> Criterion Waypoint [&BMkCAAA=]
+					<br><br> Old Sledge Site Waypoint [&BNQCAAA=]</td>
+				<td> <img style = "width: 80%;" src = "../images/rich-node-farm/mount.jpg"></td>
+			</tr>
+		</table>
+
+
+		<script> getGatheringBenchmark("benchmark-table","Rich Node Farm (w/ Volatile)"); </script>
+
+	</div> <!-- End of page-box -->
+	<div class = "footer">
+		<div class = "inner-footer">
+			<div class = "logo-container">
+				<img src = "../images/assets/peu-choya.png">
+			</div>
+
+			<div class = "footer-third">
+				<h1> Created by:  </h1>
+				<a href = "../resources/about-me.html"> Peureki.3647 </a>
+				<a href = "../resources/about-me.html"> Peureki#5452 </a>
+				<a href = "mailto: peubadoo@gmail.com"> peubadoo@gmail.com </a>
+				<h1 style = "margin-top: 10px;"> Artwork by: </h1>
+				<a href = "https://www.twitter.com/tiffymew"> @tiffymew </a>
+			</div>
+
+			<div class = "footer-third">
+				<h1> Support </h1>
+				<a href="../supporters.html" style = "margin-bottom: 10px;"> List of supporters </a>
+				<a href="https://www.patreon.com/peureki" target = "_blank"><img src = "../images/assets/patreon.jpg" style = "width: 15%;"> Patreon </a>
+				<a href="https://www.paypal.me/peureki" target = "_blank"><img src = "../images/assets/paypal.png" style = "width: 15%;"> Paypal </a>
+
+			</div>
+
+			<div class = "footer-third">
+				<h1></h1>
+				<h1></h1>
+				<h1 style = "font-weight: normal; font-size: 15px;"> Associated logos, renderings, images, and other related content are registered trademarks to ArenaNet or NCSOFT. 
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160103677-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-160103677-1');
+	</script>
+	<title> Tangled Depths </title>
+	<script>
+		var last_modified = document.lastModified,
+			css_version = '<link id = "css-version" rel ="stylesheet" type="text/css" href="../styles.css?v='+ last_modified + '">',
+			js_version = '<script type ="text/javascript" src = "../script.js?v=' + last_modified + '">'+'</'+'script>';
+		document.write(css_version);
+		document.write(js_version);
+	</script>
+	<link rel = "shortcut icon" href = "../images/assets/peu-choya.png">
+</head>
+<body>
+	<div id = "navbar" class = "navbar"></div>
+	<div id = "subNav"></div>
+
+	<div class = "page-title">
+		<h1> Tangled Depths </h1>
+	</div>
+
+	<div class = "page-box">
+
+		<div class = "page-header">
+			<h1> Farming </h1>
+			<h2> Potential Gold Per Hour </h2>
+		</div>
+
+		<div class = "page-links">
+			<p1><a href="../benchmarks.html"> Full list of benchmarks </a></p1>
+			<br><br>
+			<p1><a href="../timers/tangled-depths.html"> Timers </a></p1>
+			<br><br>
+			<p1><a href="https://docs.google.com/spreadsheets/d/1HOBKHgaPbmc1uMAqupeta824hQzjhiaXBWhPXjORAZs/edit#gid=526398681" target = "_blank"> Spreadsheet </a></p1>
+		</div>
+
+		<!-- Benchmark table -->
+		<table class = "benchmark-table"> 
+			<thead> 
+				<tr>
+					<th> Farm Type </th>
+					<th> Farm </th>
+					<th> Benchmark </th>
+				</tr>
+			</thead>
+			<tbody id = "benchmark-table"></tbody>
+		</table>
+
+		<!-- 
+			HTML notation:
+			getBenchmark("[table-name]","[Name of farm 1]", etc);
+			The name of the farm has to match the name in the spreadsheet EXACTLY (spaces and all)
+		-->
+		<script> getBenchmark("benchmark-table", "Tangled Depths (Baubles)"); </script>
+
+		<div class = "small-description">
+			<p1 style = "font-weight: bold;"> More details of this farm is coming soon! </p1>
+		</div>
+
+		<div class = "page-header">
+			<div class = "small-description">
+				<span style = "font-weight: bold;"> How to: </span>
+				<br>
+				<p1> Follow the <a href = "#recommendation-events" style = "text-decoration: underline;"> recommended priority of events.</a> This farm is only this profitable when Tangled Depths has the map bonus reward as Shiny Baubles. Otherwise, you can imagine the gold per hour will drop a bit. For this farm, I start around the time a fresh map would start. Unlike other HoT maps, a failed and unprepared meta will result in a fresh map right away. From here, I start right away with outpost events. My order for outpost events goes as the following:
+
+				<br><br>
+				- Nuhoch Outpost - First 2 events (making sure the 1st does not bug)
+				<br> - Ogre Outpost - All 
+				<br> - Rata Outpost - All 
+				<br> - SCAR Outpost - All 
+				<br> - Nuhoch Outpost - Rest
+				<br><br>
+				Both Rata and SCAR can change in order. The order is dependent on if other players outside of the squad are doing the events. Most of the time, someone is doing them and progressing them (and that's okay!). Once an outpost is done, I make sure to mark it on my <a href = "../timers/tangled-depths.html" style = "text-decoration: underline;"> timer page.</a> This is to start all the event spawn timers since they only start when you finish an outpost. From there, it's just event after event after event. It will be a non-stop event train until the meta (the timer page will go crazy!). This benchmark does include doing the meta. 
+				</p1>
+
+				</p1>
+			</div>
+		</div>
+
+	</div> <!-- End of page-box -->
+
+	<div class = "footer">
+		<div class = "inner-footer">
+
+			<div class = "footer-third">
+				<h1> Created by:  </h1>
+				<a href = "../resources/about-me.html"> Peureki.3647 </a>
+				<a href = "../resources/about-me.html"> Peureki#5452 </a>
+				<a href = "mailto: peureseachcenter@gmail.com"> peuresearchcenter@gmail.com </a>
+				<h1 style = "margin-top: 10px;"> Artwork by: </h1>
+				<a href = "https://www.twitter.com/tiffymew"> @tiffymew </a>
+			</div>
+
+			<div class = "footer-third">
+				<h1> Support </h1>
+				<a href="../supporters.html" style = "margin-bottom: 10px;"> List of supporters </a>
+				<a href="https://www.patreon.com/peureki" target = "_blank"> Patreon </a>
+				<a href="https://www.paypal.me/peureki" target = "_blank">Paypal </a>
+
+			</div>
+
+			<div class = "footer-third">
+				<h1></h1>
+				<h1></h1>
+				<h1 style = "font-weight: normal; font-size: 15px;"> Associated logos, renderings, images, and other related content are registered trademarks to ArenaNet or NCSOFT. 
+			</div>
+		</div>
+	</div>
+
+	<script> insertNav('navbar', 2); </script>
+</body>
+</html>

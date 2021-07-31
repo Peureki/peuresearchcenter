@@ -1,0 +1,463 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160103677-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-160103677-1');
+	</script>
+	<title> Builds </title>
+	<script>
+		var last_modified = document.lastModified,
+			css_version = '<link id = "css-version" rel ="stylesheet" type="text/css" href="../styles.css?v='+ last_modified + '">',
+			js_version = '<script type ="text/javascript" src = "../script.js?v=' + last_modified + '">'+'</'+'script>';
+			js_fullTimers_version = '<script type ="text/javascript" src = "./full-timers.js?v=' + last_modified + '">'+'</'+'script>';
+		document.write(css_version);
+		document.write(js_version); 
+	</script>
+	<link rel = "shortcut icon" href = "../images/assets/peu-choya.png">
+</head>
+<body>
+
+	<div class = "nav">
+		<ul>
+			<li><a href = "../index.html">Home</a></li>
+			<li><a href = "../resources.html">Resources</a></li>
+			<li><a href = "../benchmarks.html">Benchmarks</a></li>
+			<li><a href = "../timers.html">Timers</a></li>
+			<li><a href = "../research.html">Research</a></li>
+			<li><a href = "../maps.html">Maps</a></li>
+			<li><a href = "../gathering.html">Gathering</a></li>
+		</ul>
+	</div>
+
+	<div  class = "homepage-title">
+		<h1 id = "title" > Builds </h1>
+	</div>
+
+	<div class = "page-box">
+		<div style = "display: flex; align-items: flex-start; justify-content: center;">
+			<div class = "left-side-box">
+
+				<style> 
+					.inner-left-side-box img{
+						width: 64px;
+						height: 64px;
+					}
+				</style>
+
+				<div onclick = "showMaterial(0);" class = "inner-left-side-box">
+					<img src = "../images/assets/icons/Elementalist.png">
+				</div>
+
+				<div onclick = "showMaterial(1);" class = "inner-left-side-box">
+					<img src = "../images/assets/icons/Mesmer.png">
+				</div>
+
+				<div onclick = "showMaterial(2);" class = "inner-left-side-box">
+					<img src = "../images/assets/icons/Necromancer.png">
+				</div>
+
+				<div onclick = "showMaterial(3);" class = "inner-left-side-box">
+					<img src = "../images/assets/icons/Engineer.png">
+				</div>
+
+				<div onclick = "showMaterial(4);" class = "inner-left-side-box">
+					<img src = "../images/assets/icons/Thief.png">
+				</div>
+
+				<div onclick = "showMaterial(5);" class = "inner-left-side-box">
+					<img src = "../images/assets/icons/Ranger.png">
+				</div>
+
+				<div onclick = "showMaterial(6);" class = "inner-left-side-box">
+					<img src = "../images/assets/icons/Warrior.png">
+				</div>
+
+				<div onclick = "showMaterial(7);" class = "inner-left-side-box">
+					<img src = "../images/assets/icons/Guardian.png">
+				</div>
+
+				<div onclick = "showMaterial(8);" class = "inner-left-side-box">
+					<img src = "../images/assets/icons/Revenant.png">
+				</div>
+			</div>
+
+			<div id = "main-info-box" class = "main-info-box">
+				<!-- Ele -->
+				<div class = "small-description" style = "display: none;">
+					<b> Overview </b>
+					<br>Elementalists are great farming classes, but require a more of a learning curve compared to other classes. The class is very rewarding the more you master it. All builds can be extremely squishy, but pack a punch with great area coverage. In terms of farming, I'll try to keep it simple as possible!</p> 
+
+					<br>
+					<b> Builds </b>
+					<br> <b>1) <img src = "../images/assets/icons/Fresh_Air.png"> Fresh Air Tempest</b>
+					<br><p class = "indent"><b>Gear stat:</b> Berserker, Assassins, or Marauder
+						<br> <b>Weapons (in preferred combination):</b> Dagger/Warhorn, Dagger/Dagger, Dagger/Focus, Staff, Scepter/Anything  
+						<br> <b>Traits:</b> <input id = "ele-fresh-air" type = "text" value = "[&DQYpKx8dMBt0AAAAwxIAAL4BAADLAAAAlgAAAAAAAAAAAAAAAAAAAAAAAAA=]"></input> <button onclick="copyText('ele-fresh-air');">Copy build</button>
+						<br> <b>Difficulty: </b></p>
+
+						<div id = "box-6" class = "inner-page-box">
+							<div class = "full-progress-box">
+								<div class = "full-progress-bar" style = "height: 89%; width: 61%; background: #F878C5;">
+								</div>
+
+								<div class = "full-timer-left">
+
+									<div style = "display: flex; align-content: space-around; justify-content: center; padding-left: 0px;">
+										<div style = "height: 27px; width: 20%;"></div>
+										<div style = "height: 27px; width: 20%; border-left: 2px solid black;"></div>
+										<div style = "height: 27px; width: 20%; border-left: 2px solid black;"></div>
+										<div style = "height: 27px; width: 20%; border-left: 2px solid black;"></div>
+										<div style = "height: 27px; width: 20%; border-left: 2px solid black;"></div>
+									</div>
+			
+								</div>
+							</div>
+						</div> <!-- End of DS chest time -->
+
+					<p class = "indent">
+						<br><br><b>About:</b> The main focus of this build is the trait, <img src = "../images/assets/icons/Fresh_Air.png"> Fresh Air. As long as you crit outside of <img src = "../images/assets/icons/Air_Attunement.png"> Air Attunement, you will instantly refresh it! In combination with the trait, <img src = "../images/assets/icons/Transcendent_Tempest.png"> Transcendent Tempest, your <img src = "../images/assets/icons/Overload_Air.png"> Overload Air will be in reduced cooldown.
+
+						<br><br>Any weapon can be used for this build! I prefer to use Dagger mainhand for the quick ability to attack and tag mobs around me with Warhorn bringing more damage over time skills. Focus works great for survivability/utility. Staff is a great range/melee option, but can be slow in it's attacks. Scepter is somewhat single target, but requires more focus on specific targets to be able to hit more than 1 at a time. 
+
+						<br><br><b>Simple Rotation</b>
+						<br> 1. Start in <img src = "../images/assets/icons/Air_Attunement.png"> Air Attunement
+						<br> 2. <img src = "../images/assets/icons/Overload_Air.png"> Overload Air 
+						<br> 3. Switch to any other attunement (preferrably <img src = "../images/assets/icons/Fire_Attunement.png"> Fire for easy damage)
+						<br> 4. Any skill, including auto attacks, to crit to refresh <img src = "../images/assets/icons/Air_Attunement.png"> Air Attunement
+						<br> 5. Repeat 1-5 
+
+						<br><br><b>Great skills</b>
+						<br><b>Greatsword</b>
+						<br> <img src = "../images/assets/icons/Overload_Air.png"> Overload Air (duh :P) - Large pulsing AoE, but only striking up to 3 targets at a time 
+						<br> <img src = "../images/assets/icons/Lightning_Whip.png"> Lightning Whip - Quick air auto attack hitting foes in front of you
+						<br> <img src = "../images/assets/icons/Convergence.png"> Convergence - Large, quick AoE surrounding you. Foes hit will grant <img src = "../images/assets/icons/Fury.png"> Fury 
+						<br> <img src = "../images/assets/icons/Drake's_Breath.png"> Drake's Breath - Hits foes in front of you and can easily move around to hit more
+						<br> <img src = "../images/assets/icons/Dragon's_Claw.png"> Dragon's Claw - Quick fire auto attack hitting foes in front of you and pierces
+						<br> <img src = "../images/assets/icons/Burning_Speed.png"> Burning Speed - Mobility, large AoE on impact 
+						<br> <img src = "../images/assets/icons/Ride_the_Lightning.png"> Ride the Lightning - Mobility
+						<br><img src = "../images/assets/icons/Updraft.png"> Updraft - CC
+						<br><img src = "../images/assets/icons/Shocking_Aura.png"> Shocking Aura &#x2192; <img src = "../images/assets/icons/Transmute_Lightning.png"> Transmute Lightning - CC
+
+					</p>
+
+	
+				</div>
+
+				<!-- Mesmer -->
+				<div class = "small-description" style = "display: none;">
+					<b> Overview </b>
+					<br>Mesmers can be one of the best tagging classes in the game, but lack in pure damage (unless swapped to an actual DPS build, of course). Below are some great options for tagging that include having massive range and mobility. </p> 
+
+					<br>
+					<b> Builds </b>
+					<br> <b>1) <img src = "../images/assets/icons/Mirage_Cloak.png"> Lazer Lightshow Mirage</b>
+					<br><p class = "indent"><b>Gear stat:</b> Berserker, Assassins, or Marauder
+						<br> <b>Weapons (in preferred combination):</b> Greatsword & Sword/Focus 
+						<br> <b>Traits:</b> <input id = "mesmer-lazer-lightshow" type = "text" value = "[&DQcKGgE9OxkjDw8BaQGAAWUBZwGAAWYBRhftEgAAAAAAAAAAAAAAAAAAAAA=]"></input> <button onclick="copyText('mesmer-lazer-lightshow');">Copy build</button>
+						<br> <b>Difficulty: </b></p>
+
+						<div id = "box-6" class = "inner-page-box">
+							<div class = "full-progress-box">
+								<div class = "full-progress-bar" style = "height: 89%; width: 21%; background: #9C58C6;">
+								</div>
+
+								<div class = "full-timer-left">
+
+									<div style = "display: flex; align-content: space-around; justify-content: center; padding-left: 0px;">
+										<div style = "height: 27px; width: 20%;"></div>
+										<div style = "height: 27px; width: 20%; border-left: 2px solid black;"></div>
+										<div style = "height: 27px; width: 20%; border-left: 2px solid black;"></div>
+										<div style = "height: 27px; width: 20%; border-left: 2px solid black;"></div>
+										<div style = "height: 27px; width: 20%; border-left: 2px solid black;"></div>
+									</div>
+			
+								</div>
+							</div>
+						</div> <!-- End of DS chest time -->
+
+					<p class = "indent">
+						<br><br><b>About:</b> The main focus of this build is the minor trait, <img src = "../images/assets/icons/Mirage_Cloak_Effect.png"> Mirage Cloak. This allows all auto attacks to change functionality for the next attack after a dodge. For Greatsword, it allows the player to shoot multiple foes with lazer beams (pierces). In conjunction with the trait, <img src = "../images/assets/icons/Infinite_Horizon.png"> Infinite Horizon, all clones will also do a lazer beam to foes around them. 
+
+						<br><br> Sword/Focus is mainly used to give NPCs swiftness to move faster or to pull enemies in a central location, both by using the skill, <img src = "../images/assets/icons/Temporal_Curtain.png"> Temporal Curtain.  
+
+						<br><br><b>Simple Rotation</b>
+						<br> 1. Start on Greatsword
+						<br> 2. <img src = "../images/assets/icons/Mirror_Blade.png"> Mirror Blade
+						<br> 3. <img src = "../images/assets/icons/Jaunt.png"> Jaunt or <img src = "../images/assets/icons/Phantasmal_Berserker.png"> Phantasmal Berserker
+						<br> 4. Dodge (<img src = "../images/assets/icons/Mirage_Cloak_Effect.png"> Mirage Cloak)
+						<br> 5. Auto Attack
+						<br> 6. Repeat 4-5 or Repeat 1-6 for new targets/lost clones
+
+						<br><br><b>Great skills</b>
+						<br><b>Greatsword</b>
+						<br> Auto attack - Pierces, 1200 range. Your ultimate tagging ability, esp after dodging
+						<br> <img src = "../images/assets/icons/Mirror_Blade.png"> Mirror Blade - Bounces and summons a clone
+						<br> <img src = "../images/assets/icons/Mind_Stab.png"> Mind Stab - Quick AoE and 1 boon rip
+						<br> <img src = "../images/assets/icons/Phantasmal_Berserker.png"> Phantasmal Berserker - Dash attack on a selected target to hit multiple foes, good damage, and summons a clone at the end
+						<br><img src = "../images/assets/icons/Illusionary_Wave.png"> Illusionary Wave - CC, knockback
+
+						<br><br><b>Sword/Focus</b>
+						<br> Auto attack - When dodged, the next attack leaps you. Good mobility 
+						<br><img src = "../images/assets/icons/Blurred_Frenzy.png"> Blurred Frenzy - 1 sec evade, good damage
+						<br><img src = "../images/assets/icons/Illusionary_Leap.png"> Illusionary Leap - Summons 1 clone, use it again to swap positions from you to your new clone
+						<br><img src = "../images/assets/icons/Temporal_Curtain.png"> Temporal Curtain - Area swiftness for anyone who passes through, including most NPCs. Use it again to pull foes into the center of the AoE
+						<br><img src = "../images/assets/icons/Phantasmal_Warden.png"> Phantasmal Warden - Good damage, summons 1 clone afterwards
+
+						<br><br><b>Utility</b>
+						<br><img src = "../images/assets/icons/Signet_of_the_Ether.png">Signet of the Ether (heal) - Use again to refresh Phantasmal skills
+						<br><img src = "../images/assets/icons/Mantra_of_Pain.png"> Mantra of Pain &#x2192; <img src = "../images/assets/icons/Power_Spike.png"> Power Spike - Instant AoE damage around a foe. Great to quickly hit something out of sight
+						<br><img src = "../images/assets/icons/Blink.png"> Blink - Breakstun, great mobility
+						<br><img src = "../images/assets/icons/Signet_of_Inspiration.png"> Signet of Inspiration - Swiftness uptime
+						<br><img src = "../images/assets/icons/Jaunt.png"> Jaunt - Small teleport. Use in conjuction with the trait, <img src = "../images/assets/icons/Self-Deception.png"> Self Deception, to summon a clone instantly
+
+					</p>
+				</div>
+
+				<!-- Necromancer -->
+				<div class = "small-description" style = "display: none;">
+					<b> Overview </b>
+					<br>Necros are high in survivability by default. These builds are all about large coverage with at least some damage packed into them. </p> 
+
+					<br>
+					<b> Builds </b>
+					<br> <b>1) <img src = "../images/assets/icons/Sand_Savant.png"> Shady Scourge</b>
+					<br><p class = "indent"><b>Gear stat:</b> Berserker, Assassins, or Marauder
+						<br> <b>Weapons (in preferred combination):</b> Staff and Dagger/Warhorn
+						<br> <b>Traits:</b> <input id = "necro-shady" type = "text" value = "[&DQg1KTImPBmiAAAAQAEAAHIWAAB2AQAAlQAAAAAAAAAAAAAAAAAAAAAAAAA=]"></input> <button onclick="copyText('necro-shady');">Copy build</button>
+						<br> <b>Difficulty: </b></p>
+
+						<div id = "box-6" class = "inner-page-box">
+							<div class = "full-progress-box">
+								<div class = "full-progress-bar" style = "height: 89%; width: 41%; background: #6AB951">
+								</div>
+
+								<div class = "full-timer-left">
+
+									<div style = "display: flex; align-content: space-around; justify-content: center; padding-left: 0px;">
+										<div style = "height: 27px; width: 20%;"></div>
+										<div style = "height: 27px; width: 20%; border-left: 2px solid black;"></div>
+										<div style = "height: 27px; width: 20%; border-left: 2px solid black;"></div>
+										<div style = "height: 27px; width: 20%; border-left: 2px solid black;"></div>
+										<div style = "height: 27px; width: 20%; border-left: 2px solid black;"></div>
+									</div>
+			
+								</div>
+							</div>
+						</div> <!-- End of DS chest time -->
+
+					<p class = "indent">
+						<br><br><b>About:</b> The main focus of this build is the major trait, <img src = "../images/assets/icons/Sand_Savant.png"> Sand Savant. This allows the player to use only 1 shade at a time, but the shade is much large and can hit up to 5 targets. This increase does apply to the player too. With good positioning, the shade and the player could hit up to 10 targets, covering a massive area of mobs. 
+
+						<br><br> Staff is used for more long-range AoE tagging and Dagger/Focus is used for damage/quick life force.  
+
+						<br><br><b>Simple Rotation</b>
+						<br> 1. Drop your <img src = "../images/assets/icons/Manifest_Sand_Shade.png"> shade to your desire location
+						<br> 2. <img src = "../images/assets/icons/Desert_Shroud.png"> Desert Shroud
+						<br> 3. Anything else. Repeat 1 if there's a new location of mobs
+
+						<br><br><b>Great skills</b>
+						<br><b>Staff</b> - All can produce life generation thanks to the trait, <img src = "../images/assets/icons/Soul_Marks.png"> Soul Marks
+						<br> Auto attack - Pierces, 1200 range, life generation
+						<br> <img src = "../images/assets/icons/Mark_of_Blood.png"> Mark of Blood - Low cooldown AoE 
+						<br> <img src = "../images/assets/icons/Chillblains.png"> Chillblains - AoE <img src = "../images/assets/icons/Chilled.png"> chill
+						<br> <img src = "../images/assets/icons/Putrid_Mark.png"> Putrid Mark - Stronger AoE damage
+						<br><img src = "../images/assets/icons/Reaper's_Mark.png"> Reaper's Mark - AoE <img src = "../images/assets/icons/Fear.png"> fear
+
+						<br><br><b>Dagger/Warhorn</b>
+						<br> Auto attack - Damage, life force generation
+						<br><img src = "../images/assets/icons/Wail_of_Doom.png"> Wail of Doom - CC
+						<br><img src = "../images/assets/icons/Locust_Swarm.png"> Locus Swarm - Quickly generate life force from foes around you
+
+						<br><br><b>Utility</b>
+						<br><img src = "../images/assets/icons/Well_of_Darkness.png">Well of Darkness - Damage, <img src = "../images/assets/icons/Blinded.png"> blind, pulsing AoE
+						<br><img src = "../images/assets/icons/Trail_of_Anguish.png"> Trail of Anguish - 10-man <img src = "../images/assets/icons/Swiftness.png"> Swiftness in a trail behind the caster
+						<br><img src = "../images/assets/icons/Signet_of_the_Locust.png"> Signet of the Locust - Perma 25% movement speed
+						<br><img src = "../images/assets/icons/Summon_Flesh_Golem.png"> Flesh Golem - Large CC
+
+						<br><br><b>Other Utilities</b>
+						<br><img src = "../images/assets/icons/Well_of_Darkness.png">Well of Darkness - Damage, <img src = "../images/assets/icons/Blinded.png"> blind, pulsing AoE
+						<br><img src = "../images/assets/icons/Spectral_Grasp.png"> Spectral Grasp - Large AoE pull
+
+					</p>
+				</div>
+
+				<!-- Engie -->
+				<div class = "small-description" style = "display: none;">
+					<b> Overview </b>
+					<br>Engies are extremely versitile, yet simple at the same time when it comes to farming. These builds are ones I personally use frequently because Flamethrower is one of the best tagging skills.  </p> 
+
+					<br>
+					<b> Builds </b>
+					<br> <b>1) <img src = "../images/assets/icons/Function_Gyro.png"> Hammer Scrapper</b>
+					<br><p class = "indent"><b>Gear stat:</b> Berserker
+						<br> <b>Weapons (in preferred combination):</b> Hammer
+						<br> <b>Traits:</b> <input id = "necro-shady" type = "text" value = "[&DQMGOyYvKz3ZEhQBkwGGAAcBBwGuEq4SiQGJAQAAAAAAAAAAAAAAAAAAAAA=]"></input> <button onclick="copyText('necro-shady');">Copy build</button>
+						<br> <b>Difficulty: </b></p>
+
+						<div id = "box-6" class = "inner-page-box">
+							<div class = "full-progress-box">
+								<div class = "full-progress-bar" style = "height: 89%; width: 61%; background: #CD8B66">
+								</div>
+
+								<div class = "full-timer-left">
+
+									<div style = "display: flex; align-content: space-around; justify-content: center; padding-left: 0px;">
+										<div style = "height: 27px; width: 20%;"></div>
+										<div style = "height: 27px; width: 20%; border-left: 2px solid black;"></div>
+										<div style = "height: 27px; width: 20%; border-left: 2px solid black;"></div>
+										<div style = "height: 27px; width: 20%; border-left: 2px solid black;"></div>
+										<div style = "height: 27px; width: 20%; border-left: 2px solid black;"></div>
+									</div>
+			
+								</div>
+							</div>
+						</div> <!-- End of DS chest time -->
+
+					<p class = "indent">
+						<br><br><b>About:</b> The main focus of this build is the ability to use Flamethrower for the easiest of tagging, but also to be able to pull great DPS on bosses. I rate the difficulty with 3 bars because, while Flamethrower is a brain-dead way of tagging, getting good DPS on this build isn't easy for an average farmer. Below is a video on the rotation (made by Crone) of how to get great DPS. Switch out Flamethrower for Genades. 
+
+						<br><br>
+						<center><iframe width="1000" height="315" src="https://www.youtube.com/embed/9bSmHZ-7DTw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+						<br><br><b>Simple Rotation</b>
+						<br> 1. Drop your <img src = "../images/assets/icons/Manifest_Sand_Shade.png"> shade to your desire location
+						<br> 2. <img src = "../images/assets/icons/Desert_Shroud.png"> Desert Shroud
+						<br> 3. Anything else. Repeat 1 if there's a new location of mobs
+
+						<br><br><b>Great skills</b>
+						<br><b>Staff</b> - All can produce life generation thanks to the trait, <img src = "../images/assets/icons/Soul_Marks.png"> Soul Marks
+						<br> Auto attack - Pierces, 1200 range, life generation
+						<br> <img src = "../images/assets/icons/Mark_of_Blood.png"> Mark of Blood - Low cooldown AoE 
+						<br> <img src = "../images/assets/icons/Chillblains.png"> Chillblains - AoE <img src = "../images/assets/icons/Chilled.png"> chill
+						<br> <img src = "../images/assets/icons/Putrid_Mark.png"> Putrid Mark - Stronger AoE damage
+						<br><img src = "../images/assets/icons/Reaper's_Mark.png"> Reaper's Mark - AoE <img src = "../images/assets/icons/Fear.png"> fear
+
+						<br><br><b>Dagger/Warhorn</b>
+						<br> Auto attack - Damage, life force generation
+						<br><img src = "../images/assets/icons/Wail_of_Doom.png"> Wail of Doom - CC
+						<br><img src = "../images/assets/icons/Locust_Swarm.png"> Locus Swarm - Quickly generate life force from foes around you
+
+						<br><br><b>Utility</b>
+						<br><img src = "../images/assets/icons/Well_of_Darkness.png">Well of Darkness - Damage, <img src = "../images/assets/icons/Blinded.png"> blind, pulsing AoE
+						<br><img src = "../images/assets/icons/Trail_of_Anguish.png"> Trail of Anguish - 10-man <img src = "../images/assets/icons/Swiftness.png"> Swiftness in a trail behind the caster
+						<br><img src = "../images/assets/icons/Signet_of_the_Locust.png"> Signet of the Locust - Perma 25% movement speed
+						<br><img src = "../images/assets/icons/Summon_Flesh_Golem.png"> Flesh Golem - Large CC
+
+						<br><br><b>Other Utilities</b>
+						<br><img src = "../images/assets/icons/Well_of_Darkness.png">Well of Darkness - Damage, <img src = "../images/assets/icons/Blinded.png"> blind, pulsing AoE
+						<br><img src = "../images/assets/icons/Spectral_Grasp.png"> Spectral Grasp - Large AoE pull
+				</div>
+
+				<!-- thief -->
+				<div class = "small-description" style = "display: none;">
+					Coming soon!
+				</div>
+
+				<!-- Ranger -->
+				<div class = "small-description" style = "display: none;">
+					Coming soon!
+				</div>
+
+				<!-- Warrior -->
+				<div class = "small-description" style = "display: none;">
+					Coming soon!
+				</div>
+
+				<!-- Guard -->
+				<div class = "small-description" style = "display: none;">
+					Coming soon!
+				</div>
+
+				<!-- Rev -->
+				<div class = "small-description" style = "display: none;">
+					Coming soon!
+				</div>
+
+				
+
+			</div>
+
+		</div>
+	</div>
+
+
+	<script> 
+
+		function showMaterial(num){
+			var infoBox = document.getElementById('main-info-box').children;
+			var displayTitle = document.getElementById('title'); 
+			var classes = ['Elementalist', 'Mesmer', 'Necromancer', 'Engineer', 'Thief', 'Ranger', 'Warrior', 'Guardian', 'Revenant'];
+
+			for (i = 0; i < infoBox.length; i++){
+				infoBox[i].style.display = 'none';
+			}
+
+			infoBox[num].style.display = "block";
+			displayTitle.innerHTML = classes[num];
+		}
+
+
+		document.write(js_fullTimers_version);
+
+		
+		
+
+	</script>
+
+	<script>
+		// Timers
+		verdantLootTimer('progress-bar-0', 'full-timer-time-0', 'full-timer-next-0', 'full-timer-current-0');
+		auricLootTimer('progress-bar-1', 'full-timer-time-1', 'full-timer-next-1', 'full-timer-current-1');
+		tangledLootTimer('progress-bar-2', 'full-timer-time-2', 'full-timer-next-2', 'full-timer-current-2');
+
+		// Airship Oil
+		verdantLootTimer('progress-bar-3', 'full-timer-time-3', 'full-timer-next-3', 'full-timer-current-3');
+
+		// Pile of Auric Dust
+		auricLootTimer('progress-bar-4', 'full-timer-time-4', 'full-timer-next-4', 'full-timer-current-4');
+
+		// Ley-line Sparks
+		tangledLootTimer('progress-bar-5', 'full-timer-time-5', 'full-timer-next-5', 'full-timer-current-5');
+
+		dragonStandLootTimer('progress-bar-6', 'full-timer-time-6', 'full-timer-next-6', 'full-timer-current-6');
+	</script>
+
+		
+
+	<div class = "footer">
+		<div class = "inner-footer">
+
+			<div class = "footer-third">
+				<h1> Created by:  </h1>
+				<a href = "../resources/about-me.html"> Peureki.3647 </a>
+				<a href = "../resources/about-me.html"> Peureki#5452 </a>
+				<a href = "mailto: peureseachcenter@gmail.com"> peuresearchcenter@gmail.com </a>
+				<h1 style = "margin-top: 10px;"> Artwork by: </h1>
+				<a href = "https://www.twitter.com/tiffymew"> @tiffymew </a>
+			</div>
+
+			<div class = "footer-third">
+				<h1> Support </h1>
+				<a href="../supporters.html" style = "margin-bottom: 10px;"> List of supporters </a>
+				<a href="https://www.patreon.com/peureki" target = "_blank"> Patreon </a>
+				<a href="https://www.paypal.me/peureki" target = "_blank">Paypal </a>
+
+			</div>
+
+			<div class = "footer-third">
+				<h1></h1>
+				<h1></h1>
+				<h1 style = "font-weight: normal; font-size: 15px;"> Associated logos, renderings, images, and other related content are registered trademarks to ArenaNet or NCSOFT. 
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

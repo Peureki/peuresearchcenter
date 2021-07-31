@@ -1,0 +1,346 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160103677-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-160103677-1');
+	</script>
+	<title> Drizzlewood Reward Tracks </title>
+	<script>
+		var last_modified = document.lastModified,
+			css_version = '<link id = "css-version" rel ="stylesheet" type="text/css" href="../styles.css?v='+ last_modified + '">',
+			js_version = '<script type ="text/javascript" src = "../script.js?v=' + last_modified + '">'+'</'+'script>';
+		document.write(css_version);
+		document.write(js_version);
+	</script>
+	<link rel = "shortcut icon" href = "../images/assets/parachute-choya.png">
+</head>
+<body>
+
+	<div id = "navbar" class = "navbar"></div>
+	<div id = "subNav"></div>
+
+	<div class = "homepage-title">
+		<h1> Drizzlewood Reward Tracks </h1>
+	</div>
+
+	<div class ="homepage-box">
+		<div class = "small-description">
+				Average is determined by the average price of completing an entire reward track. This includes all materials with a 15% TP tax being considered in the sell price values. Mystic clovers and ascended materials such as Dragonite Ore, Empyreal Fragments, and Bloodstone Dust are not monetized. 
+		</div>
+	</div>
+
+	<div class = "page-links">
+			<p1><a href="https://docs.google.com/spreadsheets/d/1CLhCWWLgtXqap7XWxoezNFkeZfVYHMeSVPc8Mmz-ZU4/edit#gid=1349413477" target = "_blank"> Spreadsheet </a></p1>
+		</div>
+
+	<div class = "page-box"> 
+		<table id = "drizzle-tracks" class = "worth" style = "opacity: 1;"> 
+			<thead> 
+				<tr>
+					<th onclick = "sortTableByAlphabet('drizzle-tracks', 0);"> Reward Track</th>
+					<th onclick = "sortTableByTime('drizzle-tracks', 1);"> Avg Worth</th>
+				</tr>
+			</thead>
+			<tbody id = "drizzleData"></tbody>
+		</table>
+	</div>
+
+	<div class = "homepage-sector">
+		<h1> Proofs </h1>
+	</div>
+
+	<div class ="homepage-box">
+		<div class = "small-description">
+			Left tables are the full reward track and the average worth of those materials. For containers that offer multiple choices, the best option is chosen. Those are viewed on the right tables. 
+		</div>
+	</div>
+
+	<div class = "multi-benchmarks-left">
+		<div id = "loading" class = "loading"> 
+			<table id = "ash-track" class = "worth-drizzle"> 
+				<thead> 
+					<tr>
+						<th> Ash Legion Reward Track</th>
+						<th> Qty</th>
+						<th> Avg Worth</th>
+					</tr>
+				</thead>
+				<tbody id = "ash-table"></tbody>
+			</table>
+		</div>
+		<div = style = "white-space: nowrap;"> <!-- Inner box -->
+			<div id = "loading" class = "loading"> 
+				<table id = "ash-craft" class = "worth-drizzle"> 
+					<thead> 
+						<tr>
+							<th> Ash Legion Crafting Box</th>
+							<th> Avg Worth</th>
+						</tr>
+					</thead>
+					<tbody id = "ash-craft-table"></tbody>
+				</table>
+			</div>
+
+			<div id = "loading" class = "loading"> 
+				<table id = "ash-reward" class = "worth-drizzle"> 
+					<thead> 
+						<tr>
+							<th> Ash Legion Reward Box</th>
+							<th> Avg Worth</th>
+						</tr>
+					</thead>
+					<tbody id = "ash-reward-table"></tbody>
+				</table>
+			</div>
+		</div> <!-- End of inner box -->
+	</div>
+
+	<div class = "multi-benchmarks-left">
+		<div id = "loading" class = "loading"> 
+			<table id = "flame-track" class = "worth-drizzle"> 
+				<thead> 
+					<tr>
+						<th> Flame Legion Reward Track</th>
+						<th> Qty</th>
+						<th> Avg Worth</th>
+					</tr>
+				</thead>
+				<tbody id = "flame-table"></tbody>
+			</table>
+		</div>
+
+		<div = style = "white-space: nowrap;"> <!-- Inner box -->
+			<div id = "loading" class = "loading"> 
+				<table id = "flame-craft" class = "worth-drizzle"> 
+					<thead> 
+						<tr>
+							<th> Flame Legion Crafting Box</th>
+							<th> Avg Worth</th>
+						</tr>
+					</thead>
+					<tbody id = "flame-craft-table"></tbody>
+				</table>
+			</div>
+
+			<div id = "loading" class = "loading"> 
+				<table id = "flame-reward" class = "worth-drizzle"> 
+					<thead> 
+						<tr>
+							<th> Flame Legion Reward Box</th>
+							<th> Avg Worth</th>
+						</tr>
+					</thead>
+					<tbody id = "flame-reward-table"></tbody>
+				</table>
+			</div>
+		</div> <!-- End of inner box -->
+	</div>
+
+	<div class = "multi-benchmarks-left">
+		<div id = "loading" class = "loading"> 
+			<table id = "iron-track" class = "worth-drizzle"> 
+				<thead> 
+					<tr>
+						<th> Iron Legion Reward Track</th>
+						<th> Qty</th>
+						<th> Avg Worth</th>
+					</tr>
+				</thead>
+				<tbody id = "iron-table"></tbody>
+			</table>
+		</div>
+
+		<div = style = "white-space: nowrap;"> <!-- Inner box -->
+			<div id = "loading" class = "loading"> 
+				<table id = "iron-craft" class = "worth-drizzle"> 
+					<thead> 
+						<tr>
+							<th> Iron Legion Crafting Box</th>
+							<th> Avg Worth</th>
+						</tr>
+					</thead>
+					<tbody id = "iron-craft-table"></tbody>
+				</table>
+			</div>
+
+			<div id = "loading" class = "loading"> 
+				<table id = "iron-reward" class = "worth-drizzle"> 
+					<thead> 
+						<tr>
+							<th> Iron Legion Reward Box</th>
+							<th> Avg Worth</th>
+						</tr>
+					</thead>
+					<tbody id = "iron-reward-table"></tbody>
+				</table>
+			</div>
+		</div> <!-- End of inner box -->
+	</div>
+
+	<div class = "multi-benchmarks-left"> <!-- Outer box -->
+		<div id = "loading" class = "loading"> 
+			<table id = "blood-track" class = "worth-drizzle"> 
+				<thead> 
+					<tr>
+						<th> Blood Legion Reward Track</th>
+						<th> Qty</th>
+						<th> Avg Worth</th>
+					</tr>
+				</thead>
+				<tbody id = "blood-table"></tbody>
+			</table>
+		</div>
+
+		<div = style = "white-space: nowrap;"> <!-- Inner box -->
+			<div id = "loading" class = "loading"> 
+				<table id = "blood-craft" class = "worth-drizzle"> 
+					<thead> 
+						<tr>
+							<th> Blood Legion Crafting Box</th>
+							<th> Avg Worth</th>
+						</tr>
+					</thead>
+					<tbody id = "blood-craft-table"></tbody>
+				</table>
+			</div>
+
+			<div id = "loading" class = "loading"> 
+				<table id = "blood-reward" class = "worth-drizzle"> 
+					<thead> 
+						<tr>
+							<th> Blood Legion Reward Box</th>
+							<th> Avg Worth</th>
+						</tr>
+					</thead>
+					<tbody id = "blood-reward-table"></tbody>
+				</table>
+			</div>
+		</div> <!-- End of inner box -->
+	</div> <!-- End of Outer box --> 
+
+	<div class = "multi-benchmarks-left"> <!-- Outer box -->
+		<div id = "loading" class = "loading"> 
+			<table id = "dominion-track" class = "worth-drizzle"> 
+				<thead> 
+					<tr>
+						<th> Dominion Reward Track</th>
+						<th> Qty</th>
+						<th> Avg Worth</th>
+					</tr>
+				</thead>
+				<tbody id = "dominion-table"></tbody>
+			</table>
+		</div>
+
+		<div = style = "white-space: nowrap;"> <!-- Inner box -->
+			<div id = "loading" class = "loading"> 
+				<table id = "dominion-craft" class = "worth-drizzle"> 
+					<thead> 
+						<tr>
+							<th> Dominion Crafting Box</th>
+							<th> Avg Worth</th>
+						</tr>
+					</thead>
+					<tbody id = "dominion-craft-table"></tbody>
+				</table>
+			</div>
+
+			<div id = "loading" class = "loading"> 
+				<table id = "dominion-reward" class = "worth-drizzle"> 
+					<thead> 
+						<tr>
+							<th> Dominion Reward Box</th>
+							<th> Avg Worth</th>
+						</tr>
+					</thead>
+					<tbody id = "dominion-reward-table"></tbody>
+				</table>
+			</div>
+		</div> <!-- End of inner box -->
+	</div> <!-- End of Outer box --> 
+
+	<div class = "multi-benchmarks-left"> <!-- Outer box -->
+		<div id = "loading" class = "loading"> 
+			<table id = "corrupted-track" class = "worth-drizzle"> 
+				<thead> 
+					<tr>
+						<th> Corrupted Reward Track</th>
+						<th> Qty</th>
+						<th> Avg Worth</th>
+					</tr>
+				</thead>
+				<tbody id = "corrupted-table"></tbody>
+			</table>
+		</div>
+
+		<div = style = "white-space: nowrap;"> <!-- Inner box -->
+			<div id = "loading" class = "loading"> 
+				<table id = "corrupted-craft" class = "worth-drizzle"> 
+					<thead> 
+						<tr>
+							<th> Corrupted Crafting Box</th>
+							<th> Avg Worth</th>
+						</tr>
+					</thead>
+					<tbody id = "corrupted-craft-table"></tbody>
+				</table>
+			</div>
+
+			<div id = "loading" class = "loading"> 
+				<table id = "corrupted-reward" class = "worth-drizzle"> 
+					<thead> 
+						<tr>
+							<th> Corrupted Reward Box</th>
+							<th> Avg Worth</th>
+						</tr>
+					</thead>
+					<tbody id = "corrupted-reward-table"></tbody>
+				</table>
+			</div>
+		</div> <!-- End of inner box -->
+	</div> <!-- End of Outer box --> 
+
+
+	<script> //getDrizzleTracks('drizzle-tracks', 'loading-image'); 
+	getDrizzleTrackProofs();
+	</script>
+
+		
+	</div> <!-- End of page-box -->
+	<div class = "footer">
+		<div class = "inner-footer">
+
+			<div class = "footer-third">
+				<h1> Created by:  </h1>
+				<a href = "../resources/about-me.html"> Peureki.3647 </a>
+				<a href = "../resources/about-me.html"> Peureki#5452 </a>
+				<a href = "mailto: peureseachcenter@gmail.com"> peuresearchcenter@gmail.com </a>
+				<h1 style = "margin-top: 10px;"> Artwork by: </h1>
+				<a href = "https://www.twitter.com/tiffymew"> @tiffymew </a>
+			</div>
+
+			<div class = "footer-third">
+				<h1> Support </h1>
+				<a href="../supporters.html" style = "margin-bottom: 10px;"> List of supporters </a>
+				<a href="https://www.patreon.com/peureki" target = "_blank"> Patreon </a>
+				<a href="https://www.paypal.me/peureki" target = "_blank">Paypal </a>
+
+			</div>
+
+			<div class = "footer-third">
+				<h1></h1>
+				<h1></h1>
+				<h1 style = "font-weight: normal; font-size: 15px;"> Associated logos, renderings, images, and other related content are registered trademarks to ArenaNet or NCSOFT. 
+			</div>
+		</div>
+	</div>
+
+	<script> insertNav('navbar', 2); </script>
+</body>
+</html>

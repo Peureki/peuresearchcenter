@@ -1,0 +1,561 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160103677-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-160103677-1');
+	</script>
+	<title> Currency Worth </title>
+	<script>
+		var last_modified = document.lastModified,
+			css_version = '<link id = "css-version" rel ="stylesheet" type="text/css" href="../styles.css?v='+ last_modified + '">',
+			js_version = '<script type ="text/javascript" src = "../script.js?v=' + last_modified + '">'+'</'+'script>';
+			js_magic_version = '<script type ="text/javascript" src = "./magic.js?v=' + last_modified + '">'+'</'+'script>';
+			js_ss_version = '<script type ="text/javascript" src = "./spirit-shards.js?v=' + last_modified + '">'+'</'+'script>';
+			js_pref_version = '<script type ="text/javascript" src = "./preferences.js?v=' + last_modified + '">'+'</'+'script>';
+			js_trade_version = '<script type ="text/javascript" src = "./trade-contracts.js?v=' + last_modified + '">'+'</'+'script>';
+			js_bc_version = '<script type ="text/javascript" src = "./bandit-crests.js?v=' + last_modified + '">'+'</'+'script>';
+			js_laurels_version = '<script type ="text/javascript" src = "./laurels.js?v=' + last_modified + '">'+'</'+'script>';
+		document.write(css_version);
+		document.write(js_version);
+		document.write(js_magic_version);
+		document.write(js_ss_version);
+		document.write(js_trade_version);
+		document.write(js_bc_version);
+		document.write(js_laurels_version);
+	</script>
+	<link rel = "shortcut icon" href = "../images/assets/peu-choya.png">
+</head>
+<body>
+	<div id = "navbar" class = "navbar"></div>
+	<div id = "subNav"></div>
+
+	<div class = "homepage-title">
+		<h1> Currencies </h1>
+	</div>
+
+	<div id = "bookmark-left" class = "bookmark-left">
+		<ul>
+			<a href = "#bandit-crests"><li id = "bookmark-bc" > &#10097; Bandit Crests </li></a> 
+			<a href = "#laurels"><li id = "bookmark-laurels" > &#10097; Laurels </li></a> 
+			<a href = "#spirit-shards"><li id = "bookmark-ss" > &#10097; Spirit Shards 
+				<ul>
+					<a href = "#spirit-shards-fineT1ToT2"><li id = "bookmark-fineT1ToT2" > &#10093; Fine T1 &#x2192; T2 </li></a>
+					<a href = "#spirit-shards-fineT2ToT3"><li id = "bookmark-fineT2ToT3" > &#10093; Fine T2 &#x2192; T3 </li></a>
+					<a href = "#spirit-shards-fineT3ToT4"><li id = "bookmark-fineT3ToT4" > &#10093; Fine T3 &#x2192; T4 </li></a>
+					<a href = "#spirit-shards-fineT4ToT5"><li id = "bookmark-fineT4ToT5" > &#10093; Fine T4 &#x2192; T5 </li></a>
+					<a href = "#spirit-shards-fineT5ToT6"><li id = "bookmark-fineT5ToT6" > &#10093; Fine T5 &#x2192; T6 </li></a>
+					<a href = "#spirit-shards-rareT1ToT2"><li id = "bookmark-rareT1ToT2" > &#10093; Rare T1 &#x2192; T2 </li></a>
+					<a href = "#spirit-shards-rareT2ToT3"><li id = "bookmark-rareT2ToT3" > &#10093; Rare T2 &#x2192; T3 </li></a>
+					<a href = "#spirit-shards-rareT3ToT4"><li id = "bookmark-rareT3ToT4" > &#10093; Rare T3 &#x2192; T4 </li></a>
+					<a href = "#spirit-shards-rareT4ToT5"><li id = "bookmark-rareT4ToT5" > &#10093; Rare T4 &#x2192; T5 </li></a>
+				</ul>
+			</li></a> 
+			<a href = "#trade-contracts"><li id = "bookmark-tc" > &#10097; Trade Contracts </li></a> 
+			<a href = "#unbound-magic"><li id = "bookmark-um" > &#10097; Unbound Magic </li></a>
+			<a href = "#volatile-magic"><li id = "bookmark-vm" > &#10097; Volatile Magic </li></a>
+		</ul>
+	</div>	
+
+	<div id = "nav-right-sidetimer-box" class = "nav-right-sidetimer-box-overflow" style = "min-width: 180px;">
+		<b style = "font-size: 20px;"> Preferences </b>
+	    <br> 
+	    Toggle to show/hide
+	    <br><br>
+		<button  type = "button" id = "default" class = "select-button" onclick = "showPreferences(this.id, 0);"> Default </button> 
+	    <br><br>
+	    <b> Currencies </b>
+	    <br><br>
+	    Bandit Crests <input type = "Checkbox" id = "check-bc" onclick = "showPreferences(this.id, 'bc');"> 
+	    <br>
+	    Laurels <input type = "Checkbox" id = "check-laurels" onclick = "showPreferences(this.id, 'laurels');"> 
+	    <br>
+	    Trade Contracts <input type = "Checkbox" id = "check-tc" onclick = "showPreferences(this.id, 'tc');">
+	    <br>
+	    VM & UM <input type = "Checkbox" id = "check-vmum" onclick = "showPreferences(this.id, 'vmum');">   
+	    <br><br>
+	    <b> Spirit Shards </b>
+	    <br><br>
+	    Fine T1 &#x2192; T2: <input type = "Checkbox" id = "check-fineT1ToT2" onclick = "showPreferences(this.id, 1);"> 
+	    <br>
+	    Fine T2 &#x2192; T3: <input type = "Checkbox" id = "check-fineT2ToT3" onclick = "showPreferences(this.id, 2);"> 
+	    <br>
+	    Fine T3 &#x2192; T4: <input type = "Checkbox" id = "check-fineT3ToT4" onclick = "showPreferences(this.id, 3);"> 
+	    <br>
+	    Fine T4 &#x2192; T5: <input type = "Checkbox" id = "check-fineT4ToT5" onclick = "showPreferences(this.id, 4);"> 
+	    <br>
+	    Fine T5 &#x2192; T6: <input type = "Checkbox" id = "check-fineT5ToT6" onclick = "showPreferences(this.id, 5);">
+	    <br>
+	    Rare T1 &#x2192; T2: <input type = "Checkbox" id = "check-rareT1ToT2" onclick = "showPreferences(this.id, 1);">
+	    <br>
+	    Rare T2 &#x2192; T3: <input type = "Checkbox" id = "check-rareT2ToT3" onclick = "showPreferences(this.id, 2);">
+	    <br>
+	    Rare T3 &#x2192; T4: <input type = "Checkbox" id = "check-rareT3ToT4" onclick = "showPreferences(this.id, 3);">
+	    <br>
+	    Rare T4 &#x2192; T5: <input type = "Checkbox" id = "check-rareT4ToT5" onclick = "showPreferences(this.id, 4);">  
+	</div>
+
+	<div class = "page-box">
+
+		<div id = "bandit-crests">
+			<div class = "homepage-title">
+				<h1> Bandit Crests </h1>
+			</div>
+
+			<div style = "text-align: center;">
+				<span style = "font-size: 15px; font-weight: bold;"> Results: </span>
+				<select name = "results" id = "results-bc" class = "select-button">
+					<option value = "Sell Price"> Sell Price </option>
+					<option value = "Buy Price"> Buy Price </option>
+				</select>
+
+				<button  type = "button" id = "calculate" class = "select-button" onclick = "showBanditCrest('results-bc');"> Calculate </button>
+			</div>
+
+			<table id = "bc" class = "bc"> 
+				<thead> 
+					<tr>
+						<th onclick = "sortTableByAlphabet('tc', 1);"> Item </th>
+						<th onclick = "sortTableByPrice('tc', 2);"> /Item </th>
+						<th onclick = "sortTableByPrice('tc', 3);"> /Bandit Crest </th>
+					</tr>
+				</thead>
+				<tbody id = "bc-tableBody"></tbody>
+			</table>
+
+			<table id = "bc-proof" class = "currency-proof" style = "display: none;"> 
+				<thead> 
+					<tr>
+						<th onclick = "sortTableByAlphabet('tc', 1);"> Pic </th>
+						<th onclick = "sortTableByPrice('tc', 2);"> Name </th>
+						<th onclick = "sortTableByPrice('tc', 3);"> Drop Rate </th>
+						<th> Worth </th>
+					</tr>
+				</thead>
+				<tbody id = "bc-proof-tableBody"></tbody>
+			</table>
+		</div>
+
+		<div id = "laurels">
+			<div class = "homepage-title">
+				<h1> Laurels </h1>
+			</div>
+
+			<div style = "text-align: center;">
+				<span style = "font-size: 15px; font-weight: bold;"> Results: </span>
+				<select name = "results" id = "results-laurels" class = "select-button">
+					<option value = "Sell Price"> Sell Price </option>
+					<option value = "Buy Price"> Buy Price </option>
+				</select>
+
+				<button  type = "button" id = "calculate" class = "select-button" onclick = "showLaurels('results-laurels');"> Calculate </button>
+			</div>
+
+			<table id = "laurels-table" class = "laurels"> 
+				<thead> 
+					<tr>
+						<th onclick = "sortTableByAlphabet('tc', 1);"> Bag </th>
+						<th onclick = "sortTableByPrice('tc', 3);"> /Laurel </th>
+					</tr>
+				</thead>
+				<tbody id = "laurels-tableBody"></tbody>
+			</table>
+		</div>
+
+		<div id = "spirit-shards">
+			<div class = "homepage-title">
+				<h1> Spirit Shards </h1>
+			</div>
+
+			<div style = "text-align: center;">
+				<span style = "font-size: 15px; font-weight: bold;"> Items: </span>
+				<select name = "items" id = "items-ss" class = "select-button">
+					<option value = "Buy Price"> Buy Price </option>
+					<option value = "Sell Price"> Sell Price </option>
+				</select>
+
+				<span style = "font-size: 15px; font-weight: bold;"> Results: </span>
+				<select name = "results" id = "results-ss" class = "select-button">
+					<option value = "Sell Price"> Sell Price </option>
+					<option value = "Buy Price"> Buy Price </option>
+				</select>
+
+				<span style = "font-size: 15px; font-weight: bold;"> Tax: </span>
+				<select name = "results" id = "tax-ss" class = "select-button">
+					<option value = "85% Tax"> 85% Tax (TP Tax) </option>
+					<option value = "90% Tax"> 90% Tax </option>
+					<option value = "No Tax"> No Tax </option>
+				</select>
+
+				<button  type = "button" id = "calculate" class = "select-button" onclick = "showSSPrices('items-ss', 'results-ss', 'tax-ss');"> Calculate </button>
+			</div>
+		</div>
+
+		<div id = "spirit-shards-fineT1ToT2">
+			<div class = "homepage-title">
+				<h1> Fine T1 &#x2192; T2 </h1> 
+			</div>
+
+			<table id = "ss-fine-t1ToT2" class = "four-ingre">
+				<thead>
+					<tr>
+						<th> Item 1 </th>
+						<th> </th>
+						<th> Item 2 </th>
+						<th> </th>
+						<th> Item 3 </th>
+						<th> </th>
+						<th> Item 4 </th>
+						<th> </th>
+						<th> Result </th>
+						<th> /Conversion </th>
+						<th> /Spirit Shard </th>
+					</tr>	
+				</thead>
+				<tbody id = "ss-fine-t1ToT2-tableBody"></tbody>
+			</table>
+
+		</div>
+
+		<div = id = "spirit-shards-fineT2ToT3">
+			<div class = "homepage-title">
+				<h1> Fine T2 &#x2192; T3 </h1> 
+			</div>
+
+			<table id = "ss-fine-t2ToT3" class = "four-ingre">
+				<thead>
+					<tr>
+						<th> Item 1 </th>
+						<th> </th>
+						<th> Item 2 </th>
+						<th> </th>
+						<th> Item 3 </th>
+						<th> </th>
+						<th> Item 4 </th>
+						<th> </th>
+						<th> Result</th>
+						<th> /Conversion </th>
+						<th> /Spirit Shard </th>
+					</tr>	
+				</thead>
+				<tbody id = "ss-fine-t2ToT3-tableBody"></tbody>
+			</table>
+		</div>
+
+		<div id = "spirit-shards-fineT3ToT4">
+			<div class = "homepage-title">
+				<h1> Fine T3 &#x2192; T4 </h1> 
+			</div>
+
+			<table id = "ss-fine-t3ToT4" class = "four-ingre">
+				<thead>
+					<tr>
+						<th> Item 1 </th>
+						<th> </th>
+						<th> Item 2 </th>
+						<th> </th>
+						<th> Item 3 </th>
+						<th> </th>
+						<th> Item 4 </th>
+						<th> </th>
+						<th> Result</th>
+						<th> /Conversion </th>
+						<th> /Spirit Shard </th>
+					</tr>	
+				</thead>
+				<tbody id = "ss-fine-t3ToT4-tableBody"></tbody>
+			</table>
+		</div>
+
+		<div id = "spirit-shards-fineT4ToT5">
+			<div class = "homepage-title">
+				<h1> Fine T4 &#x2192; T5 </h1> 
+			</div>
+
+			<table id = "ss-fine-t4ToT5" class = "four-ingre">
+				<thead>
+					<tr>
+						<th> Item 1 </th>
+						<th> </th>
+						<th> Item 2 </th>
+						<th> </th>
+						<th> Item 3 </th>
+						<th> </th>
+						<th> Item 4 </th>
+						<th> </th>
+						<th> Result</th>
+						<th> /Conversion </th>
+						<th> /Spirit Shard </th>
+					</tr>	
+				</thead>
+				<tbody id = "ss-fine-t4ToT5-tableBody"></tbody>
+			</table>
+		</div>
+
+		<div id = "spirit-shards-fineT5ToT6">
+			<div class = "homepage-title">
+				<h1> Fine T5 &#x2192; T6 </h1>
+			</div>
+
+			<table id = "ss-fine-t5ToT6" class = "four-ingre">
+				<thead>
+					<tr>
+						<th> Item 1 </th>
+						<th> </th>
+						<th> Item 2 </th>
+						<th> </th>
+						<th> Item 3 </th>
+						<th> </th>
+						<th> Item 4 </th>
+						<th> </th>
+						<th> Result</th>
+						<th> /Conversion </th>
+						<th> /Spirit Shard </th>
+					</tr>	
+				</thead>
+				<tbody id = "ss-fine-t5ToT6-tableBody"></tbody>
+			</table>
+		</div>
+
+		<div id = "spirit-shards-rareT1ToT2">
+			<div>
+				<div class = "homepage-title">
+					<h1> Rare T1 &#x2192; T2 </h1>
+				</div>
+
+				<table id = "ss-rare-t1ToT2" class = "four-ingre">
+					<thead>
+						<tr>
+							<th> Item 1 </th>
+							<th> </th>
+							<th> Item 2 </th>
+							<th> </th>
+							<th> Item 3 </th>
+							<th> </th>
+							<th> Item 4 </th>
+							<th> </th>
+							<th> Result</th>
+							<th> /Conversion </th>
+							<th> /Spirit Shard </th>
+						</tr>	
+					</thead>
+					<tbody id = "ss-rare-t1ToT2-tableBody"></tbody>
+				</table>
+			</div>
+		</div>
+
+		<div id = "spirit-shards-rareT2ToT3">
+			<div class = "homepage-title">
+				<h1> Rare T2 &#x2192; T3 </h1>
+			</div>
+
+			<table id = "ss-rare-t2ToT3" class = "four-ingre">
+				<thead>
+					<tr>
+						<th> Item 1 </th>
+						<th> </th>
+						<th> Item 2 </th>
+						<th> </th>
+						<th> Item 3 </th>
+						<th> </th>
+						<th> Item 4 </th>
+						<th> </th>
+						<th> Result</th>
+						<th> /Conversion </th>
+						<th> /Spirit Shard </th>
+					</tr>	
+				</thead>
+				<tbody id = "ss-rare-t2ToT3-tableBody"></tbody>
+			</table>
+		</div>
+
+		<div id = "spirit-shards-rareT3ToT4">
+			<div class = "homepage-title">
+				<h1> Rare T3 &#x2192; T4 </h1>
+			</div>
+
+			<table id = "ss-rare-t3ToT4" class = "four-ingre">
+				<thead>
+					<tr>
+						<th> Item 1 </th>
+						<th> </th>
+						<th> Item 2 </th>
+						<th> </th>
+						<th> Item 3 </th>
+						<th> </th>
+						<th> Item 4 </th>
+						<th> </th>
+						<th> Result</th>
+						<th> /Conversion </th>
+						<th> /Spirit Shard </th>
+					</tr>	
+				</thead>
+				<tbody id = "ss-rare-t3ToT4-tableBody"></tbody>
+			</table>
+		</div>
+
+		<div id = "spirit-shards-rareT4ToT5">
+			<div class = "homepage-title">
+				<h1> Rare T4 &#x2192; T5 </h1>
+			</div>
+
+			<table id = "ss-rare-t4ToT5" class = "four-ingre">
+				<thead>
+					<tr>
+						<th> Item 1 </th>
+						<th> </th>
+						<th> Item 2 </th>
+						<th> </th>
+						<th> Item 3 </th>
+						<th> </th>
+						<th> Item 4 </th>
+						<th> </th>
+						<th> Result</th>
+						<th> /Conversion </th>
+						<th> /Spirit Shard </th>
+					</tr>	
+				</thead>
+				<tbody id = "ss-rare-t4ToT5-tableBody"></tbody>
+			</table>
+		</div>
+
+		<div id = "trade-contracts">
+			<div class = "homepage-title">
+				<h1> Trade Contracts </h1>
+			</div>
+
+			<div class = "small-description">
+					Calculations can be found in this <a href = "https://docs.google.com/spreadsheets/d/1CLhCWWLgtXqap7XWxoezNFkeZfVYHMeSVPc8Mmz-ZU4/edit#gid=1933064350" style = "text-decoration: underline;" target="_blank"> spreadsheet. </a>
+					<br><br>
+					These caches are available after completing certain hearts vendors in PoF maps. 
+					<br> <a href = "https://wiki.guildwars2.com/wiki/Cowrie_League_Leather_Crate" target = "_blank"><u>Cowrie</u></a>, <a href = "https://wiki.guildwars2.com/wiki/Hamaseen_Wood_Crate" target = "_blank"><u>Hamaseen</u></a>, and <a href = "https://wiki.guildwars2.com/wiki/House_of_Daoud_Leather_Crate" target = "_blank"><u>House of Daoud</u></a>
+			</div>
+
+			<table id = "tc" class = "worth-tc"> 
+				<thead> 
+					<tr>
+						<th></th>
+						<th onclick = "sortTableByAlphabet('tc', 1);"> Trade Cache</th>
+						<th onclick = "sortTableByPrice('tc', 2);"> Per TC</th>
+						<th onclick = "sortTableByPrice('tc', 3);"> Per Cache </th>
+					</tr>
+				</thead>
+				<tbody id = "tc-tableBody"></tbody>
+			</table>
+		</div>
+
+		<div id = "vmum">
+			<div class = "small-description">
+				Values consider both TP tax and the price it costs to buy the shipments/packets/bundles. Calculations can be found in this <a href = "https://docs.google.com/spreadsheets/d/1AqxY0qEhl9X55X4t2yoMprSjkqSQU_vJ5ZYGdl-bbuE/edit?usp=sharing" style = "text-decoration: underline;" target="_blank"> spreadsheet. </a>
+			</div>
+
+			<div style = "text-align: center;">
+				<span style = "font-size: 15px; font-weight: bold;"> Results: </span>
+				<select name = "results" id = "results-magic" class = "select-button">
+					<option value = "Sell Price"> Sell Price </option>
+					<option value = "Buy Price"> Buy Price </option>
+				</select>
+
+				<button  type = "button" id = "calculate" class = "select-button" onclick = "showMagic('results-magic');"> Calculate </button>
+			</div>
+
+			<div id = "vmum" style = "display: flex; justify-content: center; ">
+				<div id = "volatile-magic" style = "margin: 10px;">
+					<div class = "homepage-title">
+						<h1> Volatile Magic </h1> 
+					</div>
+
+					<table id = "vm" class = "vm">
+						<thead>
+							<tr>
+								<th> Shipment Name</th>
+								<th> /Shipment</th>
+								<th> /Volatile Magic </th>
+							</tr>	
+						</thead>
+						<tbody id = "vm-tableBody"></tbody>
+					</table>
+				</div>
+
+				<div id = "unbound-magic" style = "margin: 10px;">
+					<div class = "homepage-title">
+						<h1> Unbound Magic </h1> 
+					</div>
+
+					<table id = "um" class = "um">
+						<thead>
+							<tr>
+								<th> Shipment Name</th>
+								<th> /Shipment</th>
+								<th> /Unbound Magic </th>
+							</tr>	
+						</thead>
+						<tbody id = "um-tableBody"></tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		
+
+	<!--
+			<table class = "shipments"> 
+				<thead> 
+					<tr>
+						<th> Packet/Bundle </th>
+						<th> Worth Per 1 UM</th>
+						<th> Worth Per Bag </th>
+					</tr>
+				</thead>
+				<tbody id = "unboundData"></tbody>
+			</table>
+	-->
+		<script>
+		getTradeContracts();
+		spiritShards(0);
+		
+
+		</script>
+
+	</div> <!-- End of page-box -->
+
+	<div class = "footer">
+		<div class = "inner-footer">
+
+			<div class = "footer-third">
+				<h1> Created by:  </h1>
+				<a href = "../resources/about-me.html"> Peureki.3647 </a>
+				<a href = "../resources/about-me.html"> Peureki#5452 </a>
+				<a href = "mailto: peureseachcenter@gmail.com"> peuresearchcenter@gmail.com </a>
+				<h1 style = "margin-top: 10px;"> Artwork by: </h1>
+				<a href = "https://www.twitter.com/tiffymew"> @tiffymew </a>
+			</div>
+
+			<div class = "footer-third">
+				<h1> Support </h1>
+				<a href="../supporters.html" style = "margin-bottom: 10px;"> List of supporters </a>
+				<a href="https://www.patreon.com/peureki" target = "_blank"> Patreon </a>
+				<a href="https://www.paypal.me/peureki" target = "_blank">Paypal </a>
+
+			</div>
+
+			<div class = "footer-third">
+				<h1></h1>
+				<h1></h1>
+				<h1 style = "font-weight: normal; font-size: 15px;"> Associated logos, renderings, images, and other related content are registered trademarks to ArenaNet or NCSOFT. 
+			</div>
+		</div>
+	</div>
+
+	<script> insertNav('navbar', 2); </script>
+	<script> document.write(js_pref_version);</script>
+	<script> getVolatile(); getUnbound(); </script>
+	<script> getBanditCrests(); </script>
+	<script> getLaurels(); </script>
+	<script> doPreferences(); </script>
+</body>
+</html>

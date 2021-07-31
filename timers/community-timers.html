@@ -1,0 +1,579 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160103677-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-160103677-1');
+	</script>
+	<title> Community Timers </title>
+	<script>
+		var last_modified = document.lastModified,
+			css_version = '<link id = "css-version" rel ="stylesheet" type="text/css" href="../styles.css?v='+ last_modified + '">',
+			js_version = '<script type ="text/javascript" src = "../script.js?v=' + last_modified + '">'+'</'+'script>';
+			js_trains = '<script type ="text/javascript" src = "./community-trains.js?v=' + last_modified + '">'+'</'+'script>';
+		document.write(css_version);
+		document.write(js_version);
+		document.write(js_trains);
+	</script>
+	<link rel = "shortcut icon" href = "../images/assets/peu-choya.png">
+</head>
+<body>
+	<div id = "nav"></div>
+
+	<div id = "subNav" class = "page-box">
+	</div>
+
+	<div class = "page-title">
+		<h1> Community Timers </h1>
+	</div>
+
+	<div id = "nav-left-popup" class = "nav-left-popup" onclick = "nav_popup_rightOnly();"> 
+		&#x2194;
+	</div>
+
+	<div id = "nav-right-sidetimer-box" class = "nav-right-sidetimer-box" style = "line-height: 1.5;">
+		<b> Trains </b>
+		<br>
+	    HoT HP/MP Train - [EL]: <input type = "Checkbox" id = "hpmp-el-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'hpmp-el-box');">
+	    <br>
+	    HoT Map Completion - Emi, [TP]: <input type = "Checkbox" id = "emi-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'emi-box');">
+	    <br>
+	    HoT Meta Train - [AO]: <input type = "Checkbox" id = "hot-ao-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'hot-ao-box');">
+	    <br>
+	    Infusion Train - [SM]: <input type = "Checkbox" id = "infusion-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'infusion-box');">
+	    <br>
+	    Peu Train, [RISE]: <input type = "Checkbox" id = "peu-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'peu-box');">
+	    <br>
+	    LS3 Train - Valks, [Life]: <input type = "Checkbox" id = "ls3-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'ls3-box');">
+	    <br>
+	    LS4 Train - [TP], [Life], [OTC]: <input type = "Checkbox" id = "ls4-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'ls4-box');">
+	    <br>
+	    PoF Meta Train - [AO]: <input type = "Checkbox" id = "pof-ao-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'pof-ao-box');">
+	    <br>
+	    Triple Trouble - TT Community: <input type = "Checkbox" id = "tt-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'tt-box');">
+	</div>
+
+	<div class = "full-page-box">
+		<div id = "community-sort" class = "half-page-box">
+
+			<div id = "peu-box" class = "inner-page-box"> <!-- Start of Peu Train -->
+				<div class = "community-timer-name">
+					<b><p1 id = "train-name"></p1></b>
+					<div class="popup" onclick= "popup('peu-popup')"> Info
+					  <span class = "popuptext" id = "peu-popup">
+					  	<b>Time:</b> This train runs generally every Tuesday and Saturday around reset..ish, but switches times depending on the map and meta. Pay attention to the countdown as it will change. 
+					  	<br><br>
+					  	<b> Refresh the page </b> after this timer has faded to check if I've updated the train. 
+					  	<br><br> 
+					  	Join for miscellaneous event trains in HoT, PoF, LS3, LS4, or Icebrood Saga
+					  	<br><br>
+					  	<b>Route:</b> Varies depending on the train
+					  	<br><br>
+					  	<b> EXPERIMENTAL TRAIN: Saturday at 00:30 UTC (+30 mins after reset)</b>
+					  	<br>Lake Doric - Noran's Homested 
+					  	<br>Grothmar Valley - Doomlore Shrine
+					  	<br>Sandswept Isles (both metas)
+					  </span>
+					</div>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "peu-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Days
+							<br>
+							<p1 id = "days-0">00</p1> <!-- Day -->
+						</div>
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "hours-0">00</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "minutes-0">00</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "seconds-0">00</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "peu-num" style = "display: none;"> </p2>
+			</div> <!-- End of peu train -->
+
+			<div id = "infusion-box" class = "inner-page-box"> <!-- Start of Infusion Train [SM] -->
+				<div class = "community-timer-name">
+					<p1><b> Infusion Train - [SM] </b></p1>
+					<div class="popup" onclick= "popup('infusion-popup')"> Info
+					  <span class = "popuptext" id = "infusion-popup">
+					  	<b>Time:</b> Sundays, Wednesdays, Fridays at reset 
+					  	<br><br> 
+					  	Join for possible infusions, amalgamated gemstones. Infusions include:
+					  	<br> Confetti 
+					  	<br> Chak Egg Sac
+					  	<br> Liquid Aurillium
+					  	<br> Winter's Heart
+					  	<br><br>
+					  	<b>Route:</b> 
+					  	<br>Casino Blitz
+					  	<br>Tangled Depths
+					  	<br>Legendary Hoarder Bounty (if up)
+					  	<br>Auric Basin
+					  	<br>Drakkar
+					  </span>
+					</div>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "infusion-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Days
+							<br>
+							<p1 id = "days-1">0</p1>
+						</div>
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "hours-1">0</p1>
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "minutes-1">0</p1>
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "seconds-1">0</p1>
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "infusion-num" style = "display: none;"> </p2>
+			</div> <!-- End of infusion train [SM] -->
+
+			<div id = "ls4-box" class = "inner-page-box">
+				<div class = "community-timer-name">
+					<p1><b> LS4 Train - [TP], [Life], [OTC], [CREW] </b></p1>
+					<div class="popup" onclick= "popup('ls4-popup')"> Info
+					  <span class = "popuptext" id = "ls4-popup">
+					  	<b>Time (EST/EDT):</b> 7:45/8:45PM, 2:45/3:45AM, 8:45/9:45AM, 12:45/1:45PM
+					  	<br>
+					  	<b>Time (UTC):</b> 12:45AM, 7:45AM, 1:45PM, 5:45PM
+					  	<br><br>
+					  	Join for Volatile Magic, LS4 Currencies
+					  	<br><br>
+					  	<b> Route: </b> Routes may vary depending on the commander
+					  </span>
+					</div>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "ls4-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+						<div class = "community-timer">
+							Days
+							<br>
+							<p1 id = "days-2">0</p1>
+						</div>
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "hours-2">0</p1>
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "minutes-2">0</p1>
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "seconds-2">0</p1>
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "ls4-num" style = "display: none;"> </p2>
+			</div>
+
+			<div id = "hot-ao-box" class = "inner-page-box"> <!-- HoT Meta Train - [AO] -->
+				<div class = "community-timer-name">
+					<p1><b> HoT Meta Train - [AO] </b></p1>
+					<div class="popup" onclick= "popup('hot-ao-popup')"> Info
+					  <span class = "popuptext" id = "hot-ao-popup">
+					  	<b>Time:</b> Weekdays at reset
+					  	<br><br> 
+					  	Join for Amalgamated Gemstones, HoT currencies
+					  	<br><br>
+					  	<b>Route:</b> 
+					  	<br>Tangled Depths
+					  	<br>Auric Basin
+					  	<br>Dragon's Stand
+					  	<br>Verdant Brink (T4, Wednesdays)
+					  </span>
+					</div>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "hot-ao-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+						<div class = "community-timer">
+							Days
+							<br>
+							<p1 id = "days-4">0</p1>
+						</div>
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "hours-4">0</p1>
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "minutes-4">0</p1>
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "seconds-4">0</p1>
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "hot-ao-num" style = "display: none;"> </p2>
+			</div> <!-- End of HoT Meta Train [ao] -->
+
+			<div id = "hpmp-el-box" class = "inner-page-box"> <!-- Start of HoT HP/MP Train - [EL] -->
+				<div class = "community-timer-name">
+					<p1><b> HoT HP/MP Train - [EL] </b></p1>
+					<div class="popup" onclick= "popup('hpmp-el-popup')"> Info
+					  <span class = "popuptext" id = "hpmp-el-popup">
+					  	<b>Time (EST/EDT):</b> Saturday at 3/4PM
+					  	<br>
+					  	<b>Time (UTC):</b> Saturdays at 8PM
+					  	<br><br> 
+					  	Join for HoT Hero Points, Mastery Points, and Dragon's Stand meta
+					  	<br><br>
+					  	<b>Route:</b> 
+					  	<br> Verdant Brink
+					  	<br> Auric Basin
+					  	<br> Tangled Depths
+					  	<br> Dragon's Stand
+					  	<br> Dragon's Stand meta
+					  </span>
+					</div>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "hpmp-el-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+						<div class = "community-timer">
+							Days
+							<br>
+							<p1 id = "days-5">0</p1>
+						</div>
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "hours-5">0</p1>
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "minutes-5">0</p1>
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "seconds-5">0</p1>
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "hpmp-el-num" style = "display: none;"> </p2>
+			</div> <!-- End of HP/MP train -->
+
+			<div id = "pof-ao-box" class = "inner-page-box"> <!-- Start of PoF Meta Train [AO] -->
+				<div class = "community-timer-name">
+					<p1><b> PoF Meta Train - [AO] </b></p1>
+					<div class="popup" onclick= "popup('pof-ao-popup')"> Info
+					  <span class = "popuptext" id = "pof-ao-popup">
+					  	<b>Time (EST/EDT):</b> Fridays at 10:30/11:30 PM 
+					  	<br>
+					  	<b>Time (UTC):</b> Fridays at 3:30PM
+					  	<br><br> 
+					  	Join for PoF metas, Trade Contracts, Elegy Mosaics, Amalgamated Gemstones
+					  	<br><br>
+					  	<b>Route:</b> 
+					  	<br> Path of Ascension/Doppleganger
+					  	<br> Casino Blitz/Choya Pinata
+					  	<br> Serpent's Ire
+					  	<br> Maw of Torment
+					  </span>
+					</div>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "pof-ao-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+						<div class = "community-timer">
+							Days
+							<br>
+							<p1 id = "days-6">0</p1>
+						</div>
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "hours-6">0</p1>
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "minutes-6">0</p1>
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "seconds-6">0</p1>
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "pof-ao-num" style = "display: none;"> </p2>
+			</div> <!-- End of HP/MP train -->
+
+			<div id = "tt-box" class = "inner-page-box"> <!-- Start of General TT Community -->
+				<div class = "community-timer-name">
+					<p1><b> Triple Trouble - General TT Community </b></p1>
+					<div class="popup" onclick= "popup('tt-popup')"> Info
+					  <span class = "popuptext" id = "tt-popup">
+					  	<b>Time (EST/EDT):</b> 11:00/12:00AM, 3:00/4:00AM, 7:30/8:30PM, 3:00/4:00PM, 8:00/9:00PM
+					  	<br>
+					  	<b>Time (UTC):</b> 4:00AM, 8:00AM, 12:30PM, 8:00PM, 23:00PM
+					  	<br><br>
+					  	<b>Duration: </b> ~ 30 minutes, but required to show up ~30 minutes prior
+					  	<br><br>
+					  	Join for organized TT kills, achievements, and central Tyria mastery points	
+					  </span>
+					</div>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "tt-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+						<div class = "community-timer">
+							Days
+							<br>
+							<p1 id = "days-7">0</p1>
+						</div>
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "hours-7">0</p1>
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "minutes-7">0</p1>
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "seconds-7">0</p1>
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "tt-num" style = "display: none;"> </p2>
+			</div> <!-- End of HP/MP train -->
+
+			<div id = "emi-box" class = "inner-page-box"> <!-- Emi's Map Completion Train -->
+				<div class = "community-timer-name">
+					<p1><b> HoT Map Completion - Emi, [Nyaa] </b></p1>
+					<div class="popup" onclick= "popup('emi-popup')"> Info
+					  <span class = "popuptext" id = "emi-popup">
+					  	<b>Time (EST):</b> First Saturday of the month at 1:00PM 
+					  	<br>
+					  	<b>Time (UTC):</b> First Saturday of the month at 6:00PM
+					  	<br><br>
+					  	<b>Duration: </b> ~ 8 hours
+					  	<br><br>
+					  	Join for a full HoT map completion and giveaways
+					  	<br><br>
+					  	<b> Route </b>
+					  	<br> Verdant Brink + Night Bosses
+					  	<br> Auric Basin 
+					  	<br> Tangled Depths 
+					  	<br> Dragon's Stand
+					  	<br> Final Giveaways
+					  </span>
+					</div>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "emi-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+						<div class = "community-timer">
+							Days
+							<br>
+							<p1 id = "days-8">0</p1>
+						</div>
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "hours-8">0</p1>
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "minutes-8">0</p1>
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "seconds-8">0</p1>
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "emi-num" style = "display: none;"> </p2>
+			</div> <!-- End of Emi's HoT map completion train -->
+
+			
+
+		</div> <!-- End of first page box double -->
+
+		<div class = "half-page-box"> 
+			<br><br>
+			<div style = "display: flex; justify-content: flex-start;">
+				<div class = "legend-upcoming">
+			  		Upcoming Event
+			 	</div>
+			 	<div style = "max-width: 60%; font-size: 20px; margin: auto;" > 
+			 		&#8594; When timers < 1 hour til
+			 	</div>
+			</div>
+
+			<div style = "display: flex; justify-content: flex-start;">
+			  	<div class = "legend-ongoing">
+			  		Ongoing Event
+			  	</div>
+
+			  	<div style = "max-width: 60%; font-size: 20px; margin: auto;"> 
+			 		&#8594; Ongoing duration (counts up)
+			 	</div>
+			</div>
+
+			<div style = "background-color: rgba(236,236,222, .75); width: 90%; margin-left: 5px; margin-top: 10px; font-size: 20px;">
+
+				<div style = "text-align: left; padding-left: 30px; padding-top: 10px; padding-bottom: 10px; line-height: 1.5;">
+					<b> Disclaimer: </b>
+					<br> For Emi's HoT map completion train, there are a couple bugs that may appear as it gets closer to the event. I aplogize if it seems wrong! Check the info box for the schedule of her event!
+					<br>
+					<br> These timers are set by communities listed below. Events are planned, but are not guaranteed to be run due to holidays, special events, and other reasons from the communities hosting it. Check their website/discord/in-game for accuracy.</a>
+
+					<br><br>
+					If you or your community runs a large-scale open world train on a set schedule, contact me at Peureki.3647 or Peureki#5452!
+
+					
+				</div>
+
+				<div style = "text-align: center; padding-top: 20px; padding-bottom: 20px; font-size: 30px;">
+					<b> Guilds Featured </b>
+				</div>
+
+				<div style = "text-align: left; padding-left: 30px; padding-top: 10px; padding-bottom: 10px; line-height: 1.5;">
+					<b> Reborn of Embers [RISE] </b>
+					<br> Peu Trains (Miscellaneous Trains) | <a href = "https://rebornofembers.com/forums/" target = "_blank"><u>Website</u></a>
+
+					<br><br> 
+					<b> Guild MM Trading Company [TP]</b>
+					<br> LS4 Trains | <a href = "https://discord.gg/3qXmrqe" target = "_blank"><u>Discord</u></a>
+
+					<br><br> 
+					<b> Shiny Mayhem [SM] </b>
+					<br> Farm Trains | <a href = "https://discord.gg/MZCcK3H" target = "_blank"><u>Discord</u></a>
+
+					<br><br> 
+					<b> This Guild Ruined My [Life]</b>
+					<br> LS4 Trains | <a href = "https://discord.gg/nEBa78p" target = "_blank"><u>Discord</u></a>
+
+					<br><br> 
+					<b> End Game [CREW]</b>
+					<br> LS4 Trains
+
+					<br><br> 
+					<b> Potato's Bath Water [Nyaa]</b>
+					<br> HoT Map Completion | <a href = "https://discord.gg/ptSt3g5" target = "_blank"><u>Discord</u></a>
+
+					<br><br> 
+					<b> Auric Oasis [AO]</b>
+					<br> HoT, PoF Trains | <a href = "https://discord.gg/EeX4ANK" target = "_blank"><u>Discord</u></a>
+
+					<br><br> 
+					<b> Eternally Lost [EL]</b>
+					<br> HP/MP Trains | <a href = "https://discord.gg/ATEza7p" target = "_blank"><u>Discord</u></a>
+
+					<br><br> 
+					<b> General Triple Trouble (TT) Community</b>
+					<br> Evolved Jungle Wurm Scouts [EVOS] | <a href = "https://gw2scouts.com/" target = "_blank"><u>Website</u></a>
+					<br> Shadows of Bloodtide [RnT]
+					<br> Binary Masters of Tyria [BMT]
+					<br> Firthside Vigil Social Club [DCAP]
+					<br> Guild Not Required [NOPE] | <a href = "https://discord.gg/cTXXRX" target = "_blank"><u>Discord</u></a>
+				</div>
+			</div>
+		</div> <!-- End of second page box -->
+
+
+		</div>
+	</div> <!-- End of main page box -->
+
+	<script> 
+		peu_Train();
+		infusion_Train();
+		LS4_Train();
+		HoT_AO_Train();
+		HPMP_EL_Train();
+		POF_AO_Train();
+		TT();
+		emi();
+	</script>
+
+	<script> insertNav('nav', 2); </script>
+
+	<div class = "footer">
+		<div class = "inner-footer">
+
+			<div class = "footer-third">
+				<h1> Created by:  </h1>
+				<a href = "../resources/about-me.html"> Peureki.3647 </a>
+				<a href = "../resources/about-me.html"> Peureki#5452 </a>
+				<a href = "mailto: peureseachcenter@gmail.com"> peuresearchcenter@gmail.com </a>
+				<h1 style = "margin-top: 10px;"> Artwork by: </h1>
+				<a href = "https://www.twitter.com/tiffymew"> @tiffymew </a>
+			</div>
+
+			<div class = "footer-third">
+				<h1> Support </h1>
+				<a href="../supporters.html" style = "margin-bottom: 10px;"> List of supporters </a>
+				<a href="https://www.patreon.com/peureki" target = "_blank"> Patreon </a>
+				<a href="https://www.paypal.me/peureki" target = "_blank">Paypal </a>
+
+			</div>
+
+			<div class = "footer-third">
+				<h1></h1>
+				<h1></h1>
+				<h1 style = "font-weight: normal; font-size: 15px;"> Associated logos, renderings, images, and other related content are registered trademarks to ArenaNet or NCSOFT. 
+			</div>
+		</div>
+	</div>
+</body>
+</html>

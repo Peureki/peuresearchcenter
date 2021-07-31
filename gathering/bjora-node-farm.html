@@ -1,0 +1,143 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160103677-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-160103677-1');
+	</script>
+	<title> Bjora Node Farm</title>
+	<script>
+		var last_modified = document.lastModified,
+			css_version = '<link id = "css-version" rel ="stylesheet" type="text/css" href="../styles.css?v='+ last_modified + '">',
+			js_version = '<script type ="text/javascript" src = "../script.js?v=' + last_modified + '">'+'</'+'script>';
+			js_node_calc = '<script type ="text/javascript" src = "./node-farm-calculator.js?v=' + last_modified + '">'+'</'+'script>';
+		document.write(css_version);
+		document.write(js_version);
+		document.write(js_node_calc);
+	</script>
+	<link rel = "shortcut icon" href = "../images/assets/parachute-choya.png">
+</head>
+<body>
+	<div class = "nav">
+		<ul>
+			<li><a href = "../index.html">Home</a></li>
+			<li><a href = "../resources.html">Resources</a></li>
+			<li><a href = "../benchmarks.html">Benchmarks</a></li>
+			<li><a href = "../timers.html">Timers</a></li>
+			<li><a href = "../research.html">Research</a></li>
+			<li><a href = "../maps.html">Maps</a></li>
+			<li><a href = "../gathering.html">Gathering</a></li>
+		</ul>
+	</div>
+
+	<!-- Main header -->
+	<div class = "border-top">
+	</div>
+
+	<div class = "page-title">
+		<h1> Bjora Marches Node Farm </h1>
+	</div>
+
+	<div class = "border-bottom">
+	</div>
+
+	<!-- Main box -->
+	<div class = "page-box">
+
+		<div class = "page-header">
+			<h2> Potential Gold Per Hour </h2>
+		</div>
+
+		<div class = "page-links">
+			<p1><a href="../benchmarks.html"> Full list of benchmarks </a></p1>
+			<br><br>
+			<p1><a href="../gathering.html"> Full list of gathering benchmarks </a></p1>
+		</div>
+
+		<!-- Benchmark table -->
+		<table class = "benchmark-table"> 
+			<thead> 
+				<tr>
+					<th> Farm </th>
+					<th> Benchmark </th>
+					<th> Time </th>
+					<th> <img style="vertical-align:middle; width: 50%;" src = "../images/assets/Unbound_Magic.png"> </th>
+					<th> <img style="vertical-align:middle; width: 50%;" src = "../images/assets/Volatile_Magic.png"></th>
+				</tr>
+			</thead>
+			<tbody id = "benchmark-table"></tbody>
+		</table>
+
+		<div class = "small-description">
+			<center> <iframe width="560" height="315" src="https://www.youtube.com/embed/HrUGwYeLH5c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </center>
+			
+			<span style = "font-weight: bold;"> Disclaimer:</span>
+			<br>
+			In order to receive materials such as variental herbs and quality meats, you need to have completed at least the Charr and Sylvari portion of the <a href = "https://wiki.guildwars2.com/wiki/Gourmet_Training" target = "_blank" style = "text-decoration: underline;"> Gourmet Training</a> achievement. These materials play a significant role in benchmarks that includes them. 
+			
+			<br><br>
+			<b> Spreadsheet</b>
+			<br>
+			To find averages, specific loots, and more, check out the  <a href = "https://docs.google.com/spreadsheets/d/1HOBKHgaPbmc1uMAqupeta824hQzjhiaXBWhPXjORAZs/edit#gid=238669369.html" target = "_blank"><u> spreadsheet</u></a>.
+
+			<br><br>
+			<b> Node Farm Calculator</b>
+			<br>
+			While this farm uses specific Glyphs, check out the <a href = "../gathering.html#calculator" target = "_blank"><u> Node Farm Calcaulator</u></a> to test out the estimated profits with different Glyphs. What are displayed in the benchmarks are not neccessarily the best Glyphs to use for maximum profits. 
+
+			<br><br>
+			<span style = "font-weight: bold;"> Route:</span>
+			<br>
+			Start at Still Waters Speaking Waypoint [&BDkMAAA=]. The east side of Bjora does not have as many nodes compared to the west side. There is an abundance of herbs that offer Varietal Peppercorn Seeds. There are a lot of enemies to slow you down so it's best to bring a character that is quick, can dodge easily, or be quick on your feet. It is required to get Raven's Light mastery (2nd from Raven Attunement) otherwise you'll get chilled and frozen. 
+			<br><br>
+			I did this with about 7 characters. I didn't prep for the farm so they were just using whatever build and weapons they were left off. 
+			
+		</div>
+
+		<!-- 
+			HTML notation:
+			getBenchmark("[table-name]","[Name of farm 1]", etc);
+			The name of the farm has to match the name in the spreadsheet EXACTLY (spaces and all)
+		-->
+		<script> getGatheringBenchmark("benchmark-table","Bjora Marches Node Farm (w/ Volatile)")</script>
+
+		<!-- Gathering Picture -->
+		<div class = "page-gathering-picture">
+			<img title = "Bjora Marches" style = "width: 50%;" src = "../images/bjora-marches/bjora-node-farm.jpg">
+		</div>
+
+	</div> <!-- End of page-box -->
+	<div class = "footer">
+	    <div class = "inner-footer">
+
+	      <div class = "footer-third">
+	        <h1> Created by:  </h1>
+	        <a href = "../resources/about-me.html"> Peureki.3647 </a>
+	        <a href = "../resources/about-me.html"> Peureki#5452 </a>
+	        <a href = "mailto: peureseachcenter@gmail.com"> peuresearchcenter@gmail.com </a>
+	        <h1 style = "margin-top: 10px;"> Artwork by: </h1>
+	        <a href = "https://www.twitter.com/tiffymew"> @tiffymew </a>
+	      </div>
+
+	      <div class = "footer-third">
+	        <h1> Support </h1>
+	        <a href="../supporters.html" style = "margin-bottom: 10px;"> List of supporters </a>
+	        <a href="https://www.patreon.com/peureki" target = "_blank"> Patreon </a>
+	        <a href="https://www.paypal.me/peureki" target = "_blank">Paypal </a>
+
+	      </div>
+
+	      <div class = "footer-third">
+	        <h1></h1>
+	        <h1></h1>
+	        <h1 style = "font-weight: normal; font-size: 15px;"> Associated logos, renderings, images, and other related content are registered trademarks to ArenaNet or NCSOFT. 
+	      </div>
+	    </div>
+  	</div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160103677-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-160103677-1');
+	</script>
+	<title> Elon Riverlands </title>
+	<script>
+		var last_modified = document.lastModified,
+			css_version = '<link id = "css-version" rel ="stylesheet" type="text/css" href="../styles.css?v='+ last_modified + '">',
+			js_version = '<script type ="text/javascript" src = "../script.js?v=' + last_modified + '">'+'</'+'script>';
+		document.write(css_version);
+		document.write(js_version);
+	</script>
+	<link rel = "shortcut icon" href = "../images/assets/peu-choya.png">
+</head>
+<body>
+	<div id = "navbar" class = "navbar"></div>
+	<div id = "subNav"></div>
+
+	<div class = "page-title">
+		<h1> Elon Riverlands </h1>
+	</div>
+
+	<div class = "page-box">
+
+		<div class = "page-header">
+			<h1> Farming </h1>
+			<h2> Potential Gold Per Hour </h2>
+		</div>
+
+		<div class = "page-links">
+			<p1><a href="../benchmarks.html"> Full list of benchmarks </a></p1>
+			<br><br>
+			<p1><a href="https://docs.google.com/spreadsheets/d/1HOBKHgaPbmc1uMAqupeta824hQzjhiaXBWhPXjORAZs/edit#gid=502445709" target = "_blank"> Spreadsheet </a></p1>
+		</div>
+
+		<!-- Benchmark table -->
+		<table class = "benchmark-table"> 
+			<thead> 
+				<tr>
+					<th> Farm Type </th>
+					<th> Farm </th>
+					<th> Benchmark </th>
+				</tr>
+			</thead>
+			<tbody id = "benchmark-table"></tbody>
+		</table>
+
+		<!-- 
+			HTML notation:
+			getBenchmark("[table-name]","[Name of farm 1]", etc);
+			The name of the farm has to match the name in the spreadsheet EXACTLY (spaces and all)
+		-->
+		<script> getBenchmark("benchmark-table", "Elon Riverlands"); </script>
+
+		<div class = "small-description">
+			<p1 style = "font-weight: bold;"> More details of this farm is coming soon! </p1>
+		</div>
+
+		<div class = "page-header">
+			<div class = "small-description">
+				<span style = "font-weight: bold;"> How to: </span>
+				<br>
+				This farm was an experiment, but turns out that it's not half bad! To sum it, this event farm consist of farming Forged Raiding Parties (2) and other events that can spawn Branded and Awakended champions while finishing off with the meta, Path of Ascension + Doppleganger. 
+
+				<br><br>
+				<b> Method: </b>
+				<br> Using my <a href = "../timers/elon-riverlands.html"><u> timer page</u></a>, I started at Skimmer Ranch Waypoint [&BGcKAAA=] and did the 3 Forged events above the waypoint. I went to <b>Raiding Party -> Lost Mount -> Raiding Party (north)</b>. After finishing those events, I waypointed to Augury's Shadow Waypoint [&BFMKAAA=]. The event order I did was <b> Choya -> Branded Waves -> Jimoh -> Flint </b>. If Deadhouse was up, I would do that replacement of Jimoh. 
+				<br><br>
+				For any events that require an escort, I try my best to speedboost or Super Speed them. For Flint specifically, the mobs don't drop that much loot, but champions spawn somewhat frequently. Interact with objects around the area to spawn lots of mobs and make sure the squad turns in the evidence. The event finishes very quickly for a gathering event. 
+				<br><br>
+				With the first loop done, the events at Skimmer Ranch Waypoint would be up again. The whole cycle above repeats until the meta. Do the meta right when it begins. After completing Path of Ascension, there's 10 minutes until the Doppleganger spawn. With those 10 minutes, I repeat the loop from Skimmer Ranch events to Augury Shadow's events. 
+				<br><br>
+				After finishing Doppleganger, the event train should end exactly an hour or so. 
+			</div>
+		</div>
+
+	</div> <!-- End of page-box -->
+
+	<div class = "footer">
+		<div class = "inner-footer">
+
+			<div class = "footer-third">
+				<h1> Created by:  </h1>
+				<a href = "../resources/about-me.html"> Peureki.3647 </a>
+				<a href = "../resources/about-me.html"> Peureki#5452 </a>
+				<a href = "mailto: peureseachcenter@gmail.com"> peuresearchcenter@gmail.com </a>
+				<h1 style = "margin-top: 10px;"> Artwork by: </h1>
+				<a href = "https://www.twitter.com/tiffymew"> @tiffymew </a>
+			</div>
+
+			<div class = "footer-third">
+				<h1> Support </h1>
+				<a href="../supporters.html" style = "margin-bottom: 10px;"> List of supporters </a>
+				<a href="https://www.patreon.com/peureki" target = "_blank"> Patreon </a>
+				<a href="https://www.paypal.me/peureki" target = "_blank">Paypal </a>
+
+			</div>
+
+			<div class = "footer-third">
+				<h1></h1>
+				<h1></h1>
+				<h1 style = "font-weight: normal; font-size: 15px;"> Associated logos, renderings, images, and other related content are registered trademarks to ArenaNet or NCSOFT. 
+			</div>
+		</div>
+	</div>
+
+	<script> insertNav('navbar', 2); </script>
+</body>
+</html>

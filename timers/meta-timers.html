@@ -1,0 +1,2045 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160103677-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-160103677-1');
+	</script>
+	<title> Meta Timers </title>
+	<script>
+		var last_modified = document.lastModified,
+			css_version = '<link id = "css-version" rel ="stylesheet" type="text/css" href="../styles.css?v='+ last_modified + '">',
+			js_version = '<script type ="text/javascript" src = "../script.js?v=' + last_modified + '">'+'</'+'script>';
+			js_trains = '<script type ="text/javascript" src = "./meta-timers.js?v=' + last_modified + '">'+'</'+'script>';
+		document.write(css_version);
+	</script>
+	<link rel = "shortcut icon" href = "../images/assets/parachute-choya.png">
+</head>
+<body>
+	<div id = "nav"></div>
+
+	<div id = "subNav" class = "page-box">
+	</div>
+
+	<div class = "page-title">
+		<h1> Meta Timers </h1>
+	</div>
+
+	<!-- By default, all timers are hidden until checked -->
+	<style>
+		
+		.inner-page-box{
+			display: none;
+		}
+	</style>
+
+	<div class = "full-page-box">
+		<div id = "community-sort" class = "half-page-box">
+
+			<!-- 
+				Core Bosses
+			-->
+
+			<div id = "core-anomaly-box" class = "inner-page-box"> <!-- Start of Ley-line Anomaly -->
+				<div class = "community-timer-name">
+					<p1 id = "title-anomaly"><b> </b></p1>
+					<div class="popup" onclick= "popup('core-anomaly-popup')"> Info
+					  <span class = "popuptext" id = "core-anomaly-popup">
+					  	<b>Time (UTC):</b> Respawns every 2 hours. 0:30, 2:30, etc
+					  	<br><br> 
+					  	<b> Duration: </b> 45 minutes
+					  	<br><br>
+					  	<b>Loot: </b>Crowbars (keys)
+					  </span>
+					</div>
+				
+					<button class = "waypoint-button" id = "waypoint-button"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "core-anomaly-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "core-anomaly-hours">00</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "core-anomaly-minutes">00</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "core-anomaly-seconds">00</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "core-anomaly-num" style = "display: none;"></p2>
+			</div> <!-- End of Ley-line Anomaly -->
+
+			<div id = "core-karka-box" class = "inner-page-box"> <!-- Start of Karka Queen -->
+				<div class = "community-timer-name">
+					<p1><b> Southsun - Karka Queen </b></p1>
+					<div class="popup" onclick= "popup('core-karka-popup')"> Info
+					  <span class = "popuptext" id = "core-karka-popup">
+					  	<b>Time (UTC):</b> Respawns every few hours: 2:00, 6:00, 10:30, 15:00, 18:00, 23:00
+					  	<br><br> 
+					  	<b> Duration: </b> 10 minutes
+					  	<br><br>
+					  	<b>Loot: </b>Boss chest, 2 Pieces of Rare Unidentified Gear
+					  </span>
+					</div>
+				
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BNUGAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "core-karka-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "core-karka-hours">00</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "core-karka-minutes">00</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "core-karka-seconds">00</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "core-karka-num" style = "display: none;"></p2>
+			</div> <!-- End of Karka Queen -->
+
+			<div id = "core-tequatl-box" class = "inner-page-box"> <!-- Start of Tequatl -->
+				<div class = "community-timer-name">
+					<p1><b> Sparkfly - Tequatl </b></p1>
+					<div class="popup" onclick= "popup('core-tequatl-popup')"> Info
+					  <span class = "popuptext" id = "core-tequatl-popup">
+					  	<b>Time (UTC):</b> Respawns every few hours: 0:00, 3:00, 7:00, 11:30, 16:00, 19:00 
+					  	<br><br> 
+					  	<b> Duration: </b> 10 minutes
+					  	<br><br>
+					  	<b>Loot: </b>Boss chest, 1G, 2 Pieces of Rare Unidentified Gear
+					  </span>
+					</div>
+				
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BNABAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "core-tequatl-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "core-tequatl-hours">00</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "core-tequatl-minutes">00</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "core-tequatl-seconds">00</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "core-tequatl-num" style = "display: none;"></p2>
+			</div> <!-- End of Tequatl -->
+
+			<!-- 
+				Verdant Brink 
+			-->
+
+			<div id = "vb-day-box" class = "inner-page-box"> <!-- Start of Verdant Brink Day -->
+				<div class = "community-timer-name">
+					<p1><b> Verdant Brink - Day </b></p1>
+					<div class="popup" onclick= "popup('vb-day-popup')"> Info
+					  <span class = "popuptext" id = "vb-day-popup">
+					  	<b>Time (UTC):</b> Respawns every 2 hours. 0:30, 2:30, etc
+					  	<br><br> 
+					  	<b> Duration: </b> 45 minutes
+					  	<br><br>
+					  	<b>Loot: </b>Crowbars (keys)
+					  </span>
+					</div>
+				
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BAgIAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "vb-day-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "vb-day-hours">00</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "vb-day-minutes">00</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "vb-day-seconds">00</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "vb-day-num" style = "display: none;"></p2>
+			</div> <!-- End of Verdant Brink Day -->
+
+			<div id = "vb-night-box" class = "inner-page-box"> <!-- Start of Verdant Brink Night -->
+				<div class = "community-timer-name">
+					<p1><b> Verdant Brink - Night </b></p1>
+					<div class="popup" onclick= "popup('vb-night-popup')"> Info
+					  <span class = "popuptext" id = "vb-night-popup">
+					  	<b>Time (UTC):</b> Respawns every 2 hours. 1:45, 3:45, etc
+					  	<br><br> 
+					  	<b> Duration: </b> 45 minutes
+					  	<br><br>
+					  	<b>Loot: </b>Amalgamated Gemstone, 1 Guaranteed Blade Armor Box
+					  </span>
+					</div>
+				
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BAgIAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "vb-night-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "vb-night-hours">00</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "vb-night-minutes">00</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "vb-night-seconds">00</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "vb-night-num" style = "display: none;"></p2>
+			</div> <!-- End of Verdant Brink Night -->
+
+			<div id = "vb-bosses-box" class = "inner-page-box"> <!-- Start of Verdant Brink Bosses -->
+				<div class = "community-timer-name">
+					<p1><b> Verdant Brink - Bosses </b></p1>
+					<div class="popup" onclick= "popup('vb-bosses-popup')"> Info
+					  <span class = "popuptext" id = "vb-bosses-popup">
+					  	<b>Time (UTC):</b> Respawns every 2 hours. 0:10, 2:10, etc
+					  	<br><br> 
+					  	<b> Duration: </b> 20 minutes
+					  	<br><br>
+					  	<b>Loot: </b>Amalgamated Gemstone
+					  </span>
+					</div>
+				
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BAgIAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "vb-bosses-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "vb-bosses-hours">00</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "vb-bosses-minutes">00</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "vb-bosses-seconds">00</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "vb-bosses-num" style = "display: none;"></p2>
+			</div> <!-- End of Verdant Brink Bosses -->
+
+			<!-- 
+				Auric Basin
+			--> 
+
+			<div id = "ab-pylons-box" class = "inner-page-box"> <!-- Start of Auric Basin Pylons -->
+				<div class = "community-timer-name">
+					<p1><b> Auric Basin - Pylons </b></p1>
+					<div class="popup" onclick= "popup('ab-pylons-popup')"> Info
+					  <span class = "popuptext" id = "ab-pylons-popup">
+					  	<b>Time (UTC):</b> Respawns every 2 hours. 1:30, 3:30, etc
+					  	<br><br> 
+					  	<b> Duration: </b> 75 minutes
+					  	<br><br>
+					  	<b>Loot: </b>Exalted Keys, Aurillium
+					  </span>
+					</div>
+				
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BAIIAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "ab-pylons-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "ab-pylons-hours">00</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "ab-pylons-minutes">00</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "ab-pylons-seconds">00</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "ab-pylons-num" style = "display: none;"></p2>
+			</div> <!-- End of Auric Basin Pylons -->
+
+			<div id = "ab-octovine-box" class = "inner-page-box"> <!-- Start of Auric Basin Octovine -->
+				<div class = "community-timer-name">
+					<p1><b> Auric Basin - Octovine </b></p1>
+					<div class="popup" onclick= "popup('ab-octovine-popup')"> Info
+					  <span class = "popuptext" id = "ab-octovine-popup">
+					  	<b>Time (UTC):</b> Respawns every 2 hours. 1:00, 3:00, etc
+					  	<br><br> 
+					  	<b> Duration: </b> 30 minutes
+					  	<br><br>
+					  	<b>Loot: </b>Amalgamated Gemstone, Aurillium, Liquid Aurillium
+					  </span>
+					</div>
+				
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BAIIAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "ab-octovine-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "ab-octovine-hours">00</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "ab-octovine-minutes">00</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "ab-octovine-seconds">00</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "ab-octovine-num" style = "display: none;"></p2>
+			</div> <!-- End of Auric Basin Pylons -->
+
+			<div id = "td-outposts-box" class = "inner-page-box"> <!-- Start of Tangled Depths Outposts -->
+				<div class = "community-timer-name">
+					<p1><b> Tangled Depths - Outposts </b></p1>
+					<div class="popup" onclick= "popup('td-outposts-popup')"> Info
+					  <span class = "popuptext" id = "td-outposts-popup">
+					  	<b>Time (UTC):</b> Respawns every 2 hours. 0:46, 2:46, etc
+					  	<br><br> 
+					  	<b> Duration: </b> 1hr 45 minutes
+					  	<br><br>
+					  	<b>Loot: </b>Chak Acid, Ley-line Crystals
+					  </span>
+					</div>
+				
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BPUHAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "td-outposts-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "td-outposts-hours">00</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "td-outposts-minutes">00</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "td-outposts-seconds">00</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "td-outposts-num" style = "display: none;"></p2>
+			</div> <!-- End of Tangled Depths Outposts -->
+
+			<div id = "td-gerent-box" class = "inner-page-box"> <!-- Start of Tangled Depths Gerent -->
+				<div class = "community-timer-name">
+					<p1><b> Tangled Depths - Gerent </b></p1>
+					<div class="popup" onclick= "popup('td-gerent-popup')"> Info
+					  <span class = "popuptext" id = "td-gerent-popup">
+					  	<b>Time (UTC):</b> Respawns every 2 hours. 0:30, 2:30, etc
+					  	<br><br> 
+					  	<b> Duration: </b> 16 minutes
+					  	<br><br>
+					  	<b>Loot: </b>Amalgamated Gemstone, Chak egg
+					  </span>
+					</div>
+				
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BPUHAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "td-gerent-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "td-gerent-hours">00</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "td-gerent-minutes">00</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "td-gerent-seconds">00</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "td-gerent-num" style = "display: none;"></p2>
+			</div> <!-- End of Tangled Depths Gerent -->
+
+			<!-- 
+				Dragon's Stand
+			-->
+
+			<div id = "ds-box" class = "inner-page-box"> <!-- Start of Dragon's Stand -->
+				<div class = "community-timer-name">
+					<p1><b> Dragon's Stand </b></p1>
+					<div class="popup" onclick= "popup('ds-popup')"> Info
+					  <span class = "popuptext" id = "ds-popup">
+					  	<b>Time (UTC):</b> Respawns every 2 hours. 1:30, 3:30
+					  	<br><br> 
+					  	<b> Duration: </b> 1 hour
+					  	<br><br>
+					  	<b>Loot: </b>Amalgamated Gemstone, Chak egg
+					  </span>
+					</div>
+				
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BBAIAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "ds-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "ds-hours">00</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "ds-minutes">00</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "ds-seconds">00</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "ds-num" style = "display: none;"></p2>
+			</div> <!-- End of Dragon's Stand -->
+
+			<!-- 
+				Bloodstone Fen
+			-->
+
+			<div id = "bsf-maw-box" class = "inner-page-box"> <!-- Start of Bloodstone Maw  -->
+				<div class = "community-timer-name">
+					<p1><b> Bloodstone - Maw </b></p1>
+					<div class="popup" onclick= "popup('bsf-maw-popup')"> Info
+					  <span class = "popuptext" id = "bsf-maw-popup">
+					  	<b>Time (UTC):</b> Respawns ~1 hour 
+					  	<br><br> 
+					  	<b> Duration: </b> ~25 minutes
+					  	<br><br>
+					  	<b>Loot: </b>4 Bloodstone Rubies 
+					  </span>
+					</div>
+					<input type = "button" onclick = "countdown(this);" value = "Start">
+
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BEEJAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "bsf-maw-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "bsf-maw-hours">01</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "bsf-maw-minutes">00</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "bsf-maw-seconds">00</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "bsf-maw-num" style = "display: none;">3600</p2>
+			</div> <!-- End of Bloodstone Maw -->
+
+			<div id = "bsf-spirits-box" class = "inner-page-box"> <!-- Start of Bloodstone Spirits  -->
+				<div class = "community-timer-name">
+					<p1><b> Bloodstone - Spirits </b></p1>
+					<div class="popup" onclick= "popup('bsf-spirits-popup')"> Info
+					  <span class = "popuptext" id = "bsf-spirits-popup">
+					  	<b>Time (UTC):</b> Respawns every 2 hours. 1:45, 3:45, etc
+					  	<br><br> 
+					  	<b> Duration: </b> ~10 minutes
+					  	<br><br>
+					  	<b>Loot: </b>1 Bloodstone Ruby
+					  </span>
+					</div>
+				
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BEsJAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "bsf-spirits-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "bsf-spirits-hours">00</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "bsf-spirits-minutes">00</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "bsf-spirits-seconds">00</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "bsf-spirits-num" style = "display: none;"></p2>
+			</div> <!-- End of Bloodstone Spirits -->
+
+			<!-- 
+			Bitterfrost 
+			-->
+
+			<div id = "bff-koda-box" class = "inner-page-box"> <!-- Start of Bitterfrost's Beacons of Koda  -->
+				<div class = "community-timer-name">
+					<p1><b> Bitterfrost - Beacons of Koda </b></p1>
+					<div class="popup" onclick= "popup('bff-koda-popup')"> Info
+					  <span class = "popuptext" id = "bff-koda-popup">
+					  	<b>Time (UTC):</b> Respawns ~52 minutes 
+					  	<br><br> 
+					  	<b> Duration: </b> ~10 minutes
+					  	<br><br>
+					  	<b>Loot: </b>1-9 champion bags 
+					  </span>
+					</div>
+
+					<input type = "button" onclick = "countdown(this);" value = "Start">
+
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BH0JAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "bff-koda-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "bff-koda-hours">00</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "bff-koda-minutes">52</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "bff-koda-seconds">00</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+		
+				<p2 id = "bff-koda-num" style = "display: none;">3120</p2>
+
+			</div> <!-- End of Bitterfrost's Beacons of Koda -->
+
+			<!--
+			Lake Doric
+			-->
+
+			<div id = "ld-noran-box" class = "inner-page-box"> <!-- Start of Lake Doric's Noran's Homested -->
+				<div class = "community-timer-name">
+					<p1><b> Lake Doric - Noran's Homestead </b></p1>
+					<div class="popup" onclick= "popup('ld-noran-popup')"> Info
+					  <span class = "popuptext" id = "ld-noran-popup">
+					  	<b>Time (UTC):</b> Respawns every 2 hours. 00:30, 2:30. 4:30, etc. 
+					  	<br><br> 
+					  	<b> Duration: </b> ~10 minutes
+					  	<br><br>
+					  	<b>Loot: </b>4 Jade Shards. Once per day, per character 
+					  </span>
+					</div>
+
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BK8JAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "ld-noran-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "ld-noran-hours">0</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "ld-noran-minutes">0</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "ld-noran-seconds">0</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "ld-noran-num" style = "display: none;"> </p2>
+			</div> <!-- End of Lake Doric's Noran's Homested -->
+
+			<div id = "ld-saidra-box" class = "inner-page-box"> <!-- Start of Lake Doric's Saidra's Haven -->
+				<div class = "community-timer-name">
+					<p1><b> Lake Doric - Saidra's Haven </b></p1>
+					<div class="popup" onclick= "popup('ld-saidra-popup')"> Info
+					  <span class = "popuptext" id = "ld-saidra-popup">
+					  	<b>Time (UTC):</b> Respawns every 2 hours. 1:00, 3:00. 5:00, etc. 
+					  	<br><br> 
+					  	<b> Duration: </b> ~20 minutes
+					  	<br><br>
+					  	<b>Loot: </b>4 Jade Shards. Once per day, per character 
+					  </span>
+					</div>
+
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BK0JAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "ld-saidra-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "ld-saidra-hours">0</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "ld-saidra-minutes">0</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "ld-saidra-seconds">0</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "ld-saidra-num" style = "display: none;"> </p2>
+			</div> <!-- End of Lake Doric's Saidra's Haven -->
+
+			<div id = "ld-loamhurst-box" class = "inner-page-box"> <!-- Start of Lake Doric's New Loamhurst -->
+				<div class = "community-timer-name">
+					<p1><b> Lake Doric - New Loamhurst </b></p1>
+					<div class="popup" onclick= "popup('ld-loamhurst-popup')"> Info
+					  <span class = "popuptext" id = "ld-loamhurst-popup">
+					  	<b>Time (UTC):</b> Respawns every 2 hours. 1:45, 3:45. 5:45, etc. 
+					  	<br><br> 
+					  	<b> Duration: </b> ~ 15 minutes
+					  	<br><br>
+					  	<b>Loot: </b>Ash Legion Key
+					  </span>
+					</div>
+
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BLQJAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "ld-loamhurst-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "ld-loamhurst-hours">0</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "ld-loamhurst-minutes">0</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "ld-loamhurst-seconds">0</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "ld-loamhurst-num" style = "display: none;"> </p2>
+			</div> <!-- End of Lake Doric's New Loamhurst -->
+
+			<!--
+				Draconis Mons
+			-->
+
+			<div id = "dm-cull-box" class = "inner-page-box"> <!-- Start of Draconis's Mons Cull the Destroyers -->
+				<div class = "community-timer-name">
+					<p1><b> Draconis - Cull the Destroyers </b></p1>
+					<div class="popup" onclick= "popup('dm-cull-popup')"> Info
+					  <span class = "popuptext" id = "dm-cull-popup">
+					  	<b>Time (UTC):</b> Respawns ~20 minutes after completing the last pre-event (4 champions + burrows)
+					  	<br><br> 
+					  	<b> Duration: </b> ~15 minutes
+					  	<br><br>
+					  	<b>Loot: </b>3 Primordial Blossoms. Once per character, per day
+					  </span>
+					</div>
+
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BM0JAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+
+					<input type = "button" onclick = "countdown(this);" value = "Start">
+				</div>
+				<div class = "community-progress-box">
+					<div id = "dm-cull-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "dm-cull-hours">00</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "dm-cull-minutes">20</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "dm-cull-seconds">00</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "dm-cull-num" style = "display: none;">1200</p2>
+			</div> <!-- End of Draconis Mons's Cull the Destroyers -->
+
+			<!-- 
+				Siren's Landing
+			-->
+
+			<div id = "sl-shrines-box" class = "inner-page-box"> <!-- Start of Siren's Landing Shrines -->
+				<div class = "community-timer-name">
+					<p1><b> Siren's Landing - Shrines</b></p1>
+					<div class="popup" onclick= "popup('sl-shrines-popup')"> Info
+					  <span class = "popuptext" id = "sl-shrines-popup">
+					  	<b>Time (UTC):</b> Respawns 30 minutes after completion 
+					  	<br><br> 
+					  	<b> Duration: </b> ~ 10 minutes
+					  	<br><br>
+					  	<b>Loot: </b>8 Orrian Coffers (misc loots, Orrian Pearls)
+					  </span>
+					</div>
+
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BO8JAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+
+					<input type = "button" onclick = "countdown(this);" value = "Start">
+				</div>
+				<div class = "community-progress-box">
+					<div id = "sl-shrines-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "sl-shrines-hours">00</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "sl-shrines-minutes">30</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "sl-shrines-seconds">0</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "sl-shrines-num" style = "display: none;">1800</p2>
+			</div> <!-- End of Siren's Landing Shrines -->
+
+			<!-- 
+				Crystal Oasis
+			-->
+
+			<div id = "co-blitz-box" class = "inner-page-box"> <!-- Start of Crystal Oasis Blitz -->
+				<div class = "community-timer-name">
+					<p1><b> Crystal Oasis - Casino Blitz</b></p1>
+					<div class="popup" onclick= "popup('co-blitz-popup')"> Info
+					  <span class = "popuptext" id = "co-blitz-popup">
+					  	<b>Time (UTC):</b> Respawns ~2 hour 
+					  	<br><br> 
+					  	<b> Duration: </b> ~20 minutes
+					  	<br><br>
+					  	<b>Loot: </b>Amalgamated Gemstone, Confetti Infusion 
+					  </span>
+					</div>
+
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BLsKAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "co-blitz-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "co-blitz-hours">00</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "co-blitz-minutes">00</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "co-blitz-seconds">00</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "co-blitz-num" style = "display: none;"></p2>
+			</div> <!-- End of Casino Blitz -->
+
+			<!-- 
+				Desert Highlands
+			-->
+
+			<div id = "dh-box" class = "inner-page-box"> <!-- Start of Desert Highland Buried Treasure -->
+				<div class = "community-timer-name">
+					<p1><b> Desert Highlands - Treasure</b></p1>
+					<div class="popup" onclick= "popup('dh-popup')"> Info
+					  <span class = "popuptext" id = "dh-popup">
+					  	<b>Time (UTC):</b> Respawns ~2 hour 
+					  	<br><br> 
+					  	<b> Duration: </b> ~20 minutes
+					  	<br><br>
+					  	<b>Loot: </b>Trade Contracts, Elegy Moasics, Possible Minis and Boomboxes
+					  </span>
+					</div>
+
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BGsKAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "dh-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "dh-hours">00</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "dh-minutes">00</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "dh-seconds">00</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "dh-num" style = "display: none;"></p2>
+			</div> <!-- End of Desert Highland Buried Treasure -->
+
+			<!-- 
+				Elon Riverlands
+			-->
+
+			<div id = "er-box" class = "inner-page-box"> <!-- Start of Elon Riverlands -->
+				<div class = "community-timer-name">
+					<p1><b> Elon Riverlands - Ascension/Dopple</b></p1>
+					<div class="popup" onclick= "popup('er-popup')"> Info
+					  <span class = "popuptext" id = "er-popup">
+					  	<b>Time (UTC):</b> Respawns ~2 hour 
+					  	<br><br> 
+					  	<b> Duration: </b> ~20 minutes
+					  	<br><br>
+					  	<b>Loot: </b>Amalgamated Gemstone, Trade Contracts, Elegy Moasics
+					  </span>
+					</div>
+
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BFMKAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "er-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "er-hours">00</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "er-minutes">00</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "er-seconds">00</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "er-num" style = "display: none;"></p2>
+			</div> <!-- End of Elon Riverlands  -->
+
+			<!-- 
+				Desolation
+			-->
+
+			<div id = "deso-wurms-box" class = "inner-page-box"> <!-- Start of Desolation Junundu Wurms -->
+				<div class = "community-timer-name">
+					<p1><b> Desolation - Junundu Wurms</b></p1>
+					<div class="popup" onclick= "popup('deso-wurms-popup')"> Info
+					  <span class = "popuptext" id = "deso-wurms-popup">
+					  	<b>Time (UTC):</b> Respawns every hours at 0:30, 1:30 UTC, etc
+					  	<br><br> 
+					  	<b> Duration: </b> ~ 20 minutes
+					  	<br><br>
+					  	<b>Loot: Amalgamated Gemstone, Trade Contracts, Elegy Mosiacs</b>
+					  </span>
+					</div>
+
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BMEKAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+
+				</div>
+				<div class = "community-progress-box">
+					<div id = "deso-wurms-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "deso-wurms-hours">00</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "deso-wurms-minutes">00</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "deso-wurms-seconds">00</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "deso-wurms-num" style = "display: none;"></p2>
+			</div> <!-- End of Desolation Junundu Wurms -->
+
+			<div id = "deso-maw-box" class = "inner-page-box"> <!-- Start of Desolation Maw -->
+				<div class = "community-timer-name">
+					<p1><b> Desolation - Maw of Torment</b></p1>
+					<div class="popup" onclick= "popup('deso-maw-popup')"> Info
+					  <span class = "popuptext" id = "deso-maw-popup">
+					  	<b>Time (UTC):</b> Respawns every 2 hours at 1:30, 3:30 UTC, etc
+					  	<br><br> 
+					  	<b> Duration: </b> ~ 20 minutes
+					  	<br><br>
+					  	<b>Loot: Amalgamated Gemstone, Trade Contracts, Elegy Mosiacs</b>
+					  </span>
+					</div>
+
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BKMKAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "deso-maw-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "deso-maw-hours">00</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "deso-maw-minutes">00</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "deso-maw-seconds">00</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "deso-maw-num" style = "display: none;"></p2>
+			</div> <!-- End of Desolation Maw -->
+
+			<!-- 
+				Domain of Vabbi
+			-->
+
+			<div id = "vabbi-forged-box" class = "inner-page-box"> <!-- Start of Domain of Vabbi Forged -->
+				<div class = "community-timer-name">
+					<p1><b> Vabbi - Forged</b></p1>
+					<div class="popup" onclick= "popup('vabbi-forged-popup')"> Info
+					  <span class = "popuptext" id = "vabbi-forged-popup">
+					  	<b>Time (UTC):</b> Respawns every hours at 0:00, 1:00 UTC, etc
+					  	<br><br> 
+					  	<b> Duration: </b> ~ 10 minutes
+					  	<br><br>
+					  	<b>Loot: Amalgamated Gemstone, Trade Contracts, Elegy Mosiacs</b>
+					  </span>
+					</div>
+
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BO0KAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "vabbi-forged-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "vabbi-forged-hours">00</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "vabbi-forged-minutes">00</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "vabbi-forged-seconds">00</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "vabbi-forged-num" style = "display: none;"></p2>
+			</div> <!-- End of Domain of Vabbi Forged -->
+
+			<div id = "vabbi-serpent-box" class = "inner-page-box"> <!-- Start of Vabbi Serpent Ire -->
+				<div class = "community-timer-name">
+					<p1><b> Vabbi - Serpents' Ire</b></p1>
+					<div class="popup" onclick= "popup('vabbi-serpent-popup')"> Info
+					  <span class = "popuptext" id = "vabbi-serpent-popup">
+					  	<b>Time (UTC):</b> Respawns every 2 hours at 0:30, 2:30 UTC, etc
+					  	<br><br> 
+					  	<b> Duration: </b> ~ 20 minutes
+					  	<br><br>
+					  	<b>Loot: Amalgamated Gemstone, Trade Contracts, Elegy Mosiacs</b>
+					  </span>
+					</div>
+
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BHQKAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "vabbi-serpent-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "vabbi-serpent-hours">00</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "vabbi-serpent-minutes">00</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "vabbi-serpent-seconds">00</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "vabbi-serpent-num" style = "display: none;"></p2>
+			</div> <!-- End of Domain of Vabbi Serpent Ire -->
+
+			<!-- 
+				Domain of Istan
+			-->
+
+			<div id = "istan-pala-box" class = "inner-page-box"> <!-- Start of Istan Palawadan -->
+				<div class = "community-timer-name">
+					<p1><b> Istan - Palawadan</b></p1>
+					<div class="popup" onclick= "popup('istan-pala-popup')"> Info
+					  <span class = "popuptext" id = "istan-pala-popup">
+					  	<b>Time (UTC):</b> Respawns every 2 hours at 1:45 UTC, 3:45 UTC, etc
+					  	<br><br> 
+					  	<b> Duration: </b> ~ 20 minutes
+					  	<br><br>
+					  	<b>Loot: 15 Kralkatite Ore + Caches</b>
+					  </span>
+					</div>
+
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BAkLAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "istan-pala-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "istan-pala-hours">00</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "istan-pala-minutes">00</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "istan-pala-seconds">00</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "istan-pala-num" style = "display: none;"></p2>
+			</div> <!-- End of Istan Palawadan -->
+
+			<div id = "istan-gh-box" class = "inner-page-box"> <!-- Start of Istan Great Hall -->
+				<div class = "community-timer-name">
+					<p1><b> Istan - Great Hall</b></p1>
+					<div class="popup" onclick= "popup('istan-gh-popup')"> Info
+					  <span class = "popuptext" id = "istan-gh-popup">
+					  	<b>Time (UTC):</b> Respawns every 2 hours at 0:20 UTC, 2:20 UTC, etc
+					  	<br><br> 
+					  	<b> Duration: </b> ~ 20 minutes
+					  	<br><br>
+					  	<b>Loot: 15 Kralkatite Ore + Caches</b>
+					  </span>
+					</div>
+
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BAkLAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "istan-gh-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "istan-gh-hours">00</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "istan-gh-minutes">00</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "istan-gh-seconds">00</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "istan-gh-num" style = "display: none;"></p2>
+			</div> <!-- End of Istan Great Hall -->
+
+			<!-- 
+				Sandswept Isles
+			-->
+
+			<div id = "ssi-storms-box" class = "inner-page-box"> <!-- Start of Sandswept Gathering Storms -->
+				<div class = "community-timer-name">
+					<p1><b> Sandswept - Gathering Storms</b></p1>
+					<div class="popup" onclick= "popup('ssi-storms-popup')"> Info
+					  <span class = "popuptext" id = "ssi-storms-popup">
+					  	<b>Time (UTC):</b> Respawns 33 minutes after completion. 
+					  	<br><br> 
+					  	<b> Duration: </b> ~ 20 minutes
+					  	<br><br>
+					  	<b>Loot: </b>5 Difluorite Crystal. Once per day, per character
+					  </span>
+					</div>
+
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BEMLAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+
+					<input type = "button" onclick = "countdown(this);" value = "Start">
+				</div>
+				<div class = "community-progress-box">
+					<div id = "ssi-storms-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "ssi-storms-hours">00</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "ssi-storms-minutes">33</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "ssi-storms-seconds">0</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "ssi-storms-num" style = "display: none;">1980</p2>
+			</div> <!-- End of Sandswept Gathering Storms -->
+
+			<div id = "ssi-specimen-box" class = "inner-page-box"> <!-- Start of Sandswept Specimen Chamber -->
+				<div class = "community-timer-name">
+					<p1><b> Sandswept - Specimen Chamber</b></p1>
+					<div class="popup" onclick= "popup('ssi-specimen-popup')"> Info
+					  <span class = "popuptext" id = "ssi-specimen-popup">
+					  	<b>Time (UTC):</b> Respawns 45 minutes after completion 
+					  	<br><br>
+					  	<b> Duration: </b> ~ 20 minutes
+					  	<br><br>
+					  	<b>Loot: </b>5 Difluorite Crystal. Once per day, per character
+					  </span>
+					</div>
+
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BCULAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+
+					<input type = "button" onclick = "countdown(this);" value = "Start">
+				</div>
+				<div class = "community-progress-box">
+					<div id = "ssi-specimen-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "ssi-specimen-hours">00</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "ssi-specimen-minutes">45</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "ssi-specimen-seconds">0</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "ssi-specimen-num" style = "display: none;">2700</p2>
+			</div> <!-- End of Sandswept Specimen Chamber -->
+
+			<!-- 
+				Domain of Kourna
+			-->
+
+			<div id = "kourna-scarab-box" class = "inner-page-box"> <!-- Start of Kourna Scarab Plague -->
+				<div class = "community-timer-name">
+					<p1><b> Kourna - Scarab Plague</b></p1>
+					<div class="popup" onclick= "popup('kourna-scarab-popup')"> Info
+					  <span class = "popuptext" id = "kourna-scarab-popup">
+					  	<b>Time (UTC):</b> Respawns 30 minutes after pre-events (Cannon events) 
+					  	<br><br> 
+					  	<b> Duration: </b> ~ 15 minutes
+					  	<br><br>
+					  	<b>Loot: </b>17 Inscribed Shards. Repeatable
+					  </span>
+					</div>
+
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BFcLAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+
+					<input type = "button" onclick = "countdown(this);" value = "Start">
+				</div>
+				<div class = "community-progress-box">
+					<div id = "kourna-scarab-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "kourna-scarab-hours">00</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "kourna-scarab-minutes">30</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "kourna-scarab-seconds">0</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "kourna-scarab-num" style = "display: none;">1800</p2>
+			</div> <!-- End of Kourna Scarab Plague -->
+
+			<!-- 
+				Jahai Bluffs
+			-->
+
+			<div id = "jahai-shat-box" class = "inner-page-box"> <!-- Start of Jahai Death Branded Shatterer-->
+				<div class = "community-timer-name">
+					<p1><b> Jahai - Shatterer</b></p1>
+					<div class="popup" onclick= "popup('jahai-shat-popup')"> Info
+					  <span class = "popuptext" id = "jahai-shat-popup">
+					  	<b>Time (UTC):</b> Respawns every 2 hours. 1:15, 3:15, etc. Pre-event escorts begin at the start of the hour. 
+					  	<br><br> 
+					  	<b> Duration: </b> ~ 20 minutes
+					  	<br><br>
+					  	<b>Loot: </b>5 Lumps of Mistonium
+					  </span>
+					</div>
+
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BIMLAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "jahai-shat-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "jahai-shat-hours">00</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "jahai-shat-minutes">00</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "jahai-shat-seconds">0</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "jahai-shat-num" style = "display: none;"></p2>
+			</div> <!-- End of Jahai Death Branded Shatterer -->
+
+			<!-- 
+				Thunderhead Peaks
+			-->
+
+			<div id = "th-keep-box" class = "inner-page-box"> <!-- Start of Thunderhead Keep-->
+				<div class = "community-timer-name">
+					<p1><b> Thunderhead - Thunderhead Keep</b></p1>
+					<div class="popup" onclick= "popup('th-keep-popup')"> Info
+					  <span class = "popuptext" id = "th-keep-popup">
+					  	<b>Time (UTC):</b> Respawns every 2 hours. 1:45, 3:45, etc
+					  	<br><br> 
+					  	<b> Duration: </b> ~ 20 minutes
+					  	<br><br>
+					  	<b>Loot: </b>5+ Branded Masses, Chance of Jewel of Serpentire
+					  </span>
+					</div>
+
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BLsLAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "th-keep-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "th-keep-hours">00</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "th-keep-minutes">00</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "th-keep-seconds">0</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "th-keep-num" style = "display: none;"></p2>
+			</div> <!-- End of Thunderhead Keep -->
+
+			<div id = "th-oil-box" class = "inner-page-box"> <!-- Start of Thunderhead Oil Floes-->
+				<div class = "community-timer-name">
+					<p1><b> Thunderhead - Oil Floes</b></p1>
+					<div class="popup" onclick= "popup('th-oil-popup')"> Info
+					  <span class = "popuptext" id = "th-oil-popup">
+					  	<b>Time (UTC):</b> Respawns every 2 hours. 2:45, 4:45, etc. 
+					  	<br><br> 
+					  	<b> Duration: </b> ~ 20 minutes
+					  	<br><br>
+					  	<b>Loot: </b>5+ Branded Masses, Chance of Jewel of Serpentire
+					  </span>
+					</div>
+
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BKYLAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "th-oil-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "th-oil-hours">00</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "th-oil-minutes">00</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "th-oil-seconds">0</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "th-oil-num" style = "display: none;"></p2>
+			</div> <!-- End of Thunderhead Keep -->
+
+			<!-- 
+				Grothmar Valley
+			-->
+
+			<div id = "gv-effigy-box" class = "inner-page-box"> <!-- Start of Grothmar's Effigy -->
+				<div class = "community-timer-name">
+					<p1><b> Grothmar - Effigy </b></p1>
+					<div class="popup" onclick= "popup('gv-effigy-popup')"> Info
+					  <span class = "popuptext" id = "gv-effigy-popup">
+					  	<b>Time (UTC):</b> Respawns every 2 hours. 0:10, 2:10, 4:10, etc
+					  	<br><br> 
+					  	<b> Duration: </b> ~ 10 minutes
+					  	<br><br>
+					  	<b>Loot: </b>Flame Legion Key
+					  </span>
+					</div>
+
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BBsMAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "gv-effigy-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "gv-effigy-hours">0</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "gv-effigy-minutes">0</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "gv-effigy-seconds">0</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "gv-effigy-num" style = "display: none;"> </p2>
+			</div> <!-- End of Grothmar's Effigy -->
+
+			<div id = "gv-doomlore-box" class = "inner-page-box"> <!-- Start of Grothmar's Doomlore -->
+				<div class = "community-timer-name">
+					<p1><b> Grothmar - Doomlore </b></p1>
+					<div class="popup" onclick= "popup('gv-doomlore-popup')"> Info
+					  <span class = "popuptext" id = "gv-doomlore-popup">
+					  	<b>Time (UTC):</b> Respawns every 2 hours. 0:35, 2:35, 4:35, etc
+					  	<br><br> 
+					  	<b> Duration: </b> ~ 10 minutes
+					  	<br><br>
+					  	<b>Loot: </b>Ash Legion Key
+					  </span>
+					</div>
+
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BBsMAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "gv-doomlore-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "gv-doomlore-hours">0</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "gv-doomlore-minutes">0</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "gv-doomlore-seconds">0</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "gv-doomlore-num" style = "display: none;"> </p2>
+			</div> <!-- End of Grothmar's Doomlore -->
+
+			<div id = "gv-ooze-box" class = "inner-page-box"> <!-- Start of Grothmar's Ooze -->
+				<div class = "community-timer-name">
+					<p1><b> Grothmar - Ooze </b></p1>
+					<div class="popup" onclick= "popup('gv-ooze-popup')"> Info
+					  <span class = "popuptext" id = "gv-ooze-popup">
+					  	<b>Time (UTC):</b> Respawns every 2 hours. 1:05, 3:05, 5:05, etc
+					  	<br><br> 
+					  	<b> Duration: </b> ~ 10 minutes
+					  	<br><br>
+					  	<b>Loot: </b>Blood Legion Key 
+					  </span>
+					</div>
+
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BPgLAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "gv-ooze-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "gv-ooze-hours">0</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "gv-ooze-minutes">0</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "gv-ooze-seconds">0</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "gv-ooze-num" style = "display: none;"> </p2>
+			</div> <!-- End of Grothmar's Ooze -->
+
+			<div id = "gv-concert-box" class = "inner-page-box"> <!-- Start of Grothmar's Concert -->
+				<div class = "community-timer-name">
+					<p1><b> Grothmar - Concert </b></p1>
+					<div class="popup" onclick= "popup('gv-concert-popup')"> Info
+					  <span class = "popuptext" id = "gv-concert-popup">
+					  	<b>Time (UTC):</b> Respawns every 2 hours. 1:30, 3:30, etc
+					  	<br><br> 
+					  	<b> Duration: </b> ~ 10 minutes
+					  	<br><br>
+					  	<b>Loot: </b>Blood Legion Key 
+					  </span>
+					</div>
+
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BPgLAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "gv-concert-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "gv-concert-hours">0</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "gv-concert-minutes">0</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "gv-concert-seconds">0</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "gv-concert-num" style = "display: none;"> </p2>
+			</div> <!-- End of Grothmar's concert -->
+
+			<!-- 
+				Bjora Marches
+			-->
+
+			<div id = "bm-drakkar-box" class = "inner-page-box"> <!-- Start of Bjora Marches Drakkar -->
+				<div class = "community-timer-name">
+					<p1><b> Bjora Marches - Drakkar </b></p1>
+					<div class="popup" onclick= "popup('bm-drakkar-popup')"> Info
+					  <span class = "popuptext" id = "bm-drakkar-popup">
+					  	<b>Time (UTC):</b> Respawns every 2 hours. 1:05, 3:05, 5:05, etc
+					  	<br><br> 
+					  	<b> Duration: </b> ~ 30 minutes
+					  	<br><br>
+					  	<b>Loot: </b>Eirite Ingots, Possible Winter's Heart Infusion 
+					  </span>
+					</div>
+
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BDkMAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "bm-drakkar-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "bm-drakkar-hours">0</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "bm-drakkar-minutes">0</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "bm-drakkar-seconds">0</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "bm-drakkar-num" style = "display: none;"> </p2>
+			</div> <!-- End of Bjora Marches Drakkar -->
+
+			<div id = "bm-storms-box" class = "inner-page-box"> <!-- Start of Bjora Marches Storms of Winter -->
+				<div class = "community-timer-name">
+					<p1><b> Bjora Marches - Storms </b></p1>
+					<div class="popup" onclick= "popup('bm-storms-popup')"> Info
+					  <span class = "popuptext" id = "bm-storms-popup">
+					  	<b>Time (UTC):</b> Respawns every 2 hours. 1:45, 3:45 etc
+					  	<br><br> 
+					  	<b> Duration: </b> ~ 30 minutes
+					  	<br><br>
+					  	<b>Loot: </b>Eirite Ingots
+					  </span>
+					</div>
+
+					<button class = "waypoint-button" onclick = "copyWaypoint('[&BCcMAAA=]');"><img src = "../images/assets/waypoint.png"></img></button>
+				</div>
+				<div class = "community-progress-box">
+					<div id = "bm-storms-progress-bar" class = "community-progress-bar">
+					</div>
+
+					<div class = "page-box-community-timer">
+
+						<div class = "community-timer">
+							Hours
+							<br>
+							<p1 id = "bm-storms-hours">0</p1> <!-- Hour -->
+						</div>
+						<div class = "community-timer">
+							Minutes
+							<p1 id = "bm-storms-minutes">0</p1> <!-- Minutes -->
+						</div>
+						<div class = "community-timer">
+							Seconds
+							<p1 id = "bm-storms-seconds">0</p1> <!-- Seconds -->
+						</div>
+					</div>
+				</div>
+
+				<p2 id = "bm-storms-num" style = "display: none;"> </p2>
+			</div> <!-- End of Bjora Marches Storms of Winter -->
+
+
+			
+
+		</div> <!-- End of first page box double -->
+
+		<div class = "half-page-box"> 
+			<br><br>
+			<div style = "display: flex; justify-content: flex-start;">
+				<div class = "legend-upcoming">
+			  		Upcoming Event
+			 	</div>
+			 	<div style = "max-width: 60%; font-size: 20px; margin: auto;" > 
+			 
+			 	</div>
+			</div>
+
+			<div style = "display: flex; justify-content: flex-start;">
+			  	<div class = "legend-ongoing">
+			  		Ongoing Event
+			  	</div>
+
+			  	<div style = "max-width: 60%; font-size: 20px; margin: auto;"> 
+			 		&#8594; Ongoing duration (counts up)
+			 	</div>
+			</div>
+
+			<div style = "background-color: rgba(236,236,222, .75); width: 90%; margin-left: 5px; margin-top: 10px; font-size: 20px;" >
+
+				<div style = "text-align: left; padding-left: 30px; padding-top: 10px; padding-bottom: 10px; line-height: 1.5;">
+					<b> How this works: </b>
+					<br> Pick and choose which metas you want to follow. This includes metas with global timers and without! For a great list of global metas, check out the <a href = "https://wiki.guildwars2.com/wiki/Event_timers" target = "_blank"><u>Wiki</u></a>.
+
+					
+				</div>
+
+				<div style = "text-align: left; padding-top: 20px; padding-bottom: 20px; padding-left: 30px; font-size: 30px;">
+					<b style = "color: #802020"> Core </b>
+				</div>
+
+				<div style = "text-align: left; padding-left: 30px; padding-top: 10px; padding-bottom: 10px; line-height: 1.5;">
+					<input type = "Checkbox" id = "core-karka-checkbox" onclick = "checkbox_Timers(this, 'core-karka-box');">: Karka Queen
+					<br>
+	    			<input type = "Checkbox" id = "core-anomaly-checkbox" onclick = "checkbox_Timers(this, 'core-anomaly-box');">: Ley-line Anomaly
+	    			<br>
+	    			<input type = "Checkbox" id = "core-tequatl-checkbox" onclick = "checkbox_Timers(this, 'core-tequatl-box');">: Tequatl the Sunless
+	    		</div>
+
+				<div style = "text-align: left; padding-top: 20px; padding-bottom: 20px; padding-left: 30px; font-size: 30px;">
+					<b style = "color: #802020"> Heart of Thorns </b>
+				</div>
+
+				<div style = "text-align: left; padding-left: 30px; padding-top: 10px; padding-bottom: 10px; line-height: 1.5;">
+					<b> Verdant Brink </b>
+					<br>
+	    			<input type = "Checkbox" id = "vb-day-checkbox" onclick = "checkbox_Timers(this, 'vb-day-box');">: Day
+	    			<br>
+	    			<input type = "Checkbox" id = "vb-night-checkbox" onclick = "checkbox_Timers(this, 'vb-night-box');">: Night
+	    			<br>
+	    			<input type = "Checkbox" id = "vb-bosses-checkbox" onclick = "checkbox_Timers(this, 'vb-bosses-box');">: Bosses
+
+	    			<br><br>
+	    			<b> Auric Basin </b>
+					<br>
+	    			<input type = "Checkbox" id = "ab-pylons-checkbox" onclick = "checkbox_Timers(this, 'ab-pylons-box');">: Pylons
+	    			<br>
+	    			<input type = "Checkbox" id = "ab-octovine-checkbox" onclick = "checkbox_Timers(this, 'ab-octovine-box');">: Octovine
+
+	    			<br><br>
+	    			<b> Tangled Depths </b>
+					<br>
+	    			<input type = "Checkbox" id = "td-outposts-checkbox" onclick = "checkbox_Timers(this, 'td-outposts-box');">: Outposts
+	    			<br>
+	    			<input type = "Checkbox" id = "td-gerent-checkbox" onclick = "checkbox_Timers(this, 'td-gerent-box');">: Chak Gerent
+
+	    			<br><br>
+	    			<b> Dragon's Stand </b>
+					<br>
+	    			<input type = "Checkbox" id = "ds-checkbox" onclick = "checkbox_Timers(this, 'ds-box');">: Meta
+
+	    		</div>
+
+    			<div style = "text-align: left; padding-top: 20px; padding-bottom: 20px; padding-left: 30px; font-size: 30px;">
+					<b style = "color: #802020"> Living Story 3 </b>
+				</div>
+
+				<div style = "text-align: left; padding-left: 30px; line-height: 1.5;">
+					<b> Bloodstone Fen </b>
+					<br>
+	    			<input type = "Checkbox" id = "bsf-maw-checkbox" onclick = "checkbox_Timers(this, 'bsf-maw-box');">: Maw
+	    			<br>
+	    			<input type = "Checkbox" id = "bsf-spirits-checkbox" onclick = "checkbox_Timers(this, 'bsf-spirits-box');">: Spirits
+
+	    			<br><br>
+					<b> Bitterfrost Frontier </b>
+					<br>
+	    			<input type = "Checkbox" id = "bff-koda-checkbox" onclick = "checkbox_Timers(this, 'bff-koda-box');">: Beacons of Koda
+	    			
+	    			<br><br>
+					<b> Lake Doric </b>
+					<br>
+	    			<input type = "Checkbox" id = "ld-noran-checkbox" onclick = "checkbox_Timers(this, 'ld-noran-box');">: Noran's Homested 
+	    			<br>
+	    			<input type = "Checkbox" id = "ld-saidra-checkbox" onclick = "checkbox_Timers(this, 'ld-saidra-box');">: Saidra's Haven
+					<br>
+	    			<input type = "Checkbox" id = "ld-loamhurst-checkbox" onclick = "checkbox_Timers(this, 'ld-loamhurst-box');">: New Loamhurst
+
+	    			<br><br>
+					<b> Draconis Mons </b>
+					<br>
+	    			<input type = "Checkbox" id = "dm-cull-checkbox" onclick = "checkbox_Timers(this, 'dm-cull-box');">: Cull the Destroyers
+
+	    			<br><br>
+	    			<b> Siren's Landing </b>
+					<br>
+	    			<input type = "Checkbox" id = "sl-shrines-checkbox" onclick = "checkbox_Timers(this, 'sl-shrines-box');">: Orrian Shrine Power Grid
+	    		</div>
+
+	    		<div style = "text-align: left; padding-top: 20px; padding-bottom: 20px; padding-left: 30px; font-size: 30px;">
+					<b style = "color: #802020"> Path of Fire </b>
+				</div>
+
+	    		<div style = "text-align: left; padding-left: 30px; padding-top: 10px; padding-bottom: 10px; line-height: 1.5;">
+	    			<b> Crystal Oasis </b>
+					<br>
+	    			<input type = "Checkbox" id = "co-blitz-checkbox" onclick = "checkbox_Timers(this, 'co-blitz-box');">: Casino Blitz
+
+	    			<br><br>
+	    			<b> Desert Highlands </b>
+					<br>
+	    			<input type = "Checkbox" id = "dh-checkbox" onclick = "checkbox_Timers(this, 'dh-box');">: Buried Treasure
+
+	    			<br><br>
+	    			<b> Elon Riverlands </b>
+					<br>
+	    			<input type = "Checkbox" id = "er-checkbox" onclick = "checkbox_Timers(this, 'er-box');">: Path of Ascension/Doppleganger
+
+	    			<br><br>
+	    			<b> Desolation </b>
+					<br>
+	    			<input type = "Checkbox" id = "deso-wurms-checkbox" onclick = "checkbox_Timers(this, 'deso-wurms-box');">: Junundu Wurms
+	    			<br>
+	    			<input type = "Checkbox" id = "deso-wurms-checkbox" onclick = "checkbox_Timers(this, 'deso-maw-box');">: Maw of Torment
+
+	    			<br><br>
+	    			<b> Domain of Vabbi </b>
+					<br>
+	    			<input type = "Checkbox" id = "vabbi-forged-checkbox" onclick = "checkbox_Timers(this, 'vabbi-forged-box');">: Forged with Fire
+	    			<br>
+	    			<input type = "Checkbox" id = "vabbi-serpent-checkbox" onclick = "checkbox_Timers(this, 'vabbi-serpent-box');">: Serpents' Ire
+	    		</div>
+
+	    		<div style = "text-align: left; padding-top: 20px; padding-bottom: 20px; padding-left: 30px; font-size: 30px;">
+					<b style = "color: #802020"> Living Story 4 </b>
+				</div>
+
+	    		<div style = "text-align: left; padding-left: 30px; line-height: 1.5;">
+	    			<b> Domain of Istan</b>
+					<br>
+	    			<input type = "Checkbox" id = "istan-pala-checkbox" onclick = "checkbox_Timers(this, 'istan-pala-box');">: Palawadan
+	    			<br>
+	    			<input type = "Checkbox" id = "istan-gh-checkbox" onclick = "checkbox_Timers(this, 'istan-gh-box');">: Great Hall
+
+	    			<br><br>
+	    			<b> Sandswept Isles </b>
+					<br>
+	    			<input type = "Checkbox" id = "ssi-storms-checkbox" onclick = "checkbox_Timers(this, 'ssi-storms-box');">: Gathering Storms
+	    			<br>
+	    			<input type = "Checkbox" id = "ssi-specimen-checkbox" onclick = "checkbox_Timers(this, 'ssi-specimen-box');">: Specimen Chamber
+
+	    			<br><br>
+	    			<b> Domain of Kourna </b>
+					<br>
+	    			<input type = "Checkbox" id = "kourna-scarab-checkbox" onclick = "checkbox_Timers(this, 'kourna-scarab-box');">: Scarab Plague
+
+	    			<br><br>
+	    			<b> Jahai Bluffs </b>
+					<br>
+	    			<input type = "Checkbox" id = "jahai-shat-checkbox" onclick = "checkbox_Timers(this, 'jahai-shat-box');">: Death-Branded Shatterer
+
+	    			<br><br>
+	    			<b> Thunderhead Peaks</b>
+					<br>
+	    			<input type = "Checkbox" id = "th-keep-checkbox" onclick = "checkbox_Timers(this, 'th-keep-box');">: Thunderhead Keep
+	    			<br>
+	    			<input type = "Checkbox" id = "th-oil-checkbox" onclick = "checkbox_Timers(this, 'th-oil-box');">: Oil Floes
+	    		</div>
+
+	    		<div style = "text-align: left; padding-top: 20px; padding-bottom: 20px; padding-left: 30px; font-size: 30px;">
+					<b style = "color: #802020"> Icebrood Saga </b>
+				</div>
+
+	    		<div style = "text-align: left; padding-left: 30px; line-height: 1.5;">
+	    			<b> Grothmar Valley </b>
+					<br>
+	    			<input type = "Checkbox" id = "gv-effigy-checkbox" onclick = "checkbox_Timers(this, 'gv-effigy-box');">: Effigy
+	    			<br>
+	    			<input type = "Checkbox" id = "gv-doomlore-checkbox" onclick = "checkbox_Timers(this, 'gv-doomlore-box');">: Doomlore
+					<br>
+	    			<input type = "Checkbox" id = "gv-ooze-checkbox" onclick = "checkbox_Timers(this, 'gv-ooze-box');">: Ooze
+	    			<br>
+	    			<input type = "Checkbox" id = "gv-concert-checkbox" onclick = "checkbox_Timers(this, 'gv-concert-box');">: Concert
+	
+					<br><br>
+	    			<b> Bjora Marches </b>
+					<br>
+	    			<input type = "Checkbox" id = "bm-drakkar-checkbox" onclick = "checkbox_Timers(this, 'bm-drakkar-box');">: Drakkar
+	    			<br>
+	    			<input type = "Checkbox" id = "bm-storms-checkbox" onclick = "checkbox_Timers(this, 'bm-storms-box');">: Storms of Winter
+				</div>
+			</div>
+		</div> <!-- End of second page box -->
+
+
+		</div>
+	</div> <!-- End of main page box -->
+
+	<script>
+		document.write(js_version);
+		document.write(js_trains);
+	</script>
+
+	<script> 
+		core_Anomaly();
+		core_Karka();
+		core_Tequatl();
+
+		vb_Day();
+		vb_Night();
+		vb_Bosses();
+
+		ab_Pylons();
+		ab_Octovine();
+
+		td_Outposts();
+		td_Gerent();
+
+		ds();
+
+		bsf_Spirits();
+
+		ld_Noran();
+		ld_Saidra();
+		ld_Loamhurst();
+
+		co_Blitz();
+		dh();
+		er();
+		deso_Wurms();
+		deso_Maw();
+		vabbi_Forged();
+		vabbi_Serpent();
+
+		istan_Pala();
+		istan_GH();
+
+		jahai_Shat();
+
+		th_Keep();
+		th_Oil();
+
+		gv_Effigy();
+		gv_Doomlore();
+		gv_Ooze();
+		gv_Concert();
+
+		bm_Drakkar();
+		bm_Storms();
+
+		
+	</script>
+
+	<script> insertNav('nav', 2); </script>
+	
+
+	<div class = "footer">
+		<div class = "inner-footer">
+
+			<div class = "footer-third">
+				<h1> Created by:  </h1>
+				<a href = "../resources/about-me.html"> Peureki.3647 </a>
+				<a href = "../resources/about-me.html"> Peureki#5452 </a>
+				<a href = "mailto: peureseachcenter@gmail.com"> peuresearchcenter@gmail.com </a>
+				<h1 style = "margin-top: 10px;"> Artwork by: </h1>
+				<a href = "https://www.twitter.com/tiffymew"> @tiffymew </a>
+			</div>
+
+			<div class = "footer-third">
+				<h1> Support </h1>
+				<a href="../supporters.html" style = "margin-bottom: 10px;"> List of supporters </a>
+				<a href="https://www.patreon.com/peureki" target = "_blank"> Patreon </a>
+				<a href="https://www.paypal.me/peureki" target = "_blank">Paypal </a>
+
+			</div>
+
+			<div class = "footer-third">
+				<h1></h1>
+				<h1></h1>
+				<h1 style = "font-weight: normal; font-size: 15px;"> Associated logos, renderings, images, and other related content are registered trademarks to ArenaNet or NCSOFT. 
+			</div>
+		</div>
+	</div>
+</body>
+</html>
