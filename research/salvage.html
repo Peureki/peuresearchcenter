@@ -11,27 +11,30 @@
 	  gtag('config', 'UA-160103677-1');
 	</script>
 	<title> Salvage </title>
-	<script>
-		var last_modified = document.lastModified,
-			css_version = '<link id = "css-version" rel ="stylesheet" type="text/css" href="../styles.css?v='+ last_modified + '">',
-			js_version = '<script type ="text/javascript" src = "../script.js?v=' + last_modified + '">'+'</'+'script>';
-			js_salvage_version = '<script type ="text/javascript" src = "./salvage.js?v=' + last_modified + '">'+'</'+'script>';
-		document.write(css_version);
-		document.write(js_version);
-		document.write(js_salvage_version);
-	</script>
-	<link rel = "shortcut icon" href = "../images/assets/parachute-choya.png">
+
+	<!-- Initialize main files -->
+	<link id = "css-main" type = "text/css" rel = "stylesheet" href = "../styles.css">
+	<script id = "js-main" type = "text/javascript" src = "../script.js"></script>
+	<script id = "js-salvage" type = "text/javascript" src = "./salvage.js"></script>
+
+	<link rel = "shortcut icon" href = "../images/assets/peu-choya.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
 	<div id = "navbar" class = "navbar"></div>
 	<div id = "subNav"></div>
 
-	<div class = "homepage-title">
-		<h1> Salvage </h1>
-	</div>
-
 	<div class ="page-box">
+
+		<div class = "section-header">
+			<h1> Salvage </h1>
+			<div class = "banner-box"></div>
+			<img src = "../images/assets/banner.svg">
+		</div>
+		<!-- Hidden space so the header doesn't overlap anything below -->
+		<div class = "section-header-space"></div>
+
 		<div class = "small-description">
 			Average is determined by salvaging an item and comparing it to the TP sell price (including 15% tax for items pre-salvaged/post-salvaged). All items are assumed as drops/in your inventory already. 
 		</div>
@@ -41,14 +44,25 @@
 			<!--<input type = "button" id = "buy-button" value = "Buy Price" onclick = "buy_button();">-->
 			<input type = "button" id = "value-button" value = "Value" onclick = "value_button();">
 		</div>
-	</div>
 
-	<div class = "page-links">
-			<p1><a href="https://docs.google.com/spreadsheets/d/1XveivmraUz6WLSeNIbMHYckr9OMmj191aE-FYZhtjCE/edit?usp=sharing" target = "_blank"> Spreadsheet </a></p1>
+		<div id = "sell-uni" class = "multi-benchmarks-left">
+			<div id = "loading" class = "loading"> 
+				<img id = "loading-image" class = "loading-image" src = "../images/assets/research-choya.png">
+				<table id = "salvage-uni" class = "worth-salvage"> 
+					<thead> 
+						<tr>
+							<th></th>
+							<th> Unidentified Gear</th>
+							<th> Profit</th>
+							<th> Choice </th>
+						</tr>
+					</thead>
+					<tbody id = "salvage-uni-table"></tbody>
+				</table>
+			</div>
 		</div>
-	<div id = "sell-uni" class = "multi-benchmarks-left">
-		<div id = "loading" class = "loading"> 
-			<img id = "loading-image" class = "loading-image" src = "../images/assets/research-choya.png">
+		<!--
+		<div id = "buy-uni" class = "multi-benchmarks-left" style = "display: none;">
 			<table id = "salvage-uni" class = "worth-salvage"> 
 				<thead> 
 					<tr>
@@ -58,109 +72,101 @@
 						<th> Choice </th>
 					</tr>
 				</thead>
-				<tbody id = "salvage-uni-table"></tbody>
+				<tbody id = "salvage-uni-buy-table"></tbody>
+			</table>
+		</div> -->
+
+		<div id = "value-uni" class = "multi-benchmarks-left" style = "display: none;">
+			<table id = "salvage-uni" class = "worth-salvage"> 
+				<thead> 
+					<tr>
+						<th></th>
+						<th> Unidentified Gear</th>
+						<th> Profit</th>
+						<th> Choice </th>
+					</tr>
+				</thead>
+				<tbody id = "salvage-uni-value-table"></tbody>
 			</table>
 		</div>
-	</div>
+
+		<div class ="page-box" style = "margin-top: -15px; margin-bottom: -15px;">
+			<div class = "small-description" style = "margin-left: auto; margin-right: auto;">
+					<span style = "font-weight: bold">General rule of thumb for unidentified gear:</span>
+					<br>
+					<span style = "font-weight: bold">All</span> unidentified gear is assuming you open then salvage. For more data on direct vs non-direct salvaging, check <a href = "https://wiki.guildwars2.com/wiki/Piece_of_Unidentified_Gear" target = "_blank" style = "text-decoration: underline;">Wiki</a> (listed at the bottom).
+					<br>- Blue &#8594; Copper-Fed > Basic Kit 
+					<br> - Green &#8594; Runecrafter's > Copper-Fed > Basic Kit
+					<br> - Yellows &#8594; Silver-Fed or Mystic Salvage Kit > Master's Salvage Kit
+					<br><br>
+					Note: Outside of unidentified gear, the list above is the order of salvaging kits if you don't happen to have some such as Runecrafter's. 
+					<br><br>
+					As of 7/21, you can sort by Item or Choice, but not the rest yet. 
+			</div>
+		</div>
+
+		
+
+		<div id = "sell-item" class = "multi-benchmarks-left">
+			<div id = "loading" class = "loading"> 
+				<table id = "salvage-tp" class = "worth-salvage"> 
+					<thead> 
+						<tr>
+							<th></th>
+							<th onclick = "sortTableByAlphabet('salvage-tp', 1);" style = "cursor: pointer;"> Item</th>
+							<th> Copper-Fed</th>
+							<th> Runecrafter's</th>
+							<th> Silver-Fed</th>
+							<th onclick = "sortTableByAlphabet('salvage-tp', 5);" style = "cursor: pointer;"> Choice </th>
+						</tr>
+					</thead>
+					<tbody id = "salvage-sell-table"></tbody>
+				</table>
+			</div>
+		</div>
 	<!--
-	<div id = "buy-uni" class = "multi-benchmarks-left" style = "display: none;">
-		<table id = "salvage-uni" class = "worth-salvage"> 
-			<thead> 
-				<tr>
-					<th></th>
-					<th> Unidentified Gear</th>
-					<th> Profit</th>
-					<th> Choice </th>
-				</tr>
-			</thead>
-			<tbody id = "salvage-uni-buy-table"></tbody>
-		</table>
-	</div> -->
+		<div id = "buy-item" class = "multi-benchmarks-left" style = "display: none;">
+			<div id = "loading" class = "loading"> 
+				<table id = "salvage-tp" class = "worth-salvage"> 
+					<thead> 
+						<tr>
+							<th></th>
+							<th onclick = "sortTableByAlphabet('salvage-tp', 1);" style = "cursor: pointer;"> Item</th>
+							<th> Copper-Fed</th>
+							<th> Runecrafter's</th>
+							<th> Silver-Fed</th>
+							<th onclick = "sortTableByAlphabet('salvage-tp', 5);" style = "cursor: pointer;"> Choice </th>
+						</tr>
+					</thead>
+					<tbody id = "salvage-buy-table"></tbody>
+				</table>
+			</div>
+		</div> -->
 
-	<div id = "value-uni" class = "multi-benchmarks-left" style = "display: none;">
-		<table id = "salvage-uni" class = "worth-salvage"> 
-			<thead> 
-				<tr>
-					<th></th>
-					<th> Unidentified Gear</th>
-					<th> Profit</th>
-					<th> Choice </th>
-				</tr>
-			</thead>
-			<tbody id = "salvage-uni-value-table"></tbody>
-		</table>
-	</div>
-
-	<div class ="page-box" style = "margin-top: -15px; margin-bottom: -15px;">
-		<div class = "small-description" style = "margin-left: auto; margin-right: auto;">
-				<span style = "font-weight: bold">General rule of thumb for unidentified gear:</span>
-				<br>
-				<span style = "font-weight: bold">All</span> unidentified gear is assuming you open then salvage. For more data on direct vs non-direct salvaging, check <a href = "https://wiki.guildwars2.com/wiki/Piece_of_Unidentified_Gear" target = "_blank" style = "text-decoration: underline;">Wiki</a> (listed at the bottom).
-				<br>- Blue &#8594; Copper-Fed > Basic Kit 
-				<br> - Green &#8594; Runecrafter's > Copper-Fed > Basic Kit
-				<br> - Yellows &#8594; Silver-Fed or Mystic Salvage Kit > Master's Salvage Kit
-				<br><br>
-				Note: Outside of unidentified gear, the list above is the order of salvaging kits if you don't happen to have some such as Runecrafter's. 
-				<br><br>
-				As of 7/21, you can sort by Item or Choice, but not the rest yet. 
+		<div id = "value-item" class = "multi-benchmarks-left" style = "display: none;">
+			<div id = "loading" class = "loading"> 
+				<table id = "salvage-tp" class = "worth-salvage"> 
+					<thead> 
+						<tr>
+							<th></th>
+							<th onclick = "sortTableByAlphabet('salvage-tp', 1);" style = "cursor: pointer;"> Item</th>
+							<th> Copper-Fed</th>
+							<th> Runecrafter's</th>
+							<th> Silver-Fed</th>
+							<th onclick = "sortTableByAlphabet('salvage-tp', 5);" style = "cursor: pointer;"> Choice </th>
+						</tr>
+					</thead>
+					<tbody id = "salvage-value-table"></tbody>
+				</table>
+			</div>
 		</div>
 	</div>
 
-	
+	<div class = "page-links">
+			<p1><a href="https://docs.google.com/spreadsheets/d/1XveivmraUz6WLSeNIbMHYckr9OMmj191aE-FYZhtjCE/edit?usp=sharing" target = "_blank"> Spreadsheet </a></p1>
+		</div>
 
-	<div id = "sell-item" class = "multi-benchmarks-left">
-		<div id = "loading" class = "loading"> 
-			<table id = "salvage-tp" class = "worth-salvage"> 
-				<thead> 
-					<tr>
-						<th></th>
-						<th onclick = "sortTableByAlphabet('salvage-tp', 1);" style = "cursor: pointer;"> Item</th>
-						<th> Copper-Fed</th>
-						<th> Runecrafter's</th>
-						<th> Silver-Fed</th>
-						<th onclick = "sortTableByAlphabet('salvage-tp', 5);" style = "cursor: pointer;"> Choice </th>
-					</tr>
-				</thead>
-				<tbody id = "salvage-sell-table"></tbody>
-			</table>
-		</div>
-	</div>
-<!--
-	<div id = "buy-item" class = "multi-benchmarks-left" style = "display: none;">
-		<div id = "loading" class = "loading"> 
-			<table id = "salvage-tp" class = "worth-salvage"> 
-				<thead> 
-					<tr>
-						<th></th>
-						<th onclick = "sortTableByAlphabet('salvage-tp', 1);" style = "cursor: pointer;"> Item</th>
-						<th> Copper-Fed</th>
-						<th> Runecrafter's</th>
-						<th> Silver-Fed</th>
-						<th onclick = "sortTableByAlphabet('salvage-tp', 5);" style = "cursor: pointer;"> Choice </th>
-					</tr>
-				</thead>
-				<tbody id = "salvage-buy-table"></tbody>
-			</table>
-		</div>
-	</div> -->
 
-	<div id = "value-item" class = "multi-benchmarks-left" style = "display: none;">
-		<div id = "loading" class = "loading"> 
-			<table id = "salvage-tp" class = "worth-salvage"> 
-				<thead> 
-					<tr>
-						<th></th>
-						<th onclick = "sortTableByAlphabet('salvage-tp', 1);" style = "cursor: pointer;"> Item</th>
-						<th> Copper-Fed</th>
-						<th> Runecrafter's</th>
-						<th> Silver-Fed</th>
-						<th onclick = "sortTableByAlphabet('salvage-tp', 5);" style = "cursor: pointer;"> Choice </th>
-					</tr>
-				</thead>
-				<tbody id = "salvage-value-table"></tbody>
-			</table>
-		</div>
-	</div>
 
 
 	<script> getSalvage('salvage-tp','loading-image');
@@ -168,34 +174,47 @@
 
 		
 	</div> <!-- End of page-box -->
+	<!-- 
+		=================================================
+		==================== FOOOTER ====================
+		=================================================
+	-->
 	<div class = "footer">
 		<div class = "inner-footer">
+			<h1> Created By </h1>
+			<a href = "../resources/about-me.html"> Peureki.3647 |</a>
+			<a href = "../resources/about-me.html"> Peureki#5452 |</a>
+			<a href = "mailto: peureseachcenter@gmail.com"> peuresearchcenter@gmail.com </a>
+			<h1 style = "margin-top: 10px;"> Artwork </h1>
+			<a href = "https://www.twitter.com/tiffymew"> @tiffymew </a>
+		</div>
 
-			<div class = "footer-third">
-				<h1> Created by:  </h1>
-				<a href = "../resources/about-me.html"> Peureki.3647 </a>
-				<a href = "../resources/about-me.html"> Peureki#5452 </a>
-				<a href = "mailto: peureseachcenter@gmail.com"> peuresearchcenter@gmail.com </a>
-				<h1 style = "margin-top: 10px;"> Artwork by: </h1>
-				<a href = "https://www.twitter.com/tiffymew"> @tiffymew </a>
-			</div>
+		<div class = "inner-footer">
+			<h1> Support </h1>
+			<a href="../supporters.html" style = "margin-bottom: 10px;"> List of supporters </a>
+			<br><a href="https://www.patreon.com/peureki" target = "_blank"> Patreon </a>
+			<br><a href="https://www.paypal.me/peureki" target = "_blank">Paypal </a>
+		</div>
 
-			<div class = "footer-third">
-				<h1> Support </h1>
-				<a href="../supporters.html" style = "margin-bottom: 10px;"> List of supporters </a>
-				<a href="https://www.patreon.com/peureki" target = "_blank"> Patreon </a>
-				<a href="https://www.paypal.me/peureki" target = "_blank">Paypal </a>
-
-			</div>
-
-			<div class = "footer-third">
-				<h1></h1>
-				<h1></h1>
-				<h1 style = "font-weight: normal; font-size: 15px;"> Associated logos, renderings, images, and other related content are registered trademarks to ArenaNet or NCSOFT. 
-			</div>
+		<div class = "inner-footer">
+			<p1> Associated logos, renderings, images, and other related content are registered trademarks to ArenaNet or NCSOFT.</p1>
 		</div>
 	</div>
 
 	<script> insertNav('navbar', 2); </script>
 </body>
+
+<script id = "js-mode" type = "text/javascript" src = "../mode.js"></script>
+<!-- VERSIONING --> 
+<script> 
+	var css_main = "../styles.css?v='" + document.lastModified + "'",
+		js_main = "../script.js?v='" + document.lastModified +"'",
+		js_mode = "../mode.js?v='" + document.lastModified +"'",
+		js_salvage = "./salvage.js?v='" + document.lastModified +"'";;
+
+	document.getElementById('css-main').href = css_main;
+	document.getElementById('js-main').src = js_main; 
+	document.getElementById('js-mode').src = js_mode;
+	document.getElementById('js-salvage').src = js_salvage;
+</script>
 </html>

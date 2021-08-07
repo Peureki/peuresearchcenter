@@ -19,15 +19,16 @@
 			js_pref_version = '<script type ="text/javascript" src = "./preferences.js?v=' + last_modified + '">'+'</'+'script>';
 		document.write(css_version);
 	</script>
+
+	<!-- Initialize main files -->
+	<link id = "css-main" type = "text/css" rel = "stylesheet" href = "../styles.css">
+
 	<link rel = "shortcut icon" href = "../images/assets/peu-choya.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 	<div id = "navbar" class = "navbar"></div>
 	<div id = "subNav"></div>
-
-	<div class = "homepage-title">
-		<h1> Refinement </h1>
-	</div>
 	
 	<div id = "bookmark-left" class = "bookmark-left">
 		<ul>
@@ -70,9 +71,13 @@
 
 	<div class = "page-box">
 
-		<div class = "small-description" style = "text-align: center;">
-			6/13: Welcome. This page is a work-in-progress. Over time, I'll add more materials! 
-		</div>	
+		<div class = "section-header">
+			<h1> Refinement </h1>
+			<div class = "banner-box"></div>
+			<img src = "../images/assets/banner.svg">
+		</div>
+		<!-- Hidden space so the header doesn't overlap anything below -->
+		<div class = "section-header-space"></div>
 
 		<div style = "text-align: center;">
 			<span style = "font-size: 15px; font-weight: bold;"> Items: </span>
@@ -98,9 +103,13 @@
 		</div>
 
 		<div id = "ascended" style = "margin: 10px;">
-			<div class = "homepage-title">
-				<h1> Ascended Materials </h1> 
+			<div class = "section-header">
+				<h1> Ascended Materials </h1>
+				<div class = "banner-box"></div>
+				<img src = "../images/assets/banner.svg">
 			</div>
+			<!-- Hidden space so the header doesn't overlap anything below -->
+			<div class = "section-header-space"></div>
 
 			<table id = "ascended-table" class = "four-ingre">
 				<thead>
@@ -122,9 +131,13 @@
 		</div>
 
 		<div id = "basic">
-			<div class = "homepage-title">
+			<div class = "section-header">
 				<h1> Basic Materials </h1>
+				<div class = "banner-box"></div>
+				<img src = "../images/assets/banner.svg">
 			</div>
+			<!-- Hidden space so the header doesn't overlap anything below -->
+			<div class = "section-header-space"></div>
 		
 
 			<div style = "display: flex; justify-content: center;">
@@ -207,15 +220,13 @@
 		</div>
 
 		<div id = "gem">
-			<div class = "homepage-title">
-				<h1> Gemstones</h1> 
-				<!--<span class = "hoverHeader">
-					<b> Contributors </b>
-					<br> Peureki.3647
-					<br> Goat.7189
-
-				</span> -->
+			<div class = "section-header">
+				<h1> Gemstone</h1>
+				<div class = "banner-box"></div>
+				<img src = "../images/assets/banner.svg">
 			</div>
+			<!-- Hidden space so the header doesn't overlap anything below -->
+			<div class = "section-header-space"></div>
 
 			<table id = "gem-table" class = "four-ingre">
 				<thead>
@@ -237,9 +248,13 @@
 		</div>
 
 		<div id = "jewel">
-			<div class = "homepage-title">
-				<h1> Jewels </h1> 
+			<div class = "section-header">
+				<h1> Jewels </h1>
+				<div class = "banner-box"></div>
+				<img src = "../images/assets/banner.svg">
 			</div>
+			<!-- Hidden space so the header doesn't overlap anything below -->
+			<div class = "section-header-space"></div>
 
 			<table id = "orb-table" class = "two-ingre">
 				<thead>
@@ -257,9 +272,13 @@
 		</div>
 
 		<div id = "misc" style = "margin: 10px;">
-			<div class = "homepage-title">
-				<h1> Miscellaneous </h1> 
+			<div class = "section-header">
+				<h1> Miscellaneous </h1>
+				<div class = "banner-box"></div>
+				<img src = "../images/assets/banner.svg">
 			</div>
+			<!-- Hidden space so the header doesn't overlap anything below -->
+			<div class = "section-header-space"></div>
 
 			<table id = "misc-table" class = "four-ingre">
 				<thead>
@@ -281,9 +300,13 @@
 		</div>
 
 		<div id = "curio" style = "margin: 10px;">
-			<div class = "homepage-title">
-				<h1> Mystic Curios </h1> 
+			<div class = "section-header">
+				<h1> Mystic Curios </h1>
+				<div class = "banner-box"></div>
+				<img src = "../images/assets/banner.svg">
 			</div>
+			<!-- Hidden space so the header doesn't overlap anything below -->
+			<div class = "section-header-space"></div>
 
 			<table id = "curio-table" class = "three-ingre">
 				<thead>
@@ -303,9 +326,13 @@
 		</div>
 
 		<div id = "rune" style = "margin: 10px;">
-			<div class = "homepage-title">
-				<h1> Runes </h1> 
+			<div class = "section-header">
+				<h1> Runes </h1>
+				<div class = "banner-box"></div>
+				<img src = "../images/assets/banner.svg">
 			</div>
+			<!-- Hidden space so the header doesn't overlap anything below -->
+			<div class = "section-header-space"></div>
 
 			<table id = "rune-table" class = "four-ingre">
 				<thead>
@@ -327,39 +354,55 @@
 		</div>
 	</div> <!-- End of page-box -->
 
+	<!-- 
+		=================================================
+		==================== FOOOTER ====================
+		=================================================
+	-->
 	<div class = "footer">
 		<div class = "inner-footer">
+			<h1> Created By </h1>
+			<a href = "../resources/about-me.html"> Peureki.3647 |</a>
+			<a href = "../resources/about-me.html"> Peureki#5452 |</a>
+			<a href = "mailto: peureseachcenter@gmail.com"> peuresearchcenter@gmail.com </a>
+			<h1 style = "margin-top: 10px;"> Artwork </h1>
+			<a href = "https://www.twitter.com/tiffymew"> @tiffymew </a>
+		</div>
 
-			<div class = "footer-third">
-				<h1> Created by:  </h1>
-				<a href = "../resources/about-me.html"> Peureki.3647 </a>
-				<a href = "../resources/about-me.html"> Peureki#5452 </a>
-				<a href = "mailto: peureseachcenter@gmail.com"> peuresearchcenter@gmail.com </a>
-				<h1 style = "margin-top: 10px;"> Artwork by: </h1>
-				<a href = "https://www.twitter.com/tiffymew"> @tiffymew </a>
-			</div>
+		<div class = "inner-footer">
+			<h1> Support </h1>
+			<a href="../supporters.html" style = "margin-bottom: 10px;"> List of supporters </a>
+			<br><a href="https://www.patreon.com/peureki" target = "_blank"> Patreon </a>
+			<br><a href="https://www.paypal.me/peureki" target = "_blank">Paypal </a>
+		</div>
 
-			<div class = "footer-third">
-				<h1> Support </h1>
-				<a href="../supporters.html" style = "margin-bottom: 10px;"> List of supporters </a>
-				<a href="https://www.patreon.com/peureki" target = "_blank"> Patreon </a>
-				<a href="https://www.paypal.me/peureki" target = "_blank">Paypal </a>
-
-			</div>
-
-			<div class = "footer-third">
-				<h1></h1>
-				<h1></h1>
-				<h1 style = "font-weight: normal; font-size: 15px;"> Associated logos, renderings, images, and other related content are registered trademarks to ArenaNet or NCSOFT. 
-			</div>
+		<div class = "inner-footer">
+			<p1> Associated logos, renderings, images, and other related content are registered trademarks to ArenaNet or NCSOFT.</p1>
 		</div>
 	</div>
+	
+	<script id = "js-main" type = "text/javascript" src = "../script.js"></script>
+	<script id = "js-refine" type = "text/javascript" src = "./refinement.js"></script>
+	<script id = "js-pref" type = "text/javascript" src = "./preferences.js"></script>
 
-	<script> document.write(js_version); document.write(js_pref_version); document.write(js_refinement_version); </script>
 	<script> insertNav('navbar', 2); </script>
-	<script> </script>
 	<script> refinement(0); </script>
-
 	<script> doPreferences(); </script>
 </body>
+
+<script id = "js-mode" type = "text/javascript" src = "../mode.js"></script>
+<!-- VERSIONING --> 
+<script> 
+	var css_main = "../styles.css?v='" + document.lastModified + "'",
+		js_main = "../script.js?v='" + document.lastModified +"'",
+		js_mode = "../mode.js?v='" + document.lastModified +"'",
+		js_refine = "./refinement.js?v='" + document.lastModified +"'",
+		js_pref = "./pref.js?v='" + document.lastModified +"'";
+
+	document.getElementById('css-main').href = css_main;
+	document.getElementById('js-main').src = js_main; 
+	document.getElementById('js-mode').src = js_mode;
+	document.getElementById('js-refine').src = js_refine;
+	document.getElementById('js-pref').src = js_pref;
+</script>
 </html>

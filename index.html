@@ -12,22 +12,18 @@
 	</script>
 
 	<title> Peu Research Center</title>
-	<script>
-		var last_modified = document.lastModified,
-			css_version = '<link id = "css-version" rel ="stylesheet" type="text/css" href="./styles.css?v='+ last_modified + '">',
-			js_version = '<script type ="text/javascript" src = "./script.js?v=' + last_modified + '">'+'</'+'script>',
-			js_timers = '<script type ="text/javascript" src = "./homepage-timers.js?v=' + last_modified + '">'+'</'+'script>';
-		document.write(css_version);
-		document.write(js_version); 
-		document.write(js_timers);
-	</script>
+
+	<!-- Initialize main files -->
+	<link id = "css-main" type = "text/css" rel = "stylesheet" href = "./styles.css">
+	<script id = "js-main" type = "text/javascript" src = "./script.js"></script>
+	<script id = "js-timers" type = "text/javascript" src = "./homepage-timers.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel = "shortcut icon" href = "./images/assets/peu-choya.png">
 </head>
 <body>
-	<!-- Merp --> 
 	<div id = "navbar" class = "navbar"></div>
-	<div id = "subNav"></div>
-
+<!--
 	<div id = "discord" class = "discord-left">
 		<span><b> Live Trains </b></span>
 		<br>
@@ -35,7 +31,8 @@
 		<br>
 		<span><b> From <a href = "https://discord.gg/7tWwz499rX" target = "_blank" style = "color: white;"><u> Overflow </u></a></b>
 	</div>
-
+-->
+	<!--
 		<div class = "homepage-title" style = "display: flex; align-items: center; justify-content: center;">
 			<img src = "./images/assets/peu-choya.png" style = "width: 8%;">
 			<h1> Peu Research Center </h1>
@@ -43,201 +40,128 @@
 
 		<div class = "homepage-title" >
 			<h2> Guild Wars 2 farms, guides, tools, and more! </h1>
-		</div>
+		</div> 
+	-->
+		<!-- 
+			===========================================================
+			====================== MAIN SECTIONS ======================
+			===========================================================
+		-->
 
+	<div class = "double-box">
 		<div class = "homepage-box">
+			<img id = "display-choya" src = "./images/assets/peu-choya.png">
+			<span id = "top-fader" ></span>
+			<span id = "bottom-fader"></span>
+			<span id = "left-fader"></span>
+			<span id = "right-fader"></span>
 
-			<div class = "homepage-resources">
-				<a href = "./resources.html">
-					<h1> Resources </h1>
-					<img src = "./images/assets/red-choya.png">
-				</a>
-			</div>
-
-			<div class = "homepage-benchmarks">
-				<a href = "./benchmarks.html">
-					<h1> Benchmarks </h1>
-					<img src = "./images/assets/gold-choya.png">
-				</a>
-			</div>
-			
-			<div class = "homepage-timers"> 
-				<a href = "./timers.html">
-					<h1> Timers </h1>
-					<img src = "./images/assets/timer-choya.png">
-				</a>
-			</div>
+		</div>
+		<!-- Hidden margin between the left and right boxes since the left is abs-->
+		<div class = "hidden-homepage-box">
 		</div>
 
-		<div class = "homepage-box">
-			
-			<div class = "homepage-research">
-				<a href = "./research.html">
-					<h1> Research </h1>
-					<img src = "./images/assets/research-choya.png">
-				</a>
+		<div class = "right-box">
+			<h1 class = "title"> Peu Research Center </h1>
+
+			<div class = "section-header">
+				<h1>Peu Train</h1>
+				<div class = "banner-box"></div>
+				<img src = "./images/assets/banner.svg">
 			</div>
+			<!-- Hidden space so the header doesn't overlap anything below -->
+			<div class = "section-header-space"></div>
 
-			<div class = "homepage-maps">
-				<a href = "./maps.html"> 
-					<h1> Maps </h1>
-					<img src = "./images/assets/blue-choya.png">
-				</a>
-			</div>
-
-			<div class = "homepage-gathering">
-				<a href = "./gathering.html">
-					<h1> Gathering </h1>
-					<img src = "./images/assets/gathering-choya.png">
-				</a>
-			</div> 
-		</div>
-
-		
-
-		<div class = "page-box">
-			<a href = "https://www.youtube.com/channel/UCh9vjDECde6ypDtfg_doUcw">
-				<img src = "./images/assets/youtube-logo.png" style = "width: 10%; display: block; margin-left: auto; margin-right: auto;">
-			</a>
-
-			<div class = "small-description">
-				<h1 style = "font-size: 40px;"> Peu Train </h1>
-				<p1 style = "font-size: 20px;"> Join me for unique trains such as Auric Basin and Tangled Depth Baubles, LS4, POF, and more! Depending on the map, enjoy map currency, EXP, and a fun time. The more the merrier!
-				<br><br>
-				<b> Time: </b> Generally Tuesdays and Saturdays around reset, reset+1, or reset+2 and lasts around 1 hour and 15 minutes (depending on the map). <b>/sqjoin Peureki.3647 around 15 minutes before a train to join squad and say hi! </b>
-				</p1>
-
-				<br><br>
-				<div style = "position: relative; display: flex; align-items: left;">
-					<div style = "background: rgba(215, 161, 93); border: 1px solid black; width: 17px; height: 17px; position: absolute; bottom: 25%;">
-					</div> 
-					<p style = "margin-left: 25px;"> Train is less than 1 day until it begins</p>
+			<div class = "inner-double-box">
+				<div class = "small-description">
+					<p1 style = "font-size: 20px;"> Join me for unique trains such as Auric Basin, Tangled Depth Baubles, LS4, POF, and more! <b>/sqjoin Peureki.3647</b> around 15 minutes before a train to join squad and say hi!
+					</p1>
 				</div>
 
-				<div style = "position: relative; display: flex; align-items: left;">
-					<div style = "background: rgba(191, 255, 255); border: 1px solid black; width: 17px; height: 17px; position: absolute; bottom: 25%;">
-					</div> 
-					<p style = "margin-left: 25px;"> Train is less than 1 hour until it begins</p>
-				</div>
+				<div class = "small-description">
+					<div id = "box-0" class = "inner-page-box"> <!-- Start of Peu Train -->
+						<div class = "full-timer-name">
+							<b>Official: </b><p1 id = "name-0"></p1> <p1 id = "time-0"></p1>
+						</div>
+						<div class = "full-progress-box">
+							<div id = "progress-bar-0" class = "full-progress-bar">
+							</div>
 
-				<div style = "position: relative; display: flex; align-items: left;">
-					<div style = "background: rgba(87, 204, 250); border: 1px solid black; width: 17px; height: 17px; position: absolute; bottom: 25%;">
-					</div> 
-					<p style = "margin-left: 25px;"> Train is ongoing</p>
-				</div>
+							<div class = "page-box-full-timer">
 
-				<div style = "position: relative; display: flex; align-items: left;">
-					<div style = "background: rgba(221,221,221,1); border: 1px solid black; width: 17px; height: 17px; position: absolute; bottom: 25%;">
-					</div> 
-					<p style = "margin-left: 25px;"> Train scheduled</p>
-				</div>
-
-				<div style = "position: relative; display: flex; align-items: left;">
-					<div style = "background: rgba(221,221,221,0.3); border: 1px solid black; width: 17px; height: 17px; position: absolute; bottom: 25%;">
-					</div> 
-					<p style = "margin-left: 25px;"> (Faded) Train ended, no new scheduled train yet</p>
-				</div>
-
-				
-				<div id = "box-0" class = "inner-page-box"> <!-- Start of Peu Train -->
-					<div class = "full-timer-name">
-						<b>Official: </b><p1 id = "name-0"></p1> <p1 id = "time-0"></p1>
-					</div>
-					<div class = "full-progress-box">
-						<div id = "progress-bar-0" class = "full-progress-bar">
+								<div class = "full-timer">
+									Days
+									<br>
+									<p1 id = "days-0">00</p1> <!-- Day -->
+								</div>
+								<div class = "full-timer">
+									Hours
+									<br>
+									<p1 id = "hours-0">00</p1> <!-- Hour -->
+								</div>
+								<div class = "full-timer">
+									Minutes 
+									<br>
+									<p1 id = "minutes-0">00</p1> <!-- Minutes -->
+								</div>
+								<div class = "full-timer">
+									Seconds
+									<br>
+									<p1 id = "seconds-0">00</p1> <!-- Seconds -->
+								</div>
+							</div>
 						</div>
 
-						<div class = "page-box-full-timer">
+						<p2 id = "num-0" style = "display: none;"> </p2>
+					</div> <!-- End of peu train -->
 
-							<div class = "full-timer">
-								Days
-								<br>
-								<p1 id = "days-0">00</p1> <!-- Day -->
+					<div id = "box-1" class = "inner-page-box"> <!-- Start of impromtu -->
+						<div class = "full-timer-name">
+							<b>Impromtu: </b><p1 id = "name-1"></p1> <p1 id = "time-1"></p1>
+						</div>
+						<div class = "full-progress-box">
+							<div id = "progress-bar-1" class = "full-progress-bar">
 							</div>
-							<div class = "full-timer">
-								Hours
-								<br>
-								<p1 id = "hours-0">00</p1> <!-- Hour -->
-							</div>
-							<div class = "full-timer">
-								Minutes 
-								<br>
-								<p1 id = "minutes-0">00</p1> <!-- Minutes -->
-							</div>
-							<div class = "full-timer">
-								Seconds
-								<br>
-								<p1 id = "seconds-0">00</p1> <!-- Seconds -->
+
+							<div class = "page-box-full-timer">
+
+								<div class = "full-timer">
+									Days
+									<br>
+									<p1 id = "days-1">00</p1> <!-- Day -->
+								</div>
+								<div class = "full-timer">
+									Hours
+									<br>
+									<p1 id = "hours-1">00</p1> <!-- Hour -->
+								</div>
+								<div class = "full-timer">
+									Minutes 
+									<br>
+									<p1 id = "minutes-1">00</p1> <!-- Minutes -->
+								</div>
+								<div class = "full-timer">
+									Seconds
+									<br>
+									<p1 id = "seconds-1">00</p1> <!-- Seconds -->
+								</div>
 							</div>
 						</div>
-					</div>
 
-					<p2 id = "num-0" style = "display: none;"> </p2>
-				</div> <!-- End of peu train -->
+						<p2 id = "num-1" style = "display: none;"> </p2>
+					</div> <!-- End of impromtu -->
+				</div> <!-- End of peu train desc -->
+			</div> <!-- End of inner double box -->
 
-				<div id = "box-1" class = "inner-page-box"> <!-- Start of impromtu -->
-					<div class = "full-timer-name">
-						<b>Impromtu: </b><p1 id = "name-1"></p1> <p1 id = "time-1"></p1>
-					</div>
-					<div class = "full-progress-box">
-						<div id = "progress-bar-1" class = "full-progress-bar">
-						</div>
-
-						<div class = "page-box-full-timer">
-
-							<div class = "full-timer">
-								Days
-								<br>
-								<p1 id = "days-1">00</p1> <!-- Day -->
-							</div>
-							<div class = "full-timer">
-								Hours
-								<br>
-								<p1 id = "hours-1">00</p1> <!-- Hour -->
-							</div>
-							<div class = "full-timer">
-								Minutes 
-								<br>
-								<p1 id = "minutes-1">00</p1> <!-- Minutes -->
-							</div>
-							<div class = "full-timer">
-								Seconds
-								<br>
-								<p1 id = "seconds-1">00</p1> <!-- Seconds -->
-							</div>
-						</div>
-					</div>
-
-					<p2 id = "num-1" style = "display: none;"> </p2>
-				</div> <!-- End of impromtu -->
-		</div>
-
-		<div class = "page-box">
-
-			<div class = "small-description" style = "display: flex; align-items: center; justify-content: space-between;">
-			<span style = "font-weight: bold"> Projects in the works:</span>
-			<div class = "small-description-inner-box">
-					<br> - YouTube video guides! 
-				</p1>
+			<div class = "section-header">
+				<h1>Updates </h1>
+				<div class = "banner-box"></div>
+				<img src = "./images/assets/banner.svg">
 			</div>
-			<div class = "small-description-inner-box">
-				<br> - PSNA in Dailies
-				<br> - Fractals in Dailies
-				<br> - Adding more currencies in Currency-Worth & rework
-				</p1>
-			</div>
-			<div class = "small-description-inner-box">
-					<br> - General rework on map written guides
-					<br> - Mobile updates
-				</p1>
-			</div>
-		</div>
-	</div>
-</div>
-		<div class = "page-box">
-			<div class = "small-description" style = "overflow-y: scroll; height: 500px;">
-				<b style = "font-size: 30px;"> UPDATES </b>
-				<br>
+			<!-- Hidden space so the header doesn't overlap anything below -->
+			<div class = "section-header-space"></div>
+
+			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
 					<span style = "font-weight: bold;">July 6, 2021</span>
 				<br>
@@ -761,47 +685,63 @@
 				<br>
 					I made this specific page on July 4, 2020 so I'm not sure exactly what the dates are for other updates I did for the website. March was when I first started learning how to code/make the website. 
 				</p1>
-			</div>
-	</div>
-	
+			</div> <!-- End of updates box -->
+		</div> <!-- End of right box -->
+	</div> <!-- End of double box -->
+
+	<!-- 
+		=================================================
+		==================== FOOOTER ====================
+		=================================================
+	-->
 	<div class = "footer">
 		<div class = "inner-footer">
+			<h1> Created By </h1>
+			<a href = "./resources/about-me.html"> Peureki.3647 |</a>
+			<a href = "./resources/about-me.html"> Peureki#5452 |</a>
+			<a href = "mailto: peureseachcenter@gmail.com"> peuresearchcenter@gmail.com </a>
+			<h1 style = "margin-top: 10px;"> Artwork </h1>
+			<a href = "https://www.twitter.com/tiffymew"> @tiffymew </a>
+		</div>
 
-			<div class = "footer-third">
-				<h1> Created by:  </h1>
-				<a href = "./resources/about-me.html"> Peureki.3647 </a>
-				<a href = "./resources/about-me.html"> Peureki#5452 </a>
-				<a href = "mailto: peureseachcenter@gmail.com"> peuresearchcenter@gmail.com </a>
-				<h1 style = "margin-top: 10px;"> Artwork by: </h1>
-				<a href = "https://www.twitter.com/tiffymew"> @tiffymew </a>
-			</div>
+		<div class = "inner-footer">
+			<h1> Support </h1>
+			<a href="./supporters.html" style = "margin-bottom: 10px;"> List of supporters </a>
+			<br><a href="https://www.patreon.com/peureki" target = "_blank"> Patreon </a>
+			<br><a href="https://www.paypal.me/peureki" target = "_blank">Paypal </a>
+		</div>
 
-			<div class = "footer-third">
-				<h1> Support </h1>
-				<a href="./supporters.html" style = "margin-bottom: 10px;"> List of supporters </a>
-				<a href="https://www.patreon.com/peureki" target = "_blank"> Patreon </a>
-				<a href="https://www.paypal.me/peureki" target = "_blank">Paypal </a>
-
-			</div>
-
-			<div class = "footer-third">
-				<h1></h1>
-				<h1></h1>
-				<h1 style = "font-weight: normal; font-size: 15px;"> Associated logos, renderings, images, and other related content are registered trademarks to ArenaNet or NCSOFT. 
-			</div>
+		<div class = "inner-footer">
+			<p1> Associated logos, renderings, images, and other related content are registered trademarks to ArenaNet or NCSOFT.</p1>
 		</div>
 	</div>
 
 
-		<script> //getPeuTrain('peu-train'); </script>
-		<script> //train_timer(); 
+	<script> //getPeuTrain('peu-train'); </script>
+	<script> //train_timer(); 
 	new_Train('days-0','hours-0','minutes-0','seconds-0','progress-bar-0','num-0','box-0','name-0','time-0',0);
 	new_Train('days-1','hours-1','minutes-1','seconds-1','progress-bar-1','num-1','box-1','name-1','time-1',1);
-	document.write(js_timers);
 
 </script>
 
 <script> insertNav('navbar', 1); </script>
 </body>
+
+<!-- Added these last because it needs to read some html ids to work -->
+<script id = "js-timers" type = "text/javascript" src = "./homepage-timers.js"></script>
+<script id = "js-mode" type = "text/javascript" src = "./mode.js"></script>
+
+<!-- VERSIONING --> 
+<script> 
+	var css_main = "./styles.css?v='" + document.lastModified + "'",
+		js_main = "./script.js?v='" + document.lastModified +"'",
+		js_timers = "./homepage-timers.js?v='" + document.lastModified +"'",
+		js_mode = "./mode.js?v='" + document.lastModified +"'";
+
+	document.getElementById('css-main').href = css_main;
+	document.getElementById('js-main').src = js_main; 
+	document.getElementById('js-timers').src = js_timers;
+	document.getElementById('js-mode').src = js_mode;
+</script>
 
 </html>

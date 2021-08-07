@@ -27,18 +27,14 @@ var d1 = new Date(Date.UTC(2021,0,7,20));
 var d2 = new Date(); 
 var weeksAgo = Math.floor((d2-d1)/604800000);
 
-console.log(weeksAgo);
 switch (weeksAgo % 3){
     case 0:
-    console.log("It's Verdant Brink week!");
     break;
 
     case 1: 
-    console.log("It's Tangled Depths week!");
     break;
 
     case 2: 
-    console.log("It's Auric Basin week!");
     break;
 }
 
@@ -47,8 +43,6 @@ async function new_Train(dd,hr,min,sec,progressBarHTML,numHTML,boxHTML,nameHTML,
     const api = 'https://script.google.com/macros/s/AKfycbwZy_zeLTJRuKWBQN6fL7Z-W5g7p4PYKPVCyaGeY905U7OPSO3vCI4Q/exec';
     const response = await fetch(api);
     const data = await response.json();
-
-    console.log(data);
 
     // Date (year, month, day, hour, minute, second, milisecond)
     //var newDate = new Date(Date.UTC(data.spreadsheet[0].farm, data.spreadsheet[0].days, data.spreadsheet[0].hours, data.spreadsheet[0].minutes));
@@ -80,8 +74,6 @@ async function new_Train(dd,hr,min,sec,progressBarHTML,numHTML,boxHTML,nameHTML,
     date.setUTCHours(hours);
     date.setUTCMinutes(minutes);
     date.setUTCSeconds(seconds);
-    console.log(date);
-
 
     var allM = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     var allD = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -189,4 +181,165 @@ function format_time(result_time, days, hours, minutes, seconds){
     minutes.innerHTML = m;
     seconds.innerHTML = s;
 }
+
+// Get ids of the color faders
+var topFader = document.getElementById('top-fader'),
+    bottomFader = document.getElementById('bottom-fader'),
+    leftFader = document.getElementById('left-fader'),
+    rightFader = document.getElementById('right-fader'),
+
+    faderCheck = -1, // Num to check if a previous fader has been used already
+    choya = document.getElementById('display-choya'),
+    choyaNum, 
+    choyaNumCheck = -1; // These choya nums are to check if a choya has been summoned twice. -1 b/c it's always not array
+// Collection of choyas for the animation to loop through
+var choyaCollection = [
+    "./images/assets/red-choya.png",
+    "./images/assets/gold-choya.png",
+    "./images/assets/timer-choya.png",
+    "./images/assets/research-choya.png",
+    "./images/assets/blue-choya.png",
+    "./images/assets/gathering-choya.png",
+
+    "./images/assets/baltazar-choya.png",
+    "./images/assets/bread-choya.png",
+    "./images/assets/dragonblood-choya.png",
+    "./images/assets/golem-choya.png",
+    "./images/assets/good-choya.png",
+    "./images/assets/ice-daddy-choya.png",
+    "./images/assets/kitty-blu-choya-transparent.jpg",
+    "./images/assets/meh-choya.png",
+    "./images/assets/parachute-choya.png",
+    "./images/assets/sad-choya.png",
+    "./images/assets/thorn-choya.png",
+    "./images/assets/zombie-choya.png",
+]
+// Every few seconds, continuously fade the choya out, bring new choya in
+// Delay start for a few seconds to showcase the og peu choya
+setTimeout(function displayChoya() {
+    // Depending on the fader, apply height/width to 100% half way thru
+    // Then switch choya picture
+    // Then go backwards to reset
+    faderCheck = randomNum(3);
+    switch (faderCheck){
+        case 0: topFader.animate([
+            {
+                height: "0%",
+                zIndex: 1,
+            },
+            {
+                height: "100%",
+                zIndex: 1,
+                offset: 0.5,
+            },
+            {
+                height: "0%",
+                zIndex: 1,
+            }
+            ], {
+                duration: 5000,
+                easing: "linear",
+                fill: "forwards",
+                iterations: 1,
+            });
+            break;
+        case 1: bottomFader.animate([
+            {
+                height: "0%",
+                zIndex: 1,
+            },
+            {
+                height: "100%",
+                zIndex: 1,
+                offset: 0.5,
+            },
+            {
+                height: "0%",
+                zIndex: 1,
+            }
+            ], {
+                duration: 5000,
+                easing: "linear",
+                fill: "forwards",
+                iterations: 1,
+            });
+            break;
+        case 2: leftFader.animate([
+            {
+                width: "0%",
+                zIndex: 1,
+            },
+            {
+                width: "100%",
+                zIndex: 1,
+                offset: 0.5,
+            },
+            {
+                width: "0%",
+                zIndex: 1,
+            }
+            ], {
+                duration: 5000,
+                easing: "linear",
+                fill: "forwards",
+                iterations: 1,
+            });
+            break;
+        case 3: rightFader.animate([
+            {
+                width: "0%",
+                zIndex: 1,
+            },
+            {
+                width: "100%",
+                zIndex: 1,
+                offset: 0.5,
+            },
+            {
+                width: "0%",
+                zIndex: 1,
+            }
+            ], {
+                duration: 5000,
+                easing: "linear",
+                fill: "forwards",
+                iterations: 1,
+            });
+            break;
+    }
+    
+    
+    
+    // In between the 50% of the slider, display the new choya
+    // Timeout at 2900 because since it's 'ease', the animation fully hits 100% at 3 seconds
+    // Repeat timeout with same delay as duration of slider animation
+    setTimeout(function setChoya() {
+        
+        choyaNum = randomNum(choyaCollection.length);
+        // Check if the numCheck is default or if it matches the previous iteration
+        if (choyaNumCheck == -1 || choyaNumCheck != choyaNum){
+            choya.src = choyaCollection[choyaNum];
+            choyaNumCheck = choyaNum;
+            setTimeout(displayChoya, 2500);
+        } else {
+            // Check if choyaNum is 0 or the max
+            if (choyaNum == 0){
+                choyaNum = 1; 
+            } else if (choyaNum == choyaCollection.length - 1){
+                choyaNum = choyaCollection.length - 2;
+            } else {
+                choyaNum += 1;
+            }
+            choya.src = choyaCollection[choyaNum];
+            choyaNumCheck = choyaNum;
+            setTimeout(displayChoya, 2500);   
+        }
+    
+        
+    }, 2500)
+}, 2500);
+
+var randomNum = (max) => Math.floor(Math.random() * max);
+
+
 

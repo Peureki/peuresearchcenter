@@ -6439,7 +6439,7 @@ function fadeOutandBack(div){
 		div.style.opacity = 1;
 	}, 300);
 }
-
+/*
 // Put this function in each page to show the nav bar
 // Level = what level the files are. Different levels return different reference points
 function insertNav(div, level){
@@ -6452,7 +6452,7 @@ function insertNav(div, level){
 	// Apply showNav(); 
 	var html = 
 	`
-	<div class = "brand-name"><img src = "${period}/images/assets/peu-choya.png"> Peu Research Center </div>
+	<div class = "brand-name"><a href = "${period}/index.html">Peu Research Center </a></div>
 		<a href="#" id = "hamburger" class = "hamburger">
 			<span class = "hamburger-bar"></span>
 			<span class = "hamburger-bar"></span>
@@ -6472,15 +6472,6 @@ function insertNav(div, level){
 	</div>`; 
 	document.getElementById(div).innerHTML = html;
 	showHamburger();
-}
-// Grabs the hamburger and shows it when clicking on the icon
-function showHamburger(){
-	const toggleButton = document.getElementsByClassName('hamburger')[0];
-	const navBarLinks = document.getElementsByClassName('navbar-links')[0];
-
-	toggleButton.addEventListener('click', () =>{
-	navBarLinks.classList.toggle('active')
-	})
 }
 // For actual nav
 function showMobileNav(box, level){
@@ -6662,10 +6653,191 @@ function showNav(navName, num, level){
 
 	var div = document.getElementById('subNav');
 	switch (navName){
-		case "Resources": div.innerHTML = navResourceHTML; div.children[0].style.left = '50%'; break;
-		case "Timers": div.innerHTML = navTimerHTML; div.children[0].style.left = '60%'; break;
-		case "Research": div.innerHTML = navResearchHTML; div.children[0].style.left = '75%'; break;
-		case "Maps": div.innerHTML = navMapHTML; div.children[0].style.left = '60%'; break;
+		case "Resources": div.innerHTML = navResourceHTML; div.children[0].style.left = '80%'; break;
+		case "Timers": div.innerHTML = navTimerHTML; div.children[0].style.left = '80%'; break;
+		case "Research": div.innerHTML = navResearchHTML; div.children[0].style.left = '80%'; break;
+		case "Maps": div.innerHTML = navMapHTML; div.children[0].style.left = '80%'; break;
 		default: div.innerHTML = ''; break;
 	}
+} */
+// Put this function in each page to show the nav bar
+// Level = what level the files are. Different levels return different reference points
+function insertNav(div, level){
+	// levelParm = the level of the parameter for the showNav() function
+	var period, levelParm; 
+	switch (level){
+		case 1: period = "."; levelParm = 1; break;
+		case 2: period = ".."; levelParm = 2; break; 
+	}
+	// Apply showNav(); 
+	var html = 
+	`
+		<div class = "brand-name"><a href = "${period}/index.html">Peu Research Center </a></div>
+		<div onclick = "applyMode();" class = "dark-mode">
+			<span id = "mode-circle"></span>
+		</div>
+
+		<ul class = "nav-bar-list">
+			<li class = "nav-dropdown">
+				<a class = "nav-header" href = "#"> Resources </a>
+				<ul class = "sub-menu">
+					<div class = "sub-menu-header">
+						<li> How To Get </li> 
+						<li><a href = "${period}/resources/ascended-materials.html"> Ascended Materials </a></li>
+						<li><a href = "${period}/resources/experience.html"> Experience </a></li>
+						<li><a href = "${period}/resources/ls3-currencies.html"> Living Story 3 Currencies </a></li>
+						<li><a href = "${period}/resources/ls4-currencies.html"> Living Story 4 Currencies </a></li>
+						<li><a href = "${period}/resources/must-have-items.html"> Must Have Items </a></li>
+					</div>
+					<div class = "sub-menu-header">
+						<li> Tools </li> 
+						<li><a href = "${period}/resources/dailies.html"> Dailies </a></li>
+						<li><a href = "${period}/resources/living-story-trinkets.html"> Living Story Trinkets </a></li>
+					</div>
+					<div class = "sub-menu-header">
+						<li> About </li> 
+						<li><a href = "${period}/resources/about-benchmarks.html"> Benchmarks </a></li>
+						<li><a href = "${period}/resources/about-me.html"> About Me </a></li>
+						<li><a href = "${period}/resources/list-of-resources.html"> Extra Resources </a></li>
+					</div>
+				</ul>
+			</li>
+
+			<li class = "nav-dropdown">
+				<a class = "nav-header" href = "${period}/benchmarks.html"> Benchmarks </a>
+			</li>
+
+			<li class = "nav-dropdown">
+				<a class = "nav-header" href = "#"> Timers </a>
+				<ul class = "sub-menu">
+					<div class = "sub-menu-header">
+						<li> Heart of Thorns </li> 
+						<li><a href = "${period}/timers/verdant-brink.html"> Verdant Brink </a></li>
+						<li><a href = "${period}/timers/auric-basin.html"> Auric Basin </a></li>
+						<li><a href = "${period}/timers/tangled-depths.html"> Tangled Depths </a></li>
+					</div>
+					<div class = "sub-menu-header">
+						<li> Living Story 3 </li>
+						<li><a href = "${period}/timers/bloodstone-fen.html"> Bloodstone Fen </a></li>
+						<li><a href = "${period}/timers/ember-bay.html"> Ember Bay </a></li>
+						<li><a href = "${period}/timers/bitterfrost-frontier.html"> Bitterfrost Frontier </a></li>
+						<li><a href = "${period}/timers/draconis-mons.html"> Draconis Mons </a></li>
+						<li><a href = "${period}/timers/sirens-landing.html"> Siren's Landing </a></li>
+					</div>
+					<div class = "sub-menu-header">
+						<li> Path of Fire </li>
+						<li><a href = "${period}/timers/desert-highlands.html"> Desert Highlands </a></li>
+						<li><a href = "${period}/timers/crystal-oasis.html"> Crystal Oasis </a></li>
+						<li><a href = "${period}/timers/elon-riverlands.html"> Elon Riverlands </a></li>
+						<li><a href = "${period}/timers/desolation.html"> Desolation </a></li>
+						<li><a href = "${period}/timers/domain-of-vabbi.html"> Domain of Vabbi </a></li>
+					</div>
+					<div class = "sub-menu-header">
+						<li> Path of Fire </li>
+						<li> Living Story 4 </li>
+						<li><a href = "${period}/timers/domain-of-istan.html"> Domain of Istan </a></li>
+						<li><a href = "${period}/timers/sandswept-isles.html"> Sandswept Isles </a></li>
+						<li><a href = "${period}/timers/domain-of-kourna.html"> Domain of Kourna </a></li>
+						<li><a href = "${period}/timers/dragonfall.html"> Dragonfall </a></li>
+					</div>
+					<div class = "sub-menu-header">
+						<li> Icebrood Saga </li>
+						<li><a href = "${period}/timers/bjora-marches.html"> Bjora Marches </a></li>
+						<li><a href = "${period}/timers/drizzlewood-coast.html"> Drizzlewood Coast </a></li>
+					</div>
+				</ul>
+			</li>
+
+			<li class = "nav-dropdown">
+				<a class = "nav-header" href = "#"> Research </a>
+				<ul class = "sub-menu">
+					<div class = "sub-menu-header">
+						<li> Research </li>
+						<li><a href = "${period}/research/currency-worth.html"> Currency Worth </a></li>
+						<li><a href = "${period}/research/drizzlewood-reward-tracks.html"> Drizzlewood Reward Tracks </a></li>
+						<li><a href = "${period}/gathering.html#glyphs"> Glyphs </a></li>
+						<li><a href = "${period}/research/refinement.html"> Refinement </a></li>
+						<li><a href = "${period}/research/salvage.html"> Salvage </a></li>
+					</div>
+				</ul>
+			</li>
+
+			<li class = "nav-dropdown">
+				<a class = "nav-header" href = "#"> Maps </a>
+				<ul class = "sub-menu">
+					<div class = "sub-menu-header">
+						<li> Core Tyria </li>
+						<li><a href = "${period}/maps/silverwastes.html"> Silverwastes </a></li>
+					</div>
+					<div class = "sub-menu-header">
+						<li> Heart of Thorns </li>
+						<li><a href = "${period}/maps/verdant-brink.html"> Verdant Brink </a></li>
+						<li><a href = "${period}/maps/auric-basin.html"> Auric Basin </a></li>
+						<li><a href = "${period}/maps/tangled-depths.html"> Tangled Depths </a></li>
+					</div>
+					<div class = "sub-menu-header">
+						<li> Living Story 3 </li>
+						<li><a href = "${period}/maps/bloodstone-fen.html"> Bloodstone Fen </a></li>
+						<li><a href = "${period}/maps/ember-bay.html"> Ember bay </a></li>
+						<li><a href = "${period}/maps/bitterfrost-frontier.html"> Bitterfrost Frontier </a></li>
+						<li><a href = "${period}/maps/lake-doric.html"> Lake Doric </a></li>
+						<li><a href = "${period}/maps/draconis-mons.html"> Draconis Mons </a></li>
+						<li><a href = "${period}/maps/sirens-landing.html"> Siren's Landing </a></li>
+					</div>
+					<div class = "sub-menu-header">
+						<li> Path of Fire </li>
+						<li><a href = "${period}/maps/desert-highlands.html"> Desert Highlands </a></li>
+						<li><a href = "${period}/maps/crystal-oasis.html"> Crystal Oasis </a></li>
+						<li><a href = "${period}/maps/elon-riverlands.html"> Elon Riverlands </a></li>
+						<li><a href = "${period}/maps/desolation.html"> Desolation </a></li>
+						<li><a href = "${period}/maps/domain-of-vabbi.html"> Domain of Vabbi </a></li>
+					</div>
+					<div class = "sub-menu-header">
+						<li> Living Story 4 </li>
+						<li><a href = "${period}/maps/domain-of-istan.html"> Domain of Istan </a></li>
+						<li><a href = "${period}/maps/sandswept-isles.html"> Sandswept Isles </a></li>
+						<li><a href = "${period}/maps/domain-of-kourna.html"> Domain of Kourna </a></li>
+						<li><a href = "${period}/maps/jahai-bluffs.html"> Jahai Bluffs </a></li>
+						<li><a href = "${period}/maps/thunderhead-peaks.html"> Thunderhead Peaks </a></li>
+						<li><a href = "${period}/maps/dragonfall.html"> Dragonfall </a></li>
+					</div>
+					<div class = "sub-menu-header">
+						<li> Icebrood Saga </li>
+						<li><a href = "${period}/maps/grothmar-valley.html"> Grothmar Valley </a></li>
+						<li><a href = "${period}/maps/bjora-marches.html"> Bjora Marches </a></li>
+						<li><a href = "${period}/maps/drizzlewood-coast.html"> Drizzlewood Coast </a></li>
+					</div>
+				</ul>
+			</li>
+
+			<li class = "nav-dropdown">
+				<a class = "nav-header" href = "${period}/gathering.html"> Gathering </a>
+			</li>
+
+			<li class = "nav-dropdown">
+				<a class = "nav-header" href = "${period}/supporters.html"> Support </a>
+			</li>
+		</ul>
+		<a href="#" id = "hamburger" class = "hamburger">
+			<span class = "hamburger-bar"></span>
+			<span class = "hamburger-bar"></span>
+			<span class = "hamburger-bar"></span>
+		</a>
+		`; 
+	document.getElementById(div).innerHTML = html;
+	document.getElementById('mode-circle').style.left = "0%";
+	showHamburger();
+}
+// Grabs the hamburger and shows it when clicking on the icon
+function showHamburger(){
+	const toggleButton = document.getElementsByClassName('hamburger')[0];
+	const navBarList = document.getElementsByClassName('nav-bar-list')[0];
+
+	toggleButton.addEventListener('click', () =>{
+		if (navBarList.style.display == "flex"){
+			navBarList.style.display = "none";
+		} else {
+			navBarList.style.display = "flex";
+		}
+	})
 }
