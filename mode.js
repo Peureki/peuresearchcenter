@@ -76,7 +76,7 @@ function applyMode(){
 		cssVar('clr-border', 'black'); // General borders
 		cssVar('clr-title', '#802020'); // Main page title color
 		cssVar('clr-text', 'black'); // Texts
-		cssVar('clr-links', 'black'); // General links
+		cssVar('clr-link', 'black'); // General links
 
 		// Specifc containers and stuff
 		cssVar('clr-left-homepage', '#87E6FF'); // Left portion of homepage

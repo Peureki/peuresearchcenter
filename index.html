@@ -51,10 +51,11 @@
 	<div class = "double-box">
 		<div class = "homepage-box">
 			<img id = "display-choya" src = "./images/assets/peu-choya.png">
+			<span id = "static-fader"></span>
 			<span id = "top-fader" ></span>
+			<span id = "middle-top-fader"></span>
+			<span id = "middle-bottom-fader"></span>
 			<span id = "bottom-fader"></span>
-			<span id = "left-fader"></span>
-			<span id = "right-fader"></span>
 
 		</div>
 		<!-- Hidden margin between the left and right boxes since the left is abs-->
@@ -163,6 +164,15 @@
 
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
+					<span style = "font-weight: bold;">August 7, 2021</span>
+				<br>
+					- Been a little MIA because I've been working on a professional portfolio. Trying for a career change as a web dev! Wish me luck! 
+					<br> - With that, I've done a complete overhaul of this website. The biggest change is: 
+					<br> - Starting to implement a Dark Mode. Simply toggle with the button on the top left and check it out! Only about 60% of the website can currently use it. Both the Timer and Map pages are still in progress. They're more of a pain to work on. 
+					<br> - The site is becoming a lot more Mobile-Friendly. This has always been the real struggle since the beginning, but I'm finally learning to make it work and functional. Some pages are still working to be fixed as well. 
+					<br> - The design of the front page is completely new. I think the old homepage was cute, but redundant. It didn't offer anything but the menu to go to other 'main' pages to specific pages. I think it's better to simply use the nav bar to get to a page so you don't have to go through two pages to get to what you want. 
+					
+				<br><br>
 					<span style = "font-weight: bold;">July 6, 2021</span>
 				<br>
 					- Fixed some PSNA locations in <a href = "./resources/dailies.html"><u> Dailies</u></a>.
@@ -694,6 +704,9 @@
 		==================== FOOOTER ====================
 		=================================================
 	-->
+	<div class = "splatter-container">
+		<div class  = "splatter-bkg"></div>
+	</div>
 	<div class = "footer">
 		<div class = "inner-footer">
 			<h1> Created By </h1>
@@ -730,18 +743,21 @@
 <!-- Added these last because it needs to read some html ids to work -->
 <script id = "js-timers" type = "text/javascript" src = "./homepage-timers.js"></script>
 <script id = "js-mode" type = "text/javascript" src = "./mode.js"></script>
+<script id = "js-choya" type = "text/javascript" src = "./choya.js"></script>
 
 <!-- VERSIONING --> 
 <script> 
 	var css_main = "./styles.css?v='" + document.lastModified + "'",
 		js_main = "./script.js?v='" + document.lastModified +"'",
 		js_timers = "./homepage-timers.js?v='" + document.lastModified +"'",
-		js_mode = "./mode.js?v='" + document.lastModified +"'";
+		js_mode = "./mode.js?v='" + document.lastModified +"'",
+		js_choya = "./choya.js?v='" + document.lastModified +"'";
 
 	document.getElementById('css-main').href = css_main;
 	document.getElementById('js-main').src = js_main; 
 	document.getElementById('js-timers').src = js_timers;
 	document.getElementById('js-mode').src = js_mode;
+	document.getElementById('js-choya').src = js_choya;
 </script>
 
 </html>

@@ -371,14 +371,12 @@ input, select {
 	==================
 */
 .footer{
-	margin-top: 50px;
 	width: 100vw;
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
 	line-height: 1.3;
 	overflow: hidden;
-	padding-top: 20px;
 	padding-bottom: 20px;
 	padding-left: 10%;
 	padding-right: 10%;
@@ -387,6 +385,22 @@ input, select {
 	position: relative;
 	z-index: 2000;
 }
+.splatter-container{
+	width: 100%;
+	height: 25vh;
+	position: relative;
+}
+.splatter-bkg{
+	position: absolute;
+	width: 100vw;
+	height: 100%;
+	background: url("./images/assets/splatterfooter.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: 2000;
+
+}
+
 .inner-footer{
 	padding: 10px;
 	white-space: wrap;
@@ -509,29 +523,35 @@ input, select {
 	right: 0;
 	margin: auto;
 	width: 100%;
+	z-index: 2;
 }
 /* Used to transition the homepage choya in different ways */
+#static-fader,
 #top-fader,
-#bottom-fader,
-#left-fader,
-#right-fader{
+#middle-top-fader,
+#middle-bottom-fader,
+#bottom-fader{
 	position: absolute;
-	width: 100%;
-	height: 100%;
+	width: 0%;
+	height: 25%;
+	background-color: #333333;
+	z-index: 10;
+}
+#static-fader{
+	z-index: 1;
 	background-color: var(--clr-left-homepage);
-	z-index: -1;
 }
 #top-fader{
 	top: 0;
 }
+#middle-top-fader{
+	top: 25%;
+}
+#middle-bottom-fader{
+	top: 50%;
+}
 #bottom-fader{
-	bottom: 0;
-}
-#left-fader{
-	left: 0;
-}
-#right-fader{
-	right: 0;
+	top: 75%;
 }
 
 /* Sections on the main page */
