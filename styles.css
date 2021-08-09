@@ -450,7 +450,8 @@ input, select {
 
 
 .homepage-title,
-.page-title{
+.page-title,
+.page-header{
 	text-align: center;
 	margin: 20px;
 	animation: animate_homepage 1s 0.5s forwards
@@ -2342,7 +2343,7 @@ table.bounty-glyph td:nth-child(3){
 	margin-right: auto;
 	position: relative;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 }
 
@@ -3083,7 +3084,7 @@ table.bounties-info td:nth-child(3){
 
 .recommendation-box{
 	height: auto;
-	width: 1000px;
+	width: 80%;
 	margin-top: 25px;
 	margin-bottom: 25px;
 	margin-left: auto;
@@ -3165,10 +3166,14 @@ table.bounties-info td:nth-child(3){
 	background-color: #CFE2F3;
 }
 /*
-	==================
-	===== TABLES =====
-	==================
+	=================
+	=====TABLES=====
+	=================
 */
+/* Create table within this div so that on mobile it will allow scroll */
+.overflow-table{
+	overflow-x: auto;
+}
 table.exp,
 table.four-col,
 table.five-col{
@@ -3728,13 +3733,12 @@ table.events{
 	padding: 0 auto;
 	
 }
-
 table.events th{ /* Header */
 	padding: 15px 10px;
 	font-size: 25px;
-	border: 2px solid #000000;
+	border: 2px solid var(--clr-border);
 	color: white;
-	background-color: #802020;
+	background-color: var(--clr-th-table);
 }
 
 table.events th:nth-child(1){ /*# column header */
@@ -3764,7 +3768,9 @@ table.events th:nth-child(6){ /*Extra column header */
 table.events td{
 /*	padding: 30px 10px;*/	
 	text-align: left;
-	border: 1px solid #000000;
+	color: var(--clr-text);
+	background-color: var(--clr-bkg);
+	border: 1px solid var(--clr-border);
 }
 
 table.events td.meta-event-number,
@@ -3777,33 +3783,28 @@ table.events td.qty-event-number{
 	font-weight: bold;
 	text-align: center;
 }
-
-table.events td.qty-event-number{
-	background-color: #ECECDE;
-}
-
 table.events td.meta-event-number{ /* Meta # Box */
+	color: black;
 	background-color: #57FAFA;
 }
-
 table.events td.great-event-number{ /* Great # Box */
+	color: black;
 	background-color: #49C45B;
 }
-
 table.events td.meh-event-number{
+	color: black;
 	background-color: #FCFF57;
 }
-
 table.events td.avoid-event-number{
+	color: black;
 	background-color: #F23D3D;
 }
-
 table.events td.rest-of-table{
 	padding-left: 5px;
 	padding-right: 5px;
 	font-size: 15px;
 	line-height: 1.5;
-	background-color: #ECECDE;
+	background-color: var(--clr-bkg);
 }
 
 /* ****************************************************
@@ -4196,56 +4197,51 @@ table.trinket-slots img{
 
 table.nodes{
 	width: 97.5%;
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
 	padding: 0 auto;
-	border: 1px solid #000000;
+	border: 1px solid var(--clr-border);
 }
 
 table.nodes th{
 	padding: 20px 15px;
 	font-size: 25px;
-	border: 1px solid #000000;
+	border: 1px solid var(--clr-border);
 	color: white;
-	background-color: #802020;
+	background-color: var(--clr-th-table);
 }
-
 table.nodes th:nth-child(1){
 	width:60px;
 }
-
 table.nodes th:nth-child(2){
 	width:40px;
 }
-
 table.nodes th:nth-child(3){
 	width: 200px;
 }
-
 table.nodes th:nth-child(4){
 	width: 200px;
 }
-
 table.nodes th:nth-child(5){
 	width: 70px;
 }
-
 table.nodes td{
 	text-align: center;
 	padding-top: 6px;
-	border: 1px solid #000000;
+	color: var(--clr-text);
+	border: 1px solid var(--clr-border);
 	line-height: 1.5;
-	background-color: #ECECDE;
+	background-color: var(--clr-bkg);
 }
-
 table.nodes td:nth-child(4){
 	text-align: left;
 }
-
 table.nodes td.nodes-high-box{
 	padding: 10px 10px;
 	font-size: 30px;
 	font-weight: bold;
 	background-color: #49C45B;
+	color: black;
 }
 
 table.nodes td.nodes-meh-box{
@@ -4253,6 +4249,7 @@ table.nodes td.nodes-meh-box{
 	font-size: 30px;
 	font-weight: bold;
 	background-color: #FCFF57;
+	color: black;
 }
 
 table.nodes td.nodes-low-box{
@@ -4260,6 +4257,7 @@ table.nodes td.nodes-low-box{
 	font-size: 30px;
 	font-weight: bold;
 	background-color: #F23D3D;
+	color: black;
 }
 
 
