@@ -40,348 +40,90 @@ setTimeout(function displayChoya() {
     // Depending on the fader, apply height/width to 100% half way thru
     // Then switch choya picture
     // Then go backwards to reset
-    faderNum = randomNum(3);
-    switch (faderNum){
     // All left to right
-    case 0: topFader.animate([
-        {
-            width: "0%",
-            left: "0%",
-        },
-        {
-            width: "100%",
-            right: "0%",
-            offset: 0.5,
-        },
-        {
-            width: "0%",
-            right: "0%",
-        }
-        ], {
-            duration: 5000,
-            easing: "linear",
-            fill: "forwards",
-            iterations: 1,
-        });
-
-        middleTopFader.animate([
-        {
-            width: "0%",
-            left: "0%",
-        },
-        {
-            width: "100%",
-            right: "0%",
-            offset: 0.5,
-        },
-        {
-            width: "0%",
-            right: "0%",
-        }
-        ], {
-            duration: 5000,
-            easing: "linear",
-            fill: "forwards",
-            iterations: 1,
-        });
-
-        middleBottomFader.animate([
-        {
-            width: "0%",
-            left: "0%",
-        },
-        {
-            width: "100%",
-            right: "0%",
-            offset: 0.5,
-        },
-        {
-            width: "0%",
-            right: "0%",
-        }
-        ], {
-            duration: 5000,
-            easing: "linear",
-            fill: "forwards",
-            iterations: 1,
-        });
-
-        bottomFader.animate([
-        {
-            width: "0%",
-            left: "0%",
-        },
-        {
-            width: "100%",
-            right: "0%",
-            offset: 0.5,
-        },
-        {
-            width: "0%",
-            right: "0%",
-        }
-        ], {
-            duration: 5000,
-            easing: "linear",
-            fill: "forwards",
-            iterations: 1,
-        });
-        break;
-    // Top = left -> right
-    // Bottom = right -> left
-    case 1: topFader.animate([
-        {
-            width: "0%",
-            left: "0%",
-        },
-        {
-            width: "100%",
-            right: "0%",
-            offset: 0.5,
-        },
-        {
-            width: "0%",
-            right: "0%",
-        }
-        ], {
-            duration: 5000,
-            easing: "linear",
-            fill: "forwards",
-            iterations: 1,
-        });
-
-        middleTopFader.animate([
-        {
-            width: "0%",
-            left: "0%",
-        },
-        {
-            width: "100%",
-            right: "0%",
-            offset: 0.5,
-        },
-        {
-            width: "0%",
-            right: "0%",
-        }
-        ], {
-            duration: 5000,
-            easing: "linear",
-            fill: "forwards",
-            iterations: 1,
-        });
-
-        middleBottomFader.animate([
-        {
-            width: "0%",
-            right: "0%",
-        },
-        {
-            width: "100%",
-            right: "0%",
-            offset: 0.5,
-        },
-        {
-            width: "0%",
-            left: "0%",
-        }
-        ], {
-            duration: 5000,
-            easing: "linear",
-            fill: "forwards",
-            iterations: 1,
-        });
-
-        bottomFader.animate([
-        {
-            width: "0%",
-            right: "0%",
-        },
-        {
-            width: "100%",
-            right: "0%",
-            offset: 0.5,
-        },
-        {
-            width: "0%",
-            left: "0%",
-        }
-        ], {
-            duration: 5000,
-            easing: "linear",
-            fill: "forwards",
-            iterations: 1,
-        });
-        break;
-    // top + bottom = right -> left
-    // middleTop + middleBottom = left -> right
-    case 2: 
-        topFader.animate([
-        {
-            width: "0%",
-            right: "0%",
-        },
-        {
-            width: "100%",
-            right: "0%",
-            offset: 0.5,
-        },
-        {
-            width: "0%",
-            left: "0%",
-        }
-        ], {
-            duration: 5000,
-            easing: "linear",
-            fill: "forwards",
-            iterations: 1,
-        });
-        middleTopFader.animate([
-        {
-            width: "0%",
-            left: "0%",
-        },
-        {
-            width: "100%",
-            right: "0%",
-            offset: 0.5,
-        },
-        {
-            width: "0%",
-            right: "0%",
-        }
-        ], {
-            duration: 5000,
-            easing: "linear",
-            fill: "forwards",
-            iterations: 1,
-        });
-
-        middleBottomFader.animate([
-        {
-            width: "0%",
-            left: "0%",
-        },
-        {
-            width: "100%",
-            right: "0%",
-            offset: 0.5,
-        },
-        {
-            width: "0%",
-            right: "0%",
-        }
-        ], {
-            duration: 5000,
-            easing: "linear",
-            fill: "forwards",
-            iterations: 1,
-        });
-        bottomFader.animate([
-        {
-            width: "0%",
-            right: "0%",
-        },
-        {
-            width: "100%",
-            right: "0%",
-            offset: 0.5,
-        },
-        {
-            width: "0%",
-            left: "0%",
-        }
-        ], {
-            duration: 5000,
-            easing: "linear",
-            fill: "forwards",
-            iterations: 1,
-        });
-        break;
-    case 3: 
-        topFader.animate([
-        {
-            width: "0%",
-            right: "0%",
-        },
-        {
-            width: "100%",
-            right: "0%",
-            offset: 0.5,
-        },
-        {
-            width: "0%",
-            left: "0%",
-        }
-        ], {
-            duration: 5000,
-            easing: "linear",
-            fill: "forwards",
-            iterations: 1,
-        });
-        middleTopFader.animate([
-        {
-            width: "0%",
-            left: "0%",
-        },
-        {
-            width: "100%",
-            right: "0%",
-            offset: 0.5,
-        },
-        {
-            width: "0%",
-            right: "0%",
-        }
-        ], {
-            duration: 5000,
-            easing: "linear",
-            fill: "forwards",
-            iterations: 1,
-        });
-
-        middleBottomFader.animate([
-        {
-            width: "0%",
-            left: "0%",
-        },
-        {
-            width: "100%",
-            right: "0%",
-            offset: 0.5,
-        },
-        {
-            width: "0%",
-            right: "0%",
-        }
-        ], {
-            duration: 5000,
-            easing: "linear",
-            fill: "forwards",
-            iterations: 1,
-        });
-        bottomFader.animate([
-        {
-            width: "0%",
-            right: "0%",
-        },
-        {
-            width: "100%",
-            right: "0%",
-            offset: 0.5,
-        },
-        {
-            width: "0%",
-            left: "0%",
-        }
-        ], {
-            duration: 5000,
-            easing: "linear",
-            fill: "forwards",
-            iterations: 1,
-        });
-        break;
+    topFader.animate([
+    {
+        width: "0%",
+        left: "0%",
+    },
+    {
+        width: "100%",
+        right: "0%",
+        offset: 0.5,
+    },
+    {
+        width: "0%",
+        right: "0%",
     }
+    ], {
+        duration: 5000,
+        easing: "ease",
+        fill: "forwards",
+        iterations: 1,
+    });
+
+    middleTopFader.animate([
+    {
+        width: "0%",
+        left: "0%",
+    },
+    {
+        width: "100%",
+        right: "0%",
+        offset: 0.5,
+    },
+    {
+        width: "0%",
+        right: "0%",
+    }
+    ], {
+        duration: 5000,
+        easing: "ease",
+        fill: "forwards",
+        iterations: 1,
+    });
+
+    middleBottomFader.animate([
+    {
+        width: "0%",
+        left: "0%",
+    },
+    {
+        width: "100%",
+        right: "0%",
+        offset: 0.5,
+    },
+    {
+        width: "0%",
+        right: "0%",
+    }
+    ], {
+        duration: 5000,
+        easing: "ease",
+        fill: "forwards",
+        iterations: 1,
+    });
+
+    bottomFader.animate([
+    {
+        width: "0%",
+        left: "0%",
+    },
+    {
+        width: "100%",
+        right: "0%",
+        offset: 0.5,
+    },
+    {
+        width: "0%",
+        right: "0%",
+    }
+    ], {
+        duration: 5000,
+        easing: "ease",
+        fill: "forwards",
+        iterations: 1,
+    });
     
     
     
@@ -395,7 +137,7 @@ setTimeout(function displayChoya() {
         if (choyaNumCheck == -1 || choyaNumCheck != choyaNum){
             choya.src = choyaCollection[choyaNum];
             choyaNumCheck = choyaNum;
-            setTimeout(displayChoya, 2500);
+            setTimeout(displayChoya, 5000);
         } else {
             // Check if choyaNum is 0 or the max
             if (choyaNum == 0){
@@ -407,9 +149,9 @@ setTimeout(function displayChoya() {
             }
             choya.src = choyaCollection[choyaNum];
             choyaNumCheck = choyaNum;
-            setTimeout(displayChoya, 2500);   
+            setTimeout(displayChoya, 5000);   
         }
-    }, 2500);
+    }, 1500);
     
 }, 2500);
 

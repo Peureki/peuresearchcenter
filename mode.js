@@ -12,6 +12,7 @@ var cssVar = (name, value) => {
 }
 cssVar('clr-bkg'); // Background of the whole pages
 cssVar('clr-border'); // General borders
+cssVar('clr-button-hover'); // Hovering a button
 cssVar('clr-title'); // Main page title color
 cssVar('clr-text'); // Texts
 cssVar('clr-links'); // General links
@@ -50,6 +51,7 @@ function applyMode(){
 		modeCircle.style.left = "55%";
 		cssVar('clr-bkg', '#2A2B2E'); // dark gray
 		cssVar('clr-border', '#1A687D'); // Dark blue
+		cssVar('clr-button-hover', '#1A687D'); // dark blue
 		cssVar('clr-title', '#B22323'); // Lighter dark red
 		cssVar('clr-text', '#E0E0E0'); // light gray
 		cssVar('clr-link', '#FFD12C'); // yellow
@@ -74,6 +76,7 @@ function applyMode(){
 		// Bring back the defaults 
 		cssVar('clr-bkg', '#E4E8E4'); // Background of the whole pages
 		cssVar('clr-border', 'black'); // General borders
+		cssVar('clr-button-hover', '#FFD12C'); // yellow
 		cssVar('clr-title', '#802020'); // Main page title color
 		cssVar('clr-text', 'black'); // Texts
 		cssVar('clr-link', 'black'); // General links

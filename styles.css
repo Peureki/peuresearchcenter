@@ -115,7 +115,7 @@ input, select {
 	/* Standard stuff */
 	--clr-bkg: #E4E8E4; /* Light gray */
 	--clr-border: black;
-	--clr-button: #802020; /* red */
+	--clr-button-hover: #E4E8E4; /* light gray */
 	--clr-button-text: #E4E8E4; /* Light gray */
 	--clr-title: #802020;
 	--clr-text: black; /* For normal texts */
@@ -205,6 +205,7 @@ input, select {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background: url("./images/assets/splatter_upside_down.png");
 	width: 100%;
 	height: auto;
 	background-color: #333;
@@ -385,6 +386,9 @@ input, select {
 	position: relative;
 	z-index: 2000;
 }
+.footer a:hover{
+	color: var(--clr-red);
+}
 .splatter-container{
 	width: 100%;
 	height: 25vh;
@@ -394,7 +398,7 @@ input, select {
 	position: absolute;
 	width: 100vw;
 	height: 100%;
-	background: url("./images/assets/splatterfooter.png");
+	background: url("./images/assets/splatter_upright.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 	z-index: 2000;
@@ -2115,11 +2119,16 @@ table.gather-calc td:nth-child(1){
 	text-align: right;
 }
 table.gather-calc select {
-	background-color: rgba(236, 236, 220, .50);
+	background-color: var(--clr-bkg);
+	border: 2px solid var(--clr-border);
+	color: var(--clr-text);
 	font-weight: bold;
 	font-size: 20px;
 	padding: 5px;
 	cursor: pointer;
+}
+table.gather-calc label{
+	color: var(--clr-text);
 }
 .calc-button{
 	text-align: center;
@@ -2128,8 +2137,8 @@ table.gather-calc select {
 .calc-button button{
 	font-size: 20px;
 	color: white;
-	border: 2px solid black;
-	background-color: #802020;
+	border: 2px solid var(--clr-border);
+	background-color: var(--clr-bkg);
 }
 
 .result{
@@ -2138,6 +2147,7 @@ table.gather-calc select {
 	text-align: center;
 	margin: 20px;
 	font-size: 25px; 
+	color: var(--clr-text);
 }
 
 /* Node Farm Calc proof table */
@@ -2152,13 +2162,14 @@ table.node-proof th{
 	color: white;
 	font-size: 20px;
 	padding: 7px;
-	background-color: #802020;
+	background-color: var(--clr-th-table);
 }
 table.node-proof th:nth-child(1){
 	width: 10%;
 }
 table.node-proof td{
-	background-color: #ECECDE;
+	background-color: var(--clr-bkg-table);
+	color: var(--clr-text);
 	text-align: center;
 }
 table.node-proof td:nth-child(2){
@@ -2169,6 +2180,12 @@ table.node-proof td:nth-child(3){
 	text-align: right;
 	font-size: 17px;
 	padding: 10px;
+}
+@media only screen and (max-width: 600px){
+	table.node-proof{
+		width: auto;
+		white-space: nowrap;
+	}
 }
 
 
@@ -2186,8 +2203,8 @@ table.bounty-glyph th{
 	color: white;
 	font-size: 20px;
 	padding: 7px;
-	background-color: #802020;
-	border: 1px solid #000000;
+	background-color: var(--clr-th-table);
+	border: 1px solid var(--clr-border);
 }
 table.all-glyphs th:hover,
 table.bounty-glyph th:hover{
@@ -2214,12 +2231,14 @@ table.all-glyphs th:nth-child(3){ /* Level */
 table.all-glyphs td{
 	font-size: 20px;
 	padding: 5px;
-	border: 1px solid black;
-	background-color: #ECECDE;
+	color: var(--clr-text);
+	border: 1px solid var(--clr-border);
+	background-color: var(--clr-bkg-table);
 }
 table.all-glyphs tr:hover td,
 table.bounty-glyph tr:hover td{
-	background-color: #cfe9b4;
+	color: var(--clr-text);
+	background-color: var(--clr-bkg-table);
 	-webkit-transition: all 0.5s ease;
 	transition: all 0.5s ease;
 }
@@ -2235,12 +2254,10 @@ table.all-glyphs td:nth-child(5){
 table.bounty-glyph td{
 	font-size: 20px;
 	padding: 5px;
-	border: 1px solid black;
-	background-color: #ECECDE;
+	color: var(--clr-text);
+	border: 1px solid var(--clr-border);
+	background-color: var(--clr-bkg-table);
 	white-space: nowrap;
-}
-table.bounty-glyh td img{
-
 }
 table.bounty-glyph th:nth-child(1){
 	width: 40%;
@@ -4402,34 +4419,17 @@ table.nodes td.nodes-cooldown{
 	top: 0;
 }
 
-/*
-.map-timer-box p1,
-.map-timer-box p2{
-	padding-top: 2px;
-	padding-bottom: 2px;
-	padding-left: 5px;
-	padding-right: 5px;
-	border: 2px solid black;
-}
-
-.map-timer-box h1{
-	margin-bottom: -20px;
-	padding-top: 2px;
-	padding-bottom: 2px;
-	padding-left: 5px;
-	padding-right: 5px;
-	border: 2px solid black;
-	background: rgba(255,246,214);
-	font-size: 17px;
-	text-align: center;
-} */ 
-
 /* Info Descriptions */
 .map-timer-box h2{
 	padding: 5px;
 	border: 2px solid black;
 	font-size: 25px;
 }
+/* 
+	===================
+	===== BUTTONS =====
+	===================
+*/
 .revert,
 .refresh,
 .red-button{
@@ -4446,6 +4446,13 @@ table.nodes td.nodes-cooldown{
 	border: 2px solid var(--clr-border);
 	padding: 10px;
 	cursor: pointer;
+}
+.revert input[type="button"]:hover,
+.refresh input[type="button"]:hover,
+.red-button input[type="button"]:hover{
+	background-color: var(--clr-button-hover);
+	-webkit-transition: all 0.5s ease;
+  	transition: all 0.5s ease;
 }
 
 .merptest{
