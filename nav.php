@@ -1,8 +1,3 @@
-<?php
-	//$base = "https://www.peuresearchcenter.com";
-	$base = "http://localhost/peuresearchcenter";
-?>
-
 <div id = "navbar" class = "navbar">
 	<div class = "brand-name"><a href = "<?php echo $base;?>/index.php">Peu Research Center </a></div>
 	<div onclick = "applyMode();" class = "dark-mode">
