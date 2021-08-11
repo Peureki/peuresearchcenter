@@ -3,23 +3,26 @@
 <head>
   <!-- Defaults -->
   <?php include('../config.php'); ?>
-	<title> Dragonfall Timers </title>
-	<script>
-    var last_modified = document.lastModified,
-      css_version = '<link id = "css-version" rel ="stylesheet" type="text/css" href="../styles.css?v='+ last_modified + '">',
-      js_version = '<script type ="text/javascript" src = "../script.js?v=' + last_modified + '">'+'</'+'script>';
-      js_timer_version = '<script type ="text/javascript" src = "./dragonfall.js?v=' + last_modified + '">'+'</'+'script>';
-    document.write(css_version);
-  </script>
-  <link rel = "shortcut icon" href = "../images/assets/peu-choya.png">
+	<title> Dragonfall</title>
+	
 </head>
 <body>
-	<div id = "navbar" class = "navbar"></div>
-  <div id = "subNav"></div>
+	<!-- 
+    ============================================================
+    ====================== NAVIGATION BAR ======================
+    ============================================================
+  -->
+  <?php include('../nav.php'); ?>
 
   <!-- Main header -->
-    <div class = "timer-title">
-      <h1> Dragonfall </h1>
+    <div class = "page-box">
+      <div class = "section-header">
+      <h1>Dragonfall</h1>
+      <div class = "banner-box"></div>
+      <img src = "../images/assets/banner.svg">
+    </div>
+    <!-- Hidden space so the header doesn't overlap anything below -->
+    <div class = "section-header-space"></div>
     </div>
 
   <div id = "nav-left-sidetimer-box" class = "nav-left-sidetimer-box">
@@ -432,35 +435,13 @@
 		
 	</div> <!-- End of page-box -->
 
-  <div class = "footer">
-    <div class = "inner-footer">
+  <!-- 
+    ========================================================================
+    ====================== FOOTER + DARK MODE ==============================
+    ========================================================================
+  -->
+  <?php include("../footer.php"); ?>
 
-      <div class = "footer-third">
-        <h1> Created by:  </h1>
-        <a href = "../resources/about-me.html"> Peureki.3647 </a>
-        <a href = "../resources/about-me.html"> Peureki#5452 </a>
-        <a href = "mailto: peureseachcenter@gmail.com"> peuresearchcenter@gmail.com </a>
-        <h1 style = "margin-top: 10px;"> Artwork by: </h1>
-        <a href = "https://www.twitter.com/tiffymew"> @tiffymew </a>
-      </div>
-
-      <div class = "footer-third">
-        <h1> Support </h1>
-        <a href="../supporters.html" style = "margin-bottom: 10px;"> List of supporters </a>
-        <a href="https://www.patreon.com/peureki" target = "_blank"> Patreon </a>
-        <a href="https://www.paypal.me/peureki" target = "_blank">Paypal </a>
-
-      </div>
-
-      <div class = "footer-third">
-        <h1></h1>
-        <h1></h1>
-        <h1 style = "font-weight: normal; font-size: 15px;"> Associated logos, renderings, images, and other related content are registered trademarks to ArenaNet or NCSOFT. 
-      </div>
-    </div>
-  </div>
-
-	<script> document.write(js_version); document.write(js_timer_version);</script>
-  <script> insertNav('navbar', 2); </script>
+	<script type = "text/javascript" src = "<?php echo $base;?>/timers/dragonfall.js?v=<?php echo $date;?>"></script>
 </body>
 </html>
