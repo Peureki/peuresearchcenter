@@ -1,32 +1,17 @@
 <!DOCTYPE html> 
 <html>
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160103677-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-160103677-1');
-	</script>
-	<title> About Me </title>
-
 	<!-- Defaults -->
-	<?php 
-		include('../config.php');
-	?>
-	
-	<!-- Initialize main files -->
-	<link id = "css-main" type = "text/css" rel = "stylesheet" href = "../styles.css">
-	<script id = "js-main" type = "text/javascript" src = "../script.js"></script>
-
-	<link rel = "shortcut icon" href = "../images/assets/peu-choya.png">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<?php include('../config.php'); ?>
+	<title> About Me </title>
 </head>
 <body>
-	<div id = "navbar" class = "navbar"></div>
-	<div id = "subNav"></div>
+	<!-- 
+		============================================================
+		====================== NAVIGATION BAR ======================
+		============================================================
+	-->
+	<?php include('../nav.php'); ?>
 
 	<div class = "page-box">
 		<div class = "section-header">
@@ -60,45 +45,10 @@
 	</div> <!-- End of page-box -->
 
 	<!-- 
-		=================================================
-		==================== FOOOTER ====================
-		=================================================
+		========================================================================
+		====================== FOOTER + DARK MODE ==============================
+		========================================================================
 	-->
-	<div class = "footer">
-		<div class = "inner-footer">
-			<h1> Created By </h1>
-			<a href = "../resources/about-me.html"> Peureki.3647 |</a>
-			<a href = "../resources/about-me.html"> Peureki#5452 |</a>
-			<a href = "mailto: peureseachcenter@gmail.com"> peuresearchcenter@gmail.com </a>
-			<h1 style = "margin-top: 10px;"> Artwork </h1>
-			<a href = "https://www.twitter.com/tiffymew" target = "_blank"> @tiffymew </a>
-		</div>
-
-		<div class = "inner-footer">
-			<h1> Support </h1>
-			<a href="../supporters.html" style = "margin-bottom: 10px;"> List of supporters </a>
-			<br><a href="https://www.patreon.com/peureki" target = "_blank"> Patreon </a>
-			<br><a href="https://www.paypal.me/peureki" target = "_blank">Paypal </a>
-		</div>
-
-		<div class = "inner-footer">
-			<p1> Associated logos, renderings, images, and other related content are registered trademarks to ArenaNet or NCSOFT.</p1>
-		</div>
-	</div>
-
-	<script> insertNav('navbar', 2); </script>
+	<?php include("../footer.php"); ?>
 </body>
-
-<script id = "js-mode" type = "text/javascript" src = "../mode.js"></script>
-<!-- VERSIONING --> 
-<script> 
-	var css_main = "../styles.css?v='" + document.lastModified + "'",
-		js_main = "../script.js?v='" + document.lastModified +"'",
-		js_mode = "../mode.js?v='" + document.lastModified +"'";
-
-	document.getElementById('css-main').href = css_main;
-	document.getElementById('js-main').src = js_main; 
-	document.getElementById('js-mode').src = js_mode;
-</script>
-
 </html>

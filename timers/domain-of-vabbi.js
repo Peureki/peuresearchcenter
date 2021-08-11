@@ -113,6 +113,62 @@ var vabbi = {
             sidebox: document.getElementById('vabbi-serpent-sidebox'),
             num: document.getElementById('numerical-sidetimer-vabbi-serpent')
         },
+        {   // [9] Forged Warmonger
+            function: function() { vabbi_Countdown(9); },
+            status: 0,
+            cooldown: 60 * 15, 
+            startButton: document.getElementById('timer-vabbi-9-start'),
+            startSideButton: document.getElementById('sidetimer-vabbi-9-start'),
+            resetButton: document.getElementById('timer-vabbi-9-reset'),
+            resetSideButton: document.getElementById('sidetimer-vabbi-9-reset'),
+            timeLabel: document.getElementById('timer-vabbi-9'), 
+            timeSideLabel: document.getElementById('sidetimer-vabbi-9'),
+            textLabel: document.getElementById('timer-vabbi-9-text'),
+            sidebox: document.getElementById('vabbi-9-sidebox'),
+            num: document.getElementById('numerical-sidetimer-vabbi-9')
+        },
+        {   // [10] Forged Lurker
+            function: function() { vabbi_Countdown(10); },
+            status: 0,
+            cooldown: 60 * 15, 
+            startButton: document.getElementById('timer-vabbi-10-start'),
+            startSideButton: document.getElementById('sidetimer-vabbi-10-start'),
+            resetButton: document.getElementById('timer-vabbi-10-reset'),
+            resetSideButton: document.getElementById('sidetimer-vabbi-10-reset'),
+            timeLabel: document.getElementById('timer-vabbi-10'), 
+            timeSideLabel: document.getElementById('sidetimer-vabbi-10'),
+            textLabel: document.getElementById('timer-vabbi-10-text'),
+            sidebox: document.getElementById('vabbi-10-sidebox'),
+            num: document.getElementById('numerical-sidetimer-vabbi-10')
+        },
+        {   // [11] Forged Marauder
+            function: function() { vabbi_Countdown(11); },
+            status: 0,
+            cooldown: 60 * 15, 
+            startButton: document.getElementById('timer-vabbi-11-start'),
+            startSideButton: document.getElementById('sidetimer-vabbi-11-start'),
+            resetButton: document.getElementById('timer-vabbi-11-reset'),
+            resetSideButton: document.getElementById('sidetimer-vabbi-11-reset'),
+            timeLabel: document.getElementById('timer-vabbi-11'), 
+            timeSideLabel: document.getElementById('sidetimer-vabbi-11'),
+            textLabel: document.getElementById('timer-vabbi-11-text'),
+            sidebox: document.getElementById('vabbi-11-sidebox'),
+            num: document.getElementById('numerical-sidetimer-vabbi-11')
+        },
+        {   // [12] Forged Brutalizer
+            function: function() { vabbi_Countdown(12); },
+            status: 0,
+            cooldown: 60 * 15, 
+            startButton: document.getElementById('timer-vabbi-12-start'),
+            startSideButton: document.getElementById('sidetimer-vabbi-12-start'),
+            resetButton: document.getElementById('timer-vabbi-12-reset'),
+            resetSideButton: document.getElementById('sidetimer-vabbi-12-reset'),
+            timeLabel: document.getElementById('timer-vabbi-12'), 
+            timeSideLabel: document.getElementById('sidetimer-vabbi-12'),
+            textLabel: document.getElementById('timer-vabbi-12-text'),
+            sidebox: document.getElementById('vabbi-12-sidebox'),
+            num: document.getElementById('numerical-sidetimer-vabbi-12')
+        },
 
         
     ]

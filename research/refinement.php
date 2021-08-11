@@ -4,24 +4,14 @@
 	<!-- Defaults -->
 	<?php include('../config.php'); ?>
 	<title> Refinement </title>
-	<script>
-		var last_modified = document.lastModified,
-			css_version = '<link id = "css-version" rel ="stylesheet" type="text/css" href="../styles.css?v='+ last_modified + '">',
-			js_version = '<script type ="text/javascript" src = "../script.js?v=' + last_modified + '">'+'</'+'script>';
-			js_refinement_version = '<script type ="text/javascript" src = "./refinement.js?v=' + last_modified + '">'+'</'+'script>';
-			js_pref_version = '<script type ="text/javascript" src = "./preferences.js?v=' + last_modified + '">'+'</'+'script>';
-		document.write(css_version);
-	</script>
-
-	<!-- Initialize main files -->
-	<link id = "css-main" type = "text/css" rel = "stylesheet" href = "../styles.css">
-
-	<link rel = "shortcut icon" href = "../images/assets/peu-choya.png">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<div id = "navbar" class = "navbar"></div>
-	<div id = "subNav"></div>
+	<!-- 
+		============================================================
+		====================== NAVIGATION BAR ======================
+		============================================================
+	-->
+	<?php include('../nav.php'); ?>
 	
 	<div id = "bookmark-left" class = "bookmark-left">
 		<ul>
@@ -348,54 +338,17 @@
 	</div> <!-- End of page-box -->
 
 	<!-- 
-		=================================================
-		==================== FOOOTER ====================
-		=================================================
+		========================================================================
+		====================== FOOTER + DARK MODE ==============================
+		========================================================================
 	-->
-	<div class = "footer">
-		<div class = "inner-footer">
-			<h1> Created By </h1>
-			<a href = "../resources/about-me.html"> Peureki.3647 |</a>
-			<a href = "../resources/about-me.html"> Peureki#5452 |</a>
-			<a href = "mailto: peureseachcenter@gmail.com"> peuresearchcenter@gmail.com </a>
-			<h1 style = "margin-top: 10px;"> Artwork </h1>
-			<a href = "https://www.twitter.com/tiffymew"> @tiffymew </a>
-		</div>
-
-		<div class = "inner-footer">
-			<h1> Support </h1>
-			<a href="../supporters.html" style = "margin-bottom: 10px;"> List of supporters </a>
-			<br><a href="https://www.patreon.com/peureki" target = "_blank"> Patreon </a>
-			<br><a href="https://www.paypal.me/peureki" target = "_blank">Paypal </a>
-		</div>
-
-		<div class = "inner-footer">
-			<p1> Associated logos, renderings, images, and other related content are registered trademarks to ArenaNet or NCSOFT.</p1>
-		</div>
-	</div>
+	<?php include("../footer.php"); ?>
 	
-	<script id = "js-main" type = "text/javascript" src = "../script.js"></script>
-	<script id = "js-refine" type = "text/javascript" src = "./refinement.js"></script>
-	<script id = "js-pref" type = "text/javascript" src = "./preferences.js"></script>
+	<!--<script id = "js-main" type = "text/javascript" src = "../script.js"></script>-->
+	<script type = "text/javascript" src = "<?php echo $base;?>/research/refinement.js?v=<?php echo $date;?>"></script>
+	<script type = "text/javascript" src = "<?php echo $base;?>/research/preferences.js?v=<?php echo $date;?>"></script>
 
-	<script> insertNav('navbar', 2); </script>
 	<script> refinement(0); </script>
 	<script> doPreferences(); </script>
 </body>
-
-<script id = "js-mode" type = "text/javascript" src = "../mode.js"></script>
-<!-- VERSIONING --> 
-<script> 
-	var css_main = "../styles.css?v='" + document.lastModified + "'",
-		js_main = "../script.js?v='" + document.lastModified +"'",
-		js_mode = "../mode.js?v='" + document.lastModified +"'",
-		js_refine = "./refinement.js?v='" + document.lastModified +"'",
-		js_pref = "./pref.js?v='" + document.lastModified +"'";
-
-	document.getElementById('css-main').href = css_main;
-	document.getElementById('js-main').src = js_main; 
-	document.getElementById('js-mode').src = js_mode;
-	document.getElementById('js-refine').src = js_refine;
-	document.getElementById('js-pref').src = js_pref;
-</script>
 </html>

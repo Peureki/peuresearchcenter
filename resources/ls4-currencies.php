@@ -4,17 +4,14 @@
 	<!-- Defaults -->
 	<?php include('../config.php'); ?>
 	<title> LS4 Currencies</title>
-	
-	<!-- Initialize main files -->
-	<link id = "css-main" type = "text/css" rel = "stylesheet" href = "../styles.css">
-	<script id = "js-main" type = "text/javascript" src = "../script.js"></script>
-
-	<link rel = "shortcut icon" href = "../images/assets/peu-choya.png">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<div id = "navbar" class = "navbar"></div>
-	<div id = "subNav"></div>
+	<!-- 
+		============================================================
+		====================== NAVIGATION BAR ======================
+		============================================================
+	-->
+	<?php include('../nav.php'); ?>
 
 	<div id = "bookmark-left" class = "bookmark-left">
 		<ul>
@@ -404,44 +401,11 @@
 	</div> <!-- End of page-box -->
 
 	<!-- 
-		=================================================
-		==================== FOOOTER ====================
-		=================================================
+		========================================================================
+		====================== FOOTER + DARK MODE ==============================
+		========================================================================
 	-->
-	<div class = "footer">
-		<div class = "inner-footer">
-			<h1> Created By </h1>
-			<a href = "../resources/about-me.html"> Peureki.3647 |</a>
-			<a href = "../resources/about-me.html"> Peureki#5452 |</a>
-			<a href = "mailto: peureseachcenter@gmail.com"> peuresearchcenter@gmail.com </a>
-			<h1 style = "margin-top: 10px;"> Artwork </h1>
-			<a href = "https://www.twitter.com/tiffymew"> @tiffymew </a>
-		</div>
-
-		<div class = "inner-footer">
-			<h1> Support </h1>
-			<a href="../supporters.html" style = "margin-bottom: 10px;"> List of supporters </a>
-			<br><a href="https://www.patreon.com/peureki" target = "_blank"> Patreon </a>
-			<br><a href="https://www.paypal.me/peureki" target = "_blank">Paypal </a>
-		</div>
-
-		<div class = "inner-footer">
-			<p1> Associated logos, renderings, images, and other related content are registered trademarks to ArenaNet or NCSOFT.</p1>
-		</div>
-	</div>
-
-	<script> insertNav('navbar', 2); </script>
+	<?php include("../footer.php"); ?>
 </body>
 
-<script id = "js-mode" type = "text/javascript" src = "../mode.js"></script>
-<!-- VERSIONING --> 
-<script> 
-	var css_main = "../styles.css?v='" + document.lastModified + "'",
-		js_main = "../script.js?v='" + document.lastModified +"'",
-		js_mode = "../mode.js?v='" + document.lastModified +"'";
-
-	document.getElementById('css-main').href = css_main;
-	document.getElementById('js-main').src = js_main; 
-	document.getElementById('js-mode').src = js_mode;
-</script>
 </html>

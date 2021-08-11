@@ -5,21 +5,19 @@
 	<?php include('../config.php'); ?>
 	<title> Currency Worth </title>
 
-	<!-- Initialize main files -->
-	<link id = "css-main" type = "text/css" rel = "stylesheet" href = "../styles.css">
-	<script id = "js-main" type = "text/javascript" src = "../script.js"></script>
-	<script id = "js-magic" type = "text/javascript" src = "./magic.js"></script>
-	<script id = "js-ss" type = "text/javascript" src = "./spirit-shards.js"></script>
-	<script id = "js-tc" type = "text/javascript" src = "./trade-contracts.js"></script>
-	<script id = "js-bc" type = "text/javascript" src = "./bandit-crests.js"></script>
-	<script id = "js-laurels" type = "text/javascript" src = "./laurels.js"></script>
-
-	<link rel = "shortcut icon" href = "../images/assets/peu-choya.png">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type = "text/javascript" src = "<?php echo $base;?>/research/magic.js?=v<?php echo $date;?>"></script>
+	<script type = "text/javascript" src = "<?php echo $base;?>/research/spirit-shards.js?=v<?php echo $date;?>"></script>
+	<script type = "text/javascript" src = "<?php echo $base;?>/research/trade-contracts.js?=v<?php echo $date;?>"></script>
+	<script type = "text/javascript" src = "<?php echo $base;?>/research/bandit-crests.js?=v<?php echo $date;?>"></script>
+	<script type = "text/javascript" src = "<?php echo $base;?>/research/laurels.js?=v<?php echo $date;?>"></script>
 </head>
 <body>
-	<div id = "navbar" class = "navbar"></div>
-	<div id = "subNav"></div>
+	<!-- 
+		============================================================
+		====================== NAVIGATION BAR ======================
+		============================================================
+	-->
+	<?php include('../nav.php'); ?>
 
 	<div id = "bookmark-left" class = "bookmark-left">
 		<ul>
@@ -520,64 +518,19 @@
 
 	</div> <!-- End of page-box -->
 
-	<div class = "footer">
-		<div class = "inner-footer">
-
-			<div class = "footer-third">
-				<h1> Created by:  </h1>
-				<a href = "../resources/about-me.html"> Peureki.3647 </a>
-				<a href = "../resources/about-me.html"> Peureki#5452 </a>
-				<a href = "mailto: peureseachcenter@gmail.com"> peuresearchcenter@gmail.com </a>
-				<h1 style = "margin-top: 10px;"> Artwork by: </h1>
-				<a href = "https://www.twitter.com/tiffymew"> @tiffymew </a>
-			</div>
-
-			<div class = "footer-third">
-				<h1> Support </h1>
-				<a href="../supporters.html" style = "margin-bottom: 10px;"> List of supporters </a>
-				<a href="https://www.patreon.com/peureki" target = "_blank"> Patreon </a>
-				<a href="https://www.paypal.me/peureki" target = "_blank">Paypal </a>
-
-			</div>
-
-			<div class = "footer-third">
-				<h1></h1>
-				<h1></h1>
-				<h1 style = "font-weight: normal; font-size: 15px;"> Associated logos, renderings, images, and other related content are registered trademarks to ArenaNet or NCSOFT. 
-			</div>
-		</div>
-	</div>
-
-	<script> insertNav('navbar', 2); </script>
+	<!-- 
+		========================================================================
+		====================== FOOTER + DARK MODE ==============================
+		========================================================================
+	-->
+	<?php include("../footer.php"); ?>
+	
 	<script> getVolatile(); getUnbound(); </script>
 	<script> getBanditCrests(); </script>
 	<script> getLaurels(); </script>
 	
 </body>
 
-<script id = "js-mode" type = "text/javascript" src = "../mode.js"></script>
-<script id = "js-pref" type = "text/javascript" src = "./preferences.js"></script>
+<script id = "js-pref" type = "text/javascript" src = "<?php echo $base;?>/research/preferences.js?v=<?php echo $date;?>"></script>
 <script> doPreferences(); </script>
-<!-- VERSIONING --> 
-<script> 
-	var css_main = "../styles.css?v='" + document.lastModified + "'",
-		js_main = "../script.js?v='" + document.lastModified +"'",
-		js_mode = "../mode.js?v='" + document.lastModified +"'",
-		js_magic = "./magic.js?='" + document.lastModified +"'",
-		js_ss = "./spirit-shards.js?='" + document.lastModified +"'",
-		js_pref = "./preferences.js?='" + document.lastModified +"'",
-		js_tc = "./trade-contracts.js?='" + document.lastModified +"'",
-		js_bc = "./bandit-crests.js?='" + document.lastModified +"'",
-		js_laurels = "./laurels.js?='" + document.lastModified +"'";
-
-	document.getElementById('css-main').href = css_main;
-	document.getElementById('js-main').src = js_main; 
-	document.getElementById('js-mode').src = js_mode;
-	document.getElementById('js-magic').src = js_magic;
-	document.getElementById('js-ss').src = js_ss;
-	document.getElementById('js-pref').src = js_pref;
-	document.getElementById('js-tc').src = js_tc;
-	document.getElementById('js-bc').src = js_bc;
-	document.getElementById('js-laurels').src = js_laurels;
-</script>
 </html>

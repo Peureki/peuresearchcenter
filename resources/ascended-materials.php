@@ -450,51 +450,15 @@
 		}
 	</script>
 
-
-		
-
 	<!-- 
-		=================================================
-		==================== FOOOTER ====================
-		=================================================
+		========================================================================
+		====================== FOOTER + DARK MODE ==============================
+		========================================================================
 	-->
-	<div class = "footer">
-		<div class = "inner-footer">
-			<h1> Created By </h1>
-			<a href = "../resources/about-me.html"> Peureki.3647 |</a>
-			<a href = "../resources/about-me.html"> Peureki#5452 |</a>
-			<a href = "mailto: peureseachcenter@gmail.com"> peuresearchcenter@gmail.com </a>
-			<h1 style = "margin-top: 10px;"> Artwork </h1>
-			<a href = "https://www.twitter.com/tiffymew"> @tiffymew </a>
-		</div>
-
-		<div class = "inner-footer">
-			<h1> Support </h1>
-			<a href="../supporters.html" style = "margin-bottom: 10px;"> List of supporters </a>
-			<br><a href="https://www.patreon.com/peureki" target = "_blank"> Patreon </a>
-			<br><a href="https://www.paypal.me/peureki" target = "_blank">Paypal </a>
-		</div>
-
-		<div class = "inner-footer">
-			<p1> Associated logos, renderings, images, and other related content are registered trademarks to ArenaNet or NCSOFT.</p1>
-		</div>
-	</div>
-
+	<?php include("../footer.php"); ?>
 </body>
 
-<script id = "js-mode" type = "text/javascript" src = "../mode.js"></script>
-<script id = "js-timers" type = "text/javascript" src = "./full-timers.js"></script>
-<!-- VERSIONING --> 
-<script> 
-	var css_main = "../styles.css?v='" + document.lastModified + "'",
-		js_main = "../script.js?v='" + document.lastModified +"'",
-		js_mode = "../mode.js?v='" + document.lastModified +"'",
-		js_timers = "./full-timers.js?=" + document.lastModified + "'";
-
-	document.getElementById('css-main').href = css_main;
-	document.getElementById('js-main').src = js_main; 
-	document.getElementById('js-mode').src = js_mode;
-</script>
+<script type = "text/javascript" src = "<?php echo $base;?>/resources/full-timers.js?v=<?php echo $date;?>"></script>
 
 <script>
 	// Timers
@@ -512,8 +476,6 @@
 	tangledLootTimer('progress-bar-5', 'full-timer-time-5', 'full-timer-next-5', 'full-timer-current-5');
 
 	dragonStandLootTimer('progress-bar-6', 'full-timer-time-6', 'full-timer-next-6', 'full-timer-current-6');
-
-	getGemtoGoldConversion(0);
 </script>
 
 </html>

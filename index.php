@@ -1,52 +1,23 @@
 <!DOCTYPE html> 
 <html>
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160103677-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-160103677-1');
-	</script>
-
+	<!-- Defaults, CSS/JS main files -->
+	<?php include('config.php'); ?>
 	<title> Peu Research Center</title>
-
-	<!-- Initialize main files -->
-	<link id = "css-main" type = "text/css" rel = "stylesheet" href = "./styles.css">
-	<script id = "js-main" type = "text/javascript" src = "./script.js"></script>
-	<script id = "js-timers" type = "text/javascript" src = "./homepage-timers.js"></script>
-
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel = "shortcut icon" href = "./images/assets/peu-choya.png">
+	<script type = "text/javascript" src = "<?php echo $base;?>/homepage-timers.js?v=<?php echo $date;?>"></script>
 </head>
 <body>
-	<div id = "navbar" class = "navbar"></div>
-<!--
-	<div id = "discord" class = "discord-left">
-		<span><b> Live Trains </b></span>
-		<br>
-		<iframe src="https://titanembeds.com/embed/852971860098547733?theme=DiscordDark" height="600" width="225" frameborder="0"></iframe>
-		<br>
-		<span><b> From <a href = "https://discord.gg/7tWwz499rX" target = "_blank" style = "color: white;"><u> Overflow </u></a></b>
-	</div>
--->
-	<!--
-		<div class = "homepage-title" style = "display: flex; align-items: center; justify-content: center;">
-			<img src = "./images/assets/peu-choya.png" style = "width: 8%;">
-			<h1> Peu Research Center </h1>
-		</div>
-
-		<div class = "homepage-title" >
-			<h2> Guild Wars 2 farms, guides, tools, and more! </h1>
-		</div> 
+	<!-- 
+		============================================================
+		====================== NAVIGATION BAR ======================
+		============================================================
 	-->
-		<!-- 
-			===========================================================
-			====================== MAIN SECTIONS ======================
-			===========================================================
-		-->
+	<?php include('nav.php'); ?>
+	<!-- 
+		===========================================================
+		====================== MAIN SECTIONS ======================
+		===========================================================
+	-->
 
 	<div class = "double-box">
 		<div class = "homepage-box">
@@ -706,66 +677,21 @@
 			</div> <!-- End of updates box -->
 		</div> <!-- End of right box -->
 	</div> <!-- End of double box -->
-
 	<!-- 
-		=================================================
-		==================== FOOOTER ====================
-		=================================================
+		========================================================================
+		====================== FOOTER + DARK MODE ==============================
+		========================================================================
 	-->
-	<div class = "splatter-container">
-		<div class  = "splatter-bkg"></div>
-	</div>
-	<div class = "footer">
-		<div class = "inner-footer">
-			<h1> Created By </h1>
-			<a href = "./resources/about-me.html"> Peureki.3647 |</a>
-			<a href = "./resources/about-me.html"> Peureki#5452 |</a>
-			<a href = "mailto: peureseachcenter@gmail.com"> peuresearchcenter@gmail.com </a>
-			<h1 style = "margin-top: 10px;"> Artwork </h1>
-			<a href = "https://www.twitter.com/tiffymew" target = "_blank"> @tiffymew </a>
-		</div>
+	<?php include("footer.php"); ?>
 
-		<div class = "inner-footer">
-			<h1> Support </h1>
-			<a href="./supporters.html" style = "margin-bottom: 10px;"> List of supporters </a>
-			<br><a href="https://www.patreon.com/peureki" target = "_blank"> Patreon </a>
-			<br><a href="https://www.paypal.me/peureki" target = "_blank">Paypal </a>
-		</div>
-
-		<div class = "inner-footer">
-			<p1> Associated logos, renderings, images, and other related content are registered trademarks to ArenaNet or NCSOFT.</p1>
-		</div>
-	</div>
-
-
-	<script> //getPeuTrain('peu-train'); </script>
 	<script> //train_timer(); 
 	new_Train('days-0','hours-0','minutes-0','seconds-0','progress-bar-0','num-0','box-0','name-0','time-0',0);
 	new_Train('days-1','hours-1','minutes-1','seconds-1','progress-bar-1','num-1','box-1','name-1','time-1',1);
+	</script>
 
-</script>
-
-<script> insertNav('navbar', 1); </script>
 </body>
 
 <!-- Added these last because it needs to read some html ids to work -->
-<script id = "js-timers" type = "text/javascript" src = "./homepage-timers.js"></script>
-<script id = "js-mode" type = "text/javascript" src = "./mode.js"></script>
-<script id = "js-choya" type = "text/javascript" src = "./choya.js"></script>
-
-<!-- VERSIONING --> 
-<script> 
-	var css_main = "./styles.css?v='" + document.lastModified + "'",
-		js_main = "./script.js?v='" + document.lastModified +"'",
-		js_timers = "./homepage-timers.js?v='" + document.lastModified +"'",
-		js_mode = "./mode.js?v='" + document.lastModified +"'",
-		js_choya = "./choya.js?v='" + document.lastModified +"'";
-
-	document.getElementById('css-main').href = css_main;
-	document.getElementById('js-main').src = js_main; 
-	document.getElementById('js-timers').src = js_timers;
-	document.getElementById('js-mode').src = js_mode;
-	document.getElementById('js-choya').src = js_choya;
-</script>
+<script type = "text/javascript" src = "<?php echo $base;?>/choya.js?v=<?php echo $date;?>"></script>
 
 </html>

@@ -315,14 +315,13 @@ input, select {
 	/* Remove flex so it's not two columns and allows nav-bar-list to be on the left */
 	.navbar{
 		display: block;
-		overflow-y: scroll;
+		overflow-y: auto;
 	}
 	
 	/* Instead of :hover, :active to remove subheaders when clicking anywhere outside of the window */
 	.nav-bar-list{
 		display: none;
 		flex-direction: column;
-		align-items: flex-start;
 	}
 	/* Main header links */
 	.nav-header{
@@ -712,6 +711,16 @@ input, select {
 }
 .section-header-space{
 	height: 150px;
+}
+/* Center the header with the background */
+@media only screen and (max-width: 600px){
+	.section-header{
+		padding-right: 500px;
+	}
+	.section-header h1{
+		padding-right: 325px;
+	}
+
 }
 @keyframes removeDiv{
 	0% { width: 100%; }
@@ -1455,8 +1464,13 @@ input, select {
 	text-align: left;
 	position: relative;
 }
-
+/*
+	========================
+	===== PROGRESS BOX =====
+	========================
+*/ 
 .full-progress-box{
+	position: relative;
 	width: 100%;
 	background-color: var(--clr-bkg-container);
 	color: black;
@@ -1470,7 +1484,7 @@ input, select {
 
 .full-progress-bar{
 	width: 0%;
-	height: 55%;
+	height: 100%;
 	background-color: rgba(215,161,93);
 	-webkit-transition: all 1s ease;
   	transition: all 1s ease;
@@ -1480,7 +1494,7 @@ input, select {
 .full-timer{
 	width: 15%;
     text-align: center;
-    font-size: 20px;
+    font-size: clamp(1rem, 20px, 2vw);
     padding-top: 2px;
     padding-bottom: 2px;
     padding-left: 5px;

@@ -1,0 +1,26 @@
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160103677-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-160103677-1');
+</script>
+
+<!-- 
+	Insert base of the URL (home directory) to be placed into the href 
+	By echoing in href, it displays in the URL
+	Place this php at the top <head>
+-->
+<?php
+	//$base = "https://www.peuresearchcenter.com";
+	$base = "http://localhost/peuresearchcenter";
+	$date = date("D M d, Y G:i"); // For versioning
+?>
+<!-- Main files -->
+<link type = "text/css" rel = "stylesheet" href = "<?php echo $base;?>/styles.css?v=<?php echo $date;?>">
+<script type = "text/javascript" src = "<?php echo $base;?>/script.js?v=<?php echo $date;?>"></script>
+<!-- Shortcut Icon + Scalable view -->
+<link rel = "shortcut icon" href = "../images/assets/peu-choya.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
