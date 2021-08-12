@@ -140,6 +140,9 @@
 					- Changed all existing pages from .html -> .PHP. Starting to learn PHP and implementing its uses. Added PHP as a way to allow all pages to have the same nav bar, header, and footer with single files so I can easily change all files at once. 
 					<br> - Timer/countdown boxes that have a "progress-bar" filling now should be inline with the box. Sometimes it grew outside the boxes 
 					<br> - Added Dark Mode to all Map pages. All Timer pages have it too...but it will require some revamp to existing JavaScript files so they will need more time 
+					<br> - Moved Difficulty column in <a href = "./resources/dailies" target = "_blank"><u> Dailies</u></a> to the left by 1 just so it doesn't look so weird in the middle with the colors (esp in dark mode)
+					<br> - Made some texts easier to see ^ 
+					<br> - Fixed the colored progress bar in <a href = "./resources/dailies" target = "_blank"><u> Dailies</u></a> to be 100% in the box 
 					
 				<br><br>
 					<span style = "font-weight: bold;">August 8, 2021</span>

@@ -436,9 +436,6 @@
 
 
 	<script> 
-
-		insertNav('navbar', 2);
-
 		function showMaterial(num){
 			var infoBox = document.getElementById('main-info-box').children;
 

@@ -23,7 +23,7 @@
 		<!-- Hidden space so the header doesn't overlap anything below -->
 		<div class = "section-header-space"></div>
 
-		<div style = "display: flex; justify-content: center; align-items: center;">
+		<div class = "small-description" style = "display: flex; justify-content: center;">
 			<div style = "padding-left: 20px; padding-right: 20px; border-right: 1px solid black;">
 				<span id = "gold-per-gem"></span> &#x2192; 1 <img src = "../images/assets/icons/Gem.png" style = "width: 25px; height: 25px; vertical-align: middle;">
 			</div>

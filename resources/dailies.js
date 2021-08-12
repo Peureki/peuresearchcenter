@@ -1802,8 +1802,8 @@ async function getDaily(choice){
 
 			dataHTML += `<tr>
 			<td style = "background-color: ${colorType};"><center><img src = ${icon} style = ""></center></td>
-			<td>${todaysList[i].name.replace('Daily ','')}</td>
 			<td style = "background-color: ${colorDiff};">${showDiff}</td>
+			<td>${todaysList[i].name.replace('Daily ','')}</td>
 			<td>${showDir}</td>
 			<td onclick = "copyWP(this.children[0].id, '${showWP}');"><input id = '${tdID}' type = 'text' value = '${showWP}'></input></td>
 			<td ${showLink}><center>${logo}</center></td>

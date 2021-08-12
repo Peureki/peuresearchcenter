@@ -53,48 +53,52 @@
 			<input type = "button" id = "tomorrow-button" value = "Tomorrow's Dailies" style = "margin-left: 10px; margin-right: 10px;" onclick = "getDaily(2);">
 		</div>
 
-		<div style = "display: flex; align-items: center; justify-content: center; margin: 20px;">
+		<div class = "small-description" style = "display: flex; justify-content: center;">
 			<span style = "font-size: 18px; margin-right: 5px;"> Copy Expan + LvL 80 Dailies: </span>
 			<input  type = "text" id = "copyExpan" class = "select-button" onclick = "copyValue(this.id);" value = "merp"> </input> 
 		</div>
 
 		<div class = "page-box">
-			<table id = "daily" class = "daily">
-				<tr>
-					<th> Type </th>
-					<th> Daillies </th>
-					<th onclick = "sortTableByDifficulty('daily',2);"> Difficulty </th>
-					<th> How-to </th>
-					<th> Waypoint </th>
-					<th> Link </th>
-				</tr>
+			<div class = "overflow-table">
+				<table id = "daily" class = "daily">
+					<tr>
+						<th> Type </th>
+						<th onclick = "sortTableByDifficulty('daily',1);"> Difficulty </th>
+						<th> Daillies </th>
+						<th> How-to </th>
+						<th> Waypoint </th>
+						<th> Link </th>
+					</tr>
 
-				<tbody id = "dailyBody"></tbody>
-			</table>
+					<tbody id = "dailyBody"></tbody>
+				</table>
+			</div>
 
 			<div class = "section-header">
-			<h1>Pact Supply Network Agent</h1>
+			<h1>PSNA</h1>
 			<div class = "banner-box"></div>
 			<img src = "../images/assets/banner.svg">
 		</div>
 		<!-- Hidden space so the header doesn't overlap anything below -->
 		<div class = "section-header-space"></div>
 
-			<div style = "display: flex; align-items: center; justify-content: center; margin: 20px;">
+			<div class = "small-description" style = "display: flex; justify-content: center;">
 				<span style = "font-size: 18px; margin-right: 5px;"> Copy PSNA Waypoints/Locations: </span>
 				<input  type = "text" id = "copyPSNA" class = "select-button" onclick = "copyValue(this.id);" value = "merp"> </input> 
 			</div>
 
-			<table class = "psna">
-				<tr>
-					<th> Name </th>
-					<th> Area </th>
-					<th> How-to </th>
-					<th> Location </th>
-				</tr>
+			<div class = "overflow-table">
+				<table class = "psna">
+					<tr>
+						<th> Name </th>
+						<th> Area </th>
+						<th> How-to </th>
+						<th> Location </th>
+					</tr>
 
-				<tbody id = "psnaBody"></tbody>
-			</table>
+					<tbody id = "psnaBody"></tbody>
+				</table>
+			</div>
 		</div>
 
 
@@ -103,7 +107,7 @@
 	  		<div id = "box-0" class = "inner-page-box"> <!-- Start of Peu Train -->
 				
 				<div class = "full-progress-box">
-					<div id = "progress-bar-0" class = "full-progress-bar" style = "height: 93%;">
+					<div id = "progress-bar-0" class = "full-progress-bar">
 					</div>
 
 					<div class = "page-box-full-timer" style = "">

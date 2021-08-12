@@ -2025,10 +2025,6 @@ table.daily th:nth-child(3){
 	padding-right: 7px;
 	cursor: pointer;
 }
-/* Hidden */
-table.daily th:nth-child(7){
-	min-width: 50px;
-}
 table.daily td,
 table.psna td{
 	font-size: 16px;
@@ -2042,19 +2038,15 @@ table.daily td:nth-child(1)/*,
 table.daily td:nth-child(2)*/{
 	max-width: 50px;
 } 
-table.daily td:nth-child(1) img/*,
-table.daily td:nth-child(2) img*/{
+table.daily td:nth-child(1) img{
 	width: 90%;
 }
-
-table.daily td:nth-child(2){ /* Type of daily */
-	max-width: 200px;
-}
-table.daily td:nth-child(3){ /* Difficulty */
+table.daily td:nth-child(2){ /* Difficulty */
+	color: black;
 	text-align: center;
 }
-table.daily td:nth-child(4){ /* Direction */
-	max-width: 400px;
+table.daily td:nth-child(4){
+	min-width: 500px;
 }
 table.daily td:nth-child(5) input,
 table.psna td:nth-child(4) input{ /* Waypoint */
