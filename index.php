@@ -135,6 +135,13 @@
 
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
+					<span style = "font-weight: bold;">August 11, 2021</span>
+				<br>
+					- Changed all existing pages from .html -> .PHP. Starting to learn PHP and implementing its uses. Added PHP as a way to allow all pages to have the same nav bar, header, and footer with single files so I can easily change all files at once. 
+					<br> - Timer/countdown boxes that have a "progress-bar" filling now should be inline with the box. Sometimes it grew outside the boxes 
+					<br> - Added Dark Mode to all Map pages. All Timer pages have it too...but it will require some revamp to existing JavaScript files so they will need more time 
+					
+				<br><br>
 					<span style = "font-weight: bold;">August 8, 2021</span>
 				<br>
 					- Added a new footer banner designed by <a href = "https://twitter.com/tiffymew" target = "_blank"><u> Tiffymew</u></a>.

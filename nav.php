@@ -155,17 +155,79 @@
 
 <script> 
 	// Grabs the hamburger and shows it when clicking on the icon
+
 	function showHamburger(){
-		const toggleButton = document.getElementsByClassName('hamburger')[0];
+		const toggleHamburger = document.getElementsByClassName('hamburger')[0];
+		const navBar = document.getElementsByClassName('navbar')[0];
 		const navBarList = document.getElementsByClassName('nav-bar-list')[0];
 
-		toggleButton.addEventListener('click', () =>{
+		var dropdownMenu = document.getElementsByClassName('nav-dropdown');
+		var navStatus = 0;
+
+		var body = document.body;
+
+		// When users click the hamburger
+		toggleHamburger.addEventListener('click', () =>{
+			// If the navbar list is already up, disappear
 			if (navBarList.style.display == "flex"){
+				navBar.style.height = "initial";
 				navBarList.style.display = "none";
+
+				body.style.overflowY = "auto";
+			// If navbar list isn't up, set the nav height to 100% so users can scroll within only that window
 			} else {
 				navBarList.style.display = "flex";
+				navBar.style.height = "100%";
+
+				dropdownMenu[0].addEventListener('click', () => selectedDropDown(0));
+				dropdownMenu[2].addEventListener('click', () => selectedDropDown(2));
+				dropdownMenu[3].addEventListener('click', () => selectedDropDown(3));
+				dropdownMenu[4].addEventListener('click', () => selectedDropDown(4));
+
+				body.style.overflowY = "hidden";
 			}
-		})
+		});
+		// Based on the num, show the submenu
+		function selectedDropDown(num){
+			// Switch depending on what is selected to be reverted back from X
+			var menuItem,
+				menuPosition = [0, 2, 3, 4]; // Postition in the list of menu items for headers that can drop down
+			switch (num){
+				case 0: menuItem = "Resources"; break;
+				case 2: menuItem = "Timers"; break;
+				case 3: menuItem = "Research"; break;
+				case 4: menuItem = "Maps"; break;
+			}
+			// dropdownMenu.children[0] = Subheader
+			// dropdownMenu.children[1] = The sub menu
+			// If no subnav 
+			if (navStatus == 0){
+				// Change selected mainnav to X to indicate you can click it again 
+				dropdownMenu[num].children[0].innerHTML = "X";
+				navStatus = 1;
+
+				// Remove all other mainNavs
+				for (i = 0; i < dropdownMenu.length; i++){
+					// If the selected nav is the same as the count, don't remove mainNav
+					if (num != i){
+						dropdownMenu[i].style.display = "none";
+					}
+					if (num == menuPosition[i]){
+						dropdownMenu[num].children[1].style.display = "flex";
+					}
+				}
+			} else {
+				// Change mainNav to original name
+				// Remove the sub menu
+				// Bring back all other main navs
+				dropdownMenu[num].children[0].innerHTML = menuItem; 
+				dropdownMenu[num].children[1].style.display = "none"
+				for (i = 0; i < dropdownMenu.length; i++){
+					dropdownMenu[i].style.display = "block"
+				}
+				navStatus = 0;
+			}
+		}
 	}
 	showHamburger();
 </script>

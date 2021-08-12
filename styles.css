@@ -248,9 +248,11 @@ input, select {
 	color: #fff !important; 
 }
 /* Show the sub menu when hoving the main header */
-.nav-dropdown:hover ul{
-	display: flex;
-}
+@media only screen and (min-width: 600px){
+	.nav-dropdown:hover ul{
+		display: flex;
+	}
+} 
 /* Sub menu */
 .sub-menu{
 	background-color: var(--clr-dark-red);
@@ -383,7 +385,7 @@ input, select {
 	box-sizing: border-box;
 	background-color: var(--clr-dark-gray);
 	position: relative;
-	z-index: 2000;
+	z-index: 1999;
 }
 .footer a:hover{
 	color: var(--clr-red);
@@ -400,7 +402,7 @@ input, select {
 	background: url("./images/assets/splatter_upright.png");
 	background-repeat: no-repeat;
 	background-size: cover;
-	z-index: 2000;
+	z-index: 1999;
 
 }
 
