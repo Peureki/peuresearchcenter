@@ -58,6 +58,8 @@ function showPreferences(id, variable){
 // If the saved prefereces are not, remove stuff
 function doPreferences(){
 	var ssBlockCount = 0;
+	// Do preferences in specific pages 
+	// Find end URL
 	var path = window.location.pathname;
 	var page = path.split("/").pop();
 
@@ -85,7 +87,8 @@ function doPreferences(){
 	}
 
 	switch (page){
-		case "currency-worth.html": 
+		case "currency-worth": 
+		case "currency-worth.php":
 			// Show/hide VM & UM
 			showToggle('vmumOption1', 'check-vmum', 'vmum', 'bookmark-vm', 'bookmark-um');
 			showToggle('bcOption1', 'check-bc', 'bandit-crests', 'bookmark-bc');
@@ -149,7 +152,8 @@ function doPreferences(){
 			}
 		break;
 
-		case "refinement.html": 
+		case "refinement": 
+		case "refinement.php":
 		// Refinement
 		showToggle('ascendedOption1', 'check-ascended', 'ascended', 'bookmark-ascended');
 		showToggle('basicOption1', 'check-basic', 'basic', 'bookmark-basic');

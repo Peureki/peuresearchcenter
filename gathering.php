@@ -750,8 +750,6 @@
 		getHerbNodes('herbNodes','rolling-choya-herbNodes');
 		getRichNodes('richNodes','rolling-choya-richNodes');
 		getLSNodes('lsNodes','rolling-choya-lsNodes');
-
-		insertNav('navbar', 1);
 	</script>
 
 	<!-- 
