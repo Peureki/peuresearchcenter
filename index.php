@@ -36,6 +36,10 @@
 		<div class = "right-box">
 			<h1 class = "title"> Peu Research Center </h1>
 
+			<div class = "small-description" style = "text-align: center;">
+				Guild Wars 2 benchmarks, gold-making guides, tools, and choyas!
+			</div>
+
 			<div class = "section-header">
 				<h1>Peu Train</h1>
 				<div class = "banner-box"></div>
@@ -135,6 +139,15 @@
 
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
+					<span style = "font-weight: bold;">August 14, 2021</span>
+				<br>
+					- Fixed a bug on mobile that caused a weird gab/glitch on the bottom of screens whenever the address bar disappears (this was so annoying to debug..you have no idea T_T) 
+					<br> - Changed the headers in all pages to not be inside the paint splatter image for mobile only. This allows more flexibility in what I can put as headers 
+					<br> - Changed some timer boxes that got covered whenever the colored bar apporached the letters
+					<br> - Added small description on this landing page below the title
+					<br> - Changed all bolded texts to be dark blue for light mode and light blue for dark mode
+					
+				<br><br>
 					<span style = "font-weight: bold;">August 11, 2021</span>
 				<br>
 					- Changed all existing pages from .html -> .PHP. Starting to learn PHP and implementing its uses. Added PHP as a way to allow all pages to have the same nav bar, header, and footer with single files so I can easily change all files at once. 

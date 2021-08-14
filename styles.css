@@ -113,9 +113,13 @@ hr {
 input, select {
     vertical-align:middle;
 }
+b{
+	color: var(--clr-bold);
+}
 :root{
 	/* Standard stuff */
 	--clr-bkg: #E4E8E4; /* Light gray */
+	--clr-bold: #1A687D; /* For anything in the <b> tag, dark blue */
 	--clr-border: black;
 	--clr-button-hover: #E4E8E4; /* light gray */
 	--clr-button-text: #E4E8E4; /* Light gray */
@@ -717,9 +721,13 @@ input, select {
 .section-header-space{
 	height: 150px;
 }
-/* Center the header with the background */
+/* Center the header with the background
+	Since words can't fit on SVG, create both as position relative
+	Remove hidden space since there's no pos: abs;
+*/
 @media only screen and (max-width: 600px){
 	.section-header{
+		position: relative;
 		transform: none;
 	}
 	.section-header h1{
@@ -729,6 +737,9 @@ input, select {
 	}
 	.section-header img{
 		width: 100%;
+	}
+	.section-header-space{
+		height: 0;
 	}
 }
 @keyframes removeDiv{

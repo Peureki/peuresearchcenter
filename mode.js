@@ -11,6 +11,7 @@ var cssVar = (name, value) => {
 	return getComputedStyle(document.documentElement).getPropertyValue(name);
 }
 cssVar('clr-bkg'); // Background of the whole pages
+cssVar('clr-bold'); // Anything in <b> tag 
 cssVar('clr-border'); // General borders
 cssVar('clr-button-hover'); // Hovering a button
 cssVar('clr-title'); // Main page title color
@@ -36,11 +37,10 @@ if (localStorage.getItem('mode') == "dark"){
 	modeCircle.style.left = "0%";
 	applyMode();
 } else {
-	modeCircle.style.left = "55%"; 
+	modeCircle.style.left = "65%"; 
 	applyMode();
 }
 
-console.log("local storage: ", localStorage.getItem('mode'))
 function applyMode(){
 	var modeCircle = document.getElementById('mode-circle');
 	// If toggle circle is on the left side 
@@ -50,6 +50,7 @@ function applyMode(){
 
 		modeCircle.style.left = "55%";
 		cssVar('clr-bkg', '#2A2B2E'); // dark gray
+		cssVar('clr-bold', '#93CDDD'); // LIght blue
 		cssVar('clr-border', '#1A687D'); // Dark blue
 		cssVar('clr-button-hover', '#1A687D'); // dark blue
 		cssVar('clr-title', '#B22323'); // Lighter dark red
@@ -75,6 +76,7 @@ function applyMode(){
 		modeCircle.style.left = "0%";
 		// Bring back the defaults 
 		cssVar('clr-bkg', '#E4E8E4'); // Background of the whole pages
+		cssVar('clr-bold', '#1A687D'); // Dark blue
 		cssVar('clr-border', 'black'); // General borders
 		cssVar('clr-button-hover', '#FFD12C'); // yellow
 		cssVar('clr-title', '#802020'); // Main page title color
