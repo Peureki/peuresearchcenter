@@ -23,4 +23,8 @@
 <script type = "text/javascript" src = "<?php echo $base;?>/script.js?v=<?php echo $date;?>"></script>
 <!-- Shortcut Icon + Scalable view -->
 <link rel = "shortcut icon" href = "../images/assets/peu-choya.png">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="height=device-height, 
+    					width=device-width, initial-scale=1.0, 
+                      	minimum-scale=1.0, maximum-scale=1.0, 
+                      	user-scalable=no, target-densitydpi=device-dpi">
+

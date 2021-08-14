@@ -17,24 +17,25 @@ time, mark, audio, video {
     border:0;
     outline:0;
     font-size:100%;
-/*    vertical-align:baseline;*/
+    vertical-align:baseline;
     background:transparent;
 }
 html,body
 {
     width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
+   	height: 100%;
+    margin: 0;
+    padding: 0;
     scroll-behavior: smooth;
     scroll-padding-top: 4rem;
-    overflow-x: hidden; 
+    overflow: hidden; 
 }
-
 body {
     line-height:1;
     font-family: 'Rubik', sans-serif;
 	background: var(--clr-bkg);
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
 }
 
 article,aside,details,figcaption,figure,
@@ -205,12 +206,11 @@ input, select {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: url("./images/assets/splatter_upside_down.png");
 	width: 100%;
-	height: auto;
 	background-color: #333;
-	position: sticky;
+	position: absolute;
 	top: 0;
+	left: 0;
 	z-index: 2000;
 }
 .brand-name{
@@ -335,6 +335,14 @@ input, select {
 		display: flex;
 		width: 50px;
 		height: 35px;
+	}
+	.sub-menu{
+		border: none;
+	}
+}
+@media only screen and (max-width: 600px){
+	.navbar{
+		position: relative;
 	}
 }
 /* 
@@ -640,7 +648,6 @@ input, select {
 }
 .right-box{
 	position: relative;
-	margin-right: 5%;
 }
 .choya{
 	position: fixed;
@@ -717,12 +724,16 @@ input, select {
 /* Center the header with the background */
 @media only screen and (max-width: 600px){
 	.section-header{
-		padding-right: 500px;
+		transform: none;
 	}
 	.section-header h1{
-		padding-right: 325px;
+		color: #93CDDD;
+		position: initial;
+		font-size: 60px;
 	}
-
+	.section-header img{
+		width: 100%;
+	}
 }
 @keyframes removeDiv{
 	0% { width: 100%; }
@@ -1283,13 +1294,6 @@ input, select {
 	width: 48%;
 	margin: 10px;
 }
-
-.inner-page-box{
-	position: relative;
-	height: auto;
-	margin: auto;
-}
-
 .full-page-box{
 	max-width: 1200px;
 	display: flex;
@@ -1456,7 +1460,6 @@ input, select {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	position: relative;
 }
 .full-timer-left{
 	width: 100%;

@@ -1,5 +1,12 @@
 <div id = "navbar" class = "navbar">
 	<div class = "brand-name"><a href = "<?php echo $base;?>/index.php">Peu Research Center </a></div>
+
+	<a href="#" id = "hamburger" class = "hamburger">
+		<span class = "hamburger-bar"></span>
+		<span class = "hamburger-bar"></span>
+		<span class = "hamburger-bar"></span>
+	</a>
+
 	<div onclick = "applyMode();" class = "dark-mode">
 		<span id = "mode-circle"></span>
 	</div>
@@ -145,17 +152,10 @@
 			<a class = "nav-header" href = "<?php echo $base;?>/supporters.php"> Support </a>
 		</li>
 	</ul>
-	<a href="#" id = "hamburger" class = "hamburger">
-		<span class = "hamburger-bar"></span>
-		<span class = "hamburger-bar"></span>
-		<span class = "hamburger-bar"></span>
-	</a>
 </div>
-
 
 <script> 
 	// Grabs the hamburger and shows it when clicking on the icon
-
 	function showHamburger(){
 		const toggleHamburger = document.getElementsByClassName('hamburger')[0];
 		const navBar = document.getElementsByClassName('navbar')[0];

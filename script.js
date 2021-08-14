@@ -1,7 +1,4 @@
-function darkMode() {
-   var element = document.body;
-   element.classList.toggle("dark-mode");
-}
+window.scrollBy(0,1);
 
 // Display a particular benchmark on benchmark page
 function revert_benchmarks(button){
