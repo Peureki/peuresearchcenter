@@ -1,4 +1,11 @@
-window.scrollBy(0,1);
+// When the window resizes, adjust the height to get 100%
+// This is mostly for mobile to prevent the address bar from creating random space on the bottom
+window.addEventListener('resize', () => {
+	// Update element's size
+	let vh = window.innerHeight * 0.01;
+	// Set var --vh to be the new size
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
+})
 
 // Display a particular benchmark on benchmark page
 function revert_benchmarks(button){
