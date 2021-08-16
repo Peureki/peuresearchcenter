@@ -242,37 +242,44 @@
 
 	</div> <!-- End of page-box for node calculator -->
 
-	<div class = "homepage-title">
-			<h1> Node Farms </h1>
+		
+	<div class = "page-box">
+		<div style = "position: relative;">
+			<div class = "section-header">
+				<h1>Node Farms</h1>
+				<div class = "banner-box"></div>
+				<img src = "./images/assets/banner.svg">
+			</div>
 		</div>
+		<!-- Hidden space so the header doesn't overlap anything below -->
+		<div class = "section-header-space"></div>
 
-	<div id = "farms" class = "double-box">
-		<div id = "loading" class = "loading">
-			<img id = "loading-image" class = "loading-image" src = "./images/assets/research-choya.png">
-			<table id = "benchmarks" class = "gathering-benchmarks"> 
-				<thead> 
-					<tr>
-						<th onclick = "sortTableByAlphabet('benchmarks', 0);"> Map </th>
-						<th onclick = "sortTableByTime('benchmarks', 1);"> Time </th>
-						<th onclick = "sortTableByGPH('benchmarks', 2);"> Benchmark </th>
-						<th onclick = "sortTableByQuantity('benchmarks', 3);"> <img title = "UM" src = ".\images\assets\Unbound_Magic.png" style = "width: 50%;"></th>
-						<th onclick = "sortTableByQuantity('benchmarks', 4);"> <img title = "VM" src = ".\images\assets\Volatile_Magic.png" style = "width: 50%;"> </th>
-					</tr>
-				</thead>
-				<tbody id = "tableData"></tbody>
-			</table>
-		</div>
+		<div id = "farms" class = "double-box" style = "align-items: center;">
+			<div id = "loading" class = "loading">
+				<img id = "loading-image" class = "loading-image" src = "./images/assets/research-choya.png">
+				<table id = "benchmarks" class = "gathering-benchmarks"> 
+					<thead> 
+						<tr>
+							<th onclick = "sortTableByAlphabet('benchmarks', 0);"> Map </th>
+							<th onclick = "sortTableByTime('benchmarks', 1);"> Time </th>
+							<th onclick = "sortTableByGPH('benchmarks', 2);"> Benchmark </th>
+							<th onclick = "sortTableByQuantity('benchmarks', 3);"> <img title = "UM" src = ".\images\assets\Unbound_Magic.png" style = "width: 50%;"></th>
+							<th onclick = "sortTableByQuantity('benchmarks', 4);"> <img title = "VM" src = ".\images\assets\Volatile_Magic.png" style = "width: 50%;"> </th>
+						</tr>
+					</thead>
+					<tbody id = "tableData"></tbody>
+				</table>
+			</div>
 
-		<div class = "small-description" style = "max-width: 400px;">
-			<p1>
-			<span style = "font-weight: bold;">About: </span>
-			<br>
-			All gathering farms will have (w/ [something]). That something is what type of glyph/tool I used for that farm such as Glyph of Volatility. This glyph is the default glyph for my benchmarks. Use the calculator above to test out the estimated profits for different ones. 
-			<br><br> 
-			These tools can be purchased with Karma at every Lounge Pass area or cities. Check the <a href = "https://wiki.guildwars2.com/wiki/Harvesting_Sickle_of_Bounty" target = "_blank" style = "text-decoration: underline;"> GW2Wiki</a> for every NPC that offers it. Unbound can be found <a href = "https://wiki.guildwars2.com/wiki/Unbound_Logging_Axe" target = "_blank" style = "text-decoration: underline"> here</a> and Volatile can be found <a href = "https://wiki.guildwars2.com/wiki/Volatile_Logging_Axe" target = "_blank" style = "text-decoration: underline"> here.</a> 
-			<br><br>
-			Depending on the size of the farm, there are multiple character swapping to achieve an hour worth of data.
-			</p1>
+			<div class = "small-description" style = "max-width: 400px;">
+				<b> About </b>
+				<br>
+				All gathering farms will have (w/ [something]). That something is what type of glyph/tool I used for that farm such as Glyph of Volatility. This glyph is the default glyph for my benchmarks. Use the calculator above to test out the estimated profits for different ones. 
+				<br><br> 
+				These tools can be purchased with Karma at every Lounge Pass area or cities. Check the <a href = "https://wiki.guildwars2.com/wiki/Harvesting_Sickle_of_Bounty" target = "_blank" style = "text-decoration: underline;"> GW2Wiki</a> for every NPC that offers it. Unbound can be found <a href = "https://wiki.guildwars2.com/wiki/Unbound_Logging_Axe" target = "_blank" style = "text-decoration: underline"> here</a> and Volatile can be found <a href = "https://wiki.guildwars2.com/wiki/Volatile_Logging_Axe" target = "_blank" style = "text-decoration: underline"> here.</a> 
+				<br><br>
+				Depending on the size of the farm, there are multiple character swapping to achieve an hour worth of data.
+			</div>
 		</div>
 	</div>
 
@@ -280,61 +287,65 @@
 
 	<div class = "page-box">
 
-	<div id = "glyphs" class = "homepage-title">
-			<h1> Glyphs </h1>
+		<div style = "position: relative;">
+			<div class = "section-header">
+				<h1>Glyphs</h1>
+				<div class = "banner-box"></div>
+				<img src = "./images/assets/banner.svg">
+			</div>
+		</div>
+		<!-- Hidden space so the header doesn't overlap anything below -->
+		<div class = "section-header-space"></div>
+
+		<div class = "page-links">
+			<p1><a href="https://docs.google.com/spreadsheets/d/1VT52qxoPQdvHBMwqeZu2oT4oFGiQneRBk0A3huyOF-4/edit#gid=220353359" target = "_blank"> Spreadsheet </a></p1>
 		</div>
 
-	<div class = "page-links">
-		<p1><a href="https://docs.google.com/spreadsheets/d/1VT52qxoPQdvHBMwqeZu2oT4oFGiQneRBk0A3huyOF-4/edit#gid=220353359" target = "_blank"> Spreadsheet </a></p1>
+		<div class = "small-description">
+			<span style = "font-weight: bold"> Disclaimer: </span> Sample size may be small for some of the node data. This project will increase over time as it takes an extremely long time to gather every single node for every glyph (+ different levels). For very specific drop rates, check the spreadsheet link above. 
+			<br><br>
+			Below showcases the average profit per strike and per node. Both tables are auto-sorted to profit/node, but can be sorted via clicking the headers. For Bounty, there is a 47.48% increase in resources for plants and 15.83% in ores and wood (<a href = "https://wiki.guildwars2.com/wiki/Gathering#Notes_on_additional_strikes" target = "_blank" style = "text-decoration: underline;">wiki</a>). These are the average value/node w/ Bounty - value/node w/o any glyphs. In result, profit/node is the <b>estimated gain</b> for using Bounty for these specific nodes. For example, for Blooming Passiflora, the value under Profit/Node is how much more you may make in addition to how much the node is worth by itself. 
+		</div>
+
+		<div class = "double-box" style = "overflow-y: scroll; height: 1000px;">
+
+			<div id = "loading" class = "loading">
+				<div class = "homepage-title" style = "margin: 15px">
+					<h1> Most Glyphs</h1>
+				</div>
+				<img id = "loading-image-glyphs" class = "loading-image" src = "./images/assets/gathering-choya.png">
+				<table id = "all-glyphs" class = "all-glyphs"> 
+					<thead> 
+						<tr>
+							<th onclick = "sortTableByAlphabet('all-glyphs', 0);" ondblclick = "sortTableByAlphabet_Backwards('all-glyphs', 0);"> Glyph </th>
+							<th onclick = "sortTableByAlphabet('all-glyphs', 1);" ondblclick = "sortTableByAlphabet_Backwards('all-glyphs', 1);"> Tool </th>
+							<th onclick = "sortTableByAlphabet('all-glyphs', 2);" ondblclick = "sortTableByAlphabet_Backwards('all-glyphs', 2);"> Level </th>
+							<th onclick = "sortTableByPrice('all-glyphs', 3);" ondblclick = "sortTableByPrice_Backwards('all-glyphs', 3);"> Profit/Strike </th>
+							<th onclick = "sortTableByPrice('all-glyphs', 4);" ondblclick = "sortTableByPrice_Backwards('all-glyphs', 4);"> Profit/Node </th>
+						</tr>
+					</thead>
+					<tbody id = "tableData-glyphs"></tbody>
+				</table> 
+			</div>
+
+			<div id = "loading" class = "loading">
+				<div class = "homepage-title" style = "margin: 15px">
+					<h1> Bounty Glyph </h1>
+				</div>
+				<img id = "loading-image-bounty" class = "loading-image" src = "./images/assets/gathering-choya.png">
+				<table id = "bounty" class = "bounty-glyph"> 
+					<thead> 
+						<tr>
+							<th onclick = "sortTableByAlphabet('bounty', 0);" ondblclick = "sortTableByAlphabet_Backwards('bounty', 0);"> Node </th>
+							<th onclick = "sortTableByAlphabet('bounty', 1);" ondblclick = "sortTableByAlphabet_Backwards('bounty', 1);"> Tool </th>
+							<th onclick = "sortTableByPrice('bounty', 2);" ondblclick = "sortTableByPrice_Backwards('bounty', 2);"> Profit/Node </th>
+						</tr>
+					</thead>
+					<tbody id = "tableData-bounty"></tbody>
+				</table> 
+			</div>
+		</div> <!-- End of multi left -->
 	</div>
-
-	<div class = "small-description">
-		<span style = "font-weight: bold"> Disclaimer: </span> Sample size may be small for some of the node data. This project will increase over time as it takes an extremely long time to gather every single node for every glyph (+ different levels). For very specific drop rates, check the spreadsheet link above. 
-		<br><br>
-		Below showcases the average profit per strike and per node. Both tables are auto-sorted to profit/node, but can be sorted via clicking the headers. For Bounty, there is a 47.48% increase in resources for plants and 15.83% in ores and wood (<a href = "https://wiki.guildwars2.com/wiki/Gathering#Notes_on_additional_strikes" target = "_blank" style = "text-decoration: underline;">wiki</a>). These are the average value/node w/ Bounty - value/node w/o any glyphs. In result, profit/node is the <b>estimated gain</b> for using Bounty for these specific nodes. For example, for Blooming Passiflora, the value under Profit/Node is how much more you may make in addition to how much the node is worth by itself. 
-	</div>
-
-	<div class = "multi-benchmarks-left">
-		<div class = "homepage-title" style = "margin: 15px">
-			<h1> Most Glyphs</h1>
-		</div>
-
-		<div class = "homepage-title" style = "margin: 15px">
-			<h1> Bounty Glyph </h1>
-		</div>
-	</div>
-
-	<div class = "double-box" style = "overflow-y: scroll; height: 1000px;">
-		<div id = "loading" class = "loading">
-			<img id = "loading-image-glyphs" class = "loading-image" src = "./images/assets/gathering-choya.png">
-			<table id = "all-glyphs" class = "all-glyphs"> 
-				<thead> 
-					<tr>
-						<th onclick = "sortTableByAlphabet('all-glyphs', 0);" ondblclick = "sortTableByAlphabet_Backwards('all-glyphs', 0);"> Glyph </th>
-						<th onclick = "sortTableByAlphabet('all-glyphs', 1);" ondblclick = "sortTableByAlphabet_Backwards('all-glyphs', 1);"> Tool </th>
-						<th onclick = "sortTableByAlphabet('all-glyphs', 2);" ondblclick = "sortTableByAlphabet_Backwards('all-glyphs', 2);"> Level </th>
-						<th onclick = "sortTableByPrice('all-glyphs', 3);" ondblclick = "sortTableByPrice_Backwards('all-glyphs', 3);"> Profit/Strike </th>
-						<th onclick = "sortTableByPrice('all-glyphs', 4);" ondblclick = "sortTableByPrice_Backwards('all-glyphs', 4);"> Profit/Node </th>
-					</tr>
-				</thead>
-				<tbody id = "tableData-glyphs"></tbody>
-			</table> 
-		</div>
-
-		<div id = "loading" class = "loading">
-			<img id = "loading-image-bounty" class = "loading-image" src = "./images/assets/gathering-choya.png">
-			<table id = "bounty" class = "bounty-glyph"> 
-				<thead> 
-					<tr>
-						<th onclick = "sortTableByAlphabet('bounty', 0);" ondblclick = "sortTableByAlphabet_Backwards('bounty', 0);"> Node </th>
-						<th onclick = "sortTableByAlphabet('bounty', 1);" ondblclick = "sortTableByAlphabet_Backwards('bounty', 1);"> Tool </th>
-						<th onclick = "sortTableByPrice('bounty', 2);" ondblclick = "sortTableByPrice_Backwards('bounty', 2);"> Profit/Node </th>
-					</tr>
-				</thead>
-				<tbody id = "tableData-bounty"></tbody>
-			</table> 
-		</div>
-	</div> <!-- End of multi left -->
 
 	<div id = "speed-of-tools" class = "homepage-title">
 			<h1> Speed of Tools </h1>
@@ -350,18 +361,11 @@
 		<br> Choya Mining Pick - Requires only 2 strikes on rich nodes rather than 3 (gathers 5 strikes)
 	</div>
 
-	<div style = "display: flex; align-items: center; justify-content: center;">
-		<div class = "homepage-title">
-			<h1> Harvesting Tools </h1>
-		</div>
-
-		<div class = "homepage-title">
-			<h1> Logging Tools </h1>
-		</div>
-	</div>
-
-	<div style = "display: flex; align-items: center; justify-content: center;">
-		<div>
+	<div style = "display: flex; flex-direction: column;">
+		<div class = "overflow-table">
+			<div class = "homepage-title">
+				<h1> Harvesting Tools </h1>
+			</div>
 			<table id = "tool-speed" class = "bounty-glyph"> 
 				<tr>
 					<th> Tool </th>
@@ -446,7 +450,10 @@
 			</table>
 		</div>
 
-		<div>
+		<div class = "overflow-table">
+			<div class = "homepage-title">
+				<h1> Logging Tools </h1>
+			</div>
 			<table id = "tool-speed" class = "bounty-glyph"> 
 				<tr>
 					<th> Tool </th>
@@ -516,71 +523,70 @@
 		</div>
 	</div> <!-- End off block -->
 
-	<div class = "homepage-title">
+	<div class = "overflow-table">
+		<div class = "homepage-title">
 			<h1> Mining Tools </h1>
 		</div>
+		<table id = "tool-speed" class = "bounty-glyph" style = "margin-top: 15px;"> 
+			<tr>
+				<th> Tool </th>
+				<th> Cast Time </th>
+				<th> Aftercast </th>
+				<th> % to Interrupt </th>
+				<th> Total </th>
+			</tr>
 
-	<table id = "tool-speed" class = "bounty-glyph" style = "margin-top: 15px;"> 
-		<tr>
-			<th> Tool </th>
-			<th> Cast Time </th>
-			<th> Aftercast </th>
-			<th> % to Interrupt </th>
-			<th> Total </th>
-		</tr>
-
-		<tr>
-			<td> Unbound </td>
-			<td> 3989ms</td>
-			<td> 1061ms </td>
-			<td> 70% </td>
-			<td> 3535ms </td>
-		</tr>
-		<tr>
-			<td> Volatile </td>
-			<td> 4252ms</td>
-			<td> 123ms </td>
-			<td> 100% </td>
-			<td> 4370ms </td>
-		</tr>
-		<tr>
-			<td> Cosmic </td>
-			<td> 4500ms</td>
-			<td> 1000ms </td>
-			<td> 100% </td>
-			<td> 5500ms </td>
-		</tr>
-		<tr>
-			<td> Basic </td>
-			<td> 4500ms</td>
-			<td> 1850ms </td>
-			<td> 100% </td>
-			<td> 6350ms </td>
-		</tr>
-		<tr>
-			<td> Watchwork </td>
-			<td> 4500ms</td>
-			<td> 1850ms </td>
-			<td> 100% </td>
-			<td> 6350ms </td>
-		</tr>
-		<tr>
-			<td> Molten </td>
-			<td> 4500ms</td>
-			<td> 1850ms </td>
-			<td> 100% </td>
-			<td> 6350ms </td>
-		</tr>
-		<tr>
-			<td> Bone Pick </td>
-			<td> 4500ms</td>
-			<td> 1850ms </td>
-			<td> 100% </td>
-			<td> 6350ms </td>
-		</tr>
-	</table>
-
-
+			<tr>
+				<td> Unbound </td>
+				<td> 3989ms</td>
+				<td> 1061ms </td>
+				<td> 70% </td>
+				<td> 3535ms </td>
+			</tr>
+			<tr>
+				<td> Volatile </td>
+				<td> 4252ms</td>
+				<td> 123ms </td>
+				<td> 100% </td>
+				<td> 4370ms </td>
+			</tr>
+			<tr>
+				<td> Cosmic </td>
+				<td> 4500ms</td>
+				<td> 1000ms </td>
+				<td> 100% </td>
+				<td> 5500ms </td>
+			</tr>
+			<tr>
+				<td> Basic </td>
+				<td> 4500ms</td>
+				<td> 1850ms </td>
+				<td> 100% </td>
+				<td> 6350ms </td>
+			</tr>
+			<tr>
+				<td> Watchwork </td>
+				<td> 4500ms</td>
+				<td> 1850ms </td>
+				<td> 100% </td>
+				<td> 6350ms </td>
+			</tr>
+			<tr>
+				<td> Molten </td>
+				<td> 4500ms</td>
+				<td> 1850ms </td>
+				<td> 100% </td>
+				<td> 6350ms </td>
+			</tr>
+			<tr>
+				<td> Bone Pick </td>
+				<td> 4500ms</td>
+				<td> 1850ms </td>
+				<td> 100% </td>
+				<td> 6350ms </td>
+			</tr>
+		</table>
+	</div>
 </div> <!-- End of page-box -->
 
 <script> getGlyphs("all-glyphs",'loading-image-glyphs');
@@ -588,168 +594,8 @@
 
 
 
-
-	<div id = "materials" class = "homepage-title">
-		<h1> Materials </h1>
-	</div>
-
-	<div class = "multi-benchmarks-right">
-				<div>
-				<table id = "ores" class = "node-bench"> 
-					<thead> 
-						<tr>
-							<th></th>
-							<th onclick = "sortTableByAlphabet('ores', 1);"> Ore </th>
-							<th onclick = "sortTableByPrice('ores', 2); "> Sell Price </th>
-						</tr>
-					</thead>
-					<tbody id = "oreData"></tbody>
-				</table>
-			</div>
-			<div>
-				<table id = "woods" class = "node-bench"> 
-					<thead> 
-						<tr>
-							<th></th>
-							<th onclick = "sortTableByAlphabet('woods', 1);"> Wood </th>
-							<th onclick = "sortTableByPrice('woods', 2); "> Sell Price </th>
-						</tr>
-					</thead>
-					<tbody id = "woodData"></tbody>
-				</table>
-			</div>
-
-			<div>
-				<table id = "herbs" class = "node-bench"> 
-					<thead> 
-						<tr>
-							<th></th>
-							<th onclick = "sortTableByAlphabet('herbs', 1);"> Herbs </th>
-							<th onclick = "sortTableByPrice('herbs', 2); "> Sell Price </th>
-						</tr>
-					</thead>
-					<tbody id = "herbData"></tbody>
-				</table>
-			</div>
-			<div style = "overflow-y: scroll; height: 500px;">
-				<img id = "rolling-choya-plant" class = "rolling-choya" src = "./images/assets/rolling-choya.png">
-				<table id = "plants" class = "node-bench"> 
-					<thead> 
-						<tr>
-							<th></th>
-							<th onclick = "sortTableByAlphabet('plants', 1);"> Plants/Extra </th>
-							<th onclick = "sortTableByPrice('plants', 2); "> Sell Price </th>
-						</tr>
-					</thead>
-					<tbody id = "plantData"></tbody>
-				</table>
-			</div>
-		</div>
-
-	<div id = "nodes" class = "homepage-title">
-		<h1> Nodes </h1>
-	</div>
-
-	<div class = "page-box">
-		<div class = "small-description" style = "text-align: center;">
-			Average worth of the nodes as a whole
-		</div>
-	</div>
-
-	<div class = "multi-benchmarks-right">
-		<div>
-			<table id = "oreNodes" class = "node-bench"> 
-				<img id = "rolling-choya-oreNodes" class = "rolling-choya" src = "./images/assets/rolling-choya.png">
-				<thead> 
-					<tr>
-						<th></th>
-						<th onclick = "sortTableByAlphabet('oreNodes', 1);"> Ore Nodes </th>
-						<th onclick = "sortTableByPrice('oreNodes', 2); "> Profit/Node </th>
-					</tr>
-				</thead>
-				<tbody id = "oreNodeData"></tbody>
-			</table>
-		</div>
-		<div style = "overflow-y: scroll; height: 500px;">
-			<table id = "woodNodes" class = "node-bench"> 
-				<img id = "rolling-choya-woodNodes" class = "rolling-choya" src = "./images/assets/rolling-choya.png">
-				<thead> 
-					<tr>
-						<th style = "width: 74px"></th>
-						<th onclick = "sortTableByAlphabet('woodNodes', 1);"> Wood Nodes </th>
-						<th onclick = "sortTableByPrice('woodNodes', 2); "> Profit/Node </th>
-					</tr>
-				</thead>
-				<tbody id = "woodNodeData"></tbody>
-			</table>
-		</div>
-		<div style = "overflow-y: scroll; height: 500px;">
-			<table id = "plantNodes" class = "node-bench"> 
-				<img id = "rolling-choya-plantNodes" class = "rolling-choya" src = "./images/assets/rolling-choya.png">
-				<thead> 
-					<tr>
-						<th style = "width: 74px"></th>
-						<th onclick = "sortTableByAlphabet('plantNodes', 1);"> Plant Nodes </th>
-						<th onclick = "sortTableByPrice('plantNodes', 2); "> Profit/Node </th>
-					</tr>
-				</thead>
-				<tbody id = "plantNodeData"></tbody>
-			</table>
-		</div>
-		<div style = "overflow-y: scroll; height: 500px;">
-			<table id = "herbNodes" class = "node-bench"> 
-				<img id = "rolling-choya-herbNodes" class = "rolling-choya" src = "./images/assets/rolling-choya.png">
-				<thead> 
-					<tr>
-						<th style = "width: 74px"></th>
-						<th onclick = "sortTableByAlphabet('herbNodes', 1);"> Herb Nodes </th>
-						<th onclick = "sortTableByPrice('herbNodes', 2); "> Profit/Node </th>
-					</tr>
-				</thead>
-				<tbody id = "herbNodeData"></tbody>
-			</table>
-		</div>
-	</div>
-
-	<div class = "multi-benchmarks-right">
-		<div>
-			<table id = "richNodes" class = "node-bench"> 
-				<img id = "rolling-choya-richNodes" class = "rolling-choya" src = "./images/assets/rolling-choya.png">
-				<thead> 
-					<tr>
-						<th></th>
-						<th onclick = "sortTableByAlphabet('richNodes', 1);"> Ore Nodes </th>
-						<th onclick = "sortTableByPrice('richNodes', 2); "> Profit/Node </th>
-					</tr>
-				</thead>
-				<tbody id = "richNodeData"></tbody>
-			</table>
-		</div>
-		<div style = "overflow-y: scroll; height: 500px;">
-			<table id = "lsNodes" class = "node-bench"> 
-				<img id = "rolling-choya-lsNodes" class = "rolling-choya" src = "./images/assets/rolling-choya.png">
-				<thead> 
-					<tr>
-						<th style = "width: 74px"></th>
-						<th onclick = "sortTableByAlphabet('lsNodes', 1);"> LS Nodes </th>
-						<th onclick = "sortTableByPrice('lsNodes', 2); "> Profit/Node </th>
-					</tr>
-				</thead>
-				<tbody id = "lsNodeData"></tbody>
-			</table>
-		</div>
-	</div>
-		<script> getGatheringBenchmarkAll('benchmarks','loading-image'); 
-		getOres('ores'); 
-		getWoods('woods'); 
-		getHerbs('herbs');
-		getPlants('plants','rolling-choya-plant');
-		getOreNodes('oreNodes','rolling-choya-oreNodes');
-		getWoodNodes('woodNodes','rolling-choya-woodNodes'); 
-		getPlantNodes('plantNodes','rolling-choya-plantNodes');
-		getHerbNodes('herbNodes','rolling-choya-herbNodes');
-		getRichNodes('richNodes','rolling-choya-richNodes');
-		getLSNodes('lsNodes','rolling-choya-lsNodes');
+						
+	<script> getGatheringBenchmarkAll('benchmarks','loading-image'); 
 	</script>
 
 	<!-- 

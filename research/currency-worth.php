@@ -187,139 +187,40 @@
 			</div>
 		</div>
 
-		<div id = "spirit-shards-fineT1ToT2">
-			<div class = "homepage-title">
-				<h1> Fine T1 &#x2192; T2 </h1> 
-			</div>
-
-			<table id = "ss-fine-t1ToT2" class = "four-ingre">
-				<thead>
-					<tr>
-						<th> Item 1 </th>
-						<th> </th>
-						<th> Item 2 </th>
-						<th> </th>
-						<th> Item 3 </th>
-						<th> </th>
-						<th> Item 4 </th>
-						<th> </th>
-						<th> Result </th>
-						<th> /Conversion </th>
-						<th> /Spirit Shard </th>
-					</tr>	
-				</thead>
-				<tbody id = "ss-fine-t1ToT2-tableBody"></tbody>
-			</table>
-
-		</div>
-
-		<div = id = "spirit-shards-fineT2ToT3">
-			<div class = "homepage-title">
-				<h1> Fine T2 &#x2192; T3 </h1> 
-			</div>
-
-			<table id = "ss-fine-t2ToT3" class = "four-ingre">
-				<thead>
-					<tr>
-						<th> Item 1 </th>
-						<th> </th>
-						<th> Item 2 </th>
-						<th> </th>
-						<th> Item 3 </th>
-						<th> </th>
-						<th> Item 4 </th>
-						<th> </th>
-						<th> Result</th>
-						<th> /Conversion </th>
-						<th> /Spirit Shard </th>
-					</tr>	
-				</thead>
-				<tbody id = "ss-fine-t2ToT3-tableBody"></tbody>
-			</table>
-		</div>
-
-		<div id = "spirit-shards-fineT3ToT4">
-			<div class = "homepage-title">
-				<h1> Fine T3 &#x2192; T4 </h1> 
-			</div>
-
-			<table id = "ss-fine-t3ToT4" class = "four-ingre">
-				<thead>
-					<tr>
-						<th> Item 1 </th>
-						<th> </th>
-						<th> Item 2 </th>
-						<th> </th>
-						<th> Item 3 </th>
-						<th> </th>
-						<th> Item 4 </th>
-						<th> </th>
-						<th> Result</th>
-						<th> /Conversion </th>
-						<th> /Spirit Shard </th>
-					</tr>	
-				</thead>
-				<tbody id = "ss-fine-t3ToT4-tableBody"></tbody>
-			</table>
-		</div>
-
-		<div id = "spirit-shards-fineT4ToT5">
-			<div class = "homepage-title">
-				<h1> Fine T4 &#x2192; T5 </h1> 
-			</div>
-
-			<table id = "ss-fine-t4ToT5" class = "four-ingre">
-				<thead>
-					<tr>
-						<th> Item 1 </th>
-						<th> </th>
-						<th> Item 2 </th>
-						<th> </th>
-						<th> Item 3 </th>
-						<th> </th>
-						<th> Item 4 </th>
-						<th> </th>
-						<th> Result</th>
-						<th> /Conversion </th>
-						<th> /Spirit Shard </th>
-					</tr>	
-				</thead>
-				<tbody id = "ss-fine-t4ToT5-tableBody"></tbody>
-			</table>
-		</div>
-
-		<div id = "spirit-shards-fineT5ToT6">
-			<div class = "homepage-title">
-				<h1> Fine T5 &#x2192; T6 </h1>
-			</div>
-
-			<table id = "ss-fine-t5ToT6" class = "four-ingre">
-				<thead>
-					<tr>
-						<th> Item 1 </th>
-						<th> </th>
-						<th> Item 2 </th>
-						<th> </th>
-						<th> Item 3 </th>
-						<th> </th>
-						<th> Item 4 </th>
-						<th> </th>
-						<th> Result</th>
-						<th> /Conversion </th>
-						<th> /Spirit Shard </th>
-					</tr>	
-				</thead>
-				<tbody id = "ss-fine-t5ToT6-tableBody"></tbody>
-			</table>
-		</div>
-
-		<div id = "spirit-shards-rareT1ToT2">
-			<div>
+		<div class = "overflow-table">
+			<div id = "spirit-shards-fineT1ToT2">
 				<div class = "homepage-title">
-					<h1> Rare T1 &#x2192; T2 </h1>
+					<h1> Fine T1 &#x2192; T2 </h1> 
 				</div>
 
-				<table id = "ss-rare-t1ToT2" class = "four-ingre">
+				<table id = "ss-fine-t1ToT2" class = "four-ingre">
+					<thead>
+						<tr>
+							<th> Item 1 </th>
+							<th> </th>
+							<th> Item 2 </th>
+							<th> </th>
+							<th> Item 3 </th>
+							<th> </th>
+							<th> Item 4 </th>
+							<th> </th>
+							<th> Result </th>
+							<th> /Conversion </th>
+							<th> /Spirit Shard </th>
+						</tr>	
+					</thead>
+					<tbody id = "ss-fine-t1ToT2-tableBody"></tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class = "overflow-table">
+			<div = id = "spirit-shards-fineT2ToT3">
+				<div class = "homepage-title">
+					<h1> Fine T2 &#x2192; T3 </h1> 
+				</div>
+
+				<table id = "ss-fine-t2ToT3" class = "four-ingre">
 					<thead>
 						<tr>
 							<th> Item 1 </th>
@@ -335,84 +236,200 @@
 							<th> /Spirit Shard </th>
 						</tr>	
 					</thead>
-					<tbody id = "ss-rare-t1ToT2-tableBody"></tbody>
+					<tbody id = "ss-fine-t2ToT3-tableBody"></tbody>
 				</table>
 			</div>
 		</div>
 
-		<div id = "spirit-shards-rareT2ToT3">
-			<div class = "homepage-title">
-				<h1> Rare T2 &#x2192; T3 </h1>
-			</div>
+		<div class = "overflow-table">
+			<div id = "spirit-shards-fineT3ToT4">
+				<div class = "homepage-title">
+					<h1> Fine T3 &#x2192; T4 </h1> 
+				</div>
 
-			<table id = "ss-rare-t2ToT3" class = "four-ingre">
-				<thead>
-					<tr>
-						<th> Item 1 </th>
-						<th> </th>
-						<th> Item 2 </th>
-						<th> </th>
-						<th> Item 3 </th>
-						<th> </th>
-						<th> Item 4 </th>
-						<th> </th>
-						<th> Result</th>
-						<th> /Conversion </th>
-						<th> /Spirit Shard </th>
-					</tr>	
-				</thead>
-				<tbody id = "ss-rare-t2ToT3-tableBody"></tbody>
-			</table>
+				<table id = "ss-fine-t3ToT4" class = "four-ingre">
+					<thead>
+						<tr>
+							<th> Item 1 </th>
+							<th> </th>
+							<th> Item 2 </th>
+							<th> </th>
+							<th> Item 3 </th>
+							<th> </th>
+							<th> Item 4 </th>
+							<th> </th>
+							<th> Result</th>
+							<th> /Conversion </th>
+							<th> /Spirit Shard </th>
+						</tr>	
+					</thead>
+					<tbody id = "ss-fine-t3ToT4-tableBody"></tbody>
+				</table>
+			</div>
 		</div>
 
-		<div id = "spirit-shards-rareT3ToT4">
-			<div class = "homepage-title">
-				<h1> Rare T3 &#x2192; T4 </h1>
-			</div>
+		<div class = "overflow-table">
+			<div id = "spirit-shards-fineT4ToT5">
+				<div class = "homepage-title">
+					<h1> Fine T4 &#x2192; T5 </h1> 
+				</div>
 
-			<table id = "ss-rare-t3ToT4" class = "four-ingre">
-				<thead>
-					<tr>
-						<th> Item 1 </th>
-						<th> </th>
-						<th> Item 2 </th>
-						<th> </th>
-						<th> Item 3 </th>
-						<th> </th>
-						<th> Item 4 </th>
-						<th> </th>
-						<th> Result</th>
-						<th> /Conversion </th>
-						<th> /Spirit Shard </th>
-					</tr>	
-				</thead>
-				<tbody id = "ss-rare-t3ToT4-tableBody"></tbody>
-			</table>
+				<table id = "ss-fine-t4ToT5" class = "four-ingre">
+					<thead>
+						<tr>
+							<th> Item 1 </th>
+							<th> </th>
+							<th> Item 2 </th>
+							<th> </th>
+							<th> Item 3 </th>
+							<th> </th>
+							<th> Item 4 </th>
+							<th> </th>
+							<th> Result</th>
+							<th> /Conversion </th>
+							<th> /Spirit Shard </th>
+						</tr>	
+					</thead>
+					<tbody id = "ss-fine-t4ToT5-tableBody"></tbody>
+				</table>
+			</div>
 		</div>
 
-		<div id = "spirit-shards-rareT4ToT5">
-			<div class = "homepage-title">
-				<h1> Rare T4 &#x2192; T5 </h1>
-			</div>
+		<div class = "overflow-table">
+			<div id = "spirit-shards-fineT5ToT6">
+				<div class = "homepage-title">
+					<h1> Fine T5 &#x2192; T6 </h1>
+				</div>
 
-			<table id = "ss-rare-t4ToT5" class = "four-ingre">
-				<thead>
-					<tr>
-						<th> Item 1 </th>
-						<th> </th>
-						<th> Item 2 </th>
-						<th> </th>
-						<th> Item 3 </th>
-						<th> </th>
-						<th> Item 4 </th>
-						<th> </th>
-						<th> Result</th>
-						<th> /Conversion </th>
-						<th> /Spirit Shard </th>
-					</tr>	
-				</thead>
-				<tbody id = "ss-rare-t4ToT5-tableBody"></tbody>
-			</table>
+				<table id = "ss-fine-t5ToT6" class = "four-ingre">
+					<thead>
+						<tr>
+							<th> Item 1 </th>
+							<th> </th>
+							<th> Item 2 </th>
+							<th> </th>
+							<th> Item 3 </th>
+							<th> </th>
+							<th> Item 4 </th>
+							<th> </th>
+							<th> Result</th>
+							<th> /Conversion </th>
+							<th> /Spirit Shard </th>
+						</tr>	
+					</thead>
+					<tbody id = "ss-fine-t5ToT6-tableBody"></tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class = "overflow-table">
+			<div id = "spirit-shards-rareT1ToT2">
+				<div>
+					<div class = "homepage-title">
+						<h1> Rare T1 &#x2192; T2 </h1>
+					</div>
+
+					<table id = "ss-rare-t1ToT2" class = "four-ingre">
+						<thead>
+							<tr>
+								<th> Item 1 </th>
+								<th> </th>
+								<th> Item 2 </th>
+								<th> </th>
+								<th> Item 3 </th>
+								<th> </th>
+								<th> Item 4 </th>
+								<th> </th>
+								<th> Result</th>
+								<th> /Conversion </th>
+								<th> /Spirit Shard </th>
+							</tr>	
+						</thead>
+						<tbody id = "ss-rare-t1ToT2-tableBody"></tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<div class = "overflow-table">
+			<div id = "spirit-shards-rareT2ToT3">
+				<div class = "homepage-title">
+					<h1> Rare T2 &#x2192; T3 </h1>
+				</div>
+
+				<table id = "ss-rare-t2ToT3" class = "four-ingre">
+					<thead>
+						<tr>
+							<th> Item 1 </th>
+							<th> </th>
+							<th> Item 2 </th>
+							<th> </th>
+							<th> Item 3 </th>
+							<th> </th>
+							<th> Item 4 </th>
+							<th> </th>
+							<th> Result</th>
+							<th> /Conversion </th>
+							<th> /Spirit Shard </th>
+						</tr>	
+					</thead>
+					<tbody id = "ss-rare-t2ToT3-tableBody"></tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class = "overflow-table">
+			<div id = "spirit-shards-rareT3ToT4">
+				<div class = "homepage-title">
+					<h1> Rare T3 &#x2192; T4 </h1>
+				</div>
+
+				<table id = "ss-rare-t3ToT4" class = "four-ingre">
+					<thead>
+						<tr>
+							<th> Item 1 </th>
+							<th> </th>
+							<th> Item 2 </th>
+							<th> </th>
+							<th> Item 3 </th>
+							<th> </th>
+							<th> Item 4 </th>
+							<th> </th>
+							<th> Result</th>
+							<th> /Conversion </th>
+							<th> /Spirit Shard </th>
+						</tr>	
+					</thead>
+					<tbody id = "ss-rare-t3ToT4-tableBody"></tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class = "overflow-table">
+			<div id = "spirit-shards-rareT4ToT5">
+				<div class = "homepage-title">
+					<h1> Rare T4 &#x2192; T5 </h1>
+				</div>
+
+				<table id = "ss-rare-t4ToT5" class = "four-ingre">
+					<thead>
+						<tr>
+							<th> Item 1 </th>
+							<th> </th>
+							<th> Item 2 </th>
+							<th> </th>
+							<th> Item 3 </th>
+							<th> </th>
+							<th> Item 4 </th>
+							<th> </th>
+							<th> Result</th>
+							<th> /Conversion </th>
+							<th> /Spirit Shard </th>
+						</tr>	
+					</thead>
+					<tbody id = "ss-rare-t4ToT5-tableBody"></tbody>
+				</table>
+			</div>
 		</div>
 
 		<div id = "trade-contracts">
@@ -430,18 +447,19 @@
 					These caches are available after completing certain hearts vendors in PoF maps. 
 					<br> <a href = "https://wiki.guildwars2.com/wiki/Cowrie_League_Leather_Crate" target = "_blank"><u>Cowrie</u></a>, <a href = "https://wiki.guildwars2.com/wiki/Hamaseen_Wood_Crate" target = "_blank"><u>Hamaseen</u></a>, and <a href = "https://wiki.guildwars2.com/wiki/House_of_Daoud_Leather_Crate" target = "_blank"><u>House of Daoud</u></a>
 			</div>
-
-			<table id = "tc" class = "worth-tc"> 
-				<thead> 
-					<tr>
-						<th></th>
-						<th onclick = "sortTableByAlphabet('tc', 1);"> Trade Cache</th>
-						<th onclick = "sortTableByPrice('tc', 2);"> Per TC</th>
-						<th onclick = "sortTableByPrice('tc', 3);"> Per Cache </th>
-					</tr>
-				</thead>
-				<tbody id = "tc-tableBody"></tbody>
-			</table>
+			<div class = "overflow-table">
+				<table id = "tc" class = "worth-tc"> 
+					<thead> 
+						<tr>
+							<th></th>
+							<th onclick = "sortTableByAlphabet('tc', 1);"> Trade Cache</th>
+							<th onclick = "sortTableByPrice('tc', 2);"> Per TC</th>
+							<th onclick = "sortTableByPrice('tc', 3);"> Per Cache </th>
+						</tr>
+					</thead>
+					<tbody id = "tc-tableBody"></tbody>
+				</table>
+			</div>
 		</div>
 
 		<div id = "vmum">
@@ -467,22 +485,24 @@
 				<button  type = "button" id = "calculate" class = "select-button" onclick = "showMagic('results-magic');"> Calculate </button>
 			</div>
 
-			<div id = "vmum" style = "display: flex; justify-content: center; ">
+			<div id = "vmum" class = "double-box">
 				<div id = "volatile-magic" style = "margin: 10px;">
 					<div class = "homepage-title">
 						<h1> Volatile Magic </h1> 
 					</div>
 
-					<table id = "vm" class = "vm">
-						<thead>
-							<tr>
-								<th> Shipment Name</th>
-								<th> /Shipment</th>
-								<th> /Volatile Magic </th>
-							</tr>	
-						</thead>
-						<tbody id = "vm-tableBody"></tbody>
-					</table>
+					<div class = "overflow-table">
+						<table id = "vm" class = "vm">
+							<thead>
+								<tr>
+									<th> Shipment Name</th>
+									<th> /Shipment</th>
+									<th> /Volatile Magic </th>
+								</tr>	
+							</thead>
+							<tbody id = "vm-tableBody"></tbody>
+						</table>
+					</div>
 				</div>
 
 				<div id = "unbound-magic" style = "margin: 10px;">
@@ -490,16 +510,18 @@
 						<h1> Unbound Magic </h1> 
 					</div>
 
-					<table id = "um" class = "um">
-						<thead>
-							<tr>
-								<th> Shipment Name</th>
-								<th> /Shipment</th>
-								<th> /Unbound Magic </th>
-							</tr>	
-						</thead>
-						<tbody id = "um-tableBody"></tbody>
-					</table>
+					<div class = "overflow-table">
+						<table id = "um" class = "um">
+							<thead>
+								<tr>
+									<th> Shipment Name</th>
+									<th> /Shipment</th>
+									<th> /Unbound Magic </th>
+								</tr>	
+							</thead>
+							<tbody id = "um-tableBody"></tbody>
+						</table>
+					</div>
 				</div>
 			</div>
 		</div>

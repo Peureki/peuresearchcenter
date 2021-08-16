@@ -146,6 +146,7 @@
 					<br> - Changed some timer boxes that got covered whenever the colored bar apporached the letters
 					<br> - Added small description on this landing page below the title
 					<br> - Changed all bolded texts to be dark blue for light mode and light blue for dark mode
+					<br> - Tables in <a href = "./research/currency-worth.php" target = "_blank"><u> Currency Worth </u></a> in mobile can now scroll horizontally 
 					
 				<br><br>
 					<span style = "font-weight: bold;">August 11, 2021</span>

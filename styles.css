@@ -1467,7 +1467,7 @@ b{
 	margin: auto;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-evenly;
 }
 .full-timer-left{
 	width: 100%;
@@ -1741,7 +1741,7 @@ b{
 	display: none;
 }
 .event-sidebox input[type="button"]{
-	color: white;
+	color: black;
 	font-size: 17px;
 	border: 2px solid black;
 	background-color: var(--clr-button);
@@ -2212,7 +2212,7 @@ table.node-proof td:nth-child(3){
 /* All the glyph tables */
 table.all-glyphs,
 table.bounty-glyph{
-	width: 40%;
+	width: 45%;
 	margin-left: auto;
 	margin-right: auto;
 	max-height: 500px;
@@ -2221,7 +2221,7 @@ table.bounty-glyph{
 table.all-glyphs th,
 table.bounty-glyph th{
 	color: white;
-	font-size: 20px;
+	font-size: 17px;
 	padding: 7px;
 	background-color: var(--clr-th-table);
 	border: 1px solid var(--clr-border);
@@ -3426,6 +3426,7 @@ table.one-ingre{
 	margin-right: auto;
 	padding: 0 auto;
 	text-align: center;
+	white-space: nowrap;
 	-webkit-transition: all 0.5s ease;
   	transition: all 0.5s ease;
   	border: 1px solid var(--clr-border);
@@ -3649,6 +3650,7 @@ table.worth-tc{
 	margin-right: auto;
 	padding: 0 auto;
 	text-align: center;
+	white-space: nowrap;
 	-webkit-transition: all 0.5s ease;
   	transition: all 0.5s ease;
 }
