@@ -515,6 +515,8 @@ async function spiritShards(choice, taxChoice){
 		iconSize = "width: 35px; height: 35px; vertical-align: middle;",
 		ssSize = "width: 20px; height: 20px; vertical-align: middle;";
 
+	var dust; // Placeholder for any kind of dust
+
 	// If the user chooses <tax option> then change the tax in all the functions
 	switch (taxChoice){
 		case "85% Tax": tax = 0.85; break;
@@ -570,15 +572,23 @@ async function spiritShards(choice, taxChoice){
 		for (i = 0; i < mats.fineT1.length; i++){
 			// Change prices depnding on what the choices of <select> are
 			switch (conversionBuyOrSell){
-				case "Buy": t1Input = mats.fineT1[i].buy; t2Input = mats.fineT2[i].buy; break;
-				case "Sell": t1Input = mats.fineT1[i].sell; t2Input = mats.fineT2[i].sell; break;
+				case "Buy": 
+					t1Input = mats.fineT1[i].buy; 
+					t2Input = mats.fineT2[i].buy
+					dust = mats.fineT2[3].buy;
+					break;
+				case "Sell": 
+					t1Input = mats.fineT1[i].sell; 
+					t2Input = mats.fineT2[i].sell; 
+					dust = mats.fineT2[3].sell;
+					break;
 			}
 			switch (resultBuyOrSell){
 				case "Buy": resultInput = mats.fineT2[i].buy; break;
 				case "Sell": resultInput = mats.fineT2[i].sell; break;
 			}
 
-			valueConversion = (t1Input * 50) + t2Input + (mats.fineT2[3].buy * 5)
+			valueConversion = (t1Input * 50) + t2Input + (dust * 5)
 			valueResult = (resultInput * 18.51) * tax;
 			profit = valueResult - valueConversion;
 
@@ -593,7 +603,7 @@ async function spiritShards(choice, taxChoice){
 						<span> ${format_values_subpage(t2Input).gold + format_values_subpage(t2Input).silver + format_values_subpage(t2Input).copper} </span></td>
 					<td> + </td>
 					<td> 5 &nbsp; <img src = "${mats.fineT2[3].icon}" title = "${mats.fineT2[3].name}" style = "${iconSize}"> <br>
-						<span> ${format_values_subpage(mats.fineT2[3].buy * 5).gold + format_values_subpage(mats.fineT2[3].buy * 5).silver + format_values_subpage(mats.fineT2[3].buy * 5).copper} </span></td> 
+						<span> ${format_values_subpage(dust * 5).gold + format_values_subpage(dust * 5).silver + format_values_subpage(dust * 5).copper} </span></td> 
 					<td> + </td> 
 					<td> 1 &nbsp; <img src = "${mysticMat[2].icon}" title = "${mysticMat[2].name}" style = "${iconSize}"> 
 						<br> <span> 0.1 <img src = "${mysticMat[3].icon}" title = "${mysticMat[3].icon}" style = "${ssSize}"> </span> </td> 
@@ -606,7 +616,7 @@ async function spiritShards(choice, taxChoice){
 				`;
 				
 			} else { // with Dust's new conversion
-				valueConversion = (t1Input * 250) + (mats.fineT2[3].buy * 1)
+				valueConversion = (t1Input * 250) + (dust * 1)
 				valueResult = (resultInput * 87) * tax;
 				profit = valueResult - valueConversion;
 				if (profit < 0){ backgroundColor = '#E9C4B4'; isNegCount = isNegCount + 1;} else { backgroundColor = '#CFE9B4'} // change background depending on neg or pos
@@ -644,15 +654,23 @@ async function spiritShards(choice, taxChoice){
 		for (i = 0; i < mats.fineT2.length; i++){
 			// Change prices depnding on what the choices of <select> are
 			switch (conversionBuyOrSell){
-				case "Buy": t2Input = mats.fineT2[i].buy; t3Input = mats.fineT3[i].buy; break;
-				case "Sell": t2Input = mats.fineT2[i].sell; t3Input = mats.fineT3[i].sell; break;
+				case "Buy": 
+					t2Input = mats.fineT2[i].buy; 
+					t3Input = mats.fineT3[i].buy; 
+					dust = mats.fineT3[3].buy;
+					break;
+				case "Sell": 
+					t2Input = mats.fineT2[i].sell; 
+					t3Input = mats.fineT3[i].sell; 
+					dust = mats.fineT3[3].sell;
+					break;
 			}
 			switch (resultBuyOrSell){
 				case "Buy": resultInput = mats.fineT3[i].buy; break;
 				case "Sell": resultInput = mats.fineT3[i].sell; break;
 			}
 
-			valueConversion = (t2Input * 50) + t3Input + (mats.fineT3[3].buy * 5)
+			valueConversion = (t2Input * 50) + t3Input + (dust * 5)
 			valueResult = (resultInput * 18.51) * tax;
 			profit = valueResult - valueConversion;
 
@@ -667,7 +685,7 @@ async function spiritShards(choice, taxChoice){
 						<span> ${format_values_subpage(t3Input).gold + format_values_subpage(t3Input).silver + format_values_subpage(t3Input).copper} </span></td>
 					<td> + </td>
 					<td> 5 &nbsp; <img src = "${mats.fineT3[3].icon}" title = "${mats.fineT3[3].name}" style = "${iconSize}"> <br>
-						<span> ${format_values_subpage(mats.fineT3[3].buy * 5).gold + format_values_subpage(mats.fineT3[3].buy * 5).silver + format_values_subpage(mats.fineT3[3].buy * 5).copper} </span></td> 
+						<span> ${format_values_subpage(dust * 5).gold + format_values_subpage(dust * 5).silver + format_values_subpage(dust * 5).copper} </span></td> 
 					<td> + </td> 
 					<td> 2 &nbsp; <img src = "${mysticMat[2].icon}" title = "${mysticMat[2].name}" style = "${iconSize}"> 
 						<br> <span> 0.2 <img src = "${mysticMat[3].icon}" title = "${mysticMat[3].icon}" style = "${ssSize}"> </span> </td> 
@@ -680,7 +698,7 @@ async function spiritShards(choice, taxChoice){
 				`;
 				
 			} else { // with Dust's new conversion
-				valueConversion = (t2Input * 250) + (mats.fineT3[3].buy * 1)
+				valueConversion = (t2Input * 250) + (dust * 1)
 				valueResult = (resultInput * 87) * tax;
 				profit = valueResult - valueConversion;
 				if (profit < 0){ backgroundColor = '#E9C4B4'; isNegCount = isNegCount + 1;} else { backgroundColor = '#CFE9B4'} // change background depending on neg or pos
@@ -716,15 +734,23 @@ async function spiritShards(choice, taxChoice){
 		for (i = 0; i < mats.fineT3.length; i++){
 			// Change prices depnding on what the choices of <select> are
 			switch (conversionBuyOrSell){
-				case "Buy": t3Input = mats.fineT3[i].buy; t4Input = mats.fineT4[i].buy; break;
-				case "Sell": t3Input = mats.fineT3[i].sell; t4Input = mats.fineT4[i].sell; break;
+				case "Buy": 
+					t3Input = mats.fineT3[i].buy; 
+					t4Input = mats.fineT4[i].buy;
+					dust = mats.fineT4[3].buy; 
+					break;
+				case "Sell": 
+					t3Input = mats.fineT3[i].sell; 
+					t4Input = mats.fineT4[i].sell;
+					dust = mats.fineT4[3].sell; 
+					break;
 			}
 			switch (resultBuyOrSell){
 				case "Buy": resultInput = mats.fineT4[i].buy; break;
 				case "Sell": resultInput = mats.fineT4[i].sell; break;
 			}
 
-			valueConversion = (t3Input * 50) + t4Input + (mats.fineT4[3].buy * 5)
+			valueConversion = (t3Input * 50) + t4Input + (dust * 5)
 			valueResult = (resultInput * 18.51) * tax;
 			profit = valueResult - valueConversion;
 
@@ -739,7 +765,7 @@ async function spiritShards(choice, taxChoice){
 						<span> ${format_values_subpage(t4Input).gold + format_values_subpage(t4Input).silver + format_values_subpage(t4Input).copper} </span></td>
 					<td> + </td>
 					<td> 5 &nbsp; <img src = "${mats.fineT4[3].icon}" title = "${mats.fineT4[3].name}" style = "${iconSize}"> <br>
-						<span> ${format_values_subpage(mats.fineT4[3].buy * 5).gold + format_values_subpage(mats.fineT4[3].buy * 5).silver + format_values_subpage(mats.fineT4[3].buy * 5).copper} </span></td> 
+						<span> ${format_values_subpage(dust * 5).gold + format_values_subpage(dust * 5).silver + format_values_subpage(dust * 5).copper} </span></td> 
 					<td> + </td> 
 					<td> 3 &nbsp; <img src = "${mysticMat[2].icon}" title = "${mysticMat[2].name}" style = "${iconSize}"> 
 						<br> <span> 0.3 <img src = "${mysticMat[3].icon}" title = "${mysticMat[3].icon}" style = "${ssSize}"> </span> </td> 
@@ -787,15 +813,23 @@ async function spiritShards(choice, taxChoice){
 		for (i = 0; i < mats.fineT4.length; i++){
 			// Change prices depnding on what the choices of <select> are
 			switch (conversionBuyOrSell){
-				case "Buy": t4Input = mats.fineT4[i].buy; t5Input = mats.fineT5[i].buy; break;
-				case "Sell": t4Input = mats.fineT4[i].sell; t5Input = mats.fineT5[i].sell; break;
+				case "Buy": 
+					t4Input = mats.fineT4[i].buy; 
+					t5Input = mats.fineT5[i].buy;
+					dust = mats.fineT5[3].buy; 
+					break;
+				case "Sell": 
+					t4Input = mats.fineT4[i].sell; 
+					t5Input = mats.fineT5[i].sell; 
+					dust = mats.fineT5[3].sell;
+					break;
 			}
 			switch (resultBuyOrSell){
 				case "Buy": resultInput = mats.fineT5[i].buy; break;
 				case "Sell": resultInput = mats.fineT5[i].sell; break;
 			}
 
-			valueConversion = (t4Input * 50) + t5Input + (mats.fineT5[3].buy * 5)
+			valueConversion = (t4Input * 50) + t5Input + (dust * 5)
 			valueResult = (resultInput * 18.51) * tax;
 			profit = valueResult - valueConversion;
 
@@ -810,7 +844,7 @@ async function spiritShards(choice, taxChoice){
 						<span> ${format_values_subpage(t5Input).gold + format_values_subpage(t5Input).silver + format_values_subpage(t5Input).copper} </span></td>
 					<td> + </td>
 					<td> 5 &nbsp; <img src = "${mats.fineT5[3].icon}" title = "${mats.fineT5[3].name}" style = "${iconSize}"> <br>
-						<span> ${format_values_subpage(mats.fineT5[3].buy * 5).gold + format_values_subpage(mats.fineT5[3].buy * 5).silver + format_values_subpage(mats.fineT5[3].buy * 5).copper} </span></td> 
+						<span> ${format_values_subpage(dust * 5).gold + format_values_subpage(dust * 5).silver + format_values_subpage(dust * 5).copper} </span></td> 
 					<td> + </td> 
 					<td> 4 &nbsp; <img src = "${mysticMat[2].icon}" title = "${mysticMat[2].name}" style = "${iconSize}"> 
 						<br> <span> 0.4 <img src = "${mysticMat[3].icon}" title = "${mysticMat[3].icon}" style = "${ssSize}"> </span> </td> 
@@ -823,7 +857,7 @@ async function spiritShards(choice, taxChoice){
 				`;
 				
 			} else { // with Dust's new conversion
-				valueConversion = (t4Input * 250) + (mats.fineT5[3].buy * 1)
+				valueConversion = (t4Input * 250) + (dust * 1)
 				valueResult = (resultInput * 120) * tax;
 				profit = valueResult - valueConversion;
 				if (profit < 0){ backgroundColor = '#E9C4B4'; isNegCount = isNegCount + 1;} else { backgroundColor = '#CFE9B4'} // change background depending on neg or pos
@@ -859,15 +893,23 @@ async function spiritShards(choice, taxChoice){
 		for (i = 0; i < mats.fineT5.length; i++){
 			// Change prices depnding on what the choices of <select> are
 			switch (conversionBuyOrSell){
-				case "Buy": t5Input = mats.fineT5[i].buy; t6Input = mats.fineT6[i].buy; break;
-				case "Sell": t5Input = mats.fineT5[i].sell; t6Input = mats.fineT6[i].sell; break;
+				case "Buy": 
+					t5Input = mats.fineT5[i].buy; 
+					t6Input = mats.fineT6[i].buy;  
+					dust = mats.fineT6[3].buy; 
+					break;
+				case "Sell": 
+					t5Input = mats.fineT5[i].sell; 
+					t6Input = mats.fineT6[i].sell; 
+					dust = mats.fineT6[3].sell;
+					break;
 			}
 			switch (resultBuyOrSell){
 				case "Buy": resultInput = mats.fineT6[i].buy; break;
 				case "Sell": resultInput = mats.fineT6[i].sell; break;
 			}
 
-			valueConversion = (t5Input * 50) + t6Input + (mats.fineT6[3].buy * 5)
+			valueConversion = (t5Input * 50) + t6Input + (dust * 5)
 			valueResult = (resultInput * 6.833333) * tax;
 			profit = valueResult - valueConversion;
 
@@ -882,7 +924,7 @@ async function spiritShards(choice, taxChoice){
 						<span> ${format_values_subpage(t6Input).gold + format_values_subpage(t6Input).silver + format_values_subpage(t6Input).copper} </span></td>
 					<td> + </td>
 					<td> 5 &nbsp; <img src = "${mats.fineT6[3].icon}" title = "${mats.fineT6[3].name}" style = "${iconSize}"> <br>
-						<span> ${format_values_subpage(mats.fineT6[3].buy * 5).gold + format_values_subpage(mats.fineT6[3].buy * 5).silver + format_values_subpage(mats.fineT6[3].buy * 5).copper} </span></td> 
+						<span> ${format_values_subpage(dust * 5).gold + format_values_subpage(dust * 5).silver + format_values_subpage(dust * 5).copper} </span></td> 
 					<td> + </td> 
 					<td> 5 &nbsp; <img src = "${mysticMat[2].icon}" title = "${mysticMat[2].name}" style = "${iconSize}"> 
 						<br> <span> 0.5 <img src = "${mysticMat[3].icon}" title = "${mysticMat[3].icon}" style = "${ssSize}"> </span> </td> 
@@ -895,7 +937,7 @@ async function spiritShards(choice, taxChoice){
 				`;
 				
 			} else { // with Crystalline Dust's new conversion
-				valueConversion = (t5Input * 250) + (mats.fineT6[3].buy * 1)
+				valueConversion = (t5Input * 250) + (dust * 1)
 				valueResult = (resultInput * 19) * tax;
 				profit = valueResult - valueConversion;
 				if (profit < 0){ backgroundColor = '#E9C4B4'; isNegCount = isNegCount + 1;} else { backgroundColor = '#CFE9B4'} // change background depending on neg or pos
