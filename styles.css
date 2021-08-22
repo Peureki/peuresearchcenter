@@ -3437,13 +3437,13 @@ table.two-ingre .hoverTooltip,
 table.three-ingre .hoverTooltip,
 table.four-ingre .hoverTooltip{
 	display: none;
-    background: #D0D9EB;
+    background: var(--clr-bkg);
     margin-left: 50px;
     bottom: 10px;
     padding: 10px;
     position: absolute;
     z-index: 1000;
-    color: black;
+    color: var(--clr-text);
     border: 1px solid var(--clr-border);
     font-size: 15px;
     font-style: normal;

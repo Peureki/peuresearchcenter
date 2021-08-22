@@ -139,6 +139,13 @@
 
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
+					<span style = "font-weight: bold;">August 22, 2021</span>
+				<br>
+					- Fixed some coloring in tooltips in <a href = "./research/refinement.php" target = "_blank"><u> Refinement</u></a> for dark mode
+					<br> - Fixed a bug in <a href = "./research/currency-worth.php" target = "_blank"><u> Currency Worth</u></a> that any pricing with dust didn't include sell price
+					
+					
+				<br><br>
 					<span style = "font-weight: bold;">August 14, 2021</span>
 				<br>
 					- Fixed a bug on mobile that caused a weird gab/glitch on the bottom of screens whenever the address bar disappears (this was so annoying to debug..you have no idea T_T) 
