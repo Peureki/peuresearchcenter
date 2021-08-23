@@ -37,7 +37,7 @@
 			<h1 class = "title"> Peu Research Center </h1>
 
 			<div class = "small-description" style = "text-align: center;">
-				Guild Wars 2 benchmarks, gold-making guides, tools, and choyas!
+				Guild Wars 2 benchmarks, gold farming guides, tools, and choyas!
 			</div>
 
 			<div class = "section-header">
@@ -143,7 +143,7 @@
 				<br>
 					- Fixed some coloring in tooltips in <a href = "./research/refinement.php" target = "_blank"><u> Refinement</u></a> for dark mode
 					<br> - Fixed a bug in <a href = "./research/currency-worth.php" target = "_blank"><u> Currency Worth</u></a> that any pricing with dust didn't include sell price
-					
+
 					
 				<br><br>
 					<span style = "font-weight: bold;">August 14, 2021</span>
