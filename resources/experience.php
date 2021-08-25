@@ -119,81 +119,81 @@
 
 						<span class = "popup-text">Copied!</span>
 					</center>
-					
-					<div style = "overflow-x: auto;">
-					<table class = "exp">
-						<tr>
-							<th> Map </th>
-							<th> Waypoint </th>
-							<th> Directions </th>
-							<th> # of Orbs </th>
-							<th> EXP </th>
-						</tr>
-						<tr> 
-							<td> Silverwastes 1 </td>
-							<td> Drydock Grotto Waypoint <b>[&BLoHAAA=]</b> </td>
-							<td> Fall below ship, almost to the ground </td>
-							<td> 55 </td>
-							<td> 139,700 </td>
-						</tr>
+				
+					<div class = "overflow-table">
+						<table class = "exp">
+							<tr>
+								<th> Map </th>
+								<th> Waypoint </th>
+								<th> Directions </th>
+								<th> # of Orbs </th>
+								<th> EXP </th>
+							</tr>
+							<tr> 
+								<td> Silverwastes 1 </td>
+								<td> Drydock Grotto Waypoint <b>[&BLoHAAA=]</b> </td>
+								<td> Fall below ship, almost to the ground </td>
+								<td> 55 </td>
+								<td> 139,700 </td>
+							</tr>
 
-						<tr> 
-							<td> Silverwastes 2 </td>
-							<td> Camp Resolve Waypoint <b>[&BH8HAAA=]</b> </td>
-							<td> Top of the south exit of the camp </td>
-							<td> 11 </td>
-							<td> 27,940 </td>
-						</tr>
+							<tr> 
+								<td> Silverwastes 2 </td>
+								<td> Camp Resolve Waypoint <b>[&BH8HAAA=]</b> </td>
+								<td> Top of the south exit of the camp </td>
+								<td> 11 </td>
+								<td> 27,940 </td>
+							</tr>
 
-						<tr> 
-							<td> Iron Marches </td>
-							<td> Village of Scalecatch Waypoint <b>[&BOcBAAA=]</b> </td>
-							<td> Southwest from WP</td>
-							<td> 40 </td>
-							<td> 101,600 </td>
-						</tr>
+							<tr> 
+								<td> Iron Marches </td>
+								<td> Village of Scalecatch Waypoint <b>[&BOcBAAA=]</b> </td>
+								<td> Southwest from WP</td>
+								<td> 40 </td>
+								<td> 101,600 </td>
+							</tr>
 
-						<tr> 
-							<td> Diessa Plateau </td>
-							<td> Blasted Moors Waypoint <b>[&BNoAAAA=]</b> </td>
-							<td> Southwest from WP </td>
-							<td> 32 </td>
-							<td> 81,280 </td>
-						</tr>
+							<tr> 
+								<td> Diessa Plateau </td>
+								<td> Blasted Moors Waypoint <b>[&BNoAAAA=]</b> </td>
+								<td> Southwest from WP </td>
+								<td> 32 </td>
+								<td> 81,280 </td>
+							</tr>
 
-						<tr> 
-							<td> Blazeridge Steppes </td>
-							<td> Gaster Gullet Waypoint <b>[&BE8DAAA=]</b> </td>
-							<td> Southwest from WP, towards crystal </td>
-							<td> 29 </td>
-							<td> 73,660 </td>
-						</tr>
+							<tr> 
+								<td> Blazeridge Steppes </td>
+								<td> Gaster Gullet Waypoint <b>[&BE8DAAA=]</b> </td>
+								<td> Southwest from WP, towards crystal </td>
+								<td> 29 </td>
+								<td> 73,660 </td>
+							</tr>
 
-						<tr> 
-							<td> Timberline Falls </td>
-							<td> Nonmoa Waypoint <b>[&BEkCAAA=]</b> </td>
-							<td> Directly east from WP </td>
-							<td> 30 </td>
-							<td> 76,200 </td>
-						</tr>
+							<tr> 
+								<td> Timberline Falls </td>
+								<td> Nonmoa Waypoint <b>[&BEkCAAA=]</b> </td>
+								<td> Directly east from WP </td>
+								<td> 30 </td>
+								<td> 76,200 </td>
+							</tr>
 
-						<tr> 
-							<td> Malchor's Leap </td>
-							<td> Lights Waypoint <b>[&BLICAAA=]</b> </td>
-							<td> Southeast from WP </td>
-							<td> 31 </td>
-							<td> 78,740 </td>
-						</tr>
+							<tr> 
+								<td> Malchor's Leap </td>
+								<td> Lights Waypoint <b>[&BLICAAA=]</b> </td>
+								<td> Southeast from WP </td>
+								<td> 31 </td>
+								<td> 78,740 </td>
+							</tr>
 
-						<tr> 
-							<td> Southsun Cove </td>
-							<td> Owain's Refuge Waypoint <b>[&BNgGAAA=]</b> </td>
-							<td> Northwest from WP, between cliffs </td>
-							<td> 30 </td>
-							<td> 76,200 </td>
-						</tr>
-					</table>
-				</div>
+							<tr> 
+								<td> Southsun Cove </td>
+								<td> Owain's Refuge Waypoint <b>[&BNgGAAA=]</b> </td>
+								<td> Northwest from WP, between cliffs </td>
+								<td> 30 </td>
+								<td> 76,200 </td>
+							</tr>
+						</table>
+					</div>
 
 					<br><br>
 					<h class = "bookmark-header" style = "background-color: rgb(255, 97, 41);"> 2. Silverwastes RIBA Farm </h>
@@ -717,44 +717,46 @@
 						<span class = "popup-text">Copied!</span>
 					</center>
 
-					<table class = "exp">
-						<tr>
-							<th> Map </th>
-							<th> Waypoint </th>
-							<th> Directions </th>
-						</tr>
-						<tr> 
-							<td> Crystal Oasis </td>
-							<td> Temple of Kormir Waypoint <b>[&BEAKAAA=]</b> </td>
-							<td> Head above the temple </td>
-						</tr>
-						<tr> 
-							<td> Desert Highlands </td>
-							<td>  Highjump Waypoint <b>[&BJ0KAAA=]</b> </td>
-							<td> Southwest </td>
-						</tr>
-						<tr> 
-							<td> Elon Riverlands </td>
-							<td>  Skimmer Ranch Waypoint <b>[&BGcKAAA=]</b> </td>
-							<td> Head to Vulture Drifts (SE) to head up</td>
-						</tr>
-						<tr> 
-							<td> Desolation </td>
-							<td>  Lair of the Forgotton Waypoint <b>[&BMEKAAA=]</b> </td>
-							<td> Head west and up near Zayan Gate [&BBwKAAA=]</td>
-						</tr>
-						<tr> 
-							<td> Jahai Bluffs 1 </td>
-							<td>  Reclaimed Chantry Waypoint <b>[&BJkLAAA=]</b> </td>
-							<td> Head south to the Fortress of Jahai [&BHELAAA=]. Top of a support</td>
-						</tr>
-						<tr> 
-							<td> Jahai Bluffs 2 </td>
-							<td> Yatendi Village Waypoint <b>[&BH4LAAA=]</b> </td>
-							<td> Head south to Kodonur Temple [&BIkLAAA=]. Head up</td>
-						</tr>
+					<div class = "overflow-table">
+						<table class = "exp">
+							<tr>
+								<th> Map </th>
+								<th> Waypoint </th>
+								<th> Directions </th>
+							</tr>
+							<tr> 
+								<td> Crystal Oasis </td>
+								<td> Temple of Kormir Waypoint <b>[&BEAKAAA=]</b> </td>
+								<td> Head above the temple </td>
+							</tr>
+							<tr> 
+								<td> Desert Highlands </td>
+								<td>  Highjump Waypoint <b>[&BJ0KAAA=]</b> </td>
+								<td> Southwest </td>
+							</tr>
+							<tr> 
+								<td> Elon Riverlands </td>
+								<td>  Skimmer Ranch Waypoint <b>[&BGcKAAA=]</b> </td>
+								<td> Head to Vulture Drifts (SE) to head up</td>
+							</tr>
+							<tr> 
+								<td> Desolation </td>
+								<td>  Lair of the Forgotton Waypoint <b>[&BMEKAAA=]</b> </td>
+								<td> Head west and up near Zayan Gate [&BBwKAAA=]</td>
+							</tr>
+							<tr> 
+								<td> Jahai Bluffs 1 </td>
+								<td>  Reclaimed Chantry Waypoint <b>[&BJkLAAA=]</b> </td>
+								<td> Head south to the Fortress of Jahai [&BHELAAA=]. Top of a support</td>
+							</tr>
+							<tr> 
+								<td> Jahai Bluffs 2 </td>
+								<td> Yatendi Village Waypoint <b>[&BH4LAAA=]</b> </td>
+								<td> Head south to Kodonur Temple [&BIkLAAA=]. Head up</td>
+							</tr>
 
-					</table>
+						</table>
+					</div>
 
 					<br><br>
 					<h class = "bookmark-header" style = "background-color: rgb(255, 47, 103);"> 3. Meta Trains </h>
@@ -876,96 +878,95 @@
 					</center>
 
 
+					<div class = "overflow-table">
+						<table class = "exp">
+							<tr>
+								<th> Map </th>
+								<th> Waypoint </th>
+								<th> Directions </th>
+								<th> # of Orbs </th>
+								<th> EXP </th>
+							</tr>
+							<!--<tr> 
+								<td> Grothmar Valley </td>
+								<td> Wardowns Waypoint <b>[&BPgLAAA=]</b> </td>
+								<td> E from waypoint to [&BP4LAAA=] </td>
+								<td> 57 </td>
+								<td> 144,780 </td>
+							</tr> -->
+							<tr> 
+								<td> Bjora Marches 1 </td>
+								<td> Jora's Keep Waypoint <b>[&BCcMAAA=]</b> </td>
+								<td> Near the top of the gates </td>
+								<td> 20 </td>
+								<td> 50,800 </td>
+							</tr>
 
-					<table class = "exp">
-						<tr>
-							<th> Map </th>
-							<th> Waypoint </th>
-							<th> Directions </th>
-							<th> # of Orbs </th>
-							<th> EXP </th>
-						</tr>
-						<!--<tr> 
-							<td> Grothmar Valley </td>
-							<td> Wardowns Waypoint <b>[&BPgLAAA=]</b> </td>
-							<td> E from waypoint to [&BP4LAAA=] </td>
-							<td> 57 </td>
-							<td> 144,780 </td>
-						</tr> -->
-						<tr> 
-							<td> Bjora Marches 1 </td>
-							<td> Jora's Keep Waypoint <b>[&BCcMAAA=]</b> </td>
-							<td> Near the top of the gates </td>
-							<td> 20 </td>
-							<td> 50,800 </td>
-						</tr>
+							<tr> 
+								<td> Bjora Marches 2 </td>
+								<td> Jora's Keep Waypoint <b>[&BCcMAAA=]</b> </td>
+								<td> NE of [&BCIMAAA=] </td>
+								<td> 18 </td>
+								<td> 45,720 </td>
+							</tr>
 
-						<tr> 
-							<td> Bjora Marches 2 </td>
-							<td> Jora's Keep Waypoint <b>[&BCcMAAA=]</b> </td>
-							<td> NE of [&BCIMAAA=] </td>
-							<td> 18 </td>
-							<td> 45,720 </td>
-						</tr>
+							<tr> 
+								<td> Bjora Marches 3 </td>
+								<td> Jora's Keep Waypoint <b>[&BH8HAAA=]</b> </td>
+								<td> Northwest of [&BCsMAAA=] </td>
+								<td> 15 </td>
+								<td> 38,100 </td>
+							</tr>
 
-						<tr> 
-							<td> Bjora Marches 3 </td>
-							<td> Jora's Keep Waypoint <b>[&BH8HAAA=]</b> </td>
-							<td> Northwest of [&BCsMAAA=] </td>
-							<td> 15 </td>
-							<td> 38,100 </td>
-						</tr>
+							<tr> 
+								<td> Bjora Marches 4 </td>
+								<td> Still Waters Speaking Waypoint <b>[&BDkMAAA=]</b> </td>
+								<td> Above the WP </td>
+								<td> 13 </td>
+								<td> 33,020 </td>
+							</tr>
 
-						<tr> 
-							<td> Bjora Marches 4 </td>
-							<td> Still Waters Speaking Waypoint <b>[&BDkMAAA=]</b> </td>
-							<td> Above the WP </td>
-							<td> 13 </td>
-							<td> 33,020 </td>
-						</tr>
+							<tr> 
+								<td> Bjora Marches 5 </td>
+								<td> Still Waters Speaking Waypoint <b>[&BDkMAAA=]</b> </td>
+								<td> W of Kodan Shipwreck [&BDUMAAA=] </td>
+								<td> 32 </td>
+								<td> 81,280 </td>
+							</tr>
 
-						<tr> 
-							<td> Bjora Marches 5 </td>
-							<td> Still Waters Speaking Waypoint <b>[&BDkMAAA=]</b> </td>
-							<td> W of Kodan Shipwreck [&BDUMAAA=] </td>
-							<td> 32 </td>
-							<td> 81,280 </td>
-						</tr>
+							<tr> 
+								<td> Drizzlewood Coast 1 </td>
+								<td> Forward Camp Waypoint <b>[&BHIMAAA=]</b> </td>
+								<td> North of WP, SE of [&BG0MAAA=] </td>
+								<td> 31 </td>
+								<td> 78,740 </td>
+							</tr>
 
-						<tr> 
-							<td> Drizzlewood Coast 1 </td>
-							<td> Forward Camp Waypoint <b>[&BHIMAAA=]</b> </td>
-							<td> North of WP, SE of [&BG0MAAA=] </td>
-							<td> 31 </td>
-							<td> 78,740 </td>
-						</tr>
+							<tr> 
+								<td> Drizzlewood Coast 2</td>
+								<td> Parachute from <b>[&BHUMAAA=]</b> </td>
+								<td> SE and down from [&BHcMAAA=] </td>
+								<td> 25 </td>
+								<td> 63,500 </td>
+							</tr>
 
-						<tr> 
-							<td> Drizzlewood Coast 2</td>
-							<td> Parachute from <b>[&BHUMAAA=]</b> </td>
-							<td> SE and down from [&BHcMAAA=] </td>
-							<td> 25 </td>
-							<td> 63,500 </td>
-						</tr>
+							<tr> 
+								<td> Drizzlewood Coast 3</td>
+								<td> Parachute from <b>[&BHUMAAA=]</b> </td>
+								<td> Directly E. Above the E-most Vista </td>
+								<td> 26 </td>
+								<td> 66,040 </td>
+							</tr>
 
-						<tr> 
-							<td> Drizzlewood Coast 3</td>
-							<td> Parachute from <b>[&BHUMAAA=]</b> </td>
-							<td> Directly E. Above the E-most Vista </td>
-							<td> 26 </td>
-							<td> 66,040 </td>
-						</tr>
-
-						<tr> 
-							<td> Drizzlewood Coast 4</td>
-							<td> Parachute from <b>[&BHUMAAA=]</b> </td>
-							<td> Next to Vista, north of [&BHUMAAA=] </td>
-							<td> 27 </td>
-							<td> 68,580 </td>
-						</tr>
-
-						
-					</table>
+							<tr> 
+								<td> Drizzlewood Coast 4</td>
+								<td> Parachute from <b>[&BHUMAAA=]</b> </td>
+								<td> Next to Vista, north of [&BHUMAAA=] </td>
+								<td> 27 </td>
+								<td> 68,580 </td>
+							</tr>
+						</table>
+					</div>
 
 					<br><br>
 					<h class = "bookmark-header" style = "background-color: rgb(156, 235, 255);"> 2. Adventures </h>
