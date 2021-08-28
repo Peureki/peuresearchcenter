@@ -1741,25 +1741,49 @@ b{
 	height: 70vh;
 	overflow-y: auto;
 }
+/* Whole container itself */
 .event-sidebox{
 	padding: 10px;
-	color: black;
-	background-color: #E4E8E4;
+	color: var(--clr-text);
+	background-color: var(--clr-bkg);
 	border: 1px solid var(--clr-border);
 }
+/* Name of the event */
 .event-sidebox h1{
 	font-size: 17px;
 	margin-bottom: 10px;
+	font-weight: normal;
+}
+/* Timer 00:00 */
+.event-sidebox p1{
+	font-size: 20px;
+	color: var(--clr-text);
+	vertical-align: middle;
 }
 /* Hidden timer - This # is to track how many seconds in an event cooldown */
 .event-sidebox p2{
 	display: none;
 }
+/* Start, reset buttons */
 .event-sidebox input[type="button"]{
 	color: black;
 	font-size: 17px;
 	border: 2px solid black;
 	background-color: var(--clr-button);
+}
+.meta-sidebox{
+	color: black;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border: 1px solid var(--clr-border);
+}
+.meta-sidebox h1{
+	font-size: 17px;
+	margin-bottom: 10px;
+}
+.meta-sidebox p1{
+	font-size: 20px;
 }
 
 
@@ -1826,18 +1850,6 @@ b{
 	display: block;
 	overflow-y: auto;
 	height: 70vh;
-}
-.nav-left-sidetimer-box h1{
-	font-size: 15px;
-	margin-bottom: 10px;
-}
-
-.nav-left-sidetimer-box p1{
-	font-size: 20px;
-	vertical-align: bottom;
-}
-.nav-left-sidetimer-box p2{
-	display: none;
 }
 .nav-left-sidetimer-box input[type="button"]{
 	color: white;
@@ -5564,10 +5576,6 @@ table.nodes td.nodes-cooldown{
 
 /* SIDEBOXES */
 .verdant-brink-meta-sidebox,
-#auric-1-sidebox, /* Vet vinetooth N */
-#auric-2-sidebox, /* Vet vinetooth E */
-#auric-3-sidebox, /* Vet vinetooth S */
-#auric-4-sidebox, /* Vet vinetooth W */
 .bloodstone-meta-sidebox, /* Bloodstone Maw */
 .bloodstone-1-sidebox, /* Hablion */
 .ember-1-sidebox, /* Sloth */
@@ -5671,7 +5679,6 @@ table.nodes td.nodes-cooldown{
 }
 
 /* Global sidebox timers */
-.meta-sidebox,
 .bloodstone-spirits-sidebox, /* Spirits */
 .istan-meta-pala-sidebox,
 .istan-meta-gh-sidebox{

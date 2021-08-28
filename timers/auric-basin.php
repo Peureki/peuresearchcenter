@@ -34,7 +34,7 @@
         <p2 id = "numerical-sidetimer-auric-meta"></p2>
       </div>
 
-      <div id = "auric-1-sidebox" class = "auric-1-sidebox" >
+      <div id = "auric-1-sidebox" class = "event-sidebox" >
 	      <h1> Vinetooth (N) </h1>
 	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-auric-1-start">
 	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-auric-1-reset">
@@ -42,7 +42,7 @@
 	      <p2 id = "numerical-sidetimer-auric-1">570</p2>
 	    </div>
 
-	    <div id = "auric-2-sidebox" class = "auric-2-sidebox" >
+	    <div id = "auric-2-sidebox" class = "event-sidebox" >
 	      <h1> Vinetooth (E) </h1>
 	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-auric-2-start">
 	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-auric-2-reset">
@@ -50,7 +50,7 @@
 	      <p2 id = "numerical-sidetimer-auric-2">570</p2>
 	    </div>
 
-	    <div id = "auric-3-sidebox" class = "auric-3-sidebox" >
+	    <div id = "auric-3-sidebox" class = "event-sidebox" >
 	      <h1> Vinetooth (S) </h1>
 	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-auric-3-start">
 	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-auric-3-reset">
@@ -58,7 +58,7 @@
 	      <p2 id = "numerical-sidetimer-auric-3">570</p2>
 	    </div>
 
-	    <div id = "auric-4-sidebox" class = "auric-4-sidebox" >
+	    <div id = "auric-4-sidebox" class = "event-sidebox" >
 	      <h1> Vinetooth (W) </h1>
 	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-auric-4-start">
 	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-auric-4-reset">

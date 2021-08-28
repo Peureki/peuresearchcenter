@@ -70,6 +70,7 @@ function applyMode(){
 		cssVar('clr-bkg-button', '#2B2B2D'); // Dark gray
 	// If toggle circle is onthe right side
 	// -> Light mode
+	// Check :root for original colors
 	} else {
 		localStorage.setItem('mode', 'light');
 
