@@ -23,16 +23,16 @@
 		<!-- Hidden space so the header doesn't overlap anything below -->
 		<div class = "section-header-space"></div>
 
-		<div class = "small-description" style = "display: flex; justify-content: center;">
-			<div style = "padding-left: 20px; padding-right: 20px; border-right: 1px solid black;">
+		<div class = "flex-description">
+			<div style = "padding-left: 20px; padding-right: 20px;">
 				<span id = "gold-per-gem"></span> &#x2192; 1 <img src = "../images/assets/icons/Gem.png" style = "width: 25px; height: 25px; vertical-align: middle;">
 			</div>
 
-			<div style = "padding-left: 20px; padding-right: 20px; border-right: 1px solid black;">
+			<div style = "padding-left: 20px; padding-right: 20px;">
 				1 <img src = "../images/assets/icons/Gem.png" style = "width: 25px; height: 25px; vertical-align: middle;"> &#x2192; <span id = "gem-per-gold"></span>
 			</div>
 
-			<div style = "padding-left: 20px; padding-right: 20px; border-right: 1px solid black;">
+			<div style = "padding-left: 20px; padding-right: 20px;">
 				$1 (USD) &#x2192; 80 <img src = "../images/assets/icons/Gem.png" style = "width: 25px; height: 25px; vertical-align: middle;">
 			</div>
 
@@ -42,7 +42,7 @@
 		</div>
 
 		<br><br>
-		<div style = "display: flex; align-items: flex-start; justify-content: center;">
+		<div class = "double-box">
 			<div class = "mhi-section">
 				<b style = "font-size: 30px;"> Gem Store </b>
 				<div class = "mhi-list" style = "margin-top: 20px;">
@@ -85,6 +85,7 @@
 				</div>
 
 			<!-- Gathering tools-->
+
 				<div class = "mhi-list">
 					<div>
 						<img src = "../images/assets/icons/Infinite_Volatile_Magic_Gathering_Tools.png" style = "vertical-align: middle; width: 64px; height: 64px;">

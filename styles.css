@@ -663,6 +663,7 @@ b{
 	===== BASIC DESCRIPTION BOXES =====
 	===================================
 */
+.flex-description,
 .small-description{
 	margin: 10px;
 	padding: 20px;
@@ -671,6 +672,14 @@ b{
 	line-height: 1.6;
 	border-radius: 10px;
 	color: var(--clr-text);
+}
+/* Same as small description, but for descriptions that are lists that
+	need to be changed in mobile 
+*/
+.flex-description{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .small-description-left{
 	margin: 50px;
@@ -686,6 +695,11 @@ b{
 }
 .right-box{
 	position: relative;
+}
+@media only screen and (max-width: 1000px){
+	.flex-description{
+		flex-direction: column;
+	}
 }
 /* 
 	===========================
@@ -2948,18 +2962,24 @@ table.bounty-glyph td:nth-child(3){
 	top: 60px;
 	right: 10px;
 }
-
+/*
+	===========================================
+	============= MUST HAVE ITEMS =============
+	===========================================
+*/
+/* Overall container for left, right lists */
 .mhi-section{
-	background: rgba(236,236,222,.75);
 	width: 40%;
 	padding: 20px;
 	margin: 20px;
+	background-color: var(--clr-bkg);
 }
-
+/* Container for specific items */
 .mhi-list{
 	display: flex;
 	padding: 10px;
 	border-bottom: 1px solid black;
+	color: var(--clr-text);
 }
 .mhi-list-child{
 	margin-left: 10px;
@@ -2971,11 +2991,11 @@ table.bounty-glyph td:nth-child(3){
 	height: 25px;
 	vertical-align: middle;
 }
-.mhi-list:hover{
-	background: #DEDDD1;
+@media only screen and (max-width: 600px){
+	.mhi-section{
+		width: 80%;
+	}
 }
-
-
 table.quick-info{
 	width: 50%;
 	margin: 0 auto;

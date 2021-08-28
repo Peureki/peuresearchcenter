@@ -162,7 +162,6 @@ var auric = {
             num: document.getElementById('numerical-sidetimer-auric-11')
         },
         {   // [12] Priory Escort NE
-            function: function() {auric_Countdown(12); },
             status: 0,
             cooldown: 60 * 6 + 30, 
             startButton: document.getElementById('timer-auric-12-start'),
@@ -172,10 +171,10 @@ var auric = {
             timeLabel: document.getElementById('timer-auric-12'), 
             timeSideLabel: document.getElementById('sidetimer-auric-12'),
             sidebox: document.getElementById('auric-12-sidebox'),
-            num: document.getElementById('numerical-sidetimer-auric-12')
+            num: document.getElementById('numerical-sidetimer-auric-12'),
+            function: function() {countdown(this.status, this.cooldown, this.timeLabel, this.timeSideLabel, this.num);},
         },
-        {   // [13] Priory Escort NE
-            function: function() {auric_Countdown(13); },
+        {   // [13] Treasure Mushroom
             status: 0,
             cooldown: 60 * 9 + 45, 
             startButton: document.getElementById('timer-auric-13-start'),
@@ -186,7 +185,7 @@ var auric = {
             timeSideLabel: document.getElementById('sidetimer-auric-13'),
             sidebox: document.getElementById('auric-13-sidebox'),
             num: document.getElementById('numerical-sidetimer-auric-13'),
-            getStuff: function(){console.log(this.cooldown);},
+            function: function() {countdown(this.status, this.cooldown, this.timeLabel, this.timeSideLabel, this.num);},
         },
         {   // [14] Auric Basin Meta
             timeSideLabel: document.getElementById('sidetimer-auric-meta'),
@@ -195,13 +194,39 @@ var auric = {
         },
     ]
 };
+// Start the countdown of the timers 
+function countdown(status, eventCooldown, timeLabel, sideTimeLabel, numCountdown){
+    // Get the time right now
+    var dateNow = Date.now(); 
+
+    function run_countdown() {
+        // Take the parameters from the event object to start counting down time and display it
+        // Change color of texts and displays based on how much time is left (green for it's up, yellow for when it's coming, etc)
+        var countdown = getTime(dateNow, eventCooldown, timeLabel, sideTimeLabel, numCountdown);
+        if (countdown.time <= 0){ 
+            time_text_and_labels_less_than_0(timeLabel, auric.events[arrayNum].sidebox, sideTimeLabel);
+        } else if (countdown.time <= 60){
+            time_text_and_labels_less_than_60(timeLabel, auric.events[arrayNum].sidebox);
+        } else if (countdown.time < eventCooldown){
+            start_countdown_color(timeLabel, sideTimeLabel);
+        }
+    }
+    // Run the function to do the countdown
+    run_countdown(); 
+    // Check if the status of the event is 1 or 0. If 1, do the countdown
+    // Else, stop this specific timer
+    if (status == 1){
+        placeholder = setInterval(run_countdown, 1000);
+    } else {
+        clearInterval(placeholder);   
+    } 
+}
 
 // Label of the meta on the side
 var side_meta_name = document.getElementById('side-meta-name');
 
 var auric; // Empty array for countdown
 var find_num = /\d+/; // Expression to use with .match(find_num) to find a number in a string
-auric.events[13].getStuff();
 
 
 /* Start/Stop button functionality */
@@ -322,6 +347,8 @@ function auric_Countdown(arrayNum){
         clearInterval(auric[arrayNum]);   
     } 
 }
+
+
 
 
 // Checkboxes

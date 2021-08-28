@@ -4,6 +4,7 @@
   <!-- Defaults -->
   <?php include('../config.php'); ?>
 	<title> Auric Basin</title>
+  <script type = "text/javascript" src = "./eventClass.js"></script>
 </head>
 <body>
 	<!-- 
