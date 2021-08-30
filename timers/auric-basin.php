@@ -37,7 +37,7 @@
       <div id = "auric-1-sidebox" class = "event-sidebox" >
 	      <h1> Vinetooth (N) </h1>
 	      <input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "sidetimer-auric-1-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-auric-1-reset">
+	      <input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "sidetimer-auric-1-reset">
 	      <p1 id = "sidetimer-auric-1">9:30</p1>
 	      <p2 id = "numerical-sidetimer-auric-1">570</p2>
 	    </div>
@@ -45,7 +45,7 @@
 	    <div id = "auric-2-sidebox" class = "event-sidebox" >
 	      <h1> Vinetooth (E) </h1>
 	      <input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "sidetimer-auric-2-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-auric-2-reset">
+	      <input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "sidetimer-auric-2-reset">
 	      <p1 id = "sidetimer-auric-2">9:30</p1>
 	      <p2 id = "numerical-sidetimer-auric-2">570</p2>
 	    </div>
@@ -53,7 +53,7 @@
 	    <div id = "auric-3-sidebox" class = "event-sidebox" >
 	      <h1> Vinetooth (S) </h1>
 	      <input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "sidetimer-auric-3-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-auric-3-reset">
+	      <input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "sidetimer-auric-3-reset">
 	      <p1 id = "sidetimer-auric-3">9:30</p1>
 	      <p2 id = "numerical-sidetimer-auric-3">570</p2>
 	    </div>
@@ -61,7 +61,7 @@
 	    <div id = "auric-4-sidebox" class = "event-sidebox" >
 	      <h1> Vinetooth (W) </h1>
 	      <input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "sidetimer-auric-4-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-auric-4-reset">
+	      <input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "sidetimer-auric-4-reset">
 	      <p1 id = "sidetimer-auric-4">9:30</p1>
 	      <p2 id = "numerical-sidetimer-auric-4">570</p2>
 	    </div>
@@ -69,7 +69,7 @@
       <div id = "auric-5-sidebox" class = "event-sidebox" >
         <h1> Priory Escort (SE) </h1>
         <input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "sidetimer-auric-5-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-auric-5-reset">
+        <input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "sidetimer-auric-5-reset">
         <p1 id = "sidetimer-auric-5">6:30</p1>
         <p2 id = "numerical-sidetimer-auric-5">390</p2>
       </div>
@@ -77,7 +77,7 @@
       <div id = "auric-6-sidebox" class = "event-sidebox" >
         <h1> Priory Escort (W) </h1>
         <input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "sidetimer-auric-6-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-auric-6-reset">
+        <input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "sidetimer-auric-6-reset">
         <p1 id = "sidetimer-auric-6">6:30</p1>
         <p2 id = "numerical-sidetimer-auric-6">390</p2>
       </div>
@@ -85,7 +85,7 @@
       <div id = "auric-7-sidebox" class = "event-sidebox" >
         <h1> Balthazar HP </h1>
         <input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "sidetimer-auric-7-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-auric-7-reset">
+        <input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "sidetimer-auric-7-reset">
         <p1 id = "sidetimer-auric-7">8:00</p1>
         <p2 id = "numerical-sidetimer-auric-7">480</p2>
       </div>
@@ -93,7 +93,7 @@
       <div id = "auric-8-sidebox" class = "event-sidebox" >
         <h1> Blighted Saplings </h1>
         <input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "sidetimer-auric-8-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-auric-8-reset">
+        <input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "sidetimer-auric-8-reset">
         <p1 id = "sidetimer-auric-8">6:30</p1>
         <p2 id = "numerical-sidetimer-auric-8">390</p2>
       </div>
@@ -101,7 +101,7 @@
       <div id = "auric-9-sidebox" class = "event-sidebox" >
         <h1> Wyvern </h1>
         <input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "sidetimer-auric-9-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-auric-9-reset">
+        <input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "sidetimer-auric-9-reset">
         <p1 id = "sidetimer-auric-9">14:00</p1>
         <p2 id = "numerical-sidetimer-auric-9">840</p2>
       </div>
@@ -109,7 +109,7 @@
       <div id = "auric-10-sidebox" class = "event-sidebox" >
         <h1> Ooze </h1>
         <input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "sidetimer-auric-10-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-auric-10-reset">
+        <input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "sidetimer-auric-10-reset">
         <p1 id = "sidetimer-auric-10">13:00</p1>
         <p2 id = "numerical-sidetimer-auric-10">780</p2>
       </div>
@@ -117,7 +117,7 @@
       <div id = "auric-11-sidebox" class = "event-sidebox" >
         <h1> Tendril </h1>
         <input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "sidetimer-auric-11-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-auric-11-reset">
+        <input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "sidetimer-auric-11-reset">
         <p1 id = "sidetimer-auric-11">11:30</p1>
         <p2 id = "numerical-sidetimer-auric-11">690</p2>
       </div>
@@ -125,7 +125,7 @@
       <div id = "auric-12-sidebox" class = "event-sidebox" >
         <h1> Priory Escort (NE) </h1>
         <input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "sidetimer-auric-12-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-auric-12-reset">
+        <input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "sidetimer-auric-12-reset">
         <p1 id = "sidetimer-auric-12">6:30</p1>
         <p2 id = "numerical-sidetimer-auric-12">390</p2>
       </div>
@@ -133,7 +133,7 @@
       <div id = "auric-13-sidebox" class = "event-sidebox" >
         <h1> Treasure Mushroom </h1>
         <input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "sidetimer-auric-13-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-auric-13-reset">
+        <input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "sidetimer-auric-13-reset">
         <p1 id = "sidetimer-auric-13">9:45</p1>
         <p2 id = "numerical-sidetimer-auric-13">585</p2>
       </div>
@@ -219,7 +219,7 @@
       			<div class = "[map]-[event #]-box">
       			<p1 id = "timer-[map]-[event #]"> [default time] </p1> 
       			<br><input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "timer-[map]-[event #]-start">
-      			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-[map]-[event #]-reset">
+      			<input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "timer-[map]-[event #]-reset">
        			<br><p2 id = "timer-[map]-[event #]-text"></p2>	
       		-->
 
@@ -227,56 +227,56 @@
       			<h1> Vinetooth (N) </h1>
        	 		<br><p1 id = "timer-auric-1">9:30</p1>
         		<br><input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "timer-auric-1-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-auric-1-reset">	
+       			<input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "timer-auric-1-reset">	
        		</div>
 
        		<div class = "event-box" id = "auric-2-box">
       			<h1> Vinetooth (E)</h1>
        	 		<br><p1 id = "timer-auric-2">9:30</p1>
         		<br><input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "timer-auric-2-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-auric-2-reset">	
+       			<input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "timer-auric-2-reset">	
        		</div>
 
        		<div class = "event-box" id = "auric-3-box">
       			<h1> Vinetooth (S) </h1>
        	 		<br><p1 id = "timer-auric-3">9:30</p1>
         		<br><input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "timer-auric-3-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-auric-3-reset">	
+       			<input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "timer-auric-3-reset">	
        		</div>
 
        		<div class = "event-box" id = "auric-4-box">
       			<h1> Vinetooth (W) </h1>
        	 		<br><p1 id = "timer-auric-4">9:30</p1>
         		<br><input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "timer-auric-4-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-auric-4-reset">	
+       			<input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "timer-auric-4-reset">	
        		</div>
 
           <div class = "event-box" id = "auric-5-box">
             <h1> Priory Escort (SE) </h1>
             <br><p1 id = "timer-auric-5">6:30</p1>
             <br><input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "timer-auric-5-start">
-            <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-auric-5-reset"> 
+            <input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "timer-auric-5-reset"> 
           </div>
 
           <div class = "event-box" id = "auric-6-box">
             <h1> Priory Escort (W) </h1>
             <br><p1 id = "timer-auric-6">6:30</p1>
             <br><input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "timer-auric-6-start">
-            <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-auric-6-reset"> 
+            <input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "timer-auric-6-reset"> 
           </div>
 
           <div class = "event-box" id = "auric-7-box">
             <h1> Balthazar HP </h1>
             <br><p1 id = "timer-auric-7">8:00</p1>
             <br><input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "timer-auric-7-start">
-            <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-auric-7-reset"> 
+            <input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "timer-auric-7-reset"> 
           </div>
 
           <div class = "event-box" id = "auric-8-box">
             <h1> Blighted Saplings </h1>
             <br><p1 id = "timer-auric-8">6:30</p1>
             <br><input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "timer-auric-8-start">
-            <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-auric-8-reset"> 
+            <input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "timer-auric-8-reset"> 
             <input type = "button" value = "i" onmouseover="showElement('auric-event-info-3'); " onmouseout = "hideElement('auric-event-info-3'); ">
           </div>
 
@@ -284,7 +284,7 @@
             <h1> Wyvern </h1>
             <br><p1 id = "timer-auric-9">14:00</p1>
             <br><input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "timer-auric-9-start">
-            <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-auric-9-reset">
+            <input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "timer-auric-9-reset">
             <input type = "button" value = "i" onmouseover="showElement('auric-event-info-4'); " onmouseout = "hideElement('auric-event-info-4'); "> 
           </div>
 
@@ -292,7 +292,7 @@
             <h1> Ooze </h1>
             <br><p1 id = "timer-auric-10">13:00</p1>
             <br><input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "timer-auric-10-start">
-            <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-auric-10-reset"> 
+            <input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "timer-auric-10-reset"> 
             <input type = "button" value = "i" onmouseover="showElement('auric-event-info-2'); " onmouseout = "hideElement('auric-event-info-2'); ">
           </div>
 
@@ -300,7 +300,7 @@
             <h1> Tendril </h1>
             <br><p1 id = "timer-auric-11">11:30</p1>
             <br><input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "timer-auric-11-start">
-            <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-auric-11-reset">
+            <input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "timer-auric-11-reset">
             <input type = "button" value = "i" onmouseover="showElement('auric-event-info-1'); " onmouseout = "hideElement('auric-event-info-1'); "> 
           </div>
 
@@ -308,14 +308,14 @@
             <h1> Priory Escort (NE) </h1>
             <br><p1 id = "timer-auric-12">6:30</p1>
             <br><input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "timer-auric-12-start">
-            <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-auric-12-reset"> 
+            <input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "timer-auric-12-reset"> 
           </div>
 
           <div class = "event-box" id = "auric-13-box">
             <h1> Treasure Mushroom </h1>
             <br><p1 id = "timer-auric-13">9:45</p1>
             <br><input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "timer-auric-13-start">
-            <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-auric-13-reset"> 
+            <input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "timer-auric-13-reset"> 
           </div>
 
 
