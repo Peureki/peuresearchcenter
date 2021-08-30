@@ -5931,6 +5931,9 @@ function time_text_and_labels_less_than_0(time_label, sidebox_time, side_time_te
 function time_text_and_labels_less_than_60(time_label, sidebox_time){
     time_label.style.background = soon_color; 
     sidebox_time.style.background = soon_color;
+
+    time_label.style.color = "black";
+    sidebox_time.style.color = "black";
 }
 // Change color of timer text when counting down
 function start_countdown_color(text, sideText){
