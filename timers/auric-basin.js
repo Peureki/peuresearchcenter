@@ -13,12 +13,12 @@ var auric = {
     events: [
         {   // empty
             status: 0,
-            num: 0,
+            key: 0,
         },
         {   // [1] Vet vinetooth N
             status: 0,
-            num: 0,
-            cooldown: 5, 
+            key: 0,
+            cooldown: 60 * 9 + 30, 
             startButton: document.getElementById('timer-auric-1-start'),
             startSideButton: document.getElementById('sidetimer-auric-1-start'),
             resetButton: document.getElementById('timer-auric-1-reset'),
@@ -27,11 +27,11 @@ var auric = {
             timeSideLabel: document.getElementById('sidetimer-auric-1'),
             sidebox: document.getElementById('auric-1-sidebox'),
             countdownSec: document.getElementById('numerical-sidetimer-auric-1'),
-            doCountdown: function() {countdown(this.status, this.num, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
         },
         {   // [2] Vet vinetooth E
             status: 0,
-            num: 0,
+            key: 0,
             cooldown: 60 * 9 + 30, 
             startButton: document.getElementById('timer-auric-2-start'),
             startSideButton: document.getElementById('sidetimer-auric-2-start'),
@@ -41,11 +41,11 @@ var auric = {
             timeSideLabel: document.getElementById('sidetimer-auric-2'),
             sidebox: document.getElementById('auric-2-sidebox'),
             countdownSec: document.getElementById('numerical-sidetimer-auric-2'),
-            doCountdown: function() {countdown(this.status, this.num, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
         },
         {   // [3] Vet vinetooth S
             status: 0,
-            num: 0,
+            key: 0,
             cooldown: 60 * 9 + 30, 
             startButton: document.getElementById('timer-auric-3-start'),
             startSideButton: document.getElementById('sidetimer-auric-3-start'),
@@ -55,11 +55,11 @@ var auric = {
             timeSideLabel: document.getElementById('sidetimer-auric-3'),
             sidebox: document.getElementById('auric-3-sidebox'),
             countdownSec: document.getElementById('numerical-sidetimer-auric-3'),
-            doCountdown: function() {countdown(this.status, this.num, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
         },
         {   // [4] Vet vinetooth W
             status: 0,
-            num: 0,
+            key: 0,
             cooldown: 60 * 9 + 30, 
             startButton: document.getElementById('timer-auric-4-start'),
             startSideButton: document.getElementById('sidetimer-auric-4-start'),
@@ -69,11 +69,11 @@ var auric = {
             timeSideLabel: document.getElementById('sidetimer-auric-4'),
             sidebox: document.getElementById('auric-4-sidebox'),
             countdownSec: document.getElementById('numerical-sidetimer-auric-4'),
-            doCountdown: function() {countdown(this.status, this.num, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
         },
         {   // [5] Priory Escort SE
             status: 0,
-            num: 0,
+            key: 0,
             cooldown: 60 * 6 + 30, 
             startButton: document.getElementById('timer-auric-5-start'),
             startSideButton: document.getElementById('sidetimer-auric-5-start'),
@@ -83,11 +83,11 @@ var auric = {
             timeSideLabel: document.getElementById('sidetimer-auric-5'),
             sidebox: document.getElementById('auric-5-sidebox'),
             countdownSec: document.getElementById('numerical-sidetimer-auric-5'),
-            doCountdown: function() {countdown(this.status, this.num, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
         },
         {   // [6] Priory Escort W
             status: 0,
-            num: 0,
+            key: 0,
             cooldown: 60 * 6 + 30, 
             startButton: document.getElementById('timer-auric-6-start'),
             startSideButton: document.getElementById('sidetimer-auric-6-start'),
@@ -97,11 +97,11 @@ var auric = {
             timeSideLabel: document.getElementById('sidetimer-auric-6'),
             sidebox: document.getElementById('auric-6-sidebox'),
             countdownSec: document.getElementById('numerical-sidetimer-auric-6'),
-            doCountdown: function() {countdown(this.status, this.num, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
         },
         {   // [7] Balthazar HP
             status: 0,
-            num: 0,
+            key: 0,
             cooldown: 60 * 8, 
             startButton: document.getElementById('timer-auric-7-start'),
             startSideButton: document.getElementById('sidetimer-auric-7-start'),
@@ -111,12 +111,12 @@ var auric = {
             timeSideLabel: document.getElementById('sidetimer-auric-7'),
             sidebox: document.getElementById('auric-7-sidebox'),
             countdownSec: document.getElementById('numerical-sidetimer-auric-7'),
-            doCountdown: function() {countdown(this.status, this.num, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
         },
         {   // [8] Blighted Saplings
             name: "Blighted Saplings",
             status: 0,
-            num: 0,
+            key: 0,
             cooldown: 60 * 6 + 30, 
             startButton: document.getElementById('timer-auric-8-start'),
             startSideButton: document.getElementById('sidetimer-auric-8-start'),
@@ -126,12 +126,12 @@ var auric = {
             timeSideLabel: document.getElementById('sidetimer-auric-8'),
             sidebox: document.getElementById('auric-8-sidebox'),
             countdownSec: document.getElementById('numerical-sidetimer-auric-8'),
-            doCountdown: function() {countdown(this.status, this.num, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
         },
         {   // [9] Wyvern
             name: "Wyvern",
             status: 0,
-            num: 0,
+            key: 0,
             cooldown: 60 * 14, 
             startButton: document.getElementById('timer-auric-9-start'),
             startSideButton: document.getElementById('sidetimer-auric-9-start'),
@@ -141,12 +141,12 @@ var auric = {
             timeSideLabel: document.getElementById('sidetimer-auric-9'),
             sidebox: document.getElementById('auric-9-sidebox'),
             countdownSec: document.getElementById('numerical-sidetimer-auric-9'),
-            doCountdown: function() {countdown(this.status, this.num, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
         },
         {   // [10] Ooze
             name: "Ooze",
             status: 0,
-            num: 0,
+            key: 0,
             cooldown: 60 * 13, 
             startButton: document.getElementById('timer-auric-10-start'),
             startSideButton: document.getElementById('sidetimer-auric-10-start'),
@@ -156,12 +156,12 @@ var auric = {
             timeSideLabel: document.getElementById('sidetimer-auric-10'),
             sidebox: document.getElementById('auric-10-sidebox'),
             countdownSec: document.getElementById('numerical-sidetimer-auric-10'),
-            doCountdown: function() {countdown(this.status, this.num, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
         },
         {   // [11] Tendril
             name: "Tendril",
             status: 0,
-            num: 0,
+            key: 0,
             cooldown: 60 * 11 + 30, 
             startButton: document.getElementById('timer-auric-11-start'),
             startSideButton: document.getElementById('sidetimer-auric-11-start'),
@@ -171,11 +171,11 @@ var auric = {
             timeSideLabel: document.getElementById('sidetimer-auric-11'),
             sidebox: document.getElementById('auric-11-sidebox'),
             countdownSec: document.getElementById('numerical-sidetimer-auric-11'),
-            doCountdown: function() {countdown(this.status, this.num, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
         },
         {   // [12] Priory Escort NE
             status: 0,
-            num: 0,
+            key: 0,
             cooldown: 60 * 6 + 30, 
             startButton: document.getElementById('timer-auric-12-start'),
             startSideButton: document.getElementById('sidetimer-auric-12-start'),
@@ -185,11 +185,11 @@ var auric = {
             timeSideLabel: document.getElementById('sidetimer-auric-12'),
             sidebox: document.getElementById('auric-12-sidebox'),
             countdownSec: document.getElementById('numerical-sidetimer-auric-12'),
-            doCountdown: function() {countdown(this.status, this.num, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
         },
         {   // [13] Treasure Mushroom
             status: 0,
-            num: 0,
+            key: 0,
             cooldown: 60 * 9 + 45, 
             startButton: document.getElementById('timer-auric-13-start'),
             startSideButton: document.getElementById('sidetimer-auric-13-start'),
@@ -199,7 +199,7 @@ var auric = {
             timeSideLabel: document.getElementById('sidetimer-auric-13'),
             sidebox: document.getElementById('auric-13-sidebox'),
             countdownSec: document.getElementById('numerical-sidetimer-auric-13'),
-            doCountdown: function() {countdown(this.status, this.num, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
         },
         {   // [14] Auric Basin Meta
             timeSideLabel: document.getElementById('sidetimer-auric-meta'),
@@ -217,7 +217,7 @@ var placeholder = [];
 // act independently when countdowning instead of messing
 // up when you reset/restart
 for (i = 0; i < auric.events.length; i++){
-    auric.events[i].num = i; 
+    auric.events[i].key = i; 
 }
 console.log(auric.events)
 
@@ -264,9 +264,7 @@ function countdown(status, eventNum, eventCooldown, timeLabel, sideTimeLabel, si
 
 // Label of the meta on the side
 var side_meta_name = document.getElementById('side-meta-name');
-
-var auric; // Empty array for countdown
-var find_num = /\d+/; // Expression to use with .match(find_num) to find a number in a string
+var findNum = /\d+/; // Expression to use with .match(findNum) to find a number in a string
 
 // Starts and stops an event
 // objHTML = id of the html object itself
@@ -276,44 +274,44 @@ function start_stop(objHTML, objEvent){
     // The container itself
     let timer = objHTML.id;
     // Based on the ID of the container, check what num is hard-coded as and match it with the event object
-    let timerNum = objHTML.id.match(find_num)[0]; 
+    let timerKey = objHTML.id.match(findNum)[0]; 
     // Status 0 = Stop 
     // Status 1 = Starting, Ongoing
     // When the Start button is clicked, change status to Starting and start timer
     // Else -> Keep status at Stop
-    function start_Event(timerNum){
+    function start_Event(timerKey){
         let start = "Start", 
             reset = "Reset",
             // Colors that are set by the dark/light mode
             setDefault = ''; 
-        if (timer == objEvent[timerNum].startButton.id || timer == objEvent[timerNum].startSideButton.id){
-            if (objEvent[timerNum].status == 0){
-                objEvent[timerNum].status = 1; 
-                objEvent[timerNum].doCountdown(); 
+        if (timer == objEvent[timerKey].startButton.id || timer == objEvent[timerKey].startSideButton.id){
+            if (objEvent[timerKey].status == 0){
+                objEvent[timerKey].status = 1; 
+                objEvent[timerKey].doCountdown(); 
 
-                objEvent[timerNum].startButton.value = reset;
-                objEvent[timerNum].startSideButton.value = reset;
+                objEvent[timerKey].startButton.value = reset;
+                objEvent[timerKey].startSideButton.value = reset;
             } else {
-                objEvent[timerNum].status = 0;
-                objEvent[timerNum].startButton.value = start;
-                objEvent[timerNum].startSideButton.value = start;
+                objEvent[timerKey].status = 0;
+                objEvent[timerKey].startButton.value = start;
+                objEvent[timerKey].startSideButton.value = start;
 
-                objEvent[timerNum].timeLabel.style.color = setDefault;
-                objEvent[timerNum].timeSideLabel.style.color = setDefault;
-                objEvent[timerNum].timeLabel.style.background = 'rgba(255,246,214)';
-                objEvent[timerNum].sidebox.style.background = setDefault;
-                objEvent[timerNum].sidebox.style.color = setDefault;
-                objEvent[timerNum].doCountdown();
+                objEvent[timerKey].timeLabel.style.color = setDefault;
+                objEvent[timerKey].timeSideLabel.style.color = setDefault;
+                objEvent[timerKey].timeLabel.style.background = 'rgba(255,246,214)';
+                objEvent[timerKey].sidebox.style.background = setDefault;
+                objEvent[timerKey].sidebox.style.color = setDefault;
+                objEvent[timerKey].doCountdown();
             }   
         }
     }
-    start_Event(timerNum);
+    start_Event(timerKey);
 }
 
 // Reset Button functionality
 function reset (objHTML, objEvent){
     let timer = objHTML.id;
-    let timerNum = objHTML.id.match(find_num)[0];
+    let timerKey = objHTML.id.match(findNum)[0];
     /*
         When Reset button is clicked, 
         -> Change status to Stop 
@@ -323,147 +321,58 @@ function reset (objHTML, objEvent){
     */
     // Remember to change these reset times to the RESPAWN rate and not the INITIAL SPAWN rate
 
-    function reset_event(timerNum){
-        if (timer == objEvent[timerNum].resetButton.id || timer == objEvent[timerNum].resetSideButton.id){
-            if (objEvent[timerNum].status == 1){
-                objEvent[timerNum].status = 0;
-                objEvent[timerNum].cooldown = objEvent[timerNum].cooldown;
-                objEvent[timerNum].timeLabel.style.color = "black";
+    function reset_event(timerKey){
+        if (timer == objEvent[timerKey].resetButton.id || timer == objEvent[timerKey].resetSideButton.id){
+            if (objEvent[timerKey].status == 1){
+                objEvent[timerKey].status = 0;
+                objEvent[timerKey].cooldown = objEvent[timerKey].cooldown;
+                objEvent[timerKey].timeLabel.style.color = "black";
 
-                objEvent[timerNum].timeSideLabel.innerHTML = 'black';
-                objEvent[timerNum].timeSideLabel.style.color = '';
+                objEvent[timerKey].timeSideLabel.innerHTML = 'black';
+                objEvent[timerKey].timeSideLabel.style.color = '';
 
-                objEvent[timerNum].timeLabel.style.background = 'rgba(255,246,214)';
-                objEvent[timerNum].sidebox.style.background = "transparent";
+                objEvent[timerKey].timeLabel.style.background = 'rgba(255,246,214)';
+                objEvent[timerKey].sidebox.style.background = "transparent";
 
                 // For events with different initial spawn and respawn rates 
-                switch (objEvent[timerNum].name){
+                switch (objEvent[timerKey].name){
                     // AURIC BASIN
                     case "Blighted Saplings":
-                    objEvent[timerNum].cooldown = 60 * 8 + 30; 
+                    objEvent[timerKey].cooldown = 60 * 8 + 30; 
                     break;
 
                     case "Wyvern":
-                    objEvent[timerNum].cooldown = 60 * 11;
+                    objEvent[timerKey].cooldown = 60 * 11;
                     break;
 
                     case "Ooze":
-                    objEvent[timerNum].cooldown = 60 * 14; 
+                    objEvent[timerKey].cooldown = 60 * 14; 
                     break;
 
                     case "Tendril":
-                    objEvent[timerNum].cooldown = 60 * 10 + 15;
+                    objEvent[timerKey].cooldown = 60 * 10 + 15;
                     break;
                 }
 
-                objEvent[timerNum].doCountdown(); 
-                objEvent[timerNum].status = 1;
-                objEvent[timerNum].doCountdown(); 
+                objEvent[timerKey].doCountdown(); 
+                objEvent[timerKey].status = 1;
+                objEvent[timerKey].doCountdown(); 
             }
         }
     }
-    reset_event(timerNum);
+    reset_event(timerKey);
 }
-// Checkboxes
-function auric_All_Checkbox(obj){
-	var checkbox = obj,
-		a1 = document.getElementById('auric-1-checkbox'), 
-        a2 = document.getElementById('auric-2-checkbox'), 
-        a3 = document.getElementById('auric-3-checkbox'), 
-        a4 = document.getElementById('auric-4-checkbox'); 
-
-	if (checkbox.checked == true){
-		a1.checked = true;
-        a2.checked = true;
-        a3.checked = true;
-        a4.checked = true; 
-
-        auric_1_Checkbox(a1);
-        auric_2_Checkbox(a2);
-        auric_3_Checkbox(a3);
-        auric_4_Checkbox(a4);
-	} else {
-		a1.checked = false;
-        a2.checked = false;
-        a3.checked = false;
-        a4.checked = false; 
-
-        auric_1_Checkbox(a1);
-        auric_2_Checkbox(a2);
-        auric_3_Checkbox(a3);
-        auric_4_Checkbox(a4);
-	}
-}
-// Vinetooth N
-function auric_1_Checkbox(obj){
-    var checkbox = obj;
-    if (checkbox.checked == true){
-        sidebox_timer_auric_1.style.display = "block";
+// Shows or removes timer on the sideboxes depending if the users check or unchecks the checkbox
+function checkboxTimer(objHTML, objEvent){
+    // Match the num on the html id to match the pos/key in the objEvent
+    let timerKey = objHTML.id.match(findNum)[0];
+    // Check if user has checked or unchecked checkbox
+    if (objHTML.checked == true){
+        objEvent[timerKey].sidebox.style.display = "block"; 
     } else {
-        sidebox_timer_auric_1.style.display = "none";
+        objEvent[timerKey].sidebox.style.display = "none";
     }
 }
-// Vinetooth E
-function auric_2_Checkbox(obj){
-    var checkbox = obj;
-    if (checkbox.checked == true){
-        sidebox_timer_auric_2.style.display = "block";
-    } else {
-        sidebox_timer_auric_2.style.display = "none";
-    }
-}
-// Vinetooth S
-function auric_3_Checkbox(obj){
-    var checkbox = obj;
-    if (checkbox.checked == true){
-        sidebox_timer_auric_3.style.display = "block";
-    } else {
-        sidebox_timer_auric_3.style.display = "none";
-    }
-}
-// Vinetooth N
-function auric_4_Checkbox(obj){
-    var checkbox = obj;
-    if (checkbox.checked == true){
-        sidebox_timer_auric_4.style.display = "block";
-    } else {
-        sidebox_timer_auric_4.style.display = "none";
-    }
-}
-
-function auric_Post_S_Pylon(obj){
-    var event = obj;
-     if (event.checked == true){
-        start_stop(auric.events[8].startButton);
-     } else {
-        start_stop(auric.events[8].startButton);
-     }
-}
-function auric_Post_SE_Pylon(obj){
-    var event = obj;
-     if (event.checked == true){
-        start_stop(auric.events[9].startButton);
-     } else {
-        start_stop(auric.events[9].startButton);
-     }
-}
-function auric_Post_W_Pylon(obj){
-    var event = obj;
-     if (event.checked == true){
-        start_stop(auric.events[10].startButton);
-     } else {
-        start_stop(auric.events[10].startButton);
-     }
-}
-function auric_Post_N_Pylon(obj){
-    var event = obj;
-     if (event.checked == true){
-        start_stop(auric.events[11].startButton);
-     } else {
-        start_stop(auric.events[11].startButton);
-     }
-}
-
 
 // Initials
 let current_progress = document.getElementById('current-status'),
@@ -605,40 +514,36 @@ let arrow_north = document.getElementById('auric-arrow-1'),
             }
         } // End of function
 
-        if (d.getUTCHours() == 1 && d.getUTCMinutes() >= 30 || d.getUTCHours() == 2 || d.getUTCHours() == 3 && d.getUTCMinutes() < 30){
-            auric_timers(1,2,3);
+        // Event session starts every odd hour at xx:30
+        // Session lasts for 2 hours
+        function event_session(){
+            let hour = d.getUTCHours(),
+                mins = d.getUTCMinutes(),
+                start_hour = 0,
+                btw_hour = 0,
+                end_hour = 0;
+            // Check if hour is odd or not
+            // If odd, use that as the start hour
+            // Else, use hour - 1 as the start hour
+            if (hour % 2 != 0){
+                start_hour = hour; 
+                btw_hour = hour + 1;
+                end_hour = hour + 2;
+            } else {
+                start_hour = hour - 1;
+                btw_hour = hour; 
+                end_hour = hour + 1;
+            }
+            // Only start meta timer when
+            // 1) Start hour is an odd hour and is greater than 30 mins
+            // 2) Btw hour is the second hour (even)
+            if (hour == start_hour && mins >= 30 || hour == btw_hour){
+                auric_timers(start_hour, btw_hour, end_hour); 
+            }
+            // 3) End hour is the next odd hour, but is less than 30 mins
+            if (hour == start_hour && mins < 30){
+                auric_timers(start_hour - 2, btw_hour - 2, end_hour - 2);
+            }
         }
-        if (d.getUTCHours() == 3 && d.getUTCMinutes() >= 30 || d.getUTCHours() == 4 || d.getUTCHours() == 5 && d.getUTCMinutes() < 30){
-            auric_timers(3,4,5);
-        }
-        if (d.getUTCHours() == 5 && d.getUTCMinutes() >= 30 || d.getUTCHours() == 6 || d.getUTCHours() == 7 && d.getUTCMinutes() < 30){
-            auric_timers(5,6,7);
-        }
-        if (d.getUTCHours() == 7 && d.getUTCMinutes() >= 30 || d.getUTCHours() == 8 || d.getUTCHours() == 9 && d.getUTCMinutes() < 30){
-            auric_timers(7,8,9);
-        }
-        if (d.getUTCHours() == 9 && d.getUTCMinutes() >= 30 || d.getUTCHours() == 10 || d.getUTCHours() == 11 && d.getUTCMinutes() < 30){
-            auric_timers(9,10,11);
-        }
-        if (d.getUTCHours() == 11 && d.getUTCMinutes() >= 30 || d.getUTCHours() == 12 || d.getUTCHours() == 13 && d.getUTCMinutes() < 30){
-            auric_timers(11,12,13);
-        }
-        if (d.getUTCHours() == 13 && d.getUTCMinutes() >= 30 || d.getUTCHours() == 14 || d.getUTCHours() == 15 && d.getUTCMinutes() < 30){
-            auric_timers(13,14,15);
-        }
-        if (d.getUTCHours() == 15 && d.getUTCMinutes() >= 30 || d.getUTCHours() == 16 || d.getUTCHours() == 17 && d.getUTCMinutes() < 30){
-            auric_timers(15,16,17);
-        }
-        if (d.getUTCHours() == 17 && d.getUTCMinutes() >= 30 || d.getUTCHours() == 18 || d.getUTCHours() == 19 && d.getUTCMinutes() < 30){
-            auric_timers(17,18,19);
-        }
-        if (d.getUTCHours() == 19 && d.getUTCMinutes() >= 30 || d.getUTCHours() == 20 || d.getUTCHours() == 21 && d.getUTCMinutes() < 30){
-            auric_timers(19,20,21);
-        }
-        if (d.getUTCHours() == 21 && d.getUTCMinutes() >= 30 || d.getUTCHours() == 22 || d.getUTCHours() == 23 && d.getUTCMinutes() < 30){
-            auric_timers(21,22,23);
-        }
-        if (d.getUTCHours() == 23 && d.getUTCMinutes() >= 30 || d.getUTCHours() == 0 || d.getUTCHours() == 1 && d.getUTCMinutes() < 30){
-            auric_timers(23,0,1);
-        }
+        event_session();
     },1000); 

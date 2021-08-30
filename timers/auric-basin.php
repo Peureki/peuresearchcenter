@@ -142,8 +142,6 @@
 	  </div> <!-- End of left side box --> 
 
 	  <div id = "nav-right-sidetimer-box" class = "nav-right-sidetimer-box-overflow" style = "min-width: 180px;">
-      All: <input type = "Checkbox" id = "auric-all-checkbox" checked = "true" onclick = "auric_All_Checkbox(this);">
-      <br><br>
       <b> Completed Pylons? </b>
       <br><br>
       South Pylon: <input type = "Checkbox" id = "auric-post-s-pylon" onclick = "auric_Post_S_Pylon(this);"> 
@@ -157,35 +155,40 @@
       <br><br>
       <b> Vinetooths </b>
       <br><br>
-      Vinetooth N: <input type = "Checkbox" id = "auric-1-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'auric-1-sidebox') ">
+      Vinetooth N: <input type = "Checkbox" id = "auric-1-checkbox" checked = "true" onclick = "checkboxTimer(this, auric.events);">
       <br>
-      Vinetooth E: <input type = "Checkbox" id = "auric-2-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'auric-2-sidebox')">
+      Vinetooth E: <input type = "Checkbox" id = "auric-2-checkbox" checked = "true" onclick = "checkboxTimer(this, auric.events)">
       <br>
-      Vinetooth S: <input type = "Checkbox" id = "auric-3-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'auric-3-sidebox')">
+      Vinetooth S: <input type = "Checkbox" id = "auric-3-checkbox" checked = "true" onclick = "checkboxTimer(this, auric.events)">
       <br>
-      Vinetooth W: <input type = "Checkbox" id = "auric-4-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'auric-4-sidebox')">
+      Vinetooth W: <input type = "Checkbox" id = "auric-4-checkbox" checked = "true" onclick = "checkboxTimer(this, auric.events)">
       
       <br><br>
       <b> Priory Escorts </b>
       <br><br>
-      Priory Escort NE: <input type = "Checkbox" id = "auric-12-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'auric-12-sidebox')">
+      Priory Escort NE: <input type = "Checkbox" id = "auric-12-checkbox" checked = "true" onclick = "checkboxTimer(this, auric.events)">
       <br>
-      Priory Escort SE: <input type = "Checkbox" id = "auric-5-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'auric-5-sidebox')">
+      Priory Escort SE: <input type = "Checkbox" id = "auric-5-checkbox" checked = "true" onclick = "checkboxTimer(this, auric.events)">
       <br>
-      Priory Escort W: <input type = "Checkbox" id = "auric-6-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'auric-6-sidebox')">
+      Priory Escort W: <input type = "Checkbox" id = "auric-6-checkbox" checked = "true" onclick = "checkboxTimer(this, auric.events)">
 
       <br><br>
       <b> Post Pylon Events/HP </b>
       <br><br>
-      Bathlazar HP: <input type = "Checkbox" id = "auric-7-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'auric-7-sidebox')">
+      Bathlazar HP: <input type = "Checkbox" id = "auric-7-checkbox" checked = "true" onclick = "checkboxTimer(this, auric.events)">
       <br>
-      Blighted Sapling: <input type = "Checkbox" id = "auric-8-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'auric-8-sidebox')">
+      Blighted Sapling: <input type = "Checkbox" id = "auric-8-checkbox" checked = "true" onclick = "checkboxTimer(this, auric.events)">
       <br>
-      Wyvern: <input type = "Checkbox" id = "auric-9-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'auric-9-sidebox')">
+      Wyvern: <input type = "Checkbox" id = "auric-9-checkbox" checked = "true" onclick = "checkboxTimer(this, auric.events)">
       <br>
-      Ooze: <input type = "Checkbox" id = "auric-10-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'auric-10-sidebox')">
+      Ooze: <input type = "Checkbox" id = "auric-10-checkbox" checked = "true" onclick = "checkboxTimer(this, auric.events)">
       <br>
-      Tendril: <input type = "Checkbox" id = "auric-11-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'auric-11-sidebox')">
+      Tendril: <input type = "Checkbox" id = "auric-11-checkbox" checked = "true" onclick = "checkboxTimer(this, auric.events)">
+
+      <br><br>
+      <b> Other </b>
+      <br><br>
+      TM: <input type = "Checkbox" id = "auric-13-checkbox" checked = "true" onclick = "checkboxTimer(this, auric.events)">
 
       
       
@@ -193,10 +196,10 @@
 
 	<!-- Main box -->
 	<div class = "page-box">
-		<div class = "page-header">
-      	<h2> Disclaimer: </h2>
-			<div class = "small-description">
-				Auric Basin is seperate by 2 different types of events: pylon and independent events.
+    <div class = "small-description">
+      <details>
+        <summary><b>How to: </b></summary>
+        Auric Basin is seperate by 2 different types of events: pylon and independent events.
         <br><br>
         The pylon events are events that occur after completing a pylon. To accurately get the time of the events that spawn after completing a particular pylon, <b>click on the checkbox on the right sidebox under "Completed Pylons?"</b>. This will begin the <b> initial spawn timer</b> of the event. After completing the event, click on the &#8635; button to start the <b> respawn timer </b>. Initial spawn timer and respawn timer are not the same amount of time. 
         <br><br>
@@ -207,9 +210,8 @@
         <br><br> 
         <b>Priority of events:</b>
         <br>Vinetooths &#8594; Blighted Saplings &#8594; Wyvern (or Balthazar if you have a small group) &#8594; Priory Escort &#8594; Treasure Mushroom &#8594; Other Champs
-			</div>
-			
-		</div>
+      </details>
+    </div>
 
 		<div class = "map-timer-wrapper">
 		<div class = "map-timer-box">

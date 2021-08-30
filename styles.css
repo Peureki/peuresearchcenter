@@ -70,6 +70,9 @@ a {
 a:hover{
 	color: var(--clr-red);
 }
+details summary{
+	cursor: pointer;
+}
 
 /* change colours to suit your needs */
 ins {
