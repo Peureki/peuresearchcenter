@@ -4,7 +4,6 @@
   <!-- Defaults -->
   <?php include('../config.php'); ?>
 	<title> Auric Basin</title>
-  <script type = "text/javascript" src = "./eventClass.js"></script>
 </head>
 <body>
 	<!-- 
@@ -25,7 +24,11 @@
     <div class = "section-header-space"></div>
   </div>
 
-	<!-- Inner navgation box to the side -->
+	<!-- 
+    ==========================================================================
+    ====================== LEFT TIMER SIDEBOXES ==============================
+    ==========================================================================
+  -->
 	<div id = "nav-left-sidetimer-box" class = "nav-left-sidetimer-box">
 
       <div id = "auric-meta-sidebox" class = "meta-sidebox" >
@@ -139,7 +142,13 @@
       </div>
 	    	     
 	    
-	  </div> <!-- End of left side box --> 
+	  </div> <!-- End of left side box -->
+
+    <!-- 
+      ================================================================
+      ====================== CHECKBOXES ==============================
+      ================================================================
+    --> 
 
 	  <div id = "nav-right-sidetimer-box" class = "nav-right-sidetimer-box-overflow" style = "min-width: 180px;">
       <b> Completed Pylons? </b>
@@ -194,7 +203,11 @@
       
 	 </div>
 
-	<!-- Main box -->
+	<!-- 
+    ==============================================================
+    ====================== MAIN BOX ==============================
+    ==============================================================
+  -->
 	<div class = "page-box">
     <div class = "small-description">
       <details>
@@ -321,7 +334,11 @@
           </div>
 
 
-      <!-- Event info -->
+      <!-- 
+      =================================================================
+      ====================== EVENT INFOS ==============================
+      =================================================================
+      -->
 
       <!-- Tendril -->
       <div class = "event-info" id = "auric-event-info-1">
@@ -555,7 +572,11 @@
 
 	</div> <!-- End of page-box -->
 
-  <!-- Progress bars -->
+  <!-- 
+    ===================================================================
+    ====================== PROGRESS BARS ==============================
+    ===================================================================
+  -->
   <div class = "bottom-sticky">
       <div id = "progress-box" class = "progress-box">
         <h1 id = "progress-text" class = "progress-text"> </h1>
@@ -566,6 +587,12 @@
         <h1 id = "current-status"></h1>
       </div>
   </div>
+
+  <!-- 
+    ===============================================================
+    ====================== WAYPOINTS ==============================
+    ===============================================================
+  -->
 
   <div style = "opacity: 0;">
     <input id = "wp-1" type = "text" value = "[&BN0HAAA=]">

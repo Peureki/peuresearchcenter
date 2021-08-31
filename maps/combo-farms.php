@@ -133,7 +133,7 @@
 		<div id = "infusion-train" class = "small-description">
 			<h class = "bookmark-header" style = "background-color: rgb(19, 201, 54);"> Infusion Train [SM]</h>
 			<br><br>
-			This train is done by the guild Shiny Mayhem [SM] with cjosh.4598 and Allytria.6734. The train starts and begins at XX:05, at reset. The route goes as following:
+			This train is done by the guild Shiny Mayhem [SM] with cjosh.4598 and Noir.1652. The train starts and begins at XX:05, at reset. The route goes as following:
 
 			<br><br>
 			- Casino Blitz / Pinata
