@@ -1460,7 +1460,7 @@ async function getDaily(choice){
 			},
 			{
 				name: "Snowslide Ravine",
-				waypoint: "[&BIMCAAA=]",
+				waypoint: "[&BGQCAAA=]",
 				desc: "Nearby waypoint",
 				area: "Shiverpeaks",
 			},

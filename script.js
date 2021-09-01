@@ -5138,6 +5138,9 @@ var progress_color = "rgba(215,161,93)",
 	pre_meta_color = "rgba(191, 255, 255)",
 	meta_color = "rgba(87, 204, 250)";
 
+// Expression to use with .match(findNum) to find a number in a string
+var findNum = /\d+/; 
+
 // BITTERFROST CHECKBOXES
 function bitterfrost_All_Checkbox(obj){
 	var checkbox = obj,
@@ -6050,6 +6053,171 @@ function getDisplayTime(time){
     	return minutes + ":" + seconds;
     }
 } 
+
+// =================================================================================
+// ============================= EVENT TIMER FUNCTIONS =============================
+// =================================================================================
+// Dynamically make unique keys for all objects so that
+// it can be unique timers. This allows the timers to 
+// act independently when countdowning instead of messing
+// up when you reset/restart
+// PLACE THIS AFTER CREATING THE EVENT OBJECTS
+function add_event_keys(objEvent){
+	for (i = 0; i < objEvent.length; i++){
+		objEvent[i].key = i;
+	}
+}
+// Empty array to place timer countdowns in. By allowing to have their own space,
+// it makes sure each timer is independent from one another and can still be
+// called again by the same functions to be stopped or not
+var placeholder = []; 
+// Start the countdown of the timers 
+function countdown(status, eventNum, eventCooldown, timeLabel, sideTimeLabel, sidebox, numCountdown){
+    // Get the time right now
+    let dateNow = Date.now();
+
+    function run_countdown() {
+        // Take the parameters from the event object to start counting down time and display it
+        // Change color of texts and displays based on how much time is left (green for it's up, yellow for when it's coming, etc)
+        let countdown = getTime(dateNow, eventCooldown, timeLabel, sideTimeLabel, numCountdown);
+
+        if (countdown.time <= 0){ 
+            timeLabel.style.background = ready_color;
+            timeLabel.style.color = "red"; 
+            sidebox.style.background = ready_color;
+        } else if (countdown.time <= 60){
+            timeLabel.style.background = soon_color;
+            timeLabel.style.color = "black"; 
+            sidebox.style.background = soon_color;
+            sidebox.style.color = "black"; 
+
+        // Default -> Countdown number to green, bkg are normal
+        } else if (countdown.time < eventCooldown){
+            timeLabel.style.color = "#008B11";
+            sideTimeLabel.style.color = "#008B11";
+        }
+    }
+    // Run the function to do the countdown
+    run_countdown(); 
+    // Check if the status of the event is 1 or 0. If 1, do the countdown
+    // Else, stop this specific timer
+    //
+    // Do [eventNum] because eventNum is unique to each event. This allows
+    // each timer to act independently + can still be stopped/reset/etc when
+    // this function is called again
+    if (status == 1){
+        placeholder[eventNum] = setInterval(run_countdown, 1000);
+    } else {
+        clearInterval(placeholder[eventNum]);   
+    } 
+}
+
+// Starts and stops an event
+// objHTML = id of the html object itself
+// objEvent = reference the specific events that are going to be called via HTML (this, auric.events)
+function start_stop(objHTML, objEvent){
+    // The container itself
+    let timer = objHTML.id;
+    // Based on the ID of the container, check what num is hard-coded as and match it with the event object
+    let timerKey = objHTML.id.match(findNum)[0]; 
+    // Status 0 = Stop 
+    // Status 1 = Starting, Ongoing
+    // When the Start button is clicked, change status to Starting and start timer
+    // Else -> Keep status at Stop
+    function start_Event(timerKey){
+        let start = "Start", 
+            reset = "Reset",
+            // Colors that are set by the dark/light mode
+            setDefault = ''; 
+        if (timer == objEvent[timerKey].startButton.id || timer == objEvent[timerKey].startSideButton.id){
+            if (objEvent[timerKey].status == 0){
+                objEvent[timerKey].status = 1; 
+                objEvent[timerKey].doCountdown(); 
+
+                objEvent[timerKey].startButton.value = reset;
+                objEvent[timerKey].startSideButton.value = reset;
+            } else {
+                objEvent[timerKey].status = 0;
+                objEvent[timerKey].startButton.value = start;
+                objEvent[timerKey].startSideButton.value = start;
+
+                objEvent[timerKey].timeLabel.style.color = setDefault;
+                objEvent[timerKey].timeSideLabel.style.color = setDefault;
+                objEvent[timerKey].timeLabel.style.background = 'rgba(255,246,214)';
+                objEvent[timerKey].sidebox.style.background = setDefault;
+                objEvent[timerKey].sidebox.style.color = setDefault;
+                objEvent[timerKey].doCountdown();
+            }   
+        }
+    }
+    start_Event(timerKey);
+}
+
+// Reset Button functionality
+function reset (objHTML, objEvent){
+    let timer = objHTML.id;
+    let timerKey = objHTML.id.match(findNum)[0];
+    /*
+        When Reset button is clicked, 
+        -> Change status to Stop 
+        -> Reset timer to original time + 1
+        -> Reset time label to oringal time
+        -> Reset opacity of the text to hidden
+    */
+    // Remember to change these reset times to the RESPAWN rate and not the INITIAL SPAWN rate
+
+    function reset_event(timerKey){
+        if (timer == objEvent[timerKey].resetButton.id || timer == objEvent[timerKey].resetSideButton.id){
+            if (objEvent[timerKey].status == 1){
+                objEvent[timerKey].status = 0;
+                objEvent[timerKey].cooldown = objEvent[timerKey].cooldown;
+                objEvent[timerKey].timeLabel.style.color = "black";
+
+                objEvent[timerKey].timeSideLabel.innerHTML = 'black';
+                objEvent[timerKey].timeSideLabel.style.color = '';
+
+                objEvent[timerKey].timeLabel.style.background = 'rgba(255,246,214)';
+                objEvent[timerKey].sidebox.style.background = "transparent";
+
+                // For events with different initial spawn and respawn rates 
+                switch (objEvent[timerKey].name){
+                    // AURIC BASIN
+                    case "Blighted Saplings":
+                    objEvent[timerKey].cooldown = 60 * 8 + 30; 
+                    break;
+
+                    case "Wyvern":
+                    objEvent[timerKey].cooldown = 60 * 11;
+                    break;
+
+                    case "Ooze":
+                    objEvent[timerKey].cooldown = 60 * 14; 
+                    break;
+
+                    case "Tendril":
+                    objEvent[timerKey].cooldown = 60 * 10 + 15;
+                    break;
+                }
+
+                objEvent[timerKey].doCountdown(); 
+                objEvent[timerKey].status = 1;
+                objEvent[timerKey].doCountdown(); 
+            }
+        }
+    }
+    reset_event(timerKey);
+}
+// Shows or removes timer on the sideboxes depending if the users check or unchecks the checkbox
+function checkboxTimer(objHTML, objEvent){
+    // Match the num on the html id to match the pos/key in the objEvent
+    let timerKey = objHTML.id.match(findNum)[0];
+    // Check if user has checked or unchecked checkbox
+    if (objHTML.checked == true){
+        objEvent[timerKey].sidebox.style.display = "block"; 
+    } else {
+        objEvent[timerKey].sidebox.style.display = "none";
+    }
+}
 
 function nav_popup_overflow(){
 	var nav_left = document.getElementById('nav-left-sidetimer-box'),
