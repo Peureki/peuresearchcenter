@@ -26,7 +26,7 @@
 
 	<!-- 
     ==========================================================================
-    ====================== LEFT TIMER SIDEBOXES ==============================
+    ====================== SIDE TIMER LIST ===================================
     ==========================================================================
   -->
 	<div id = "side-timer-list" class = "side-timer-list">
@@ -42,7 +42,7 @@
 	      <input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "sidetimer-auric-1-start">
 	      <input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "sidetimer-auric-1-reset">
 	      <p1 id = "sidetimer-auric-1">9:30</p1>
-	      <p2 id = "numerical-sidetimer-auric-1">570</p2>
+	      <p2 id = "numerical-sidetimer-auric-1"></p2>
 	    </div>
 
 	    <div id = "auric-2-sidebox" class = "event-sidebox" >

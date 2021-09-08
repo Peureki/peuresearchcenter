@@ -4471,6 +4471,7 @@ table.nodes td.nodes-cooldown{
 
 .map-timer-wrapper{
 	width: 100%;
+	position: relative;
 	margin: auto;
 	-webkit-transition: all 1s ease;
   	transition: all 1s ease;
@@ -9589,6 +9590,36 @@ table.nodes td.nodes-cooldown{
 	top: 11%;
 	left: 92%;
 }
+#jahai-1-box{ /* Yatendi Village */
+	top: 65%;
+	left: 80%;
+}
+#jahai-2-box{ /* Ziya */
+	top: 85%;
+	left: 75%;
+}
+#jahai-3-box{ /* Garrison */
+	top: 70%;
+	left: 45%;
+}
+#jahai-4-box{ /* DERV */
+	top: 85%;
+	left: 30%;
+}
+#jahai-5-box{ /* Gate */
+	top: 75%;
+	left: 30%;
+}
+#jahai-6-box{ /* Chantry */
+	top: 8%;
+	left: 73%;
+}
+#jahai-7-box{ /* Wyvern */
+	top: 20%;
+	left: 43%;
+}
+
+
 
 /* Culls */
 /* Culls Crystal Bloom */

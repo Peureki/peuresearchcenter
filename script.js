@@ -6144,10 +6144,10 @@ function reset (objHTML, objEvent){
             if (objEvent[timerKey].status == 1){
                 objEvent[timerKey].status = 0;
                 objEvent[timerKey].cooldown = objEvent[timerKey].cooldown;
-                objEvent[timerKey].timeLabel.style.color = "black";
+                objEvent[timerKey].timeLabel.style.color = "";
 
-                objEvent[timerKey].timeSideLabel.innerHTML = 'black';
-                objEvent[timerKey].timeSideLabel.style.color = '';
+                objEvent[timerKey].timeSideLabel.innerHTML = '';
+                objEvent[timerKey].sidebox.style.color = '';
 
                 objEvent[timerKey].timeLabel.style.background = 'rgba(255,246,214)';
                 objEvent[timerKey].sidebox.style.background = "transparent";
@@ -6183,17 +6183,21 @@ function reset (objHTML, objEvent){
 // Gets the id of the timer list on the left side
 // As the timers go off or reset, change the list order depending on the timers from most upcoming to least
 function sortTimers(){
+	// Make sure in the HTML, the ID of the sidebox matches
 	let list = document.getElementById('side-timer-list'); 
 	let sortList = setInterval(() => {
 		let switching, i, x, y, shouldSwitch, 
+			// Get all the timers from the timer list
 			listObj = list.children; 
-
+		// Default status
 		switching = true;
 		while (switching){
 			switching = false; 
 
 			for (i = 0; i < listObj.length - 1; i++){
 				shouldSwitch = false; 
+				// Compare current and next timer to see if one is greater than the other
+				// If yes, then switch
 				x = listObj[i].getElementsByTagName('p2');
 				y = listObj[i+1].getElementsByTagName('p2');
 
@@ -6210,6 +6214,7 @@ function sortTimers(){
 		} 
 	}, 1000)
 }
+// DELETE THIS AFTER ALL TIMER PAGES ARE DONE
 // Sorts the event table on the left on Timer pages by upcoming event
 function left_sidetimer_sort(obj){
   var switching, i, x, y, shouldSwitch;
