@@ -67,7 +67,6 @@
 					<li><a href = "<?php echo $base;?>/timers/domain-of-vabbi.php"> Domain of Vabbi </a></li>
 				</div>
 				<div class = "sub-menu-header">
-					<li> Path of Fire </li>
 					<li> Living Story 4 </li>
 					<li><a href = "<?php echo $base;?>/timers/domain-of-istan.php"> Domain of Istan </a></li>
 					<li><a href = "<?php echo $base;?>/timers/sandswept-isles.php"> Sandswept Isles </a></li>

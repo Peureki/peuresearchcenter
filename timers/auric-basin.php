@@ -29,7 +29,7 @@
     ====================== LEFT TIMER SIDEBOXES ==============================
     ==========================================================================
   -->
-	<div id = "nav-left-sidetimer-box" class = "nav-left-sidetimer-box">
+	<div id = "side-timer-list" class = "side-timer-list">
 
       <div id = "auric-meta-sidebox" class = "meta-sidebox" >
         <h1 id = "side-meta-name"> </h1>

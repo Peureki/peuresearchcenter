@@ -5728,33 +5728,6 @@ function kourna_Enbilulu_Checkbox(obj){
 	}
 }
 
-// Sorts the event table on the left on Timer pages by upcoming event
-function left_sidetimer_sort(obj){
-  var switching, i, x, y, shouldSwitch;
-  var left_sidetimer = obj.children;
-  switching = true;
-
-  while (switching) {
-    switching = false;
-    
-    for (i = 0; i < (left_sidetimer.length - 1); i++) {
-      shouldSwitch = false;
-      
-      x = left_sidetimer[i].getElementsByTagName("p2");
-      y = left_sidetimer[i+1].getElementsByTagName("p2");
-
-      if (parseInt(x[0].innerHTML) > parseInt(y[0].innerHTML)) {
-        shouldSwitch = true;
-        break;
-      }
-    }
-    if (shouldSwitch) { 
-      left_sidetimer[i].parentNode.insertBefore(left_sidetimer[i + 1], left_sidetimer[i]);
-      switching = true;
-    }
-  }
-}
-
 function change_arrow_colors_to_light_cyan(div){
 	var set = div.children;
 	for (i = 0; i < set.length; i++){
@@ -6124,7 +6097,7 @@ function start_stop(objHTML, objEvent){
     // Status 1 = Starting, Ongoing
     // When the Start button is clicked, change status to Starting and start timer
     // Else -> Keep status at Stop
-    function start_Event(timerKey){
+    function start_event(timerKey){
         let start = "Start", 
             reset = "Reset",
             // Colors that are set by the dark/light mode
@@ -6150,7 +6123,7 @@ function start_stop(objHTML, objEvent){
             }   
         }
     }
-    start_Event(timerKey);
+    start_event(timerKey);
 }
 
 // Reset Button functionality
@@ -6207,6 +6180,90 @@ function reset (objHTML, objEvent){
     }
     reset_event(timerKey);
 }
+// Gets the id of the timer list on the left side
+// As the timers go off or reset, change the list order depending on the timers from most upcoming to least
+function sortTimers(){
+	let list = document.getElementById('side-timer-list'); 
+	let sortList = setInterval(() => {
+		let switching, i, x, y, shouldSwitch, 
+			listObj = list.children; 
+
+		switching = true;
+		while (switching){
+			switching = false; 
+
+			for (i = 0; i < listObj.length - 1; i++){
+				shouldSwitch = false; 
+				x = listObj[i].getElementsByTagName('p2');
+				y = listObj[i+1].getElementsByTagName('p2');
+
+				if (parseInt(x[0].innerHTML) > parseInt(y[0].innerHTML)){
+					shouldSwitch = true;
+					break;
+				}
+			}
+
+			if (shouldSwitch){
+				listObj[i].parentNode.insertBefore(listObj[i+1], listObj[i]);
+				switching = true;
+			}
+		} 
+	}, 1000)
+}
+// Sorts the event table on the left on Timer pages by upcoming event
+function left_sidetimer_sort(obj){
+  var switching, i, x, y, shouldSwitch;
+  var left_sidetimer = obj.children;
+  switching = true;
+
+  while (switching) {
+    switching = false;
+    
+    for (i = 0; i < (left_sidetimer.length - 1); i++) {
+      shouldSwitch = false;
+      
+      x = left_sidetimer[i].getElementsByTagName("p2");
+      y = left_sidetimer[i+1].getElementsByTagName("p2");
+
+      if (parseInt(x[0].innerHTML) > parseInt(y[0].innerHTML)) {
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) { 
+      left_sidetimer[i].parentNode.insertBefore(left_sidetimer[i + 1], left_sidetimer[i]);
+      switching = true;
+    }
+  }
+}
+
+// Sorts the event table on the left on Timer pages by upcoming event
+function left_sidetimer_sort(obj){
+  var switching, i, x, y, shouldSwitch;
+  var left_sidetimer = obj.children;
+  switching = true;
+
+  while (switching) {
+    switching = false;
+    
+    for (i = 0; i < (left_sidetimer.length - 1); i++) {
+      shouldSwitch = false;
+      
+      x = left_sidetimer[i].getElementsByTagName("p2");
+      y = left_sidetimer[i+1].getElementsByTagName("p2");
+
+      if (parseInt(x[0].innerHTML) > parseInt(y[0].innerHTML)) {
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) { 
+      left_sidetimer[i].parentNode.insertBefore(left_sidetimer[i + 1], left_sidetimer[i]);
+      switching = true;
+    }
+  }
+}
+
 // Shows or removes timer on the sideboxes depending if the users check or unchecks the checkbox
 function checkboxTimer(objHTML, objEvent){
     // Match the num on the html id to match the pos/key in the objEvent
@@ -6613,189 +6670,4 @@ function fadeOutandBack(div){
 	setTimeout(function(){
 		div.style.opacity = 1;
 	}, 300);
-}
-
-// ===========================
-// ====== NAVIGATION BAR =====
-// ===========================
-// Put this function in each page to show the nav bar
-// Level = what level the files are. Different levels return different reference points
-function insertNav(div, level){
-	// levelParm = the level of the parameter for the showNav() function
-	var period, levelParm; 
-	switch (level){
-		case 1: period = "."; levelParm = 1; break;
-		case 2: period = ".."; levelParm = 2; break; 
-	}
-	// Apply showNav(); 
-	var html = 
-	`
-		<div class = "brand-name"><a href = "${period}/index.html">Peu Research Center </a></div>
-		<div onclick = "applyMode();" class = "dark-mode">
-			<span id = "mode-circle"></span>
-		</div>
-
-		<ul class = "nav-bar-list">
-			<li class = "nav-dropdown">
-				<a class = "nav-header" href = "#"> Resources </a>
-				<ul class = "sub-menu">
-					<div class = "sub-menu-header">
-						<li> How To Get </li> 
-						<li><a href = "${period}/resources/ascended-materials.html"> Ascended Materials </a></li>
-						<li><a href = "${period}/resources/experience.html"> Experience </a></li>
-						<li><a href = "${period}/resources/ls3-currencies.html"> Living Story 3 Currencies </a></li>
-						<li><a href = "${period}/resources/ls4-currencies.html"> Living Story 4 Currencies </a></li>
-						<li><a href = "${period}/resources/must-have-items.html"> Must Have Items </a></li>
-					</div>
-					<div class = "sub-menu-header">
-						<li> Tools </li> 
-						<li><a href = "${period}/resources/dailies.html"> Dailies </a></li>
-						<li><a href = "${period}/resources/living-story-trinkets.html"> Living Story Trinkets </a></li>
-					</div>
-					<div class = "sub-menu-header">
-						<li> About </li> 
-						<li><a href = "${period}/resources/about-benchmarks.html"> Benchmarks </a></li>
-						<li><a href = "${period}/resources/about-me.html"> About Me </a></li>
-						<li><a href = "${period}/resources/list-of-resources.html"> Extra Resources </a></li>
-					</div>
-				</ul>
-			</li>
-
-			<li class = "nav-dropdown">
-				<a class = "nav-header" href = "${period}/benchmarks.html"> Benchmarks </a>
-			</li>
-
-			<li class = "nav-dropdown">
-				<a class = "nav-header" href = "#"> Timers </a>
-				<ul class = "sub-menu">
-					<div class = "sub-menu-header">
-						<li> Heart of Thorns </li> 
-						<li><a href = "${period}/timers/verdant-brink.html"> Verdant Brink </a></li>
-						<li><a href = "${period}/timers/auric-basin.html"> Auric Basin </a></li>
-						<li><a href = "${period}/timers/tangled-depths.html"> Tangled Depths </a></li>
-					</div>
-					<div class = "sub-menu-header">
-						<li> Living Story 3 </li>
-						<li><a href = "${period}/timers/bloodstone-fen.html"> Bloodstone Fen </a></li>
-						<li><a href = "${period}/timers/ember-bay.html"> Ember Bay </a></li>
-						<li><a href = "${period}/timers/bitterfrost-frontier.html"> Bitterfrost Frontier </a></li>
-						<li><a href = "${period}/timers/draconis-mons.html"> Draconis Mons </a></li>
-						<li><a href = "${period}/timers/sirens-landing.html"> Siren's Landing </a></li>
-					</div>
-					<div class = "sub-menu-header">
-						<li> Path of Fire </li>
-						<li><a href = "${period}/timers/desert-highlands.html"> Desert Highlands </a></li>
-						<li><a href = "${period}/timers/crystal-oasis.html"> Crystal Oasis </a></li>
-						<li><a href = "${period}/timers/elon-riverlands.html"> Elon Riverlands </a></li>
-						<li><a href = "${period}/timers/desolation.html"> Desolation </a></li>
-						<li><a href = "${period}/timers/domain-of-vabbi.html"> Domain of Vabbi </a></li>
-					</div>
-					<div class = "sub-menu-header">
-						<li> Path of Fire </li>
-						<li> Living Story 4 </li>
-						<li><a href = "${period}/timers/domain-of-istan.html"> Domain of Istan </a></li>
-						<li><a href = "${period}/timers/sandswept-isles.html"> Sandswept Isles </a></li>
-						<li><a href = "${period}/timers/domain-of-kourna.html"> Domain of Kourna </a></li>
-						<li><a href = "${period}/timers/dragonfall.html"> Dragonfall </a></li>
-					</div>
-					<div class = "sub-menu-header">
-						<li> Icebrood Saga </li>
-						<li><a href = "${period}/timers/bjora-marches.html"> Bjora Marches </a></li>
-						<li><a href = "${period}/timers/drizzlewood-coast.html"> Drizzlewood Coast </a></li>
-					</div>
-				</ul>
-			</li>
-
-			<li class = "nav-dropdown">
-				<a class = "nav-header" href = "#"> Research </a>
-				<ul class = "sub-menu">
-					<div class = "sub-menu-header">
-						<li> Research </li>
-						<li><a href = "${period}/research/currency-worth.html"> Currency Worth </a></li>
-						<li><a href = "${period}/research/drizzlewood-reward-tracks.html"> Drizzlewood Reward Tracks </a></li>
-						<li><a href = "${period}/gathering.html#glyphs"> Glyphs </a></li>
-						<li><a href = "${period}/research/refinement.html"> Refinement </a></li>
-						<li><a href = "${period}/research/salvage.html"> Salvage </a></li>
-					</div>
-				</ul>
-			</li>
-
-			<li class = "nav-dropdown">
-				<a class = "nav-header" href = "#"> Maps </a>
-				<ul class = "sub-menu">
-					<div class = "sub-menu-header">
-						<li> Core Tyria </li>
-						<li><a href = "${period}/maps/silverwastes.html"> Silverwastes </a></li>
-					</div>
-					<div class = "sub-menu-header">
-						<li> Heart of Thorns </li>
-						<li><a href = "${period}/maps/verdant-brink.html"> Verdant Brink </a></li>
-						<li><a href = "${period}/maps/auric-basin.html"> Auric Basin </a></li>
-						<li><a href = "${period}/maps/tangled-depths.html"> Tangled Depths </a></li>
-					</div>
-					<div class = "sub-menu-header">
-						<li> Living Story 3 </li>
-						<li><a href = "${period}/maps/bloodstone-fen.html"> Bloodstone Fen </a></li>
-						<li><a href = "${period}/maps/ember-bay.html"> Ember bay </a></li>
-						<li><a href = "${period}/maps/bitterfrost-frontier.html"> Bitterfrost Frontier </a></li>
-						<li><a href = "${period}/maps/lake-doric.html"> Lake Doric </a></li>
-						<li><a href = "${period}/maps/draconis-mons.html"> Draconis Mons </a></li>
-						<li><a href = "${period}/maps/sirens-landing.html"> Siren's Landing </a></li>
-					</div>
-					<div class = "sub-menu-header">
-						<li> Path of Fire </li>
-						<li><a href = "${period}/maps/desert-highlands.html"> Desert Highlands </a></li>
-						<li><a href = "${period}/maps/crystal-oasis.html"> Crystal Oasis </a></li>
-						<li><a href = "${period}/maps/elon-riverlands.html"> Elon Riverlands </a></li>
-						<li><a href = "${period}/maps/desolation.html"> Desolation </a></li>
-						<li><a href = "${period}/maps/domain-of-vabbi.html"> Domain of Vabbi </a></li>
-					</div>
-					<div class = "sub-menu-header">
-						<li> Living Story 4 </li>
-						<li><a href = "${period}/maps/domain-of-istan.html"> Domain of Istan </a></li>
-						<li><a href = "${period}/maps/sandswept-isles.html"> Sandswept Isles </a></li>
-						<li><a href = "${period}/maps/domain-of-kourna.html"> Domain of Kourna </a></li>
-						<li><a href = "${period}/maps/jahai-bluffs.html"> Jahai Bluffs </a></li>
-						<li><a href = "${period}/maps/thunderhead-peaks.html"> Thunderhead Peaks </a></li>
-						<li><a href = "${period}/maps/dragonfall.html"> Dragonfall </a></li>
-					</div>
-					<div class = "sub-menu-header">
-						<li> Icebrood Saga </li>
-						<li><a href = "${period}/maps/grothmar-valley.html"> Grothmar Valley </a></li>
-						<li><a href = "${period}/maps/bjora-marches.html"> Bjora Marches </a></li>
-						<li><a href = "${period}/maps/drizzlewood-coast.html"> Drizzlewood Coast </a></li>
-					</div>
-				</ul>
-			</li>
-
-			<li class = "nav-dropdown">
-				<a class = "nav-header" href = "${period}/gathering.html"> Gathering </a>
-			</li>
-
-			<li class = "nav-dropdown">
-				<a class = "nav-header" href = "${period}/supporters.html"> Support </a>
-			</li>
-		</ul>
-		<a href="#" id = "hamburger" class = "hamburger">
-			<span class = "hamburger-bar"></span>
-			<span class = "hamburger-bar"></span>
-			<span class = "hamburger-bar"></span>
-		</a>
-		`; 
-	document.getElementById(div).innerHTML = html;
-	document.getElementById('mode-circle').style.left = "0%";
-	showHamburger();
-}
-// Grabs the hamburger and shows it when clicking on the icon
-function showHamburger(){
-	const toggleButton = document.getElementsByClassName('hamburger')[0];
-	const navBarList = document.getElementsByClassName('nav-bar-list')[0];
-
-	toggleButton.addEventListener('click', () =>{
-		if (navBarList.style.display == "flex"){
-			navBarList.style.display = "none";
-		} else {
-			navBarList.style.display = "flex";
-		}
-	})
 }

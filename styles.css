@@ -1793,6 +1793,7 @@ b{
 /* Navs including main nav */
 .nav-side-box,
 .nav-left-sidetimer-box,
+.side-timer-list,
 .nav-right-sidetimer-box,
 .nav-right-sidetimer-box-overflow,
 .nav{
@@ -1848,13 +1849,13 @@ b{
 	text-indent: 20px;
 }
 
-.nav-left-sidetimer-box{
+.side-timer-list{
 	top: 10%;
 	display: block;
 	overflow-y: auto;
 	height: 70vh;
 }
-.nav-left-sidetimer-box input[type="button"]{
+.side-timer-list input[type="button"]{
 	color: white;
 	font-size: 15px;
 	border: 2px solid black;

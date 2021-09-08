@@ -1,15 +1,7 @@
-// NAV-LEFT SORT IDs
-// Add this to only Timer pages
-var sort_timers = document.getElementById('nav-left-sidetimer-box'),
-    sort_interval;
+// Sort the timers on a 1 sec interval. Sorts the list based on most upcoming
+sortTimers();
 
-// Always sorts the left event list
-// Add this to only Timer pages
-sort_interval = setInterval(function(){
-    left_sidetimer_sort(sort_timers);
-}, 1000);
-
-var auric = {
+let auric = {
     events: [
         {   // empty
             status: 0,

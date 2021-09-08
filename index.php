@@ -139,6 +139,11 @@
 
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
+					<span style = "font-weight: bold;">Sept 7, 2021</span>
+				<br>
+					- Fixed a header on the Timers navigation for LS4 maps
+					<br> - Fixed a waypoint in <a href = "./resources/dailies.php" target = "_blank"><u> PSNA </u></a>
+				<br><br>
 					<span style = "font-weight: bold;">August 27, 2021</span>
 				<br>
 					- Fixed mobile site for <a href = "./resource/must-have-items.php" target = "_blank"><u> Must Have Items</u></a>
