@@ -169,6 +169,8 @@
 		<div class = "small-description">
 		    <details>
 		        <summary><b>How to: </b></summary>
+		        LB = Legendary Bounty, B = Bounty
+		        <br><br>
 		        <b>Priority of events:</b>
 		        <br>Rifts &#8594; Garrison &#8594; Yatendi Village &#8594; Chantry
 		        <br> Rifts will be up almost 100% of the time so it is possible to do an event train purely on rifts.

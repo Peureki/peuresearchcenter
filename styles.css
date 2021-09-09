@@ -1855,7 +1855,7 @@ b{
 	top: 10%;
 	display: block;
 	overflow-y: auto;
-	max-width: 180px;
+	max-width: 200px;
 	height: 70vh;
 }
 .side-timer-list input[type="button"]{

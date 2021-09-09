@@ -161,6 +161,8 @@ let nextProgress = "", // What is displayed on the main progress bar after the -
     progressBar = document.getElementById('progress-bar'),
     progressText = document.getElementById('progress-text'),
     barWidth = 0,
+    currentBar = 0,
+    maxBar = 0, 
     currentTime = 0,
     maxTime = 0;
 
@@ -195,26 +197,39 @@ let arrow_north = document.getElementById('auric-arrow-1'),
             		if (min <= 15){
             			progressBar.style.background = pre_meta_color;
             			nextProgress = "Death-Branded Shatterer";
+
             			maxTime = start_hour * 3600 + (15 * 60); 
-            		}
-            		progressBar.style.background = meta_color;
-            		nextProgress = "Break";
-            		maxTime = start_hour * 3600 + (30 * 60); 
+            			maxBar = 15 * 60;
+            		} else {
+            			progressBar.style.background = meta_color;
+	            		nextProgress = "Break";
+
+	            		maxTime = start_hour * 3600 + (30 * 60);
+	            		maxBar = 15 * 60;
+             		}
+            		
             	}
             	// OUTSIDE OF META Ex: 1:30 - 3:00
             	if (hr == start_hour && min >= 30 || hr == end_hour){
             		progressBar.style.background = progress_color;
-            		nextProgress = "Pre-Meta - DERV Escort"
+            		nextProgress = "Pre-Meta - DERV Escort";
+
             		maxTime = (end_hour + 1) * 3600;
+            		maxBar = 90 * 60; 
+
+            		console.log("time: ", time, "maxtime: ", maxTime);
             	}
             	side_meta_name.innerHTML = nextProgress;
+            	currentBar = time - (maxTime - maxBar);
             	result = time - maxTime;
-            	barWidth = (time/maxTime)*100;
+            	barWidth = (currentBar/maxBar)*100;
                 progressBar.style.width = barWidth + "%";
                 progressText.innerHTML = getDisplayTime(result) + " &#x27F6; " + nextProgress;
                 // Jahai.events[0] = the sidebox timer for the meta
                 jahai.events[0].sidebox.style.background = progressBar.style.background;
                 jahai.events[0].timeSideLabel.innerHTML = getDisplayTime(result);
+
+                //console.log(barWidth)
             }
         } // End of function
 
