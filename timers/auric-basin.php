@@ -150,7 +150,7 @@
       ================================================================
     --> 
 
-	  <div id = "nav-right-sidetimer-box" class = "nav-right-sidetimer-box-overflow" style = "min-width: 180px;">
+	  <div id = "nav-right-sidetimer-box" class = "checkboxes" style = "min-width: 180px;">
       <b> Completed Pylons? </b>
       <br><br>
       South Pylon: <input type = "Checkbox" id = "auric-post-s-pylon" onclick = "auric_Post_S_Pylon(this);"> 

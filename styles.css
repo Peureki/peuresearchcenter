@@ -1773,6 +1773,7 @@ b{
 	font-size: 17px;
 	border: 2px solid black;
 	background-color: var(--clr-button);
+	cursor: pointer;
 }
 .meta-sidebox{
 	color: black;
@@ -1795,6 +1796,7 @@ b{
 .nav-left-sidetimer-box,
 .side-timer-list,
 .nav-right-sidetimer-box,
+.checkboxes,
 .nav-right-sidetimer-box-overflow,
 .nav{
 	position: fixed;
@@ -1853,6 +1855,7 @@ b{
 	top: 10%;
 	display: block;
 	overflow-y: auto;
+	max-width: 180px;
 	height: 70vh;
 }
 .side-timer-list input[type="button"]{
@@ -1862,10 +1865,11 @@ b{
 	background-color: #802020;
 }
 
-.nav-right-sidetimer-box{
-	top: 30%;
+.nav-right-sidetimer-box,
+.checkboxes{
+	top: 10%;
+	right: 1%;
 	display: block;
-	right: 0;
 	text-align: right;
 	overflow-y: auto;
 	height: auto;
@@ -4594,6 +4598,7 @@ table.nodes td.nodes-cooldown{
 	font-size: 17px;
 	border: 2px solid black;
 	background-color: #802020;
+	cursor: pointer;
 }
 
 /* Main timer boxes */

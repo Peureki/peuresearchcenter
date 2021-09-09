@@ -30,13 +30,45 @@
 	</div>
 
 	<!-- 
+	    ========================================================
+	    ====================== CHECKBOXES ======================
+	    ========================================================
+	-->
+	<div class = "checkboxes">
+		<b> Events </b>
+		<br><br>
+		Yatendi Village: <input type = "Checkbox" id = "jahai-1-checkbox" checked = "true" onclick = "checkboxTimer(this, jahai.events);">
+		<br> 
+		Ziya: <input type = "Checkbox" id = "jahai-2-checkbox" checked = "true" onclick = "checkboxTimer(this, jahai.events);">
+		<br> 
+		Garrison: <input type = "Checkbox" id = "jahai-3-checkbox" checked = "true" onclick = "checkboxTimer(this, jahai.events);">
+		<br> 
+		DERV: <input type = "Checkbox" id = "jahai-4-checkbox" checked = "true" onclick = "checkboxTimer(this, jahai.events);">
+		<br> 
+		Gate: <input type = "Checkbox" id = "jahai-5-checkbox" checked = "true" onclick = "checkboxTimer(this, jahai.events);">
+		<br> 
+		Chantry: <input type = "Checkbox" id = "jahai-6-checkbox" checked = "true" onclick = "checkboxTimer(this, jahai.events);">
+		<br><br>
+		<b> Bounties </b>
+		<br><br>
+		Wyverns: <input type = "Checkbox" id = "jahai-7-checkbox" checked = "true" onclick = "checkboxTimer(this, jahai.events);">
+		<br> 
+		Ettin: <input type = "Checkbox" id = "jahai-8-checkbox" checked = "true" onclick = "checkboxTimer(this, jahai.events);">
+		<br> 
+		Pet Rock: <input type = "Checkbox" id = "jahai-9-checkbox" checked = "true" onclick = "checkboxTimer(this, jahai.events);">
+		<br> 
+		Weapons: <input type = "Checkbox" id = "jahai-10-checkbox" checked = "true" onclick = "checkboxTimer(this, jahai.events);">
+		<br> 
+	</div>
+
+	<!-- 
 	    =============================================================
 	    ====================== SIDE TIMER LIST ======================
 	    =============================================================
 	-->
 	<div id = "side-timer-list" class = "side-timer-list">
 		<div id = "jahai-meta-sidebox" class = "meta-sidebox">
-			<h1 id = "side-meta-name"></h1>
+			<h1 id = "side-meta-name" class = "side-meta-name"></h1>
 			<p1 id = "sidetimer-jahai-meta"></p1>
 			<p2 id = "numerical-sidetimer-jahai-meta"></p2> 
 		</div>
@@ -137,17 +169,9 @@
 		<div class = "small-description">
 		    <details>
 		        <summary><b>How to: </b></summary>
-		        Auric Basin is seperate by 2 different types of events: pylon and independent events.
-		        <br><br>
-		        The pylon events are events that occur after completing a pylon. To accurately get the time of the events that spawn after completing a particular pylon, <b>click on the checkbox on the right sidebox under "Completed Pylons?"</b>. This will begin the <b> initial spawn timer</b> of the event. After completing the event, click on the &#8635; button to start the <b> respawn timer </b>. Initial spawn timer and respawn timer are not the same amount of time. 
-		        <br><br>
-		        Example: After completing the south pylon event chain, click on the "South Pylon" checkbox. It will start a countdown to an event chain called the Blighted Saplings. This event is unique where, a few moments after completing the south pylon, a champion will spawn. Let it fail to spawn the Blighted Saplings. The timer accounts for how long it takes til the event fails and the Blighted event chain spawns.
-		        <br><br>
-		        Independent events include the Vinetooths and Priory Escorts. These occur regardless of the progress of the map. 
-
-		        <br><br> 
 		        <b>Priority of events:</b>
-		        <br>Vinetooths &#8594; Blighted Saplings &#8594; Wyvern (or Balthazar if you have a small group) &#8594; Priory Escort &#8594; Treasure Mushroom &#8594; Other Champs
+		        <br>Rifts &#8594; Garrison &#8594; Yatendi Village &#8594; Chantry
+		        <br> Rifts will be up almost 100% of the time so it is possible to do an event train purely on rifts.
 		    </details>
 		</div>
 
@@ -234,6 +258,18 @@
 			<img class = "map-timer-map" title = "Jahai Bluffs" src = "../images/jahai-bluffs/jahai-bluffs-map.jpg">
 		</div> <!-- End of map timer wrapper -->
 	</div> <!-- End of page box -->
+
+	<!-- 
+	    ===================================================================
+	    ====================== PROGRESS BARS ==============================
+	    ===================================================================
+	  -->
+  	<div class = "bottom-sticky">
+      	<div id = "progress-box" class = "progress-box">
+        	<h1 id = "progress-text" class = "progress-text"> </h1>
+        	<div id = "progress-bar" class = "progress-bar"></div>
+      	</div>
+  	</div>
 
 	<!-- 
 	    ================================================================

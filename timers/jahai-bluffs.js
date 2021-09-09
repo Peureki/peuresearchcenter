@@ -6,6 +6,9 @@ let jahai = {
         {   // empty
             status: 0,
             key: 0,
+            timeSideLabel: document.getElementById('sidetimer-jahai-meta'),
+            sidebox: document.getElementById('jahai-meta-sidebox'),
+            countdownSec: document.getElementById('numerical-sidetimer-jahai-meta')
         },
         {   // [1] Yatendi Village
             status: 0,
@@ -63,7 +66,7 @@ let jahai = {
             countdownSec: document.getElementById('numerical-sidetimer-jahai-4'),
             doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
         },
-        {   // [5] Yatendi Village
+        {   // [5] Gate
             status: 0,
             key: 0,
             cooldown: 60 * 14, 
@@ -152,3 +155,90 @@ let jahai = {
 };
 // Dynamically creates unique keys
 add_event_keys(jahai.events);
+
+// Initials
+let nextProgress = "", // What is displayed on the main progress bar after the ->
+    progressBar = document.getElementById('progress-bar'),
+    progressText = document.getElementById('progress-text'),
+    barWidth = 0,
+    currentTime = 0,
+    maxTime = 0;
+
+// Label of the meta on the side
+let side_meta_name = document.getElementById('side-meta-name');
+
+// Visuals 
+let arrow_north = document.getElementById('auric-arrow-1'),
+    arrow_east = document.getElementById('auric-arrow-2'),
+    arrow_south = document.getElementById('auric-arrow-3'),
+    arrow_west = document.getElementById('auric-arrow-4');
+
+    let timer = setInterval(function(){
+    let d = new Date();
+    let time = d.getUTCHours()*3600 + d.getUTCMinutes()*60 + d.getUTCSeconds(),
+        result,
+        hr = d.getUTCHours(),
+        min = d.getUTCMinutes(),
+        sec = d.getUTCSeconds();
+
+        function doMeta(start_hour, end_hour){
+            // Pre phase begins every odd UTC hour at :00 
+            // Meta begins every every odd UTC hour at :15
+            // Map resets at every odd UTC hour at :30
+
+            // ASSUME STARTING AT ODD HR
+            // ENTIRE 2HR PHASE Ex: 1:00 - 3:00
+            if (hr == start_hour || hr == end_hour){
+            	// ENTIRE META PHASE Ex: 1:00 - 1:30
+            	if (hr == start_hour && min < 30){
+            		// PRE-META PHASE Ex: 1:00 - 1:15
+            		if (min <= 15){
+            			progressBar.style.background = pre_meta_color;
+            			nextProgress = "Death-Branded Shatterer";
+            			maxTime = start_hour * 3600 + (15 * 60); 
+            		}
+            		progressBar.style.background = meta_color;
+            		nextProgress = "Break";
+            		maxTime = start_hour * 3600 + (30 * 60); 
+            	}
+            	// OUTSIDE OF META Ex: 1:30 - 3:00
+            	if (hr == start_hour && min >= 30 || hr == end_hour){
+            		progressBar.style.background = progress_color;
+            		nextProgress = "Pre-Meta - DERV Escort"
+            		maxTime = (end_hour + 1) * 3600;
+            	}
+            	side_meta_name.innerHTML = nextProgress;
+            	result = time - maxTime;
+            	barWidth = (time/maxTime)*100;
+                progressBar.style.width = barWidth + "%";
+                progressText.innerHTML = getDisplayTime(result) + " &#x27F6; " + nextProgress;
+                // Jahai.events[0] = the sidebox timer for the meta
+                jahai.events[0].sidebox.style.background = progressBar.style.background;
+                jahai.events[0].timeSideLabel.innerHTML = getDisplayTime(result);
+            }
+        } // End of function
+
+        // Event session starts every odd UTC hour at xx:30
+        // Session lasts for 2 hours
+        function event_session(){
+            let start_hour = 0,
+                end_hour = 0;
+            // Check if hour is odd or not
+            // If odd, use that as the start hour
+            // Else, use hour - 1 as the start hour
+            if (hr % 2 != 0){
+                start_hour = hr; 
+                end_hour = hr + 1;
+            } else {
+                start_hour = hr - 1;
+                end_hour = hr; 
+            }
+            // Only start meta timer when
+            // 1) Start hour is an odd hour and is greater than 30 mins
+            // 2) End hour is the second hour (even)
+            doMeta(start_hour, end_hour); 
+        }
+        event_session();
+        
+        console.log("hour: ", hr, "min: ", min)
+    },1000); 
