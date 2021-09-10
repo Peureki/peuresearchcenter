@@ -286,15 +286,37 @@
 				<img src = "../images/assets/orange_arrow.svg" style = "width: 35%;">
 			</div>
 
+			<!-- RIFT LOCATIONS -->
+			<div id = "jahai-img-7" class = "event-image" style = "opacity: 1;">
+				<img src = "../images/assets/inquest_portal.png">
+			</div>
+
+			<div id = "jahai-img-8" class = "event-image" style = "opacity: 1;">
+				<img src = "../images/assets/inquest_portal.png">
+			</div>
+
+			<div id = "jahai-img-9" class = "event-image" style = "opacity: 1;">
+				<img src = "../images/assets/inquest_portal.png">
+			</div>
+
+			<div id = "jahai-img-10" class = "event-image" style = "opacity: 1;">
+				<img src = "../images/assets/inquest_portal.png">
+			</div>
+
+			<div id = "jahai-img-11" class = "event-image" style = "opacity: 1;">
+				<img src = "../images/assets/inquest_portal.png">
+			</div>
+
 			<!-- 
 			    ===================================================
 			    ====================== TEXTS ======================
 			    ===================================================
 			-->
+			<!-- Meta name -->
 			<div id = "jahai-info-1" class = 'meta-info'>
        			<h1> DEATH-BRANDED SHATTERER </h1>
        		</div>
-
+       		<!-- Pre meta name -->
        		<div id = "jahai-info-2" class = 'pre-meta-info'>
        			<h1> DERV Escort </h1>
        		</div>

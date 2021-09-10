@@ -178,7 +178,8 @@ let shatterer_red_circle = document.getElementById('jahai-img-1'),
 	derv_shield = document.getElementById('jaha-img-4');
 
 // TEXTS
-let shatterer_name = document.getElementById('jahai-info-1');
+let shatterer_name = document.getElementById('jahai-info-1'),
+	derv_name = document.getElementById('jahai-info-2');
 
     let timer = setInterval(function(){
     let d = new Date();
@@ -201,8 +202,9 @@ let shatterer_name = document.getElementById('jahai-info-1');
             	// Gate + DERV event that overlaps where the DERV escort begins
             	jahai.events[4].box.style.visibility = "visible"; 
             	jahai.events[5].box.style.visibility = "visible";
-            	// Shatterer name popup
-            	shatterer_name.style.visibility = "hidden";
+            	// Event names
+            	shatterer_name.style.opacity = 0;
+            	derv_name.style.opacity = 0;
 
             	// ENTIRE META PHASE Ex: 1:00 - 1:30
             	if (hr == start_hour && min < 30){
@@ -215,6 +217,8 @@ let shatterer_name = document.getElementById('jahai-info-1');
             			// Hide Gate + DERV
             			jahai.events[4].box.style.visibility = "hidden"; 
             			jahai.events[5].box.style.visibility = "hidden";
+            			// DERV escort name popup
+            			derv_name.style.opacity = 1;
 
             			// maxTime = the end UTC time of this phase as a whole
             			// maxBar = total duration of this phase
@@ -227,7 +231,7 @@ let shatterer_name = document.getElementById('jahai-info-1');
 	            		// SHATTERER IMGS
 	            		show_multiple_elements(1,2,'jahai-img-','opacity');
 	            		// Shatterer name popup
-	            		shatterer_name.style.visibility = "visible";
+	            		shatterer_name.style.opacity = 1;
 
 	            		maxTime = start_hour * 3600 + (30 * 60);
 	            		maxBar = 15 * 60;

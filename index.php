@@ -139,6 +139,11 @@
 
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
+					<span style = "font-weight: bold;">Sept 10, 2021</span>
+				<br>
+					- Added <a href = "./timers/jahai-bluffs.php"><u> Jahai Bluffs timer page!</u></a> Most repeatable events are implemented and bounties. There's still a few I cannot get solo such as the "Joko?" event. 
+					<br> - In the process of reworking the JS code of how event timers work. They are currently a little wonky and I'm trying to make them cleaning. This also includes the look of it in dark mode as..most timer pages have that issue. <a href = "./timers/auric-basin.php"><u> Auric Basin's timer page</u></a> got some dark mode updates as a test. 
+				<br><br>
 					<span style = "font-weight: bold;">Sept 7, 2021</span>
 				<br>
 					- Fixed a header on the Timers navigation for LS4 maps

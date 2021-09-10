@@ -9654,6 +9654,27 @@ table.nodes td.nodes-cooldown{
 	left: 23%;
 	transform: rotate(-15deg);
 }
+#jahai-img-7{ /* W rift */
+	top: 35%;
+	left: 10%;
+}
+#jahai-img-8{ /* NW rift */
+	top: 23%;
+	left: 30%;
+}
+#jahai-img-9{ /* N rift */
+	top: 19%;
+	left: 78%;
+}
+#jahai-img-10{ /* SE rift */
+	top: 58%;
+	left: 61%;
+}
+#jahai-img-11{ /* S rift */
+	top: 78%;
+	left: 70%;
+}
+
 /*
 	===============================
 	========= JAHAI TEXTS =========
@@ -9665,7 +9686,7 @@ table.nodes td.nodes-cooldown{
 }
 #jahai-info-2{ /* "DERV escort" */
 	top: 69%;
-    left: 25%;
+    left: 24%;
 }
 
 
