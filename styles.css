@@ -9623,7 +9623,50 @@ table.nodes td.nodes-cooldown{
 	top: 20%;
 	left: 43%;
 }
-
+/*
+	==============================
+	========= JAHAI IMGS =========
+	==============================
+*/
+#jahai-img-1{ /* Red circle on shatterer */
+	top: 9%;
+	left: 15%;
+}
+#jahai-img-2{ /* Red boss on shatterer */
+	top: 16%;
+	left: 21%;
+}
+#jahai-img-3{ /* Event circle DERV escort */
+	top: 74%;
+	left: 28%;
+}
+#jahai-img-4{ /* Event shield DERV escort */
+	top: 78%;
+	left: 31%;
+}
+#jahai-img-5{ /* DERV arrow south */
+    top: 58%;
+    left: 31%;
+    transform: rotate(15deg);
+}
+#jahai-img-6{ /* DERV arrow north */
+	top: 21%;
+	left: 23%;
+	transform: rotate(-15deg);
+}
+/*
+	===============================
+	========= JAHAI TEXTS =========
+	===============================
+*/
+#jahai-info-1{ /* Shatterer name */
+	top: 10%;
+	left: 12%;
+}
+#jahai-info-2{ /* "DERV escort" */
+	top: 69%;
+    left: 25%;
+}
 
 
 /* Culls */

@@ -62,6 +62,7 @@ let jahai = {
             resetSideButton: document.getElementById('sidetimer-jahai-4-reset'),
             timeLabel: document.getElementById('timer-jahai-4'), 
             timeSideLabel: document.getElementById('sidetimer-jahai-4'),
+            box: document.getElementById('jahai-4-box'),
             sidebox: document.getElementById('jahai-4-sidebox'),
             countdownSec: document.getElementById('numerical-sidetimer-jahai-4'),
             doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
@@ -76,6 +77,7 @@ let jahai = {
             resetSideButton: document.getElementById('sidetimer-jahai-5-reset'),
             timeLabel: document.getElementById('timer-jahai-5'), 
             timeSideLabel: document.getElementById('sidetimer-jahai-5'),
+            box: document.getElementById('jahai-5-box'),
             sidebox: document.getElementById('jahai-5-sidebox'),
             countdownSec: document.getElementById('numerical-sidetimer-jahai-5'),
             doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
@@ -169,11 +171,14 @@ let nextProgress = "", // What is displayed on the main progress bar after the -
 // Label of the meta on the side
 let side_meta_name = document.getElementById('side-meta-name');
 
-// Visuals 
-let arrow_north = document.getElementById('auric-arrow-1'),
-    arrow_east = document.getElementById('auric-arrow-2'),
-    arrow_south = document.getElementById('auric-arrow-3'),
-    arrow_west = document.getElementById('auric-arrow-4');
+// IMGs
+let shatterer_red_circle = document.getElementById('jahai-img-1'),
+	shatterer_red_boss = document.getElementById('jahai-img-2'),
+	derv_circle = document.getElementById('jahai-img-3'),
+	derv_shield = document.getElementById('jaha-img-4');
+
+// TEXTS
+let shatterer_name = document.getElementById('jahai-info-1');
 
     let timer = setInterval(function(){
     let d = new Date();
@@ -191,20 +196,38 @@ let arrow_north = document.getElementById('auric-arrow-1'),
             // ASSUME STARTING AT ODD HR
             // ENTIRE 2HR PHASE Ex: 1:00 - 3:00
             if (hr == start_hour || hr == end_hour){
+            	// DEFAULT IMG SETTINGS
+            	hide_multiple_elements(1,6,'jahai-img-','opacity');
+            	// Gate + DERV event that overlaps where the DERV escort begins
+            	jahai.events[4].box.style.visibility = "visible"; 
+            	jahai.events[5].box.style.visibility = "visible";
+            	// Shatterer name popup
+            	shatterer_name.style.visibility = "hidden";
+
             	// ENTIRE META PHASE Ex: 1:00 - 1:30
             	if (hr == start_hour && min < 30){
             		// PRE-META PHASE Ex: 1:00 - 1:15
             		if (min < 15){
             			progressBar.style.background = pre_meta_color;
             			nextProgress = "Death-Branded Shatterer";
+            			// DERV ESCORT IMGS
+            			show_multiple_elements(3,6,'jahai-img-','opacity');
+            			// Hide Gate + DERV
+            			jahai.events[4].box.style.visibility = "hidden"; 
+            			jahai.events[5].box.style.visibility = "hidden";
 
             			// maxTime = the end UTC time of this phase as a whole
             			// maxBar = total duration of this phase
             			maxTime = start_hour * 3600 + (15 * 60); 
             			maxBar = 15 * 60;
+            		// SHATTERER PHASE Ex: 1:15 - 1:30
             		} else {
             			progressBar.style.background = meta_color;
 	            		nextProgress = "Break";
+	            		// SHATTERER IMGS
+	            		show_multiple_elements(1,2,'jahai-img-','opacity');
+	            		// Shatterer name popup
+	            		shatterer_name.style.visibility = "visible";
 
 	            		maxTime = start_hour * 3600 + (30 * 60);
 	            		maxBar = 15 * 60;

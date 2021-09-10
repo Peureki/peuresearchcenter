@@ -255,6 +255,50 @@
        			<input type = "button" onclick = "reset(this, jahai.events);" value = "&#8635;" id = "timer-jahai-10-reset">	
        		</div>
 
+       		<!-- 
+			    =============================================================
+			    ====================== IMAGES / ASSETS ======================
+			    =============================================================
+			-->
+			<!-- SHATTERER -->
+			<div id = "jahai-img-1" class = "event-image">
+				<img src = "../images/assets/event_red_circle.png" style = "width: 150%;">
+			</div>
+
+			<div id = "jahai-img-2" class = "event-image">
+				<img src = "../images/assets/event_red_boss.png">
+			</div>
+
+			<!-- DERV ESCORT -->
+			<div id = "jahai-img-3" class = "event-image">
+				<img src = "../images/assets/event_circle.png">
+			</div>
+
+			<div id = "jahai-img-4" class = "event-image">
+				<img src = "../images/assets/event_shield.png">
+			</div>
+			<!-- DERV ESCORT ARROWS -->
+			<div id = "jahai-img-5" class = "event-image">
+				<img src = "../images/assets/orange_arrow.svg" style = "width: 35%;">
+			</div>
+
+			<div id = "jahai-img-6" class = "event-image">
+				<img src = "../images/assets/orange_arrow.svg" style = "width: 35%;">
+			</div>
+
+			<!-- 
+			    ===================================================
+			    ====================== TEXTS ======================
+			    ===================================================
+			-->
+			<div id = "jahai-info-1" class = 'meta-info'>
+       			<h1> DEATH-BRANDED SHATTERER </h1>
+       		</div>
+
+       		<div id = "jahai-info-2" class = 'pre-meta-info'>
+       			<h1> DERV Escort </h1>
+       		</div>
+
 
 			<!-- MAP PICTURE -->
 			<img class = "map-timer-map" title = "Jahai Bluffs" src = "../images/jahai-bluffs/jahai-bluffs-map.jpg">
