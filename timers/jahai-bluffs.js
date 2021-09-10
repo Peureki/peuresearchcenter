@@ -194,10 +194,12 @@ let arrow_north = document.getElementById('auric-arrow-1'),
             	// ENTIRE META PHASE Ex: 1:00 - 1:30
             	if (hr == start_hour && min < 30){
             		// PRE-META PHASE Ex: 1:00 - 1:15
-            		if (min <= 15){
+            		if (min < 15){
             			progressBar.style.background = pre_meta_color;
             			nextProgress = "Death-Branded Shatterer";
 
+            			// maxTime = the end UTC time of this phase as a whole
+            			// maxBar = total duration of this phase
             			maxTime = start_hour * 3600 + (15 * 60); 
             			maxBar = 15 * 60;
             		} else {
@@ -216,14 +218,12 @@ let arrow_north = document.getElementById('auric-arrow-1'),
 
             		maxTime = (end_hour + 1) * 3600;
             		maxBar = 90 * 60; 
-
-            		console.log("time: ", time, "maxtime: ", maxTime);
             	}
             	side_meta_name.innerHTML = nextProgress;
             	currentBar = time - (maxTime - maxBar);
-            	result = time - maxTime;
             	barWidth = (currentBar/maxBar)*100;
                 progressBar.style.width = barWidth + "%";
+                result = time - maxTime;
                 progressText.innerHTML = getDisplayTime(result) + " &#x27F6; " + nextProgress;
                 // Jahai.events[0] = the sidebox timer for the meta
                 jahai.events[0].sidebox.style.background = progressBar.style.background;
@@ -254,6 +254,4 @@ let arrow_north = document.getElementById('auric-arrow-1'),
             doMeta(start_hour, end_hour); 
         }
         event_session();
-        
-        console.log("hour: ", hr, "min: ", min)
     },1000); 
