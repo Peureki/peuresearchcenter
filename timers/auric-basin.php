@@ -42,7 +42,7 @@
 	      <input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "sidetimer-auric-1-start">
 	      <input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "sidetimer-auric-1-reset">
 	      <p1 id = "sidetimer-auric-1">9:30</p1>
-	      <p2 id = "numerical-sidetimer-auric-1"></p2>
+	      <p2 id = "numerical-sidetimer-auric-1">570</p2>
 	    </div>
 
 	    <div id = "auric-2-sidebox" class = "event-sidebox" >
@@ -151,17 +151,6 @@
     --> 
 
 	  <div id = "nav-right-sidetimer-box" class = "checkboxes" style = "min-width: 180px;">
-      <b> Completed Pylons? </b>
-      <br><br>
-      South Pylon: <input type = "Checkbox" id = "auric-post-s-pylon" onclick = "auric_Post_S_Pylon(this);"> 
-      <br>
-      Southeast Pylon: <input type = "Checkbox" id = "auric-post-se-pylon" onclick = "auric_Post_SE_Pylon(this);">
-      <br>
-      West Pylon: <input type = "Checkbox" id = "auric-post-w-pylon" onclick = "auric_Post_W_Pylon(this);"> 
-      <br>
-      North Pylon: <input type = "Checkbox" id = "auric-post-n-pylon" onclick = "auric_Post_N_Pylon(this);"> 
-
-      <br><br>
       <b> Vinetooths </b>
       <br><br>
       Vinetooth N: <input type = "Checkbox" id = "auric-1-checkbox" checked = "true" onclick = "checkboxTimer(this, auric.events);">
@@ -214,9 +203,7 @@
         <summary><b>How to: </b></summary>
         Auric Basin is seperate by 2 different types of events: pylon and independent events.
         <br><br>
-        The pylon events are events that occur after completing a pylon. To accurately get the time of the events that spawn after completing a particular pylon, <b>click on the checkbox on the right sidebox under "Completed Pylons?"</b>. This will begin the <b> initial spawn timer</b> of the event. After completing the event, click on the &#8635; button to start the <b> respawn timer </b>. Initial spawn timer and respawn timer are not the same amount of time. 
-        <br><br>
-        Example: After completing the south pylon event chain, click on the "South Pylon" checkbox. It will start a countdown to an event chain called the Blighted Saplings. This event is unique where, a few moments after completing the south pylon, a champion will spawn. Let it fail to spawn the Blighted Saplings. The timer accounts for how long it takes til the event fails and the Blighted event chain spawns.
+        The pylon events are events that occur after completing a pylon. To accurately get the time of the events that spawn after completing a particular pylon, start the timer of the event respective to the pylon you complete. Example: If you finish the south-most pylon, then start the <b>Blighted Saplings</b> event. This will begin the <b> initial spawn timer</b> of the event. After completing the event, click on the &#8635; button to start the <b> respawn timer </b>. Initial spawn timer and respawn timer are not the same amount of time. 
         <br><br>
         Independent events include the Vinetooths and Priory Escorts. These occur regardless of the progress of the map. 
 
@@ -342,21 +329,21 @@
 
       <!-- Tendril -->
       <div class = "event-info" id = "auric-event-info-1">
-        Click "Start" or check "North Pylon" under <b>Completed Pylons?</b> when all north pylon events have been completed. 
+        Click "Start" when all north pylon events have been completed. 
         <br><br>
         Clicking the &#8635; will restart the timer with the <b>respawn rate</b> instead. 
       </div>
 
       <!-- Ooze -->
       <div class = "event-info" id = "auric-event-info-2">
-        Click "Start" or check "West Pylon" under <b>Completed Pylons?</b> after killing the Ooze via main pylon event chain. 
+        Click "Start" after killing the Ooze via main pylon event chain. 
         <br><br>
         Clicking the &#8635; will restart the timer with the <b>respawn rate</b> instead. 
       </div>
 
       <!-- Blighted Sapling -->
       <div class = "event-info" id = "auric-event-info-3">
-        Click "Start" or check "South Pylon" under <b>Completed Pylons?</b> after charging up the south-most pylon.  
+        Click "Start" after charging up the south-most pylon.  
         <br><br>
         A champion husk event will spawn before the 3 Blighted Saplings. That event needs to fail in order to spawn the Blighted Saplings. 
         <br><br>
@@ -365,7 +352,7 @@
 
       <!-- Ooze -->
       <div class = "event-info" id = "auric-event-info-4">
-        Click "Start" or check "Southeast Pylon" under <b>Completed Pylons?</b> after killing the Wyvern via main pylon event chain.
+        Click "Start" after killing the Wyvern via main pylon event chain.
         <br><br>
         Clicking the &#8635; will restart the timer with the <b>respawn rate</b> instead.  
       </div>
