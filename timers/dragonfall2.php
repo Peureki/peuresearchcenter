@@ -35,29 +35,59 @@
 	    ========================================================
 	-->
 	<div class = "checkboxes">
-		<b> Events </b>
+		<b> B: Burning Forest </b>
 		<br><br>
-		Yatendi Village: <input type = "Checkbox" id = "dragonfall-1-checkbox" checked = "true" onclick = "checkboxTimer(this, dragonfall.events);">
+		Cull N: <input type = "Checkbox" id = "dragonfall-1-checkbox" checked = "true" onclick = "checkboxTimer(this, dragonfall.events);">
 		<br> 
-		Ziya: <input type = "Checkbox" id = "dragonfall-2-checkbox" checked = "true" onclick = "checkboxTimer(this, dragonfall.events);">
+		Cull S: <input type = "Checkbox" id = "dragonfall-2-checkbox" checked = "true" onclick = "checkboxTimer(this, dragonfall.events);">
 		<br> 
-		Garrison: <input type = "Checkbox" id = "dragonfall-3-checkbox" checked = "true" onclick = "checkboxTimer(this, dragonfall.events);">
+		Cull E: <input type = "Checkbox" id = "dragonfall-3-checkbox" checked = "true" onclick = "checkboxTimer(this, dragonfall.events);">
 		<br> 
-		DERV: <input type = "Checkbox" id = "dragonfall-4-checkbox" checked = "true" onclick = "checkboxTimer(this, dragonfall.events);">
+		Champ Abyssal: <input type = "Checkbox" id = "dragonfall-4-checkbox" checked = "true" onclick = "checkboxTimer(this, dragonfall.events);">
 		<br> 
-		Gate: <input type = "Checkbox" id = "dragonfall-5-checkbox" checked = "true" onclick = "checkboxTimer(this, dragonfall.events);">
+		Brandstorm <input type = "Checkbox" id = "dragonfall-5-checkbox" checked = "true" onclick = "checkboxTimer(this, dragonfall.events);">
 		<br> 
-		Chantry: <input type = "Checkbox" id = "dragonfall-6-checkbox" checked = "true" onclick = "checkboxTimer(this, dragonfall.events);">
+		Mender: <input type = "Checkbox" id = "dragonfall-6-checkbox" checked = "true" onclick = "checkboxTimer(this, dragonfall.events);">
+		<br>
+		Bridge N: <input type = "Checkbox" id = "dragonfall-7-checkbox" checked = "true" onclick = "checkboxTimer(this, dragonfall.events);">
+		<br> 
+		Bridge W: <input type = "Checkbox" id = "dragonfall-8-checkbox" checked = "true" onclick = "checkboxTimer(this, dragonfall.events);">
 		<br><br>
-		<b> Bounties </b>
+		<b> O: Olmakhan </b>
 		<br><br>
-		Wyverns: <input type = "Checkbox" id = "dragonfall-7-checkbox" checked = "true" onclick = "checkboxTimer(this, dragonfall.events);">
+		Cull W: <input type = "Checkbox" id = "dragonfall-9-checkbox" checked = "true" onclick = "checkboxTimer(this, dragonfall.events);">
 		<br> 
-		Ettin: <input type = "Checkbox" id = "dragonfall-8-checkbox" checked = "true" onclick = "checkboxTimer(this, dragonfall.events);">
+		Cull S: <input type = "Checkbox" id = "dragonfall-10-checkbox" checked = "true" onclick = "checkboxTimer(this, dragonfall.events);">
 		<br> 
-		Pet Rock: <input type = "Checkbox" id = "dragonfall-9-checkbox" checked = "true" onclick = "checkboxTimer(this, dragonfall.events);">
+		Cull E: <input type = "Checkbox" id = "dragonfall-11-checkbox" checked = "true" onclick = "checkboxTimer(this, dragonfall.events);">
 		<br> 
-		Weapons: <input type = "Checkbox" id = "dragonfall-10-checkbox" checked = "true" onclick = "checkboxTimer(this, dragonfall.events);">
+		Champ Arbiter: <input type = "Checkbox" id = "dragonfall-12-checkbox" checked = "true" onclick = "checkboxTimer(this, dragonfall.events);">
+		<br> 
+		Brandstorm: <input type = "Checkbox" id = "dragonfall-13-checkbox" checked = "true" onclick = "checkboxTimer(this, dragonfall.events);">
+		<br> 
+		Mender: <input type = "Checkbox" id = "dragonfall-14-checkbox" checked = "true" onclick = "checkboxTimer(this, dragonfall.events);">
+		<br> 
+		Bridge S: <input type = "Checkbox" id = "dragonfall-15-checkbox" checked = "true" onclick = "checkboxTimer(this, dragonfall.events);">
+		<br><br>
+		<b> M: Melandru </b>
+		<br><br>
+		Cull N: <input type = "Checkbox" id = "dragonfall-16-checkbox" checked = "true" onclick = "checkboxTimer(this, dragonfall.events);">
+		<br> 
+		Cull W: <input type = "Checkbox" id = "dragonfall-17-checkbox" checked = "true" onclick = "checkboxTimer(this, dragonfall.events);">
+		<br> 
+		Cull S: <input type = "Checkbox" id = "dragonfall-18-checkbox" checked = "true" onclick = "checkboxTimer(this, dragonfall.events);">
+		<br> 
+		Champ Elemental: <input type = "Checkbox" id = "dragonfall-19-checkbox" checked = "true" onclick = "checkboxTimer(this, dragonfall.events);">
+		<br> 
+		Brandstorm: <input type = "Checkbox" id = "dragonfall-20-checkbox" checked = "true" onclick = "checkboxTimer(this, dragonfall.events);">
+		<br> 
+		Mender: <input type = "Checkbox" id = "dragonfall-21-checkbox" checked = "true" onclick = "checkboxTimer(this, dragonfall.events);">
+		<br> 
+		Bridge E: <input type = "Checkbox" id = "dragonfall-22-checkbox" checked = "true" onclick = "checkboxTimer(this, dragonfall.events);">
+		<br><br>
+		<b> Custom </b>
+		<br><br>
+		All Bridges: <input type = "Checkbox" id = "dragonfall-bridge-checkbox" checked = "true" onclick = "customCheckboxTimers(this, dragonfall.events, 7, 8, 15, 22);">
 		<br> 
 	</div>
 
@@ -66,7 +96,7 @@
 	    ====================== SIDE TIMER LIST ======================
 	    =============================================================
 	-->
-	<div id = "side-timer-list" class = "side-timer-list" style = "display: none;">
+	<div id = "side-timer-list" class = "side-timer-list">
 
 		<!-- 
 		    =============================================================

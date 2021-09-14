@@ -9713,88 +9713,91 @@ table.nodes td.nodes-cooldown{
 	top: 8%;
 	left: 42%;
 }
-
-#dragonfall-4-box{
-	top: 920px;
-	left: 130px;
+#dragonfall-4-box{ /* Champ Abyssal */
+	top: 14%;
+	left: 16%;
 }
-#dragonfall-5-box{
-	top: 1320px;
-	left: 570px;
+#dragonfall-5-box{ /* Brandstorm */
+	top: 15%;
+	left: 28%;
 }
-#dragonfall-6-box{
-	top: 1100px;
-	left: 700px;
+#dragonfall-6-box{ /* Mender */
+	top: 17%;
+	left: 7%;
 }
-/* Culls Melandru */
-#dragonfall-7-box{
-	top: 1900px;
-	left: 800px;
+#dragonfall-7-box{ /* Bridge N */
+	top: 13%;
+	left: 49%;
 }
-#dragonfall-8-box{
-	top: 2260px;
-	left: 430px;
+#dragonfall-8-box{ /* Bridge W */
+	top: 37%;
+	left: 15%;
 }
-#dragonfall-9-box{
-	top: 2700px;
-	left: 700px;
+/*
+	============================
+	========= OKLAHOMA =========
+	============================
+*/
+#dragonfall-9-box{ /* Cull W */
+	top: 55%;
+	left: 7%;
 }
-/* Brandstorms */
-#dragonfall-10-box{ /* Crystal Bloom */
-	top: 180px;
-	left: 460px;
+#dragonfall-10-box{ /* Cull S */
+	top: 79%;
+	left: 30%;
 }
-#dragonfall-11-box{ /* Underworld */
-	top: 1250px;
-	left: 400px;
+#dragonfall-11-box{ /* Cull E */
+	top: 65%;
+	left: 36%;
 }
-#dragonfall-12-box{ /* Melandru */
-	top: 2750px;
-	left: 370px;
+#dragonfall-12-box{ /* Champ Arbiter */
+	top: 68%;
+	left: 3%;
 }
-/* Champions */
-#dragonfall-13-box{ /* Crystal Bloom */
-	top: 210px;
-	left: 240px;
+#dragonfall-13-box{ /* Brandstorm */
+	top: 73%;
+	left: 20%;
 }
-#dragonfall-14-box{ /* Underworld */
-	top: 1150px;
-	left: 60px;
+#dragonfall-14-box{ /* Mender */
+	top: 64%;
+	left: 24%;
 }
-#dragonfall-15-box{ /* Melandru */
-	top: 1850px;
-	left: 920px;
+#dragonfall-15-box{ /* Bridge S */
+	top: 78%;
+	left: 44%;
 }
-/* Mender */
-#dragonfall-16-box{ /* Crystal Bloom */
-	top: 279px;
-	left: 100px;
+/*
+	============================
+	========= MELANDRU =========
+	============================
+*/
+#dragonfall-16-box{ /* Cull N */
+	top: 43%;
+	left: 84%;
 }
-#dragonfall-17-box{ /* Underoworld */
-	top: 1100px;
-	left: 500px;
+#dragonfall-17-box{ /* Cull W */
+	top: 53%;
+	left: 66%;
 }
-#dragonfall-18-box{ /* Melandru */
-	top: 2700px;
-	left: 550px;
+#dragonfall-18-box{ /* Cull S */
+	top: 74%;
+	left: 78%;
 }
-/* Bridges */
-#dragonfall-19-box{ /* Crystal Bloom E */
-	top: 170px;
-	left: 900px;
+#dragonfall-19-box{ /* Champ Elemental */
+	top: 35%;
+	left: 81%;
 }
-#dragonfall-20-box{ /* Crystal Bloom S */
-	top: 450px;
-	left: 200px;
+#dragonfall-20-box{ /* Brandstorm */
+	top: 80%;
+	left: 62%;
 }
-#dragonfall-21-box{ /* Underworld */
-	top: 1360px;
-	left: 950px;
+#dragonfall-21-box{ /* Mender */
+	top: 77%;
+	left: 71%;
 }
-
-#dragonfall-22-box{ /* Melandru */
-	top: 2220px;
-	left: 580px;
+#dragonfall-22-box{ /* Brdige E */
+	top: 50%;
+	left: 73%;
 }
 
 #bjora-1-box { /* Wisp */

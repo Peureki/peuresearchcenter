@@ -6280,6 +6280,21 @@ function checkboxTimer(objHTML, objEvent){
         objEvent[timerKey].sidebox.style.display = "none";
     }
 }
+// Custom checkboxes for specific ranges
+// Ex: customCheckboxTimers(this, dragonfall.events, 1, 5, 9, 21)
+function customCheckboxTimers(objHTML, objEvent, event1, event2, event3, event4){
+	let eventRange = [event1, event2, event3, event4]; 
+	console.log(eventRange);
+	if (objHTML.checked == true){
+		for (i = 0; i < eventRange.length; i++){
+			objEvent[eventRange[i]].sidebox.style.display = "block";
+		}
+	} else {
+		for (i = 0; i < eventRange.length; i++){
+			objEvent[eventRange[i]].sidebox.style.display = "none";
+		}
+	}
+}
 
 function nav_popup_overflow(){
 	var nav_left = document.getElementById('nav-left-sidetimer-box'),
