@@ -9691,21 +9691,29 @@ table.nodes td.nodes-cooldown{
 }
 
 
-/* Culls */
-/* Culls Crystal Bloom */
-#dragonfall-1-box{
-	top: 40px;
-	left: 220px;
+/*
+	===============================
+	========= DRAGONFALL ==========
+	===============================
+*/
+/*
+	==================================
+	========= BURNING FOREST =========
+	==================================
+*/
+#dragonfall-1-box{ /* Cull N */
+	top: 6%;
+	left: 15%;
 }
-#dragonfall-2-box{
-	top: 340px;
-	left: 400px;
+#dragonfall-2-box{ /* Cull S */
+	top: 24%;
+	left: 23%;
 }
-#dragonfall-3-box{
-	top: 120px;
-	left: 750px;
+#dragonfall-3-box{ /* Cull E */
+	top: 8%;
+	left: 42%;
 }
-/* Culls Underworld */
+
 #dragonfall-4-box{
 	top: 920px;
 	left: 130px;

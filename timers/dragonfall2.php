@@ -66,7 +66,7 @@
 	    ====================== SIDE TIMER LIST ======================
 	    =============================================================
 	-->
-	<div id = "side-timer-list" class = "side-timer-list">
+	<div id = "side-timer-list" class = "side-timer-list" style = "display: none;">
 
 		<!-- 
 		    =============================================================
@@ -191,22 +191,22 @@
 	      	<p2 id = "numerical-sidetimer-dragonfall-14">540</p2>
 	    </div>
 
+	    <div id = "dragonfall-15-sidebox" class = "event-sidebox" >
+	      	<h1> O: Bridge S </h1>
+	      	<input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "sidetimer-dragonfall-15-start">
+	      	<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "sidetimer-dragonfall-15-reset">
+	      	<p1 id = "sidetimer-dragonfall-15">14:00</p1>
+	      	<p2 id = "numerical-sidetimer-dragonfall-15">840</p2>
+	    </div>
+
 	    <!-- 
 		    =======================================================
 		    ====================== MELANDRU =======================
 		    =======================================================
 		-->
 
-	    <div id = "dragonfall-15-sidebox" class = "event-sidebox" >
-	      	<h1> M: Cull N </h1>
-	      	<input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "sidetimer-dragonfall-15-start">
-	      	<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "sidetimer-dragonfall-15-reset">
-	      	<p1 id = "sidetimer-dragonfall-15">4:00</p1>
-	      	<p2 id = "numerical-sidetimer-dragonfall-15">240</p2>
-	    </div>
-
 	    <div id = "dragonfall-16-sidebox" class = "event-sidebox" >
-	      	<h1> M: Cull W </h1>
+	      	<h1> M: Cull N </h1>
 	      	<input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "sidetimer-dragonfall-16-start">
 	      	<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "sidetimer-dragonfall-16-reset">
 	      	<p1 id = "sidetimer-dragonfall-16">4:00</p1>
@@ -214,7 +214,7 @@
 	    </div>
 
 	    <div id = "dragonfall-17-sidebox" class = "event-sidebox" >
-	      	<h1> M: Cull S </h1>
+	      	<h1> M: Cull W </h1>
 	      	<input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "sidetimer-dragonfall-17-start">
 	      	<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "sidetimer-dragonfall-17-reset">
 	      	<p1 id = "sidetimer-dragonfall-17">4:00</p1>
@@ -222,19 +222,43 @@
 	    </div>
 
 	    <div id = "dragonfall-18-sidebox" class = "event-sidebox" >
-	      	<h1> M: Champ Elemental </h1>
+	      	<h1> M: Cull S </h1>
 	      	<input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "sidetimer-dragonfall-18-start">
 	      	<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "sidetimer-dragonfall-18-reset">
-	      	<p1 id = "sidetimer-dragonfall-18">9:30</p1>
-	      	<p2 id = "numerical-sidetimer-dragonfall-18">570</p2>
+	      	<p1 id = "sidetimer-dragonfall-18">4:00</p1>
+	      	<p2 id = "numerical-sidetimer-dragonfall-18">240</p2>
 	    </div>
 
 	    <div id = "dragonfall-19-sidebox" class = "event-sidebox" >
-	      	<h1> M: Brandstorm </h1>
+	      	<h1> M: Champ Elemental </h1>
 	      	<input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "sidetimer-dragonfall-19-start">
 	      	<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "sidetimer-dragonfall-19-reset">
-	      	<p1 id = "sidetimer-dragonfall-19">6:15</p1>
-	      	<p2 id = "numerical-sidetimer-dragonfall-19">375</p2>
+	      	<p1 id = "sidetimer-dragonfall-19">9:30</p1>
+	      	<p2 id = "numerical-sidetimer-dragonfall-19">570</p2>
+	    </div>
+
+	    <div id = "dragonfall-20-sidebox" class = "event-sidebox" >
+	      	<h1> M: Brandstorm </h1>
+	      	<input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "sidetimer-dragonfall-20-start">
+	      	<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "sidetimer-dragonfall-20-reset">
+	      	<p1 id = "sidetimer-dragonfall-20">6:15</p1>
+	      	<p2 id = "numerical-sidetimer-dragonfall-20">375</p2>
+	    </div>
+
+	    <div id = "dragonfall-21-sidebox" class = "event-sidebox" >
+	      	<h1> M: Mender </h1>
+	      	<input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "sidetimer-dragonfall-21-start">
+	      	<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "sidetimer-dragonfall-21-reset">
+	      	<p1 id = "sidetimer-dragonfall-21">9:00</p1>
+	      	<p2 id = "numerical-sidetimer-dragonfall-21">540</p2>
+	    </div>
+
+	    <div id = "dragonfall-22-sidebox" class = "event-sidebox" >
+	      	<h1> M: Bridge E </h1>
+	      	<input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "sidetimer-dragonfall-22-start">
+	      	<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "sidetimer-dragonfall-22-reset">
+	      	<p1 id = "sidetimer-dragonfall-22">14:00</p1>
+	      	<p2 id = "numerical-sidetimer-dragonfall-22">840</p2>
 	    </div>
 	</div>
 
@@ -258,79 +282,169 @@
 		<div class = "map-timer-wrapper">
 
 			<div class = "event-box" id = "dragonfall-1-box">
-      			<h1> Yatendi Village </h1>
-       	 		<br><p1 id = "timer-dragonfall-1">23:00</p1>
+      			<h1> B: Cull N </h1>
+       	 		<br><p1 id = "timer-dragonfall-1">4:00</p1>
         		<br><input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "timer-dragonfall-1-start">
-       			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-1-reset">	
+       			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-1-reset">
        		</div>
 
        		<div class = "event-box" id = "dragonfall-2-box">
-      			<h1> Ziya </h1>
-       	 		<br><p1 id = "timer-dragonfall-2">13:45</p1>
+      			<h1> B: Cull S </h1>
+       	 		<br><p1 id = "timer-dragonfall-2">4:00</p1>
         		<br><input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "timer-dragonfall-2-start">
-       			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-2-reset">	
+       			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-2-reset">
        		</div>
 
        		<div class = "event-box" id = "dragonfall-3-box">
-      			<h1> Garrison </h1>
-       	 		<br><p1 id = "timer-dragonfall-3">2:30</p1>
+      			<h1> B: Cull E </h1>
+       	 		<br><p1 id = "timer-dragonfall-3">4:00</p1>
         		<br><input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "timer-dragonfall-3-start">
-       			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-3-reset">	
+       			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-3-reset">
        		</div>
 
        		<div class = "event-box" id = "dragonfall-4-box">
-      			<h1> DERV </h1>
-       	 		<br><p1 id = "timer-dragonfall-4">14:45</p1>
+      			<h1> B: Champ Abyssal </h1>
+       	 		<br><p1 id = "timer-dragonfall-4">9:30</p1>
         		<br><input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "timer-dragonfall-4-start">
-       			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-4-reset">	
+       			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-4-reset">
        		</div>
 
        		<div class = "event-box" id = "dragonfall-5-box">
-      			<h1> Gate </h1>
-       	 		<br><p1 id = "timer-dragonfall-5">14:00</p1>
+      			<h1> B: Brandstorm </h1>
+       	 		<br><p1 id = "timer-dragonfall-5">6:15</p1>
         		<br><input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "timer-dragonfall-5-start">
-       			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-5-reset">	
+       			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-5-reset">
        		</div>
 
        		<div class = "event-box" id = "dragonfall-6-box">
-      			<h1> Chantry </h1>
-       	 		<br><p1 id = "timer-dragonfall-6">13:00</p1>
+      			<h1> B: Mender </h1>
+       	 		<br><p1 id = "timer-dragonfall-6">9:00</p1>
         		<br><input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "timer-dragonfall-6-start">
-       			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-6-reset">	
+       			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-6-reset">
+       		</div>
+
+       		<div class = "event-box" id = "dragonfall-7-box">
+      			<h1> B: Bridge N </h1>
+       	 		<br><p1 id = "timer-dragonfall-7">14:00</p1>
+        		<br><input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "timer-dragonfall-7-start">
+       			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-7-reset">
+       		</div>
+
+       		<div class = "event-box" id = "dragonfall-8-box">
+      			<h1> B: Bridge W </h1>
+       	 		<br><p1 id = "timer-dragonfall-8">14:00</p1>
+        		<br><input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "timer-dragonfall-8-start">
+       			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-8-reset">
        		</div>
 
        		<!-- 
-			    ======================================================
-			    ====================== BOUNTIES ======================
-			    ======================================================
+			    =======================================================
+			    ====================== OKLAHOMA =======================
+			    =======================================================
 			-->
 
-			<div class = "event-box" id = "dragonfall-7-box">
-      			<h1> LB: Wyverns </h1>
-       	 		<br><p1 id = "timer-dragonfall-7">30:00</p1>
-        		<br><input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "timer-dragonfall-7-start">
-       			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-7-reset">	
-       		</div>
-
-       		<div class = "event-box" id = "dragonfall-8-box" style = "visibility: hidden;">
-      			<h1> B: Ettin </h1>
-       	 		<br><p1 id = "timer-dragonfall-8">15:00</p1>
-        		<br><input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "timer-dragonfall-8-start">
-       			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-8-reset">	
-       		</div>
-
-       		<div class = "event-box" id = "dragonfall-9-box" style = "visibility: hidden;">
-      			<h1> B: Pet Rock </h1>
-       	 		<br><p1 id = "timer-dragonfall-9">15:00</p1>
+       		<div class = "event-box" id = "dragonfall-9-box">
+      			<h1> O: Cull W </h1>
+       	 		<br><p1 id = "timer-dragonfall-9">4:00</p1>
         		<br><input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "timer-dragonfall-9-start">
-       			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-9-reset">	
+       			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-9-reset">
        		</div>
 
-       		<div class = "event-box" id = "dragonfall-10-box" style = "visibility: hidden;">
-      			<h1> B: Weapons </h1>
-       	 		<br><p1 id = "timer-dragonfall-10">15:00</p1>
+       		<div class = "event-box" id = "dragonfall-10-box">
+      			<h1> O: Cull S </h1>
+       	 		<br><p1 id = "timer-dragonfall-10">4:00</p1>
         		<br><input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "timer-dragonfall-10-start">
-       			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-10-reset">	
+       			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-10-reset">
+       		</div>
+
+       		<div class = "event-box" id = "dragonfall-11-box">
+      			<h1> O: Cull E </h1>
+       	 		<br><p1 id = "timer-dragonfall-11">30:00</p1>
+        		<br><input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "timer-dragonfall-11-start">
+       			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-11-reset">
+       		</div>
+
+       		<div class = "event-box" id = "dragonfall-12-box">
+      			<h1> O: Champ Arbiter </h1>
+       	 		<br><p1 id = "timer-dragonfall-12">14:00</p1>
+        		<br><input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "timer-dragonfall-12-start">
+       			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-12-reset">
+       		</div>
+
+       		<div class = "event-box" id = "dragonfall-13-box">
+      			<h1> O: Brandstorm </h1>
+       	 		<br><p1 id = "timer-dragonfall-13">6:15</p1>
+        		<br><input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "timer-dragonfall-13-start">
+       			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-13-reset">
+       		</div>
+
+       		<div class = "event-box" id = "dragonfall-14-box">
+      			<h1> O: Mender </h1>
+       	 		<br><p1 id = "timer-dragonfall-14">9:00</p1>
+        		<br><input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "timer-dragonfall-14-start">
+       			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-14-reset">
+       		</div>
+
+       		<div class = "event-box" id = "dragonfall-15-box">
+      			<h1> O: Bridge S </h1>
+       	 		<br><p1 id = "timer-dragonfall-15">14:00</p1>
+        		<br><input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "timer-dragonfall-15-start">
+       			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-15-reset">
+       		</div>
+
+       		<!-- 
+			    =======================================================
+			    ====================== MELANDRU =======================
+			    =======================================================
+			-->
+
+       		<div class = "event-box" id = "dragonfall-16-box">
+      			<h1> M: Cull N </h1>
+       	 		<br><p1 id = "timer-dragonfall-16">4:00</p1>
+        		<br><input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "timer-dragonfall-16-start">
+       			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-16-reset">
+       		</div>
+
+       		<div class = "event-box" id = "dragonfall-17-box">
+      			<h1> M: Cull W </h1>
+       	 		<br><p1 id = "timer-dragonfall-17">4:00</p1>
+        		<br><input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "timer-dragonfall-17-start">
+       			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-17-reset">
+       		</div>
+
+       		<div class = "event-box" id = "dragonfall-18-box">
+      			<h1> M: Cull S </h1>
+       	 		<br><p1 id = "timer-dragonfall-18">4:00</p1>
+        		<br><input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "timer-dragonfall-18-start">
+       			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-18-reset">
+       		</div>
+
+       		<div class = "event-box" id = "dragonfall-19-box">
+      			<h1> M: Champ Elemental </h1>
+       	 		<br><p1 id = "timer-dragonfall-19">9:30</p1>
+        		<br><input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "timer-dragonfall-19-start">
+       			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-19-reset">
+       		</div>
+
+       		<div class = "event-box" id = "dragonfall-20-box">
+      			<h1> M: Brandstorm </h1>
+       	 		<br><p1 id = "timer-dragonfall-20">6:15</p1>
+        		<br><input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "timer-dragonfall-20-start">
+       			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-20-reset">
+       		</div>
+
+       		<div class = "event-box" id = "dragonfall-21-box">
+      			<h1> M: Mender </h1>
+       	 		<br><p1 id = "timer-dragonfall-21">9:00</p1>
+        		<br><input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "timer-dragonfall-21-start">
+       			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-21-reset">
+       		</div>
+
+       		<div class = "event-box" id = "dragonfall-22-box">
+      			<h1> M: Bridge E </h1>
+       	 		<br><p1 id = "timer-dragonfall-22">14:00</p1>
+        		<br><input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "timer-dragonfall-22-start">
+       			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-22-reset">
        		</div>
 
 			<!-- MAP PICTURE -->
