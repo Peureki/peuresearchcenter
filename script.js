@@ -6270,6 +6270,7 @@ function left_sidetimer_sort(obj){
 }
 
 // Shows or removes timer on the sideboxes depending if the users check or unchecks the checkbox
+/*
 function checkboxTimer(objHTML, objEvent){
     // Match the num on the html id to match the pos/key in the objEvent
     let timerKey = objHTML.id.match(findNum)[0];
@@ -6280,18 +6281,85 @@ function checkboxTimer(objHTML, objEvent){
         objEvent[timerKey].sidebox.style.display = "none";
     }
 }
+*/
 // Custom checkboxes for specific ranges
 // Ex: customCheckboxTimers(this, dragonfall.events, 1, 5, 9, 21)
-function customCheckboxTimers(objHTML, objEvent, event1, event2, event3, event4){
-	let eventRange = [event1, event2, event3, event4]; 
-	console.log(eventRange);
-	if (objHTML.checked == true){
-		for (i = 0; i < eventRange.length; i++){
-			objEvent[eventRange[i]].sidebox.style.display = "block";
+function checkboxTimer(objHTML, objEvent, event1, event2, event3, event4, event5, event6, event7, event8, event9){
+	let eventRange = new Array;
+	let timerKey;
+	// Get all the checkboxes
+	let objChildren = objHTML.parentNode.getElementsByTagName('input');
+
+	// Check if there's a number in the string of the current checkbox ID
+	try {
+		timerKey = objHTML.id.match(findNum)[0];
+	} catch(error){
+		console.log("There's no number in the current checkbox ID");
+	}
+	// Check if there are any event parms
+	// If yes, then push them into the eventRange array
+	if (typeof event1 !== 'undefined' && event1 !== 'all') eventRange.push(event1);
+	if (typeof event2 !== 'undefined') eventRange.push(event2);
+	if (typeof event3 !== 'undefined') eventRange.push(event3);
+	if (typeof event4 !== 'undefined') eventRange.push(event4);
+	if (typeof event5 !== 'undefined') eventRange.push(event5);
+	if (typeof event6 !== 'undefined') eventRange.push(event6);
+	if (typeof event7 !== 'undefined') eventRange.push(event7);
+	if (typeof event8 !== 'undefined') eventRange.push(event8);
+	if (typeof event9 !== 'undefined') eventRange.push(event9);
+
+	// If only a single event (no event parms)
+	if (eventRange.length == 0 && event1 !== 'all'){
+		if (objHTML.checked == true){
+	        objEvent[timerKey].sidebox.style.display = "block"; 
+	    } else {
+	        objEvent[timerKey].sidebox.style.display = "none";
+	    }
+	}
+	// If multiple events (at least one event parms)
+	if (eventRange.length !== 0 && event1 !== 'all'){
+		if (objHTML.checked == true){
+			for (i = 0; i < eventRange.length; i++){
+				objEvent[eventRange[i]].sidebox.style.display = "block";
+				objChildren[eventRange[i]].checked = true;
+			}
+		} else {
+			for (i = 0; i < eventRange.length; i++){
+				objEvent[eventRange[i]].sidebox.style.display = "none";
+				objChildren[eventRange[i]].checked = false;
+			}
 		}
-	} else {
-		for (i = 0; i < eventRange.length; i++){
-			objEvent[eventRange[i]].sidebox.style.display = "none";
+	}
+	// If all events selected 
+	if (event1 == 'all'){
+		if (objHTML.checked == true){
+			// Loop thru entire event json
+			for (i = 0; i < objEvent.length; i++){
+				// Check if any of the indexes are empty or dont have a sidebox
+				try{
+					objEvent[i].sidebox.style.display = "block";
+				}	catch (error){
+					console.log('Object does not have a sidebox');
+				}
+			}
+			// Loop thru all checkboxes
+			for (i = 0; i < objChildren.length; i++){
+				objChildren[i].checked = true;
+			}
+			
+		} else {
+			for (i = 0; i < objEvent.length; i++){
+				// Check if any of the indexes are empty or dont have a sidebox
+				try{
+					objEvent[i].sidebox.style.display = "none";
+				}	catch (error){
+					console.log('Object does not have a sidebox');
+				}
+			}
+			// Loop thru all checkboxes
+			for (i = 0; i < objChildren.length; i++){
+				objChildren[i].checked = false;
+			}
 		}
 	}
 }
