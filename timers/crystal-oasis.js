@@ -1,24 +1,18 @@
-// NAV-LEFT SORT IDs
-// Add this to only Timer pages
-var sort_timers = document.getElementById('nav-left-sidetimer-box'),
-    sort_interval;
-
-// Always sorts the left event list
-// Add this to only Timer pages
-sort_interval = setInterval(function(){
-    left_sidetimer_sort(sort_timers);
-}, 1000);
+// Sort the timers on a 1 sec interval. Sorts the list based on most upcoming
+sortTimers();
 
 var crystal = {
     events: [
         {   // [0] Casino Blitz Meta
+            status: 0,
+            key: 0,
             timeSideLabel: document.getElementById('sidetimer-crystal-meta'),
             sidebox: document.getElementById('crystal-meta-sidebox'),
             num: document.getElementById('numerical-sidetimer-crystal-meta')
         },
         {   // [1] Raiding Party N1
-            function: function() { crystal_Countdown(1); },
             status: 0,
+            key: 0,
             cooldown: 60 * 6, 
             startButton: document.getElementById('timer-crystal-1-start'),
             startSideButton: document.getElementById('sidetimer-crystal-1-start'),
@@ -27,12 +21,13 @@ var crystal = {
             timeLabel: document.getElementById('timer-crystal-1'), 
             timeSideLabel: document.getElementById('sidetimer-crystal-1'),
             sidebox: document.getElementById('crystal-1-sidebox'),
-            num: document.getElementById('numerical-sidetimer-crystal-1')
+            num: document.getElementById('numerical-sidetimer-crystal-1'),
+            doCountdown: function(){ countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         }, 
 
         {   // [2] Raiding Party N2
-            function: function() { crystal_Countdown(2); },
             status: 0,
+            key: 0,
             cooldown: 60 * 6, 
             startButton: document.getElementById('timer-crystal-2-start'),
             startSideButton: document.getElementById('sidetimer-crystal-2-start'),
@@ -41,11 +36,12 @@ var crystal = {
             timeLabel: document.getElementById('timer-crystal-2'), 
             timeSideLabel: document.getElementById('sidetimer-crystal-2'),
             sidebox: document.getElementById('crystal-2-sidebox'),
-            num: document.getElementById('numerical-sidetimer-crystal-2')
+            num: document.getElementById('numerical-sidetimer-crystal-2'),
+            doCountdown: function(){ countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         }, 
         {   // [3] Raiding Party S1
-            function: function() { crystal_Countdown(3); },
             status: 0,
+            key: 0,
             cooldown: 60 * 6, 
             startButton: document.getElementById('timer-crystal-3-start'),
             startSideButton: document.getElementById('sidetimer-crystal-3-start'),
@@ -54,11 +50,12 @@ var crystal = {
             timeLabel: document.getElementById('timer-crystal-3'), 
             timeSideLabel: document.getElementById('sidetimer-crystal-3'),
             sidebox: document.getElementById('crystal-3-sidebox'),
-            num: document.getElementById('numerical-sidetimer-crystal-3')
+            num: document.getElementById('numerical-sidetimer-crystal-3'),
+            doCountdown: function(){ countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [4] Raiding Party S2
-            function: function() { crystal_Countdown(4); },
             status: 0,
+            key: 0,
             cooldown: 60 * 6, 
             startButton: document.getElementById('timer-crystal-4-start'),
             startSideButton: document.getElementById('sidetimer-crystal-4-start'),
@@ -67,11 +64,12 @@ var crystal = {
             timeLabel: document.getElementById('timer-crystal-4'), 
             timeSideLabel: document.getElementById('sidetimer-crystal-4'),
             sidebox: document.getElementById('crystal-4-sidebox'),
-            num: document.getElementById('numerical-sidetimer-crystal-4')
+            num: document.getElementById('numerical-sidetimer-crystal-4'),
+            doCountdown: function(){ countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [5] Raiding Party E1
-            function: function() { crystal_Countdown(5); },
             status: 0,
+            key: 0,
             cooldown: 60 * 6, 
             startButton: document.getElementById('timer-crystal-5-start'),
             startSideButton: document.getElementById('sidetimer-crystal-5-start'),
@@ -80,11 +78,12 @@ var crystal = {
             timeLabel: document.getElementById('timer-crystal-5'), 
             timeSideLabel: document.getElementById('sidetimer-crystal-5'),
             sidebox: document.getElementById('crystal-5-sidebox'),
-            num: document.getElementById('numerical-sidetimer-crystal-5')
+            num: document.getElementById('numerical-sidetimer-crystal-5'),
+            doCountdown: function(){ countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [6] Crucible
-            function: function() { crystal_Countdown(6); },
             status: 0,
+            key: 0,
             cooldown: 60 * 21 + 30, 
             startButton: document.getElementById('timer-crystal-6-start'),
             startSideButton: document.getElementById('sidetimer-crystal-6-start'),
@@ -93,11 +92,12 @@ var crystal = {
             timeLabel: document.getElementById('timer-crystal-6'), 
             timeSideLabel: document.getElementById('sidetimer-crystal-6'),
             sidebox: document.getElementById('crystal-6-sidebox'),
-            num: document.getElementById('numerical-sidetimer-crystal-6')
+            num: document.getElementById('numerical-sidetimer-crystal-6'),
+            doCountdown: function(){ countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [7] Choya Stampede
-            function: function() { crystal_Countdown(7); },
             status: 0,
+            key: 0,
             cooldown: 60 * 10, 
             startButton: document.getElementById('timer-crystal-7-start'),
             startSideButton: document.getElementById('sidetimer-crystal-7-start'),
@@ -106,11 +106,12 @@ var crystal = {
             timeLabel: document.getElementById('timer-crystal-7'), 
             timeSideLabel: document.getElementById('sidetimer-crystal-7'),
             sidebox: document.getElementById('crystal-7-sidebox'),
-            num: document.getElementById('numerical-sidetimer-crystal-7')
+            num: document.getElementById('numerical-sidetimer-crystal-7'),
+            doCountdown: function(){ countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [8] Farm
-            function: function() { crystal_Countdown(8); },
             status: 0,
+            key: 0,
             cooldown: 60 * 10 + 30, 
             startButton: document.getElementById('timer-crystal-8-start'),
             startSideButton: document.getElementById('sidetimer-crystal-8-start'),
@@ -119,11 +120,12 @@ var crystal = {
             timeLabel: document.getElementById('timer-crystal-8'), 
             timeSideLabel: document.getElementById('sidetimer-crystal-8'),
             sidebox: document.getElementById('crystal-8-sidebox'),
-            num: document.getElementById('numerical-sidetimer-crystal-8')
+            num: document.getElementById('numerical-sidetimer-crystal-8'),
+            doCountdown: function(){ countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [9] Refugee (S)
-            function: function() { crystal_Countdown(9); },
             status: 0,
+            key: 0,
             cooldown: 60 * 7 + 30, 
             startButton: document.getElementById('timer-crystal-9-start'),
             startSideButton: document.getElementById('sidetimer-crystal-9-start'),
@@ -132,11 +134,12 @@ var crystal = {
             timeLabel: document.getElementById('timer-crystal-9'), 
             timeSideLabel: document.getElementById('sidetimer-crystal-9'),
             sidebox: document.getElementById('crystal-9-sidebox'),
-            num: document.getElementById('numerical-sidetimer-crystal-9')
+            num: document.getElementById('numerical-sidetimer-crystal-9'),
+            doCountdown: function(){ countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [10] Refugee (M)
-            function: function() { crystal_Countdown(10); },
             status: 0,
+            key: 0,
             cooldown: 60 * 12 + 30, 
             startButton: document.getElementById('timer-crystal-10-start'),
             startSideButton: document.getElementById('sidetimer-crystal-10-start'),
@@ -145,11 +148,12 @@ var crystal = {
             timeLabel: document.getElementById('timer-crystal-10'), 
             timeSideLabel: document.getElementById('sidetimer-crystal-10'),
             sidebox: document.getElementById('crystal-10-sidebox'),
-            num: document.getElementById('numerical-sidetimer-crystal-10')
+            num: document.getElementById('numerical-sidetimer-crystal-10'),
+            doCountdown: function(){ countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [11] Refugee (N)
-            function: function() { crystal_Countdown(11); },
             status: 0,
+            key: 0,
             cooldown: 60 * 6 + 30, 
             startButton: document.getElementById('timer-crystal-11-start'),
             startSideButton: document.getElementById('sidetimer-crystal-11-start'),
@@ -158,11 +162,12 @@ var crystal = {
             timeLabel: document.getElementById('timer-crystal-11'), 
             timeSideLabel: document.getElementById('sidetimer-crystal-11'),
             sidebox: document.getElementById('crystal-11-sidebox'),
-            num: document.getElementById('numerical-sidetimer-crystal-11')
+            num: document.getElementById('numerical-sidetimer-crystal-11'),
+            doCountdown: function(){ countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [12] Refugee (N)
-            function: function() { crystal_Countdown(12); },
             status: 0,
+            key: 0,
             cooldown: 60 * 15 + 30, 
             startButton: document.getElementById('timer-crystal-12-start'),
             startSideButton: document.getElementById('sidetimer-crystal-12-start'),
@@ -171,11 +176,12 @@ var crystal = {
             timeLabel: document.getElementById('timer-crystal-12'), 
             timeSideLabel: document.getElementById('sidetimer-crystal-12'),
             sidebox: document.getElementById('crystal-12-sidebox'),
-            num: document.getElementById('numerical-sidetimer-crystal-12')
+            num: document.getElementById('numerical-sidetimer-crystal-12'),
+            doCountdown: function(){ countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [13] Refugee (N)
-            function: function() { crystal_Countdown(13); },
             status: 0,
+            key: 0,
             cooldown: 60 * 15 + 30, 
             startButton: document.getElementById('timer-crystal-13-start'),
             startSideButton: document.getElementById('sidetimer-crystal-13-start'),
@@ -184,11 +190,12 @@ var crystal = {
             timeLabel: document.getElementById('timer-crystal-13'), 
             timeSideLabel: document.getElementById('sidetimer-crystal-13'),
             sidebox: document.getElementById('crystal-13-sidebox'),
-            num: document.getElementById('numerical-sidetimer-crystal-13')
+            num: document.getElementById('numerical-sidetimer-crystal-13'),
+            doCountdown: function(){ countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [14] Forged Maverick
-            function: function() { crystal_Countdown(14); },
             status: 0,
+            key: 0,
             cooldown: 60 * 15, 
             startButton: document.getElementById('timer-crystal-14-start'),
             startSideButton: document.getElementById('sidetimer-crystal-14-start'),
@@ -197,11 +204,12 @@ var crystal = {
             timeLabel: document.getElementById('timer-crystal-14'), 
             timeSideLabel: document.getElementById('sidetimer-crystal-14'),
             sidebox: document.getElementById('crystal-14-sidebox'),
-            num: document.getElementById('numerical-sidetimer-crystal-14')
+            num: document.getElementById('numerical-sidetimer-crystal-14'),
+            doCountdown: function(){ countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [15] Forged Punisher
-            function: function() { crystal_Countdown(15); },
             status: 0,
+            key: 0,
             cooldown: 60 * 15, 
             startButton: document.getElementById('timer-crystal-15-start'),
             startSideButton: document.getElementById('sidetimer-crystal-15-start'),
@@ -210,11 +218,12 @@ var crystal = {
             timeLabel: document.getElementById('timer-crystal-15'), 
             timeSideLabel: document.getElementById('sidetimer-crystal-15'),
             sidebox: document.getElementById('crystal-15-sidebox'),
-            num: document.getElementById('numerical-sidetimer-crystal-15')
+            num: document.getElementById('numerical-sidetimer-crystal-15'),
+            doCountdown: function(){ countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [16] Forged Sorcerer
-            function: function() { crystal_Countdown(16); },
             status: 0,
+            key: 0,
             cooldown: 60 * 15, 
             startButton: document.getElementById('timer-crystal-16-start'),
             startSideButton: document.getElementById('sidetimer-crystal-16-start'),
@@ -223,284 +232,14 @@ var crystal = {
             timeLabel: document.getElementById('timer-crystal-16'), 
             timeSideLabel: document.getElementById('sidetimer-crystal-16'),
             sidebox: document.getElementById('crystal-16-sidebox'),
-            num: document.getElementById('numerical-sidetimer-crystal-16')
+            num: document.getElementById('numerical-sidetimer-crystal-16'),
+            doCountdown: function(){ countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
     ]
 };
 
-
-// Label of the meta on the side
-var meta_name = document.getElementById('meta-name');
-
-var crystal; // Empty array for countdown
-var find_num = /\d+/; // Expression to use with .match(find_num) to find a number in a string
-
-
-/* Start/Stop button functionality */
-function start_stop(obj){
-
-    var timer = obj.id;
-    var timer_num = obj.id.match(find_num)[0];
-    // Status 0 = Stop 
-    // Status 1 = Starting, Ongoing
-    // When the Start button is clicked, change status to Starting and start timer
-    // Else -> Keep status at Stop
-    
-    switch (timer_num) {
-        case timer_num:
-        start_Event(timer_num);
-        break;
-    }
-
-    function start_Event(timer_num){
-        if (timer == crystal.events[timer_num].startButton.id || timer == crystal.events[timer_num].startSideButton.id){
-            if (crystal.events[timer_num].status == 0){
-                crystal.events[timer_num].status = 1; 
-                crystal.events[timer_num].function(); 
-
-                crystal.events[timer_num].startButton.value = "Reset";
-                crystal.events[timer_num].startSideButton.value = "Reset";
-            } else {
-                crystal.events[timer_num].status = 0;
-                crystal.events[timer_num].startButton.value = "Start";
-                crystal.events[timer_num].startSideButton.value = "Start";
-
-                crystal.events[timer_num].timeLabel.style.color = "black";
-                crystal.events[timer_num].timeSideLabel.style.color = 'black';
-                crystal.events[timer_num].timeLabel.style.background = 'rgba(255,246,214)';
-                crystal.events[timer_num].sidebox.style.background = 'transparent';
-                crystal.events[timer_num].function();
-            }   
-        }
-    }
-}
-
-// Reset Button functionality
-function reset (obj){
-    var timer = obj.id;
-    var timer_num = obj.id.match(find_num)[0];
-    /*
-        When Reset button is clicked, 
-        -> Change status to Stop 
-        -> Reset timer to original time + 1
-        -> Reset time label to oringal time
-        -> Reset opacity of the text to hidden
-    */
-    // Remember to change these reset times to the RESPAWN rate and not the INITIAL SPAWN rate
-
-    switch (timer_num) {
-        case timer_num:
-        start_Event(timer_num);
-        break;
-    }
-
-    function start_Event(timer_num){
-        if (timer == crystal.events[timer_num].resetButton.id || timer == crystal.events[timer_num].resetSideButton.id){
-            if (crystal.events[timer_num].status == 1){
-                crystal.events[timer_num].status = 0;
-                crystal.events[timer_num].cooldown = crystal.events[timer_num].cooldown;
-                crystal.events[timer_num].timeLabel.style.color = "black";
-
-                crystal.events[timer_num].timeSideLabel.innerHTML = crystal.events[timer_num].timeLabel.innerHTML;
-                crystal.events[timer_num].timeSideLabel.style.color = crystal.events[timer_num].timeLabel.style.color;
-
-                crystal.events[timer_num].timeLabel.style.background = 'rgba(255,246,214)';
-                crystal.events[timer_num].sidebox.style.background = "transparent";
-
-                crystal.events[timer_num].function(); 
-                crystal.events[timer_num].status = 1;
-                crystal.events[timer_num].function(); 
-            }
-        }
-    }
-}
-
-function crystal_Countdown(arrayNum){
-    var date_now = Date.now(); 
-
-    function run_countdown() {
-        var countdown = getTime(date_now, crystal.events[arrayNum].cooldown, crystal.events[arrayNum].timeLabel, crystal.events[arrayNum].timeSideLabel, crystal.events[arrayNum].num);
-        if (countdown.time <= 0){ 
-            time_text_and_labels_less_than_0(crystal.events[arrayNum].timeLabel, crystal.events[arrayNum].sidebox, crystal.events[arrayNum].timeSideLabel);
-        } else if (countdown.time <= 60){
-            time_text_and_labels_less_than_60(crystal.events[arrayNum].timeLabel, crystal.events[arrayNum].sidebox);
-        }
-    }
-    run_countdown(); 
-    if (crystal.events[arrayNum].status == 1){
-        crystal[arrayNum] = setInterval(run_countdown, 1000);
-    } else {
-        clearInterval(crystal[arrayNum]);   
-    } 
-}
-
-
-
-
-// Checkboxes
-function crystal_All_Checkbox(obj){
-	var checkbox = obj,
-		c1 = document.getElementById('crystal-1-checkbox'), 
-        c2 = document.getElementById('crystal-2-checkbox'), 
-        c3 = document.getElementById('crystal-3-checkbox'), 
-        c4 = document.getElementById('crystal-4-checkbox'),
-        c5 = document.getElementById('crystal-5-checkbox'), 
-        c6 = document.getElementById('crystal-6-checkbox'), 
-        c7 = document.getElementById('crystal-7-checkbox'), 
-        c8 = document.getElementById('crystal-8-checkbox'), 
-        c9 = document.getElementById('crystal-9-checkbox'), 
-        c10 = document.getElementById('crystal-10-checkbox'), 
-        c11 = document.getElementById('crystal-11-checkbox');
-
-	if (checkbox.checked == true){
-		c1.checked = true;
-        c2.checked = true;
-        c3.checked = true;
-        c4.checked = true; 
-        c5.checked = true; 
-        c6.checked = true; 
-        c7.checked = true; 
-        c8.checked = true; 
-        c9.checked = true; 
-        c10.checked = true; 
-        c11.checked = true; 
-
-        crystal_1_Checkbox(c1);
-        crystal_2_Checkbox(c2);
-        crystal_3_Checkbox(c3);
-        crystal_4_Checkbox(c4);
-        crystal_5_Checkbox(c5);
-        crystal_6_Checkbox(c6);
-        crystal_7_Checkbox(c7);
-        crystal_8_Checkbox(c8);
-        crystal_9_Checkbox(c9);
-        crystal_10_Checkbox(c10);
-        crystal_11_Checkbox(c11);
-	} else {
-		c1.checked = false;
-        c2.checked = false;
-        c3.checked = false;
-        c4.checked = false; 
-        c5.checked = false; 
-        c6.checked = false; 
-        c7.checked = false; 
-        c8.checked = false; 
-        c9.checked = false; 
-        c10.checked = false; 
-        c11.checked = false; 
-
-        crystal_1_Checkbox(c1);
-        crystal_2_Checkbox(c2);
-        crystal_3_Checkbox(c3);
-        crystal_4_Checkbox(c4);
-        crystal_5_Checkbox(c5);
-        crystal_6_Checkbox(c6);
-        crystal_7_Checkbox(c7);
-        crystal_8_Checkbox(c8);
-        crystal_9_Checkbox(c9);
-        crystal_10_Checkbox(c10);
-        crystal_11_Checkbox(c11);
-	}
-}
-// Raiding party N1
-function crystal_1_Checkbox(obj){
-    var checkbox = obj;
-    if (checkbox.checked == true){
-        sidebox_timer_crystal_1.style.display = "block";
-    } else {
-        sidebox_timer_crystal_1.style.display = "none";
-    }
-}
-// Raiding party N2
-function crystal_2_Checkbox(obj){
-    var checkbox = obj;
-    if (checkbox.checked == true){
-        sidebox_timer_crystal_2.style.display = "block";
-    } else {
-        sidebox_timer_crystal_2.style.display = "none";
-    }
-}
-// Raiding party S1
-function crystal_3_Checkbox(obj){
-    var checkbox = obj;
-    if (checkbox.checked == true){
-        sidebox_timer_crystal_3.style.display = "block";
-    } else {
-        sidebox_timer_crystal_3.style.display = "none";
-    }
-}
-// Raiding party S2
-function crystal_4_Checkbox(obj){
-    var checkbox = obj;
-    if (checkbox.checked == true){
-        sidebox_timer_crystal_4.style.display = "block";
-    } else {
-        sidebox_timer_crystal_4.style.display = "none";
-    }
-}
-// Raiding party W1
-function crystal_5_Checkbox(obj){
-    var checkbox = obj;
-    if (checkbox.checked == true){
-        sidebox_timer_crystal_5.style.display = "block";
-    } else {
-        sidebox_timer_crystal_5.style.display = "none";
-    }
-}
-// Crucible
-function crystal_6_Checkbox(obj){
-    var checkbox = obj;
-    if (checkbox.checked == true){
-        sidebox_timer_crystal_6.style.display = "block";
-    } else {
-        sidebox_timer_crystal_6.style.display = "none";
-    }
-}
-// Choya Stampede
-function crystal_7_Checkbox(obj){
-    var checkbox = obj;
-    if (checkbox.checked == true){
-        sidebox_timer_crystal_7.style.display = "block";
-    } else {
-        sidebox_timer_crystal_7.style.display = "none";
-    }
-}
-// Farm
-function crystal_8_Checkbox(obj){
-    var checkbox = obj;
-    if (checkbox.checked == true){
-        sidebox_timer_crystal_8.style.display = "block";
-    } else {
-        sidebox_timer_crystal_8.style.display = "none";
-    }
-}
-// Refugee S
-function crystal_9_Checkbox(obj){
-    var checkbox = obj;
-    if (checkbox.checked == true){
-        sidebox_timer_crystal_9.style.display = "block";
-    } else {
-        sidebox_timer_crystal_9.style.display = "none";
-    }
-}
-// Refugee M
-function crystal_10_Checkbox(obj){
-    var checkbox = obj;
-    if (checkbox.checked == true){
-        sidebox_timer_crystal_10.style.display = "block";
-    } else {
-        sidebox_timer_crystal_10.style.display = "none";
-    }
-}
-// Refugee N
-function crystal_11_Checkbox(obj){
-    var checkbox = obj;
-    if (checkbox.checked == true){
-        sidebox_timer_crystal_11.style.display = "block";
-    } else {
-        sidebox_timer_crystal_11.style.display = "none";
-    }
-}
+// Dynamically creates unique keys
+add_event_keys(crystal.events); 
 
 // Bounty checkboxes
 // Deselect all bounties
@@ -554,7 +293,7 @@ function crystal_Bounty_3_Checkbox(obj){
 }
 
 // Initials
-var current_progress = document.getElementById('current-status'),
+let current_progress = document.getElementById('current-status'),
     next_progress = "",
     progress_bar = document.getElementById('progress-bar'),
     progress_text = document.getElementById('progress-text'),
@@ -563,9 +302,9 @@ var current_progress = document.getElementById('current-status'),
     max_meta_time = 0,
     side_meta_name = document.getElementById('side-meta-name');
 
-    var timer = setInterval(function(){
-    var d = new Date();
-    var time = d.getUTCHours()*3600 + d.getUTCMinutes()*60 + d.getUTCSeconds(),
+    let timer = setInterval(function(){
+    let d = new Date();
+    let time = d.getUTCHours()*3600 + d.getUTCMinutes()*60 + d.getUTCSeconds(),
         result,
         hours,
         minutes,

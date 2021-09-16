@@ -1,22 +1,15 @@
-// NAV-LEFT SORT IDs
-// Add this to only Timer pages
-var sort_timers = document.getElementById('nav-left-sidetimer-box'),
-    sort_interval;
-
-// Always sorts the left event list
-// Add this to only Timer pages
-sort_interval = setInterval(function(){
-    left_sidetimer_sort(sort_timers);
-}, 1000);
+// Sort the timers on a 1 sec interval. Sorts the list based on most upcoming
+sortTimers();
 
 var desolation = {
     events: [
         {   // empty
             status: 0,
+            key: 0,
         },
         {   // [1] Caravan
-            function: function() { desolation_Countdown(1); },
             status: 0,
+            key: 0,
             cooldown: 60 * 10, 
             startButton: document.getElementById('timer-desolation-1-start'),
             startSideButton: document.getElementById('sidetimer-desolation-1-start'),
@@ -25,12 +18,13 @@ var desolation = {
             timeLabel: document.getElementById('timer-desolation-1'), 
             timeSideLabel: document.getElementById('sidetimer-desolation-1'),
             sidebox: document.getElementById('desolation-1-sidebox'),
-            num: document.getElementById('numerical-sidetimer-desolation-1')
+            num: document.getElementById('numerical-sidetimer-desolation-1'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         }, 
 
         {   // [2] Lost Mount
-            function: function() { desolation_Countdown(2); },
             status: 0,
+            key: 0,
             cooldown: 60 * 11 + 15, 
             startButton: document.getElementById('timer-desolation-2-start'),
             startSideButton: document.getElementById('sidetimer-desolation-2-start'),
@@ -39,11 +33,12 @@ var desolation = {
             timeLabel: document.getElementById('timer-desolation-2'), 
             timeSideLabel: document.getElementById('sidetimer-desolation-2'),
             sidebox: document.getElementById('desolation-2-sidebox'),
-            num: document.getElementById('numerical-sidetimer-desolation-2')
+            num: document.getElementById('numerical-sidetimer-desolation-2'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         }, 
         {   // [3] Redeemer Kossan
-            function: function() { desolation_Countdown(3); },
             status: 0,
+            key: 0,
             cooldown: 60 * 8 + 45, 
             startButton: document.getElementById('timer-desolation-3-start'),
             startSideButton: document.getElementById('sidetimer-desolation-3-start'),
@@ -52,11 +47,12 @@ var desolation = {
             timeLabel: document.getElementById('timer-desolation-3'), 
             timeSideLabel: document.getElementById('sidetimer-desolation-3'),
             sidebox: document.getElementById('desolation-3-sidebox'),
-            num: document.getElementById('numerical-sidetimer-desolation-3')
+            num: document.getElementById('numerical-sidetimer-desolation-3'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [4] Raiding Party W1
-            function: function() { desolation_Countdown(4); },
             status: 0,
+            key: 0,
             cooldown: 60 * 6, 
             startButton: document.getElementById('timer-desolation-4-start'),
             startSideButton: document.getElementById('sidetimer-desolation-4-start'),
@@ -65,11 +61,12 @@ var desolation = {
             timeLabel: document.getElementById('timer-desolation-4'), 
             timeSideLabel: document.getElementById('sidetimer-desolation-4'),
             sidebox: document.getElementById('desolation-4-sidebox'),
-            num: document.getElementById('numerical-sidetimer-desolation-4')
+            num: document.getElementById('numerical-sidetimer-desolation-4'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [5] Raiding Party W2
-            function: function() { desolation_Countdown(5); },
             status: 0,
+            key: 0,
             cooldown: 60 * 6, 
             startButton: document.getElementById('timer-desolation-5-start'),
             startSideButton: document.getElementById('sidetimer-desolation-5-start'),
@@ -78,11 +75,12 @@ var desolation = {
             timeLabel: document.getElementById('timer-desolation-5'), 
             timeSideLabel: document.getElementById('sidetimer-desolation-5'),
             sidebox: document.getElementById('desolation-5-sidebox'),
-            num: document.getElementById('numerical-sidetimer-desolation-5')
+            num: document.getElementById('numerical-sidetimer-desolation-5'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [6] Raiding Party W3
-            function: function() { desolation_Countdown(6); },
             status: 0,
+            key: 0,
             cooldown: 60 * 6, 
             startButton: document.getElementById('timer-desolation-6-start'),
             startSideButton: document.getElementById('sidetimer-desolation-6-start'),
@@ -91,11 +89,12 @@ var desolation = {
             timeLabel: document.getElementById('timer-desolation-6'), 
             timeSideLabel: document.getElementById('sidetimer-desolation-6'),
             sidebox: document.getElementById('desolation-6-sidebox'),
-            num: document.getElementById('numerical-sidetimer-desolation-6')
+            num: document.getElementById('numerical-sidetimer-desolation-6'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [7] Raiding Party W4
-            function: function() { desolation_Countdown(7); },
             status: 0,
+            key: 0,
             cooldown: 60 * 6, 
             startButton: document.getElementById('timer-desolation-7-start'),
             startSideButton: document.getElementById('sidetimer-desolation-7-start'),
@@ -104,11 +103,12 @@ var desolation = {
             timeLabel: document.getElementById('timer-desolation-7'), 
             timeSideLabel: document.getElementById('sidetimer-desolation-7'),
             sidebox: document.getElementById('desolation-7-sidebox'),
-            num: document.getElementById('numerical-sidetimer-desolation-7')
+            num: document.getElementById('numerical-sidetimer-desolation-7'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [8] Ghost Kids
-            function: function() { desolation_Countdown(8); },
             status: 0,
+            key: 0,
             cooldown: 60 * 16, 
             startButton: document.getElementById('timer-desolation-8-start'),
             startSideButton: document.getElementById('sidetimer-desolation-8-start'),
@@ -117,11 +117,12 @@ var desolation = {
             timeLabel: document.getElementById('timer-desolation-8'), 
             timeSideLabel: document.getElementById('sidetimer-desolation-8'),
             sidebox: document.getElementById('desolation-8-sidebox'),
-            num: document.getElementById('numerical-sidetimer-desolation-8')
+            num: document.getElementById('numerical-sidetimer-desolation-8'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [9] Champ Ooze
-            function: function() { desolation_Countdown(9); },
             status: 0,
+            key: 0,
             cooldown: 60 * 9 + 30, 
             startButton: document.getElementById('timer-desolation-9-start'),
             startSideButton: document.getElementById('sidetimer-desolation-9-start'),
@@ -130,11 +131,12 @@ var desolation = {
             timeLabel: document.getElementById('timer-desolation-9'), 
             timeSideLabel: document.getElementById('sidetimer-desolation-9'),
             sidebox: document.getElementById('desolation-9-sidebox'),
-            num: document.getElementById('numerical-sidetimer-desolation-9')
+            num: document.getElementById('numerical-sidetimer-desolation-9'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [10] Ghost Eaters
-            function: function() { desolation_Countdown(10); },
             status: 0,
+            key: 0,
             cooldown: 60 * 12, 
             startButton: document.getElementById('timer-desolation-10-start'),
             startSideButton: document.getElementById('sidetimer-desolation-10-start'),
@@ -143,11 +145,12 @@ var desolation = {
             timeLabel: document.getElementById('timer-desolation-10'), 
             timeSideLabel: document.getElementById('sidetimer-desolation-10'),
             sidebox: document.getElementById('desolation-10-sidebox'),
-            num: document.getElementById('numerical-sidetimer-desolation-10')
+            num: document.getElementById('numerical-sidetimer-desolation-10'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [11] Forged Officer
-            function: function() { desolation_Countdown(11); },
             status: 0,
+            key: 0,
             cooldown: 60 * 12 + 30, 
             startButton: document.getElementById('timer-desolation-11-start'),
             startSideButton: document.getElementById('sidetimer-desolation-11-start'),
@@ -156,11 +159,12 @@ var desolation = {
             timeLabel: document.getElementById('timer-desolation-11'), 
             timeSideLabel: document.getElementById('sidetimer-desolation-11'),
             sidebox: document.getElementById('desolation-11-sidebox'),
-            num: document.getElementById('numerical-sidetimer-desolation-11')
+            num: document.getElementById('numerical-sidetimer-desolation-11'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [12] Raiding Party W5
-            function: function() { desolation_Countdown(12); },
             status: 0,
+            key: 0,
             cooldown: 60 * 6, 
             startButton: document.getElementById('timer-desolation-12-start'),
             startSideButton: document.getElementById('sidetimer-desolation-12-start'),
@@ -169,349 +173,16 @@ var desolation = {
             timeLabel: document.getElementById('timer-desolation-12'), 
             timeSideLabel: document.getElementById('sidetimer-desolation-12'),
             sidebox: document.getElementById('desolation-12-sidebox'),
-            num: document.getElementById('numerical-sidetimer-desolation-12')
+            num: document.getElementById('numerical-sidetimer-desolation-12'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
     ]
 };
-
+// Dynamically creates unique keys
+add_event_keys(desolation.events); 
 
 // Label of the meta on the side
 var meta_name = document.getElementById('meta-name');
-
-var desolation; // Empty array for countdown
-var find_num = /\d+/; // Expression to use with .match(find_num) to find a number in a string
-
-
-/* Start/Stop button functionality */
-function start_stop(obj){
-
-    var timer = obj.id;
-    var timer_num = obj.id.match(find_num)[0];
-    // Status 0 = Stop 
-    // Status 1 = Starting, Ongoing
-    // When the Start button is clicked, change status to Starting and start timer
-    // Else -> Keep status at Stop
-    
-    switch (timer_num) {
-        case timer_num:
-        start_Event(timer_num);
-        break;
-    }
-
-    function start_Event(timer_num){
-        if (timer == desolation.events[timer_num].startButton.id || timer == desolation.events[timer_num].startSideButton.id){
-            if (desolation.events[timer_num].status == 0){
-                desolation.events[timer_num].status = 1; 
-                desolation.events[timer_num].function(); 
-
-                desolation.events[timer_num].startButton.value = "Reset";
-                desolation.events[timer_num].startSideButton.value = "Reset";
-            } else {
-                desolation.events[timer_num].status = 0;
-                desolation.events[timer_num].startButton.value = "Start";
-                desolation.events[timer_num].startSideButton.value = "Start";
-
-                desolation.events[timer_num].timeLabel.style.color = "black";
-                desolation.events[timer_num].timeSideLabel.style.color = 'black';
-                desolation.events[timer_num].timeLabel.style.background = 'rgba(255,246,214)';
-                desolation.events[timer_num].sidebox.style.background = 'transparent';
-                desolation.events[timer_num].function();
-            }   
-        }
-    }
-}
-
-// Reset Button functionality
-function reset (obj){
-    var timer = obj.id;
-    var timer_num = obj.id.match(find_num)[0];
-    /*
-        When Reset button is clicked, 
-        -> Change status to Stop 
-        -> Reset timer to original time + 1
-        -> Reset time label to oringal time
-        -> Reset opacity of the text to hidden
-    */
-    // Remember to change these reset times to the RESPAWN rate and not the INITIAL SPAWN rate
-
-    switch (timer_num) {
-        case timer_num:
-        start_Event(timer_num);
-        break;
-    }
-
-    function start_Event(timer_num){
-        if (timer == desolation.events[timer_num].resetButton.id || timer == desolation.events[timer_num].resetSideButton.id){
-            if (desolation.events[timer_num].status == 1){
-                desolation.events[timer_num].status = 0;
-                desolation.events[timer_num].cooldown = desolation.events[timer_num].cooldown;
-                desolation.events[timer_num].timeLabel.style.color = "black";
-
-                desolation.events[timer_num].timeSideLabel.innerHTML = desolation.events[timer_num].timeLabel.innerHTML;
-                desolation.events[timer_num].timeSideLabel.style.color = desolation.events[timer_num].timeLabel.style.color;
-
-                desolation.events[timer_num].timeLabel.style.background = 'rgba(255,246,214)';
-                desolation.events[timer_num].sidebox.style.background = "transparent";
-
-                desolation.events[timer_num].function(); 
-                desolation.events[timer_num].status = 1;
-                desolation.events[timer_num].function(); 
-            }
-        }
-    }
-}
-
-function desolation_Countdown(arrayNum){
-    var date_now = Date.now(); 
-
-    function run_countdown() {
-        var countdown = getTime(date_now, desolation.events[arrayNum].cooldown, desolation.events[arrayNum].timeLabel, desolation.events[arrayNum].timeSideLabel, desolation.events[arrayNum].num);
-        if (countdown.time <= 0){ 
-            time_text_and_labels_less_than_0(desolation.events[arrayNum].timeLabel, desolation.events[arrayNum].sidebox, desolation.events[arrayNum].timeSideLabel);
-        } else if (countdown.time <= 60){
-            time_text_and_labels_less_than_60(desolation.events[arrayNum].timeLabel, desolation.events[arrayNum].sidebox);
-        }
-    }
-    run_countdown(); 
-    if (desolation.events[arrayNum].status == 1){
-        desolation[arrayNum] = setInterval(run_countdown, 1000);
-    } else {
-        clearInterval(desolation[arrayNum]);   
-    } 
-}
-
-
-
-
-// Checkboxes
-function desolation_All_Checkbox(obj){
-	var checkbox = obj,
-		c1 = document.getElementById('desolation-1-checkbox'), 
-        c2 = document.getElementById('desolation-2-checkbox'), 
-        c3 = document.getElementById('desolation-3-checkbox'), 
-        c4 = document.getElementById('desolation-4-checkbox'),
-        c5 = document.getElementById('desolation-5-checkbox'), 
-        c6 = document.getElementById('desolation-6-checkbox'), 
-        c7 = document.getElementById('desolation-7-checkbox'), 
-        c8 = document.getElementById('desolation-8-checkbox'), 
-        c9 = document.getElementById('desolation-9-checkbox'), 
-        c10 = document.getElementById('desolation-10-checkbox'), 
-        c11 = document.getElementById('desolation-11-checkbox'),
-        c12 = document.getElementById('desolation-12-checkbox');
-
-	if (checkbox.checked == true){
-		c1.checked = true;
-        c2.checked = true;
-        c3.checked = true;
-        c4.checked = true; 
-        c5.checked = true; 
-        c6.checked = true; 
-        c7.checked = true; 
-        c8.checked = true; 
-        c9.checked = true; 
-        c10.checked = true; 
-        c11.checked = true; 
-        c12.checked = true;
-
-        desolation_1_Checkbox(c1);
-        desolation_2_Checkbox(c2);
-        desolation_3_Checkbox(c3);
-        desolation_4_Checkbox(c4);
-        desolation_5_Checkbox(c5);
-        desolation_6_Checkbox(c6);
-        desolation_7_Checkbox(c7);
-        desolation_8_Checkbox(c8);
-        desolation_9_Checkbox(c9);
-        desolation_10_Checkbox(c10);
-        desolation_11_Checkbox(c11);
-        desolation_12_Checkbox(c12);
-	} else {
-		c1.checked = false;
-        c2.checked = false;
-        c3.checked = false;
-        c4.checked = false; 
-        c5.checked = false; 
-        c6.checked = false; 
-        c7.checked = false; 
-        c8.checked = false; 
-        c9.checked = false; 
-        c10.checked = false; 
-        c11.checked = false; 
-        c12.checked = false;
-
-        desolation_1_Checkbox(c1);
-        desolation_2_Checkbox(c2);
-        desolation_3_Checkbox(c3);
-        desolation_4_Checkbox(c4);
-        desolation_5_Checkbox(c5);
-        desolation_6_Checkbox(c6);
-        desolation_7_Checkbox(c7);
-        desolation_8_Checkbox(c8);
-        desolation_9_Checkbox(c9);
-        desolation_10_Checkbox(c10);
-        desolation_11_Checkbox(c11);
-        desolation_12_Checkbox(c12);
-	}
-}
-// Caravan
-function desolation_1_Checkbox(obj){
-    var checkbox = obj;
-    if (checkbox.checked == true){
-        sidebox_timer_desolation_1.style.display = "block";
-    } else {
-        sidebox_timer_desolation_1.style.display = "none";
-    }
-}
-// Lost Mount
-function desolation_2_Checkbox(obj){
-    var checkbox = obj;
-    if (checkbox.checked == true){
-        sidebox_timer_desolation_2.style.display = "block";
-    } else {
-        sidebox_timer_desolation_2.style.display = "none";
-    }
-}
-// Redeemer Kossan
-function desolation_3_Checkbox(obj){
-    var checkbox = obj;
-    if (checkbox.checked == true){
-        sidebox_timer_desolation_3.style.display = "block";
-    } else {
-        sidebox_timer_desolation_3.style.display = "none";
-    }
-}
-// Raiding Party W1
-function desolation_4_Checkbox(obj){
-    var checkbox = obj;
-    if (checkbox.checked == true){
-        sidebox_timer_desolation_4.style.display = "block";
-    } else {
-        sidebox_timer_desolation_4.style.display = "none";
-    }
-}
-// Raiding party W2
-function desolation_5_Checkbox(obj){
-    var checkbox = obj;
-    if (checkbox.checked == true){
-        sidebox_timer_desolation_5.style.display = "block";
-    } else {
-        sidebox_timer_desolation_5.style.display = "none";
-    }
-}
-// Raiding Party W3
-function desolation_6_Checkbox(obj){
-    var checkbox = obj;
-    if (checkbox.checked == true){
-        sidebox_timer_desolation_6.style.display = "block";
-    } else {
-        sidebox_timer_desolation_6.style.display = "none";
-    }
-}
-// Raiding Party W4
-function desolation_7_Checkbox(obj){
-    var checkbox = obj;
-    if (checkbox.checked == true){
-        sidebox_timer_desolation_7.style.display = "block";
-    } else {
-        sidebox_timer_desolation_7.style.display = "none";
-    }
-}
-// Ghost Kids
-function desolation_8_Checkbox(obj){
-    var checkbox = obj;
-    if (checkbox.checked == true){
-        sidebox_timer_desolation_8.style.display = "block";
-    } else {
-        sidebox_timer_desolation_8.style.display = "none";
-    }
-}
-// Champ Ooze
-function desolation_9_Checkbox(obj){
-    var checkbox = obj;
-    if (checkbox.checked == true){
-        sidebox_timer_desolation_9.style.display = "block";
-    } else {
-        sidebox_timer_desolation_9.style.display = "none";
-    }
-}
-// Ghost Eaters
-function desolation_10_Checkbox(obj){
-    var checkbox = obj;
-    if (checkbox.checked == true){
-        sidebox_timer_desolation_10.style.display = "block";
-    } else {
-        sidebox_timer_desolation_10.style.display = "none";
-    }
-}
-// Forged Officer
-function desolation_11_Checkbox(obj){
-    var checkbox = obj;
-    if (checkbox.checked == true){
-        sidebox_timer_desolation_11.style.display = "block";
-    } else {
-        sidebox_timer_desolation_11.style.display = "none";
-    }
-}
-// Raiding Party W5
-function desolation_12_Checkbox(obj){
-    var checkbox = obj;
-    if (checkbox.checked == true){
-        sidebox_timer_desolation_12.style.display = "block";
-    } else {
-        sidebox_timer_desolation_12.style.display = "none";
-    }
-}
-
-// Bounty checkboxes
-// Deselect all bounties
-function bounty_Deselect(obj){
-    var elem;
-    
-    for (i = 4; i <= 18; i++){
-        for (j = 1; j <= 3; j++){
-            elem = document.getElementById('desolation-bounty-'+i+'-'+j+'-checkbox');
-            elem.checked = false;
-        }
-    } 
-    hide_multiple_elements(4,48,'desolation-bounty-target-','opacity');
-    var elem1 = document.getElementById('desolation-bounty-1-checkbox').checked = false; 
-    var elem2 = document.getElementById('desolation-bounty-2-checkbox').checked = false;
-    var elem3 = document.getElementById('desolation-bounty-3-checkbox').checked = false;
-
-    desolation_Bounty_1_Checkbox(elem1);
-    desolation_Bounty_2_Checkbox(elem2);
-    desolation_Bounty_3_Checkbox(elem3);
-}
-// Choya
-function desolation_Bounty_1_Checkbox(obj){
-    var checkbox = obj,
-        bounty = document.getElementById('desolation-bounty-target-1'); 
-    if (checkbox.checked == true){
-        bounty.style.opacity = 1; 
-    } else {
-        bounty.style.opacity = 0;
-    }
-}
-// Queen Yidaxu
-function desolation_Bounty_2_Checkbox(obj){
-    var checkbox = obj,
-        bounty = document.getElementById('desolation-bounty-target-2'); 
-    if (checkbox.checked == true){
-        bounty.style.opacity = 1; 
-    } else {
-        bounty.style.opacity = 0;
-    }
-}
-// Facet
-function desolation_Bounty_3_Checkbox(obj){
-    var checkbox = obj,
-        bounty = document.getElementById('desolation-bounty-target-3'); 
-    if (checkbox.checked == true){
-        bounty.style.opacity = 1; 
-    } else {
-        bounty.style.opacity = 0;
-    }
-}
 
 // Initials
 var current_progress = document.getElementById('current-status'),
@@ -998,9 +669,5 @@ var maw_w_circle = document.getElementById('desolation-img-13'),
         if (d.getUTCHours() == 23 || d.getUTCHours() == 0){
             desolation_timers(23,0,1);
         }
-
-        console.log(d.getUTCHours(), d.getUTCMinutes());
-
-
     },1000); 
 

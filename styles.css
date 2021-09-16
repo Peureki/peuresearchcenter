@@ -1776,7 +1776,7 @@ b{
 	cursor: pointer;
 }
 .meta-sidebox{
-	color: black;
+	color: var(--clr-text);
 	text-align: center;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -1788,6 +1788,9 @@ b{
 }
 .meta-sidebox p1{
 	font-size: 20px;
+}
+.meta-sidebox p2{
+	display: none;
 }
 
 

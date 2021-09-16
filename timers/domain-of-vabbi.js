@@ -1,22 +1,15 @@
-// NAV-LEFT SORT IDs
-// Add this to only Timer pages
-var sort_timers = document.getElementById('nav-left-sidetimer-box'),
-    sort_interval;
-
-// Always sorts the left event list
-// Add this to only Timer pages
-sort_interval = setInterval(function(){
-    left_sidetimer_sort(sort_timers);
-}, 1000);
+// Sort the timers on a 1 sec interval. Sorts the list based on most upcoming
+sortTimers();
 
 var vabbi = {
     events: [
         {   // empty
             status: 0,
+            key: 0,
         },
         {   // [1] Forged Officer
-            function: function() { vabbi_Countdown(1); },
             status: 0,
+            key: 0,
             cooldown: 60 * 6 + 45, 
             box: document.getElementById('vabbi-1-box'),
             startButton: document.getElementById('timer-vabbi-1-start'),
@@ -27,11 +20,12 @@ var vabbi = {
             timeSideLabel: document.getElementById('sidetimer-vabbi-1'),
             textLabel: document.getElementById('timer-vabbi-1-text'),
             sidebox: document.getElementById('vabbi-1-sidebox'),
-            num: document.getElementById('numerical-sidetimer-vabbi-1')
+            num: document.getElementById('numerical-sidetimer-vabbi-1'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [2] Statues
-            function: function() { vabbi_Countdown(2); },
             status: 0,
+            key: 0,
             cooldown: 60 * 24 + 15, 
             startButton: document.getElementById('timer-vabbi-2-start'),
             startSideButton: document.getElementById('sidetimer-vabbi-2-start'),
@@ -41,11 +35,12 @@ var vabbi = {
             timeSideLabel: document.getElementById('sidetimer-vabbi-2'),
             textLabel: document.getElementById('timer-vabbi-2-text'),
             sidebox: document.getElementById('vabbi-2-sidebox'),
-            num: document.getElementById('numerical-sidetimer-vabbi-2')
+            num: document.getElementById('numerical-sidetimer-vabbi-2'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [3] Branded Assaults
-            function: function() { vabbi_Countdown(3); },
             status: 0,
+            key: 0,
             cooldown: 60 * 7, 
             startButton: document.getElementById('timer-vabbi-3-start'),
             startSideButton: document.getElementById('sidetimer-vabbi-3-start'),
@@ -55,11 +50,12 @@ var vabbi = {
             timeSideLabel: document.getElementById('sidetimer-vabbi-3'),
             textLabel: document.getElementById('timer-vabbi-3-text'),
             sidebox: document.getElementById('vabbi-3-sidebox'),
-            num: document.getElementById('numerical-sidetimer-vabbi-3')
+            num: document.getElementById('numerical-sidetimer-vabbi-3'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [4] Show
-            function: function() { vabbi_Countdown(4); },
             status: 0,
+            key: 0,
             cooldown: 60 * 10 + 45, 
             startButton: document.getElementById('timer-vabbi-4-start'),
             startSideButton: document.getElementById('sidetimer-vabbi-4-start'),
@@ -69,11 +65,12 @@ var vabbi = {
             timeSideLabel: document.getElementById('sidetimer-vabbi-4'),
             textLabel: document.getElementById('timer-vabbi-4-text'),
             sidebox: document.getElementById('vabbi-4-sidebox'),
-            num: document.getElementById('numerical-sidetimer-vabbi-4')
+            num: document.getElementById('numerical-sidetimer-vabbi-4'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [5] Legendary Forged
-            function: function() { vabbi_Countdown(5); },
             status: 0,
+            key: 0,
             cooldown: 60 * 30, 
             box: document.getElementById('vabbi-5-box'),
             startButton: document.getElementById('timer-vabbi-5-start'),
@@ -84,11 +81,12 @@ var vabbi = {
             timeSideLabel: document.getElementById('sidetimer-vabbi-5'),
             textLabel: document.getElementById('timer-vabbi-5-text'),
             sidebox: document.getElementById('vabbi-5-sidebox'),
-            num: document.getElementById('numerical-sidetimer-vabbi-5')
+            num: document.getElementById('numerical-sidetimer-vabbi-5'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [6] Forged Wildhound
-            function: function() { vabbi_Countdown(6); },
             status: 0,
+            key: 0,
             cooldown: 60 * 15, 
             startButton: document.getElementById('timer-vabbi-6-start'),
             startSideButton: document.getElementById('sidetimer-vabbi-6-start'),
@@ -98,7 +96,8 @@ var vabbi = {
             timeSideLabel: document.getElementById('sidetimer-vabbi-6'),
             textLabel: document.getElementById('timer-vabbi-6-text'),
             sidebox: document.getElementById('vabbi-6-sidebox'),
-            num: document.getElementById('numerical-sidetimer-vabbi-6')
+            num: document.getElementById('numerical-sidetimer-vabbi-6'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         // Metas
         {   // [7] Forged with Fire
@@ -114,8 +113,8 @@ var vabbi = {
             num: document.getElementById('numerical-sidetimer-vabbi-serpent')
         },
         {   // [9] Forged Warmonger
-            function: function() { vabbi_Countdown(9); },
             status: 0,
+            key: 0,
             cooldown: 60 * 15, 
             startButton: document.getElementById('timer-vabbi-9-start'),
             startSideButton: document.getElementById('sidetimer-vabbi-9-start'),
@@ -125,11 +124,12 @@ var vabbi = {
             timeSideLabel: document.getElementById('sidetimer-vabbi-9'),
             textLabel: document.getElementById('timer-vabbi-9-text'),
             sidebox: document.getElementById('vabbi-9-sidebox'),
-            num: document.getElementById('numerical-sidetimer-vabbi-9')
+            num: document.getElementById('numerical-sidetimer-vabbi-9'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [10] Forged Lurker
-            function: function() { vabbi_Countdown(10); },
             status: 0,
+            key: 0,
             cooldown: 60 * 15, 
             startButton: document.getElementById('timer-vabbi-10-start'),
             startSideButton: document.getElementById('sidetimer-vabbi-10-start'),
@@ -139,11 +139,12 @@ var vabbi = {
             timeSideLabel: document.getElementById('sidetimer-vabbi-10'),
             textLabel: document.getElementById('timer-vabbi-10-text'),
             sidebox: document.getElementById('vabbi-10-sidebox'),
-            num: document.getElementById('numerical-sidetimer-vabbi-10')
+            num: document.getElementById('numerical-sidetimer-vabbi-10'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [11] Forged Marauder
-            function: function() { vabbi_Countdown(11); },
             status: 0,
+            key: 0,
             cooldown: 60 * 15, 
             startButton: document.getElementById('timer-vabbi-11-start'),
             startSideButton: document.getElementById('sidetimer-vabbi-11-start'),
@@ -153,11 +154,12 @@ var vabbi = {
             timeSideLabel: document.getElementById('sidetimer-vabbi-11'),
             textLabel: document.getElementById('timer-vabbi-11-text'),
             sidebox: document.getElementById('vabbi-11-sidebox'),
-            num: document.getElementById('numerical-sidetimer-vabbi-11')
+            num: document.getElementById('numerical-sidetimer-vabbi-11'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
-        {   // [12] Forged Brutalizer
-            function: function() { vabbi_Countdown(12); },
+        {   // [12] Forged Brutilizer
             status: 0,
+            key: 0,
             cooldown: 60 * 15, 
             startButton: document.getElementById('timer-vabbi-12-start'),
             startSideButton: document.getElementById('sidetimer-vabbi-12-start'),
@@ -167,132 +169,21 @@ var vabbi = {
             timeSideLabel: document.getElementById('sidetimer-vabbi-12'),
             textLabel: document.getElementById('timer-vabbi-12-text'),
             sidebox: document.getElementById('vabbi-12-sidebox'),
-            num: document.getElementById('numerical-sidetimer-vabbi-12')
+            num: document.getElementById('numerical-sidetimer-vabbi-12'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
 
         
     ]
 };
-
+// Dynamically creates unique keys
+add_event_keys(vabbi.events); 
 
 // Label of the meta on the side
-var meta_name = document.getElementById('meta-name');
-
-var vabbi; // Empty array for countdown
-var find_num = /\d+/; // Expression to use with .match(find_num) to find a number in a string
-
-
-/* Start/Stop button functionality */
-function start_stop(obj){
-
-    var timer = obj.id;
-    var timer_num = obj.id.match(find_num)[0];
-    // Status 0 = Stop 
-    // Status 1 = Starting, Ongoing
-    // When the Start button is clicked, change status to Starting and start timer
-    // Else -> Keep status at Stop
-    
-    switch (timer_num) {
-        case timer_num:
-        start_Event(timer_num);
-        break;
-    }
-
-    function start_Event(timer_num){
-        if (timer == vabbi.events[timer_num].startButton.id || timer == vabbi.events[timer_num].startSideButton.id){
-            if (vabbi.events[timer_num].status == 0){
-                vabbi.events[timer_num].status = 1; 
-                vabbi.events[timer_num].function(); 
-
-                vabbi.events[timer_num].startButton.value = "Reset";
-                vabbi.events[timer_num].startSideButton.value = "Reset";
-            } else {
-                vabbi.events[timer_num].status = 0;
-                vabbi.events[timer_num].startButton.value = "Start";
-                vabbi.events[timer_num].startSideButton.value = "Start";
-
-                vabbi.events[timer_num].timeLabel.style.color = "black";
-                vabbi.events[timer_num].timeSideLabel.style.color = 'black';
-                vabbi.events[timer_num].timeLabel.style.background = 'rgba(255,246,214)';
-                vabbi.events[timer_num].sidebox.style.background = 'transparent';
-                vabbi.events[timer_num].function();
-            }   
-        }
-    }
-}
-
-// Reset Button functionality
-function reset (obj){
-    var timer = obj.id;
-    var timer_num = obj.id.match(find_num)[0];
-    /*
-        When Reset button is clicked, 
-        -> Change status to Stop 
-        -> Reset timer to original time + 1
-        -> Reset time label to oringal time
-        -> Reset opacity of the text to hidden
-    */
-    // Remvabbi to change these reset times to the RESPAWN rate and not the INITIAL SPAWN rate
-
-    switch (timer_num) {
-        case timer_num:
-        start_Event(timer_num);
-        break;
-    }
-
-    function start_Event(timer_num){
-        if (timer == vabbi.events[timer_num].resetButton.id || timer == vabbi.events[timer_num].resetSideButton.id){
-            if (vabbi.events[timer_num].status == 1){
-                vabbi.events[timer_num].status = 0;
-                vabbi.events[timer_num].cooldown = vabbi.events[timer_num].cooldown;
-                vabbi.events[timer_num].timeLabel.style.color = "black";
-
-                vabbi.events[timer_num].timeSideLabel.innerHTML = vabbi.events[timer_num].timeLabel.innerHTML;
-                vabbi.events[timer_num].timeSideLabel.style.color = vabbi.events[timer_num].timeLabel.style.color;
-
-                vabbi.events[timer_num].timeLabel.style.background = 'rgba(255,246,214)';
-                vabbi.events[timer_num].sidebox.style.background = "transparent";
-
-                vabbi.events[timer_num].function(); 
-                vabbi.events[timer_num].status = 1;
-                vabbi.events[timer_num].function(); 
-            }
-        }
-    }
-}
-
-function vabbi_Countdown(arrayNum){
-    var date_now = Date.now(); 
-
-    function run_countdown() {
-        var countdown = getTime(date_now, vabbi.events[arrayNum].cooldown, vabbi.events[arrayNum].timeLabel, vabbi.events[arrayNum].timeSideLabel, vabbi.events[arrayNum].num);
-        
-        switch (arrayNum){
-            case 3: // Branded Assults
-                if (countdown.time <= 0){
-                    show_multiple_elements(3,10,'vabbi-img-','opacity');
-                } else {
-                    hide_multiple_elements(3,10,'vabbi-img-','opacity');
-                }
-            break;
-        }
-
-        if (countdown.time <= 0){ 
-            time_text_and_labels_less_than_0(vabbi.events[arrayNum].timeLabel, vabbi.events[arrayNum].sidebox, vabbi.events[arrayNum].timeSideLabel);
-        } else if (countdown.time <= 60){
-            time_text_and_labels_less_than_60(vabbi.events[arrayNum].timeLabel, vabbi.events[arrayNum].sidebox);
-        }
-    }
-    run_countdown(); 
-    if (vabbi.events[arrayNum].status == 1){
-        vabbi[arrayNum] = setInterval(run_countdown, 1000);
-    } else {
-        clearInterval(vabbi[arrayNum]);   
-    } 
-}
+let meta_name = document.getElementById('meta-name');
 
 // Domain of Vabbi Global Timer
-var current_progress = document.getElementById('vabbi-current-status'),
+let current_progress = document.getElementById('vabbi-current-status'),
     forged_progress = "",
     serpent_progress = "",
     forged_progress_bar = document.getElementById('forged-progress-bar'),
@@ -311,9 +202,9 @@ var current_progress = document.getElementById('vabbi-current-status'),
     forgedBoss = document.getElementById('vabbi-img-2'),
     serpentRect = document.getElementById('vabbi-shape-1');
 
-    var vabbi_meta_timer = setInterval(function(){
-    var d = new Date();
-    var time = d.getUTCHours()*3600 + d.getUTCMinutes()*60 + d.getUTCSeconds(),
+    let vabbi_meta_timer = setInterval(function(){
+    let d = new Date();
+    let time = d.getUTCHours()*3600 + d.getUTCMinutes()*60 + d.getUTCSeconds(),
         forged_result,
         serpent_result,
         hours,

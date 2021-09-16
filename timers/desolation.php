@@ -13,13 +13,9 @@
   -->
   <?php include('../nav.php'); ?>
 
-	<div id = "nav-left-popup" class = "nav-left-popup" onclick = "nav_popup();"> 
-		&#x2194;
-	</div>
-
 	<div class = "page-box">
 		<div class = "section-header">
-      <h1>Tangled Depths</h1>
+      <h1>Desolation</h1>
       <div class = "banner-box"></div>
       <img src = "../images/assets/banner.svg">
     </div>
@@ -28,100 +24,100 @@
 	</div>
 
 	<!-- Inner navgation box to the side -->
-	<div id = "nav-left-sidetimer-box" class = "nav-left-sidetimer-box">
+	<div id = "side-timer-list" class = "side-timer-list">
 
         <div id = "desolation-1-sidebox" class = "event-sidebox" >
 	      <h1> Caravan </h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-desolation-1-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-desolation-1-reset">
+	      <input type = "button" onclick = "start_stop(this, desolation.events);" value = "Start" id = "sidetimer-desolation-1-start">
+	      <input type = "button" onclick = "reset(this, desolation.events);" value = "&#8635;" id = "sidetimer-desolation-1-reset">
 	      <p1 id = "sidetimer-desolation-1">10:00</p1>
 	      <p2 id = "numerical-sidetimer-desolation-1">600</p2>
 	    </div>
 
 	    <div id = "desolation-2-sidebox" class = "event-sidebox" >
 	      <h1> Lost Mount </h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-desolation-2-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-desolation-2-reset">
+	      <input type = "button" onclick = "start_stop(this, desolation.events);" value = "Start" id = "sidetimer-desolation-2-start">
+	      <input type = "button" onclick = "reset(this, desolation.events);" value = "&#8635;" id = "sidetimer-desolation-2-reset">
 	      <p1 id = "sidetimer-desolation-2">11:15</p1>
 	      <p2 id = "numerical-sidetimer-desolation-2">675</p2>
 	    </div>
 
 	    <div id = "desolation-3-sidebox" class = "event-sidebox" >
 	      <h1> Redeemer Kossan </h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-desolation-3-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-desolation-3-reset">
+	      <input type = "button" onclick = "start_stop(this, desolation.events);" value = "Start" id = "sidetimer-desolation-3-start">
+	      <input type = "button" onclick = "reset(this, desolation.events);" value = "&#8635;" id = "sidetimer-desolation-3-reset">
 	      <p1 id = "sidetimer-desolation-3">8:45</p1>
 	      <p2 id = "numerical-sidetimer-desolation-3">525</p2>
 	    </div>
 
 	    <div id = "desolation-4-sidebox" class = "event-sidebox" >
 	      <h1> Raiding Party (W1) </h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-desolation-4-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-desolation-4-reset">
+	      <input type = "button" onclick = "start_stop(this, desolation.events);" value = "Start" id = "sidetimer-desolation-4-start">
+	      <input type = "button" onclick = "reset(this, desolation.events);" value = "&#8635;" id = "sidetimer-desolation-4-reset">
 	      <p1 id = "sidetimer-desolation-4">6:00</p1>
 	      <p2 id = "numerical-sidetimer-desolation-4">360</p2>
 	    </div>
 
       <div id = "desolation-5-sidebox" class = "event-sidebox" >
         <h1> Raiding Party (W2) </h1>
-        <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-desolation-5-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-desolation-5-reset">
+        <input type = "button" onclick = "start_stop(this, desolation.events);" value = "Start" id = "sidetimer-desolation-5-start">
+        <input type = "button" onclick = "reset(this, desolation.events);" value = "&#8635;" id = "sidetimer-desolation-5-reset">
         <p1 id = "sidetimer-desolation-5">6:00</p1>
         <p2 id = "numerical-sidetimer-desolation-5">360</p2>
       </div>
 
       <div id = "desolation-6-sidebox" class = "event-sidebox" >
         <h1> Raiding Party (W3) </h1>
-        <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-desolation-6-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-desolation-6-reset">
+        <input type = "button" onclick = "start_stop(this, desolation.events);" value = "Start" id = "sidetimer-desolation-6-start">
+        <input type = "button" onclick = "reset(this, desolation.events);" value = "&#8635;" id = "sidetimer-desolation-6-reset">
         <p1 id = "sidetimer-desolation-6">6:00</p1>
         <p2 id = "numerical-sidetimer-desolation-6">360</p2>
       </div>
 
       <div id = "desolation-7-sidebox" class = "event-sidebox" >
         <h1> Raiding Party (W4) </h1>
-        <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-desolation-7-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-desolation-7-reset">
+        <input type = "button" onclick = "start_stop(this, desolation.events);" value = "Start" id = "sidetimer-desolation-7-start">
+        <input type = "button" onclick = "reset(this, desolation.events);" value = "&#8635;" id = "sidetimer-desolation-7-reset">
         <p1 id = "sidetimer-desolation-7">6:00</p1>
         <p2 id = "numerical-sidetimer-desolation-7">360</p2>
       </div>
 
       <div id = "desolation-8-sidebox" class = "event-sidebox" >
         <h1> Ghost Kids </h1>
-        <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-desolation-8-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-desolation-8-reset">
+        <input type = "button" onclick = "start_stop(this, desolation.events);" value = "Start" id = "sidetimer-desolation-8-start">
+        <input type = "button" onclick = "reset(this, desolation.events);" value = "&#8635;" id = "sidetimer-desolation-8-reset">
         <p1 id = "sidetimer-desolation-8">16:00</p1>
         <p2 id = "numerical-sidetimer-desolation-8">960</p2>
       </div>
 
       <div id = "desolation-9-sidebox" class = "event-sidebox" >
         <h1> Champ Ooze </h1>
-        <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-desolation-9-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-desolation-9-reset">
+        <input type = "button" onclick = "start_stop(this, desolation.events);" value = "Start" id = "sidetimer-desolation-9-start">
+        <input type = "button" onclick = "reset(this, desolation.events);" value = "&#8635;" id = "sidetimer-desolation-9-reset">
         <p1 id = "sidetimer-desolation-9">9:30</p1>
         <p2 id = "numerical-sidetimer-desolation-9">570</p2>
       </div>
 
       <div id = "desolation-10-sidebox" class = "event-sidebox" >
         <h1> Ghost Eaters </h1>
-        <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-desolation-10-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-desolation-10-reset">
+        <input type = "button" onclick = "start_stop(this, desolation.events);" value = "Start" id = "sidetimer-desolation-10-start">
+        <input type = "button" onclick = "reset(this, desolation.events);" value = "&#8635;" id = "sidetimer-desolation-10-reset">
         <p1 id = "sidetimer-desolation-10">12:00</p1>
         <p2 id = "numerical-sidetimer-desolation-10">720</p2>
       </div>
 
       <div id = "desolation-11-sidebox" class = "event-sidebox" >
         <h1> Forged Officer </h1>
-        <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-desolation-11-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-desolation-11-reset">
+        <input type = "button" onclick = "start_stop(this, desolation.events);" value = "Start" id = "sidetimer-desolation-11-start">
+        <input type = "button" onclick = "reset(this, desolation.events);" value = "&#8635;" id = "sidetimer-desolation-11-reset">
         <p1 id = "sidetimer-desolation-11">12:30</p1>
         <p2 id = "numerical-sidetimer-desolation-11">750</p2>
       </div>
 
       <div id = "desolation-12-sidebox" class = "event-sidebox" >
         <h1> Raiding Party (W5) </h1>
-        <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-desolation-12-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-desolation-12-reset">
+        <input type = "button" onclick = "start_stop(this, desolation.events);" value = "Start" id = "sidetimer-desolation-12-start">
+        <input type = "button" onclick = "reset(this, desolation.events);" value = "&#8635;" id = "sidetimer-desolation-12-reset">
         <p1 id = "sidetimer-desolation-12">6:00</p1>
         <p2 id = "numerical-sidetimer-desolation-12">360</p2>
       </div>
@@ -129,46 +125,37 @@
 	    
 	  </div> <!-- End of left side box --> 
 
-	<div id = "nav-right-sidetimer-box" class = "nav-right-sidetimer-box">
-    All: <input type = "Checkbox" id = "desolation-all-checkbox" checked = "true" onclick = "desolation_All_Checkbox(this);">
+	<div id = "checkboxes" class = "checkboxes">
+    All: <input type = "Checkbox" id = "desolation-all-checkbox" checked = "true" onclick = "checkboxTimer(this, desolation.events, 'all');">
     <br>
-    Caravan: <input type = "Checkbox" id = "desolation-1-checkbox" checked = "true" onclick = "desolation_1_Checkbox(this);">
+    Caravan: <input type = "Checkbox" id = "desolation-1-checkbox" checked = "true" onclick = "checkboxTimer(this, desolation.events);">
     <br>
-    Lost Mount: <input type = "Checkbox" id = "desolation-2-checkbox" checked = "true" onclick = "desolation_2_Checkbox(this);">
+    Lost Mount: <input type = "Checkbox" id = "desolation-2-checkbox" checked = "true" onclick = "checkboxTimer(this, desolation.events);">
     <br>
-    Redeemer Kossan: <input type = "Checkbox" id = "desolation-3-checkbox" checked = "true" onclick = "desolation_3_Checkbox(this);">
+    Redeemer Kossan: <input type = "Checkbox" id = "desolation-3-checkbox" checked = "true" onclick = "checkboxTimer(this, desolation.events);">
     <br>
-    Raiding Party W1: <input type = "Checkbox" id = "desolation-4-checkbox" checked = "true" onclick = "desolation_4_Checkbox(this);">
+    Raiding Party W1: <input type = "Checkbox" id = "desolation-4-checkbox" checked = "true" onclick = "checkboxTimer(this, desolation.events);">
     <br>
-    Raiding Party W2: <input type = "Checkbox" id = "desolation-5-checkbox" checked = "true" onclick = "desolation_5_Checkbox(this);">
+    Raiding Party W2: <input type = "Checkbox" id = "desolation-5-checkbox" checked = "true" onclick = "checkboxTimer(this, desolation.events);">
     <br>
-    Raiding Party W3: <input type = "Checkbox" id = "desolation-6-checkbox" checked = "true" onclick = "desolation_6_Checkbox(this);">
+    Raiding Party W3: <input type = "Checkbox" id = "desolation-6-checkbox" checked = "true" onclick = "checkboxTimer(this, desolation.events);">
     <br>
-    Raiding Party W4: <input type = "Checkbox" id = "desolation-7-checkbox" checked = "true" onclick = "desolation_7_Checkbox(this);">
+    Raiding Party W4: <input type = "Checkbox" id = "desolation-7-checkbox" checked = "true" onclick = "checkboxTimer(this, desolation.events);">
     <br>
-    Raiding Party W5: <input type = "Checkbox" id = "desolation-12-checkbox" checked = "true" onclick = "desolation_12_Checkbox(this);">
+    Raiding Party W5: <input type = "Checkbox" id = "desolation-12-checkbox" checked = "true" onclick = "checkboxTimer(this, desolation.events);">
     <br>
-    Ghost Kids: <input type = "Checkbox" id = "desolation-8-checkbox" checked = "true" onclick = "desolation_8_Checkbox(this);">
+    Ghost Kids: <input type = "Checkbox" id = "desolation-8-checkbox" checked = "true" onclick = "checkboxTimer(this, desolation.events);">
     <br>
-    Champ Ooze: <input type = "Checkbox" id = "desolation-9-checkbox" checked = "true" onclick = "desolation_9_Checkbox(this);">
+    Champ Ooze: <input type = "Checkbox" id = "desolation-9-checkbox" checked = "true" onclick = "checkboxTimer(this, desolation.events);">
     <br>
-    Ghost Eaters: <input type = "Checkbox" id = "desolation-10-checkbox" checked = "true" onclick = "desolation_10_Checkbox(this);">
+    Ghost Eaters: <input type = "Checkbox" id = "desolation-10-checkbox" checked = "true" onclick = "checkboxTimer(this, desolation.events);">
     <br>
-    Forged Officer: <input type = "Checkbox" id = "desolation-11-checkbox" checked = "true" onclick = "desolation_11_Checkbox(this);">
+    Forged Officer: <input type = "Checkbox" id = "desolation-11-checkbox" checked = "true" onclick = "checkboxTimer(this, desolation.events);">
 
 	</div>
 
 	<!-- Main box -->
 	<div class = "page-box">
-		<div class = "page-header">
-			<div class = "small-description">
-				<p1> <b> How this works: </b>
-          <br> Most of the event's timers are straight forward. The Ghost Kids event will sometimes not spawn and act like it skipped and would respawn at 2x the amont of time. 
-         </p1>
-			</div>
-			
-		</div>
-	
 		<div class = "map-timer-wrapper">
 		<div class = "map-timer-box">
 
@@ -176,104 +163,104 @@
       			HTML notation: 
       			<div class = "[map]-[event #]-box">
       			<p1 id = "timer-[map]-[event #]"> [default time] </p1> 
-      			<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-[map]-[event #]-start">
-      			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-[map]-[event #]-reset">
+      			<br><input type = "button" onclick = "start_stop(this, desolation.events);" value = "Start" id = "timer-[map]-[event #]-start">
+      			<input type = "button" onclick = "reset(this, desolation.events);" value = "&#8635;" id = "timer-[map]-[event #]-reset">
        			<br><p2 id = "timer-[map]-[event #]-text"></p2>	
       		-->
 
       		<div class = "event-box" id = "desolation-1-box">
       			<h1> Caravan </h1>
        	 		<br><p1 id = "timer-desolation-1">10:00</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-desolation-1-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-desolation-1-reset">
+        		<br><input type = "button" onclick = "start_stop(this, desolation.events);" value = "Start" id = "timer-desolation-1-start">
+       			<input type = "button" onclick = "reset(this, desolation.events);" value = "&#8635;" id = "timer-desolation-1-reset">
        			<br><p2 id = "timer-desolation-1-text"></p2>	
        		</div>
 
        		<div class = "event-box" id = "desolation-2-box">
       			<h1> Lost Mount </h1>
        	 		<br><p1 id = "timer-desolation-2">11:15</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-desolation-2-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-desolation-2-reset">
+        		<br><input type = "button" onclick = "start_stop(this, desolation.events);" value = "Start" id = "timer-desolation-2-start">
+       			<input type = "button" onclick = "reset(this, desolation.events);" value = "&#8635;" id = "timer-desolation-2-reset">
        			<br><p2 id = "timer-desolation-2-text"></p2>	
        		</div>
 
        		<div class = "event-box" id = "desolation-3-box">
       			<h1> Redeemer Kossan </h1>
        	 		<br><p1 id = "timer-desolation-3">8:45</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-desolation-3-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-desolation-3-reset">
+        		<br><input type = "button" onclick = "start_stop(this, desolation.events);" value = "Start" id = "timer-desolation-3-start">
+       			<input type = "button" onclick = "reset(this, desolation.events);" value = "&#8635;" id = "timer-desolation-3-reset">
        			<br><p2 id = "timer-desolation-3-text"></p2>	
        		</div>
 
        		<div class = "event-box" id = "desolation-4-box">
       			<h1> Raiding Party (W1) </h1>
        	 		<br><p1 id = "timer-desolation-4">6:00</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-desolation-4-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-desolation-4-reset">
+        		<br><input type = "button" onclick = "start_stop(this, desolation.events);" value = "Start" id = "timer-desolation-4-start">
+       			<input type = "button" onclick = "reset(this, desolation.events);" value = "&#8635;" id = "timer-desolation-4-reset">
        			<br><p2 id = "timer-desolation-4-text"></p2>	
        		</div>
 
           <div class = "event-box" id = "desolation-5-box">
             <h1> Raiding Party (W2) </h1>
             <br><p1 id = "timer-desolation-5">6:00</p1>
-            <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-desolation-5-start">
-            <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-desolation-5-reset">
+            <br><input type = "button" onclick = "start_stop(this, desolation.events);" value = "Start" id = "timer-desolation-5-start">
+            <input type = "button" onclick = "reset(this, desolation.events);" value = "&#8635;" id = "timer-desolation-5-reset">
             <br><p2 id = "timer-desolation-5-text"></p2> 
           </div>
 
           <div class = "event-box" id = "desolation-6-box">
             <h1> Raiding Party (W3) </h1>
             <br><p1 id = "timer-desolation-6">6:00</p1>
-            <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-desolation-6-start">
-            <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-desolation-6-reset">
+            <br><input type = "button" onclick = "start_stop(this, desolation.events);" value = "Start" id = "timer-desolation-6-start">
+            <input type = "button" onclick = "reset(this, desolation.events);" value = "&#8635;" id = "timer-desolation-6-reset">
             <br><p2 id = "timer-desolation-6-text"></p2> 
           </div> 
 
           <div class = "event-box" id = "desolation-7-box">
             <h1> Raiding Party (W4) </h1>
             <br><p1 id = "timer-desolation-7">6:00</p1>
-            <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-desolation-7-start">
-            <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-desolation-7-reset">
+            <br><input type = "button" onclick = "start_stop(this, desolation.events);" value = "Start" id = "timer-desolation-7-start">
+            <input type = "button" onclick = "reset(this, desolation.events);" value = "&#8635;" id = "timer-desolation-7-reset">
             <br><p2 id = "timer-desolation-7-text"></p2> 
           </div> 
 
           <div class = "event-box" id = "desolation-8-box">
             <h1> Ghost Kids </h1>
             <br><p1 id = "timer-desolation-8">16:00</p1>
-            <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-desolation-8-start">
-            <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-desolation-8-reset">
+            <br><input type = "button" onclick = "start_stop(this, desolation.events);" value = "Start" id = "timer-desolation-8-start">
+            <input type = "button" onclick = "reset(this, desolation.events);" value = "&#8635;" id = "timer-desolation-8-reset">
             <br><p2 id = "timer-desolation-8-text"></p2> 
           </div> 
 
           <div class = "event-box" id = "desolation-9-box">
             <h1> Champ Ooze </h1>
             <br><p1 id = "timer-desolation-9">9:30</p1>
-            <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-desolation-9-start">
-            <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-desolation-9-reset">
+            <br><input type = "button" onclick = "start_stop(this, desolation.events);" value = "Start" id = "timer-desolation-9-start">
+            <input type = "button" onclick = "reset(this, desolation.events);" value = "&#8635;" id = "timer-desolation-9-reset">
             <br><p2 id = "timer-desolation-9-text"></p2> 
           </div> 
 
           <div class = "event-box" id = "desolation-10-box">
             <h1> Ghost Eaters </h1>
             <br><p1 id = "timer-desolation-10">12:00</p1>
-            <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-desolation-10-start">
-            <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-desolation-10-reset">
+            <br><input type = "button" onclick = "start_stop(this, desolation.events);" value = "Start" id = "timer-desolation-10-start">
+            <input type = "button" onclick = "reset(this, desolation.events);" value = "&#8635;" id = "timer-desolation-10-reset">
             <br><p2 id = "timer-desolation-10-text"></p2> 
           </div> 
 
           <div class = "event-box" id = "desolation-11-box">
             <h1> Forged Officer </h1>
             <br><p1 id = "timer-desolation-11">12:30</p1>
-            <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-desolation-11-start">
-            <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-desolation-11-reset">
+            <br><input type = "button" onclick = "start_stop(this, desolation.events);" value = "Start" id = "timer-desolation-11-start">
+            <input type = "button" onclick = "reset(this, desolation.events);" value = "&#8635;" id = "timer-desolation-11-reset">
             <br><p2 id = "timer-desolation-11-text"></p2> 
           </div> 
 
           <div class = "event-box" id = "desolation-12-box">
             <h1> Raiding Party (W5) </h1>
             <br><p1 id = "timer-desolation-12">6:00</p1>
-            <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-desolation-12-start">
-            <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-desolation-12-reset">
+            <br><input type = "button" onclick = "start_stop(this, desolation.events);" value = "Start" id = "timer-desolation-12-start">
+            <input type = "button" onclick = "reset(this, desolation.events);" value = "&#8635;" id = "timer-desolation-12-reset">
             <br><p2 id = "timer-desolation-12-text"></p2> 
           </div> 
 

@@ -141,8 +141,9 @@
 				<p1>
 					<span style = "font-weight: bold;">Sept 15, 2021</span>
 				<br>
-					- Fixed dark mode and some back-end stuff for timer pages: VB, TD, Bloodstone Fen, Ember Bay, Bitterfrost
+					- Fixed dark mode and some back-end stuff for the REST of the timer pages. 
 					<br> - Fixed a bug for all timers that when the timers reach 0 in dark mode, some texts don't change color to black while the background changes to green. Made it hard to see
+					<br> - Fixed checkboxes in <a href = "./timers/bjora-marches.php" target = "_blank"><u>Bjora Marches's timer page</u></a> as they weren't even the right events for the right map
 				<br><br>
 					<span style = "font-weight: bold;">Sept 14, 2021</span>
 				<br>

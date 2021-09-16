@@ -24,76 +24,76 @@
 	</div>
 
 	<!-- Inner navgation box to the side -->
-	<div id = "nav-left-sidetimer-box" class = "nav-left-sidetimer-box">
+	<div id = "side-timer-list" class = "side-timer-list">
 
 			<div id = "sandswept-1-sidebox" class = "event-sidebox">
 		      <h1> Gathering Storms </h1>
-		      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-sandswept-1-start">
-		      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-sandswept-1-reset">
+		      <input type = "button" onclick = "start_stop(this, sandswept.events);" value = "Start" id = "sidetimer-sandswept-1-start">
+		      <input type = "button" onclick = "reset(this, sandswept.events);" value = "&#8635;" id = "sidetimer-sandswept-1-reset">
 		      <p1 id = "sidetimer-sandswept-1">33:00</p1>
 		      <p2 id = "numerical-sidetimer-sandswept-1">1980</p2>
 	    	</div>
 
 	    	<div id = "sandswept-2-sidebox" class = "event-sidebox">
 		      <h1> Specimen Chamber </h1>
-		      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-sandswept-2-start">
-		      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-sandswept-2-reset">
+		      <input type = "button" onclick = "start_stop(this, sandswept.events);" value = "Start" id = "sidetimer-sandswept-2-start">
+		      <input type = "button" onclick = "reset(this, sandswept.events);" value = "&#8635;" id = "sidetimer-sandswept-2-reset">
 		      <p1 id = "sidetimer-sandswept-2">40:00</p1>
 		      <p2 id = "numerical-sidetimer-sandswept-2">2400</p2>
 	    	</div>
 
 	    	<div id = "sandswept-3-sidebox" class = "event-sidebox">
 		      <h1> Dominus Crystallum </h1>
-		      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-sandswept-3-start">
-		      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-sandswept-3-reset">
+		      <input type = "button" onclick = "start_stop(this, sandswept.events);" value = "Start" id = "sidetimer-sandswept-3-start">
+		      <input type = "button" onclick = "reset(this, sandswept.events);" value = "&#8635;" id = "sidetimer-sandswept-3-reset">
 		      <p1 id = "sidetimer-sandswept-3">12:00</p1>
 		      <p2 id = "numerical-sidetimer-sandswept-3">720</p2>
 	    	</div>
 
 	    	<div id = "sandswept-4-sidebox" class = "event-sidebox">
 		      <h1> Inquest Patrol </h1>
-		      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-sandswept-4-start">
-		      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-sandswept-4-reset">
+		      <input type = "button" onclick = "start_stop(this, sandswept.events);" value = "Start" id = "sidetimer-sandswept-4-start">
+		      <input type = "button" onclick = "reset(this, sandswept.events);" value = "&#8635;" id = "sidetimer-sandswept-4-reset">
 		      <p1 id = "sidetimer-sandswept-4">11:30</p1>
 		      <p2 id = "numerical-sidetimer-sandswept-4">690</p2>
 	    	</div>
 
 	    	<div id = "sandswept-5-sidebox" class = "event-sidebox">
 		      <h1> Mark III </h1>
-		      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-sandswept-5-start">
-		      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-sandswept-5-reset">
+		      <input type = "button" onclick = "start_stop(this, sandswept.events);" value = "Start" id = "sidetimer-sandswept-5-start">
+		      <input type = "button" onclick = "reset(this, sandswept.events);" value = "&#8635;" id = "sidetimer-sandswept-5-reset">
 		      <p1 id = "sidetimer-sandswept-5">10:00</p1>
 		      <p2 id = "numerical-sidetimer-sandswept-5">600</p2>
 	    	</div>
 
 	    	<div id = "sandswept-6-sidebox" class = "event-sidebox">
 		      <h1> Awakened Patrol </h1>
-		      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-sandswept-6-start">
-		      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-sandswept-6-reset">
+		      <input type = "button" onclick = "start_stop(this, sandswept.events);" value = "Start" id = "sidetimer-sandswept-6-start">
+		      <input type = "button" onclick = "reset(this, sandswept.events);" value = "&#8635;" id = "sidetimer-sandswept-6-reset">
 		      <p1 id = "sidetimer-sandswept-6">8:30</p1>
 		      <p2 id = "numerical-sidetimer-sandswept-6">510</p2>
 	    	</div>
 	    	<!--
 	    	<div id = "sandswept-7-sidebox" class = "sandswept-7-sidebox">
 		      <h1> Marmoxes </h1>
-		      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-sandswept-7-start">
-		      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-sandswept-7-reset">
+		      <input type = "button" onclick = "start_stop(this, sandswept.events);" value = "Start" id = "sidetimer-sandswept-7-start">
+		      <input type = "button" onclick = "reset(this, sandswept.events);" value = "&#8635;" id = "sidetimer-sandswept-7-reset">
 		      <p1 id = "sidetimer-sandswept-7"></p1>
 		      <p2 id = "numerical-sidetimer-sandswept-7"></p2>
 	    	</div>
 			-->
 	    	<div id = "sandswept-8-sidebox" class = "event-sidebox">
 		      <h1> Scarab </h1>
-		      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-sandswept-8-start">
-		      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-sandswept-8-reset">
+		      <input type = "button" onclick = "start_stop(this, sandswept.events);" value = "Start" id = "sidetimer-sandswept-8-start">
+		      <input type = "button" onclick = "reset(this, sandswept.events);" value = "&#8635;" id = "sidetimer-sandswept-8-reset">
 		      <p1 id = "sidetimer-sandswept-8">23:00</p1>
 		      <p2 id = "numerical-sidetimer-sandswept-8">1380</p2>
 	    	</div>
 
 	    	<div id = "sandswept-9-sidebox" class = "event-sidebox">
 		      <h1> Inquest Data </h1>
-		      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-sandswept-9-start">
-		      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-sandswept-9-reset">
+		      <input type = "button" onclick = "start_stop(this, sandswept.events);" value = "Start" id = "sidetimer-sandswept-9-start">
+		      <input type = "button" onclick = "reset(this, sandswept.events);" value = "&#8635;" id = "sidetimer-sandswept-9-reset">
 		      <p1 id = "sidetimer-sandswept-9">7:00</p1>
 		      <p2 id = "numerical-sidetimer-sandswept-9">420</p2>
 	    	</div>
@@ -101,26 +101,22 @@
 	    
 	  </div> <!-- End of left side box --> 
 
-	  <div id = "nav-right-sidetimer-box" class = "nav-right-sidetimer-box-overflow">
-	  	All: <input type = "Checkbox" id = "sandswept-all-checkbox" checked = "true" onclick = "sandswept_All_Checkbox(this);">
+	  <div id = "checkboxes" class = "checkboxes">
+	  	All: <input type = "Checkbox" id = "sandswept-all-checkbox" checked = "true" onclick = "checkboxTimer(this, sandswept.events, 'all');">
 	  	<br>
-	  	Gathering Storms: <input type = "Checkbox" id = "sandswept-1-checkbox" checked = "true" onclick = "sandswept_North_Meta_Checkbox(this);">
+	  	Wyvern: <input type = "Checkbox" id = "sandswept-3-checkbox" checked = "true" onclick = "checkboxTimer(this, sandswept.events);">
 	  	<br>
-	  	Specimen Chamber: <input type = "Checkbox" id = "sandswept-2-checkbox" checked = "true" onclick = "sandswept_South_Meta_Checkbox(this);">
+	  	Inquest Patrol: <input type = "Checkbox" id = "sandswept-4-checkbox" checked = "true" onclick = "checkboxTimer(this, sandswept.events);">
 	  	<br>
-	  	Wyvern: <input type = "Checkbox" id = "sandswept-3-checkbox" checked = "true" onclick = "sandswept_2_Checkbox(this);">
+	  	Mark III: <input type = "Checkbox" id = "sandswept-5-checkbox" checked = "true" onclick = "checkboxTimer(this, sandswept.events);">
 	  	<br>
-	  	Inquest Patrol: <input type = "Checkbox" id = "sandswept-4-checkbox" checked = "true" onclick = "sandswept_3_Checkbox(this);">
-	  	<br>
-	  	Mark III: <input type = "Checkbox" id = "sandswept-5-checkbox" checked = "true" onclick = "sandswept_4_Checkbox(this);">
-	  	<br>
-	  	Awakened Patrol: <input type = "Checkbox" id = "sandswept-6-checkbox" checked = "true" onclick = "sandswept_6_Checkbox(this);">
+	  	Awakened Patrol: <input type = "Checkbox" id = "sandswept-6-checkbox" checked = "true" onclick = "checkboxTimer(this, sandswept.events);">
 	  	<br><!--
 	  	Marmoxes: <input type = "Checkbox" id = "sandswept-7-checkbox" onclick = "sandswept_10_Checkbox(this);">
 	  	<br>-->
-	  	Scarabs: <input type = "Checkbox" id = "sandswept-8-checkbox" checked = "true" onclick = "sandswept_12_Checkbox(this);">
+	  	Scarabs: <input type = "Checkbox" id = "sandswept-8-checkbox" checked = "true" onclick = "checkboxTimer(this, sandswept.events);">
 	  	<br>
-	  	Inquest Data: <input type = "Checkbox" id = "sandswept-9-checkbox" checked = "true" onclick = "sandswept_17_Checkbox(this);">
+	  	Inquest Data: <input type = "Checkbox" id = "sandswept-9-checkbox" checked = "true" onclick = "checkboxTimer(this, sandswept.events);">
 	  	<br><br>
 	  	Deselect bounties: <input type = "button" id = "sandswept-deselect" checked = "true" value = "&#x2637;" onclick = "sandswept_Deselect(this);" style = "background-color: #802020; color: white;">
 	  	<br><br>
@@ -245,14 +241,6 @@
 
 	<!-- Main box -->
 	<div class = "page-box">
-		<div class = "page-header">
-      	<h2> Disclaimer: </h2>
-			<div class = "small-description">
-				<p1> Most event cooldowns have a range of when they respawn rather than a set timer. An event may or may not spawn before or after the timer hits 00:00. Below are the average times of when they spawn. </p1>
-			</div>
-			
-		</div>
-
 		<div class = "map-timer-wrapper">
 		<div class = "map-timer-box">
 
@@ -260,40 +248,40 @@
 				HTML notation: 
 				<div class = "[map]-[event #]-box">
 				<p1 id = "timer-[map]-[event #]"> [default time] </p1> 
-				<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-[map]-[event #]-start">
-				<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-[map]-[event #]-reset">
+				<br><input type = "button" onclick = "start_stop(this, sandswept.events);" value = "Start" id = "timer-[map]-[event #]-start">
+				<input type = "button" onclick = "reset(this, sandswept.events);" value = "&#8635;" id = "timer-[map]-[event #]-reset">
        			<br><p2 id = "timer-[map]-[event #]-text"></p2>	
 			-->
 			<!-- Gathering Storms -->
        		<div class = "event-box" id = "sandswept-1-box">
 				<h1> Gathering Storms </h1>
        	 		<br><p1 id = "timer-sandswept-1">33:00</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-sandswept-1-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-sandswept-1-reset">
+        		<br><input type = "button" onclick = "start_stop(this, sandswept.events);" value = "Start" id = "timer-sandswept-1-start">
+       			<input type = "button" onclick = "reset(this, sandswept.events);" value = "&#8635;" id = "timer-sandswept-1-reset">
        			<br><p2 id = "timer-sandswept-1-text"></p2>	
        		</div>
 
        		<div class = "event-box" id = "sandswept-2-box">
 				<h1> Specimen Chamber </h1>
        	 		<br><p1 id = "timer-sandswept-2">40:00</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-sandswept-2-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-sandswept-2-reset">
+        		<br><input type = "button" onclick = "start_stop(this, sandswept.events);" value = "Start" id = "timer-sandswept-2-start">
+       			<input type = "button" onclick = "reset(this, sandswept.events);" value = "&#8635;" id = "timer-sandswept-2-reset">
        			<br><p2 id = "timer-sandswept-2-text"></p2>	
        		</div>
 
        		<div class = "event-box" id = "sandswept-3-box">
 				<h1> Dominus <br> Crystallum </h1>
        	 		<br><p1 id = "timer-sandswept-3">12:00</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-sandswept-3-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-sandswept-3-reset">
+        		<br><input type = "button" onclick = "start_stop(this, sandswept.events);" value = "Start" id = "timer-sandswept-3-start">
+       			<input type = "button" onclick = "reset(this, sandswept.events);" value = "&#8635;" id = "timer-sandswept-3-reset">
        			<br><p2 id = "timer-sandswept-3-text"></p2>	
        		</div>
 
        		<div class = "event-box" id = "sandswept-4-box">
 				<h1> Inquest <br> Patrol </h1>
        	 		<br><p1 id = "timer-sandswept-4">11:30</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-sandswept-4-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-sandswept-4-reset">
+        		<br><input type = "button" onclick = "start_stop(this, sandswept.events);" value = "Start" id = "timer-sandswept-4-start">
+       			<input type = "button" onclick = "reset(this, sandswept.events);" value = "&#8635;" id = "timer-sandswept-4-reset">
        			<input type = "button" value = "&#x203A;" 
        				onmouseover = "showElement('sandswept-img-4'); showElement('sandswept-img-5'); showElement('sandswept-img-6');"
        				onmouseout = "hideElement('sandswept-img-4'); hideElement('sandswept-img-5'); hideElement('sandswept-img-6');">
@@ -303,8 +291,8 @@
        		<div class = "event-box" id = "sandswept-5-box">
 				<h1> Mark III </h1>
        	 		<br><p1 id = "timer-sandswept-5">10:00</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-sandswept-5-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-sandswept-5-reset">
+        		<br><input type = "button" onclick = "start_stop(this, sandswept.events);" value = "Start" id = "timer-sandswept-5-start">
+       			<input type = "button" onclick = "reset(this, sandswept.events);" value = "&#8635;" id = "timer-sandswept-5-reset">
        			<input type = "button" value = "&#x203A;" 
        				onmouseover = "showElement('sandswept-img-1'); showElement('sandswept-img-2'); showElement('sandswept-img-3');"
        				onmouseout = "hideElement('sandswept-img-1'); hideElement('sandswept-img-2'); hideElement('sandswept-img-3');">
@@ -314,32 +302,32 @@
        		<div class = "event-box" id = "sandswept-6-box">
 				<h1> Awakened Patrol </h1>
        	 		<br><p1 id = "timer-sandswept-6">8:30</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-sandswept-6-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-sandswept-6-reset">
+        		<br><input type = "button" onclick = "start_stop(this, sandswept.events);" value = "Start" id = "timer-sandswept-6-start">
+       			<input type = "button" onclick = "reset(this, sandswept.events);" value = "&#8635;" id = "timer-sandswept-6-reset">
        			<br><p2 id = "timer-sandswept-6-text"></p2>	
        		</div>
 
        		<div class = "event-box" id = "sandswept-7-box">
 				<h1> Marmoxes </h1>
        	 		<br><p1 id = "timer-sandswept-7"></p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-sandswept-7-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-sandswept-7-reset">
+        		<br><input type = "button" onclick = "start_stop(this, sandswept.events);" value = "Start" id = "timer-sandswept-7-start">
+       			<input type = "button" onclick = "reset(this, sandswept.events);" value = "&#8635;" id = "timer-sandswept-7-reset">
        			<br><p2 id = "timer-sandswept-7-text"></p2>	
        		</div>
 
        		<div class = "event-box" id = "sandswept-8-box">
 				<h1> Scarab </h1>
        	 		<br><p1 id = "timer-sandswept-8">23:00</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-sandswept-8-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-sandswept-8-reset">
+        		<br><input type = "button" onclick = "start_stop(this, sandswept.events);" value = "Start" id = "timer-sandswept-8-start">
+       			<input type = "button" onclick = "reset(this, sandswept.events);" value = "&#8635;" id = "timer-sandswept-8-reset">
        			<br><p2 id = "timer-sandswept-8-text"></p2>	
        		</div>
 
        		<div class = "event-box" id = "sandswept-9-box">
 				<h1> Inquest <br> Data </h1>
        	 		<br><p1 id = "timer-sandswept-9">7:00</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-sandswept-9-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-sandswept-9-reset">
+        		<br><input type = "button" onclick = "start_stop(this, sandswept.events);" value = "Start" id = "timer-sandswept-9-start">
+       			<input type = "button" onclick = "reset(this, sandswept.events);" value = "&#8635;" id = "timer-sandswept-9-reset">
        			<input type = "button" value = "&#x203A;" 
        				onmouseover = "showElement('sandswept-img-7'); showElement('sandswept-img-8'); showElement('sandswept-img-9');"
        				onmouseout = "hideElement('sandswept-img-7'); hideElement('sandswept-img-8'); hideElement('sandswept-img-9');">

@@ -1,22 +1,15 @@
-// NAV-LEFT SORT IDs
-// Add this to only Timer pages
-var sort_timers = document.getElementById('nav-left-sidetimer-box'),
-    sort_interval;
-
-// Always sorts the left event list
-// Add this to only Timer pages
-sort_interval = setInterval(function(){
-    left_sidetimer_sort(sort_timers);
-}, 1000);
+// Sort the timers on a 1 sec interval. Sorts the list based on most upcoming
+sortTimers();
 
 var elon = {
     events: [
         {   // empty
             status: 0,
+            key: 0,
         },
         {   // [1] Choya
-            function: function() { elon_Countdown(1); },
             status: 0,
+            key: 0,
             cooldown: 60 * 15, 
             startButton: document.getElementById('timer-elon-1-start'),
             startSideButton: document.getElementById('sidetimer-elon-1-start'),
@@ -26,11 +19,12 @@ var elon = {
             timeSideLabel: document.getElementById('sidetimer-elon-1'),
             textLabel: document.getElementById('timer-elon-1-text'),
             sidebox: document.getElementById('elon-1-sidebox'),
-            num: document.getElementById('numerical-sidetimer-elon-1')
+            num: document.getElementById('numerical-sidetimer-elon-1'),
+            doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [2] Branded Waves
-            function: function() { elon_Countdown(2); },
             status: 0,
+            key: 0,
             cooldown: 60 * 9 + 15, 
             startButton: document.getElementById('timer-elon-2-start'),
             startSideButton: document.getElementById('sidetimer-elon-2-start'),
@@ -40,11 +34,12 @@ var elon = {
             timeSideLabel: document.getElementById('sidetimer-elon-2'),
             textLabel: document.getElementById('timer-elon-2-text'),
             sidebox: document.getElementById('elon-2-sidebox'),
-            num: document.getElementById('numerical-sidetimer-elon-2')
+            num: document.getElementById('numerical-sidetimer-elon-2'),
+            doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [3] Flint
-            function: function() { elon_Countdown(3); },
             status: 0,
+            key: 0,
             cooldown: 60 * 11, 
             startButton: document.getElementById('timer-elon-3-start'),
             startSideButton: document.getElementById('sidetimer-elon-3-start'),
@@ -54,11 +49,12 @@ var elon = {
             timeSideLabel: document.getElementById('sidetimer-elon-3'),
             textLabel: document.getElementById('timer-elon-3-text'),
             sidebox: document.getElementById('elon-3-sidebox'),
-            num: document.getElementById('numerical-sidetimer-elon-3')
+            num: document.getElementById('numerical-sidetimer-elon-3'),
+            doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [4] Raiding Party N
-            function: function() { elon_Countdown(4); },
             status: 0,
+            key: 0,
             cooldown: 60 * 6, 
             startButton: document.getElementById('timer-elon-4-start'),
             startSideButton: document.getElementById('sidetimer-elon-4-start'),
@@ -68,11 +64,12 @@ var elon = {
             timeSideLabel: document.getElementById('sidetimer-elon-4'),
             textLabel: document.getElementById('timer-elon-4-text'),
             sidebox: document.getElementById('elon-4-sidebox'),
-            num: document.getElementById('numerical-sidetimer-elon-4')
+            num: document.getElementById('numerical-sidetimer-elon-4'),
+            doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [5] Rading Party Mid
-            function: function() { elon_Countdown(5); },
             status: 0,
+            key: 0,
             cooldown: 60 * 6, 
             startButton: document.getElementById('timer-elon-5-start'),
             startSideButton: document.getElementById('sidetimer-elon-5-start'),
@@ -82,11 +79,12 @@ var elon = {
             timeSideLabel: document.getElementById('sidetimer-elon-5'),
             textLabel: document.getElementById('timer-elon-5-text'),
             sidebox: document.getElementById('elon-5-sidebox'),
-            num: document.getElementById('numerical-sidetimer-elon-5')
+            num: document.getElementById('numerical-sidetimer-elon-5'),
+            doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [6] Raiding Party S
-            function: function() { elon_Countdown(6); },
             status: 0,
+            key: 0,
             cooldown: 60 * 6, 
             startButton: document.getElementById('timer-elon-6-start'),
             startSideButton: document.getElementById('sidetimer-elon-6-start'),
@@ -96,11 +94,12 @@ var elon = {
             timeSideLabel: document.getElementById('sidetimer-elon-6'),
             textLabel: document.getElementById('timer-elon-6-text'),
             sidebox: document.getElementById('elon-6-sidebox'),
-            num: document.getElementById('numerical-sidetimer-elon-6')
+            num: document.getElementById('numerical-sidetimer-elon-6'),
+            doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [7] Lost Mount
-            function: function() { elon_Countdown(7); },
             status: 0,
+            key: 0,
             cooldown: 60 * 11 + 15, 
             startButton: document.getElementById('timer-elon-7-start'),
             startSideButton: document.getElementById('sidetimer-elon-7-start'),
@@ -110,11 +109,12 @@ var elon = {
             timeSideLabel: document.getElementById('sidetimer-elon-7'),
             textLabel: document.getElementById('timer-elon-7-text'),
             sidebox: document.getElementById('elon-7-sidebox'),
-            num: document.getElementById('numerical-sidetimer-elon-7')
+            num: document.getElementById('numerical-sidetimer-elon-7'),
+            doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [8] Sand Lion
-            function: function() { elon_Countdown(8); },
             status: 0,
+            key: 0,
             cooldown: 60 * 8 + 45, 
             startButton: document.getElementById('timer-elon-8-start'),
             startSideButton: document.getElementById('sidetimer-elon-8-start'),
@@ -124,11 +124,12 @@ var elon = {
             timeSideLabel: document.getElementById('sidetimer-elon-8'),
             textLabel: document.getElementById('timer-elon-8-text'),
             sidebox: document.getElementById('elon-8-sidebox'),
-            num: document.getElementById('numerical-sidetimer-elon-8')
+            num: document.getElementById('numerical-sidetimer-elon-8'),
+            doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [9] Deadhouse
-            function: function() { elon_Countdown(9); },
             status: 0,
+            key: 0,
             cooldown: 60 * 11 + 30, 
             startButton: document.getElementById('timer-elon-9-start'),
             startSideButton: document.getElementById('sidetimer-elon-9-start'),
@@ -138,11 +139,12 @@ var elon = {
             timeSideLabel: document.getElementById('sidetimer-elon-9'),
             textLabel: document.getElementById('timer-elon-9-text'),
             sidebox: document.getElementById('elon-9-sidebox'),
-            num: document.getElementById('numerical-sidetimer-elon-9')
+            num: document.getElementById('numerical-sidetimer-elon-9'),
+            doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [10] Jimoh
-            function: function() { elon_Countdown(10); },
             status: 0,
+            key: 0,
             cooldown: 60 * 8 + 45, 
             startButton: document.getElementById('timer-elon-10-start'),
             startSideButton: document.getElementById('sidetimer-elon-10-start'),
@@ -152,11 +154,12 @@ var elon = {
             timeSideLabel: document.getElementById('sidetimer-elon-10'),
             textLabel: document.getElementById('timer-elon-10-text'),
             sidebox: document.getElementById('elon-10-sidebox'),
-            num: document.getElementById('numerical-sidetimer-elon-10')
+            num: document.getElementById('numerical-sidetimer-elon-10'),
+            doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [11] Branded Storm N
-            function: function() { elon_Countdown(11); },
             status: 0,
+            key: 0,
             cooldown: 60 * 6 + 45, 
             startButton: document.getElementById('timer-elon-11-start'),
             startSideButton: document.getElementById('sidetimer-elon-11-start'),
@@ -166,11 +169,12 @@ var elon = {
             timeSideLabel: document.getElementById('sidetimer-elon-11'),
             textLabel: document.getElementById('timer-elon-11-text'),
             sidebox: document.getElementById('elon-11-sidebox'),
-            num: document.getElementById('numerical-sidetimer-elon-11')
+            num: document.getElementById('numerical-sidetimer-elon-11'),
+            doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [12] Branded Storm S
-            function: function() { elon_Countdown(12); },
             status: 0,
+            key: 0,
             cooldown: 60 * 6 + 45, 
             startButton: document.getElementById('timer-elon-12-start'),
             startSideButton: document.getElementById('sidetimer-elon-12-start'),
@@ -180,11 +184,12 @@ var elon = {
             timeSideLabel: document.getElementById('sidetimer-elon-12'),
             textLabel: document.getElementById('timer-elon-12-text'),
             sidebox: document.getElementById('elon-12-sidebox'),
-            num: document.getElementById('numerical-sidetimer-elon-12')
+            num: document.getElementById('numerical-sidetimer-elon-12'),
+            doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [13] Doppleganger
-            function: function() { elon_Countdown(13); },
             status: 0,
+            key: 0,
             cooldown: 60 * 10, 
             startButton: document.getElementById('timer-elon-13-start'),
             startSideButton: document.getElementById('sidetimer-elon-13-start'),
@@ -195,7 +200,8 @@ var elon = {
             textLabel: document.getElementById('timer-elon-13-text'),
             sidebox: document.getElementById('elon-13-sidebox'),
             num: document.getElementById('numerical-sidetimer-elon-13'),
-            area: document.getElementById('elon-shape-1')
+            area: document.getElementById('elon-shape-1'),
+            doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [14] Path of Ascnesion 
             timeSideLabel: document.getElementById('sidetimer-elon-meta'),
@@ -207,138 +213,22 @@ var elon = {
        
     ]
 };
-
-
-// Label of the meta on the side
-var meta_name = document.getElementById('meta-name');
-
-var elon; // Empty array for countdown
-var find_num = /\d+/; // Expression to use with .match(find_num) to find a number in a string
-
-
-/* Start/Stop button functionality */
-function start_stop(obj){
-
-    var timer = obj.id;
-    var timer_num = obj.id.match(find_num)[0];
-    // Status 0 = Stop 
-    // Status 1 = Starting, Ongoing
-    // When the Start button is clicked, change status to Starting and start timer
-    // Else -> Keep status at Stop
-    
-    switch (timer_num) {
-        case timer_num:
-        start_Event(timer_num);
-        break;
-    }
-
-    function start_Event(timer_num){
-        if (timer == elon.events[timer_num].startButton.id || timer == elon.events[timer_num].startSideButton.id){
-            if (elon.events[timer_num].status == 0){
-                elon.events[timer_num].status = 1; 
-                elon.events[timer_num].function(); 
-
-                elon.events[timer_num].startButton.value = "Reset";
-                elon.events[timer_num].startSideButton.value = "Reset";
-            } else {
-                elon.events[timer_num].status = 0;
-                elon.events[timer_num].startButton.value = "Start";
-                elon.events[timer_num].startSideButton.value = "Start";
-
-                elon.events[timer_num].timeLabel.style.color = "black";
-                elon.events[timer_num].timeSideLabel.style.color = 'black';
-                elon.events[timer_num].timeLabel.style.background = 'rgba(255,246,214)';
-                elon.events[timer_num].sidebox.style.background = 'transparent';
-                elon.events[timer_num].function();
-            }   
-        }
-    }
-}
-
-// Reset Button functionality
-// Reset Button functionality
-function reset (obj){
-    var timer = obj.id;
-    var timer_num = obj.id.match(find_num)[0];
-    /*
-        When Reset button is clicked, 
-        -> Change status to Stop 
-        -> Reset timer to original time + 1
-        -> Reset time label to oringal time
-        -> Reset opacity of the text to hidden
-    */
-    // Remember to change these reset times to the RESPAWN rate and not the INITIAL SPAWN rate
-
-    switch (timer_num) {
-        case timer_num:
-        start_Event(timer_num);
-        break;
-    }
-
-    function start_Event(timer_num){
-        if (timer == elon.events[timer_num].resetButton.id || timer == elon.events[timer_num].resetSideButton.id){
-            if (elon.events[timer_num].status == 1){
-                elon.events[timer_num].status = 0;
-                elon.events[timer_num].cooldown = elon.events[timer_num].cooldown;
-                elon.events[timer_num].timeLabel.style.color = "black";
-
-                elon.events[timer_num].timeSideLabel.innerHTML = elon.events[timer_num].timeLabel.innerHTML;
-                elon.events[timer_num].timeSideLabel.style.color = elon.events[timer_num].timeLabel.style.color;
-
-                elon.events[timer_num].timeLabel.style.background = 'rgba(255,246,214)';
-                elon.events[timer_num].sidebox.style.background = "transparent";
-
-                elon.events[timer_num].function(); 
-                elon.events[timer_num].status = 1;
-                elon.events[timer_num].function(); 
-            }
-        }
-    }
-}
-
-function elon_Countdown(arrayNum){
-    var date_now = Date.now(); 
-
-    function run_countdown() {
-        var countdown = getTime(date_now, elon.events[arrayNum].cooldown, elon.events[arrayNum].timeLabel, elon.events[arrayNum].timeSideLabel, elon.events[arrayNum].num);
-        
-        switch (arrayNum){
-            case 13: // Dopple
-                if (countdown.time <= 0){
-                    elon.events[13].area.style.opacity = 0.5;
-                    show_multiple_elements(1,1,'elon-meta-info-','opacity');
-                } else {
-                    elon.events[13].area.style.opacity = 0;
-                    hide_multiple_elements(1,1,'elon-meta-info-','opacity');
-                }
-        }
-
-        if (countdown.time <= 0){ 
-            time_text_and_labels_less_than_0(elon.events[arrayNum].timeLabel, elon.events[arrayNum].sidebox, elon.events[arrayNum].timeSideLabel);
-        } else if (countdown.time <= 60){
-            time_text_and_labels_less_than_60(elon.events[arrayNum].timeLabel, elon.events[arrayNum].sidebox);
-        }
-    }
-    run_countdown(); 
-    if (elon.events[arrayNum].status == 1){
-        elon[arrayNum] = setInterval(run_countdown, 1000);
-    } else {
-        clearInterval(elon[arrayNum]);   
-    } 
-}
+// Dynamically creates unique keys
+add_event_keys(elon.events); 
 
 // Initials
-var current_progress = document.getElementById('current-status'),
+let current_progress = document.getElementById('current-status'),
     next_progress = "",
     progress_bar = document.getElementById('progress-bar'),
     progress_text = document.getElementById('progress-text'),
     meta_width = 0,
     new_meta_time = 0,
-    max_meta_time = 0;
+    max_meta_time = 0,
+    meta_name = document.getElementById('meta-name');
 
-    var timer = setInterval(function(){
-    var d = new Date();
-    var time = d.getUTCHours()*3600 + d.getUTCMinutes()*60 + d.getUTCSeconds(),
+    let timer = setInterval(function(){
+    let d = new Date();
+    let time = d.getUTCHours()*3600 + d.getUTCMinutes()*60 + d.getUTCSeconds(),
         result,
         hours,
         minutes,

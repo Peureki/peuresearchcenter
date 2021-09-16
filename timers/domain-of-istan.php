@@ -25,7 +25,7 @@
 	</div>
 
 	<!-- Inner navgation box to the side -->
-	<div id = "nav-left-sidetimer-box" class = "nav-left-sidetimer-box">
+	<div id = "side-timer-list" class = "side-timer-list">
 
 	      <div id = "istan-meta-pala-sidebox" class = "meta-sidebox">
 	      <h1> Palawadan </h1>
@@ -41,32 +41,32 @@
 
 	    <div id = "istan-1-sidebox" class = "event-sidebox" >
 	      <h1> Pirates </h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-istan-1-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-istan-1-reset">
+	      <input type = "button" onclick = "start_stop(this, istan.events);" value = "Start" id = "sidetimer-istan-1-start">
+	      <input type = "button" onclick = "reset(this, istan.events);" value = "&#8635;" id = "sidetimer-istan-1-reset">
 	      <p1 id = "sidetimer-istan-1">12:30</p1>
 	      <p2 id = "numerical-sidetimer-istan-1">750</p2>
 	    </div>
 
 	    <div id = "istan-2-sidebox" class = "event-sidebox">
 	      <h1> Akili </h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-istan-2-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-istan-2-reset">
+	      <input type = "button" onclick = "start_stop(this, istan.events);" value = "Start" id = "sidetimer-istan-2-start">
+	      <input type = "button" onclick = "reset(this, istan.events);" value = "&#8635;" id = "sidetimer-istan-2-reset">
 	      <p1 id = "sidetimer-istan-2">20:45</p1>
 	      <p2 id = "numerical-sidetimer-istan-2">1245</p2>
 	    </div>
 
 	    <div id = "istan-3-sidebox" class = "event-sidebox">
 	      <h1> Book Raid </h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-istan-3-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-istan-3-reset">
+	      <input type = "button" onclick = "start_stop(this, istan.events);" value = "Start" id = "sidetimer-istan-3-start">
+	      <input type = "button" onclick = "reset(this, istan.events);" value = "&#8635;" id = "sidetimer-istan-3-reset">
 	      <p1 id = "sidetimer-istan-3">19:45</p1>
 	      <p2 id = "numerical-sidetimer-istan-3">1185</p2>
 	    </div>
 
 	    <div id = "istan-4-sidebox" class = "event-sidebox">
 	      <h1> Graveyard </h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-istan-4-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-istan-4-reset">
+	      <input type = "button" onclick = "start_stop(this, istan.events);" value = "Start" id = "sidetimer-istan-4-start">
+	      <input type = "button" onclick = "reset(this, istan.events);" value = "&#8635;" id = "sidetimer-istan-4-reset">
 	      <p1 id = "sidetimer-istan-4">15:00</p1>
 	      <p2 id = "numerical-sidetimer-istan-4">900</p2>
 	    </div>
@@ -75,20 +75,16 @@
 	    
 	  </div> <!-- End of left side box --> 
 
-	  <div id = "nav-right-sidetimer-box" class = "nav-right-sidetimer-box">
-	  	All: <input type = "Checkbox" id = "istan-all-checkbox" checked = "true" onclick = "istan_All_Checkbox(this);">
+	  <div id = "checkboxes" class = "checkboxes">
+	  	All: <input type = "Checkbox" id = "istan-all-checkbox" checked = "true" onclick = "checkboxTimer(this, istan.events, 'all');">
 	  	<br>
-	  	Palawadan: <input type = "Checkbox" id = "istan-meta-pala-checkbox" checked = "true" onclick = "istan_Meta_Pala_Checkbox(this);">
+	  	Pirates: <input type = "Checkbox" id = "istan-1-checkbox" checked = "true" onclick = "checkboxTimer(this, istan.events);">
 	  	<br>
-	  	Great Hall: <input type = "Checkbox" id = "istan-meta-gh-checkbox" checked = "true" onclick = "istan_Meta_GH_Checkbox(this);">
+	  	Akili: <input type = "Checkbox" id = "istan-2-checkbox" checked = "true" onclick = "checkboxTimer(this, istan.events);">
 	  	<br>
-	  	Pirates: <input type = "Checkbox" id = "istan-1-checkbox" checked = "true" onclick = "istan_1_Checkbox(this);">
+	  	Book Raid: <input type = "Checkbox" id = "istan-3-checkbox" checked = "true" onclick = "checkboxTimer(this, istan.events);">
 	  	<br>
-	  	Akili: <input type = "Checkbox" id = "istan-2-checkbox" checked = "true" onclick = "istan_7_Checkbox(this);">
-	  	<br>
-	  	Book Raid: <input type = "Checkbox" id = "istan-3-checkbox" checked = "true" onclick = "istan_8_Checkbox(this);">
-	  	<br>
-	  	Graveyard: <input type = "Checkbox" id = "istan-4-checkbox" checked = "true" onclick = "istan_9_Checkbox(this);">
+	  	Graveyard: <input type = "Checkbox" id = "istan-4-checkbox" checked = "true" onclick = "checkboxTimer(this, istan.events);">
 	  	<br>
 	    
 	 </div>
@@ -96,10 +92,11 @@
 	<!-- Main box -->
 	<div class = "page-box">
 		<div class = "page-header">
-      	<h2> Disclaimer: </h2>
 			<div class = "small-description">
-				<p1> <b> How to do this: </b>
-                            <br> While the Great Hall is on a global timer, when it's on cooldowm it is possible to run it again. Kill Awakened mobs to make the progress bar drop and it will start. </p1>
+				<details>
+					<summary><b> How to do this: </b></summary>
+	                            <br> While the Great Hall is on a global timer, when it's on cooldowm it is possible to run it again. Kill Awakened mobs to make the progress bar drop and it will start.
+                     	</details>
 			</div>
 			
 		</div>
@@ -111,24 +108,24 @@
 				HTML notation: 
 				<div class = "[map]-[event #]-box">
 				<p1 id = "timer-[map]-[event #]"> [default time] </p1> 
-				<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-[map]-[event #]-start">
-				<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-[map]-[event #]-reset">
+				<br><input type = "button" onclick = "start_stop(this, istan.events);" value = "Start" id = "timer-[map]-[event #]-start">
+				<input type = "button" onclick = "reset(this, istan.events);" value = "&#8635;" id = "timer-[map]-[event #]-reset">
        			<br><p2 id = "timer-[map]-[event #]-text"></p2>	
 			-->
 
 			<div class = "event-box" id = "istan-1-box">
 				<h1> Pirates </h1>
        	 		<br><p1 id = "timer-istan-1">12:30</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-istan-1-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-istan-1-reset">
+        		<br><input type = "button" onclick = "start_stop(this, istan.events);" value = "Start" id = "timer-istan-1-start">
+       			<input type = "button" onclick = "reset(this, istan.events);" value = "&#8635;" id = "timer-istan-1-reset">
        			<br><p2 id = "timer-istan-1-text"></p2>	
        		</div>
 
        		<div class = "event-box" id = "istan-2-box">
 				<h1> Akili </h1>
        	 		<br><p1 id = "timer-istan-2">20:45</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-istan-2-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-istan-2-reset">
+        		<br><input type = "button" onclick = "start_stop(this, istan.events);" value = "Start" id = "timer-istan-2-start">
+       			<input type = "button" onclick = "reset(this, istan.events);" value = "&#8635;" id = "timer-istan-2-reset">
        			<input type = "button" value = "i" onmouseover="showElement('istan-2-info-box-2'); " onmouseout = "hideElement('istan-2-info-box-2'); ">
        			<br><p2 id = "timer-istan-2-text"></p2>	
        		</div>
@@ -136,8 +133,8 @@
        		<div class = "event-box" id = "istan-3-box">
 				<h1> Book Raid </h1>
        	 		<br><p1 id = "timer-istan-3">19:45</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-istan-3-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-istan-3-reset">
+        		<br><input type = "button" onclick = "start_stop(this, istan.events);" value = "Start" id = "timer-istan-3-start">
+       			<input type = "button" onclick = "reset(this, istan.events);" value = "&#8635;" id = "timer-istan-3-reset">
        			<input type = "button" value = "i" onmouseover="showElement('istan-2-info-box-2'); " onmouseout = "hideElement('istan-2-info-box-2'); ">
        			<br><p2 id = "timer-istan-3-text"></p2>	
        		</div>
@@ -145,8 +142,8 @@
        		<div class = "event-box" id = "istan-4-box">
 				<h1> Graveyard </h1>
        	 		<br><p1 id = "timer-istan-4">15:00</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-istan-4-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-istan-4-reset">
+        		<br><input type = "button" onclick = "start_stop(this, istan.events);" value = "Start" id = "timer-istan-4-start">
+       			<input type = "button" onclick = "reset(this, istan.events);" value = "&#8635;" id = "timer-istan-4-reset">
        			<input type = "button" value = "i" onmouseover="showElement('istan-4-info-box-1'); " onmouseout = "hideElement('istan-4-info-box-1'); ">
        			<br><p2 id = "timer-istan-4-text"></p2>	
        		</div>

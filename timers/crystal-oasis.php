@@ -13,12 +13,7 @@
   -->
   <?php include('../nav.php'); ?>
 
-	<div id = "nav-left-popup" class = "nav-left-popup" onclick = "nav_popup();"> 
-		&#x2194;
-	</div>
-
 	<!-- Main header -->
-
 	<div class = "page-box">
 		<div class = "section-header">
       <h1>Crystal Oasis</h1>
@@ -31,7 +26,7 @@
 
 
 	<!-- Inner navgation box to the side -->
-	<div id = "nav-left-sidetimer-box" class = "nav-left-sidetimer-box">
+	<div id = "side-timer-list" class = "side-timer-list">
 
       <div id = "crystal-meta-sidebox" class = "meta-sidebox" >
        <h1 id = "side-meta-name"> </h1>
@@ -41,128 +36,128 @@
 
         <div id = "crystal-1-sidebox" class = "event-sidebox" >
 	      <h1> Raiding Party (N1) </h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-crystal-1-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-crystal-1-reset">
+	      <input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "sidetimer-crystal-1-start">
+	      <input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "sidetimer-crystal-1-reset">
 	      <p1 id = "sidetimer-crystal-1">6:00</p1>
 	      <p2 id = "numerical-sidetimer-crystal-1">360</p2>
 	    </div>
 
 	    <div id = "crystal-2-sidebox" class = "event-sidebox" >
 	      <h1> Raiding Party (N2)</h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-crystal-2-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-crystal-2-reset">
+	      <input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "sidetimer-crystal-2-start">
+	      <input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "sidetimer-crystal-2-reset">
 	      <p1 id = "sidetimer-crystal-2">6:00</p1>
 	      <p2 id = "numerical-sidetimer-crystal-2">360</p2>
 	    </div>
 
 	    <div id = "crystal-3-sidebox" class = "event-sidebox" >
 	      <h1> Raiding Party (S1)</h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-crystal-3-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-crystal-3-reset">
+	      <input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "sidetimer-crystal-3-start">
+	      <input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "sidetimer-crystal-3-reset">
 	      <p1 id = "sidetimer-crystal-3">6:00</p1>
 	      <p2 id = "numerical-sidetimer-crystal-3">360</p2>
 	    </div>
 
 	    <div id = "crystal-4-sidebox" class = "event-sidebox" >
 	      <h1> Raiding Party (S2) </h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-crystal-4-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-crystal-4-reset">
+	      <input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "sidetimer-crystal-4-start">
+	      <input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "sidetimer-crystal-4-reset">
 	      <p1 id = "sidetimer-crystal-4">6:00</p1>
 	      <p2 id = "numerical-sidetimer-crystal-4">360</p2>
 	    </div>
 
       <div id = "crystal-5-sidebox" class = "event-sidebox" >
         <h1> Raiding Party (E1) </h1>
-        <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-crystal-5-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-crystal-5-reset">
+        <input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "sidetimer-crystal-5-start">
+        <input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "sidetimer-crystal-5-reset">
         <p1 id = "sidetimer-crystal-5">6:00</p1>
         <p2 id = "numerical-sidetimer-crystal-5">360</p2>
       </div>
 
       <div id = "crystal-6-sidebox" class = "event-sidebox" >
         <h1> Crucible </h1>
-        <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-crystal-6-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-crystal-6-reset">
+        <input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "sidetimer-crystal-6-start">
+        <input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "sidetimer-crystal-6-reset">
         <p1 id = "sidetimer-crystal-6">21:30</p1>
         <p2 id = "numerical-sidetimer-crystal-6">1290</p2>
       </div>
 
       <div id = "crystal-7-sidebox" class = "event-sidebox" >
         <h1> Choya Stampede </h1>
-        <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-crystal-7-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-crystal-7-reset">
+        <input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "sidetimer-crystal-7-start">
+        <input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "sidetimer-crystal-7-reset">
         <p1 id = "sidetimer-crystal-7">10:00</p1>
         <p2 id = "numerical-sidetimer-crystal-7">600</p2>
       </div>
 
       <div id = "crystal-8-sidebox" class = "event-sidebox" >
         <h1> Farm </h1>
-        <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-crystal-8-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-crystal-8-reset">
+        <input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "sidetimer-crystal-8-start">
+        <input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "sidetimer-crystal-8-reset">
         <p1 id = "sidetimer-crystal-8">10:30</p1>
         <p2 id = "numerical-sidetimer-crystal-8">630</p2>
       </div>
 
       <div id = "crystal-9-sidebox" class = "event-sidebox" >
         <h1> Refugee (S) </h1>
-        <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-crystal-9-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-crystal-9-reset">
+        <input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "sidetimer-crystal-9-start">
+        <input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "sidetimer-crystal-9-reset">
         <p1 id = "sidetimer-crystal-9">7:30</p1>
         <p2 id = "numerical-sidetimer-crystal-9">450</p2>
       </div>
 
       <div id = "crystal-10-sidebox" class = "event-sidebox" >
         <h1> Refugee (M) </h1>
-        <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-crystal-10-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-crystal-10-reset">
+        <input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "sidetimer-crystal-10-start">
+        <input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "sidetimer-crystal-10-reset">
         <p1 id = "sidetimer-crystal-10">12:30</p1>
         <p2 id = "numerical-sidetimer-crystal-10">750</p2>
       </div>
 
       <div id = "crystal-11-sidebox" class = "event-sidebox" >
         <h1> Refugee (N) </h1>
-        <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-crystal-11-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-crystal-11-reset">
+        <input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "sidetimer-crystal-11-start">
+        <input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "sidetimer-crystal-11-reset">
         <p1 id = "sidetimer-crystal-11">6:30</p1>
         <p2 id = "numerical-sidetimer-crystal-11">390</p2>
       </div>
 
       <div id = "crystal-12-sidebox" class = "event-sidebox" >
         <h1> Caravan W</h1>
-        <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-crystal-12-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-crystal-12-reset">
+        <input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "sidetimer-crystal-12-start">
+        <input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "sidetimer-crystal-12-reset">
         <p1 id = "sidetimer-crystal-12">15:30</p1>
         <p2 id = "numerical-sidetimer-crystal-12">930</p2>
       </div>
 
       <div id = "crystal-13-sidebox" class = "event-sidebox" >
         <h1> Caravan E</h1>
-        <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-crystal-13-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-crystal-13-reset">
+        <input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "sidetimer-crystal-13-start">
+        <input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "sidetimer-crystal-13-reset">
         <p1 id = "sidetimer-crystal-13">11:45</p1>
         <p2 id = "numerical-sidetimer-crystal-13">705</p2>
       </div>
 
       <div id = "crystal-14-sidebox" class = "event-sidebox" >
         <h1> Forged Maverick</h1>
-        <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-crystal-14-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-crystal-14-reset">
+        <input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "sidetimer-crystal-14-start">
+        <input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "sidetimer-crystal-14-reset">
         <p1 id = "sidetimer-crystal-14">15:00</p1>
         <p2 id = "numerical-sidetimer-crystal-14">900</p2>
       </div>
 
       <div id = "crystal-15-sidebox" class = "event-sidebox" >
         <h1> Forged Punisher </h1>
-        <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-crystal-15-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-crystal-15-reset">
+        <input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "sidetimer-crystal-15-start">
+        <input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "sidetimer-crystal-15-reset">
         <p1 id = "sidetimer-crystal-15">15:00</p1>
         <p2 id = "numerical-sidetimer-crystal-15">900</p2>
       </div>
 
       <div id = "crystal-16-sidebox" class = "event-sidebox" >
         <h1> Forged Sorcerer </h1>
-        <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-crystal-16-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-crystal-16-reset">
+        <input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "sidetimer-crystal-16-start">
+        <input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "sidetimer-crystal-16-reset">
         <p1 id = "sidetimer-crystal-16">15:00</p1>
         <p2 id = "numerical-sidetimer-crystal-16">900</p2>
       </div>
@@ -170,30 +165,30 @@
 	    
 	  </div> <!-- End of left side box --> 
 
-	  <div id = "nav-right-sidetimer-box" class = "nav-right-sidetimer-box-overflow">
-            All: <input type = "Checkbox" id = "crystal-all-checkbox" checked = "true" onclick = "crystal_All_Checkbox(this);">
+	  <div id = "checkboxes" class = "checkboxes">
+            All: <input type = "Checkbox" id = "crystal-all-checkbox" checked = "true" onclick = "checkboxTimer(this, crystal.events, 'all');">
             <br>
-            Raiding Party N1: <input type = "Checkbox" id = "crystal-1-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'crystal-1-sidebox');">
+            Raiding Party N1: <input type = "Checkbox" id = "crystal-1-checkbox" checked = "true" onclick = "checkboxTimer(this, crystal.events);">
             <br>
-            Raiding Party N2: <input type = "Checkbox" id = "crystal-2-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'crystal-2-sidebox');">
+            Raiding Party N2: <input type = "Checkbox" id = "crystal-2-checkbox" checked = "true" onclick = "checkboxTimer(this, crystal.events);">
             <br>
-            Raiding Party S1: <input type = "Checkbox" id = "crystal-3-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'crystal-3-sidebox');">
+            Raiding Party S1: <input type = "Checkbox" id = "crystal-3-checkbox" checked = "true" onclick = "checkboxTimer(this, crystal.events);">
             <br>
-            Raiding Party S2: <input type = "Checkbox" id = "crystal-4-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'crystal-4-sidebox');">
+            Raiding Party S2: <input type = "Checkbox" id = "crystal-4-checkbox" checked = "true" onclick = "checkboxTimer(this, crystal.events);">
             <br>
-            Raiding Party E1: <input type = "Checkbox" id = "crystal-5-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'crystal-5-sidebox');">
+            Raiding Party E1: <input type = "Checkbox" id = "crystal-5-checkbox" checked = "true" onclick = "checkboxTimer(this, crystal.events);">
             <br>
-            Crucible: <input type = "Checkbox" id = "crystal-6-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'crystal-6-sidebox');">
+            Crucible: <input type = "Checkbox" id = "crystal-6-checkbox" checked = "true" onclick = "checkboxTimer(this, crystal.events);">
             <br>
-            Choya Stampede: <input type = "Checkbox" id = "crystal-7-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'crystal-7-sidebox');">
+            Choya Stampede: <input type = "Checkbox" id = "crystal-7-checkbox" checked = "true" onclick = "checkboxTimer(this, crystal.events);">
             <br>
-            Farm: <input type = "Checkbox" id = "crystal-8-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'crystal-8-sidebox');">
+            Farm: <input type = "Checkbox" id = "crystal-8-checkbox" checked = "true" onclick = "checkboxTimer(this, crystal.events);">
             <br>
-            Refugee S: <input type = "Checkbox" id = "crystal-9-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'crystal-9-sidebox');">
+            Refugee S: <input type = "Checkbox" id = "crystal-9-checkbox" checked = "true" onclick = "checkboxTimer(this, crystal.events);">
             <br>
-            Refugee M: <input type = "Checkbox" id = "crystal-10-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'crystal-10-sidebox');">
+            Refugee M: <input type = "Checkbox" id = "crystal-10-checkbox" checked = "true" onclick = "checkboxTimer(this, crystal.events);">
             <br>
-            Refugee N: <input type = "Checkbox" id = "crystal-11-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'crystal-11-sidebox');">
+            Refugee N: <input type = "Checkbox" id = "crystal-11-checkbox" checked = "true" onclick = "checkboxTimer(this, crystal.events);">
             <br><br>
             Deselect bounties: <input type = "button" id = "bounty-deselect" value = "&#x2637;" onclick = "bounty_Deselect(this);" style = "background-color: #802020; color: white;">
             <br><br>
@@ -369,14 +364,7 @@
             <br>
 	 </div>
 	<!-- Main box -->
-	<div class = "page-box">
-		<div class = "page-header">
-			<div class = "small-description">
-				<p1> <b> How this works: </b>
-          <br> The events themselves are straight forward in terms of the timers, but the Choya Stampede will only respawn if there is not a race going on. 
-        </p1>
-			</div>
-			
+	<div class = "page-box">		
 		</div>
 
 		<!-- Progress bars -->
@@ -397,128 +385,128 @@
       			HTML notation: 
       			<div class = "[map]-[event #]-box">
       			<p1 id = "timer-[map]-[event #]"> [default time] </p1> 
-      			<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-[map]-[event #]-start">
-      			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-[map]-[event #]-reset">
+      			<br><input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "timer-[map]-[event #]-start">
+      			<input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "timer-[map]-[event #]-reset">
        			<br><p2 id = "timer-[map]-[event #]-text"></p2>	
       		-->
 
       		<div class = "event-box" id = "crystal-1-box">
       			<h1> Raiding Party (N1) </h1>
        	 		<br><p1 id = "timer-crystal-1">6:00</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-crystal-1-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-crystal-1-reset">
+        		<br><input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "timer-crystal-1-start">
+       			<input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "timer-crystal-1-reset">
        		</div>
 
        		<div class = "event-box" id = "crystal-2-box">
       			<h1> Raiding Party (N2) </h1>
        	 		<br><p1 id = "timer-crystal-2">6:00</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-crystal-2-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-crystal-2-reset">
+        		<br><input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "timer-crystal-2-start">
+       			<input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "timer-crystal-2-reset">
        		</div>
 
        		<div class = "event-box" id = "crystal-3-box">
       			<h1> Raiding Party (S1) </h1>
        	 		<br><p1 id = "timer-crystal-3">6:00</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-crystal-3-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-crystal-3-reset">
+        		<br><input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "timer-crystal-3-start">
+       			<input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "timer-crystal-3-reset">
        		</div>
 
        		<div class = "event-box" id = "crystal-4-box">
       			<h1> Raiding Party (S2) </h1>
        	 		<br><p1 id = "timer-crystal-4">6:00</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-crystal-4-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-crystal-4-reset">
+        		<br><input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "timer-crystal-4-start">
+       			<input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "timer-crystal-4-reset">
        		</div>
 
           <div class = "event-box" id = "crystal-5-box">
             <h1> Raiding Party (E1) </h1>
             <br><p1 id = "timer-crystal-5">6:00</p1>
-            <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-crystal-5-start">
-            <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-crystal-5-reset">
+            <br><input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "timer-crystal-5-start">
+            <input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "timer-crystal-5-reset">
           </div>
 
           <div class = "event-box" id = "crystal-6-box">
             <h1> Crucible </h1>
             <br><p1 id = "timer-crystal-6">21:30</p1>
-            <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-crystal-6-start">
-            <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-crystal-6-reset">
+            <br><input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "timer-crystal-6-start">
+            <input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "timer-crystal-6-reset">
             <input type = "button" value = "i" onmouseover = "showElement('crystal-info-1');" onmouseout = "hideElement('crystal-info-1');"> 
           </div> 
 
           <div class = "event-box" id = "crystal-7-box">
             <h1> Choya Stampede </h1>
             <br><p1 id = "timer-crystal-7">10:00</p1>
-            <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-crystal-7-start">
-            <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-crystal-7-reset">
+            <br><input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "timer-crystal-7-start">
+            <input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "timer-crystal-7-reset">
             <input type = "button" value = "i" onmouseover = "showElement('crystal-info-2');" onmouseout = "hideElement('crystal-info-2');">
           </div> 
 
           <div class = "event-box" id = "crystal-8-box">
             <h1> Farm </h1>
             <br><p1 id = "timer-crystal-8">10:30</p1>
-            <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-crystal-8-start">
-            <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-crystal-8-reset">
+            <br><input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "timer-crystal-8-start">
+            <input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "timer-crystal-8-reset">
           </div> 
 
           <div class = "event-box" id = "crystal-9-box">
             <h1> Refugee (S) </h1>
             <br><p1 id = "timer-crystal-9">7:30</p1>
-            <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-crystal-9-start">
-            <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-crystal-9-reset"> 
+            <br><input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "timer-crystal-9-start">
+            <input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "timer-crystal-9-reset"> 
           </div> 
 
           <div class = "event-box" id = "crystal-10-box">
             <h1> Refugee (M) </h1>
             <br><p1 id = "timer-crystal-10">12:30</p1>
-            <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-crystal-10-start">
-            <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-crystal-10-reset">
+            <br><input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "timer-crystal-10-start">
+            <input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "timer-crystal-10-reset">
           </div> 
 
           <div class = "event-box" id = "crystal-11-box">
             <h1> Refugee (N) </h1>
             <br><p1 id = "timer-crystal-11">6:30</p1>
-            <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-crystal-11-start">
-            <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-crystal-11-reset">
+            <br><input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "timer-crystal-11-start">
+            <input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "timer-crystal-11-reset">
             <input type = "button" value = "i" onmouseover = "showElement('crystal-info-3');" onmouseout = "hideElement('crystal-info-3');">
           </div> 
 
           <div class = "event-box" id = "crystal-12-box">
             <h1> Caravan W</h1>
             <br><p1 id = "timer-crystal-12">15:30</p1>
-            <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-crystal-12-start">
-            <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-crystal-12-reset">
+            <br><input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "timer-crystal-12-start">
+            <input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "timer-crystal-12-reset">
             <input type = "button" value = "i" onmouseover = "showElement('crystal-info-4');" onmouseout = "hideElement('crystal-info-4');">
           </div>
 
           <div class = "event-box" id = "crystal-13-box">
             <h1> Caravan E</h1>
             <br><p1 id = "timer-crystal-13">11:45</p1>
-            <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-crystal-13-start">
-            <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-crystal-13-reset">
+            <br><input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "timer-crystal-13-start">
+            <input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "timer-crystal-13-reset">
             <input type = "button" value = "i" onmouseover = "showElement('crystal-info-4');" onmouseout = "hideElement('crystal-info-4');">
           </div>
 
           <div class = "event-box" id = "crystal-14-box" style = "opacity: 0;">
             <h1> Forged Maverick </h1>
             <br><p1 id = "timer-crystal-14">15:00</p1>
-            <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-crystal-14-start">
-            <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-crystal-14-reset">
+            <br><input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "timer-crystal-14-start">
+            <input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "timer-crystal-14-reset">
             <input type = "button" value = "i" onmouseover = "showElement('crystal-info-4');" onmouseout = "hideElement('crystal-info-4');">
           </div>
 
           <div class = "event-box" id = "crystal-15-box" style = "opacity: 0;">
             <h1> Forged Punisher </h1>
             <br><p1 id = "timer-crystal-15">15:00</p1>
-            <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-crystal-15-start">
-            <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-crystal-15-reset">
+            <br><input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "timer-crystal-15-start">
+            <input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "timer-crystal-15-reset">
             <input type = "button" value = "i" onmouseover = "showElement('crystal-info-4');" onmouseout = "hideElement('crystal-info-4');">
           </div>
 
           <div class = "event-box" id = "crystal-16-box" style = "opacity: 0;">
             <h1> Forged Sorcerer </h1>
             <br><p1 id = "timer-crystal-16">15:00</p1>
-            <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-crystal-16-start">
-            <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-crystal-16-reset">
+            <br><input type = "button" onclick = "start_stop(this, crystal.events);" value = "Start" id = "timer-crystal-16-start">
+            <input type = "button" onclick = "reset(this, crystal.events);" value = "&#8635;" id = "timer-crystal-16-reset">
             <input type = "button" value = "i" onmouseover = "showElement('crystal-info-4');" onmouseout = "hideElement('crystal-info-4');">
           </div>
        

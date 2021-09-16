@@ -25,8 +25,7 @@
 		</div>
 
 	<!-- Inner navgation box to the side -->
-	<div id = "nav-left-sidetimer-box" class = "nav-left-sidetimer-box">
-
+	<div id = "side-timer-list" class = "side-timer-list">
       <div id = "vabbi-forged-sidebox" class = "meta-sidebox" >
         <h1 id = "side-forged-name"> </h1>
         <p1 id = "sidetimer-vabbi-forged"></p1>
@@ -41,80 +40,80 @@
 
       <div class = "event-sidebox" id = "vabbi-1-sidebox">
         <h1> Forged Officer </h1>
-        <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-vabbi-1-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-vabbi-1-reset">
+        <input type = "button" onclick = "start_stop(this, vabbi.events);" value = "Start" id = "sidetimer-vabbi-1-start">
+        <input type = "button" onclick = "reset(this, vabbi.events);" value = "&#8635;" id = "sidetimer-vabbi-1-reset">
         <p1 id = "sidetimer-vabbi-1">6:45</p1>
         <p2 id = "numerical-sidetimer-vabbi-1">405</p2>
       </div>
 
       <div class = "event-sidebox" id = "vabbi-2-sidebox">
         <h1> Statues </h1>
-        <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-vabbi-2-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-vabbi-2-reset">
+        <input type = "button" onclick = "start_stop(this, vabbi.events);" value = "Start" id = "sidetimer-vabbi-2-start">
+        <input type = "button" onclick = "reset(this, vabbi.events);" value = "&#8635;" id = "sidetimer-vabbi-2-reset">
         <p1 id = "sidetimer-vabbi-2">24:15</p1>
         <p2 id = "numerical-sidetimer-vabbi-2">1455</p2>
       </div>
 
       <div class = "event-sidebox" id = "vabbi-3-sidebox" onmouseover="showElement('vabbi-info-1'); show_multiple_elements(3,10,'vabbi-img-','opacity'); " onmouseout = "hideElement('vabbi-info-1'); hide_multiple_elements(3,10,'vabbi-img-','opacity');">
         <h1> Branded Assaults</h1>
-        <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-vabbi-3-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-vabbi-3-reset">
+        <input type = "button" onclick = "start_stop(this, vabbi.events);" value = "Start" id = "sidetimer-vabbi-3-start">
+        <input type = "button" onclick = "reset(this, vabbi.events);" value = "&#8635;" id = "sidetimer-vabbi-3-reset">
         <p1 id = "sidetimer-vabbi-3">7:00</p1>
         <p2 id = "numerical-sidetimer-vabbi-3">420</p2>
       </div>
 
       <div class = "event-sidebox" id = "vabbi-4-sidebox">
         <h1> Show </h1>
-        <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-vabbi-4-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-vabbi-4-reset">
+        <input type = "button" onclick = "start_stop(this, vabbi.events);" value = "Start" id = "sidetimer-vabbi-4-start">
+        <input type = "button" onclick = "reset(this, vabbi.events);" value = "&#8635;" id = "sidetimer-vabbi-4-reset">
         <p1 id = "sidetimer-vabbi-4">10:45</p1>
         <p2 id = "numerical-sidetimer-vabbi-4">645</p2>
       </div>
 
       <div class = "event-sidebox" id = "vabbi-5-sidebox">
         <h1> Legendary Forged </h1>
-        <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-vabbi-5-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-vabbi-5-reset">
+        <input type = "button" onclick = "start_stop(this, vabbi.events);" value = "Start" id = "sidetimer-vabbi-5-start">
+        <input type = "button" onclick = "reset(this, vabbi.events);" value = "&#8635;" id = "sidetimer-vabbi-5-reset">
         <p1 id = "sidetimer-vabbi-5">30:00</p1>
         <p2 id = "numerical-sidetimer-vabbi-5">1800</p2>
       </div>
 
       <div class = "event-sidebox" id = "vabbi-6-sidebox">
         <h1> Forged Wildhound </h1>
-        <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-vabbi-6-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-vabbi-6-reset">
+        <input type = "button" onclick = "start_stop(this, vabbi.events);" value = "Start" id = "sidetimer-vabbi-6-start">
+        <input type = "button" onclick = "reset(this, vabbi.events);" value = "&#8635;" id = "sidetimer-vabbi-6-reset">
         <p1 id = "sidetimer-vabbi-6">15:00</p1>
         <p2 id = "numerical-sidetimer-vabbi-6">900</p2>
       </div>
 
       <div class = "event-sidebox" id = "vabbi-9-sidebox">
         <h1> Forged Warmonger </h1>
-        <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-vabbi-9-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-vabbi-9-reset">
+        <input type = "button" onclick = "start_stop(this, vabbi.events);" value = "Start" id = "sidetimer-vabbi-9-start">
+        <input type = "button" onclick = "reset(this, vabbi.events);" value = "&#8635;" id = "sidetimer-vabbi-9-reset">
         <p1 id = "sidetimer-vabbi-9">15:00</p1>
         <p2 id = "numerical-sidetimer-vabbi-9">900</p2>
       </div>
 
       <div class = "event-sidebox" id = "vabbi-10-sidebox">
         <h1> Forged Lurker </h1>
-        <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-vabbi-10-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-vabbi-10-reset">
+        <input type = "button" onclick = "start_stop(this, vabbi.events);" value = "Start" id = "sidetimer-vabbi-10-start">
+        <input type = "button" onclick = "reset(this, vabbi.events);" value = "&#8635;" id = "sidetimer-vabbi-10-reset">
         <p1 id = "sidetimer-vabbi-10">15:00</p1>
         <p2 id = "numerical-sidetimer-vabbi-10">900</p2>
       </div>
 
       <div class = "event-sidebox" id = "vabbi-11-sidebox">
         <h1> Forged Marauder </h1>
-        <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-vabbi-11-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-vabbi-11-reset">
+        <input type = "button" onclick = "start_stop(this, vabbi.events);" value = "Start" id = "sidetimer-vabbi-11-start">
+        <input type = "button" onclick = "reset(this, vabbi.events);" value = "&#8635;" id = "sidetimer-vabbi-11-reset">
         <p1 id = "sidetimer-vabbi-11">15:00</p1>
         <p2 id = "numerical-sidetimer-vabbi-11">900</p2>
       </div>
 
       <div class = "event-sidebox" id = "vabbi-12-sidebox">
         <h1> Forged Brutalizer </h1>
-        <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-vabbi-12-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-vabbi-12-reset">
+        <input type = "button" onclick = "start_stop(this, vabbi.events);" value = "Start" id = "sidetimer-vabbi-12-start">
+        <input type = "button" onclick = "reset(this, vabbi.events);" value = "&#8635;" id = "sidetimer-vabbi-12-reset">
         <p1 id = "sidetimer-vabbi-12">15:00</p1>
         <p2 id = "numerical-sidetimer-vabbi-12">900</p2>
       </div>
@@ -122,36 +121,37 @@
       <!--
       <div class = "event-sidebox" id = "vabbi-7-sidebox">
         <h1> Asho Escort </h1>
-        <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-vabbi-7-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-vabbi-7-reset">
+        <input type = "button" onclick = "start_stop(this, vabbi.events);" value = "Start" id = "sidetimer-vabbi-7-start">
+        <input type = "button" onclick = "reset(this, vabbi.events);" value = "&#8635;" id = "sidetimer-vabbi-7-reset">
         <p1 id = "sidetimer-vabbi-7">17:30</p1>
         <p2 id = "numerical-sidetimer-vabbi-7">1050</p2>
       </div> -->
 	    
 	  </div> <!-- End of left side box --> 
 
-	  <div id = "nav-right-sidetimer-box" class = "nav-right-sidetimer-box" style = "min-width: 180px;">
-      Forged Officer: <input type = "Checkbox" id = "vabbi-1-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'vabbi-1-sidebox') ">
+	  <div id = "checkboxes" class = "checkboxes">
+      Forged Officer: <input type = "Checkbox" id = "vabbi-1-checkbox" checked = "true" onclick = "checkboxTimer(this, vabbi.events);">
       <br>
-      Statues: <input type = "Checkbox" id = "vabbi-2-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'vabbi-2-sidebox') ">
+      Statues: <input type = "Checkbox" id = "vabbi-2-checkbox" checked = "true" onclick = "checkboxTimer(this, vabbi.events);">
       <br>
-      Branded Assaults: <input type = "Checkbox" id = "vabbi-3-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'vabbi-3-sidebox') ">
+      Branded Assaults: <input type = "Checkbox" id = "vabbi-3-checkbox" checked = "true" onclick = "checkboxTimer(this, vabbi.events);">
       <br>
-      Show: <input type = "Checkbox" id = "vabbi-4-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'vabbi-4-sidebox') ">
+      Show: <input type = "Checkbox" id = "vabbi-4-checkbox" checked = "true" onclick = "checkboxTimer(this, vabbi.events);">
       <br><br>
       <b> Bounties </b>
       <br><br>
-      Legendary Forged: <input type = "Checkbox" id = "vabbi-5-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'vabbi-5-sidebox') ">
+      Legendary Forged: <input type = "Checkbox" id = "vabbi-5-checkbox" checked = "true" onclick = "checkboxTimer(this, vabbi.events);">
       <br>
-      Forged Wildhound: <input type = "Checkbox" id = "vabbi-6-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'vabbi-6-sidebox') ">
+      Forged Wildhound: <input type = "Checkbox" id = "vabbi-6-checkbox" checked = "true" onclick = "checkboxTimer(this, vabbi.events);">
 	 </div>
 
 	<!-- Main box -->
 	<div class = "page-box">
 		<div class = "page-header">
-      	<h2> Disclaimer: </h2>
 			<div class = "small-description">
-				Particular Forged bounties are included as timers for this. While they are not regular events, these bounties should be completed while on the rotation of a train to fill time gaps</b>.  
+        <details>
+				  Particular Forged bounties are included as timers for this. While they are not regular events, these bounties should be completed while on the rotation of a train to fill time gaps</b>. 
+        </details> 
 			</div>
 			
 		</div>
@@ -163,88 +163,88 @@
   			HTML notation: 
   			<div class = "[map]-[event #]-box">
   			<p1 id = "timer-[map]-[event #]"> [default time] </p1> 
-  			<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-[map]-[event #]-start">
-  			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-[map]-[event #]-reset">
+  			<br><input type = "button" onclick = "start_stop(this, vabbi.events);" value = "Start" id = "timer-[map]-[event #]-start">
+  			<input type = "button" onclick = "reset(this, vabbi.events);" value = "&#8635;" id = "timer-[map]-[event #]-reset">
    			<br><p2 id = "timer-[map]-[event #]-text"></p2>	
   		-->
 
       <div class = "event-box" id = "vabbi-1-box">
         <h1> Forged Officer </h1>
         <br><p1 id = "timer-vabbi-1">6:45</p1>
-        <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-vabbi-1-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-vabbi-1-reset">
+        <br><input type = "button" onclick = "start_stop(this, vabbi.events);" value = "Start" id = "timer-vabbi-1-start">
+        <input type = "button" onclick = "reset(this, vabbi.events);" value = "&#8635;" id = "timer-vabbi-1-reset">
         <br><p2 id = "timer-vabbi-1-text"></p2>  
       </div> 
 
       <div class = "event-box" id = "vabbi-2-box">
         <h1> Statues </h1>
         <br><p1 id = "timer-vabbi-2">24:15</p1>
-        <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-vabbi-2-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-vabbi-2-reset">
+        <br><input type = "button" onclick = "start_stop(this, vabbi.events);" value = "Start" id = "timer-vabbi-2-start">
+        <input type = "button" onclick = "reset(this, vabbi.events);" value = "&#8635;" id = "timer-vabbi-2-reset">
         <br><p2 id = "timer-vabbi-2-text"></p2>  
       </div> 
 
       <div class = "event-box" id = "vabbi-3-box">
         <h1> Branded Assaults </h1>
         <br><p1 id = "timer-vabbi-3">7:00</p1>
-        <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-vabbi-3-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-vabbi-3-reset">
+        <br><input type = "button" onclick = "start_stop(this, vabbi.events);" value = "Start" id = "timer-vabbi-3-start">
+        <input type = "button" onclick = "reset(this, vabbi.events);" value = "&#8635;" id = "timer-vabbi-3-reset">
         <input type = "button" value = "i" onmouseover="showElement('vabbi-info-1'); show_multiple_elements(3,10,'vabbi-img-','opacity'); " onmouseout = "hideElement('vabbi-info-1'); hide_multiple_elements(3,10,'vabbi-img-','opacity');"> 
       </div> 
 
       <div class = "event-box" id = "vabbi-4-box">
         <h1> Show </h1>
         <br><p1 id = "timer-vabbi-4">10:45</p1>
-        <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-vabbi-4-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-vabbi-4-reset">
+        <br><input type = "button" onclick = "start_stop(this, vabbi.events);" value = "Start" id = "timer-vabbi-4-start">
+        <input type = "button" onclick = "reset(this, vabbi.events);" value = "&#8635;" id = "timer-vabbi-4-reset">
         <br><p2 id = "timer-vabbi-4-text"></p2>  
       </div> 
 
       <div class = "event-box" id = "vabbi-5-box">
         <h1> Legendary Forged </h1>
         <br><p1 id = "timer-vabbi-5">30:00</p1>
-        <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-vabbi-5-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-vabbi-5-reset">
+        <br><input type = "button" onclick = "start_stop(this, vabbi.events);" value = "Start" id = "timer-vabbi-5-start">
+        <input type = "button" onclick = "reset(this, vabbi.events);" value = "&#8635;" id = "timer-vabbi-5-reset">
         <br><p2 id = "timer-vabbi-5-text"></p2>  
       </div>
 
-      <div class = "event-box" id = "vabbi-6-box">
+      <div class = "event-box" id = "vabbi-6-box" style = "visibility: hidden;">
         <h1> Forged Wildhound </h1>
         <br><p1 id = "timer-vabbi-6">15:00</p1>
-        <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-vabbi-6-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-vabbi-6-reset">
+        <br><input type = "button" onclick = "start_stop(this, vabbi.events);" value = "Start" id = "timer-vabbi-6-start">
+        <input type = "button" onclick = "reset(this, vabbi.events);" value = "&#8635;" id = "timer-vabbi-6-reset">
         <br><p2 id = "timer-vabbi-6-text"></p2>  
       </div>
 
-      <div class = "event-box" id = "vabbi-9-box">
+      <div class = "event-box" id = "vabbi-9-box" style = "visibility: hidden;">
         <h1> Forged Warmonger </h1>
         <br><p1 id = "timer-vabbi-9">15:00</p1>
-        <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-vabbi-9-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-vabbi-9-reset">
+        <br><input type = "button" onclick = "start_stop(this, vabbi.events);" value = "Start" id = "timer-vabbi-9-start">
+        <input type = "button" onclick = "reset(this, vabbi.events);" value = "&#8635;" id = "timer-vabbi-9-reset">
         <br><p2 id = "timer-vabbi-9-text"></p2>  
       </div>
 
-      <div class = "event-box" id = "vabbi-10-box">
+      <div class = "event-box" id = "vabbi-10-box" style = "visibility: hidden;">
         <h1> Forged Lurker </h1>
         <br><p1 id = "timer-vabbi-10">15:00</p1>
-        <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-vabbi-10-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-vabbi-10-reset">
+        <br><input type = "button" onclick = "start_stop(this, vabbi.events);" value = "Start" id = "timer-vabbi-10-start">
+        <input type = "button" onclick = "reset(this, vabbi.events);" value = "&#8635;" id = "timer-vabbi-10-reset">
         <br><p2 id = "timer-vabbi-10-text"></p2>  
       </div>
 
-      <div class = "event-box" id = "vabbi-11-box">
+      <div class = "event-box" id = "vabbi-11-box" style = "visibility: hidden;">
         <h1> Forged Marauder </h1>
         <br><p1 id = "timer-vabbi-11">15:00</p1>
-        <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-vabbi-11-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-vabbi-11-reset">
+        <br><input type = "button" onclick = "start_stop(this, vabbi.events);" value = "Start" id = "timer-vabbi-11-start">
+        <input type = "button" onclick = "reset(this, vabbi.events);" value = "&#8635;" id = "timer-vabbi-11-reset">
         <br><p2 id = "timer-vabbi-11-text"></p2>  
       </div>
 
-      <div class = "event-box" id = "vabbi-12-box">
+      <div class = "event-box" id = "vabbi-12-box" style = "visibility: hidden;">
         <h1> Forged Bruatalizer </h1>
         <br><p1 id = "timer-vabbi-12">15:00</p1>
-        <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-vabbi-12-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-vabbi-12-reset">
+        <br><input type = "button" onclick = "start_stop(this, vabbi.events);" value = "Start" id = "timer-vabbi-12-start">
+        <input type = "button" onclick = "reset(this, vabbi.events);" value = "&#8635;" id = "timer-vabbi-12-reset">
         <br><p2 id = "timer-vabbi-12-text"></p2>  
       </div>
       
@@ -252,8 +252,8 @@
       <div class = "event-box" id = "vabbi-7-box">
         <h1> Asho Escort </h1>
         <br><p1 id = "timer-vabbi-7">11:15</p1>
-        <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-vabbi-7-start">
-        <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-vabbi-7-reset">
+        <br><input type = "button" onclick = "start_stop(this, vabbi.events);" value = "Start" id = "timer-vabbi-7-start">
+        <input type = "button" onclick = "reset(this, vabbi.events);" value = "&#8635;" id = "timer-vabbi-7-reset">
         <br><p2 id = "timer-vabbi-7-text"></p2>  
       </div> -->
 
