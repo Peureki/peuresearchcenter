@@ -24,7 +24,7 @@
 	</div>
 
 	<!-- Inner navgation box to the side -->
-	<div id = "nav-left-sidetimer-box" class = "event-list">
+	<div id = "side-timer-list" class = "side-timer-list">
 
 		<div id = "tangled-meta-sidebox" class = "meta-sidebox" >
 	       <h1 id = "side-meta-name"> </h1>
@@ -34,169 +34,169 @@
 
 	    <div id = "tangled-1-sidebox" class = "event-sidebox">
 	      <h1> Chak Lobber - Nuh</h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-tangled-1-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-tangled-1-reset">
+	      <input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "sidetimer-tangled-1-start">
+	      <input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "sidetimer-tangled-1-reset">
 	      <p1 id = "sidetimer-tangled-1">7:45</p1>
 	      <p2 id = "numerical-sidetimer-tangled-1">465</p2>
 	    </div>
 	    <div id = "tangled-2-sidebox" class = "event-sidebox">
 	      <h1> Elementals </h1> 
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-tangled-2-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-tangled-2-reset">
+	      <input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "sidetimer-tangled-2-start">
+	      <input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "sidetimer-tangled-2-reset">
 	      <p1 id = "sidetimer-tangled-2">2:00</p1>
 	      <p2 id = "numerical-sidetimer-tangled-2">120</p2>
 	    </div>
 	    <div id = "tangled-3-sidebox" class = "event-sidebox">
 	      <h1> Sporlings </h1> 
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-tangled-3-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-tangled-3-reset">
+	      <input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "sidetimer-tangled-3-start">
+	      <input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "sidetimer-tangled-3-reset">
 	      <p1 id = "sidetimer-tangled-3">8:00</p1>
 	      <p2 id = "numerical-sidetimer-tangled-3">480</p2>
 	    </div>
 	    <div id = "tangled-4-sidebox" class = "event-sidebox">
 	      <h1> Grub Pit </h1> 
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-tangled-4-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-tangled-4-reset">
+	      <input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "sidetimer-tangled-4-start">
+	      <input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "sidetimer-tangled-4-reset">
 	      <p1 id = "sidetimer-tangled-4">0:00</p1>
 	      <p2 id = "numerical-sidetimer-tangled-4">0</p2>
 	    </div>
 	   	<div id = "tangled-5-sidebox" class = "event-sidebox">
 	      <h1> Beetle </h1> 
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-tangled-5-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-tangled-5-reset">
+	      <input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "sidetimer-tangled-5-start">
+	      <input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "sidetimer-tangled-5-reset">
 	      <p1 id = "sidetimer-tangled-5">10:30</p1>
 	      <p2 id = "numerical-sidetimer-tangled-5">630</p2>
 	    </div>
 	    <div id = "tangled-6-sidebox" class = "event-sidebox">
 	      <h1> Alchemist Patli </h1> 
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-tangled-6-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-tangled-6-reset">
+	      <input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "sidetimer-tangled-6-start">
+	      <input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "sidetimer-tangled-6-reset">
 	      <p1 id = "sidetimer-tangled-6">13:00</p1>
 	      <p2 id = "numerical-sidetimer-tangled-6">780</p2>
 	    </div>
 	    <div id = "tangled-7-sidebox" class = "event-sidebox">
 	      <h1> Zintl </h1> 
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-tangled-7-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-tangled-7-reset">
+	      <input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "sidetimer-tangled-7-start">
+	      <input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "sidetimer-tangled-7-reset">
 	      <p1 id = "sidetimer-tangled-7">23:00</p1>
 	      <p2 id = "numerical-sidetimer-tangled-7">1380</p2>
 	    </div>
 	    <div id = "tangled-8-sidebox" class = "event-sidebox">
 	      <h1> Skelk </h1> 
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-tangled-8-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-tangled-8-reset">
+	      <input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "sidetimer-tangled-8-start">
+	      <input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "sidetimer-tangled-8-reset">
 	      <p1 id = "sidetimer-tangled-8">24:00</p1>
 	      <p2 id = "numerical-sidetimer-tangled-8">1440</p2>
 	    </div>
 
 	    <div id = "tangled-9-sidebox" class = "event-sidebox">
 	      <h1> Wyvern Nests</h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-tangled-9-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-tangled-9-reset">
+	      <input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "sidetimer-tangled-9-start">
+	      <input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "sidetimer-tangled-9-reset">
 	      <p1 id = "sidetimer-tangled-9">3:00</p1>
 	      <p2 id = "numerical-sidetimer-tangled-9">180</p2>
 	    </div>
 
 	    <div id = "tangled-10-sidebox" class = "event-sidebox">
 	      <h1> Matriarch Bat </h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-tangled-10-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-tangled-10-reset">
+	      <input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "sidetimer-tangled-10-start">
+	      <input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "sidetimer-tangled-10-reset">
 	      <p1 id = "sidetimer-tangled-10">7:45</p1>
 	      <p2 id = "numerical-sidetimer-tangled-10">465</p2>
 	    </div>
 
 	    <div id = "tangled-11-sidebox" class = "event-sidebox">
 	      <h1> Chak Morale </h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-tangled-11-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-tangled-11-reset">
+	      <input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "sidetimer-tangled-11-start">
+	      <input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "sidetimer-tangled-11-reset">
 	      <p1 id = "sidetimer-tangled-11">12:30</p1>
 	      <p2 id = "numerical-sidetimer-tangled-11">750</p2>
 	    </div>
 
 	    <div id = "tangled-12-sidebox" class = "event-sidebox">
 	      <h1> Grubs </h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-tangled-12-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-tangled-12-reset">
+	      <input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "sidetimer-tangled-12-start">
+	      <input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "sidetimer-tangled-12-reset">
 	      <p1 id = "sidetimer-tangled-12">17:00</p1>
 	      <p2 id = "numerical-sidetimer-tangled-12">1020</p2>
 	    </div>
 
 	    <div id = "tangled-13-sidebox" class = "event-sidebox">
 	      <h1> Haywire Golems </h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-tangled-13-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-tangled-13-reset">
+	      <input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "sidetimer-tangled-13-start">
+	      <input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "sidetimer-tangled-13-reset">
 	      <p1 id = "sidetimer-tangled-13">4:30</p1>
 	      <p2 id = "numerical-sidetimer-tangled-13">270</p2>
 	    </div>
 
 	    <div id = "tangled-14-sidebox" class = "event-sidebox">
 	      <h1> Chak Lobber - Rata </h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-tangled-14-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-tangled-14-reset">
+	      <input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "sidetimer-tangled-14-start">
+	      <input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "sidetimer-tangled-14-reset">
 	      <p1 id = "sidetimer-tangled-14">8:00</p1>
 	      <p2 id = "numerical-sidetimer-tangled-14">480</p2>
 	    </div>
 
 	    <div id = "tangled-15-sidebox" class = "event-sidebox">
 	      <h1> Mushrooms </h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-tangled-15-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-tangled-15-reset">
+	      <input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "sidetimer-tangled-15-start">
+	      <input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "sidetimer-tangled-15-reset">
 	      <p1 id = "sidetimer-tangled-15">3:15</p1>
 	      <p2 id = "numerical-sidetimer-tangled-15">195</p2>
 	    </div>
 
 	    <div id = "tangled-16-sidebox" class = "event-sidebox">
 	      <h1> Chak Crown </h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-tangled-16-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-tangled-16-reset">
+	      <input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "sidetimer-tangled-16-start">
+	      <input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "sidetimer-tangled-16-reset">
 	      <p1 id = "sidetimer-tangled-16">8:00</p1>
 	      <p2 id = "numerical-sidetimer-tangled-16">480</p2>
 	    </div>
 
 	    <div id = "tangled-17-sidebox" class = "event-sidebox">
 	      <h1> Fire Wyvern </h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-tangled-17-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-tangled-17-reset">
+	      <input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "sidetimer-tangled-17-start">
+	      <input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "sidetimer-tangled-17-reset">
 	      <p1 id = "sidetimer-tangled-17">7:30</p1>
 	      <p2 id = "numerical-sidetimer-tangled-17">450</p2>
 	    </div>
 
 	    <div id = "tangled-18-sidebox" class = "event-sidebox">
 	      <h1> Wasps </h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-tangled-18-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-tangled-18-reset">
+	      <input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "sidetimer-tangled-18-start">
+	      <input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "sidetimer-tangled-18-reset">
 	      <p1 id = "sidetimer-tangled-18">15:45</p1>
 	      <p2 id = "numerical-sidetimer-tangled-18">945</p2>
 	    </div>
 
 	    <div id = "tangled-19-sidebox" class = "event-sidebox">
 	      <h1> Chak Lobber - Scar</h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-tangled-19-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-tangled-19-reset">
+	      <input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "sidetimer-tangled-19-start">
+	      <input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "sidetimer-tangled-19-reset">
 	      <p1 id = "sidetimer-tangled-19">30:30</p1>
 	      <p2 id = "numerical-sidetimer-tangled-19">1830</p2>
 	    </div>
 
 	    <div id = "tangled-20-sidebox" class = "event-sidebox">
 	      <h1> Mushroom King </h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-tangled-20-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-tangled-20-reset">
+	      <input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "sidetimer-tangled-20-start">
+	      <input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "sidetimer-tangled-20-reset">
 	      <p1 id = "sidetimer-tangled-20">18:45</p1>
 	      <p2 id = "numerical-sidetimer-tangled-20">1125</p2>
 	    </div>
 
 	    <div id = "tangled-21-sidebox" class = "event-sidebox">
 	      <h1> Treasure Mushroom </h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-tangled-21-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-tangled-21-reset">
+	      <input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "sidetimer-tangled-21-start">
+	      <input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "sidetimer-tangled-21-reset">
 	      <p1 id = "sidetimer-tangled-21">9:30</p1>
 	      <p2 id = "numerical-sidetimer-tangled-21">570</p2>
 	    </div>
 
 	    <div id = "tangled-22-sidebox" class = "event-sidebox">
 	      <h1> Chak Driver </h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-tangled-22-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-tangled-22-reset">
+	      <input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "sidetimer-tangled-22-start">
+	      <input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "sidetimer-tangled-22-reset">
 	      <p1 id = "sidetimer-tangled-22">38:00</p1>
 	      <p2 id = "numerical-sidetimer-tangled-22">2280</p2>
 	    </div>
@@ -230,57 +230,57 @@
 	    <br><br>
 	    <b>Nuhoch Outposts </b>
 	    <br><br> 
-	    Chak Lobber: <input type = "Checkbox" id = "tangled-1-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'tangled-1-sidebox');">
+	    Chak Lobber: <input type = "Checkbox" id = "tangled-1-checkbox" checked = "true" onclick = "checkboxTimer(this, tangled.events);">
 	    <br>
-	    Elementals: <input type = "Checkbox" id = "tangled-2-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'tangled-2-sidebox');">
+	    Elementals: <input type = "Checkbox" id = "tangled-2-checkbox" checked = "true" onclick = "checkboxTimer(this, tangled.events);">
 	    <br>
-	    Sporlings: <input type = "Checkbox" id = "tangled-3-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'tangled-3-sidebox');">
+	    Sporlings: <input type = "Checkbox" id = "tangled-3-checkbox" checked = "true" onclick = "checkboxTimer(this, tangled.events);">
 	    <br>
-	    Grub Pit: <input type = "Checkbox" id = "tangled-4-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'tangled-4-sidebox');">
+	    Grub Pit: <input type = "Checkbox" id = "tangled-4-checkbox" checked = "true" onclick = "checkboxTimer(this, tangled.events);">
 	    <br>
-	    Beetle: <input type = "Checkbox" id = "tangled-5-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'tangled-5-sidebox');">
+	    Beetle: <input type = "Checkbox" id = "tangled-5-checkbox" checked = "true" onclick = "checkboxTimer(this, tangled.events);">
 	    <br>
-	    Alchemist Patli: <input type = "Checkbox" id = "tangled-6-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'tangled-6-sidebox');">
+	    Alchemist Patli: <input type = "Checkbox" id = "tangled-6-checkbox" checked = "true" onclick = "checkboxTimer(this, tangled.events);">
 	    <br>
-	    Zintl: <input type = "Checkbox" id = "tangled-7-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'tangled-7-sidebox');">
+	    Zintl: <input type = "Checkbox" id = "tangled-7-checkbox" checked = "true" onclick = "checkboxTimer(this, tangled.events);">
 	    <br>
-	    Skelk: <input type = "Checkbox" id = "tangled-8-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'tangled-8-sidebox');">
+	    Skelk: <input type = "Checkbox" id = "tangled-8-checkbox" checked = "true" onclick = "checkboxTimer(this, tangled.events);">
 	    <br><br>
 	    <b>Ogre Outposts</b> 
 	    <br><br>
-	    Wyvern Nests: <input type = "Checkbox" id = "tangled-9-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'tangled-9-sidebox');">
+	    Wyvern Nests: <input type = "Checkbox" id = "tangled-9-checkbox" checked = "true" onclick = "checkboxTimer(this, tangled.events);">
 	    <br>
-	    Matriarch Bat: <input type = "Checkbox" id = "tangled-10-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'tangled-10-sidebox');">
+	    Matriarch Bat: <input type = "Checkbox" id = "tangled-10-checkbox" checked = "true" onclick = "checkboxTimer(this, tangled.events);">
 	    <br>
-	    Chak Morale: <input type = "Checkbox" id = "tangled-11-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'tangled-11-sidebox');">
+	    Chak Morale: <input type = "Checkbox" id = "tangled-11-checkbox" checked = "true" onclick = "checkboxTimer(this, tangled.events);">
 	    <br>
-	    Grubs: <input type = "Checkbox" id = "tangled-12-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'tangled-12-sidebox');">
+	    Grubs: <input type = "Checkbox" id = "tangled-12-checkbox" checked = "true" onclick = "checkboxTimer(this, tangled.events);">
 	    <br><br>
 	    <b>Rata Outposts</b> 
 	    <br><br>
-	    Haywire Golems: <input type = "Checkbox" id = "tangled-13-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'tangled-13-sidebox');">
+	    Haywire Golems: <input type = "Checkbox" id = "tangled-13-checkbox" checked = "true" onclick = "checkboxTimer(this, tangled.events);">
 	    <br>
-	    Chak Lobber: <input type = "Checkbox" id = "tangled-14-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'tangled-14-sidebox');">
+	    Chak Lobber: <input type = "Checkbox" id = "tangled-14-checkbox" checked = "true" onclick = "checkboxTimer(this, tangled.events);">
 	    <br>
-	    Mushrooms: <input type = "Checkbox" id = "tangled-15-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'tangled-15-sidebox');">
+	    Mushrooms: <input type = "Checkbox" id = "tangled-15-checkbox" checked = "true" onclick = "checkboxTimer(this, tangled.events);">
 	    <br><br>
 	    <b>SCAR Outposts</b>
 	    <br><br>
-	    Chak Crown: <input type = "Checkbox" id = "tangled-16-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'tangled-16-sidebox');">
+	    Chak Crown: <input type = "Checkbox" id = "tangled-16-checkbox" checked = "true" onclick = "checkboxTimer(this, tangled.events);">
 	    <br>
-	    Fire Wyvern: <input type = "Checkbox" id = "tangled-17-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'tangled-17-sidebox');">
+	    Fire Wyvern: <input type = "Checkbox" id = "tangled-17-checkbox" checked = "true" onclick = "checkboxTimer(this, tangled.events);">
 	    <br>
-	    Wasps: <input type = "Checkbox" id = "tangled-18-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'tangled-18-sidebox');">
+	    Wasps: <input type = "Checkbox" id = "tangled-18-checkbox" checked = "true" onclick = "checkboxTimer(this, tangled.events);">
 	    <br>
-	    Chak Lobber: <input type = "Checkbox" id = "tangled-19-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'tangled-19-sidebox');">
+	    Chak Lobber: <input type = "Checkbox" id = "tangled-19-checkbox" checked = "true" onclick = "checkboxTimer(this, tangled.events);">
 	    <br><br>
 	    <b>Standalones</b>
 	    <br><br>
-	    Mushroom King: <input type = "Checkbox" id = "tangled-20-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'tangled-20-sidebox');">
+	    Mushroom King: <input type = "Checkbox" id = "tangled-20-checkbox" checked = "true" onclick = "checkboxTimer(this, tangled.events);">
 	    <br>
-	    Treasure Mushroom: <input type = "Checkbox" id = "tangled-21-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'tangled-21-sidebox');">
+	    Treasure Mushroom: <input type = "Checkbox" id = "tangled-21-checkbox" checked = "true" onclick = "checkboxTimer(this, tangled.events);">
 	    <br>
-	    Chak Driver: <input type = "Checkbox" id = "tangled-22-checkbox" checked = "true" onclick = "checkbox_Timers(this, 'tangled-22-sidebox');">
+	    Chak Driver: <input type = "Checkbox" id = "tangled-22-checkbox" checked = "true" onclick = "checkboxTimer(this, tangled.events);">
 	    <br>
 	    
 	 </div>
@@ -290,7 +290,9 @@
 		<div class = "page-header">
       	<h2> Disclaimer: </h2>
 			<div class = "small-description">
-				<b>How the map works:</b><br>
+				<details>
+				<summary><b>How the map works:</b></summary>
+				<br>
 				When it's not the meta, there are 4 outposts with their own chain of events. When the event chain for an outpost are complete, all events afterwards in that zone will begin a countdown to spawn. 
 
 				<br><br>
@@ -303,19 +305,22 @@
 				<b> Peu's List </b>
 				<br>
 				By checking the box, it will showcase all the events that I recommend and remove the ones I try to avoid. This is to clean up the left side box and to improve my focus. 
+				</details>
 			</div>
 		</div>
 
 		<!-- Failed meta message --> 
-		<div id = "revert" class = "revert">
-			<input type = "button" id = "merp-button" value = "Revert" onclick = "revert_tangled_depths();">
-			&#x27F6; Revert back to the Outpost timers
-		</div>
+		<div class = "small-description">
+			<div id = "revert" class = "revert">
+				<input type = "button" id = "merp-button" value = "Revert" onclick = "revert_tangled_depths();">
+				&#x27F6; Revert back to the Outpost timers
+			</div>
 
-		<!-- Failed meta message --> 
-		<div id = "refresh" class = "refresh">
-			<input type = "button" id = "merp-button" value = "Refresh" onclick = "refresh();">
-			&#x27F6; Refresh page to refresh all timers to default
+			<!-- Failed meta message --> 
+			<div id = "refresh" class = "refresh">
+				<input type = "button" id = "merp-button" value = "Refresh" onclick = "refresh();">
+				&#x27F6; Refresh page to refresh all timers to default
+			</div>
 		</div>
 
 		<div id = "map-timer-wrapper-1" class = "map-timer-wrapper" style = ''>
@@ -325,69 +330,69 @@
 				HTML notation: 
 				<div class = "[map]-[event #]-box">
 				<p1 id = "timer-[map]-[event #]"> [default time] </p1> 
-				<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-[map]-[event #]-start">
-				<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-[map]-[event #]-reset">
+				<br><input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "timer-[map]-[event #]-start">
+				<input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "timer-[map]-[event #]-reset">
        			<br><p2 id = "timer-[map]-[event #]-text"></p2>	
 			-->
 
 			<div class = "event-box" id = "tangled-1-box">
 				<h1> Chak Lobber </h1>
        	 		<br><p1 id = "timer-tangled-1">7:45</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-tangled-1-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-tangled-1-reset">
+        		<br><input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "timer-tangled-1-start">
+       			<input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "timer-tangled-1-reset">
        			<input type = "button" value = "i" onmouseover = "showElement('tangled-info-1');" onmouseout = "hideElement('tangled-info-1');"> 
        		</div>
 
        		<div class = "event-box" id = "tangled-2-box">
 				<h1> Elementals </h1>
        	 		<br><p1 id = "timer-tangled-2">2:00</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-tangled-2-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-tangled-2-reset">	
+        		<br><input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "timer-tangled-2-start">
+       			<input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "timer-tangled-2-reset">	
 
        		</div>
 
        		<div class = "event-box" id = "tangled-3-box">
 				<h1> Sporlings </h1>
        	 		<br><p1 id = "timer-tangled-3">8:00</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-tangled-3-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-tangled-3-reset">
+        		<br><input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "timer-tangled-3-start">
+       			<input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "timer-tangled-3-reset">
        		</div>
 
        		<div class = "event-box" id = "tangled-4-box">
 				<h1> Grub Pit </h1>
        	 		<br><p1 id = "timer-tangled-4">0:00</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-tangled-4-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-tangled-4-reset">	
+        		<br><input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "timer-tangled-4-start">
+       			<input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "timer-tangled-4-reset">	
        		</div>
 
        		<div class = "event-box" id = "tangled-5-box">
 				<h1> Beetle </h1>
        	 		<br><p1 id = "timer-tangled-5">10:30</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-tangled-5-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-tangled-5-reset">	
+        		<br><input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "timer-tangled-5-start">
+       			<input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "timer-tangled-5-reset">	
        			<input type = "button" value = "i" onmouseover = "showElement('tangled-info-2');" onmouseout = "hideElement('tangled-info-2');"> 
        		</div>
 
        		<div class = "event-box" id = "tangled-6-box">
 				<h1> Alchemist Patli </h1>
        	 		<br><p1 id = "timer-tangled-6">13:00</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-tangled-6-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-tangled-6-reset">
+        		<br><input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "timer-tangled-6-start">
+       			<input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "timer-tangled-6-reset">
        			<input type = "button" value = "i" onmouseover = "showElement('tangled-info-3');" onmouseout = "hideElement('tangled-info-3');"> 
        		</div>
 
        		<div class = "event-box" id = "tangled-7-box">
 				<h1> Zintl </h1>
        	 		<br><p1 id = "timer-tangled-7">23:00</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-tangled-7-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-tangled-7-reset">
+        		<br><input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "timer-tangled-7-start">
+       			<input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "timer-tangled-7-reset">
        		</div>
 
        		<div class = "event-box" id = "tangled-8-box">
 				<h1> Skelk </h1>
        	 		<br><p1 id = "timer-tangled-8">24:00</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-tangled-8-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-tangled-8-reset">	
+        		<br><input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "timer-tangled-8-start">
+       			<input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "timer-tangled-8-reset">	
        			<input type = "button" value = "i" onmouseover = "showElement('tangled-info-4');" onmouseout = "hideElement('tangled-info-4');"> 
        		</div>
 
@@ -395,30 +400,30 @@
        		<div class = "event-box" id = "tangled-9-box">
 				<h1> Wyvern Nest </h1>
        	 		<br><p1 id = "timer-tangled-9">3:00</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-tangled-9-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-tangled-9-reset">	
+        		<br><input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "timer-tangled-9-start">
+       			<input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "timer-tangled-9-reset">	
        		</div>
 
        		<div class = "event-box" id = "tangled-10-box">
 				<h1> Matriarch Bat </h1>
        	 		<br><p1 id = "timer-tangled-10">7:45</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-tangled-10-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-tangled-10-reset">
+        		<br><input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "timer-tangled-10-start">
+       			<input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "timer-tangled-10-reset">
        			<input type = "button" value = "i" onmouseover = "showElement('tangled-info-5');" onmouseout = "hideElement('tangled-info-5');"> 
        		</div>
 
        		<div class = "event-box" id = "tangled-11-box">
 				<h1> Chak Morale </h1>
        	 		<br><p1 id = "timer-tangled-11">12:30</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-tangled-11-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-tangled-11-reset">	
+        		<br><input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "timer-tangled-11-start">
+       			<input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "timer-tangled-11-reset">	
        		</div>
 
        		<div class = "event-box" id = "tangled-12-box">
 				<h1> Grub </h1>
        	 		<br><p1 id = "timer-tangled-12">17:00</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-tangled-12-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-tangled-12-reset">
+        		<br><input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "timer-tangled-12-start">
+       			<input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "timer-tangled-12-reset">
        			<input type = "button" value = "i" onmouseover = "showElement('tangled-info-6');" onmouseout = "hideElement('tangled-info-6');"> 
        		</div>
 
@@ -426,75 +431,75 @@
        		<div class = "event-box" id = "tangled-13-box">
 				<h1> Haywire Golems </h1>
        	 		<br><p1 id = "timer-tangled-13">4:30</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-tangled-13-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-tangled-13-reset">
+        		<br><input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "timer-tangled-13-start">
+       			<input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "timer-tangled-13-reset">
        		</div>
 
        		<div class = "event-box" id = "tangled-14-box">
 				<h1> Chak Lobber </h1>
        	 		<br><p1 id = "timer-tangled-14">8:00</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-tangled-14-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-tangled-14-reset">	
+        		<br><input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "timer-tangled-14-start">
+       			<input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "timer-tangled-14-reset">	
        		</div>
 
        		<div class = "event-box" id = "tangled-15-box">
 				<h1> Mushrooms </h1>
        	 		<br><p1 id = "timer-tangled-15">3:15</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-tangled-15-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-tangled-15-reset">	
+        		<br><input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "timer-tangled-15-start">
+       			<input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "timer-tangled-15-reset">	
        		</div>
 
        		<!-- SCAR outposts -->
        		<div class = "event-box" id = "tangled-16-box">
 				<h1> Chak Crown </h1>
        	 		<br><p1 id = "timer-tangled-16">8:00</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-tangled-16-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-tangled-16-reset">
+        		<br><input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "timer-tangled-16-start">
+       			<input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "timer-tangled-16-reset">
        			<input type = "button" value = "i" onmouseover = "showElement('tangled-info-7');" onmouseout = "hideElement('tangled-info-7');">	
        		</div>
 
        		<div class = "event-box" id = "tangled-17-box">
 				<h1> Fire Wyvern </h1>
        	 		<br><p1 id = "timer-tangled-17">7:30</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-tangled-17-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-tangled-17-reset">
+        		<br><input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "timer-tangled-17-start">
+       			<input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "timer-tangled-17-reset">
        		</div>
 
        		<div class = "event-box" id = "tangled-18-box">
 				<h1> Wasps </h1>
        	 		<br><p1 id = "timer-tangled-18">15:45</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-tangled-18-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-tangled-18-reset">
+        		<br><input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "timer-tangled-18-start">
+       			<input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "timer-tangled-18-reset">
        		</div>
 
        		<div class = "event-box" id = "tangled-19-box">
 				<h1> Chak Lobber </h1>
        	 		<br><p1 id = "timer-tangled-19">30:30</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-tangled-19-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-tangled-19-reset">
+        		<br><input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "timer-tangled-19-start">
+       			<input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "timer-tangled-19-reset">
        			<input type = "button" value = "i" onmouseover = "showElement('tangled-info-8');" onmouseout = "hideElement('tangled-info-8');">
        		</div>
 
        		<div class = "event-box" id = "tangled-20-box">
 				<h1> Mushroom King </h1>
        	 		<br><p1 id = "timer-tangled-20">18:45</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-tangled-20-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-tangled-20-reset">
+        		<br><input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "timer-tangled-20-start">
+       			<input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "timer-tangled-20-reset">
        			<input type = "button" value = "i" onmouseover = "showElement('tangled-info-9');" onmouseout = "hideElement('tangled-info-9');">
        		</div>
 
        		<div class = "event-box" id = "tangled-21-box">
 				<h1> Treasure <br>Mushroom </h1>
        	 		<br><p1 id = "timer-tangled-21">9:30</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-tangled-21-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-tangled-21-reset">	
+        		<br><input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "timer-tangled-21-start">
+       			<input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "timer-tangled-21-reset">	
        		</div>
 
        		<div class = "event-box" id = "tangled-22-box">
 				<h1> Chak Driver </h1>
        	 		<br><p1 id = "timer-tangled-22">38:00</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-tangled-22-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-tangled-22-reset">	
+        		<br><input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "timer-tangled-22-start">
+       			<input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "timer-tangled-22-reset">	
        			<input type = "button" value = "i" onmouseover = "showElement('tangled-info-10');" onmouseout = "hideElement('tangled-info-10');">
        		</div>
 
@@ -570,8 +575,8 @@
 				HTML notation: 
 				<div class = "[map]-[event #]-box">
 				<p1 id = "timer-[map]-[event #]"> [default time] </p1> 
-				<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-[map]-[event #]-start">
-				<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-[map]-[event #]-reset">
+				<br><input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "timer-[map]-[event #]-start">
+				<input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "timer-[map]-[event #]-reset">
        			<br><p2 id = "timer-[map]-[event #]-text"></p2>	
 			-->
 

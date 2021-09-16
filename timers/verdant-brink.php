@@ -25,7 +25,7 @@
     <div class = "section-header-space"></div>
 	</div>
 
- <div id = "nav-left-sidetimer-box" class = "nav-left-sidetimer-box">
+ <div id = "side-timer-list" class = "side-timer-list">
 
   <div id = "verdant-daynight-meta-sidebox" class = "meta-sidebox" >
     <h1 id = "daynight-meta-name"> </h1>
@@ -41,24 +41,24 @@
 
      <div id = "verdant-1-sidebox" class = "event-sidebox">
        <h1> Pact Tower (S) </h1>
-       <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-verdant-1-start">
-       <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-verdant-1-reset">
+       <input type = "button" onclick = "start_stop(this, verdant.events);" value = "Start" id = "sidetimer-verdant-1-start">
+       <input type = "button" onclick = "reset(this, verdant.events);" value = "&#8635;" id = "sidetimer-verdant-1-reset">
        <p1 id = "sidetimer-verdant-1">4:30</p1>
        <p2 id = "numerical-sidetimer-verdant-1">270</p2>
      </div>
 
      <div id = "verdant-2-sidebox" class = "event-sidebox">
        <h1> Pact Tower (W) </h1>
-       <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-verdant-2-start">
-       <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-verdant-2-reset">
+       <input type = "button" onclick = "start_stop(this, verdant.events);" value = "Start" id = "sidetimer-verdant-2-start">
+       <input type = "button" onclick = "reset(this, verdant.events);" value = "&#8635;" id = "sidetimer-verdant-2-reset">
        <p1 id = "sidetimer-verdant-2">4:30</p1>
        <p2 id = "numerical-sidetimer-verdant-2">270</p2>
      </div>
 
      <div id = "verdant-3-sidebox" class = "event-sidebox">
        <h1> Pact Tower (E) </h1>
-       <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-verdant-3-start">
-       <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-verdant-3-reset">
+       <input type = "button" onclick = "start_stop(this, verdant.events);" value = "Start" id = "sidetimer-verdant-3-start">
+       <input type = "button" onclick = "reset(this, verdant.events);" value = "&#8635;" id = "sidetimer-verdant-3-reset">
        <p1 id = "sidetimer-verdant-3">4:30</p1>
        <p2 id = "numerical-sidetimer-verdant-3">270</p2>
      </div>
@@ -68,15 +68,17 @@
 	<!-- Main box -->
 	<div class = "page-box">
 		<div class = "page-header">
-      <h2> Disclaimer: </h2>
-		<div class = "small-description">
-			<p1> At the start of day time, all outposts will begin their event chain. Completing an outpost will spawn addition events depending on the outpost. The more outpost that are completed, the more Airship Cargo will spawn on the ground.
-
-			<br><br>
-
-			To achieve a successful T4 meta, make sure to continously have a map effort to defend as many camps as possible while escorting scouts, gathering supplies, killing veteran Mordrem, and defeating all bosses. The more bosses are defeated, the more Airship Cargo will spawn in the air. Use the timer to help gauge when each phase will occur.  </p1>
-		</div>
-		
+  		<div class = "small-description">
+        <details>
+            <summary><b>How to: </b></summary>
+            At the start of day time, all outposts will begin their event chain. Completing an outpost will spawn addition events depending on the outpost. The more outpost that are completed, the more Airship Cargo will spawn on the ground.
+            <br><br>
+            To achieve a successful T4 meta, make sure to continously have a map effort to defend as many camps as possible while escorting scouts, gathering supplies, killing veteran Mordrem, and defeating all bosses. The more bosses are defeated, the more Airship Cargo will spawn in the air. Use the timer to help gauge when each phase will occur. 
+            <br><bR>
+            <b>Priority of events (Day):</b>
+            <br>First event of each outpost in the order of Ordnance, Pact Encampment, Jaka Itzel, Nobles, Pale Reavers &#8594; your choice in which outpost (most go for Pale Reavers for the Stonehead bauble farm)
+        </details>
+  		</div>
 		</div>
 
     <!-- Inner navgation box to the side -->
@@ -87,8 +89,8 @@
 				HTML notation: 
 				<div class = "[map]-[event #]-box">
 				<p1 id = "timer-[map]-[event #]"> [default time] </p1> 
-				<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-[map]-[event #]-start">
-				<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-[map]-[event #]-reset">
+				<br><input type = "button" onclick = "start_stop(this, verdant.events);" value = "Start" id = "timer-[map]-[event #]-start">
+				<input type = "button" onclick = "reset(this.verdant.events);" value = "&#8635;" id = "timer-[map]-[event #]-reset">
        			<br><p2 id = "timer-[map]-[event #]-text"></p2>	
 			-->
 			<!-- Ordnance Corps day -->
@@ -154,24 +156,24 @@
              <div class = "event-box" id = "verdant-1-box">
               <h1> Pact Tower (S) </h1>
               <br><p1 id = "timer-verdant-1">4:30</p1>
-              <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-verdant-1-start">
-              <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-verdant-1-reset">
+              <br><input type = "button" onclick = "start_stop(this, verdant.events);" value = "Start" id = "timer-verdant-1-start">
+              <input type = "button" onclick = "reset(this.verdant.events);" value = "&#8635;" id = "timer-verdant-1-reset">
               <input type = "button" value = "i" onmouseover = "showElement('verdant-info-2');" onmouseout = "hideElement('verdant-info-2');"> 
              </div>
 
              <div class = "event-box" id = "verdant-2-box">
               <h1> Pact Tower (W) </h1>
               <br><p1 id = "timer-verdant-2">4:30</p1>
-              <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-verdant-2-start">
-              <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-verdant-2-reset"> 
+              <br><input type = "button" onclick = "start_stop(this, verdant.events);" value = "Start" id = "timer-verdant-2-start">
+              <input type = "button" onclick = "reset(this.verdant.events);" value = "&#8635;" id = "timer-verdant-2-reset"> 
               <input type = "button" value = "i" onmouseover = "showElement('verdant-info-2');" onmouseout = "hideElement('verdant-info-2');">
              </div>
 
              <div class = "event-box" id = "verdant-3-box">
               <h1> Pact Tower (E) </h1>
               <br><p1 id = "timer-verdant-3">4:30</p1>
-              <br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-verdant-3-start">
-              <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-verdant-3-reset">
+              <br><input type = "button" onclick = "start_stop(this, verdant.events);" value = "Start" id = "timer-verdant-3-start">
+              <input type = "button" onclick = "reset(this.verdant.events);" value = "&#8635;" id = "timer-verdant-3-reset">
               <input type = "button" value = "i" onmouseover = "showElement('verdant-info-2');" onmouseout = "hideElement('verdant-info-2');"> 
              </div>
 			

@@ -1,22 +1,16 @@
-// NAV-LEFT SORT IDs
-// Add this to only Timer pages
-var sort_timers = document.getElementById('nav-left-sidetimer-box'),
-    sort_interval;
-
-// Always sorts the left event list
-// Add this to only Timer pages
-sort_interval = setInterval(function(){
-    left_sidetimer_sort(sort_timers);
-}, 1000);
+// Sort the timers on a 1 sec interval. Sorts the list based on most upcoming
+sortTimers();
 
 var verdant = {
     events: [
         {   // empty
             status: 0,
+            key: 0,
         },
         {   // [1] Pact Tower S
             function: function() { verdant_Countdown(1); },
             status: 0,
+            key: 0,
             cooldown: 60 * 4 + 30, 
             startButton: document.getElementById('timer-verdant-1-start'),
             startSideButton: document.getElementById('sidetimer-verdant-1-start'),
@@ -25,12 +19,14 @@ var verdant = {
             timeLabel: document.getElementById('timer-verdant-1'), 
             timeSideLabel: document.getElementById('sidetimer-verdant-1'),
             sidebox: document.getElementById('verdant-1-sidebox'),
-            num: document.getElementById('numerical-sidetimer-verdant-1')
+            num: document.getElementById('numerical-sidetimer-verdant-1'),
+            doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num)}
         }, 
 
         {   // [2] Pact Tower W
             function: function() { verdant_Countdown(2); },
             status: 0,
+            key: 0,
             cooldown: 60 * 4 + 30, 
             startButton: document.getElementById('timer-verdant-2-start'),
             startSideButton: document.getElementById('sidetimer-verdant-2-start'),
@@ -39,11 +35,13 @@ var verdant = {
             timeLabel: document.getElementById('timer-verdant-2'), 
             timeSideLabel: document.getElementById('sidetimer-verdant-2'),
             sidebox: document.getElementById('verdant-2-sidebox'),
-            num: document.getElementById('numerical-sidetimer-verdant-2')
+            num: document.getElementById('numerical-sidetimer-verdant-2'),
+            doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num)}
         }, 
         {   // [3] Pact Tower E
             function: function() { verdant_Countdown(3); },
             status: 0,
+            key: 0,
             cooldown: 60 * 4 + 30, 
             startButton: document.getElementById('timer-verdant-3-start'),
             startSideButton: document.getElementById('sidetimer-verdant-3-start'),
@@ -52,7 +50,8 @@ var verdant = {
             timeLabel: document.getElementById('timer-verdant-3'), 
             timeSideLabel: document.getElementById('sidetimer-verdant-3'),
             sidebox: document.getElementById('verdant-3-sidebox'),
-            num: document.getElementById('numerical-sidetimer-verdant-3')
+            num: document.getElementById('numerical-sidetimer-verdant-3'),
+            doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num)}
         },
         {   // [4] Meta - Day/Night
             timeSideLabel: document.getElementById('sidetimer-verdant-daynight-meta'),
@@ -62,156 +61,15 @@ var verdant = {
         {   // [5] Meta - Night Bosses
             timeSideLabel: document.getElementById('sidetimer-verdant-bosses-meta'),
             sidebox: document.getElementById('verdant-bosses-meta-sidebox'),
-            num: document.getElementById('numerical-sidetimer-verdant-bosses-meta')
+            num: document.getElementById('numerical-sidetimer-verdant-bosses-meta'),
         },
     ]
 };
-
-
-// Label of the meta on the side
-var meta_name = document.getElementById('meta-name');
-
-var verdant; // Empty array for countdown
-var find_num = /\d+/; // Expression to use with .match(find_num) to find a number in a string
-
-
-/* Start/Stop button functionality */
-function start_stop(obj){
-
-    var timer = obj.id;
-    var timer_num = obj.id.match(find_num)[0];
-    // Status 0 = Stop 
-    // Status 1 = Starting, Ongoing
-    // When the Start button is clicked, change status to Starting and start timer
-    // Else -> Keep status at Stop
-    
-    switch (timer_num) {
-        case timer_num:
-        start_Event(timer_num);
-        break;
-    }
-
-    function start_Event(timer_num){
-        if (timer == verdant.events[timer_num].startButton.id || timer == verdant.events[timer_num].startSideButton.id){
-            if (verdant.events[timer_num].status == 0){
-                verdant.events[timer_num].status = 1; 
-                verdant.events[timer_num].function(); 
-
-                verdant.events[timer_num].startButton.value = "Reset";
-                verdant.events[timer_num].startSideButton.value = "Reset";
-            } else {
-                verdant.events[timer_num].status = 0;
-                verdant.events[timer_num].startButton.value = "Start";
-                verdant.events[timer_num].startSideButton.value = "Start";
-
-                verdant.events[timer_num].timeLabel.style.color = "black";
-                verdant.events[timer_num].timeSideLabel.style.color = 'black';
-                verdant.events[timer_num].timeLabel.style.background = 'rgba(255,246,214)';
-                verdant.events[timer_num].sidebox.style.background = 'transparent';
-                verdant.events[timer_num].function();
-            }   
-        }
-    }
-}
-
-// Reset Button functionality
-function reset (obj){
-    var timer = obj.id;
-    var timer_num = obj.id.match(find_num)[0];
-    /*
-        When Reset button is clicked, 
-        -> Change status to Stop 
-        -> Reset timer to original time + 1
-        -> Reset time label to oringal time
-        -> Reset opacity of the text to hidden
-    */
-    // Remember to change these reset times to the RESPAWN rate and not the INITIAL SPAWN rate
-
-    switch (timer_num) {
-        case timer_num:
-        start_Event(timer_num);
-        break;
-    }
-
-    function start_Event(timer_num){
-        if (timer == verdant.events[timer_num].resetButton.id || timer == verdant.events[timer_num].resetSideButton.id){
-            if (verdant.events[timer_num].status == 1){
-                verdant.events[timer_num].status = 0;
-                verdant.events[timer_num].cooldown = verdant.events[timer_num].cooldown;
-                verdant.events[timer_num].timeLabel.style.color = "black";
-
-                verdant.events[timer_num].timeSideLabel.innerHTML = verdant.events[timer_num].timeLabel.innerHTML;
-                verdant.events[timer_num].timeSideLabel.style.color = verdant.events[timer_num].timeLabel.style.color;
-
-                verdant.events[timer_num].timeLabel.style.background = 'rgba(255,246,214)';
-                verdant.events[timer_num].sidebox.style.background = "transparent";
-
-                verdant.events[timer_num].function(); 
-                verdant.events[timer_num].status = 1;
-                verdant.events[timer_num].function(); 
-            }
-        }
-    }
-}
-
-function verdant_Countdown(arrayNum){
-    var date_now = Date.now(); 
-
-    function run_countdown() {
-        var countdown = getTime(date_now, verdant.events[arrayNum].cooldown, verdant.events[arrayNum].timeLabel, verdant.events[arrayNum].timeSideLabel, verdant.events[arrayNum].num);
-        if (countdown.time <= 0){ 
-            time_text_and_labels_less_than_0(verdant.events[arrayNum].timeLabel, verdant.events[arrayNum].sidebox, verdant.events[arrayNum].timeSideLabel);
-        } else if (countdown.time <= 60){
-            time_text_and_labels_less_than_60(verdant.events[arrayNum].timeLabel, verdant.events[arrayNum].sidebox);
-        }
-    }
-    run_countdown(); 
-    if (verdant.events[arrayNum].status == 1){
-        verdant[arrayNum] = setInterval(run_countdown, 1000);
-    } else {
-        clearInterval(verdant[arrayNum]);   
-    } 
-}
-
-// Day time checkboxes. Shows elements when clicked
-function verdant_Day_Checkbox(obj){
-	var checkbox = obj; 
-	if (checkbox.value == "x"){
-		checkbox.value = "  ";
-	} else if (checkbox.value == "  "){
-		checkbox.value = "x";
-		obj.parentNode.style.opacity = 0;
-		if (obj.parentNode.id == 'verdant-box-1'){
-			show_multiple_elements(1,4,'verdant-vet-','opacity');
-			show_multiple_elements(1,4,'verdant-vet-info-','opacity');
-		} 
-		if (obj.parentNode.id == 'verdant-box-2'){
-			show_multiple_elements(5,10,'verdant-vet-','opacity');
-			show_multiple_elements(5,10,'verdant-vet-info-','opacity');
-		} 
-		if (obj.parentNode.id == 'verdant-box-3'){
-			show_multiple_elements(11,13,'verdant-vet-','opacity');
-			show_multiple_elements(11,13,'verdant-vet-info-','opacity');
-		} 
-		if (obj.parentNode.id == 'verdant-box-4'){
-			show_multiple_elements(14,15,'verdant-vet-','opacity');
-			show_multiple_elements(14,14,'verdant-vet-info-','opacity');
-		} 
-		if (obj.parentNode.id == 'verdant-box-5'){
-			show_multiple_elements(16,18,'verdant-vet-','opacity');
-			show_multiple_elements(15,17,'verdant-vet-info-','opacity');
-		}
-		// Delay the display to let the opacity fade out
-		setTimeout(function(){ 
-			obj.parentNode.style.display = "none";
-			checkbox.value = "  ";
-		 }, 2000);
-
-	}
-}
+// Dynamically creates unique keys
+add_event_keys(verdant.events); 
 
 // Verdant Brink Global Timer
-var current_progress = document.getElementById('verdant-current-status'),
+let current_progress = document.getElementById('verdant-current-status'),
 	next_progress = "",
 	boss_progress = "",
 	progress_bar = document.getElementById('verdant-progress-bar'),
@@ -227,9 +85,9 @@ var current_progress = document.getElementById('verdant-current-status'),
     side_daynight_name = document.getElementById('daynight-meta-name'),
     side_bosses_name = document.getElementById('bosses-meta-name');
 
-	var verdant_day_timer = setInterval(function(){
-	var d = new Date();
-	var time = d.getUTCHours()*3600 + d.getUTCMinutes()*60 + d.getUTCSeconds(),
+	let verdant_day_timer = setInterval(function(){
+	let d = new Date();
+	let time = d.getUTCHours()*3600 + d.getUTCMinutes()*60 + d.getUTCSeconds(),
 		result,
 		boss_result,
 		hours,

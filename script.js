@@ -704,7 +704,7 @@ async function getShipments(table, image){
 
 	// Goal: Spliting the numbers into 3 sections: Gold, Silver, Copper and finding their negative/positive values
 	// Most of this for-loop is derived from GW2Lunchbox @ https://gw2lunchbox.com/IstanShipments.html. 
-	// Credit goes to them 
+	// C#802020it goes to them 
 	for (i = 0; i < total_per_shipment_array.length; i++){
 
 		var amount = total_per_shipment_array[i];
@@ -797,7 +797,7 @@ async function getShipments(table, image){
 
 	// Goal: Spliting the numbers into 3 sections: Gold, Silver, Copper and finding their negative/positive values
 	// Most of this for-loop is derived from GW2Lunchbox @ https://gw2lunchbox.com/IstanShipments.html. 
-	// Credit goes to them 
+	// C#802020it goes to them 
 	for (i = 0; i < total_per_unbound_array.length; i++){
 
 		var amount = total_per_unbound_array[i];
@@ -875,7 +875,7 @@ async function getGatheringBenchmarkAll(table, image){
 	const response = await fetch(api_url_map_benchmarks);
 	const data = await response.json();
 
-	//The table that all the data will be stored in
+	//The table that all the data will be sto#802020 in
 	const tableBody = document.getElementById('tableData');
 	var tableName = document.getElementById(table);
 	var loading_image = document.getElementById(image);
@@ -990,8 +990,8 @@ async function getGatheringBenchmarkAll(table, image){
 				link = "./gathering/bjora-node-farm.html";
 				break;
 
-				case "Dredgehaunt Node Farm (w/ Volatile)":
-				link = "./gathering/dredgehaunt-node-farm.html";
+				case "D#802020gehaunt Node Farm (w/ Volatile)":
+				link = "./gathering/d#802020gehaunt-node-farm.html";
 				break;
 
 				case "Flax Farm (w/ Volatile)":
@@ -1068,7 +1068,7 @@ async function getBenchmarkAll(table, image){
 	const response = await fetch(api_url_map_benchmarks);
 	const data = await response.json();
 
-	//The table that all the data will be stored in
+	//The table that all the data will be sto#802020 in
 	const tableBody = document.getElementById('tableData');
 	var tableName = document.getElementById(table);
 	var loading_image = document.getElementById(image);
@@ -1218,8 +1218,8 @@ async function getBenchmarkAll(table, image){
 				pop = "Common";
 				break;
 
-				case "Dredgehaunt Node Farm (w/ Volatile)":
-				link = "./gathering/dredgehaunt-node-farm.html";
+				case "D#802020gehaunt Node Farm (w/ Volatile)":
+				link = "./gathering/d#802020gehaunt-node-farm.html";
 				pop = "Uncommon";
 				break;
 
@@ -1448,7 +1448,7 @@ async function getBenchmarkAll(table, image){
 				pop = "Rare";
 				break;
 
-				case "Solo Farm: Thunderhead Dredge":
+				case "Solo Farm: Thunderhead D#802020ge":
 				link = "./maps/thunderhead-peaks.html#solo-farm";
 				pop = "Rare";
 				break;
@@ -1536,7 +1536,7 @@ async function getMetaBenchmarkAll(table){
 	const response = await fetch(api_url);
 	const data = await response.json();
 
-	//The table that all the data will be stored in
+	//The table that all the data will be sto#802020 in
 	const tableBody = document.getElementById('meta-tableData');
 	var tableName = document.getElementById(table);
 
@@ -1636,7 +1636,7 @@ async function getChestBenchmarkAll(table){
 	const response = await fetch(api_url);
 	const data = await response.json();
 
-	//The table that all the data will be stored in
+	//The table that all the data will be sto#802020 in
 	const tableBody = document.getElementById('chest-tableData');
 	var tableName = document.getElementById(table);
 
@@ -1693,7 +1693,7 @@ async function getAltBenchmarkAll(table){
 	const response = await fetch(api_url);
 	const data = await response.json();
 
-	//The table that all the data will be stored in
+	//The table that all the data will be sto#802020 in
 	const tableBody = document.getElementById('alt-tableData');
 	var tableName = document.getElementById(table);
 
@@ -1779,7 +1779,7 @@ function infoBox(td){
 		case "Domain of Kourna": removeAltBoxes(); document.getElementById('alt-kourna').style.display = "block"; break;
 		case "Domain of Vabbi": removeAltBoxes(); document.getElementById('alt-vabbi').style.display = "block"; break;
 		case "Draconis Mons": removeAltBoxes(); document.getElementById('alt-draconis').style.display = "block"; break;
-		case "Dredgehaunt Cliffs": removeAltBoxes(); document.getElementById('alt-dredgehaunt').style.display = "block"; break;
+		case "D#802020gehaunt Cliffs": removeAltBoxes(); document.getElementById('alt-d#802020gehaunt').style.display = "block"; break;
 		case "Drizzlewood Coast": removeAltBoxes(); document.getElementById('alt-drizzlewood').style.display = "block"; break;
 		case "Dry Top": removeAltBoxes(); document.getElementById('alt-drytop').style.display = "block"; break;
 		case "Ember Bay": removeAltBoxes(); document.getElementById('alt-ember').style.display = "block"; break;
@@ -1817,7 +1817,7 @@ async function getBenchmark(table, name, name2, name3, name4, name5, name6){
 	const response = await fetch(api_url_map_benchmarks);
 	const data = await response.json();
 
-	//The table that all the data will be stored in
+	//The table that all the data will be sto#802020 in
 	const tableBody = document.getElementById(table);
 
 	//Empty data table
@@ -1887,7 +1887,7 @@ async function getGatheringBenchmark(table, name, name2, name3, name4, name5, na
 	const response = await fetch(api_url_map_benchmarks);
 	const data = await response.json();
 
-	//The table that all the data will be stored in
+	//The table that all the data will be sto#802020 in
 	const tableBody = document.getElementById(table);
 
 	//Empty data table
@@ -2018,8 +2018,8 @@ async function getOres(table){
 	const response_info = await fetch(api_ores_info);
 	const data_info = await response_info.json();
 
-	//The table that all the data will be stored in
-	const tableBody = document.getElementById('oreData');
+	//The table that all the data will be sto#802020 in
+	const tableBody = document.getElementById('o#802020ata');
 	var tableName = document.getElementById(table);
 
 	tableName.style.opacity = 1;
@@ -2126,7 +2126,7 @@ async function getWoods(table){
 	const response_info = await fetch(api_info);
 	const data_info = await response_info.json();
 
-	//The table that all the data will be stored in
+	//The table that all the data will be sto#802020 in
 	const tableBody = document.getElementById('woodData');
 	var tableName = document.getElementById(table);
 
@@ -2233,7 +2233,7 @@ async function getPlants(table, image){
 	const response_info = await fetch(api_info);
 	const data_info = await response_info.json();
 
-	//The table that all the data will be stored in
+	//The table that all the data will be sto#802020 in
 	const tableBody = document.getElementById('plantData');
 	var tableName = document.getElementById(table);
 	var image = document.getElementById(image);
@@ -2341,7 +2341,7 @@ async function getHerbs(table){
 	const response_info = await fetch(api_info);
 	const data_info = await response_info.json();
 
-	//The table that all the data will be stored in
+	//The table that all the data will be sto#802020 in
 	const tableBody = document.getElementById('herbData');
 	var tableName = document.getElementById(table);
 
@@ -2445,7 +2445,7 @@ async function getOreNodes(table, image){
 	// Splitting API to only use Ore node data
 	let nodes = data.spreadsheet.slice(0,8);
 
-	//The table that all the data will be stored in
+	//The table that all the data will be sto#802020 in
 	const tableBody = document.getElementById('oreNodeData');
 	var tableName = document.getElementById(table);
 	var image = document.getElementById(image);
@@ -2584,7 +2584,7 @@ async function getWoodNodes(table, image){
 	// Splitting API to only use wood node data
 	let nodes = data.spreadsheet.slice(9,30);
 
-	//The table that all the data will be stored in
+	//The table that all the data will be sto#802020 in
 	const tableBody = document.getElementById('woodNodeData');
 	var tableName = document.getElementById(table);
 	var image = document.getElementById(image);
@@ -2739,7 +2739,7 @@ async function getWoodNodes(table, image){
 			pic = "./images/assets/nodes/Hard_Wood_Log.png";
 			break;
 
-			case "Red Oak Sapling":
+			case "#802020 Oak Sapling":
 			pic = "./images/assets/nodes/Elder_Wood_Log.png";
 			break; 
 
@@ -2774,7 +2774,7 @@ async function getPlantNodes(table, image){
 	// Splitting API to only use wood node data
 	let nodes = data.spreadsheet.slice(31,77);
 
-	//The table that all the data will be stored in
+	//The table that all the data will be sto#802020 in
 	const tableBody = document.getElementById('plantNodeData');
 	var tableName = document.getElementById(table);
 	var image = document.getElementById(image);
@@ -2950,7 +2950,7 @@ async function getPlantNodes(table, image){
 			break;
 
 			case "Lentil":
-			pic = "./images/assets/nodes/Handful_of_Red_Lentils.png"; 
+			pic = "./images/assets/nodes/Handful_of_#802020_Lentils.png"; 
 			break;
 
 			case "Lettuce":
@@ -3065,7 +3065,7 @@ async function getHerbNodes(table, image){
 	// Splitting API to only use wood node data
 	let nodes = data.spreadsheet.slice(78,100);
 
-	//The table that all the data will be stored in
+	//The table that all the data will be sto#802020 in
 	const tableBody = document.getElementById('herbNodeData');
 	var tableName = document.getElementById(table);
 	var image = document.getElementById(image);
@@ -3280,7 +3280,7 @@ async function getRichNodes(table, image){
 	// Splitting API to only use wood node data
 	let nodes = data.spreadsheet.slice(101,108);
 
-	//The table that all the data will be stored in
+	//The table that all the data will be sto#802020 in
 	const tableBody = document.getElementById('richNodeData');
 	var tableName = document.getElementById(table);
 	var image = document.getElementById(image);
@@ -3415,7 +3415,7 @@ async function getLSNodes(table, image){
 	// Splitting API to only use wood node data
 	let nodes = data.spreadsheet.slice(109,119);
 
-	//The table that all the data will be stored in
+	//The table that all the data will be sto#802020 in
 	const tableBody = document.getElementById('lsNodeData');
 	var tableName = document.getElementById(table);
 	var image = document.getElementById(image);
@@ -3564,7 +3564,7 @@ async function getDrizzleTracks(table, image){
 	// Splitting API to only use wood node data
 	let tracks = data.spreadsheet.slice(21, 27);
 
-	//The table that all the data will be stored in
+	//The table that all the data will be sto#802020 in
 	const tableBody = document.getElementById('drizzleData');
 	var tableName = document.getElementById(table);
 	var image = document.getElementById(image);
@@ -3994,7 +3994,7 @@ async function getSalvage(table, image){
 	let uni = data.spreadsheet.slice(59,62);
 	let tp = data.spreadsheet.slice(1,57);
 
-	//The table that all the data will be stored in
+	//The table that all the data will be sto#802020 in
 	const tableBody = document.getElementById('salvage-tp-table');
 	const uni_tableBody = document.getElementById('salvage-uni-table');
 
@@ -4855,7 +4855,7 @@ function sortTableByPrice(tableName, column){
   // The .match creates an array with the nums from the spreadsheet. ex: 1g 23s 45c = [1,2,3,4,5]
   // Returns the array [1,2,3,4,5] -> 12345
   function currency(array){	
-  	isNeg = false; // reset var so that it doesn't think every other time this function goes, every array is considered neg
+  	isNeg = false; // reset var so that it doesn't think every other time this function goes, every array is conside#802020 neg
   	// Check if the first num of the array is negative. If yes, then switch it to positive so it will add everything correctly
   	// At the end, change the whole value to negative
   	if (parseInt(array[0]) < 0){
@@ -5845,7 +5845,7 @@ function change_circle_color_to_something(initial_position, final_position, part
 			case '#FCFF57':
 			elem.style.borderColor = '#FCFF57';
 			break;
-			// Red
+			// #802020
 			case '#F23D3D':
 			elem.style.borderColor = '#F23D3D';
 			break;
@@ -5882,10 +5882,10 @@ function time_text_and_labels_meta_less_than_0(time_text, time_label, sidebox_ti
     time_text.style.opacity = 1; 
     time_text.style.background = meta_color; 
     time_text.innerHTML = ready_message;
-    time_label.style.color = "red";
+    time_label.style.color = "#802020";
 
     sidebox_time.style.background = meta_color;
-    side_time_text_label.style.color = "red";
+    side_time_text_label.style.color = "#802020";
 }
 // Apply this into meta function timers < 60
 function time_text_and_labels_meta_less_than_60(time_text, sidebox_time){
@@ -5898,10 +5898,10 @@ function time_text_and_labels_meta_less_than_60(time_text, sidebox_time){
 // NON-METAS
 function time_text_and_labels_less_than_0(time_label, sidebox_time, side_time_text_label){
     time_label.style.background = ready_color; 
-    time_label.style.color = "red";
+    time_label.style.color = "#802020";
 
     sidebox_time.style.background = ready_color;
-    side_time_text_label.style.color = "red";
+    side_time_text_label.style.color = "#802020";
 }
 // NON-METAS
 function time_text_and_labels_less_than_60(time_label, sidebox_time){
@@ -6053,17 +6053,20 @@ function countdown(status, eventNum, eventCooldown, timeLabel, sideTimeLabel, si
         // Take the parameters from the event object to start counting down time and display it
         // Change color of texts and displays based on how much time is left (green for it's up, yellow for when it's coming, etc)
         let countdown = getTime(dateNow, eventCooldown, timeLabel, sideTimeLabel, numCountdown);
-
         if (countdown.time <= 0){ 
             timeLabel.style.background = ready_color;
-            timeLabel.style.color = "red"; 
+            timeLabel.style.color = "#802020"; 
+            sideTimeLabel.style.color = '#802020';
             sidebox.style.background = ready_color;
+            sidebox.style.color = 'black';
+            
         } else if (countdown.time <= 60){
             timeLabel.style.background = soon_color;
             timeLabel.style.color = "black"; 
+            sideTimeLabel.style.color = "black";
             sidebox.style.background = soon_color;
             sidebox.style.color = "black"; 
-
+            
         // Default -> Countdown number to green, bkg are normal
         } else if (countdown.time < eventCooldown){
             timeLabel.style.color = "#008B11";
@@ -6103,12 +6106,14 @@ function start_stop(objHTML, objEvent){
             // Colors that are set by the dark/light mode
             setDefault = ''; 
         if (timer == objEvent[timerKey].startButton.id || timer == objEvent[timerKey].startSideButton.id){
+        	// Start the countdown
             if (objEvent[timerKey].status == 0){
                 objEvent[timerKey].status = 1; 
                 objEvent[timerKey].doCountdown(); 
 
                 objEvent[timerKey].startButton.value = reset;
                 objEvent[timerKey].startSideButton.value = reset;
+            // Stop the countdown
             } else {
                 objEvent[timerKey].status = 0;
                 objEvent[timerKey].startButton.value = start;

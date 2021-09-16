@@ -19,8 +19,8 @@ let dragonfall = {
             timeLabel: document.getElementById('timer-dragonfall-1'), 
             timeSideLabel: document.getElementById('sidetimer-dragonfall-1'),
             sidebox: document.getElementById('dragonfall-1-sidebox'),
-            countdownSec: document.getElementById('numerical-sidetimer-dragonfall-1'),
-            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            num: document.getElementById('numerical-sidetimer-dragonfall-1'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [2] Cull S
             status: 0,
@@ -33,8 +33,8 @@ let dragonfall = {
             timeLabel: document.getElementById('timer-dragonfall-2'), 
             timeSideLabel: document.getElementById('sidetimer-dragonfall-2'),
             sidebox: document.getElementById('dragonfall-2-sidebox'),
-            countdownSec: document.getElementById('numerical-sidetimer-dragonfall-2'),
-            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            num: document.getElementById('numerical-sidetimer-dragonfall-2'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [3] Cull E
             status: 0,
@@ -47,8 +47,8 @@ let dragonfall = {
             timeLabel: document.getElementById('timer-dragonfall-3'), 
             timeSideLabel: document.getElementById('sidetimer-dragonfall-3'),
             sidebox: document.getElementById('dragonfall-3-sidebox'),
-            countdownSec: document.getElementById('numerical-sidetimer-dragonfall-3'),
-            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            num: document.getElementById('numerical-sidetimer-dragonfall-3'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
 
         {   // [4] Champ Abyssal
@@ -62,8 +62,8 @@ let dragonfall = {
             timeLabel: document.getElementById('timer-dragonfall-4'), 
             timeSideLabel: document.getElementById('sidetimer-dragonfall-4'),
             sidebox: document.getElementById('dragonfall-4-sidebox'),
-            countdownSec: document.getElementById('numerical-sidetimer-dragonfall-4'),
-            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            num: document.getElementById('numerical-sidetimer-dragonfall-4'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
 
         {   // [5] Brandstorm
@@ -77,8 +77,8 @@ let dragonfall = {
             timeLabel: document.getElementById('timer-dragonfall-5'), 
             timeSideLabel: document.getElementById('sidetimer-dragonfall-5'),
             sidebox: document.getElementById('dragonfall-5-sidebox'),
-            countdownSec: document.getElementById('numerical-sidetimer-dragonfall-5'),
-            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            num: document.getElementById('numerical-sidetimer-dragonfall-5'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [6] Mender
             status: 0,
@@ -91,8 +91,8 @@ let dragonfall = {
             timeLabel: document.getElementById('timer-dragonfall-6'), 
             timeSideLabel: document.getElementById('sidetimer-dragonfall-6'),
             sidebox: document.getElementById('dragonfall-6-sidebox'),
-            countdownSec: document.getElementById('numerical-sidetimer-dragonfall-6'),
-            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            num: document.getElementById('numerical-sidetimer-dragonfall-6'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [7] Bridge N
             status: 0,
@@ -105,8 +105,8 @@ let dragonfall = {
             timeLabel: document.getElementById('timer-dragonfall-7'), 
             timeSideLabel: document.getElementById('sidetimer-dragonfall-7'),
             sidebox: document.getElementById('dragonfall-7-sidebox'),
-            countdownSec: document.getElementById('numerical-sidetimer-dragonfall-7'),
-            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            num: document.getElementById('numerical-sidetimer-dragonfall-7'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [8] Bridge W 
             status: 0,
@@ -119,8 +119,8 @@ let dragonfall = {
             timeLabel: document.getElementById('timer-dragonfall-8'), 
             timeSideLabel: document.getElementById('sidetimer-dragonfall-8'),
             sidebox: document.getElementById('dragonfall-8-sidebox'),
-            countdownSec: document.getElementById('numerical-sidetimer-dragonfall-8'),
-            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            num: document.getElementById('numerical-sidetimer-dragonfall-8'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         // OKLAHOMA
         {   // [9] Cull W
@@ -134,8 +134,8 @@ let dragonfall = {
             timeLabel: document.getElementById('timer-dragonfall-9'), 
             timeSideLabel: document.getElementById('sidetimer-dragonfall-9'),
             sidebox: document.getElementById('dragonfall-9-sidebox'),
-            countdownSec: document.getElementById('numerical-sidetimer-dragonfall-9'),
-            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            num: document.getElementById('numerical-sidetimer-dragonfall-9'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [10] Cull S 
             status: 0,
@@ -148,8 +148,8 @@ let dragonfall = {
             timeLabel: document.getElementById('timer-dragonfall-10'), 
             timeSideLabel: document.getElementById('sidetimer-dragonfall-10'),
             sidebox: document.getElementById('dragonfall-10-sidebox'),
-            countdownSec: document.getElementById('numerical-sidetimer-dragonfall-10'),
-            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            num: document.getElementById('numerical-sidetimer-dragonfall-10'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [11] Cull E 
             status: 0,
@@ -162,8 +162,8 @@ let dragonfall = {
             timeLabel: document.getElementById('timer-dragonfall-11'), 
             timeSideLabel: document.getElementById('sidetimer-dragonfall-11'),
             sidebox: document.getElementById('dragonfall-11-sidebox'),
-            countdownSec: document.getElementById('numerical-sidetimer-dragonfall-11'),
-            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            num: document.getElementById('numerical-sidetimer-dragonfall-11'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [12] Champ Arbiter 
             status: 0,
@@ -176,8 +176,8 @@ let dragonfall = {
             timeLabel: document.getElementById('timer-dragonfall-12'), 
             timeSideLabel: document.getElementById('sidetimer-dragonfall-12'),
             sidebox: document.getElementById('dragonfall-12-sidebox'),
-            countdownSec: document.getElementById('numerical-sidetimer-dragonfall-12'),
-            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            num: document.getElementById('numerical-sidetimer-dragonfall-12'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [13] Brandstorm 
             status: 0,
@@ -190,8 +190,8 @@ let dragonfall = {
             timeLabel: document.getElementById('timer-dragonfall-13'), 
             timeSideLabel: document.getElementById('sidetimer-dragonfall-13'),
             sidebox: document.getElementById('dragonfall-13-sidebox'),
-            countdownSec: document.getElementById('numerical-sidetimer-dragonfall-13'),
-            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            num: document.getElementById('numerical-sidetimer-dragonfall-13'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [14] Mender 
             status: 0,
@@ -204,8 +204,8 @@ let dragonfall = {
             timeLabel: document.getElementById('timer-dragonfall-14'), 
             timeSideLabel: document.getElementById('sidetimer-dragonfall-14'),
             sidebox: document.getElementById('dragonfall-14-sidebox'),
-            countdownSec: document.getElementById('numerical-sidetimer-dragonfall-14'),
-            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            num: document.getElementById('numerical-sidetimer-dragonfall-14'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [15] Bridge S
             status: 0,
@@ -218,8 +218,8 @@ let dragonfall = {
             timeLabel: document.getElementById('timer-dragonfall-15'), 
             timeSideLabel: document.getElementById('sidetimer-dragonfall-15'),
             sidebox: document.getElementById('dragonfall-15-sidebox'),
-            countdownSec: document.getElementById('numerical-sidetimer-dragonfall-15'),
-            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            num: document.getElementById('numerical-sidetimer-dragonfall-15'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         // MELANDRU
         {   // [16] Cull N
@@ -233,8 +233,8 @@ let dragonfall = {
             timeLabel: document.getElementById('timer-dragonfall-16'), 
             timeSideLabel: document.getElementById('sidetimer-dragonfall-16'),
             sidebox: document.getElementById('dragonfall-16-sidebox'),
-            countdownSec: document.getElementById('numerical-sidetimer-dragonfall-16'),
-            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            num: document.getElementById('numerical-sidetimer-dragonfall-16'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [17] Cull W
             status: 0,
@@ -247,8 +247,8 @@ let dragonfall = {
             timeLabel: document.getElementById('timer-dragonfall-17'), 
             timeSideLabel: document.getElementById('sidetimer-dragonfall-17'),
             sidebox: document.getElementById('dragonfall-17-sidebox'),
-            countdownSec: document.getElementById('numerical-sidetimer-dragonfall-17'),
-            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            num: document.getElementById('numerical-sidetimer-dragonfall-17'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [18] Cull S 
             status: 0,
@@ -261,8 +261,8 @@ let dragonfall = {
             timeLabel: document.getElementById('timer-dragonfall-18'), 
             timeSideLabel: document.getElementById('sidetimer-dragonfall-18'),
             sidebox: document.getElementById('dragonfall-18-sidebox'),
-            countdownSec: document.getElementById('numerical-sidetimer-dragonfall-18'),
-            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            num: document.getElementById('numerical-sidetimer-dragonfall-18'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [19] Champ Elemental
             status: 0,
@@ -275,8 +275,8 @@ let dragonfall = {
             timeLabel: document.getElementById('timer-dragonfall-19'), 
             timeSideLabel: document.getElementById('sidetimer-dragonfall-19'),
             sidebox: document.getElementById('dragonfall-19-sidebox'),
-            countdownSec: document.getElementById('numerical-sidetimer-dragonfall-19'),
-            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            num: document.getElementById('numerical-sidetimer-dragonfall-19'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [20] Brandstorm
             status: 0,
@@ -289,8 +289,8 @@ let dragonfall = {
             timeLabel: document.getElementById('timer-dragonfall-20'), 
             timeSideLabel: document.getElementById('sidetimer-dragonfall-20'),
             sidebox: document.getElementById('dragonfall-20-sidebox'),
-            countdownSec: document.getElementById('numerical-sidetimer-dragonfall-20'),
-            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            num: document.getElementById('numerical-sidetimer-dragonfall-20'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [21] Mender
             status: 0,
@@ -303,8 +303,8 @@ let dragonfall = {
             timeLabel: document.getElementById('timer-dragonfall-21'), 
             timeSideLabel: document.getElementById('sidetimer-dragonfall-21'),
             sidebox: document.getElementById('dragonfall-21-sidebox'),
-            countdownSec: document.getElementById('numerical-sidetimer-dragonfall-21'),
-            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            num: document.getElementById('numerical-sidetimer-dragonfall-21'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
         {   // [22] Bridge E
             status: 0,
@@ -317,8 +317,8 @@ let dragonfall = {
             timeLabel: document.getElementById('timer-dragonfall-22'), 
             timeSideLabel: document.getElementById('sidetimer-dragonfall-22'),
             sidebox: document.getElementById('dragonfall-22-sidebox'),
-            countdownSec: document.getElementById('numerical-sidetimer-dragonfall-22'),
-            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+            num: document.getElementById('numerical-sidetimer-dragonfall-22'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num);},
         },
     ]
 };

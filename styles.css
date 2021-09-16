@@ -1769,9 +1769,9 @@ b{
 }
 /* Start, reset buttons */
 .event-sidebox input[type="button"]{
-	color: black;
+	color: var(--clr-text);
 	font-size: 17px;
-	border: 2px solid black;
+	border: 2px solid var(--clr-border);
 	background-color: var(--clr-button);
 	cursor: pointer;
 }
@@ -4612,7 +4612,6 @@ table.nodes td.nodes-cooldown{
 .verdant-box-5, /* Pale Reaver day */
 .bloodstone-meta-box, /* Maw */
 .bloodstone-spirit-box, /* Spirits */
-.bloodstone-1-box, /* Hablion */ 
 .ember-1-box,
 .ember-2-box,
 .ember-3-box,
@@ -5338,7 +5337,6 @@ table.nodes td.nodes-cooldown{
 #tangled-18-box p1,
 #tangled-19-box p1,
 #tangled-20-box p1,
-.bloodstone-1-box p1, /* Hablion */
 .ember-1-box p1,
 .ember-2-box p1,
 .ember-3-box p1,
@@ -5473,7 +5471,6 @@ table.nodes td.nodes-cooldown{
 #tangled-18-box p2,
 #tangled-19-box p2,
 #tangled-20-box p2,
-.bloodstone-1-box p2, /* Hablion */
 .ember-1-box p2,
 .ember-2-box p2,
 .ember-3-box p2,
@@ -7590,6 +7587,10 @@ table.nodes td.nodes-cooldown{
 	top: 50%;
 	left: 50%;
 }
+#bloodstone-2-box{ /* Bloodstone Maw */
+	top: 34%;
+	left: 64%;
+}
 .bloodstone-img-1{ /* Spirit night spirits */
 	width: 80%;
 	top: 15%;
@@ -7668,56 +7669,48 @@ table.nodes td.nodes-cooldown{
 }
 
 #ember-1-box{ /* Sloth Chain */
-	top: 570px;
-	left: 200px;
+	top: 67%;
+	left: 16%;
 }
- 
 #ember-2-box{ /* Destroyer Fissure NW */
-	top: 90px;
-	left: 30px;
+	top: 6%;
+	left: 4%;
 }
-
 #ember-3-box{ /* Destroyer Fissure NE */
-	top: 260px;
-	left: 790px;
+	top: 25%;
+	left: 73%;
 }
-
 #ember-4-box{ /* Coal 1 SW */
-	top: 700px;
-	left: 300px;
+	top: 77%;
+	left: 25%;
 }
-
 #ember-5-box{ /* Coal 2 SE */
-	top: 520px;
-	left: 800px;
+	top: 57%;
+	left: 66%;
 }
-
 #ember-6-box{ /* Coal 3 NE */
-	top: 340px;
-	left: 670px;
+	top: 37%;
+	left: 60%;
 }
 #ember-7-box{ /* Jade */
-	top: 25%;
-	left: 10%;
+	top: 20%;
+	left: 5%;
 }
 #ember-8-box{ /* Drake */
-	top: 55%;
+	top: 54%;
 	left: 12%;
 }
-
-#ember-9-box{
-	top: 680px;
-	left: 720px;
+#ember-9-box{ /* Dom */
+	top: 74%;
+	left: 64%;
 }
-
-#ember-12-box{
-	top: 430px;
-	left: 950px;
+#ember-12-box{ /* Karka */
+	top: 45%;
+	left: 82%;
 }
-
-#ember-15-box{
-	top: 150px;
-	left: 650px;
+#ember-15-box{ /* Wurm */
+	top: 15%;
+	left: 59%;
 }
 #bitterfrost-1-box{ /* Beacons of Koda */
 	top: 70%;

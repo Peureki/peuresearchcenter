@@ -139,10 +139,23 @@
 
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
+					<span style = "font-weight: bold;">Sept 15, 2021</span>
+				<br>
+					- Fixed dark mode and some back-end stuff for timer pages: VB, TD, Bloodstone Fen, Ember Bay, Bitterfrost
+					<br> - Fixed a bug for all timers that when the timers reach 0 in dark mode, some texts don't change color to black while the background changes to green. Made it hard to see
+				<br><br>
+					<span style = "font-weight: bold;">Sept 14, 2021</span>
+				<br>
+					- Revamped <a href = "./timers/dragonfall.php"><u> Dragonfalls's timer page</u></a>. 
+					<br> - Fixed a bug that prevented any checkboxes to remove any event timers on the side
+					<br> - Made Dragonfall's timer map to a single image instead of seperating by 3
+					<br> - Added more checkbox options
+					<br> - Fixed dark mode on it
+				<br><br>
 					<span style = "font-weight: bold;">Sept 10, 2021</span>
 				<br>
 					- Fixed the display of info boxes when hovering over an event in dark mode in <a href = "./timers/auric-basin.php"><u> Auric Basin's timer page</u></a>. 
-					
+				<br><br>
 					<span style = "font-weight: bold;">Sept 10, 2021</span>
 				<br>
 					- Added <a href = "./timers/jahai-bluffs.php"><u> Jahai Bluffs timer page!</u></a> Most repeatable events are implemented and bounties. There's still a few I cannot get solo such as the "Joko?" event. 

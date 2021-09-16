@@ -29,12 +29,12 @@
 	</div>
 
 	<!-- Inner navgation box to the side -->
-	<div id = "nav-left-sidetimer-box" class = "nav-left-sidetimer-box">
+	<div id = "side-timer-list" class = "side-timer-list">
 
-	    <div id = "bitterfrost-1-sidebox" class = "bitterfrost-1-sidebox" >
+	    <div id = "bitterfrost-1-sidebox" class = "event-sidebox" >
 	      <h1> Beacons of Koda </h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-bitterfrost-1-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-bitterfrost-1-reset">
+	      <input type = "button" onclick = "start_stop(this, bitterfrost.events);" value = "Start" id = "sidetimer-bitterfrost-1-start">
+	      <input type = "button" onclick = "reset(this, bitterfrost.events);" value = "&#8635;" id = "sidetimer-bitterfrost-1-reset">
 	      <p1 id = "sidetimer-bitterfrost-1">52:00</p1>
 	      <p2 id = "numerical-sidetimer-bitterfrost-1"></p2>
 	    </div>
@@ -46,74 +46,71 @@
 
 		<div id = "bitterfrost-2-sidebox" class = "event-sidebox">
 	      <h1> Vet Wolf </h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-bitterfrost-2-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-bitterfrost-2-reset">
+	      <input type = "button" onclick = "start_stop(this, bitterfrost.events);" value = "Start" id = "sidetimer-bitterfrost-2-start">
+	      <input type = "button" onclick = "reset(this, bitterfrost.events);" value = "&#8635;" id = "sidetimer-bitterfrost-2-reset">
 	      <p1 id = "sidetimer-bitterfrost-2">9:45</p1>
 	      <p2 id = "numerical-sidetimer-bitterfrost-2">585</p2>
 	    </div>
 
 	    <div id = "bitterfrost-4-sidebox" class = "event-sidebox">
 	      <h1> Svanir Tyrant </h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-bitterfrost-4-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-bitterfrost-4-reset">
+	      <input type = "button" onclick = "start_stop(this, bitterfrost.events);" value = "Start" id = "sidetimer-bitterfrost-4-start">
+	      <input type = "button" onclick = "reset(this, bitterfrost.events);" value = "&#8635;" id = "sidetimer-bitterfrost-4-reset">
 	      <p1 id = "sidetimer-bitterfrost-4">9:45</p1>
 	      <p2 id = "numerical-sidetimer-bitterfrost-4">585</p2>
 	    </div>
 
 	    <div id = "bitterfrost-6-sidebox" class = "event-sidebox">
 	      <h1> Griffon Chicks </h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-bitterfrost-6-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-bitterfrost-6-reset">
+	      <input type = "button" onclick = "start_stop(this, bitterfrost.events);" value = "Start" id = "sidetimer-bitterfrost-6-start">
+	      <input type = "button" onclick = "reset(this, bitterfrost.events);" value = "&#8635;" id = "sidetimer-bitterfrost-6-reset">
 	      <p1 id = "sidetimer-bitterfrost-6">8:45</p1>
 	      <p2 id = "numerical-sidetimer-bitterfrost-6">525</p2>
 	    </div>
 
 	    <div id = "bitterfrost-8-sidebox" class = "event-sidebox">
 	      <h1> Chokocooka </h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-bitterfrost-8-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-bitterfrost-8-reset">
+	      <input type = "button" onclick = "start_stop(this, bitterfrost.events);" value = "Start" id = "sidetimer-bitterfrost-8-start">
+	      <input type = "button" onclick = "reset(this, bitterfrost.events);" value = "&#8635;" id = "sidetimer-bitterfrost-8-reset">
 	      <p1 id = "sidetimer-bitterfrost-8">9:30</p1>
 	      <p2 id = "numerical-sidetimer-bitterfrost-8">570</p2>
 	    </div>
 
 	    <div id = "bitterfrost-10-sidebox" class = "event-sidebox">
 	      <h1> Quaggan Bath </h1>
-	      <input type = "button" onclick = "start_stop(this);" value = "Start" id = "sidetimer-bitterfrost-10-start">
-	      <input type = "button" onclick = "reset(this);" value = "&#8635;" id = "sidetimer-bitterfrost-10-reset">
+	      <input type = "button" onclick = "start_stop(this, bitterfrost.events);" value = "Start" id = "sidetimer-bitterfrost-10-start">
+	      <input type = "button" onclick = "reset(this, bitterfrost.events);" value = "&#8635;" id = "sidetimer-bitterfrost-10-reset">
 	      <p1 id = "sidetimer-bitterfrost-10">11:00</p1>
 	      <p2 id = "numerical-sidetimer-bitterfrost-10">660</p2>
 	    </div>  
 	    
 	  </div> <!-- End of left side box --> 
 
-	  <div id = "nav-right-sidetimer-box" class = "nav-right-sidetimer-box">
-	  	All: <input type = "Checkbox" id = "bitterfrost-all-checkbox" checked = "true" onclick = "bitterfrost_All_Checkbox(this);">
+	  <div id = "checkboxes" class = "checkboxes">
+	  	All: <input type = "Checkbox" id = "bitterfrost-all-checkbox" checked = "true" onclick = "checkboxTimer(this, bitterfrost.events, 'all');">
 	  	<br>
-	  	Beacon of Kodan: <input type = "Checkbox" id = "bitterfrost-1-checkbox" checked = "true" onclick = "bitterfrost_Meta_Checkbox(this);">
+	  	Beacon of Kodan: <input type = "Checkbox" id = "bitterfrost-1-checkbox" checked = "true" onclick = "checkboxTimer(this, bitterfrost.events);">
 	  	<br>
-	  	Svanir Tyrant: <input type = "Checkbox" id = "bitterfrost-4-checkbox" checked = "true" onclick = "bitterfrost_4_Checkbox(this);">
+	  	Svanir Tyrant: <input type = "Checkbox" id = "bitterfrost-4-checkbox" checked = "true" onclick = "checkboxTimer(this, bitterfrost.events);">
 	  	<br>
-	  	Griffon Chicks: <input type = "Checkbox" id = "bitterfrost-6-checkbox" checked = "true" onclick = "bitterfrost_6_Checkbox(this);">
+	  	Griffon Chicks: <input type = "Checkbox" id = "bitterfrost-6-checkbox" checked = "true" onclick = "checkboxTimer(this, bitterfrost.events);">
 	  	<br>
-	  	Chokocooka: <input type = "Checkbox" id = "bitterfrost-8-checkbox" checked = "true" onclick = "bitterfrost_8_Checkbox(this);">
+	  	Chokocooka: <input type = "Checkbox" id = "bitterfrost-8-checkbox" checked = "true" onclick = "checkboxTimer(this, bitterfrost.events);">
 	  	<br>
-	  	Quaggan Bath: <input type = "Checkbox" id = "bitterfrost-10-checkbox" checked = "true" onclick = "bitterfrost_10_Checkbox(this);">
+	  	Quaggan Bath: <input type = "Checkbox" id = "bitterfrost-10-checkbox" checked = "true" onclick = "checkboxTimer(this, bitterfrost.events);">
 	  	<br>
 	    
 	 </div>
 
 	<!-- Main box -->
 	<div class = "page-box">
-		<div class = "page-header">
-      	<h2> Disclaimer: </h2>
-			<div class = "small-description">
-				<p1> <b> How this works: </b>
-					<br> The meta has about a 45 minute cooldown, but the extra few minutes are dependent on how many Braizers are lit. The more Braizers, the faster the charge up time for the meta to start when you see a progress bar on the right. 
-					<br><br>
-					Chokocooka and Quaggan Bath both have events that spawn when it fails. The timer does take that in consideration and will notify you when the event would be up if you did the failed event instead. 
-				</p1>
-			</div>
-			
+		<div class = "small-description">
+			<details>
+				<summary><b> How this works: </b></summary>
+				<br> The meta has about a 45 minute cooldown, but the extra few minutes are dependent on how many Braizers are lit. The more Braizers, the faster the charge up time for the meta to start when you see a progress bar on the right. 
+				<br><br>
+				Chokocooka and Quaggan Bath both have events that spawn when it fails. The timer does take that in consideration and will notify you when the event would be up if you did the failed event instead. 
+			</details>
 		</div>
 		<div class = "map-timer-wrapper">
 		<div class = "map-timer-box">
@@ -122,53 +119,53 @@
 				HTML notation: 
 				<div class = "[map]-[event #]-box">
 				<p1 id = "timer-[map]-[event #]"> [default time] </p1> 
-				<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-[map]-[event #]-start">
-				<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-[map]-[event #]-reset">
+				<br><input type = "button" onclick = "start_stop(this, bitterfrost.events);" value = "Start" id = "timer-[map]-[event #]-start">
+				<input type = "button" onclick = "reset(this, bitterfrost.events);" value = "&#8635;" id = "timer-[map]-[event #]-reset">
        			<br><p2 id = "timer-[map]-[event #]-text"></p2>	
 			-->
 			
 			<div class = "event-box" id = "bitterfrost-1-box">
 				<h1> Beacons of Koda </h1>
        	 		<br><p1 id = "timer-bitterfrost-1">52:00</p1>
-       	 		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-bitterfrost-1-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-bitterfrost-1-reset">
+       	 		<br><input type = "button" onclick = "start_stop(this, bitterfrost.events);" value = "Start" id = "timer-bitterfrost-1-start">
+       			<input type = "button" onclick = "reset(this, bitterfrost.events);" value = "&#8635;" id = "timer-bitterfrost-1-reset">
        	 		<input type = "button" value = "i" onmouseover="showElement('bitterfrost-1-info-box-1'); " onmouseout = "hideElement('bitterfrost-1-info-box-1'); ">	
        		</div>
 
        		<div class = "event-box" id = "bitterfrost-2-box">
 				<h1> Vet Wolf </h1>
        	 		<br><p1 id = "timer-bitterfrost-2">9:45</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-bitterfrost-2-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-bitterfrost-2-reset">	
+        		<br><input type = "button" onclick = "start_stop(this, bitterfrost.events);" value = "Start" id = "timer-bitterfrost-2-start">
+       			<input type = "button" onclick = "reset(this, bitterfrost.events);" value = "&#8635;" id = "timer-bitterfrost-2-reset">	
        		</div>
 
 			<div class = "event-box" id = "bitterfrost-4-box">
 				<h1> Svanir Tyrant </h1>
        	 		<br><p1 id = "timer-bitterfrost-4">9:45</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-bitterfrost-4-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-bitterfrost-4-reset">	
+        		<br><input type = "button" onclick = "start_stop(this, bitterfrost.events);" value = "Start" id = "timer-bitterfrost-4-start">
+       			<input type = "button" onclick = "reset(this, bitterfrost.events);" value = "&#8635;" id = "timer-bitterfrost-4-reset">	
        		</div>
 
        		<div class = "event-box" id = "bitterfrost-6-box">
 				<h1> Griffon Chicks </h1>
        	 		<br><p1 id = "timer-bitterfrost-6">8:45</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-bitterfrost-6-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-bitterfrost-6-reset">	
+        		<br><input type = "button" onclick = "start_stop(this, bitterfrost.events);" value = "Start" id = "timer-bitterfrost-6-start">
+       			<input type = "button" onclick = "reset(this, bitterfrost.events);" value = "&#8635;" id = "timer-bitterfrost-6-reset">	
        		</div>
 
        		<div class = "event-box" id = "bitterfrost-8-box">
 				<h1> Chokocooka </h1>
        	 		<br><p1 id = "timer-bitterfrost-8">9:30</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-bitterfrost-8-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-bitterfrost-8-reset">
+        		<br><input type = "button" onclick = "start_stop(this, bitterfrost.events);" value = "Start" id = "timer-bitterfrost-8-start">
+       			<input type = "button" onclick = "reset(this, bitterfrost.events);" value = "&#8635;" id = "timer-bitterfrost-8-reset">
        			<input type = "button" value = "i" onmouseover="showElement('bitterfrost-8-info-box-2'); " onmouseout = "hideElement('bitterfrost-8-info-box-2'); ">	
        		</div>
 
        		<div class = "event-box" id = "bitterfrost-10-box">
 				<h1> Quaggan Bath </h1>
        	 		<br><p1 id = "timer-bitterfrost-10">11:00</p1>
-        		<br><input type = "button" onclick = "start_stop(this);" value = "Start" id = "timer-bitterfrost-10-start">
-       			<input type = "button" onclick = "reset(this);" value = "&#8635;" id = "timer-bitterfrost-10-reset">
+        		<br><input type = "button" onclick = "start_stop(this, bitterfrost.events);" value = "Start" id = "timer-bitterfrost-10-start">
+       			<input type = "button" onclick = "reset(this, bitterfrost.events);" value = "&#8635;" id = "timer-bitterfrost-10-reset">
        			<input type = "button" value = "i" onmouseover="showElement('bitterfrost-10-info-box-2'); " onmouseout = "hideElement('bitterfrost-10-info-box-2'); ">	
        		</div>
 
@@ -230,19 +227,6 @@
 	</div> <!-- End of map-timer-wrapper -->
 
 	</div> <!-- End of page-box -->
-
-	<script> 
-		// NAV-LEFT SORT IDs
-		// Add this to only Timer pages
-		var sort_timers = document.getElementById('nav-left-sidetimer-box'),
-		    sort_interval;
-
-		// Always sorts the left event list
-		// Add this to only Timer pages
-		sort_interval = setInterval(function(){
-		    left_sidetimer_sort(sort_timers);
-		}, 1000);
-	</script>
 
 	<!-- 
 		========================================================================

@@ -1,13 +1,5 @@
-// NAV-LEFT SORT IDs
-// Add this to only Timer pages
-var sort_timers = document.getElementById('nav-left-sidetimer-box'),
-    sort_interval;
-
-// Always sorts the left event list
-// Add this to only Timer pages
-sort_interval = setInterval(function(){
-    left_sidetimer_sort(sort_timers);
-}, 1000);
+// Sort the timers on a 1 sec interval. Sorts the list based on most upcoming
+sortTimers();
 
 function revert_tangled_depths(){
     revert = 1;
@@ -21,6 +13,8 @@ var tangled = {
     events: [
         // Meta 
         {   // [0] Chak Gerent
+            status: 0,
+            key: 0,
             timeSideLabel: document.getElementById('sidetimer-tangled-meta'),
             sidebox: document.getElementById('tangled-meta-sidebox'),
             num: document.getElementById('numerical-sidetimer-tangled-meta')
@@ -29,8 +23,8 @@ var tangled = {
         // For RESPAWN timers
         // Nuhoch events
         {   // [1] Chak Lobber
-            function: function() { tangled_Countdown(1); },
             status: 0,
+            key: 0,
             cooldown: 60 * 7 + 45, 
             startButton: document.getElementById('timer-tangled-1-start'),
             startSideButton: document.getElementById('sidetimer-tangled-1-start'),
@@ -39,11 +33,12 @@ var tangled = {
             timeLabel: document.getElementById('timer-tangled-1'), 
             timeSideLabel: document.getElementById('sidetimer-tangled-1'),
             sidebox: document.getElementById('tangled-1-sidebox'),
-            num: document.getElementById('numerical-sidetimer-tangled-1')
+            num: document.getElementById('numerical-sidetimer-tangled-1'),
+            doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         }, 
         {   // [2] Elementals
-            function: function() { tangled_Countdown(2); },
             status: 0,
+            key: 0,
             cooldown: 60 * 2, 
             startButton: document.getElementById('timer-tangled-2-start'),
             startSideButton: document.getElementById('sidetimer-tangled-2-start'),
@@ -52,11 +47,12 @@ var tangled = {
             timeLabel: document.getElementById('timer-tangled-2'), 
             timeSideLabel: document.getElementById('sidetimer-tangled-2'),
             sidebox: document.getElementById('tangled-2-sidebox'),
-            num: document.getElementById('numerical-sidetimer-tangled-2')
+            num: document.getElementById('numerical-sidetimer-tangled-2'),
+            doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [3] Sporlings
-            function: function() { tangled_Countdown(3); },
             status: 0,
+            key: 0,
             cooldown: 60 * 8, 
             startButton: document.getElementById('timer-tangled-3-start'),
             startSideButton: document.getElementById('sidetimer-tangled-3-start'),
@@ -65,11 +61,12 @@ var tangled = {
             timeLabel: document.getElementById('timer-tangled-3'), 
             timeSideLabel: document.getElementById('sidetimer-tangled-3'),
             sidebox: document.getElementById('tangled-3-sidebox'),
-            num: document.getElementById('numerical-sidetimer-tangled-3')
+            num: document.getElementById('numerical-sidetimer-tangled-3'),
+            doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [4] Grub Pit
-            function: function() { tangled_Countdown(4); },
             status: 0,
+            key: 0,
             cooldown: 60 * 0, 
             startButton: document.getElementById('timer-tangled-4-start'),
             startSideButton: document.getElementById('sidetimer-tangled-4-start'),
@@ -78,11 +75,12 @@ var tangled = {
             timeLabel: document.getElementById('timer-tangled-4'), 
             timeSideLabel: document.getElementById('sidetimer-tangled-4'),
             sidebox: document.getElementById('tangled-4-sidebox'),
-            num: document.getElementById('numerical-sidetimer-tangled-4')
+            num: document.getElementById('numerical-sidetimer-tangled-4'),
+            doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [5] Beetle
-            function: function() { tangled_Countdown(5); },
             status: 0,
+            key: 0,
             cooldown: 60 * 10 + 30, 
             startButton: document.getElementById('timer-tangled-5-start'),
             startSideButton: document.getElementById('sidetimer-tangled-5-start'),
@@ -91,11 +89,12 @@ var tangled = {
             timeLabel: document.getElementById('timer-tangled-5'), 
             timeSideLabel: document.getElementById('sidetimer-tangled-5'),
             sidebox: document.getElementById('tangled-5-sidebox'),
-            num: document.getElementById('numerical-sidetimer-tangled-5')
+            num: document.getElementById('numerical-sidetimer-tangled-5'),
+            doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [6] Alchemist Patli
-            function: function() { tangled_Countdown(6); },
             status: 0,
+            key: 0,
             cooldown: 60 * 13, 
             startButton: document.getElementById('timer-tangled-6-start'),
             startSideButton: document.getElementById('sidetimer-tangled-6-start'),
@@ -104,11 +103,12 @@ var tangled = {
             timeLabel: document.getElementById('timer-tangled-6'), 
             timeSideLabel: document.getElementById('sidetimer-tangled-6'),
             sidebox: document.getElementById('tangled-6-sidebox'),
-            num: document.getElementById('numerical-sidetimer-tangled-6')
+            num: document.getElementById('numerical-sidetimer-tangled-6'),
+            doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [7] Zintl
-            function: function() { tangled_Countdown(7); },
             status: 0,
+            key: 0,
             cooldown: 60 * 23, 
             startButton: document.getElementById('timer-tangled-7-start'),
             startSideButton: document.getElementById('sidetimer-tangled-7-start'),
@@ -117,11 +117,12 @@ var tangled = {
             timeLabel: document.getElementById('timer-tangled-7'), 
             timeSideLabel: document.getElementById('sidetimer-tangled-7'),
             sidebox: document.getElementById('tangled-7-sidebox'),
-            num: document.getElementById('numerical-sidetimer-tangled-7')
+            num: document.getElementById('numerical-sidetimer-tangled-7'),
+            doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [8] Skelk
-            function: function() { tangled_Countdown(8); },
             status: 0,
+            key: 0,
             cooldown: 60 * 24, 
             startButton: document.getElementById('timer-tangled-8-start'),
             startSideButton: document.getElementById('sidetimer-tangled-8-start'),
@@ -130,13 +131,14 @@ var tangled = {
             timeLabel: document.getElementById('timer-tangled-8'), 
             timeSideLabel: document.getElementById('sidetimer-tangled-8'),
             sidebox: document.getElementById('tangled-8-sidebox'),
-            num: document.getElementById('numerical-sidetimer-tangled-8')
+            num: document.getElementById('numerical-sidetimer-tangled-8'),
+            doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
 
         // Ogre Outpost
         {   // [9] Wyvern Nest
-            function: function() { tangled_Countdown(9); },
             status: 0,
+            key: 0,
             cooldown: 60 * 3, 
             startButton: document.getElementById('timer-tangled-9-start'),
             startSideButton: document.getElementById('sidetimer-tangled-9-start'),
@@ -145,11 +147,12 @@ var tangled = {
             timeLabel: document.getElementById('timer-tangled-9'), 
             timeSideLabel: document.getElementById('sidetimer-tangled-9'),
             sidebox: document.getElementById('tangled-9-sidebox'),
-            num: document.getElementById('numerical-sidetimer-tangled-9')
+            num: document.getElementById('numerical-sidetimer-tangled-9'),
+            doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [10] Matriarch Bat
-            function: function() { tangled_Countdown(10); },
             status: 0,
+            key: 0,
             cooldown: 60 * 7 + 45, 
             startButton: document.getElementById('timer-tangled-10-start'),
             startSideButton: document.getElementById('sidetimer-tangled-10-start'),
@@ -158,11 +161,12 @@ var tangled = {
             timeLabel: document.getElementById('timer-tangled-10'), 
             timeSideLabel: document.getElementById('sidetimer-tangled-10'),
             sidebox: document.getElementById('tangled-10-sidebox'),
-            num: document.getElementById('numerical-sidetimer-tangled-10')
+            num: document.getElementById('numerical-sidetimer-tangled-10'),
+            doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [11] Chak Morale
-            function: function() { tangled_Countdown(11); },
             status: 0,
+            key: 0,
             cooldown: 60 * 12 + 30, 
             startButton: document.getElementById('timer-tangled-11-start'),
             startSideButton: document.getElementById('sidetimer-tangled-11-start'),
@@ -171,11 +175,12 @@ var tangled = {
             timeLabel: document.getElementById('timer-tangled-11'), 
             timeSideLabel: document.getElementById('sidetimer-tangled-11'),
             sidebox: document.getElementById('tangled-11-sidebox'),
-            num: document.getElementById('numerical-sidetimer-tangled-11')
+            num: document.getElementById('numerical-sidetimer-tangled-11'),
+            doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [12] Grub
-            function: function() { tangled_Countdown(12); },
             status: 0,
+            key: 0,
             cooldown: 60 * 17, 
             startButton: document.getElementById('timer-tangled-12-start'),
             startSideButton: document.getElementById('sidetimer-tangled-12-start'),
@@ -184,13 +189,14 @@ var tangled = {
             timeLabel: document.getElementById('timer-tangled-12'), 
             timeSideLabel: document.getElementById('sidetimer-tangled-12'),
             sidebox: document.getElementById('tangled-12-sidebox'),
-            num: document.getElementById('numerical-sidetimer-tangled-12')
+            num: document.getElementById('numerical-sidetimer-tangled-12'),
+            doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
 
         // Rata Outpost
         {   // [13] Haywire Golem
-            function: function() { tangled_Countdown(13); },
             status: 0,
+            key: 0,
             cooldown: 60 * 4 + 30, 
             startButton: document.getElementById('timer-tangled-13-start'),
             startSideButton: document.getElementById('sidetimer-tangled-13-start'),
@@ -199,11 +205,12 @@ var tangled = {
             timeLabel: document.getElementById('timer-tangled-13'), 
             timeSideLabel: document.getElementById('sidetimer-tangled-13'),
             sidebox: document.getElementById('tangled-13-sidebox'),
-            num: document.getElementById('numerical-sidetimer-tangled-13')
+            num: document.getElementById('numerical-sidetimer-tangled-13'),
+            doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [14] Chak Lobber
-            function: function() { tangled_Countdown(14); },
             status: 0,
+            key: 0,
             cooldown: 60 * 8, 
             startButton: document.getElementById('timer-tangled-14-start'),
             startSideButton: document.getElementById('sidetimer-tangled-14-start'),
@@ -212,11 +219,12 @@ var tangled = {
             timeLabel: document.getElementById('timer-tangled-14'), 
             timeSideLabel: document.getElementById('sidetimer-tangled-14'),
             sidebox: document.getElementById('tangled-14-sidebox'),
-            num: document.getElementById('numerical-sidetimer-tangled-14')
+            num: document.getElementById('numerical-sidetimer-tangled-14'),
+            doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [15] Mushrooms
-            function: function() { tangled_Countdown(15); },
             status: 0,
+            key: 0,
             cooldown: 60 * 3 + 15, 
             startButton: document.getElementById('timer-tangled-15-start'),
             startSideButton: document.getElementById('sidetimer-tangled-15-start'),
@@ -225,13 +233,14 @@ var tangled = {
             timeLabel: document.getElementById('timer-tangled-15'), 
             timeSideLabel: document.getElementById('sidetimer-tangled-15'),
             sidebox: document.getElementById('tangled-15-sidebox'),
-            num: document.getElementById('numerical-sidetimer-tangled-15')
+            num: document.getElementById('numerical-sidetimer-tangled-15'),
+            doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
 
         // SCAR Outposts 
         {   // [16] Chak Crown
-            function: function() { tangled_Countdown(16); },
             status: 0,
+            key: 0,
             cooldown: 60 * 8, 
             startButton: document.getElementById('timer-tangled-16-start'),
             startSideButton: document.getElementById('sidetimer-tangled-16-start'),
@@ -240,11 +249,12 @@ var tangled = {
             timeLabel: document.getElementById('timer-tangled-16'), 
             timeSideLabel: document.getElementById('sidetimer-tangled-16'),
             sidebox: document.getElementById('tangled-16-sidebox'),
-            num: document.getElementById('numerical-sidetimer-tangled-16')
+            num: document.getElementById('numerical-sidetimer-tangled-16'),
+            doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [17] Fire Wyvern
-            function: function() { tangled_Countdown(17); },
             status: 0,
+            key: 0,
             cooldown: 60 * 7 + 30, 
             startButton: document.getElementById('timer-tangled-17-start'),
             startSideButton: document.getElementById('sidetimer-tangled-17-start'),
@@ -253,11 +263,12 @@ var tangled = {
             timeLabel: document.getElementById('timer-tangled-17'), 
             timeSideLabel: document.getElementById('sidetimer-tangled-17'),
             sidebox: document.getElementById('tangled-17-sidebox'),
-            num: document.getElementById('numerical-sidetimer-tangled-17')
+            num: document.getElementById('numerical-sidetimer-tangled-17'),
+            doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [18] Wasps
-            function: function() { tangled_Countdown(18); },
             status: 0,
+            key: 0,
             cooldown: 60 * 15 + 45, 
             startButton: document.getElementById('timer-tangled-18-start'),
             startSideButton: document.getElementById('sidetimer-tangled-18-start'),
@@ -266,11 +277,12 @@ var tangled = {
             timeLabel: document.getElementById('timer-tangled-18'), 
             timeSideLabel: document.getElementById('sidetimer-tangled-18'),
             sidebox: document.getElementById('tangled-18-sidebox'),
-            num: document.getElementById('numerical-sidetimer-tangled-18')
+            num: document.getElementById('numerical-sidetimer-tangled-18'),
+            doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [19] Chak Lobber
-            function: function() { tangled_Countdown(19); },
             status: 0,
+            key: 0,
             cooldown: 60 * 30 + 30, 
             startButton: document.getElementById('timer-tangled-19-start'),
             startSideButton: document.getElementById('sidetimer-tangled-19-start'),
@@ -279,13 +291,14 @@ var tangled = {
             timeLabel: document.getElementById('timer-tangled-19'), 
             timeSideLabel: document.getElementById('sidetimer-tangled-19'),
             sidebox: document.getElementById('tangled-19-sidebox'),
-            num: document.getElementById('numerical-sidetimer-tangled-19')
+            num: document.getElementById('numerical-sidetimer-tangled-19'),
+            doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
 
         // Standalones
         {   // [20] Mushroom King
-            function: function() { tangled_Countdown(20); },
             status: 0,
+            key: 0,
             cooldown: 60 * 18 + 45, 
             startButton: document.getElementById('timer-tangled-20-start'),
             startSideButton: document.getElementById('sidetimer-tangled-20-start'),
@@ -294,11 +307,12 @@ var tangled = {
             timeLabel: document.getElementById('timer-tangled-20'), 
             timeSideLabel: document.getElementById('sidetimer-tangled-20'),
             sidebox: document.getElementById('tangled-20-sidebox'),
-            num: document.getElementById('numerical-sidetimer-tangled-20')
+            num: document.getElementById('numerical-sidetimer-tangled-20'),
+            doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [21] Treasure Mushroom
-            function: function() { tangled_Countdown(21); },
             status: 0,
+            key: 0,
             cooldown: 60 * 9 + 30, 
             startButton: document.getElementById('timer-tangled-21-start'),
             startSideButton: document.getElementById('sidetimer-tangled-21-start'),
@@ -307,11 +321,12 @@ var tangled = {
             timeLabel: document.getElementById('timer-tangled-21'), 
             timeSideLabel: document.getElementById('sidetimer-tangled-21'),
             sidebox: document.getElementById('tangled-21-sidebox'),
-            num: document.getElementById('numerical-sidetimer-tangled-21')
+            num: document.getElementById('numerical-sidetimer-tangled-21'),
+            doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [22] Chak Driver
-            function: function() { tangled_Countdown(22); },
             status: 0,
+            key: 0,
             cooldown: 60 * 38, 
             startButton: document.getElementById('timer-tangled-22-start'),
             startSideButton: document.getElementById('sidetimer-tangled-22-start'),
@@ -320,205 +335,17 @@ var tangled = {
             timeLabel: document.getElementById('timer-tangled-22'), 
             timeSideLabel: document.getElementById('sidetimer-tangled-22'),
             sidebox: document.getElementById('tangled-22-sidebox'),
-            num: document.getElementById('numerical-sidetimer-tangled-22')
+            num: document.getElementById('numerical-sidetimer-tangled-22'),
+            doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
 
     ]
 };
-
-var tangled; // Empty array for countdown
-var find_num = /\d+/; // Expression to use with .match(find_num) to find a number in a string
-
-
-/* Start/Stop button functionality */
-function start_stop(obj){
-
-    var timer = obj.id;
-    var timer_num = obj.id.match(find_num)[0];
-    // Status 0 = Stop 
-    // Status 1 = Starting, Ongoing
-    // When the Start button is clicked, change status to Starting and start timer
-    // Else -> Keep status at Stop
-    
-    switch (timer_num) {
-        case timer_num:
-        start_Event(timer_num);
-        break;
-    }
-
-    function start_Event(timer_num){
-        if (timer == tangled.events[timer_num].startButton.id || timer == tangled.events[timer_num].startSideButton.id){
-            if (tangled.events[timer_num].status == 0){
-                tangled.events[timer_num].status = 1; 
-                tangled.events[timer_num].function(); 
-
-                tangled.events[timer_num].startButton.value = "Reset";
-                tangled.events[timer_num].startSideButton.value = "Reset";
-            } else {
-                tangled.events[timer_num].status = 0;
-                tangled.events[timer_num].startButton.value = "Start";
-                tangled.events[timer_num].startSideButton.value = "Start";
-
-                tangled.events[timer_num].timeLabel.style.color = "black";
-                tangled.events[timer_num].timeSideLabel.style.color = 'black';
-                tangled.events[timer_num].timeLabel.style.background = 'rgba(255,246,214)';
-                tangled.events[timer_num].sidebox.style.background = 'transparent';
-                tangled.events[timer_num].function();
-            }   
-        }
-    }
-}
-
-// Reset Button functionality
-function reset (obj){
-    var timer = obj.id;
-    var timer_num = obj.id.match(find_num)[0];
-    /*
-        When Reset button is clicked, 
-        -> Change status to Stop 
-        -> Reset timer to original time + 1
-        -> Reset time label to oringal time
-        -> Reset opacity of the text to hidden
-    */
-    // Remember to change these reset times to the RESPAWN rate and not the INITIAL SPAWN rate
-
-    switch (timer_num) {
-        case timer_num:
-        start_Event(timer_num);
-        break;
-    }
-
-    function start_Event(timer_num){
-        if (timer == tangled.events[timer_num].resetButton.id || timer == tangled.events[timer_num].resetSideButton.id){
-            if (tangled.events[timer_num].status == 1){
-                // For events with different initial spawn and respawn rates 
-                switch (tangled.events[timer_num]){
-                    // Nuhoch Outpost
-                    case tangled.events[1]: // Chak Lobber
-                    tangled.events[timer_num].cooldown = 60 * 36; 
-                    break;
-
-                    case tangled.events[2]: // Elementals
-                    tangled.events[timer_num].cooldown = 60 * 13;
-                    break;
-
-                    case tangled.events[3]: // Sporlings
-                    tangled.events[timer_num].cooldown = 60 * 30; 
-                    break;
-
-                    case tangled.events[4]: // Grub Pit
-                    tangled.events[timer_num].cooldown = 60 * 10 + 30;
-                    break;
-
-                    case tangled.events[5]: // Beetle
-                    tangled.events[timer_num].cooldown = 60 * 12 + 15;
-                    break;
-
-                    case tangled.events[6]: // Alchemist Patli - UNKNOWN
-                    tangled.events[timer_num].cooldown = 60 * 30;
-                    break;
-
-                    case tangled.events[7]: // Zintl
-                    tangled.events[timer_num].cooldown = 60 * 28 + 45;
-                    break;
-
-                    case tangled.events[8]: // Skelk - UNKNOWN
-                    tangled.events[timer_num].cooldown = 60 * 30;
-                    break;
-
-                    // Ogre Outpost
-                    case tangled.events[9]: // Wyvern Nest
-                    tangled.events[timer_num].cooldown = 60 * 18;
-                    break;
-
-                    case tangled.events[10]: // Matriarch Bat
-                    tangled.events[timer_num].cooldown = 60 * 18 + 30;
-                    break;
-
-                    case tangled.events[11]: // Chak Morale
-                    tangled.events[timer_num].cooldown = 60 * 17 + 30;
-                    break;
-
-                    case tangled.events[12]: // Grubs
-                    tangled.events[timer_num].cooldown = 60 * 18 + 45;
-                    break;
-
-                    // Rata Outpost
-                    case tangled.events[13]: // Haywire Golems
-                    tangled.events[timer_num].cooldown = 60 * 22 + 15;
-                    break;
-
-                    case tangled.events[14]: // Chak Lobber
-                    tangled.events[timer_num].cooldown = 60 * 18 + 15;
-                    break;
-
-                    case tangled.events[15]: // Mushroom
-                    tangled.events[timer_num].cooldown = 60 * 30;
-                    break;
-
-                    // SCAR Outpost 
-                    case tangled.events[16]: // Chak Crown
-                    tangled.events[timer_num].cooldown = 60 * 36 + 30;
-                    break;
-
-                    case tangled.events[17]: // Fire Wyvern
-                    tangled.events[timer_num].cooldown = 60 * 22 + 15;
-                    break;
-
-                    case tangled.events[18]: // Wasps
-                    tangled.events[timer_num].cooldown = 60 * 18 + 15;
-                    break;
-
-                    case tangled.events[19]: // Chak Lobber - UNKNOWN
-                    tangled.events[timer_num].cooldown = 60 * 30;
-                    break;
-
-                    case tangled.events[20]: // Mushroom King
-                    tangled.events[timer_num].cooldown = 60 * 18 + 45;
-                    break;
-                }
-
-                tangled.events[timer_num].status = 0;
-                tangled.events[timer_num].cooldown = tangled.events[timer_num].cooldown;
-                tangled.events[timer_num].timeLabel.style.color = "black";
-
-                tangled.events[timer_num].timeSideLabel.innerHTML = tangled.events[timer_num].timeLabel.innerHTML;
-                tangled.events[timer_num].timeSideLabel.style.color = tangled.events[timer_num].timeLabel.style.color;
-
-                tangled.events[timer_num].timeLabel.style.background = 'rgba(255,246,214)';
-                tangled.events[timer_num].sidebox.style.background = "transparent";
-
-                tangled.events[timer_num].function(); 
-                tangled.events[timer_num].status = 1;
-                tangled.events[timer_num].function(); 
-
-                
-            }
-        }
-    }
-}
-
-function tangled_Countdown(arrayNum){
-    var date_now = Date.now(); 
-
-    function run_countdown() {
-        var countdown = getTime(date_now, tangled.events[arrayNum].cooldown, tangled.events[arrayNum].timeLabel, tangled.events[arrayNum].timeSideLabel, tangled.events[arrayNum].num);
-        if (countdown.time <= 0){ 
-            time_text_and_labels_less_than_0(tangled.events[arrayNum].timeLabel, tangled.events[arrayNum].sidebox, tangled.events[arrayNum].timeSideLabel);
-        } else if (countdown.time <= 60){
-            time_text_and_labels_less_than_60(tangled.events[arrayNum].timeLabel, tangled.events[arrayNum].sidebox);
-        }
-    }
-    run_countdown(); 
-    if (tangled.events[arrayNum].status == 1){
-        tangled[arrayNum] = setInterval(run_countdown, 1000);
-    } else {
-        clearInterval(tangled[arrayNum]);   
-    } 
-}
+// Dynamically creates unique keys
+add_event_keys(tangled.events); 
 
 function tangled_Depths_Post_Checkbox(obj){
-    var checkbox = obj,
+    let checkbox = obj,
         id = obj.id;
 
     switch (id){
@@ -526,12 +353,12 @@ function tangled_Depths_Post_Checkbox(obj){
             if (checkbox.checked == true){
             // Start at 1 because the array starts at 1 isntead of 0
                 for (i = 1; i <= 8; i++){
-                    start_stop(tangled.events[i].startButton);
+                    start_stop(document.getElementById('timer-tangled-'+i+'-start'), tangled.events);
                 }
             } else {
             // Start at 1 because the array starts at 1 isntead of 0
                 for (i = 1; i <= 8; i++){
-                    start_stop(tangled.events[i].startButton);
+                    start_stop(document.getElementById('timer-tangled-'+i+'-start'), tangled.events);
                 }
             }
         break; 
@@ -540,12 +367,12 @@ function tangled_Depths_Post_Checkbox(obj){
             if (checkbox.checked == true){
             // 9-12 for events
                 for (i = 9; i <= 12; i++){
-                    start_stop(tangled.events[i].startButton);
+                    start_stop(document.getElementById('timer-tangled-'+i+'-start'), tangled.events);
                 }
             } else {
             // 9-12 for events
                 for (i = 9; i <= 12; i++){
-                    start_stop(tangled.events[i].startButton);
+                    start_stop(document.getElementById('timer-tangled-'+i+'-start'), tangled.events);
                 }
             }
         break;  
@@ -554,12 +381,12 @@ function tangled_Depths_Post_Checkbox(obj){
             if (checkbox.checked == true){
             // 13-15 for events 
                 for (i = 13; i <= 15; i++){
-                    start_stop(tangled.events[i].startButton);
+                    start_stop(document.getElementById('timer-tangled-'+i+'-start'), tangled.events);
                 }
             } else {
             // 13-15 for events
                 for (i = 13; i <= 15; i++){
-                    start_stop(tangled.events[i].startButton);
+                    start_stop(document.getElementById('timer-tangled-'+i+'-start'), tangled.events);
                 }
             }
         break;  
@@ -568,12 +395,12 @@ function tangled_Depths_Post_Checkbox(obj){
             if (checkbox.checked == true){
             // 16-19 
                 for (i = 16; i <= 19; i++){
-                    start_stop(tangled.events[i].startButton);
+                    start_stop(document.getElementById('timer-tangled-'+i+'-start'), tangled.events);
                 }
             } else {
             // 16-19
                 for (i = 16; i <= 19; i++){
-                    start_stop(tangled.events[i].startButton);
+                    start_stop(document.getElementById('timer-tangled-'+i+'-start'), tangled.events);
                 }
             }
         break;  
@@ -655,10 +482,10 @@ function tangled_Depths_All_Checkbox(obj){
     }
 }
 // Label of the meta on the side
-var side_meta_name = document.getElementById('side-meta-name');
+let side_meta_name = document.getElementById('side-meta-name');
 
 // Tangled Depths Global Timer
-var current_progress = document.getElementById('current-status'),
+let current_progress = document.getElementById('current-status'),
 	next_progress = "",
 	progress_bar = document.getElementById('progress-bar'),
 	progress_text = document.getElementById('progress-text'),
@@ -666,7 +493,7 @@ var current_progress = document.getElementById('current-status'),
 	new_meta_time = 0,
 	max_meta_time = 0;
 
-var ogre_arrow = document.getElementById('tangled-arrow-1'),
+let ogre_arrow = document.getElementById('tangled-arrow-1'),
 	ogre_circle = document.getElementById('tangled-img-1'),
 	ogre_boss = document.getElementById('tangled-img-5'),
 	ogre_npc = document.getElementById('tangled-img-9'),
@@ -691,15 +518,15 @@ var ogre_arrow = document.getElementById('tangled-arrow-1'),
 	scar_info = document.getElementById('tangled-lane-info-4'),
     scar_chak = document.getElementById('tangled-img-16');
 
-var map_box = document.getElementById('map-timer-wrapper-1'),
+let map_box = document.getElementById('map-timer-wrapper-1'),
 	meta_box = document.getElementById('map-timer-wrapper-2'),
     refresh_button = document.getElementById('refresh'),
     revert_button = document.getElementById('revert'),
     revert = 0;
 
-	var tangled_depths_timer = setInterval(function(){
-	var d = new Date();
-	var time = d.getUTCHours()*3600 + d.getUTCMinutes()*60 + d.getUTCSeconds(),
+	let tangled_depths_timer = setInterval(function(){
+	let d = new Date();
+	let time = d.getUTCHours()*3600 + d.getUTCMinutes()*60 + d.getUTCSeconds(),
 		result,
 		hours,
 		minutes,
