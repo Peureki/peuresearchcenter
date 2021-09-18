@@ -1776,7 +1776,7 @@ b{
 	cursor: pointer;
 }
 .meta-sidebox{
-	color: var(--clr-text);
+	color: black;
 	text-align: center;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -2065,6 +2065,11 @@ table.psna{
 	-webkit-transition: all 0.5s ease;
   	transition: all 0.5s ease;
 }
+table.daily img, 
+table.psna img{
+	vertical-align: middle;
+}
+
 table.daily th,
 table.psna th{
 	font-size: 20px;
@@ -2088,6 +2093,7 @@ table.psna td{
 	color: var(--clr-text-table);
 	background-color: var(--clr-bkg-table);
 	line-height: 1.5;
+	vertical-align: middle;
 }
 table.daily td:nth-child(1)/*,
 table.daily td:nth-child(2)*/{
@@ -2101,7 +2107,7 @@ table.daily td:nth-child(2){ /* Difficulty */
 	text-align: center;
 }
 table.daily td:nth-child(4){
-	min-width: 500px;
+	max-width: 300px;
 }
 table.daily td:nth-child(5) input,
 table.psna td:nth-child(4) input{ /* Waypoint */
@@ -3001,7 +3007,7 @@ table.bounty-glyph td:nth-child(3){
 .mhi-list{
 	display: flex;
 	padding: 10px;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid var(--clr-border);
 	color: var(--clr-text);
 }
 .mhi-list-child{
@@ -9685,7 +9691,19 @@ table.nodes td.nodes-cooldown{
 	top: 69%;
     left: 24%;
 }
-
+/*
+	=====================================
+	========= THUNDERHEAD PEAKS =========
+	=====================================
+*/
+#thunderhead-1-box{ /* Branded Forgotton */
+	top: 58%;
+	left: 51%;
+}
+#thunderhead-2-box{
+	top: 39%;
+	left: 57%;
+}
 
 /*
 	===============================

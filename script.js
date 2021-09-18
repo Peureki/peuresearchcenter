@@ -703,7 +703,7 @@ async function getShipments(table, image){
 	let total_per_shipment_array = [total_cloth_shipment, total_wood_shipment, total_leather_shipment, total_metal_shipment, total_trophy_shipment];
 
 	// Goal: Spliting the numbers into 3 sections: Gold, Silver, Copper and finding their negative/positive values
-	// Most of this for-loop is derived from GW2Lunchbox @ https://gw2lunchbox.com/IstanShipments.html. 
+	// Most of this for-loop is derived from GW2Lunchbox @ https://gw2lunchbox.com/IstanShipments.php. 
 	// C#802020it goes to them 
 	for (i = 0; i < total_per_shipment_array.length; i++){
 
@@ -796,7 +796,7 @@ async function getShipments(table, image){
 	let total_per_unbound_array = [total_eb_mist_packet, total_eb_magic_bundle];
 
 	// Goal: Spliting the numbers into 3 sections: Gold, Silver, Copper and finding their negative/positive values
-	// Most of this for-loop is derived from GW2Lunchbox @ https://gw2lunchbox.com/IstanShipments.html. 
+	// Most of this for-loop is derived from GW2Lunchbox @ https://gw2lunchbox.com/IstanShipments.php. 
 	// C#802020it goes to them 
 	for (i = 0; i < total_per_unbound_array.length; i++){
 
@@ -979,67 +979,67 @@ async function getGatheringBenchmarkAll(table, image){
 
 			switch (data.spreadsheet[i].map){
 				case "Amnoon Nodes/Caches (w/ Volatile)":
-				link = "./gathering/amnoon-node-cache-farm.html";
+				link = "./gathering/amnoon-node-cache-farm.php";
 				break;
 
 				case "Bjora Marches Node Farm (B/V/V)":
-				link = "./gathering/bjora-node-farm.html";
+				link = "./gathering/bjora-node-farm.php";
 				break;
 
 				case "Bjora Marches Node Farm (w/ Volatile)":
-				link = "./gathering/bjora-node-farm.html";
+				link = "./gathering/bjora-node-farm.php";
 				break;
 
 				case "D#802020gehaunt Node Farm (w/ Volatile)":
-				link = "./gathering/d#802020gehaunt-node-farm.html";
+				link = "./gathering/d#802020gehaunt-node-farm.php";
 				break;
 
 				case "Flax Farm (w/ Volatile)":
-				link = "./gathering/flax-farm.html";
+				link = "./gathering/flax-farm.php";
 				break;
 
 				case "Lake Doric Node Farm (B/V/V)":
-				link = "./gathering/lake-doric-node-farm.html";
+				link = "./gathering/lake-doric-node-farm.php";
 				break;
 
 				case "Lake Doric Node Farm (w/ Volatile)":
-				link = "./gathering/lake-doric-node-farm.html";
+				link = "./gathering/lake-doric-node-farm.php";
 				break;
 
 				case "LS3 Node Farm (w/ Volatile)":
-				link = "./gathering/ls3-node-farm.html";
+				link = "./gathering/ls3-node-farm.php";
 				break;
 
 				case "Orr Node Farm (w/ Volatile)":
-				link = "./gathering/orr-node-farm.html";
+				link = "./gathering/orr-node-farm.php";
 				break;
 
 				case "Rich Node Farm (w/ Volatile)":
-				link = "./gathering/rich-node-farm.html";
+				link = "./gathering/rich-node-farm.php";
 				break;
 
 				case "Sandswept Node Farm (B/V/V)":
-				link = "./gathering/sandswept-isles-node-farm.html";
+				link = "./gathering/sandswept-isles-node-farm.php";
 				break;
 
 				case "Sandswept Node Farm (w/ Volatile)":
-				link = "./gathering/sandswept-isles-node-farm.html";
+				link = "./gathering/sandswept-isles-node-farm.php";
 				break;
 
 				case "Siren's Landing Node Farm (w/ Volatile)":
-				link = "./gathering/sirens-landing-node-farm.html";
+				link = "./gathering/sirens-landing-node-farm.php";
 				break;
 
 				case "Sparkfly Fen Node Farm (w/ Volatile)":
-				link = "./gathering/sparkfly-fen-node-farm.html";
+				link = "./gathering/sparkfly-fen-node-farm.php";
 				break;
 
 				case "Timberline Node Farm (w/ Volatile)":
-				link = "./gathering/timberline-falls-node-farm.html";
+				link = "./gathering/timberline-falls-node-farm.php";
 				break;
 
 				case "Winterberry Farm (w/ Volatile)":
-				link = "./gathering/winterberry-node-farm.html";
+				link = "./gathering/winterberry-node-farm.php";
 				break;
 			}
 
@@ -1139,162 +1139,162 @@ async function getBenchmarkAll(table, image){
 
 			switch (data.spreadsheet[i].map){
 				case "Amal / Key Metas (PoF/LS4 & 5)":
-				link = "./maps/combo-farms.html#amalgamated-key-farm";
+				link = "./maps/combo-farms.php#amalgamated-key-farm";
 				pop = "Rare";
 				break
 
 				case "Amnoon Nodes/Caches (w/ Volatile)":
-				link = "./gathering/amnoon-node-cache-farm.html";
+				link = "./gathering/amnoon-node-cache-farm.php";
 				pop = "Rare";
 				break;
 
 				case "Auric Basin (Baubles)":
-				link = "./maps/auric-basin.html"
+				link = "./maps/auric-basin.php"
 				pop = "Uncommon";
 				break;
 
 				case "Bitterfrost Frontier":
-				link = "./maps/bitterfrost-frontier.html";
+				link = "./maps/bitterfrost-frontier.php";
 				pop = "Rare";
 				break;
 
 				case "Bjora Marches":
-				link = "./maps/bjora-marches.html";
+				link = "./maps/bjora-marches.php";
 				pop = "Rare";
 				break;
 
 				case "Bjora Marches Node Farm (w/ Volatile)":
-				link = "./maps/bjora-marches.html";
+				link = "./maps/bjora-marches.php";
 				pop = "Common";
 				break;
 
 				case "Bloodstone Fen":
-				link = "./maps/bloodstone-fen.html";
+				link = "./maps/bloodstone-fen.php";
 				pop = "Rare";
 				break;
 
 				case "Crystal Oasis":
-				link = "./maps/crystal-oasis.html";
+				link = "./maps/crystal-oasis.php";
 				pop = "Rare";
 				break;
 
 				case "Cursed Shore (Week 4 maps Bonus)":
-				link = "./maps/cursed-shore.html";
+				link = "./maps/cursed-shore.php";
 				pop = "Rare";
 				break;
 
 				case "Desert Highlands":
-				link = "./maps/desert-highlands.html";
+				link = "./maps/desert-highlands.php";
 				pop = "Rare";
 				break;
 
 				case "Desolation":
-				link = "./maps/desolation.html";
+				link = "./maps/desolation.php";
 				pop = "Rare";
 				break;
 
 				case "Destroyer Farm":
-				link = "./maps/destroyer-farm.html";
+				link = "./maps/destroyer-farm.php";
 				pop = "Rare";
 				break;
 
 				case "Domain of Kourna":
-				link = "./maps/domain-of-kourna.html";
+				link = "./maps/domain-of-kourna.php";
 				pop = "Rare";
 				break;
 
 				case "Draconis Mons":
-				link = "./maps/draconis-mons.html";
+				link = "./maps/draconis-mons.php";
 				pop = "Rare";
 				break;
 
 				case "Dragon's Stand":
-				link = "./maps/dragons-stand.html";
+				link = "./maps/dragons-stand.php";
 				pop = "Common";
 				break;
 
 				case "Dragonfall":
-				link = "./maps/dragonfall.html";
+				link = "./maps/dragonfall.php";
 				pop = "Common";
 				break;
 
 				case "D#802020gehaunt Node Farm (w/ Volatile)":
-				link = "./gathering/d#802020gehaunt-node-farm.html";
+				link = "./gathering/d#802020gehaunt-node-farm.php";
 				pop = "Uncommon";
 				break;
 
 				case "Drizzlewood Coast":
-				link = "./maps/drizzlewood-coast.html";
+				link = "./maps/drizzlewood-coast.php";
 				pop = "Common";
 				break;
 
 				case "Dry Top [SAND]":
-				link = "https://drytopsand.com/index.html";
+				link = "https://drytopsand.com/index.php";
 				pop = "Uncommon";
 				break;
 
 				case "Elon Riverlands":
-				link = "./maps/elon-riverlands.html";
+				link = "./maps/elon-riverlands.php";
 				pop = "Rare";
 				break;
 
 				case "Ember Bay":
-				link = "./maps/ember-bay.html";
+				link = "./maps/ember-bay.php";
 				pop = "Rare";
 				break;
 
 				case "Flax Farm (w/ Volatile)":
-				link = "./gathering/flax-farm.html";
+				link = "./gathering/flax-farm.php";
 				pop = "Common";
 				break;
 
 				case "Frostgorge Sound Champ Train":
-				link = "./maps/frostgorge-sound.html";
+				link = "./maps/frostgorge-sound.php";
 				pop = "Rare";
 				break;
 
 				case "Grothmar/Bjora":
-				link = "./maps/combo-farms.html";
+				link = "./maps/combo-farms.php";
 				pop = "Rare";
 				break;
 
 				case "Grothmar / Kourna - Eff/Doom/Ooze":
-				link = "./maps/combo-farms.html";
+				link = "./maps/combo-farms.php";
 				pop = "Rare";
 				break;
 
 				case "Grothmar Valley":
-				link = "./maps/grothmar-valley.html";
+				link = "./maps/grothmar-valley.php";
 				pop = "Rare";
 				break;
 
 				case "HoT Meta Train (VB, TD, AB)":
-				link = "./maps/combo-farms.html#hot-meta-train";
+				link = "./maps/combo-farms.php#hot-meta-train";
 				pop = "Common";
 				break;
 
 				case "Infusion Train [SM]":
-				link = "./maps/combo-farms.html#infusion-train";
+				link = "./maps/combo-farms.php#infusion-train";
 				pop = "Common";
 				break;
 
 				case "Domain of Istan":
-				link = "./maps/domain-of-istan.html";
+				link = "./maps/domain-of-istan.php";
 				pop = "Common";
 				break;
 
 				case "Jahai Bluffs":
-				link = "./maps/jahai-bluffs.html";
+				link = "./maps/jahai-bluffs.php";
 				pop = "Rare";
 				break;
 
 				case "Karka Farming":
-				link = "./maps/karka-farm.html";
+				link = "./maps/karka-farm.php";
 				pop = "Rare";
 				break;
 
 				case "Kessex Hills (Baubles)":
-				link = "./maps/kessex-hills.html";
+				link = "./maps/kessex-hills.php";
 				pop = "Rare";
 				break;
 
@@ -1309,197 +1309,197 @@ async function getBenchmarkAll(table, image){
 				break;
 
 				case "Lake Doric":
-				link = "./maps/lake-doric.html#leather-farm";
+				link = "./maps/lake-doric.php#leather-farm";
 				pop = "Rare";
 				break;
 
 				case "Lake Doric Node Farm (w/ Volatile)":
-				link = "./maps/lake-doric.html#node-farm";
+				link = "./maps/lake-doric.php#node-farm";
 				pop = "Common";
 				break;
 
 				case "Leather Farm (Lake Doric)":
-				link = "./maps/lake-doric.html";
+				link = "./maps/lake-doric.php";
 				pop = "Uncommon";
 				break;
 
 				case "Legendary Bounty Train":
-				link = "./maps/legendary-bounty-train.html";
+				link = "./maps/legendary-bounty-train.php";
 				pop = "Common";
 				break;
 
 				case "LS3 Node Farm (w/ Volatile)":
-				link = "./gathering/ls3-node-farm.html";
+				link = "./gathering/ls3-node-farm.php";
 				pop = "Rare";
 				break;
 
 				case "LS4 Meta Train":
-				link = "./maps/combo-farms.html#ls4-train";
+				link = "./maps/combo-farms.php#ls4-train";
 				pop = "Common";
 				break;
 
 				case "Malchor's Leap Champ Train":
-				link = "./maps/malchors-leap.html";
+				link = "./maps/malchors-leap.php";
 				pop = "Rare";
 				break;
 
 				case "Orr Node Farm (w/ Volatile)":
-				link = "./gathering/orr-node-farm.html";
+				link = "./gathering/orr-node-farm.php";
 				pop = "Rare";
 				break;
 
 				case "PoF Meta Train":
-				link = "./maps/combo-farms.html#pof-meta-train";
+				link = "./maps/combo-farms.php#pof-meta-train";
 				pop = "Uncommon";
 				break;
 
 				case "Reset - PoF/LS5/Core/HoT/LS4":
-				link = "./maps/combo-farms.html#reset";
+				link = "./maps/combo-farms.php#reset";
 				pop = "Rare";
 				break;
 
 				case "Rich Node Farm (w/ Volatile)":
-				link = "./gathering/rich-node-farm.html";
+				link = "./gathering/rich-node-farm.php";
 				pop = "Common";
 				break;
 
 				case "Sandswept Isles":
-				link = "./maps/sandswept-isles.html";
+				link = "./maps/sandswept-isles.php";
 				pop = "Rare";
 				break;
 
 				case "Sandswept/Kourna":
-				link = "./maps/combo-farms.html#sandswept-kourna";
+				link = "./maps/combo-farms.php#sandswept-kourna";
 				pop = "Rare";
 				break;
 
 				case "Sandswept Node Farm (w/ Volatile)":
-				link = "./maps/sandswept-isles.html#node-farm";
+				link = "./maps/sandswept-isles.php#node-farm";
 				pop = "Uncommon";
 				break;
 
 				case "Silverwastes":
-				link = "./maps/silverwastes.html";
+				link = "./maps/silverwastes.php";
 				pop = "Common";
 				break;
 
 				case "Siren's Landing":
-				link = "./maps/sirens-landing.html";
+				link = "./maps/sirens-landing.php";
 				pop = "Rare";
 				break;
 
 				case "Siren's Landing Node Farm (w/ Volatile)":
-				link = "./maps/sirens-landing.html#node-farm";
+				link = "./maps/sirens-landing.php#node-farm";
 				pop = "Rare";
 				break;
 
 				case "Solo Farm: Bitterfrost Icebound Chests":
-				link = "./maps/bitterfrost-frontier.html#solo-farm";
+				link = "./maps/bitterfrost-frontier.php#solo-farm";
 				pop = "Common";
 				break;
 
 				case "Solo Farm: Bitterfrost Events":
-				link = "./maps/bitterfrost-frontier.html#solo-events";
+				link = "./maps/bitterfrost-frontier.php#solo-events";
 				pop = "Common";
 				break;
 
 				case "Solo Farm: Harathi Centaurs":
-				link = "./maps/harathi-hinterlands.html";
+				link = "./maps/harathi-hinterlands.php";
 				pop = "Rare";
 				break;
 
 				case "Solo Farm: Jahai Chak":
-				link = "./maps/jahai-bluffs.html#solo-farm";
+				link = "./maps/jahai-bluffs.php#solo-farm";
 				pop = "Rare";
 				break;
 
 				case "Solo Farm: Jahai Wildlife":
-				link = "./maps/jahai-bluffs.html#solo-farm";
+				link = "./maps/jahai-bluffs.php#solo-farm";
 				pop = "Rare";
 				break;
 
 				case "Solo Farm: Kourna Choya":
-				link = "./maps/domain-of-kourna.html#solo-farm";
+				link = "./maps/domain-of-kourna.php#solo-farm";
 				pop = "Uncommon";
 				break;
 
 				case "Solo Farm: Kourna Front Line":
-				link = "./maps/domain-of-kourna.html#solo-farm";
+				link = "./maps/domain-of-kourna.php#solo-farm";
 				pop = "Rare";
 				break;
 
 				case "Solo Farm: Kourna Inquests":
-				link = "./maps/domain-of-kourna.html#solo-farm";
+				link = "./maps/domain-of-kourna.php#solo-farm";
 				pop = "Rare";
 				break;
 
 				case "Solo Farm: Kourna Wildlife":
-				link = "./maps/domain-of-kourna.html#solo-farm";
+				link = "./maps/domain-of-kourna.php#solo-farm";
 				pop = "Rare";
 				break;
 
 				case "Solo Farm: Sandswept Inquest":
-				link = "./maps/sandswept-isles.html#solo-farm";
+				link = "./maps/sandswept-isles.php#solo-farm";
 				pop = "Uncommon";
 				break;
 
 				case "Solo Farm: Sandswept Karka/Drake":
-				link = "./maps/sandswept-isles.html#solo-farm";
+				link = "./maps/sandswept-isles.php#solo-farm";
 				pop = "Rare";
 				break;
 
 				case "Solo Farm: Thunderhead D#802020ge":
-				link = "./maps/thunderhead-peaks.html#solo-farm";
+				link = "./maps/thunderhead-peaks.php#solo-farm";
 				pop = "Rare";
 				break;
 
 				case "Sparkfly Fen Node Farm (w/ Volatile)":
-				link = "./gathering/sparkfly-fen-node-farm.html";
+				link = "./gathering/sparkfly-fen-node-farm.php";
 				pop = "Rare";
 				break;
 
 				case "Stonehead Farm (Baubles)":
-				link = "./maps/verdant-brink.html";
+				link = "./maps/verdant-brink.php";
 				pop = "Common";
 				break;
 
 				case "Tangled Depths (Baubles)":
-				link = "./maps/tangled-depths.html";
+				link = "./maps/tangled-depths.php";
 				pop = "Rare";
 				break;
 
 				case "Tangled Depths (w/o Baubles)":
-				link = "./maps/tangled-depths.html";
+				link = "./maps/tangled-depths.php";
 				pop = "Rare";
 				break;
 
 				case "Thunderhead / Kourna":
-				link = "./maps/combo-farms.html#thunderhead-kourna.html";
+				link = "./maps/combo-farms.php#thunderhead-kourna.php";
 				pop = "Rare";
 				break;
 
 				case "Timberline Node Farm (w/ Volatile)":
-				link = "./gathering/timberline-falls-node-farm.html";
+				link = "./gathering/timberline-falls-node-farm.php";
 				pop = "Rare";
 				break;
 
 				case "Domain of Vabbi":
-				link = "./maps/domain-of-vabbi.html";
+				link = "./maps/domain-of-vabbi.php";
 				pop = "Rare";
 				break;
 
 				case "Verdant Brink (Baubles)":
-				link = "./maps/verdant-brink.html";
+				link = "./maps/verdant-brink.php";
 				pop = "Rare";
 				break;
 
 				case "Winterberry Farm (w/ Volatile)":
-				link = "./gathering/winterberry-node-farm.html";
+				link = "./gathering/winterberry-node-farm.php";
 				pop = "Common";
 				break;
 
 				case "World Boss Train (w/ Volatile)":
-				link = "./maps/world-boss-train.html";
+				link = "./maps/world-boss-train.php";
 				pop = "Common";
 				break;
 			}
@@ -1600,7 +1600,7 @@ async function getMetaBenchmarkAll(table){
 
 			switch (data.spreadsheet[i].map){
 				case "Amal / Key Metas (PoF/LS4 & 5)":
-				link = "./maps/amal-key-metas.html";
+				link = "./maps/amal-key-metas.php";
 				break;
 			}
 		
@@ -4381,15 +4381,15 @@ function benchmarkLinkNames(defaultName){
 
 	switch (defaultName){
 		case "Amal / Key Metas (PoF/LS4 & 5)":
-		referencePage = "amal-key-meta-pof-ls4-ls5.html";
+		referencePage = "amal-key-meta-pof-ls4-ls5.php";
 		break;
 
 		case "Amnoon Nodes/Caches":
-		referencePage = "amnoon-nodes-caches.html";
+		referencePage = "amnoon-nodes-caches.php";
 		break; 
 
 		case "Auric Basin (Baubles)":
-		referencePage = "auric-basin.html";
+		referencePage = "auric-basin.php";
 		break; 
 
 
@@ -6066,7 +6066,7 @@ function countdown(status, eventNum, eventCooldown, timeLabel, sideTimeLabel, si
             sideTimeLabel.style.color = "black";
             sidebox.style.background = soon_color;
             sidebox.style.color = "black"; 
-            
+
         // Default -> Countdown number to green, bkg are normal
         } else if (countdown.time < eventCooldown){
             timeLabel.style.color = "#008B11";

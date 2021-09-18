@@ -113,7 +113,7 @@
 					<div class = "page-box-full-timer" style = "">
 
 						<div class = "full-timer-name" style = "margin: 0; vertical-align: middle;">
-							<b>Reset in: </b><p1 id = "name-0"></p1> <p1 id = "time-0"></p1>
+							Reset in: <p1 id = "name-0"></p1> <p1 id = "time-0"></p1>
 						</div>
 						<div class = "full-timer">
 							Hours

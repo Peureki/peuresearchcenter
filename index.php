@@ -139,6 +139,10 @@
 
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
+					<span style = "font-weight: bold;">Sept 16, 2021</span>
+				<br>
+					- Adjusted the <a href = "./resources/dailies.php" target = "_blank"><u>Dailies and PSNA</u></a> tables to be better fitted. It was quite large whenever the descriptions were long
+				<br><br>
 					<span style = "font-weight: bold;">Sept 15, 2021</span>
 				<br>
 					- Fixed dark mode and some back-end stuff for the REST of the timer pages. 
