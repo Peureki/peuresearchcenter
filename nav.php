@@ -72,6 +72,7 @@
 					<li><a href = "<?php echo $base;?>/timers/sandswept-isles.php"> Sandswept Isles </a></li>
 					<li><a href = "<?php echo $base;?>/timers/domain-of-kourna.php"> Domain of Kourna </a></li>
 					<li><a href = "<?php echo $base;?>/timers/jahai-bluffs.php"> Jahai Blufs </a></li>
+					<li><a href = "<?php echo $base;?>/timers/thunderhead-peaks.php"> Thunderhead Peaks </a></li>
 					<li><a href = "<?php echo $base;?>/timers/dragonfall.php"> Dragonfall </a></li>
 				</div>
 				<div class = "sub-menu-header">

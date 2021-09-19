@@ -90,11 +90,10 @@
 		<div class = "small-description">
 		    <details>
 		        <summary><b>How to: </b></summary>
-		        LB = Legendary Bounty, B = Bounty
-		        <br><br>
+		        This map is extremely strange compared to others. Each meta occurs at xx:45 of the hour, switching each hour. After each meta, there are a sequence of events that occur. First being the Rift, then Pepperseed. Events info boxes will pop up explaining each and when to do them on the map when it's after the meta.
+		 		<br><br>
 		        <b>Priority of events:</b>
-		        <br>Rifts &#8594; Garrison &#8594; Yatendi Village &#8594; Chantry
-		        <br> Rifts will be up almost 100% of the time so it is possible to do an event train purely on rifts.
+		        <br>Metas &#8594; Hydra (only after south meta) &#8594; Rift &#8594; Tirabikkr &#8594; Pepperseed &#8594; Branded Forgotton &#8594; Garrison &#8594; Pepperseed (from Garrison) &#8594; Repeat Tirabikkr and Branded Forgotton until next meta
 		    </details>
 		</div>
 
@@ -121,8 +120,131 @@
        			<input type = "button" onclick = "reset(this, thunderhead.events);" value = "&#8635;" id = "timer-thunderhead-7-reset">	
        		</div>
        	-->
+       		<!-- 
+			    =============================================================
+			    ====================== IMAGES / ASSETS ======================
+			    =============================================================
+			-->
+			<!-- Thunderhead Keep -->
+			<div id = "thunderhead-img-1" class = "event-image">
+				<img src = "../images/assets/event_red_circle.png" style = "width: 150%;">
+			</div>
+
+			<div id = "thunderhead-img-2" class = "event-image">
+				<img src = "../images/assets/event_red_boss.png">
+			</div>
+
+			<!-- Oil Floes-->
+			<!-- N oil rig -->
+			<div id = "thunderhead-img-3" class = "event-image">
+				<img src = "../images/assets/event_red_circle.png">
+			</div>
+
+			<div id = "thunderhead-img-4" class = "event-image">
+				<img src = "../images/assets/event_red_shield.png">
+			</div>
+			<!-- M oil rig -->
+			<div id = "thunderhead-img-5" class = "event-image">
+				<img src = "../images/assets/event_red_circle.png">
+			</div>
+
+			<div id = "thunderhead-img-6" class = "event-image">
+				<img src = "../images/assets/event_red_shield.png">
+			</div>
+
+			<!-- S oil rig -->
+			<div id = "thunderhead-img-7" class = "event-image">
+				<img src = "../images/assets/event_red_circle.png">
+			</div>
+
+			<div id = "thunderhead-img-8" class = "event-image">
+				<img src = "../images/assets/event_red_shield.png">
+			</div>
+
+			<!-- Turd boss -->
+			<div id = "thunderhead-img-9" class = "event-image">
+				<img src = "../images/assets/event_red_circle.png">
+			</div>
+
+			<div id = "thunderhead-img-10" class = "event-image">
+				<img src = "../images/assets/event_red_boss.png">
+			</div>
+
+			<!-- Other events --> 
+			<!-- Rift --> 
+			<div id = "thunderhead-img-11" class = "event-image">
+				<img src = "../images/assets/event_circle.png" style = "width: 200%;">
+			</div>
+
+			<div id = "thunderhead-img-12" class = "event-image">
+				<img src = "../images/assets/inquest_portal.png">
+			</div>
+
+			<!-- Pepperseed -->
+			<div id = "thunderhead-img-13" class = "event-image">
+				<img src = "../images/assets/event_circle.png" style = "width: 150%;">
+			</div>
+
+			<div id = "thunderhead-img-14" class = "event-image">
+				<img src = "../images/assets/event_shield.png">
+			</div>
+
+			<!-- Garrison -->
+			<div id = "thunderhead-img-15" class = "event-image">
+				<img src = "../images/assets/event_circle.png" style = "width: 150%;">
+			</div>
+
+			<div id = "thunderhead-img-16" class = "event-image">
+				<img src = "../images/assets/event_shield.png">
+			</div>
+
+			<!-- Hydra -->
+			<div id = "thunderhead-img-17" class = "event-image">
+				<img src = "../images/assets/event_circle.png" style = "width: 150%;">
+			</div>
+
+			<div id = "thunderhead-img-18" class = "event-image">
+				<img src = "../images/assets/event_boss.png">
+			</div>
+
+			<!-- 
+			    ===================================================
+			    ====================== TEXTS ======================
+			    ===================================================
+			-->
+			<!-- Metas -->
+			<div id = "thunderhead-info-1" class = 'meta-info'>
+       			<h1> THUNDERHEAD KEEP </h1>
+       		</div>
+
+       		<div id = "thunderhead-info-2" class = 'meta-info'>
+       			<h1> OIL FLOES </h1>
+       		</div>
+
+       		<!-- Other events -->
+       		<!-- Rift -->
+       		<div id = "thunderhead-info-3" class = 'event-info'>
+       			<b> Rift </b>
+       			<br>Spawns 30 seconds after each meta. If the area is branded prior, then it will spawn at xx:15 instead. 
+       		</div>
+       		<!-- Pepperseed -->
+       		<div id = "thunderhead-info-4" class = 'event-info'>
+       			<b> Pepperseed </b>
+       			<br>Spawns around this area after either meta unless Pepperseed is at Moorage Waypoint [&BLoLAAA=]. 
+       		</div>
+			<!-- Garrison -->
+       		<div id = "thunderhead-info-5" class = 'event-info'>
+       			<b> Garrison </b>
+       			<br>Spawns ~3 mins after Pepperseed gets escorted to here (not starting from here). 
+       		</div>
+       		<!-- Hydra -->
+       		<div id = "thunderhead-info-6" class = 'event-info'>
+       			<b> Hydra </b>
+       			<br>Spawns after only the Oil Floes meta 
+       		</div>
+
 			<!-- MAP PICTURE -->
-			<img class = "map-timer-map" title = "thunderhead Bluffs" src = "../images/thunderhead-peaks/map.jpg">
+			<img class = "map-timer-map" title = "Thunderhead Peaks" src = "../images/thunderhead-peaks/map.jpg">
 		</div> <!-- End of map timer wrapper -->
 	</div> <!-- End of page box -->
 

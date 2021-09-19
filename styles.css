@@ -4588,7 +4588,7 @@ table.nodes td.nodes-cooldown{
 	color: var(--clr-text);
 	font-size: 20px;
 	text-align: left;
-	width: 25%;
+	max-width: 300px;
 }
 
 .event-box p1, 
@@ -9703,6 +9703,112 @@ table.nodes td.nodes-cooldown{
 #thunderhead-2-box{
 	top: 39%;
 	left: 57%;
+}
+/*
+	====================================
+	========= THUNDERHEAD IMGS =========
+	====================================
+*/
+#thunderhead-img-1{ /* Red circle thunderhead peaks */
+	top: 8%;
+	left: 76%;
+}
+#thunderhead-img-2{ /* Red boss thunderhead peaks */
+	top: 13%;
+	left: 81%;
+}
+#thunderhead-img-3{ /* Red circle N oil */
+	top: 75%;
+	left: 15%;
+}
+#thunderhead-img-4{ /* Red shield N oil */
+	top: 78%;
+	left: 18%;
+}
+#thunderhead-img-5{ /* Red circle M oil */
+	top: 88%;
+	left: 13%;
+}
+#thunderhead-img-6{ /* Red shield M oil */
+	top: 91%;
+	left: 16%;
+}
+#thunderhead-img-7{ /* Red circle S oil */
+	top: 88%;
+	left: 25%;
+}
+#thunderhead-img-8{ /* Red shield N oil */
+	top: 91%;
+	left: 28%;
+}
+#thunderhead-img-9{ /* Red circle turd boss */
+	top: 85%;
+	left: 32%;
+}
+#thunderhead-img-10{ /* Red boss turd */
+	top: 88%;
+	left: 35%;
+}
+#thunderhead-img-11{ /* Rift circle */
+	top: 22%;
+	left: 50%;
+}
+#thunderhead-img-12{ /* Rift icon */
+	top: 29%;
+	left: 58%;
+}
+#thunderhead-img-13{ /* Pepperseed circle */
+	top: 50%;
+	left: 36%;
+}
+#thunderhead-img-14{ /* Pepperseed shield */
+	top: 55%;
+	left: 41%;
+}
+#thunderhead-img-15{ /* Garrison circle */
+	top: 54%;
+	left: 60%;
+}
+#thunderhead-img-16{ /* Garrison shield */
+	top: 59%;
+	left: 65%;
+}
+#thunderhead-img-17{ /* Hydra circle */
+	top: 79%;
+	left: 14%;
+}
+#thunderhead-img-18{ /* Hydra shield */
+	top: 84%;
+	left: 20%;
+}
+/*
+	====================================
+	========= THUNDERHEAD INFO =========
+	====================================
+*/
+#thunderhead-info-1{ /* Thunderhead Keep */
+	top: 6%;
+	left: 76%;
+}
+#thunderhead-info-2{ /* Oil floes */
+	top: 73%;
+	left: 26%;
+}
+#thunderhead-info-3{ /* Rift */
+	top: 12%;
+	left: 48%;
+}
+#thunderhead-info-4{ /* Pepperseed */
+	top: 40%;
+	left: 31%;
+}
+#thunderhead-info-5{ /* Garrison */
+	top: 56%;
+	left: 74%;
+}
+#thunderhead-info-6{ /* Hydra */
+	top: 73%;
+	left: 11%;
 }
 
 /*
