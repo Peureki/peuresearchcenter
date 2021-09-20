@@ -51,7 +51,7 @@ async function getBenchmarkAll(table, image){
 					}
 					if (changeIndex > 0){
 						changeIndex = "+" + changeIndex;
-						text_color = "#84F473"; // green
+						text_color = "#41AF2F"; // green
 						break;
 					} else {
 						text_color = "#EE3D3D"; // red

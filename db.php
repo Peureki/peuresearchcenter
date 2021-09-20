@@ -68,7 +68,7 @@ class Maps extends BenchmarksDB{
 			$volatile_magic = $ss['volatilemagic'];
 
 			// If a map name contains ' such as Siren's Landing, repalce the ' with \' so it can be disregarded as another single quote
-			if (str_contains($map, "'") == true){
+			if (strpos($map, "'") == true){
 				$map = str_replace("'", "\'", $map);
 			}
 			// Insert into DB
@@ -77,9 +77,6 @@ class Maps extends BenchmarksDB{
 			// Execute the SQL stmt 
 			$stmt = $this->connect()->exec($sql);
 		} 
-		
-		echo "New record created";
-
 	}
 
 	public function getMaps(){

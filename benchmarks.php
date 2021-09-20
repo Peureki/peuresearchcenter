@@ -4,7 +4,7 @@
 	<!-- Defaults, CSS/JS main files -->
 	<?php include('config.php'); 
 		include('db.php');
-		include ('js-to-php.php'); ?>
+		include ('./js-to-php/benchmarks.php'); ?>
 	<title> Benchmarks </title>
 </head>
 <body>
