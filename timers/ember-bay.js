@@ -9,7 +9,6 @@ var ember = {
         },
 
         {   // [1] Sloth Chain
-            function: function() { ember_Countdown(1); },
             status: 0,
             key: 0,
             cooldown: 60 * 15, 
@@ -24,7 +23,6 @@ var ember = {
             doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [2] Destroyer Fissure 1 NW
-            function: function() { ember_Countdown(2); },
             status: 0,
             key: 0,
             cooldown: 60 * 10, 
@@ -39,7 +37,6 @@ var ember = {
             doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [3] Destroyer Fissure 2 NE
-            function: function() { ember_Countdown(3); },
             status: 0,
             key: 0,
             cooldown: 60 * 10, 
@@ -54,7 +51,6 @@ var ember = {
             doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [4] Coal 1 SW
-            function: function() { ember_Countdown(4); },
             status: 0,
             key: 0,
             cooldown: 60 * 16 + 45, 
@@ -69,7 +65,6 @@ var ember = {
             doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [5] Coal 2 SE
-            function: function() { ember_Countdown(5); },
             status: 0,
             key: 0,
             cooldown: 60 * 16 + 45, 
@@ -84,7 +79,6 @@ var ember = {
             doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [6] Coal 3 NE
-            function: function() { ember_Countdown(6); },
             status: 0,
             key: 0,
             cooldown: 60 * 16 + 45, 
@@ -99,7 +93,6 @@ var ember = {
             doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [7] Jade
-            function: function() { ember_Countdown(7); },
             status: 0,
             key: 0,
             cooldown: 60 * 18, 
@@ -114,7 +107,6 @@ var ember = {
             doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [8] Drake
-            function: function() { ember_Countdown(8); },
             status: 0,
             key: 0,
             cooldown: 60 * 19 + 45, 
@@ -129,7 +121,6 @@ var ember = {
             doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [9] Dominator
-            function: function() { ember_Countdown(9); },
             status: 0,
             key: 0,
             cooldown: 60 * 15, 
@@ -143,16 +134,25 @@ var ember = {
             num: document.getElementById('numerical-sidetimer-ember-9'),
             doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
-        {   // empty
+        {   // [10] Captrain Huuhes
             status: 0,
             key: 0,
+            cooldown: 60 * 12, 
+            startButton: document.getElementById('timer-ember-10-start'),
+            startSideButton: document.getElementById('sidetimer-ember-10-start'),
+            resetButton: document.getElementById('timer-ember-10-reset'),
+            resetSideButton: document.getElementById('sidetimer-ember-10-reset'),
+            timeLabel: document.getElementById('timer-ember-10'), 
+            timeSideLabel: document.getElementById('sidetimer-ember-10'),
+            sidebox: document.getElementById('ember-10-sidebox'),
+            num: document.getElementById('numerical-sidetimer-ember-10'),
+            doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // empty
             status: 0,
             key: 0,
         },
         {   // [12] Karka Chain
-            function: function() { ember_Countdown(12); },
             status: 0,
             key: 0,
             cooldown: 60 * 7, 
@@ -175,7 +175,6 @@ var ember = {
             key: 0,
         },
         {   // [15] Wurm
-            function: function() { ember_Countdown(15); },
             status: 0,
             key: 0,
             cooldown: 60 * 10, 

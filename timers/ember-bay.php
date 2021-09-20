@@ -99,6 +99,14 @@
       <p2 id = "numerical-sidetimer-ember-9">900</p2>
     </div> 
 
+    <div id = "ember-10-sidebox" class = "event-sidebox" >
+      <h1> Captain Huuhes </h1>
+      <input type = "button" onclick = "start_stop(this, ember.events);" value = "Start" id = "sidetimer-ember-10-start">
+      <input type = "button" onclick = "reset(this, ember.events);" value = "&#8635;" id = "sidetimer-ember-10-reset">
+      <p1 id = "sidetimer-ember-10">12:00</p1>
+      <p2 id = "numerical-sidetimer-ember-10">720</p2>
+    </div> 
+
     <div id = "ember-12-sidebox" class = "event-sidebox" >
       <h1> Karka </h1>
       <input type = "button" onclick = "start_stop(this, ember.events);" value = "Start" id = "sidetimer-ember-12-start">
@@ -130,6 +138,8 @@
     Coalescence #2: <input type = "Checkbox" id = "ember-5-checkbox" checked = "true" onclick = "checkboxTimer(this, ember.events);">
     <br>
     Coalescence #3: <input type = "Checkbox" id = "ember-6-checkbox" checked = "true" onclick = "checkboxTimer(this, ember.events);">
+    <br>
+    Captain Huuhes: <input type = "Checkbox" id = "ember-10-checkbox" checked = "true" onclick = "checkboxTimer(this, ember.events);">
     <br>
     Dominator: <input type = "Checkbox" id = "ember-9-checkbox" checked = "true" onclick = "checkboxTimer(this, ember.events);">
     <br>
@@ -212,6 +222,13 @@
             <br><p1 id = "timer-ember-9">15:00</p1>
             <br><input type = "button" onclick = "start_stop(this, ember.events);" value = "Start" id = "timer-ember-9-start">
             <input type = "button" onclick = "reset(this, ember.events);" value = "&#8635;" id = "timer-ember-9-reset"> 
+          </div>
+
+          <div class = "event-box" id = "ember-10-box">
+            <h1> Captain Huuhes </h1>
+            <br><p1 id = "timer-ember-10">12:00</p1>
+            <br><input type = "button" onclick = "start_stop(this, ember.events);" value = "Start" id = "timer-ember-10-start">
+            <input type = "button" onclick = "reset(this, ember.events);" value = "&#8635;" id = "timer-ember-10-reset">
           </div>
 
           <div class = "event-box" id = "ember-12-box">
