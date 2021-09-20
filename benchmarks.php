@@ -2,7 +2,9 @@
 <html>
 <head>
 	<!-- Defaults, CSS/JS main files -->
-	<?php include('config.php'); ?>
+	<?php include('config.php'); 
+		include('db.php');
+		include ('js-to-php.php'); ?>
 	<title> Benchmarks </title>
 </head>
 <body>
@@ -43,17 +45,18 @@
 				<table id = "benchmarks" class = "benchmarks"> 
 					<thead> 
 						<tr>
-							<th onclick = "sortTableByAlphabet('benchmarks', 0);"> Farm <br> Type </th>
-							<th onclick = "sortTableByAlphabet('benchmarks', 1);"> Popularity </th>
-							<th onclick = "sortTableByAlphabet('benchmarks', 2);"> Map </th>
-							<th onclick = "sortTableByTime('benchmarks', 3);"> Time <br>(H:M) </th>
-							<th onclick = "sortTableByPrice('benchmarks', 4);"> Gold/Hour </th>
-							<th onclick = "sortTableByPrice('benchmarks', 5);"> Total Gold </th>
-							<th onclick = "sortTableByQuantity('benchmarks', 6);"> <img title = "Karma" src = ".\images\assets\Karma.png" style = "width: 30%;"> </th>
-							<th onclick = "sortTableByQuantity('benchmarks', 7);"> <img title = "Spirit Shard" src = ".\images\assets\Spirit_Shard.png" style = "width: 50%;"> </th>
-							<th onclick = "sortTableByQuantity('benchmarks', 8);"> <img title = "Trade Contract" src = ".\images\assets\Trade_Contract.png" style = "width: 50%;"> </th>
-							<th onclick = "sortTableByQuantity('benchmarks', 9);"> <img title = "UM" src = ".\images\assets\Unbound_Magic.png" style = "width: 50%;"></th>
-							<th onclick = "sortTableByQuantity('benchmarks', 10);"> <img title = "VM" src = ".\images\assets\Volatile_Magic.png" style = "width: 50%;"> </th>
+							<th onclick = "sortTableByQuantity('benchmarks', 0);"> +/- </th>
+							<th onclick = "sortTableByAlphabet('benchmarks', 1);"> Farm <br> Type </th>
+							<th onclick = "sortTableByAlphabet('benchmarks', 2);"> Popularity </th>
+							<th onclick = "sortTableByAlphabet('benchmarks', 3);"> Map </th>
+							<th onclick = "sortTableByTime('benchmarks', 4);"> Time <br>(H:M) </th>
+							<th onclick = "sortTableByPrice('benchmarks', 5);"> Gold/Hour </th>
+							<th onclick = "sortTableByPrice('benchmarks', 6);"> Total Gold </th>
+							<th onclick = "sortTableByQuantity('benchmarks', 7);"> <img title = "Karma" src = ".\images\assets\Karma.png" style = "width: 30%;"> </th>
+							<th onclick = "sortTableByQuantity('benchmarks', 8);"> <img title = "Spirit Shard" src = ".\images\assets\Spirit_Shard.png" style = "width: 50%;"> </th>
+							<th onclick = "sortTableByQuantity('benchmarks', 9);"> <img title = "Trade Contract" src = ".\images\assets\Trade_Contract.png" style = "width: 50%;"> </th>
+							<th onclick = "sortTableByQuantity('benchmarks', 10);"> <img title = "UM" src = ".\images\assets\Unbound_Magic.png" style = "width: 50%;"></th>
+							<th onclick = "sortTableByQuantity('benchmarks', 11);"> <img title = "VM" src = ".\images\assets\Volatile_Magic.png" style = "width: 50%;"> </th>
 						</tr>
 					</thead>
 					<tbody id = "tableData"></tbody>

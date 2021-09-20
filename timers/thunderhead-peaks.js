@@ -72,7 +72,7 @@ let side_meta_name = document.getElementById('side-meta-name');
             if (hr == start_hour || hr == end_hour){
                 // Default settings
                 // Images
-                hide_multiple_elements(1,10,'thunderhead-img-','opacity');
+                hide_multiple_elements(1,18,'thunderhead-img-','opacity');
                 // Info
                 hide_multiple_elements(1,6,'thunderhead-info-','opacity');
                 // BREAK PHASE Ex: 1:00 - 1:45
@@ -85,7 +85,7 @@ let side_meta_name = document.getElementById('side-meta-name');
                         show_multiple_elements(11,18,'thunderhead-img-','opacity');
                         show_multiple_elements(3,6,'thunderhead-info-','opacity');
 
-                        // maxTime = the end UTC time of this phase as a whole
+                        // maxTime = the` end UTC time of this phase as a whole
                         // maxBar = total duration of this phase
                         maxTime = start_hour * 3600 + (45 * 60); 
                         maxBar = 45 * 60;

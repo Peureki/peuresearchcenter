@@ -3332,28 +3332,33 @@ table.gathering-benchmarks td{
 	border: 1px solid var(--clr-border);
 	background-color: var(--clr-bkg-table);
 }
-/* Farm type - Keep text black b/c of the diff bkg colors */
+/* Change index */
 table.benchmarks td:nth-child(1){
+	color: var(--clr-text);
+	text-align: center;
+}
+/* Farm type - Keep text black b/c of the diff bkg colors */
+table.benchmarks td:nth-child(2){
 	color: black;
 }
 /* Time */
-table.benchmarks th:nth-child(4){
+table.benchmarks th:nth-child(5){
 	padding-left: 5px;
 	padding-right: 5px;
 }
 
-table.benchmarks td:nth-child(3):hover,
+table.benchmarks td:nth-child(4):hover,
 table.gathering-benchmarks td:nth-child(1):hover{
 	background-color: #802020;
 	color: white;
 	transition: 0.5s;
 	cursor: pointer;
 }
-table.benchmarks td:nth-child(4){
+table.benchmarks td:nth-child(5){
 	padding: auto;
 }
-table.benchmarks td:nth-child(5),
-table.benchmarks td:nth-child(6){
+table.benchmarks td:nth-child(6),
+table.benchmarks td:nth-child(7){
 	text-align: right;
 }
 

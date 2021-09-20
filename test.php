@@ -11,4 +11,6 @@ class Test extends Dbh{
 	}
 }
 
+getUsers();
+
 ?>
