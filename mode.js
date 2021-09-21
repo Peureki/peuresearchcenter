@@ -86,7 +86,7 @@ function applyMode(){
 
 		// Specifc containers and stuff
 		cssVar('clr-left-homepage', '#87E6FF'); // Left portion of homepage
-		cssVar('clr-bkg-container', 'ddd'); // Specific containers like timers
+		cssVar('clr-bkg-container', '#E4E8E4'); // Specific containers like timers
 
 		// TABLES
 		cssVar('clr-text-table', 'black'); // Text in tables

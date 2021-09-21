@@ -139,6 +139,14 @@
 
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
+					<span style = "font-weight: bold;">Sept 20, 2021</span>
+				<br>
+					- Been trying to learn more PHP and mySQL for a bit. As a result, <a href = "./benchmarks.php" target = "_blank"><u>Benchmarks</u></a> have recieved a new update with a new column called "+/-". This shows what farms are moving up or down in the rankings in the past 24 hours!
+					<br> - Added Captain Huughes event in <a href = "./timers/ember-bay.php" target = "_blank"><u>Ember Bay timer page</u></a>
+					<br> - Fixed other <a href = "./benchmarks.php" target = "_blank"><u>benchmark</u></a> tables besides the main one from having white texts on backgrounds that were hard to see in dark mode
+					<br> - Fixed a bug in <a href = "./resources/dailies.php" target = "_blank"><u>Dailies</u></a> that gave the incorrect name of each daily to copy
+					<br> - Fixed a bug in <a href = "./resources/dailies.php" target = "_blank"><u>Dailies</u></a> that showed a transparent background on the bottom timer when it was light mode
+				<br><br>
 					<span style = "font-weight: bold;">Sept 18, 2021</span>
 				<br>
 					- Created <a href = "./timers/thunderhead-peaks.php" target = "_blank"><u>Thunderhead Peaks's timer page</u></a>!

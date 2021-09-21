@@ -1928,7 +1928,7 @@ function removeRepeat(tableName, column){
       xFirstCol = x.parentNode.children[0];
       yFirstCol = y.parentNode.children[0];
       // To get the values of the daily names
-      xSecondCol = x.parentNode.children[1].innerHTML;
+      xSecondCol = x.parentNode.children[2].innerHTML;
       // To get the values of the waypoint links
       xForthCol = x.parentNode.children[4].children[0].value;
 

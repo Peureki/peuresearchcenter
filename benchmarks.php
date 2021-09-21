@@ -62,7 +62,7 @@
 					<tbody id = "tableData"></tbody>
 				</table>
 
-				<table id = "meta-benchmarks" class = "benchmarks" style = "display: none;"> 
+				<table id = "meta-benchmarks" class = "other-benchmarks" style = "display: none;"> 
 					<thead> 
 						<tr>
 							<th onclick = "sortTableByAlphabet('meta-benchmarks', 0);"> Farm Type </th>
@@ -81,7 +81,7 @@
 					<tbody id = "meta-tableData"></tbody>
 				</table>
 
-				<table id = "chest-benchmarks" class = "benchmarks" style = "display: none;"> 
+				<table id = "chest-benchmarks" class = "other-benchmarks" style = "display: none;"> 
 					<thead> 
 						<tr>
 							<th onclick = "sortTableByAlphabet('chest-benchmarks', 0);"> Type </th>
@@ -93,7 +93,7 @@
 					<tbody id = "chest-tableData"></tbody>
 				</table>
 
-				<table id = "alt-benchmarks" class = "benchmarks" style = "display: none;"> 
+				<table id = "alt-benchmarks" class = "other-benchmarks" style = "display: none;"> 
 					<thead> 
 						<tr>
 							<th onclick = "sortTableByAlphabet('alt-benchmarks', 0);"> Type </th>

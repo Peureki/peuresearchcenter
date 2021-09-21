@@ -1507,7 +1507,7 @@ b{
 	color: black;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	border: 2px solid black;
+	border: 2px solid var(--clr-border);
 	opacity: 1;
 	-webkit-transition: all 1s ease;
   	transition: all 1s ease;
@@ -3286,11 +3286,12 @@ table.exp td:nth-child(2){
 	text-align: right;
 }
 /*
-	==============================
-	===== TABLE - BENCHMARKS =====
-	==============================
+	=====================================================
+	===== TABLE - BENCHMARKS/META/CHEST/ALT PARKING =====
+	=====================================================
 */
 table.benchmarks,
+table.other-benchmarks,
 table.gathering-benchmarks{
 	width: auto;
 	margin-left: auto;
@@ -3309,6 +3310,7 @@ table.gathering-benchmarks{
 }
 
 table.benchmarks th,
+table.other-benchmarks th,
 table.gathering-benchmarks th{
 	font-size: 18px;
 	padding-top: 10px;
@@ -3318,6 +3320,7 @@ table.gathering-benchmarks th{
 	border: 1px solid var(--clr-border);
 }
 table.benchmarks th:hover,
+table.other-benchmarks th:hover,
 table.gathering-benchmarks th:hover{
 	background-color: black;
 	-webkit-transition: all 0.5s ease;
@@ -3326,6 +3329,7 @@ table.gathering-benchmarks th:hover{
 }
 
 table.benchmarks td,
+table.other-benchmarks td,
 table.gathering-benchmarks td{
 	font-size: 16px;
 	padding: 8px;
@@ -3386,12 +3390,21 @@ table.benchmark-table th{
 	color: white;
 	background-color: #802020;
 }
-
 table.benchmark-table td{
 	padding: 10px;
 	font-size: 20px;
 	background-color: #ECECDE;
 }
+/*
+	==============================================
+	============== TABLE - OTHER =================
+	==============================================
+*/
+table.other-benchmarks td:nth-child(1){
+	color: black;
+}
+
+
 /* ****************************************************
    **************Start of node-bench***************
    ****************************************************
