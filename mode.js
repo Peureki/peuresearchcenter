@@ -17,6 +17,7 @@ cssVar('clr-button-hover'); // Hovering a button
 cssVar('clr-title'); // Main page title color
 cssVar('clr-text'); // Texts
 cssVar('clr-links'); // General links
+cssVar('clr-bookmark'); // Bookmarks
 
 // Specifc containers and stuff
 cssVar('clr-left-homepage'); // Left portion of homepage
@@ -56,6 +57,7 @@ function applyMode(){
 		cssVar('clr-title', '#B22323'); // Lighter dark red
 		cssVar('clr-text', '#E0E0E0'); // light gray
 		cssVar('clr-link', '#FFD12C'); // yellow
+		cssVar('clr-bookmark', '#1A687D'); // Light gray
 
 		cssVar('clr-left-homepage', '#1A687D'); // Dark blue
 
@@ -83,6 +85,7 @@ function applyMode(){
 		cssVar('clr-title', '#802020'); // Main page title color
 		cssVar('clr-text', 'black'); // Texts
 		cssVar('clr-link', 'black'); // General links
+		cssVar('clr-bookmark', '#656765'); // Light gray
 
 		// Specifc containers and stuff
 		cssVar('clr-left-homepage', '#87E6FF'); // Left portion of homepage

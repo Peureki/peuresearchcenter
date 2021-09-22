@@ -129,6 +129,7 @@ b{
 	--clr-title: #802020;
 	--clr-text: black; /* For normal texts */
 	--clr-link: black; /* Default for links unless specified */
+	--clr-bookmark: #656765;
 
 	/* Specific containers */
 	--clr-left-homepage: #87E6FF; /* light blue - made own var because it changes for darkmode */ 
@@ -1692,7 +1693,7 @@ b{
 .bookmark-left a:hover,
 .bookmark-left li:hover,
 .bookmark-left li ul li:hover{
-	background-color: var(--clr-border);
+	background-color: var(--clr-bookmark);
 	color: white;
 	padding-left: 15px;
 	-webkit-transition: 0.3s ease;
