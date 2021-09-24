@@ -141,6 +141,10 @@
 				<p1>
 					<span style = "font-weight: bold;">Sept 20, 2021</span>
 				<br>
+					- Apparently there were missing gathering pages that I forgot to convert to PHP! Fixed <a href = "./gathering/orr-node-farm.php" target = "_blank"><u>Orr Node Farm</u></a>, <a href = "./gathering/flax-farm.php" target = "_blank"><u>Flax Farm</u></a>, and <a href = "./gathering/rich-node-farm.php" target = "_blank"><u>Rich Node Farm</u></a>
+				<br><br>
+					<span style = "font-weight: bold;">Sept 20, 2021</span>
+				<br>
 					- Been trying to learn more PHP and mySQL for a bit. As a result, <a href = "./benchmarks.php" target = "_blank"><u>Benchmarks</u></a> have recieved a new update with a new column called "+/-". This shows what farms are moving up or down in the rankings in the past 24 hours!
 					<br> - Added Captain Huughes event in <a href = "./timers/ember-bay.php" target = "_blank"><u>Ember Bay timer page</u></a>
 					<br> - Fixed other <a href = "./benchmarks.php" target = "_blank"><u>benchmark</u></a> tables besides the main one from having white texts on backgrounds that were hard to see in dark mode

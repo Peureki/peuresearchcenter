@@ -668,7 +668,8 @@ b{
 	===================================
 */
 .flex-description,
-.small-description{
+.small-description,
+.small-description-center{
 	margin: 10px;
 	padding: 20px;
 	text-align: left;
@@ -680,6 +681,9 @@ b{
 /* Same as small description, but for descriptions that are lists that
 	need to be changed in mobile 
 */
+.small-description-center{
+	text-align: center;
+}
 .flex-description{
 	display: flex;
 	justify-content: center;
@@ -1298,13 +1302,7 @@ b{
 	margin: 10px;
 }
 
-.page-gathering-picture{
-	margin-top: 25px;
-	margin-bottom: 50px;
-}
-
-.page-picture img,
-.page-gathering-picture img{
+.page-picture img{
 	display: block;
 	margin-left: auto;
 	margin-right: auto;

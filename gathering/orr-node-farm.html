@@ -1,24 +1,9 @@
 <!DOCTYPE html> 
 <html>
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160103677-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-160103677-1');
-	</script>
-	<title> Orr Node Farm </title>
-	<script>
-		var last_modified = document.lastModified,
-			css_version = '<link id = "css-version" rel ="stylesheet" type="text/css" href="../styles.css?v='+ last_modified + '">',
-			js_version = '<script type ="text/javascript" src = "../script.js?v=' + last_modified + '">'+'</'+'script>';
-		document.write(css_version);
-		document.write(js_version);
-	</script>
-	<link rel = "shortcut icon" href = "../images/assets/parachute-choya.png">
+	<!-- Defaults -->
+	<?php include('../config.php'); ?>
+	<title> Dailies </title>>
 </head>
 <body>
 	<div class = "nav">
