@@ -23,6 +23,7 @@ var tangled = {
         // For RESPAWN timers
         // Nuhoch events
         {   // [1] Chak Lobber
+            name: "Nuhoch Chak Lobber",
             status: 0,
             key: 0,
             cooldown: 60 * 7 + 45, 
@@ -37,6 +38,7 @@ var tangled = {
             doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         }, 
         {   // [2] Elementals
+            name: "Nuhoch Elementals",
             status: 0,
             key: 0,
             cooldown: 60 * 2, 
@@ -51,6 +53,7 @@ var tangled = {
             doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [3] Sporlings
+            name: "Nuhoch Sporlings",
             status: 0,
             key: 0,
             cooldown: 60 * 8, 
@@ -65,6 +68,7 @@ var tangled = {
             doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [4] Grub Pit
+            name: "Nuhoch Grub Pit",
             status: 0,
             key: 0,
             cooldown: 60 * 0, 
@@ -79,6 +83,7 @@ var tangled = {
             doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [5] Beetle
+            name: "Nuhoch Beetle",
             status: 0,
             key: 0,
             cooldown: 60 * 10 + 30, 
@@ -93,6 +98,7 @@ var tangled = {
             doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [6] Alchemist Patli
+            name: "Nuhoch Alchemist",
             status: 0,
             key: 0,
             cooldown: 60 * 13, 
@@ -107,6 +113,7 @@ var tangled = {
             doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [7] Zintl
+            name: "Nuhoch Zintl",
             status: 0,
             key: 0,
             cooldown: 60 * 23, 
@@ -121,6 +128,7 @@ var tangled = {
             doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [8] Skelk
+            name: "Nuhoch Skelk",
             status: 0,
             key: 0,
             cooldown: 60 * 24, 
@@ -137,6 +145,7 @@ var tangled = {
 
         // Ogre Outpost
         {   // [9] Wyvern Nest
+            name: "Ogre Wyvern",
             status: 0,
             key: 0,
             cooldown: 60 * 3, 
@@ -151,6 +160,7 @@ var tangled = {
             doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [10] Matriarch Bat
+            name: "Ogre Matriarch",
             status: 0,
             key: 0,
             cooldown: 60 * 7 + 45, 
@@ -165,6 +175,7 @@ var tangled = {
             doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [11] Chak Morale
+            name: "Ogre Chak",
             status: 0,
             key: 0,
             cooldown: 60 * 12 + 30, 
@@ -179,6 +190,7 @@ var tangled = {
             doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [12] Grub
+            name: "Ogre Grub",
             status: 0,
             key: 0,
             cooldown: 60 * 17, 
@@ -195,6 +207,7 @@ var tangled = {
 
         // Rata Outpost
         {   // [13] Haywire Golem
+            name: "Rata Haywire",
             status: 0,
             key: 0,
             cooldown: 60 * 4 + 30, 
@@ -209,6 +222,7 @@ var tangled = {
             doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [14] Chak Lobber
+            name: "Rata Chak Lobber",
             status: 0,
             key: 0,
             cooldown: 60 * 8, 
@@ -223,6 +237,7 @@ var tangled = {
             doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [15] Mushrooms
+            name: "Rata Mushrooms",
             status: 0,
             key: 0,
             cooldown: 60 * 3 + 15, 
@@ -239,6 +254,7 @@ var tangled = {
 
         // SCAR Outposts 
         {   // [16] Chak Crown
+            name: "SCAR Chak Crown",
             status: 0,
             key: 0,
             cooldown: 60 * 8, 
@@ -253,6 +269,7 @@ var tangled = {
             doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [17] Fire Wyvern
+            name: "SCAR Wyvern",
             status: 0,
             key: 0,
             cooldown: 60 * 7 + 30, 
@@ -267,6 +284,7 @@ var tangled = {
             doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [18] Wasps
+            name: "SCAR Wasps",
             status: 0,
             key: 0,
             cooldown: 60 * 15 + 45, 
@@ -281,6 +299,7 @@ var tangled = {
             doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
         {   // [19] Chak Lobber
+            name: "SCAR Chak Lobber",
             status: 0,
             key: 0,
             cooldown: 60 * 30 + 30, 

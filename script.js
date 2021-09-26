@@ -5708,6 +5708,88 @@ function reset (objHTML, objEvent){
                     case "Tendril":
                     objEvent[timerKey].cooldown = 60 * 10 + 15;
                     break;
+
+                    // TANGLED DEPTHS
+                    // NUHOCH
+                    case "Nuhoch Chak Lobber":
+                    objEvent[timerKey].cooldown = 60 * 36; 
+                    break;
+
+                    case "Nuhoch Elementals":
+                    objEvent[timerKey].cooldown = 60 * 13;
+                    break;
+
+                    case "Nuhoch Sporlings":
+                    objEvent[timerKey].cooldown = 60 * 30;
+                    break; 
+
+                    case "Nuhoch Grub Pit":
+                    objEvent[timerKey].cooldown = 60 * 10 + 15; 
+                    break;
+
+                    case "Nuhoch Beetle":
+                    objEvent[timerKey].cooldown = 60 * 12 + 15; 
+                    break;
+
+                    case "Nuhoch Alchemist":
+                    objEvent[timerKey].cooldown = 60 * 30; 
+                    break;
+
+                    case "Nuhoch Zintl":
+                    objEvent[timerKey].cooldown = 60 * 28 + 45;
+                    break;
+
+                    case "Nuhoch Skelk":
+                    objEvent[timerKey].cooldown = 60 * 24; 
+                    break;
+
+                    // OGRE
+                    case "Ogre Wyvern":
+                    objEvent[timerKey].cooldown = 60 * 18; 
+                    break;
+
+                    case "Ogre Matriarch":
+                    objEvent[timerKey].cooldown = 60 * 18 + 30;
+                    break;
+
+                    case "Ogre Chak":
+                    objEvent[timerKey].cooldown = 60 * 17 + 30;
+                    break;
+
+                    case "Ogre Grub":
+                    objEvent[timerKey].cooldown = 60 * 18 + 45;
+                    break;
+
+                    // RATA
+                    case "Rata Chak Lobber":
+                    objEvent[timerKey].cooldown = 60 * 18 + 15;
+                    break;
+
+                    case "Rata Haywire":
+                    objEvent[timerKey].cooldown = 60 * 22 + 15;
+                    break;
+
+                    case "Rata Mushrooms":
+                    objEvent[timerKey].cooldown = 60 * 30; 
+                    break;
+
+                    //SCAR 
+                    case "SCAR Chak Crown":
+                    objEvent[timerKey].cooldown = 60 * 36 + 30;
+                    break;
+
+                    case "SCAR Wyvern":
+                    objEvent[timerKey].cooldown = 60 * 22 + 15;
+                    break;
+
+                    case "SCAR Wasps":
+                    objEvent[timerKey].cooldown = 60 * 18 + 15;
+                    break;
+
+                    case "SCAR Chak Lobber":
+                    objEvent[timerKey].cooldown = 60 * 30; 
+                    break;
+
                 }
 
                 objEvent[timerKey].doCountdown(); 
