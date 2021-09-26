@@ -44,6 +44,7 @@ async function getBenchmarkAll(table, image){
 			for (j = 0; j < mapsDB.length; j++){
 				// If it matches, set the change index of the farm based on positions of both tables
 				if (data.spreadsheet[i].map == mapsDB[j].name){
+					console.log(mapsDB[j].name, j, data.spreadsheet[i].map, i,)
 					changeIndex = j - i; 
 					if (changeIndex == 0){
 						text_color = "";
@@ -59,6 +60,7 @@ async function getBenchmarkAll(table, image){
 					}
 				}
 			}
+
 
 			count++; 
 			// Depending on what the SS says under "farm type", change color of bkg

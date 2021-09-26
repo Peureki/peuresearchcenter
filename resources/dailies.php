@@ -32,7 +32,7 @@
 		<!-- Hidden space so the header doesn't overlap anything below -->
 		<div class = "section-header-space"></div>
 
-		<div class = "small-description">
+		<div id = "dailies" class = "small-description">
 			Depending on your account type (expansion or not), it may change what dailies you recieve for today. 
 			
 			<div style = "position: relative; display: flex; align-items: left;">
@@ -82,7 +82,7 @@
 		<!-- Hidden space so the header doesn't overlap anything below -->
 		<div class = "section-header-space"></div>
 
-			<div class = "small-description" style = "display: flex; justify-content: center;">
+			<div id = "psna" class = "small-description" style = "display: flex; justify-content: center;">
 				<span style = "font-size: 18px; margin-right: 5px;"> Copy PSNA Waypoints/Locations: </span>
 				<input  type = "text" id = "copyPSNA" class = "select-button" onclick = "copyValue(this.id);" value = "merp"> </input> 
 			</div>

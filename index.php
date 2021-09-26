@@ -139,9 +139,10 @@
 
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
-					<span style = "font-weight: bold;">Sept 20, 2021</span>
+					<span style = "font-weight: bold;">Sept 24, 2021</span>
 				<br>
 					- Apparently there were missing gathering pages that I forgot to convert to PHP! Fixed <a href = "./gathering/orr-node-farm.php" target = "_blank"><u>Orr Node Farm</u></a>, <a href = "./gathering/flax-farm.php" target = "_blank"><u>Flax Farm</u></a>, and <a href = "./gathering/rich-node-farm.php" target = "_blank"><u>Rich Node Farm</u></a>
+					<br> - Fixed bookmarks in <a href = "./resources/dailies.php" target = "_blank"><u>Dailies</u></a> from not moving the page correctly
 				<br><br>
 					<span style = "font-weight: bold;">Sept 20, 2021</span>
 				<br>
