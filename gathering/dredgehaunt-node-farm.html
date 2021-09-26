@@ -1,48 +1,17 @@
 <!DOCTYPE html> 
 <html>
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160103677-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-160103677-1');
-	</script>
-	<title> Dredgehaunt Node Farm</title>
-	<script>
-		var last_modified = document.lastModified,
-			css_version = '<link id = "css-version" rel ="stylesheet" type="text/css" href="../styles.css?v='+ last_modified + '">',
-			js_version = '<script type ="text/javascript" src = "../script.js?v=' + last_modified + '">'+'</'+'script>';
-		document.write(css_version);
-		document.write(js_version);
-	</script>
-	<link rel = "shortcut icon" href = "../images/assets/parachute-choya.png">
+	<!-- Defaults -->
+	<?php include('../config.php'); ?>
+	<title> Orr Node Farm </title>
 </head>
 <body>
-	<div class = "nav">
-		<ul>
-			<li><a href = "../index.html">Home</a></li>
-			<li><a href = "../resources.html">Resources</a></li>
-			<li><a href = "../benchmarks.html">Benchmarks</a></li>
-			<li><a href = "../timers.html">Timers</a></li>
-			<li><a href = "../research.html">Research</a></li>
-			<li><a href = "../maps.html">Maps</a></li>
-			<li><a href = "../gathering.html">Gathering</a></li>
-		</ul>
-	</div>
-
-	<!-- Main header -->
-	<div class = "border-top">
-	</div>
-
-	<div class = "page-title">
-		<h1> Dredgehaunt Node Farm </h1>
-	</div>
-
-	<div class = "border-bottom">
-	</div>
+	<!-- 
+		============================================================
+		====================== NAVIGATION BAR ======================
+		============================================================
+	-->
+	<?php include('../nav.php'); ?>
 
 	<!-- Main box -->
 	<div class = "page-box">

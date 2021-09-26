@@ -193,8 +193,8 @@ async function getBenchmarkAll(table, image){
 				pop = "Common";
 				break;
 
-				case "D#802020gehaunt Node Farm (w/ Volatile)":
-				link = "./gathering/d#802020gehaunt-node-farm.php";
+				case "Dredgehaunt Node Farm (w/ Volatile)":
+				link = "./gathering/dredgehaunt-node-farm.php";
 				pop = "Uncommon";
 				break;
 
@@ -301,11 +301,6 @@ async function getBenchmarkAll(table, image){
 				case "Legendary Bounty Train":
 				link = "./maps/legendary-bounty-train.php";
 				pop = "Common";
-				break;
-
-				case "LS3 Node Farm (w/ Volatile)":
-				link = "./gathering/ls3-node-farm.php";
-				pop = "Rare";
 				break;
 
 				case "LS4 Meta Train":
@@ -469,7 +464,7 @@ async function getBenchmarkAll(table, image){
 				break;
 
 				case "Winterberry Farm (w/ Volatile)":
-				link = "./gathering/winterberry-node-farm.php";
+				link = "./maps/bitterfrost-frontier.php#nodes";
 				pop = "Common";
 				break;
 

@@ -282,8 +282,7 @@ var tangled = {
             sidebox: document.getElementById('tangled-17-sidebox'),
             num: document.getElementById('numerical-sidetimer-tangled-17'),
             doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
-        },
-        {   // [18] Wasps
+                 {   // [18] Wasps
             name: "SCAR Wasps",
             status: 0,
             key: 0,

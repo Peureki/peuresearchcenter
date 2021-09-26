@@ -978,36 +978,24 @@ async function getGatheringBenchmarkAll(table, image){
 			var link = '';
 
 			switch (data.spreadsheet[i].map){
-				case "Amnoon Nodes/Caches (w/ Volatile)":
-				link = "./gathering/amnoon-node-cache-farm.php";
-				break;
-
 				case "Bjora Marches Node Farm (B/V/V)":
-				link = "./gathering/bjora-node-farm.php";
+				link = "./maps/bjora-marches.php";
 				break;
 
 				case "Bjora Marches Node Farm (w/ Volatile)":
-				link = "./gathering/bjora-node-farm.php";
+				link = "./maps/bjora-marches.php";
 				break;
 
-				case "D#802020gehaunt Node Farm (w/ Volatile)":
-				link = "./gathering/d#802020gehaunt-node-farm.php";
+				case "Dgehaunt Node Farm (w/ Volatile)":
+				link = "./gathering/drgehaunt-node-farm.php";
 				break;
 
 				case "Flax Farm (w/ Volatile)":
 				link = "./gathering/flax-farm.php";
 				break;
 
-				case "Lake Doric Node Farm (B/V/V)":
-				link = "./gathering/lake-doric-node-farm.php";
-				break;
-
 				case "Lake Doric Node Farm (w/ Volatile)":
-				link = "./gathering/lake-doric-node-farm.php";
-				break;
-
-				case "LS3 Node Farm (w/ Volatile)":
-				link = "./gathering/ls3-node-farm.php";
+				link = "./maps/lake-doric.php#node-farm";
 				break;
 
 				case "Orr Node Farm (w/ Volatile)":
@@ -1018,16 +1006,12 @@ async function getGatheringBenchmarkAll(table, image){
 				link = "./gathering/rich-node-farm.php";
 				break;
 
-				case "Sandswept Node Farm (B/V/V)":
-				link = "./gathering/sandswept-isles-node-farm.php";
-				break;
-
 				case "Sandswept Node Farm (w/ Volatile)":
-				link = "./gathering/sandswept-isles-node-farm.php";
+				link = "./maps/sandswept-isles.php#node-farm";
 				break;
 
 				case "Siren's Landing Node Farm (w/ Volatile)":
-				link = "./gathering/sirens-landing-node-farm.php";
+				link = "./maps/sirens-landing.php#node-farm";
 				break;
 
 				case "Sparkfly Fen Node Farm (w/ Volatile)":
@@ -1039,7 +1023,7 @@ async function getGatheringBenchmarkAll(table, image){
 				break;
 
 				case "Winterberry Farm (w/ Volatile)":
-				link = "./gathering/winterberry-node-farm.php";
+				link = "./maps/bitterfrost-frontier.php#nodes";
 				break;
 			}
 
