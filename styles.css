@@ -126,6 +126,7 @@ b{
 	--clr-border: black;
 	--clr-button-hover: #E4E8E4; /* light gray */
 	--clr-button-text: #E4E8E4; /* Light gray */
+	--clr-hover-bkg: #C5C9C5; /* LIght but darker gray */
 	--clr-title: #802020;
 	--clr-text: black; /* For normal texts */
 	--clr-link: black; /* Default for links unless specified */
@@ -3363,6 +3364,36 @@ table.benchmarks td:nth-child(5){
 table.benchmarks td:nth-child(6),
 table.benchmarks td:nth-child(7){
 	text-align: right;
+}
+/*
+	============================================================
+	=============== HOVER TOOLTIP FOR BENCHMARKS ===============
+	============================================================
+*/
+table.benchmarks .hoverTooltip{
+	display: none;
+	text-align: left;
+    background: var(--clr-hover-bkg);
+    margin-left: 20px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1000;
+    color: var(--clr-text);
+    border: 1px solid var(--clr-border);
+    font-size: 17px;
+    font-style: normal;
+    white-space: nowrap;
+}
+table.benchmarks td:hover .hoverTooltip{
+	display: inline-block;
+}
+.hoverTooltip-left{
+	float: left;
+	margin-right: 10px;
+}
+.hoverTooltip-right{
+	float: right;
+	margin-left: 10px;
 }
 
 table.benchmark-table{

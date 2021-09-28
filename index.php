@@ -143,6 +143,7 @@
 				<br>
 					- Fixed a major bug where all the <a href = "./timers/tangled-depths.php" target = "_blank"><u>Tangled Depths respawn timers</u></a> were not correct at all. This was due to me restructing the JS a week ago and didn't notice until I did a train.. 
 					<br> - Fixed broken links in node farms in <a href = "./gathering.php" target = "_blank"><u>Gathering</u></a>
+					<br> - Removed 2 node farms: Amnoon Farm & LS3 Node Farm. These were kinda weird and niche farms that I don't think are relevant to today's gathering farms. 
 				<br><br>
 					<span style = "font-weight: bold;">Sept 24, 2021</span>
 				<br>

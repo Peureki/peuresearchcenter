@@ -14,6 +14,7 @@ cssVar('clr-bkg'); // Background of the whole pages
 cssVar('clr-bold'); // Anything in <b> tag 
 cssVar('clr-border'); // General borders
 cssVar('clr-button-hover'); // Hovering a button
+cssVar('clr-hover-bkg'); // Light (but darker grey)
 cssVar('clr-title'); // Main page title color
 cssVar('clr-text'); // Texts
 cssVar('clr-links'); // General links
@@ -54,6 +55,7 @@ function applyMode(){
 		cssVar('clr-bold', '#93CDDD'); // LIght blue
 		cssVar('clr-border', '#1A687D'); // Dark blue
 		cssVar('clr-button-hover', '#1A687D'); // dark blue
+		cssVar('clr-hover-bkg', '#4E5055'); // Dark gray but lighter
 		cssVar('clr-title', '#B22323'); // Lighter dark red
 		cssVar('clr-text', '#E0E0E0'); // light gray
 		cssVar('clr-link', '#FFD12C'); // yellow
@@ -82,6 +84,7 @@ function applyMode(){
 		cssVar('clr-bold', '#1A687D'); // Dark blue
 		cssVar('clr-border', 'black'); // General borders
 		cssVar('clr-button-hover', '#FFD12C'); // yellow
+		cssVar('clr-hover-bkg', '#C5C9C5'); // Light gray but darker
 		cssVar('clr-title', '#802020'); // Main page title color
 		cssVar('clr-text', 'black'); // Texts
 		cssVar('clr-link', 'black'); // General links

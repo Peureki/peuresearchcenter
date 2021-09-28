@@ -6228,7 +6228,7 @@ function format_values_subpage(value){
 	};
 }
 
-function displayValues(value, path){
+function displayValues(value){
 	var amount = Math.floor(value);
 	var negative = false; 
 	var negative_symbol = '';
@@ -6244,14 +6244,21 @@ function displayValues(value, path){
 	let imgCheck = 0; 
 	let dot; 
 
-	if (path == 0){
-		dot = ".";
-	} else {
-		dot = "..";
+	try{
+		imgCopper = `<img style='vertical-align:middle;' src = '../images/assets/Copper_coin.png'>`;
+	} catch (error){
+		console.log("there was an error")
+		imgCheck = 1; 
 	}
 
-	imgCopper = `<img style='vertical-align:middle;' src = '${dot}/images/assets/Copper_coin.png'>`;
-	imgSilver = `<img style='vertical-align:middle;' src = '${dot}/images/assets/Silver_coin.png'>`;
+	if (imgCheck == 1){
+		dot = '..';
+	} else {
+		dot = '.';
+	}
+
+	imgCopper = `<img style='vertical-align:middle;' src = '${dot}/images/assets/Copper_coin.png'>`,
+	imgSilver = `<img style='vertical-align:middle;' src = '${dot}/images/assets/Silver_coin.png'>`,
 	imgGold = `<img style='vertical-align:middle;' src = '${dot}/images/assets/Gold_coin.png'>`;
 
 	if (amount < 0){
@@ -6260,7 +6267,7 @@ function displayValues(value, path){
 	}
 
 	if (amount == 0){
-		copperHTML = " 0"+`${copper} ` + imgCopper;
+		copperHTML = " 0"+`${copper} <img style="vertical-align:middle;" src = "../images/assets/Copper_coin.png">`;
 	}
 
 
@@ -6268,9 +6275,9 @@ function displayValues(value, path){
 		copper = (amount % 100);
 		amount = Math.floor(amount/100);
 		if (copper >= 10){
-			copperHTML = ` ${copper} ` + imgCopper;
+			copperHTML = ` ${copper} <img style="vertical-align:middle;" src = "../images/assets/Copper_coin.png">`;
 		} else {
-			copperHTML = " 0"+`${copper} ` + imgCopper;
+			copperHTML = " 0"+`${copper} <img style="vertical-align:middle;" src = "../images/assets/Copper_coin.png">`;
 		}
 		if (copper == 100){
 			copper = 0;
@@ -6283,9 +6290,9 @@ function displayValues(value, path){
 
 
 		if (silver >= 10){
-			silverHTML = ` ${silver} ` + imgSilver;
+			silverHTML = ` ${silver}  <img style="vertical-align:middle;" src = "../images/assets/Silver_coin.png">`;
 		} else {
-			silverHTML = " 0"+`${silver} ` + imgSilver;
+			silverHTML = " 0"+`${silver}  <img style="vertical-align:middle;" src = "../images/assets/Silver_coin.png">`;
 		}
 		if (silver == 100){
 			silver = 0;
@@ -6297,10 +6304,10 @@ function displayValues(value, path){
 	} else {
 		if (amount > 10){
 			gold = amount;
-			goldHTML = ` ${gold} ` + imgGold;
+			goldHTML = ` ${gold} <img style="vertical-align:middle;" src = "../images/assets/Gold_coin.png">`;
 		} else {
 			gold = amount;
-			goldHTML = `${gold} ` + imgGold;
+			goldHTML = `${gold} <img style="vertical-align:middle;" src = "../images/assets/Gold_coin.png">`;
 		}
 	}
 	
@@ -6308,15 +6315,15 @@ function displayValues(value, path){
 	if (negative == true){
 		negative_symbol = ' -';
 		if (gold > 0){
-			goldHTML = `${gold*-1} ` + imgGold;
+			goldHTML = `${gold*-1} <img style="vertical-align:middle;" src = "../images/assets/Gold_coin.png">`;
 		} else {
 			goldHTML = ``;
 			if (silver > 0){
-				silverHTML = `${silver*-1}  ` + imgSilver;
+				silverHTML = `${silver*-1}  <img style="vertical-align:middle;" src = "../images/assets/Silver_coin.png">`;
 			} else {
 				silverHTML = ``;
 				if (copper > 0){
-					copperHTML = `${copper*-1} ` + imgCopper;
+					copperHTML = `${copper*-1} <img style="vertical-align:middle;" src = "../images/assets/Copper_coin.png">`;
 				} else {
 					copperHTML = ``;
 				} 

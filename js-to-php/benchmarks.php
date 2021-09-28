@@ -26,13 +26,17 @@ async function getBenchmarkAll(table, image){
 		tradecontract, 
 		elegymosaic, 
 		unboundmagic, 
-		volatilemagic;
+		volatilemagic,
+		nowGPH,
+		map24GPH,
+		map24GPHChange;
 
 	let time, hours, minutes,
-		text_color, background_color;
+		colorPosChange, colorGPHChange, background_color;
 	// Get benchmarks from mySQL 
 	// This DB gets updated every 24 hours 
 	let mapsDB = <?php echo $mapsDB->getMaps(); ?>;
+	console.log(mapsDB)
 
 	let count = 0;
 	//Loop through all of the named benchmarks until there's an empy cell in the spreadsheet
@@ -44,24 +48,21 @@ async function getBenchmarkAll(table, image){
 			for (j = 0; j < mapsDB.length; j++){
 				// If it matches, set the change index of the farm based on positions of both tables
 				if (data.spreadsheet[i].map == mapsDB[j].name){
-					console.log(mapsDB[j].name, j, data.spreadsheet[i].map, i,)
 					changeIndex = j - i; 
 					if (changeIndex == 0){
-						text_color = "";
+						colorPosChange = "";
 						break;
 					}
 					if (changeIndex > 0){
 						changeIndex = "+" + changeIndex;
-						text_color = "#41AF2F"; // green
+						colorPosChange = "#41AF2F"; // green
 						break;
 					} else {
-						text_color = "#EE3D3D"; // red
+						colorPosChange = "#EE3D3D"; // red
 						break;
 					}
 				}
 			}
-
-
 			count++; 
 			// Depending on what the SS says under "farm type", change color of bkg
 			switch(data.spreadsheet[i].farmtype){
@@ -94,6 +95,16 @@ async function getBenchmarkAll(table, image){
 			unboundmagic = Math.floor(data.spreadsheet[i].unboundmagic);
 			volatilemagic = Math.floor(data.spreadsheet[i].volatilemagic);
 
+			nowGPH = data.spreadsheet[i].gold; 
+			map24GPH = mapsDB[i].gold_per_hour;
+			map24GPHChange = nowGPH - map24GPH;
+			// If the change of the GPH from the last 24 hours is more/less than zero, change text color
+			if (map24GPHChange > 0){
+				colorGPHChange = "#41AF2F"; // green
+			} else {
+				colorGPHChange = "#EE3D3D"; // red
+			}
+
 			// Display the time in a 00:00 format
 			time = Math.floor(data.spreadsheet[i].time); 
 			hours = Math.floor(time / 100);
@@ -116,7 +127,7 @@ async function getBenchmarkAll(table, image){
 				case "Amal / Key Metas (PoF/LS4 & 5)":
 				link = "./maps/combo-farms.php#amalgamated-key-farm";
 				pop = "Rare";
-				break
+				break;
 
 				case "Amnoon Nodes/Caches (w/ Volatile)":
 				link = "./gathering/amnoon-node-cache-farm.php";
@@ -199,6 +210,11 @@ async function getBenchmarkAll(table, image){
 				break;
 
 				case "Drizzlewood Coast":
+				link = "./maps/drizzlewood-coast.php";
+				pop = "Common";
+				break;
+
+				case "Drizzlewood Coast (South)":
 				link = "./maps/drizzlewood-coast.php";
 				pop = "Common";
 				break;
@@ -443,6 +459,11 @@ async function getBenchmarkAll(table, image){
 				pop = "Rare";
 				break;
 
+				case "Thunderhead Peaks":
+				link = "./maps/thunderhead-peaks.php";
+				pop = "Rare";
+				break;
+
 				case "Thunderhead / Kourna":
 				link = "./maps/combo-farms.php#thunderhead-kourna.php";
 				pop = "Rare";
@@ -475,13 +496,17 @@ async function getBenchmarkAll(table, image){
 			}
 		
 			dataHTML += `<tr>
-			<td style = "color: ${text_color};"> ${changeIndex} </td> 
+			<td style = "color: ${colorPosChange};"> ${changeIndex} </td> 
 			<td style = "background-color:${background_color}">${data.spreadsheet[i].farmtype}</td>
 			<td> ${pop} </td>
 			<td onclick = "location.href = '${link}';">${data.spreadsheet[i].map}</td>
 			<td>${time}</td>
-			<td>${format_values(data.spreadsheet[i].gold).gold}${format_values(data.spreadsheet[i].gold).silver}${format_values(data.spreadsheet[i].gold).copper}</td>
-			<td>${format_values(totalGold).gold}${format_values(totalGold).silver}${format_values(totalGold).copper}</td>
+			<td>${displayValues(data.spreadsheet[i].gold, 0)} 
+				<div class = "hoverTooltip"> <b>Gold Per Hour</b>
+				<br> <span class = "hoverTooltip-left"> Recent: </span><span class = "hoverTooltip-right">${displayValues(data.spreadsheet[i].gold, 0)} </span>
+				<br> <span class = "hoverTooltip-left"> 24 hours ago: </span><span class = "hoverTooltip-right">${displayValues(mapsDB[i].gold_per_hour, 0)} </span>
+				<br> <span class = "hoverTooltip-left"> 24 hour change: </span><span class = "hoverTooltip-right" style = "color: ${colorGPHChange}">${displayValues(map24GPHChange, 0)} </span></div> </td>
+			<td>${displayValues(totalGold, 0)}</td>
 			<td>${karma}</td>
 			<td>${spiritshard}</td>
 			<td>${tradecontract}</td>
