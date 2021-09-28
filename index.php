@@ -123,7 +123,7 @@
 								</div>
 							</div>
 						</div>
-
+ 
 						<p2 id = "num-1" style = "display: none;"> </p2>
 					</div> <!-- End of impromtu -->
 				</div> <!-- End of peu train desc -->
@@ -139,6 +139,10 @@
 
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
+					<span style = "font-weight: bold;">Sept 26, 2021</span>
+				<br>
+					- Added a tooltip when you hover over the gold/hour for a specific farm in <a href = "./benchmarks.php" target = "_blank"><u>Benchmarks</u></a>. You can see what the difference is in gold/hour 24 hours ago. 
+				<br><br>
 					<span style = "font-weight: bold;">Sept 26, 2021</span>
 				<br>
 					- Fixed a major bug where all the <a href = "./timers/tangled-depths.php" target = "_blank"><u>Tangled Depths respawn timers</u></a> were not correct at all. This was due to me restructing the JS a week ago and didn't notice until I did a train.. 

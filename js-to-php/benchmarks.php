@@ -520,7 +520,7 @@ async function getBenchmarkAll(table, image){
 	}
 	//Magic
 	tableBody.innerHTML = dataHTML;
-	sortTableByGPH('benchmarks', 5);
+	sortTableByPrice('benchmarks', 5);
 
 }
 </script>

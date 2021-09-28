@@ -4363,12 +4363,12 @@ function sortTableByGPH_Two(tableName, column){
 function sortTableByPrice(tableName, column){
 
   var table, rows, switching, i, x, y, shouldSwitch, isNeg;
+  let sameNumCheck = 0;
   var findNum = /(|-)[0-9]/g,
   	  c,
   	  s,
   	  g;
   table = document.getElementById(tableName);
-  console.log(table);
   // The .match creates an array with the nums from the spreadsheet. ex: 1g 23s 45c = [1,2,3,4,5]
   // Returns the array [1,2,3,4,5] -> 12345
   function currency(array){	
@@ -4379,6 +4379,22 @@ function sortTableByPrice(tableName, column){
   		array[0] = parseInt(array[0]) * -1;
   		isNeg = true;
   	}
+  	// Since some TDs have tooltips, it increases the length of the array. Cut the array specifically to only show the actual GPH so it can sort properly
+  	switch(array.length){
+  		case 25: 
+  		case 26: 
+  		array = array.slice(0, 5);
+ 		break;
+
+ 		case 27: 
+ 		case 28:
+ 		case 29:
+ 		array = array.slice(0, 6);
+ 		break;
+  	}
+
+  	console.log(array);
+
   	switch (array.length){
   		case 1:
   		c = (parseInt(array[array.length - 1]));
