@@ -4380,20 +4380,10 @@ function sortTableByPrice(tableName, column){
   		isNeg = true;
   	}
   	// Since some TDs have tooltips, it increases the length of the array. Cut the array specifically to only show the actual GPH so it can sort properly
-  	switch(array.length){
-  		case 25: 
-  		case 26: 
+  	if (array.length == 25 || array.length == 26)
   		array = array.slice(0, 5);
- 		break;
-
- 		case 27: 
- 		case 28:
- 		case 29:
- 		array = array.slice(0, 6);
- 		break;
-  	}
-
-  	console.log(array);
+  	if (array.length >= 27)
+  		array = array.slice(0, 6);
 
   	switch (array.length){
   		case 1:

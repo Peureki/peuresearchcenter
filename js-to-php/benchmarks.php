@@ -27,9 +27,8 @@ async function getBenchmarkAll(table, image){
 		elegymosaic, 
 		unboundmagic, 
 		volatilemagic,
-		nowGPH,
-		map24GPH,
-		map24GPHChange;
+		nowGPH, map24GPH, map24GPHChange,
+		totalGold, total24Gold, total24GoldChange, colorTotalChange;
 
 	let time, hours, minutes,
 		colorPosChange, colorGPHChange, background_color;
@@ -44,10 +43,31 @@ async function getBenchmarkAll(table, image){
 	for (i = 0; i < data.spreadsheet.length; i++){
 		// Check if there's not an empty farm
 		if (data.spreadsheet[i].farmtype != ""){
+			// Display the time in a 00:00 format
+			time = Math.floor(data.spreadsheet[i].time); 
+			hours = Math.floor(time / 100);
+			minutes = time % 100; 
+
+			if (minutes < 10){
+				minutes = "0" + minutes; 
+			}
+			time = hours + ":" + minutes;
+
 			// At current farm, find the matching farm from the SQL DB
 			for (j = 0; j < mapsDB.length; j++){
 				// If it matches, set the change index of the farm based on positions of both tables
 				if (data.spreadsheet[i].map == mapsDB[j].name){
+					// Gold per hour tooltip 
+					nowGPH = data.spreadsheet[i].gold; 
+					map24GPH = mapsDB[j].gold_per_hour;
+					map24GPHChange = nowGPH - map24GPH;
+
+					// Total gold tooltip
+					totalGold = data.spreadsheet[i].gold * (hours + (minutes/60));
+					total24Gold = mapsDB[j].total_gold; 
+					total24GoldChange = totalGold - total24Gold;
+
+					// Finding index
 					changeIndex = j - i; 
 					if (changeIndex == 0){
 						colorPosChange = "";
@@ -95,29 +115,20 @@ async function getBenchmarkAll(table, image){
 			unboundmagic = Math.floor(data.spreadsheet[i].unboundmagic);
 			volatilemagic = Math.floor(data.spreadsheet[i].volatilemagic);
 
-			nowGPH = data.spreadsheet[i].gold; 
-			map24GPH = mapsDB[i].gold_per_hour;
-			map24GPHChange = nowGPH - map24GPH;
+			 
+
 			// If the change of the GPH from the last 24 hours is more/less than zero, change text color
 			if (map24GPHChange > 0){
 				colorGPHChange = "#41AF2F"; // green
 			} else {
 				colorGPHChange = "#EE3D3D"; // red
 			}
-
-			// Display the time in a 00:00 format
-			time = Math.floor(data.spreadsheet[i].time); 
-			hours = Math.floor(time / 100);
-			minutes = time % 100; 
-
-			if (minutes < 10){
-				minutes = "0" + minutes; 
+			if (total24GoldChange > 0){
+				colorTotalChange = "#41AF2F"; // green
+			} else {
+				colorTotalChange = "#EE3D3D"; // red
 			}
 
-			time = hours + ":" + minutes;
-
-			// Get the total amount of gold for a benchmark
-			let totalGold = data.spreadsheet[i].gold * (hours + (minutes/60));
 
 			let link = '',
 				 pop,
@@ -506,7 +517,11 @@ async function getBenchmarkAll(table, image){
 				<br> <span class = "hoverTooltip-left"> Recent: </span><span class = "hoverTooltip-right">${displayValues(data.spreadsheet[i].gold, 0)} </span>
 				<br> <span class = "hoverTooltip-left"> 24 hours ago: </span><span class = "hoverTooltip-right">${displayValues(mapsDB[i].gold_per_hour, 0)} </span>
 				<br> <span class = "hoverTooltip-left"> 24 hour change: </span><span class = "hoverTooltip-right" style = "color: ${colorGPHChange}">${displayValues(map24GPHChange, 0)} </span></div> </td>
-			<td>${displayValues(totalGold, 0)}</td>
+			<td>${displayValues(totalGold, 0)}
+				<div class = "hoverTooltip"> <b>Total Gold</b>
+				<br> <span class = "hoverTooltip-left"> Recent: </span><span class = "hoverTooltip-right">${displayValues(totalGold, 0)} </span>
+				<br> <span class = "hoverTooltip-left"> 24 hours ago: </span><span class = "hoverTooltip-right">${displayValues(total24Gold, 0)} </span>
+				<br> <span class = "hoverTooltip-left"> 24 hour change: </span><span class = "hoverTooltip-right" style = "color: ${colorTotalChange}">${displayValues(total24GoldChange, 0)} </span></div> </td>
 			<td>${karma}</td>
 			<td>${spiritshard}</td>
 			<td>${tradecontract}</td>
