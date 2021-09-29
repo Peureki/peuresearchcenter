@@ -37,16 +37,17 @@ class Test extends BenchmarksDB{
 }
 */
 class Maps extends BenchmarksDB{
-	public function setMaps(){
+	public function setMaps($table){
 		// Get JSON from Google Spreadsheet 
 		$json = file_get_contents('https://script.google.com/macros/s/AKfycbwzCoaJtZVmPUO5nus0i6mLWi1CJhXPkww1NFGX/exec');
 		$mapObj = json_decode($json, TRUE);
+
 		// Connect to the DB
-		$sql = "SELECT count(*) FROM maps";
+		$sql = "SELECT * FROM $table";
 		$result = $this->connect()->query($sql);
 
 		// Remove items from previous list
-		$sql = "DELETE FROM maps"; 
+		$sql = "DELETE FROM $table"; 
 		$stmt = $this->connect()->exec($sql);
 
 		// Set each var to match var in spreadsheet
@@ -72,16 +73,16 @@ class Maps extends BenchmarksDB{
 				$map = str_replace("'", "\'", $map);
 			}
 			// Insert into DB
-			$sql = "INSERT INTO maps (type, name, time, gold_per_hour, total_gold, karma, spirit_shards, trade_contracts, unbound_magic, volatile_magic)
+			$sql = "INSERT INTO $table (type, name, time, gold_per_hour, total_gold, karma, spirit_shards, trade_contracts, unbound_magic, volatile_magic)
 			VALUES ('$farmtype', '$map', '$time', '$gold_per_hour', '$total_gold', '$karma', '$spirit_shards', '$trade_contracts', '$unbound_magic', '$volatile_magic')";
 			// Execute the SQL stmt 
 			$stmt = $this->connect()->exec($sql);
 		} 
 	}
 
-	public function getMaps(){
+	public function getMaps($table){
 		// Get full table and sort by gold_per_hour col and descending
-		$sql = "SELECT * FROM maps ORDER BY gold_per_hour DESC";
+		$sql = "SELECT * FROM $table ORDER BY gold_per_hour DESC";
 		$result = $this->connect()->query($sql);
 		// Create empty array
 		$array = Array();
@@ -93,6 +94,8 @@ class Maps extends BenchmarksDB{
 		$json = json_encode($array);
 		return $json;
 	}
+
+
 }
 // Initialize map DB
 $mapsDB = new Maps();

@@ -34,10 +34,11 @@ async function getBenchmarkAll(table, image){
 		colorPosChange, colorGPHChange, background_color;
 	// Get benchmarks from mySQL 
 	// This DB gets updated every 24 hours 
-	let mapsDB = <?php echo $mapsDB->getMaps(); ?>;
-	console.log(mapsDB)
+	let maps_24hr = <?php echo $mapsDB->getMaps("maps_24hr"); ?>,
+		maps_1w = <?php echo $mapsDB->getMaps("maps_1w"); ?>;
 
-	let count = 0;
+	console.log(data.spreadsheet)
+
 	//Loop through all of the named benchmarks until there's an empy cell in the spreadsheet
 	//Places those data into the empty data table
 	for (i = 0; i < data.spreadsheet.length; i++){
@@ -54,17 +55,17 @@ async function getBenchmarkAll(table, image){
 			time = hours + ":" + minutes;
 
 			// At current farm, find the matching farm from the SQL DB
-			for (j = 0; j < mapsDB.length; j++){
+			for (j = 0; j < maps_24hr.length; j++){
 				// If it matches, set the change index of the farm based on positions of both tables
-				if (data.spreadsheet[i].map == mapsDB[j].name){
+				if (data.spreadsheet[i].map == maps_24hr[j].name){
 					// Gold per hour tooltip 
 					nowGPH = data.spreadsheet[i].gold; 
-					map24GPH = mapsDB[j].gold_per_hour;
+					map24GPH = maps_24hr[j].gold_per_hour;
 					map24GPHChange = nowGPH - map24GPH;
 
 					// Total gold tooltip
-					totalGold = data.spreadsheet[i].gold * (hours + (minutes/60));
-					total24Gold = mapsDB[j].total_gold; 
+					totalGold = data.spreadsheet[i].goldss;
+					total24Gold = maps_24hr[j].total_gold; 
 					total24GoldChange = totalGold - total24Gold;
 
 					// Finding index
@@ -83,7 +84,6 @@ async function getBenchmarkAll(table, image){
 					}
 				}
 			}
-			count++; 
 			// Depending on what the SS says under "farm type", change color of bkg
 			switch(data.spreadsheet[i].farmtype){
 
@@ -114,8 +114,6 @@ async function getBenchmarkAll(table, image){
 			elegymosaic = Math.floor(data.spreadsheet[i].elegymosaic);
 			unboundmagic = Math.floor(data.spreadsheet[i].unboundmagic);
 			volatilemagic = Math.floor(data.spreadsheet[i].volatilemagic);
-
-			 
 
 			// If the change of the GPH from the last 24 hours is more/less than zero, change text color
 			if (map24GPHChange > 0){
@@ -515,7 +513,7 @@ async function getBenchmarkAll(table, image){
 			<td><div id = "gph">${displayValues(data.spreadsheet[i].gold, 0)}</div>
 				<div class = "hoverTooltip"> <b>Gold Per Hour</b>
 				<br> <span class = "hoverTooltip-left"> Recent: </span><span class = "hoverTooltip-right">${displayValues(data.spreadsheet[i].gold, 0)} </span>
-				<br> <span class = "hoverTooltip-left"> 24 hours ago: </span><span class = "hoverTooltip-right">${displayValues(mapsDB[i].gold_per_hour, 0)} </span>
+				<br> <span class = "hoverTooltip-left"> 24 hours ago: </span><span class = "hoverTooltip-right">${displayValues(maps_24hr[i].gold_per_hour, 0)} </span>
 				<br> <span class = "hoverTooltip-left"> 24 hour change: </span><span class = "hoverTooltip-right" style = "color: ${colorGPHChange}">${displayValues(map24GPHChange, 0)} </span></div> </td>
 			<td>${displayValues(totalGold, 0)}
 				<div class = "hoverTooltip"> <b>Total Gold</b>
