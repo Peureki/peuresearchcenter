@@ -4467,8 +4467,18 @@ function sortTableByPrice(tableName, column){
       x = rows[i].getElementsByTagName("TD")[column];
       y = rows[i + 1].getElementsByTagName("TD")[column];
 
-      x = currency(x.innerHTML.match(findNum),g,s,c);
-      y = currency(y.innerHTML.match(findNum),g,s,c);
+      if (x.children.length > 0 && x.children[0].id == "gph"){
+      	x = currency(x.children[0].innerHTML.match(findNum),g,s,c);
+      	y = currency(y.children[0].innerHTML.match(findNum),g,s,c);
+      } else {
+      	x = currency(x.innerHTML.match(findNum),g,s,c);
+      	y = currency(y.innerHTML.match(findNum),g,s,c);
+      }
+
+      //x = currency(x.innerHTML.match(findNum),g,s,c);
+     // y = currency(y.innerHTML.match(findNum),g,s,c);
+
+      
 
       //check if the two rows should switch place:
       if (y > x) {

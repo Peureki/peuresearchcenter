@@ -139,7 +139,7 @@
 
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
-					<span style = "font-weight: bold;">Sept 26, 2021</span>
+					<span style = "font-weight: bold;">Sept 28, 2021</span>
 				<br>
 					- Added a tooltip when you hover over the gold/hour for a specific farm in <a href = "./benchmarks.php" target = "_blank"><u>Benchmarks</u></a>. You can see what the difference is in gold/hour 24 hours ago. 
 				<br><br>

@@ -512,7 +512,7 @@ async function getBenchmarkAll(table, image){
 			<td> ${pop} </td>
 			<td onclick = "location.href = '${link}';">${data.spreadsheet[i].map}</td>
 			<td>${time}</td>
-			<td>${displayValues(data.spreadsheet[i].gold, 0)} 
+			<td><div id = "gph">${displayValues(data.spreadsheet[i].gold, 0)}</div>
 				<div class = "hoverTooltip"> <b>Gold Per Hour</b>
 				<br> <span class = "hoverTooltip-left"> Recent: </span><span class = "hoverTooltip-right">${displayValues(data.spreadsheet[i].gold, 0)} </span>
 				<br> <span class = "hoverTooltip-left"> 24 hours ago: </span><span class = "hoverTooltip-right">${displayValues(mapsDB[i].gold_per_hour, 0)} </span>

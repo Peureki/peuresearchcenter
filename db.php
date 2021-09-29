@@ -80,7 +80,8 @@ class Maps extends BenchmarksDB{
 	}
 
 	public function getMaps(){
-		$sql = "SELECT * FROM maps";
+		// Get full table and sort by gold_per_hour col and descending
+		$sql = "SELECT * FROM maps ORDER BY gold_per_hour DESC";
 		$result = $this->connect()->query($sql);
 		// Create empty array
 		$array = Array();
