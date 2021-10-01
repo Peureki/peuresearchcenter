@@ -22,5 +22,3 @@
 		<p1> Associated logos, renderings, images, and other related content are registered trademarks to ArenaNet or NCSOFT.</p1>
 	</div>
 </div>
-<!-- Include dark mode feature -->
-<script type = "text/javascript" src = "<?php echo $base;?>/mode.js?v=<?php echo $date;?>"></script>

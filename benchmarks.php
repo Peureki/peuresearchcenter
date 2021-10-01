@@ -32,6 +32,14 @@
 		<p1><a href="./resources/about-benchmarks.html"> About the benchmarks </a></p1>
 	</div>
 
+	<!--
+	<div class = "page-box">
+		<div class = "small-description">
+
+		</div>
+	</div>
+	-->
+
 	<div style = "position: relative; overflow-x: auto;">
 		<div id = "page-box" class = "page-box" style = "display: flex; flex-direction: column; align-items: center; justify-content: center; align-items: center;">
 			<div id = "revert" class = "red-button" style = "display: flex; align-items: center; justify-content: center; margin: 20px;">

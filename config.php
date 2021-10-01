@@ -18,6 +18,14 @@
 	$base = "http://localhost/peuresearchcenter";
 	$date = date("D M d, Y G:i"); // For versioning
 ?>
+
+<div onclick = "applyMode();" class = "dark-mode">
+	<span id = "mode-circle"></span>
+</div>
+
+<!-- Include dark mode feature -->
+<script type = "text/javascript" src = "<?php echo $base;?>/mode.js?v=<?php echo $date;?>"></script>
+
 <!-- Main files -->
 <link type = "text/css" rel = "stylesheet" href = "<?php echo $base;?>/styles.css?v=<?php echo $date;?>">
 <script type = "text/javascript" src = "<?php echo $base;?>/script.js?v=<?php echo $date;?>"></script>

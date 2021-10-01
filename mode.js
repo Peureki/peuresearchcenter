@@ -34,7 +34,7 @@ cssVar('clr-bkg-button'); // Buttons
 
 // Apply whether or not the user choose dark/light mode
 // First check what it is currently 
-var modeCircle = document.getElementById('mode-circle');
+let modeCircle = document.getElementById('mode-circle');
 if (localStorage.getItem('mode') == "dark"){
 	modeCircle.style.left = "0%";
 	applyMode();
@@ -44,7 +44,7 @@ if (localStorage.getItem('mode') == "dark"){
 }
 
 function applyMode(){
-	var modeCircle = document.getElementById('mode-circle');
+	let modeCircle = document.getElementById('mode-circle');
 	// If toggle circle is on the left side 
 	// -> Dark Mode
 	if (modeCircle.style.left == "0%"){

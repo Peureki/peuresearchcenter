@@ -7,10 +7,6 @@
 		<span class = "hamburger-bar"></span>
 	</a>
 
-	<div onclick = "applyMode();" class = "dark-mode">
-		<span id = "mode-circle"></span>
-	</div>
-
 	<ul class = "nav-bar-list">
 		<li class = "nav-dropdown">
 			<a class = "nav-header" href = "#"> Resources </a>
