@@ -137,6 +137,17 @@
 			<!-- Hidden space so the header doesn't overlap anything below -->
 			<div class = "section-header-space"></div>
 
+			<div class = "page-box">
+				<div class = "small-description">
+					<details>
+						<summary> <b>Life Update (10/1)</b> </summary>
+						This is kind of a different update, but I wanted to share a glimps of my personal life in the past few months for those that have been following my work and my trains. In July, I got laided off. I won't go into detail, but essentially I worked under a grant that allowed me to be a science teacher for rural schools. I was like the Bill-Nye, but for weather lol. Grant work is awesome because it allows me to do whatever I want as long as the work is done, but grant money runs out. Those who have read my bio, I'm a guy that studied the weather. I intially intended to get a career in meteorology, but the job market is extremely rough. So, I took the next best thing that I love right now and I tried out for a junior web developer job. Took a few months of applying and being denied, but I got it! I start later this month. 
+						<br><br>
+						What started as a fun small project for myself with spreadsheets has turned into a new career path. Who knew that playing Guild Wars 2 'professionally' would get me here? With that, I want to thank everyone who reads this for your continued support on this website and joining my trains in-game! 
+					</details>
+				</div>
+			</div>
+
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
 					<span style = "font-weight: bold;">Oct 1, 2021</span>
