@@ -18,6 +18,8 @@
 	$base = "http://localhost/peuresearchcenter";
 	$date = date("D M d, Y G:i"); // For versioning
 ?>
+<!-- Tab icon -->
+<link rel = "icon" href = "<?php echo $base;?>/images/assets/peu-choya.png">
 
 <div onclick = "applyMode();" class = "dark-mode">
 	<span id = "mode-circle"></span>

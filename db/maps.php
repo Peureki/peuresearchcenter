@@ -42,42 +42,58 @@ class Maps extends BenchmarksDB{
 		$json = file_get_contents('https://script.google.com/macros/s/AKfycbwzCoaJtZVmPUO5nus0i6mLWi1CJhXPkww1NFGX/exec');
 		$mapObj = json_decode($json, TRUE);
 
-		// Connect to the DB
-		$sql = "SELECT * FROM $table";
-		$result = $this->connect()->query($sql);
-
-		// Remove items from previous list
-		$sql = "DELETE FROM $table"; 
-		$stmt = $this->connect()->exec($sql);
-
-		// Set each var to match var in spreadsheet
+		// Check if the google sheets table broke. It breaks usually when there's a farm that is a neg value
+		$negCheck = 0;
 		foreach ($mapObj['spreadsheet'] as $ss){
-			// Check if first attr of array is empty
-			// If yes, stop the loop
+			// Check that there's no empty farm. If there is, then stop the loop (at the end of the list)
 			if (empty($ss['farmtype'])){
 				break;
 			}
-			$farmtype = $ss['farmtype'];
-			$map = $ss['map'];
-			$time = $ss['time'];
-			$gold_per_hour = $ss['gold'];
-			$total_gold = $ss['goldss'];
-			$karma = $ss['karma'];
-			$spirit_shards = $ss['spiritshard'];
-			$trade_contracts = $ss['tradecontract'];
-			$unbound_magic = $ss['unboundmagic'];
-			$volatile_magic = $ss['volatilemagic'];
-
-			// If a map name contains ' such as Siren's Landing, repalce the ' with \' so it can be disregarded as another single quote
-			if (strpos($map, "'") == true){
-				$map = str_replace("'", "\'", $map);
+			// Check if there's a gph < 0
+			if ($ss['gold'] < 0){
+				$negCheck = -1;
 			}
-			// Insert into DB
-			$sql = "INSERT INTO $table (type, name, time, gold_per_hour, total_gold, karma, spirit_shards, trade_contracts, unbound_magic, volatile_magic)
-			VALUES ('$farmtype', '$map', '$time', '$gold_per_hour', '$total_gold', '$karma', '$spirit_shards', '$trade_contracts', '$unbound_magic', '$volatile_magic');";
-			// Execute the SQL stmt 
+		}
+		// If google sheets is broken, then don't do anything and keep the previous table
+		// else, run script normally
+		if ($negCheck != -1){
+			// Connect to the DB
+			$sql = "SELECT * FROM $table";
+			$result = $this->connect()->query($sql);
+
+			// Remove items from previous list
+			$sql = "DELETE FROM $table"; 
 			$stmt = $this->connect()->exec($sql);
-		} 
+
+			// Set each var to match var in spreadsheet
+			foreach ($mapObj['spreadsheet'] as $ss){
+				// Check if first attr of array is empty
+				// If yes, stop the loop
+				if (empty($ss['farmtype'])){
+					break;
+				}
+				$farmtype = $ss['farmtype'];
+				$map = $ss['map'];
+				$time = $ss['time'];
+				$gold_per_hour = $ss['gold'];
+				$total_gold = $ss['goldss'];
+				$karma = $ss['karma'];
+				$spirit_shards = $ss['spiritshard'];
+				$trade_contracts = $ss['tradecontract'];
+				$unbound_magic = $ss['unboundmagic'];
+				$volatile_magic = $ss['volatilemagic'];
+
+				// If a map name contains ' such as Siren's Landing, repalce the ' with \' so it can be disregarded as another single quote
+				if (strpos($map, "'") == true){
+					$map = str_replace("'", "\'", $map);
+				}
+				// Insert into DB
+				$sql = "INSERT INTO $table (type, name, time, gold_per_hour, total_gold, karma, spirit_shards, trade_contracts, unbound_magic, volatile_magic)
+				VALUES ('$farmtype', '$map', '$time', '$gold_per_hour', '$total_gold', '$karma', '$spirit_shards', '$trade_contracts', '$unbound_magic', '$volatile_magic');";
+				// Execute the SQL stmt 
+				$stmt = $this->connect()->exec($sql);
+			} 
+		}
 	}
 
 	public function getMaps($table){

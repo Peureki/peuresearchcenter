@@ -139,6 +139,11 @@
 
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
+					<span style = "font-weight: bold;">Oct 1, 2021</span>
+				<br>
+					- Fixed the loading time for the <a href = "./benchmarks.php" target = "_blank"><u>Benchmarks</u></a> table! The old system was that I created a script in Google Scripts to create a JSON to be imported to here. That still exists, but now it's being imported into mySQL then here. This does two things: It prevents the table from ever not showing up and it makes the loading time of the table at an absolute minimum. 
+					<br> - Fixed Light/Dark Mode switch when loading a page. Previously, if you were set in dark mode, you may have gotten a big flash of white because the script was still trying to determine what mode you set yourself in. Now, that is the first thing it does so there will not be any delay when going to another page in dark mode. 
+				<br><br>
 					<span style = "font-weight: bold;">Sept 30, 2021</span>
 				<br>
 					- Fixed a bug in <a href = "./research/refinement.php" target = "_blank"><u>Refinement</u></a> that made Bronze Ingots in the Basic Materials section to produce only 1 when it's actually 5. 
