@@ -4467,7 +4467,7 @@ function sortTableByPrice(tableName, column){
       x = rows[i].getElementsByTagName("TD")[column];
       y = rows[i + 1].getElementsByTagName("TD")[column];
 
-      if (x.children.length > 0 && x.children[0].id == "gph"){
+      if (x.children.length > 0 && x.children[0].id == "sort"){
       	x = currency(x.children[0].innerHTML.match(findNum),g,s,c);
       	y = currency(y.children[0].innerHTML.match(findNum),g,s,c);
       } else {

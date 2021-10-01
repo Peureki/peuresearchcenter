@@ -139,6 +139,14 @@
 
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
+					<span style = "font-weight: bold;">Sept 30, 2021</span>
+				<br>
+					- Fixed a bug in <a href = "./research/refinement.php" target = "_blank"><u>Refinement</u></a> that made Bronze Ingots in the Basic Materials section to produce only 1 when it's actually 5. 
+				<br><br>
+					<span style = "font-weight: bold;">Sept 29, 2021</span>
+				<br>
+					- Apologizes if you were checking out the benchmark on this date. I've been testing a lot in the back-end of things and it kinda messed it up LOL. Fixed a bug that made the mySQL table for the 24 hour period really wack and making farms out of order. Now the +/- column of the <a href = "./benchmarks.php" target = "_blank"><u>Benchmarks</u></a> *should* be accurate. 
+				<br><br>
 					<span style = "font-weight: bold;">Sept 28, 2021</span>
 				<br>
 					- Added a tooltip when you hover over the gold/hour for a specific farm in <a href = "./benchmarks.php" target = "_blank"><u>Benchmarks</u></a>. You can see what the difference is in gold/hour 24 hours ago. 

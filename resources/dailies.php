@@ -5,6 +5,7 @@
 	<?php include('../config.php'); ?>
 	<title> Dailies </title>
 	<script type = "text/javascript" src = "<?php echo $base;?>/resources/dailies.js?v=<?php echo $date;?>"></script>
+	<script type = "text/javascript" src = "<?php echo $base;?>/resources/provisioner-tokens.js?v=<?php echo $date;?>"></script>
 </head>
 <body>
 
@@ -155,6 +156,7 @@
 		getDaily();
 
 		new_Train('hours-0','minutes-0','seconds-0','progress-bar-0','num-0','box-0','name-0','time-0',0);
+		get_all_items();
 
 	</script>
 

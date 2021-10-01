@@ -21,6 +21,7 @@
 <!-- Main files -->
 <link type = "text/css" rel = "stylesheet" href = "<?php echo $base;?>/styles.css?v=<?php echo $date;?>">
 <script type = "text/javascript" src = "<?php echo $base;?>/script.js?v=<?php echo $date;?>"></script>
+
 <!-- Shortcut Icon + Scalable view -->
 <link rel = "shortcut icon" href = "../images/assets/peu-choya.png">
 <meta name="viewport" content="height=device-height, 

@@ -1887,8 +1887,10 @@ async function refinement(choice, taxChoice){
 		for (i = 0; i < mats.refinedMetal.length; i++){
 			// Change prices depnding on what the choices of <select> are
 
-			item1Attr = mats.refinedMetal[i].ingre1; item1Qty = mats.refinedMetal[i].ingre1Qty; 
-			item2Attr = mats.refinedMetal[i].ingre2; item2Qty = mats.refinedMetal[i].ingre2Qty; 
+			item1Attr = mats.refinedMetal[i].ingre1; 
+			item1Qty = mats.refinedMetal[i].ingre1Qty; 
+			item2Attr = mats.refinedMetal[i].ingre2; 
+			item2Qty = mats.refinedMetal[i].ingre2Qty; 
 
 			// If the items are vendored or acc bound items that don't have buy/sell values, return the N/A values
 			if (typeof item1Attr == "undefined" || item1Qty == "undefined"){item1Attr = mats.vendor[0]; item1Qty = 0;}
@@ -1904,6 +1906,14 @@ async function refinement(choice, taxChoice){
 				case "Buy": resultInput = mats.refinedMetal[i].buy; break;
 				case "Sell": resultInput = mats.refinedMetal[i].sell; break;
 			}
+	
+			// Change qty of result if bronze ingot, otherwise keep at 1
+			if (mats.refinedMetal[i].name == "Bronze Ingot"){
+				resultQty = 5; 
+				resultInput *= 5; 
+			} else {
+				resultQty = 1;
+			}
 
 			valueConversion = initialMat
 			valueResult = resultInput * tax;
@@ -1918,7 +1928,7 @@ async function refinement(choice, taxChoice){
 				<td> ${item2Qty} &nbsp; <img src = "${item2Attr.icon}" style = "${iconSize}"><span class = "hoverTooltip">${item2Attr.name}</span>
 					<br> <span> ${displayValues(item2Value)} </span> </td>
 				<td> &#8594; </td>
-				<td> 1 &nbsp; <img src = "${mats.refinedMetal[i].icon}" style = "${iconSize}"><span class = "hoverTooltip"><b>${mats.refinedMetal[i].name}</b>
+				<td> ${resultQty} &nbsp; <img src = "${mats.refinedMetal[i].icon}" style = "${iconSize}"><span class = "hoverTooltip"><b>${mats.refinedMetal[i].name}</b>
 							<br> <b>Result Value:</b> &nbsp; ${displayValues(valueResult)} (Tax: ${displayValues(valueResult - resultInput)})  
 							<br> <b>Item Value:</b> &nbsp;&nbsp;&nbsp; - ${displayValues(valueConversion)}</span>  
 					<br> <span> ${displayValues(valueResult)} </span></td>

@@ -1,5 +1,5 @@
 <?php 
-	include('../db.php'); 	
+	include('../db/maps.php'); 	
 ?>
 
 <?php 
