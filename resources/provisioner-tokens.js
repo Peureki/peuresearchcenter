@@ -48,7 +48,7 @@ async function provisionerTokens(){
 }
 
 async function get_all_items(){
-	let itemPricesAPI = "https://api.guildwars2.com/v2/commerce/listings";
+	let itemPricesAPI = "https://api.guildwars2.com/v2/commerce/prices";
 	let response = await fetch(itemPricesAPI);
 	let itemPrices = await response.json();
 
