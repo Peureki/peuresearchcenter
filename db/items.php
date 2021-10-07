@@ -4,7 +4,7 @@ class ItemsDB{
 	private $host = "localhost";
 	private $user = "root";
 	private $pwd = "";
-	private $dbName = "items";
+	private $dbName = "general";
 
 	protected function connect(){
 		$dsn = "mysql:host=" . $this->host . ";dbname=" . $this->dbName; 
@@ -14,109 +14,81 @@ class ItemsDB{
 	}
 }
 class Items extends ItemsDB{
-	public function setItems($table){
+	public function set_items_general($table){
 		
-		// Get JSON from Google Spreadsheet 
+		// Get JSON from GW2 API
 		$url = file_get_contents('https://api.guildwars2.com/v2/items');
 		$JSON = json_decode($url, TRUE);
-		$curl = curl_init();
-		foreach ($JSON as $ID){
+		// Split entire JSON into batches of 100 
+		$batch = array_chunk($JSON, 100);
+		// Iterate through each batch and through each item in each batch
+		for ($i = 0; $i < count($batch); $i ++){
 			
-			curl_setopt_array($curl, array(
-				CURLOPT_URL => 'https://api.guildwars2.com/v2/items?ids='.$ID,
-				CURLOPT_RETURNTRANSFER => true,
-				CURLOPT_TIMEOUT => 30,
-				CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-				CURLOPT_CUSTOMREQUEST => "GET",
-				CURLOPT_HTTPHEADER => array(
-					"cache-control: no-cache"
-				),
-			));
+			$api = file_get_contents('https://api.guildwars2.com/v2/items?ids='.implode(",", $batch[$i]));
+			$result = json_decode($api, TRUE);
 
-			$result = curl_exec($curl);
-			$err = curl_error($curl);
-			
-			$query = json_decode($result, TRUE);
-			
-			var_dump($query);
-			/*
-			$url = 'https://api.guildwars2.com/v2/items?ids='.$ID;
-			$data = array('key1' => 'value1', 'key2' => 'value2');
+			foreach ($result as $attr){
+				$name = $attr['name']; 
+				$id = $attr['id'];
+				$vendor = $attr['vendor_value'];
+				$icon = $attr['icon']; 
 
-			// use key 'http' even if you send the request to https://...
-			$options = array(
-			    'http' => array(
-			        'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
-			        'method'  => 'POST',
-			        'content' => http_build_query($data)
-			    )
-			);
-			$context  = stream_context_create($options);
-			$query = file_get_contents($url, false, $context);
-			if ($query === FALSE) { echo "Merp"; }
-
-			$query = json_decode($query, TRUE);
-
-			foreach ($query as $array){
-				$name = $array['name'] . "<br>"; 
-				echo $name;
+				// If a name contains ' such as Siren's Landing, repalce the ' with \' so it can be disregarded as another single quote
+				if (strpos($name, "'") == true){
+					$name = str_replace("'", "\'", $name);
+				}
+				// Insert into DB
+				$sql = "INSERT INTO $table (name, id, vendor, icon)
+				VALUES ('$name', '$id', '$vendor', '$icon');";
+				// Execute the SQL stmt 
+				$stmt = $this->connect()->exec($sql);
 			}
-			*/
-		
 		}
-		curl_close($curl);
+	}
+	// $table = what DB table to modify
+	// $IDs = array of IDs to modify in the table
+	public function set_items_listings($table, $IDs){
 		
-		/*
-		$url = file_get_contents('https://api.guildwars2.com/v2/items?ids='.implode(',', $itemIDs));
-		//$itemInfo = file_get_contents('https://api.guildwars2.com/v2/items?ids=6,12452');
-		$query = json_decode($url, TRUE); 
-		*/
-		/*
-		$url = 'https://api.guildwars2.com/v2/items?ids='.implode(',', $itemIDs);
-		$data = array('key1' => 'value1', 'key2' => 'value2');
+		// Get JSON GW2 API
+		$url = file_get_contents('https://api.guildwars2.com/v2/commerce/listings?ids='.$IDs);
+		$JSON = json_decode($url, TRUE);
+		// Split entire JSON into batches of 100 
+		//$batch = array_chunk($JSON, 100);
 
-		// use key 'http' even if you send the request to https://...
-		$options = array(
-		    'http' => array(
-		        'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
-		        'method'  => 'POST',
-		        'content' => http_build_query($data)
-		    )
-		);
-		$context  = stream_context_create($options);
-		$query = file_get_contents($url, false, $context);
-		if ($query === FALSE) { echo "Merp"; }
-		*/
-		
-		
-		// Connect to the DB
-		$sql = "SELECT * FROM $table";
-		$result = $this->connect()->query($sql);
+		// Iterate through each batch and through each item in each batch
+		for ($i = 0; $i < count($JSON); $i ++){
 
-		// Remove items from previous list
-		$sql = "DELETE FROM $table"; 
-		$stmt = $this->connect()->exec($sql);
+			foreach ($JSON as $attr){
+				$id = $attr['id']; 
+				// Check if either exist in the trading post
+				// Sometimes there's no buy orders or sometimes there's no orders at all 
+				if (isset($attr['buys'][0]['listings']) == true || isset($attr['buys'][0]['listings']) != NULL){
+					$buy_listings = $attr['buys'][0]['listings'];
+					$buy_unit_price = $attr['buys'][0]['unit_price'];
+					$buy_qty = $attr['buys'][0]['quantity'];
+				}
+				if (isset($attr['sells'][0]['listings']) == true || $attr['sells'][0]['listings'] != NULL){
+					$sell_listings = $attr['sells'][0]['listings'];
+					$sell_unit_price = $attr['sells'][0]['unit_price'];
+					$sell_qty = $attr['sells'][0]['quantity'];
+				}
 
-		// Set each var to match var in spreadsheet
-		foreach ($query as $array){
-			$name = $array['name']; 
-			echo $name;
-
-			// If a map name contains ' such as Siren's Landing, repalce the ' with \' so it can be disregarded as another single quote
-			if (strpos($map, "'") == true){
-				$map = str_replace("'", "\'", $map);
+				$sql = "UPDATE $table
+					SET  buy_listings = '$buy_listings', 
+					buy_unit_price = '$buy_unit_price',
+					buy_qty = '$buy_qty',
+					sell_listings = '$sell_listings',
+					sell_unit_price = '$sell_unit_price',
+					sell_qty = '$sell_qty'
+					WHERE id = '$id';";
+				$stmt = $this->connect()->exec($sql);
 			}
-			// Insert into DB
-			$sql = "INSERT INTO $table (type, name, time, gold_per_hour, total_gold, karma, spirit_shards, trade_contracts, unbound_magic, volatile_magic)
-			VALUES ('$farmtype', '$map', '$time', '$gold_per_hour', '$total_gold', '$karma', '$spirit_shards', '$trade_contracts', '$unbound_magic', '$volatile_magic');";
-			// Execute the SQL stmt 
-			$stmt = $this->connect()->exec($sql);
-		} 
+		}		
 	}
 
-	public function getItems($table){
+	public function get_items($table){
 		// Get full table and sort by gold_per_hour col and descending
-		$sql = "SELECT * FROM $table ORDER BY gold_per_hour DESC";
+		$sql = "SELECT * FROM $table";
 		$result = $this->connect()->query($sql);
 		// Create empty array
 		$array = Array();
@@ -131,8 +103,11 @@ class Items extends ItemsDB{
 
 
 }
+set_time_limit(1000);
 // Initialize map DB
 $itemsDB = new Items();
-$itemsDB->setItems($info);
+//$itemsDB->set_item_general('items');
 
+$api_list = "24358,24289,83757,24300,83103,24299,24341,24350,24356,24288,24277,24276,24282,24283,24294,24295,24351,24357";
+$itemsDB->set_items_listings('items', $api_list);
 ?>
