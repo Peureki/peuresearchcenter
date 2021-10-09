@@ -150,6 +150,11 @@
 
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
+					<span style = "font-weight: bold;">Oct 7, 2021</span>
+				<br>
+					- Added Lab benchmarks in <a href = "./benchmarks.php" target = "_blank"><u>Benchmarks</u></a> at 300% MF and 700% MF. 
+					<br> - Added <a href = "./timers/labyrinth.php" target = "_blank"><u> Lab timer page </u></a>  
+				<br><br>
 					<span style = "font-weight: bold;">Oct 1, 2021</span>
 				<br>
 					- Fixed the loading time for the <a href = "./benchmarks.php" target = "_blank"><u>Benchmarks</u></a> table! The old system was that I created a script in Google Scripts to create a JSON to be imported to here. That still exists, but now it's being imported into mySQL then here. This does two things: It prevents the table from ever not showing up and it makes the loading time of the table at an absolute minimum. 

@@ -3,7 +3,6 @@
 <head>
 	<!-- Defaults, CSS/JS main files -->
 	<?php include('config.php'); 
-		include('./db/maps.php');
 		include ('./js-to-php/benchmarks.php'); ?>
 	<title> Benchmarks </title>
 </head>

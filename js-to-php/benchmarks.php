@@ -1,3 +1,7 @@
+<?php
+	chdir(dirname(__FILE__));
+	include_once '../db/maps.php'; 	
+?>
 <script>
 //	===========================================================================
 //  ========================== BENCHMARKS =====================================
@@ -291,7 +295,7 @@ function getBenchmarkAll(table, image){
 			pop = "Common";
 			break;
 
-			case "Labyrinth (~750% MF)":
+			case "Labyrinth (~700% MF)":
 			link = "https://docs.google.com/document/d/1kNoF1Hx0WueB188dVtTuJQmy8KBdrHnSY3-N9RFC8SA/edit";
 			pop = "Common";
 			break;

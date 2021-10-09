@@ -76,6 +76,10 @@
 					<li><a href = "<?php echo $base;?>/timers/bjora-marches.php"> Bjora Marches </a></li>
 					<li><a href = "<?php echo $base;?>/timers/drizzlewood-coast.php"> Drizzlewood Coast </a></li>
 				</div>
+				<div class = "sub-menu-header">
+					<li> Festival </li>
+					<li><a href = "<?php echo $base;?>/timers/labyrinth.php"> Labyrinth </a></li>
+				</div>
 			</ul>
 		</li>
 
