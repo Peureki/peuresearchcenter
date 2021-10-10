@@ -13,29 +13,6 @@ class BenchmarksDB{
 		return $pdo;
 	}
 }
-/*
-class Test extends BenchmarksDB{
-	public function getUsers(){
-		$sql = "SELECT * FROM users"; 
-		$stmt = $this->connect()->query($sql);
-
-		while($row = $stmt->fetch()){
-			echo $row['users_firstname'] . " " . $row['users_lastname'] . "<br>";
-		}
-	}
-
-	public function getUsersStmt($firstname, $lastname){
-		$sql = "SELECT * FROM users WHERE users_firstname = ? AND users_lastname = ?"; 
-		$stmt = $this->connect()->prepare($sql);
-		$stmt->execute([$firstname, $lastname]);
-		$names = $stmt->fetchAll();
-
-		foreach ($names as $name){
-			echo $name['users_firstname'] . "<br>"; 
-		}
-	}
-}
-*/
 class Maps extends BenchmarksDB{
 	public function setMaps($table){
 		// Get JSON from Google Spreadsheet 
@@ -106,6 +83,8 @@ class Maps extends BenchmarksDB{
 		while($row = $result->fetch()){
 			$array[] = $row; 
 		}
+		$pdo = null; 
+
 		// Create JSON from the array
 		$json = json_encode($array);
 		return $json;

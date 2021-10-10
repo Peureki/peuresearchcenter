@@ -365,7 +365,6 @@
 	 </div>
 	<!-- Main box -->
 	<div class = "page-box">		
-		</div>
 
 		<!-- Progress bars -->
 		<div id = "current-progress" class = "progress-header">
@@ -379,7 +378,6 @@
     -->
 
 		<div class = "map-timer-wrapper">
-		<div class = "map-timer-box">
 
       		<!-- 
       			HTML notation: 

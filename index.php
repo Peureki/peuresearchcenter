@@ -150,6 +150,11 @@
 
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
+					<span style = "font-weight: bold;">Oct 9, 2021</span>
+				<br>
+					- Fixed a bug in <a href = "./benchmarks.php" target = "_blank"><u>Benchmarks</u></a> that didn't show the benchmarks change hourly. Testing something new and it's working so far.. 
+					<br> - Fixed a bug in <a href = "./timers/crystal-oasis.php" target = "_blank"><u> Crystal Oasis's timer page</u></a> that made the map extremely large  
+				<br><br>
 					<span style = "font-weight: bold;">Oct 7, 2021</span>
 				<br>
 					- Added Lab benchmarks in <a href = "./benchmarks.php" target = "_blank"><u>Benchmarks</u></a> at 300% MF and 700% MF. 
