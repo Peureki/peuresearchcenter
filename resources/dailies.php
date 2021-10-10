@@ -2,7 +2,9 @@
 <html>
 <head>
 	<!-- Defaults -->
-	<?php include('../config.php'); ?>
+	<?php include('../config.php'); 
+		include ('../js-to-php/provisioner-tokens.php');
+	?>
 	<title> Dailies </title>
 	<script type = "text/javascript" src = "<?php echo $base;?>/resources/dailies.js?v=<?php echo $date;?>"></script>
 	<script type = "text/javascript" src = "<?php echo $base;?>/resources/provisioner-tokens.js?v=<?php echo $date;?>"></script>
@@ -76,12 +78,12 @@
 			</div>
 
 			<div class = "section-header">
-			<h1>PSNA</h1>
-			<div class = "banner-box"></div>
-			<img src = "../images/assets/banner.svg">
-		</div>
-		<!-- Hidden space so the header doesn't overlap anything below -->
-		<div class = "section-header-space"></div>
+				<h1>PSNA</h1>
+				<div class = "banner-box"></div>
+				<img src = "../images/assets/banner.svg">
+			</div>
+			<!-- Hidden space so the header doesn't overlap anything below -->
+			<div class = "section-header-space"></div>
 
 			<div id = "psna" class = "small-description" style = "display: flex; justify-content: center;">
 				<span style = "font-size: 18px; margin-right: 5px;"> Copy PSNA Waypoints/Locations: </span>
@@ -100,6 +102,14 @@
 					<tbody id = "psnaBody"></tbody>
 				</table>
 			</div>
+
+			<div class = "section-header">
+				<h1>Provisioner Tokens</h1>
+				<div class = "banner-box"></div>
+				<img src = "../images/assets/banner.svg">
+			</div>
+			<!-- Hidden space so the header doesn't overlap anything below -->
+			<div class = "section-header-space"></div>
 		</div>
 
 

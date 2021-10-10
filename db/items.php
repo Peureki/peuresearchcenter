@@ -14,6 +14,7 @@ class ItemsDB{
 	}
 }
 class Items extends ItemsDB{
+	// FOR ALL ITEMS
 	public function set_items_general($table){
 		
 		// Get JSON from GW2 API
@@ -45,8 +46,9 @@ class Items extends ItemsDB{
 			}
 		}
 	}
+	// FOR SPECIFIC LISTINGS
 	// $table = what DB table to modify
-	// $IDs = array of IDs to modify in the table
+	// $IDs = string of IDs to modify in the table. ex: "1, 2, 3, 4, etc"
 	public function set_items_listings($table, $IDs){
 		
 		// Get JSON GW2 API
@@ -110,4 +112,5 @@ $itemsDB = new Items();
 
 $api_list = "24358,24289,83757,24300,83103,24299,24341,24350,24356,24288,24277,24276,24282,24283,24294,24295,24351,24357";
 $itemsDB->set_items_listings('items', $api_list);
+
 ?>
