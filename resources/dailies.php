@@ -2,12 +2,10 @@
 <html>
 <head>
 	<!-- Defaults -->
-	<?php include('../config.php'); 
-		include ('../js-to-php/provisioner-tokens.php');
-	?>
+	<?php include('../config.php');?>
+	<?php include ('../js-to-php/resources/provisioner-tokens.php'); ?>
 	<title> Dailies </title>
 	<script type = "text/javascript" src = "<?php echo $base;?>/resources/dailies.js?v=<?php echo $date;?>"></script>
-	<script type = "text/javascript" src = "<?php echo $base;?>/resources/provisioner-tokens.js?v=<?php echo $date;?>"></script>
 </head>
 <body>
 
@@ -16,7 +14,7 @@
 		====================== NAVIGATION BAR ======================
 		============================================================
 	-->
-	<?php include('../nav.php'); ?>
+	<?php include('../../nav.php'); ?>
 
 	<div id = "bookmark-left" class = "bookmark-left">
 		<ul>
@@ -110,7 +108,21 @@
 			</div>
 			<!-- Hidden space so the header doesn't overlap anything below -->
 			<div class = "section-header-space"></div>
-		</div>
+
+			<div class = "overflow-table">
+				<table class = "prov-tokens">
+					<tr>
+						<th> Icon </th>
+						<th> Name </th>
+						<th> Buy Price </th>
+						<th> Sell Price </th>
+						<th> Map </th>
+						<th> Token Exchange </th>
+						<th> Waypoint </th>
+					</tr>
+				</table>
+			</div>
+		</div> <!-- End of page box -->
 
 
 
@@ -175,7 +187,7 @@
 		====================== FOOTER + DARK MODE ==============================
 		========================================================================
 	-->
-	<?php include("../footer.php"); ?>
+	<?php include("../../footer.php"); ?>
 
 </body>
 </html>

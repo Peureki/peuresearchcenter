@@ -88,8 +88,8 @@ class Items extends ItemsDB{
 		}		
 	}
 
-	public function get_items($table){
-		// Get full table and sort by gold_per_hour col and descending
+	public function get_all_items($table){
+		// Get full table
 		$sql = "SELECT * FROM $table";
 		$result = $this->connect()->query($sql);
 		// Create empty array
@@ -102,6 +102,25 @@ class Items extends ItemsDB{
 		$json = json_encode($array);
 		return $json;
 	}
+	// Get a specific array of items in the DB
+	public function get_array_items($table, $IDs){
+		// Make string of IDs into array
+		$IDs = explode(",", $IDs); 
+		$array = Array();
+
+		foreach ($IDs as $value){
+			$sql = "SELECT * FROM $table
+				WHERE id = '$value';"; 
+			$result = $this->connect()->query($sql);
+
+			while($row = $result->fetch()){
+				$array[] = $row; 
+			}
+		}
+		// Create JSON from the array
+		$json = json_encode($array);
+		return $json;
+	}
 
 
 }
@@ -109,8 +128,5 @@ set_time_limit(1000);
 // Initialize map DB
 $itemsDB = new Items();
 //$itemsDB->set_item_general('items');
-
-$api_list = "24358,24289,83757,24300,83103,24299,24341,24350,24356,24288,24277,24276,24282,24283,24294,24295,24351,24357";
-$itemsDB->set_items_listings('items', $api_list);
 
 ?>
