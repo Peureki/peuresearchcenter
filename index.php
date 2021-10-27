@@ -51,6 +51,9 @@
 			<div class = "inner-double-box">
 				<div class = "small-description">
 					<p1 style = "font-size: 20px;"> Join me for unique trains such as Auric Basin, Tangled Depth Baubles, LS4, POF, and more! <b>/sqjoin Peureki.3647</b> around 15 minutes before a train to join squad and say hi!
+
+					<br><br>
+					Join the community in my <a href = "https://discord.com/invite/Rkncc9cn4U" target = "_blank"><u>Discord</u></a>!
 					</p1>
 				</div>
 
@@ -150,6 +153,10 @@
 
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
+					<span style = "font-weight: bold;">Oct 22, 2021</span>
+				<br>
+					- Created a <a href = "https://discord.com/invite/Rkncc9cn4U" target = "_blank"><u>Discord</u></a> link to the nav bar and the front page
+				<br><br>
 					<span style = "font-weight: bold;">Oct 9, 2021</span>
 				<br>
 					- Fixed a bug in <a href = "./benchmarks.php" target = "_blank"><u>Benchmarks</u></a> that didn't show the benchmarks change hourly. Testing something new and it's working so far.. 

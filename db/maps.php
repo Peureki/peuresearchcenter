@@ -37,10 +37,14 @@ class Maps extends BenchmarksDB{
 			// Connect to the DB
 			$sql = "SELECT * FROM $table";
 			$result = $this->connect()->query($sql);
-
-			// Remove items from previous list
-			$sql = "DELETE FROM $table"; 
-			$stmt = $this->connect()->exec($sql);
+			// Create empty array
+			$array = Array();
+			// Go thru DB and fetch contents into array
+			while($row = $result->fetch()){
+				$array[] = $row; 
+			}
+			// Create JSON from the array
+			$json = json_encode($array);
 
 			// Set each var to match var in spreadsheet
 			foreach ($mapObj['spreadsheet'] as $ss){
@@ -60,13 +64,31 @@ class Maps extends BenchmarksDB{
 				$unbound_magic = $ss['unboundmagic'];
 				$volatile_magic = $ss['volatilemagic'];
 
+				echo print_r($mapObj);
+
 				// If a map name contains ' such as Siren's Landing, repalce the ' with \' so it can be disregarded as another single quote
 				if (strpos($map, "'") == true){
 					$map = str_replace("'", "\'", $map);
 				}
+				
+				$sql = "UPDATE $table
+					SET type = '$farmtype',
+					name = '$map',
+					time = '$time',
+					gold_per_hour = '$gold_per_hour',
+					total_gold = '$total_gold',
+					karma = '$karma',
+					spirit_shards = '$spirit_shards',
+					trade_contracts = 'trade_contracts',
+					unbound_magic = '$unbound_magic',
+					volatile_magic = '$volatile_magic'
+					WHERE name = '$map';";
+				
 				// Insert into DB
+				/*
 				$sql = "INSERT INTO $table (type, name, time, gold_per_hour, total_gold, karma, spirit_shards, trade_contracts, unbound_magic, volatile_magic)
 				VALUES ('$farmtype', '$map', '$time', '$gold_per_hour', '$total_gold', '$karma', '$spirit_shards', '$trade_contracts', '$unbound_magic', '$volatile_magic');";
+				*/
 				// Execute the SQL stmt 
 				$stmt = $this->connect()->exec($sql);
 			} 

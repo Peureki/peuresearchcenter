@@ -150,7 +150,7 @@
 		</li>
 
 		<li class = "nav-dropdown">
-			<a class = "nav-header" href = "<?php echo $base;?>/supporters.php"> Support </a>
+			<a class = "nav-header" href = "https://discord.gg/Rkncc9cn4U" target = "_blank"> Discord </a>
 		</li>
 	</ul>
 </div>
