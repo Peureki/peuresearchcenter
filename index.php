@@ -153,6 +153,10 @@
 
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
+					<span style = "font-weight: bold;">Oct 27, 2021</span>
+				<br>
+					- Fixed a bug (hopefully?) in <a href = "./benchmarks.php" target = "_blank"><u>Benchmarks</u></a> that caused the whole list to disappear whenever the spreadsheet data broke. There should be a fail-safe thing in place now that prevents that from happening. Also testing something else that may or may not break if I add or delete a new farm. We'll see.. 
+				<br><br>
 					<span style = "font-weight: bold;">Oct 22, 2021</span>
 				<br>
 					- Created a <a href = "https://discord.com/invite/Rkncc9cn4U" target = "_blank"><u>Discord</u></a> link to the nav bar and the front page
