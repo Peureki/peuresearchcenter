@@ -64,31 +64,6 @@
 			<b>Pile of Silky Sand</b> &#8212; This material can be found in both Silverwastes and Dry Top. By consuming 10 (you'll get a lot), you get a chance to get Bandit Crests, Geodes, keys, or other materials. It's always worth-wild to consome what you get. 
 		</div>
 
-		<div id = "other-events" class = "homepage-title">
-			<h1> Other Events </h1>
-		</div>
-
-		<div class = "small-description">
-			<b> Caravans </b>
-			<br>
-			While still following the RIBA rotation, there are Caravan escorts that spawn. When the squad unlocks all 4 camps, there are 4 potential escorts you can hit while farming. As long as they get completed, they will continuously farm until the map reaches meta. Each escort will stop 3 times for a wave of enemies each. Tagging one wave is enough to get credit for the event. The most common escorts to complete at the <b> Purple, Yellow, and Blue</b> ones. 
-
-			<br><br>
-			<div style = "display: flex; align-items: center; justify-content: space-evenly;">
-				<img src = "../images/silverwastes/event-2.jpg" style = "width: 49%;">
-			</div>
-
-			<br><br>
-			<b> Legendary Bosses </b>
-			<br>
-			These are simply bonuses events that occur at each fort, but are often requested due to each carrying a mastery point. These bosses have a greater chance the higher the overall defence level the map is. If you're looking for a specific legendary boss, I would stick around that respective camp. If you're a regular player, please do your best to call the bosses out and their location! 
-
-			<br><br>
-			<div style = "display: flex; align-items: center; justify-content: space-evenly;">
-				<img src = "../images/silverwastes/legendary-bosses.jpg" style = "width: 49%;">
-			</div>
-		</div>
-
 		<div id = "meta" class = "homepage-title">
 			<h1> Meta - Vinewrath </h1>
 		</div>
@@ -106,15 +81,39 @@
 			<br> Mid being the most important due to having a greater chance of snowballing everyone if the mechanics or DPS aren't on par. 
 
 			<br><br>
-			<b> Mechanics </b>
+			<b> Bosses </b>
 			<br> 
-			<br> South lane - 
+			<b>South lane</b> - There are circle of bees. Run into the swarm of bees and then run to the white square area near the boss. Getting a couple people to do this will ensure a beehive shield for the boss's main attack (1 shot lazer). 
+			<br><br>
+			<b>Mid lane</b> - The boss will be centered and throw out two different attacks. First will be a spin-to-win where it throws projectiles. If the projectiles hit the little plants surrounding the boss, they explode into a large damaging AOE. To counter this, it is best to <b> bring reflects or projectile destruction </b>. The second attack is a melee fear that can be dodged a second after you see the telegraph. At some point, the boss will run to the back of the room to do a 1 shot attack. Avoid this by following the boss and standing in the white triangle AOE. If the boss's health is < 50%, the second attack is a large damaging AOE around the boss rather than a fear. 
+			<br><br>
+			<b>North lane</b> - This boss will doing lots of leaps and charges in melee range. When it charges, it leaves a line of death and destroys projectiles through that line. At some point, it will run to the back of the room to do a 1 shot AOE. To avoid this, DPS a pod to open up as a flower and stand on top of it. 
+
+		</div>
+
+		<div id = "other-events" class = "homepage-title">
+			<h1> Other Events </h1>
+		</div>
+
+		<div class = "small-description">
+			<b id = "caravans"> Caravans </b>
+			<br>
+			While still following the RIBA rotation, there are Caravan escorts that spawn. When the squad unlocks all 4 camps, there are 4 potential escorts you can hit while farming. As long as they get completed, they will continuously farm until the map reaches meta. Each escort will stop 3 times for a wave of enemies each. Tagging one wave is enough to get credit for the event. The most common escorts to complete at the <b> Purple, Yellow, and Blue</b> ones. 
 
 			<br><br>
 			<div style = "display: flex; align-items: center; justify-content: space-evenly;">
 				<img src = "../images/silverwastes/event-2.jpg" style = "width: 49%;">
 			</div>
 
+			<br><br>
+			<b id = "legendary-bosses"> Legendary Bosses </b>
+			<br>
+			These are simply bonuses events that occur at each fort, but are often requested due to each carrying a mastery point. These bosses have a greater chance the higher the overall defence level the map is. If you're looking for a specific legendary boss, I would stick around that respective camp. If you're a regular player, please do your best to call the bosses out and their location! 
+
+			<br><br>
+			<div style = "display: flex; align-items: center; justify-content: space-evenly;">
+				<img src = "../images/silverwastes/legendary-bosses.jpg" style = "width: 49%;">
+			</div>
 		</div>
 
 	</div> <!-- End of page-box -->

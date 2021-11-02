@@ -43,7 +43,7 @@
        <h1> Pact Tower (S) </h1>
        <input type = "button" onclick = "start_stop(this, verdant.events);" value = "Start" id = "sidetimer-verdant-1-start">
        <input type = "button" onclick = "reset(this, verdant.events);" value = "&#8635;" id = "sidetimer-verdant-1-reset">
-       <p1 id = "sidetimer-verdant-1">4:30</p1>
+       <p1 id = "sidetimer-verdant-1">4:00</p1>
        <p2 id = "numerical-sidetimer-verdant-1">270</p2>
      </div>
 
@@ -61,6 +61,14 @@
        <input type = "button" onclick = "reset(this, verdant.events);" value = "&#8635;" id = "sidetimer-verdant-3-reset">
        <p1 id = "sidetimer-verdant-3">4:30</p1>
        <p2 id = "numerical-sidetimer-verdant-3">270</p2>
+     </div>
+
+      <div id = "verdant-6-sidebox" class = "event-sidebox">
+       <h1> Veteran Mordrem </h1>
+       <input type = "button" onclick = "start_stop(this, verdant.events);" value = "Start" id = "sidetimer-verdant-6-start">
+       <input type = "button" onclick = "reset(this, verdant.events);" value = "&#8635;" id = "sidetimer-verdant-6-reset">
+       <p1 id = "sidetimer-verdant-6">3:15</p1>
+       <p2 id = "numerical-sidetimer-verdant-6">195</p2>
      </div>
      
    </div> <!-- End of left side box --> 
@@ -155,9 +163,9 @@
              <!-- Post outpost events --> 
              <div class = "event-box" id = "verdant-1-box">
               <h1> Pact Tower (S) </h1>
-              <br><p1 id = "timer-verdant-1">4:30</p1>
+              <br><p1 id = "timer-verdant-1">4:00</p1>
               <br><input type = "button" onclick = "start_stop(this, verdant.events);" value = "Start" id = "timer-verdant-1-start">
-              <input type = "button" onclick = "reset(this.verdant.events);" value = "&#8635;" id = "timer-verdant-1-reset">
+              <input type = "button" onclick = "reset(this, verdant.events);" value = "&#8635;" id = "timer-verdant-1-reset">
               <input type = "button" value = "i" onmouseover = "showElement('verdant-info-2');" onmouseout = "hideElement('verdant-info-2');"> 
              </div>
 
@@ -165,7 +173,7 @@
               <h1> Pact Tower (W) </h1>
               <br><p1 id = "timer-verdant-2">4:30</p1>
               <br><input type = "button" onclick = "start_stop(this, verdant.events);" value = "Start" id = "timer-verdant-2-start">
-              <input type = "button" onclick = "reset(this.verdant.events);" value = "&#8635;" id = "timer-verdant-2-reset"> 
+              <input type = "button" onclick = "reset(this, verdant.events);" value = "&#8635;" id = "timer-verdant-2-reset"> 
               <input type = "button" value = "i" onmouseover = "showElement('verdant-info-2');" onmouseout = "hideElement('verdant-info-2');">
              </div>
 
@@ -173,8 +181,15 @@
               <h1> Pact Tower (E) </h1>
               <br><p1 id = "timer-verdant-3">4:30</p1>
               <br><input type = "button" onclick = "start_stop(this, verdant.events);" value = "Start" id = "timer-verdant-3-start">
-              <input type = "button" onclick = "reset(this.verdant.events);" value = "&#8635;" id = "timer-verdant-3-reset">
+              <input type = "button" onclick = "reset(this, verdant.events);" value = "&#8635;" id = "timer-verdant-3-reset">
               <input type = "button" value = "i" onmouseover = "showElement('verdant-info-2');" onmouseout = "hideElement('verdant-info-2');"> 
+             </div>
+
+             <div class = "event-box" id = "verdant-6-box">
+              <h1> Veteran Mordrem </h1>
+              <br><p1 id = "timer-verdant-6">3:15</p1>
+              <br><input type = "button" onclick = "start_stop(this, verdant.events);" value = "Start" id = "timer-verdant-6-start">
+              <input type = "button" onclick = "reset(this, verdant.events);" value = "&#8635;" id = "timer-verdant-6-reset">
              </div>
 			
 

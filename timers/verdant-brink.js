@@ -11,7 +11,7 @@ var verdant = {
             function: function() { verdant_Countdown(1); },
             status: 0,
             key: 0,
-            cooldown: 60 * 4 + 30, 
+            cooldown: 60 * 4, 
             startButton: document.getElementById('timer-verdant-1-start'),
             startSideButton: document.getElementById('sidetimer-verdant-1-start'),
             resetButton: document.getElementById('timer-verdant-1-reset'),
@@ -62,6 +62,21 @@ var verdant = {
             timeSideLabel: document.getElementById('sidetimer-verdant-bosses-meta'),
             sidebox: document.getElementById('verdant-bosses-meta-sidebox'),
             num: document.getElementById('numerical-sidetimer-verdant-bosses-meta'),
+        },
+        {   // [6] Veteran Mordrem
+            function: function() { verdant_Countdown(6); },
+            status: 0,
+            key: 0,
+            cooldown: 60 * 3 + 15, 
+            startButton: document.getElementById('timer-verdant-6-start'),
+            startSideButton: document.getElementById('sidetimer-verdant-6-start'),
+            resetButton: document.getElementById('timer-verdant-6-reset'),
+            resetSideButton: document.getElementById('sidetimer-verdant-6-reset'),
+            timeLabel: document.getElementById('timer-verdant-6'), 
+            timeSideLabel: document.getElementById('sidetimer-verdant-6'),
+            sidebox: document.getElementById('verdant-6-sidebox'),
+            num: document.getElementById('numerical-sidetimer-verdant-6'),
+            doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num)}
         },
     ]
 };
@@ -140,6 +155,7 @@ let current_progress = document.getElementById('verdant-current-status'),
                 hide_multiple_elements(1,5,'verdant-box-','opacity'); // Day boxes opacity
                 hide_multiple_elements(1,5,'verdant-box-','display'); // Day boxes display (removes hover info)
                 hide_multiple_elements_db_names(1,3,'verdant-','-box','opacity');
+                hide_multiple_elements_db_names(6,6,'verdant-','-box','opacity');
                 hide_multiple_elements(1,18,'verdant-vet-','opacity'); // Veteran/event icons
                 hide_multiple_elements(1,16,'verdant-vet-info-','opacity'); // Veteran/event infos
 

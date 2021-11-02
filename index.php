@@ -153,9 +153,15 @@
 
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
-					<span style = "font-weight: bold;">Oct 27, 2021</span>
+					<span style = "font-weight: bold;">Nov 1, 2021</span>
+				<br>
+					- Updated <a href = "./maps/silverwastes.php" target = "_blank"><u>Silverwastes</u></a> map guide
+				<br><br>
+					<span style = "font-weight: bold;">Oct 31, 2021</span>
 				<br>
 					- Fixed a bug (hopefully?) in <a href = "./benchmarks.php" target = "_blank"><u>Benchmarks</u></a> that caused the whole list to disappear whenever the spreadsheet data broke. There should be a fail-safe thing in place now that prevents that from happening. Also testing something else that may or may not break if I add or delete a new farm. We'll see.. 
+					<br> - Fixed a bug in <a href = "./timers/verdant-brink.php" target = "_blank"><u>Verdant Brink timer page</u></a> that caused timers not to rewind
+					<br> - Added "Veteran Mordrem" event in the <a href = "./timers/verdant-brink.php" target = "_blank"><u>Verdant Brink timer page</u></a>
 				<br><br>
 					<span style = "font-weight: bold;">Oct 22, 2021</span>
 				<br>
