@@ -43,7 +43,7 @@ async function provisionerTokens(){
 				qty: 1,
 				icon: "https://render.guildwars2.com/file/3C053CD2680D7DAE5E0899E8F6FF530D0E445704/221141.png", 
 			},
-		],	
+		],
 	}
 }
 

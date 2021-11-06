@@ -118,9 +118,30 @@
       <div class = "event-sidebox" id = "desert-12-sidebox">
         <h1> Hostages </h1>
         <input type = "button" onclick = "start_stop(this, desert.events);" value = "Start" id = "sidetimer-desert-12-start">
-        <input type = "button" onclick = "reset(this, desert.events);" value = "&#8635;" id = "sidetimer-desert-12-reset">
         <p1 id = "sidetimer-desert-12">7:00</p1>
         <p2 id = "numerical-sidetimer-desert-12">420</p2>
+      </div> 
+
+      <div class = "event-sidebox" id = "desert-13-sidebox">
+        <h1> Tosun Escort </h1>
+        <input type = "button" onclick = "start_stop(this, desert.events);" value = "Start" id = "sidetimer-desert-13-start">
+        <input type = "button" onclick = "reset(this, desert.events);" value = "&#8635;" id = "sidetimer-desert-13-reset">
+        <p1 id = "sidetimer-desert-13">13:00</p1>
+        <p2 id = "numerical-sidetimer-desert-13">780</p2>
+      </div> 
+
+      <div class = "event-sidebox" id = "desert-14-sidebox">
+        <h1> Branded Waves </h1>
+        <input type = "button" onclick = "start_stop(this, desert.events);" value = "Start" id = "sidetimer-desert-14-start">
+        <p1 id = "sidetimer-desert-14">7:00</p1>
+        <p2 id = "numerical-sidetimer-desert-14">420</p2>
+      </div> 
+
+      <div class = "event-sidebox" id = "desert-15-sidebox">
+        <h1> Drogg </h1>
+        <input type = "button" onclick = "start_stop(this, desert.events);" value = "Start" id = "sidetimer-desert-15-start">
+        <p1 id = "sidetimer-desert-15">12:00</p1>
+        <p2 id = "numerical-sidetimer-desert-15">720</p2>
       </div> 
 	    
 	  </div> <!-- End of left side box --> 
@@ -269,8 +290,29 @@
         <h1> Hostages </h1>
         <br><p1 id = "timer-desert-12">7:00</p1>
         <br><input type = "button" onclick = "start_stop(this, desert.events);" value = "Start" id = "timer-desert-12-start">
-        <input type = "button" onclick = "reset(this, desert.events);" value = "&#8635;" id = "timer-desert-12-reset">
         <input type = "button" value = "i" onmouseover="showElement('desert-info-box-1'); " onmouseout = "hideElement('desert-info-box-1'); ">  
+      </div>
+
+      <div class = "event-box" id = "desert-13-box">
+        <h1> Tosun Escort </h1>
+        <br><p1 id = "timer-desert-13">13:00</p1>
+        <br><input type = "button" onclick = "start_stop(this, desert.events);" value = "Start" id = "timer-desert-13-start">
+        <input type = "button" onclick = "reset(this, desert.events);" value = "&#8635;" id = "timer-desert-13-reset">
+        <input type = "button" value = "i" onmouseover="showElement('desert-info-box-1'); " onmouseout = "hideElement('desert-info-box-1'); ">  
+      </div>
+
+      <div class = "event-box" id = "desert-14-box">
+        <h1> Branded Waves </h1>
+        <br><p1 id = "timer-desert-14">7:00</p1>
+        <br><input type = "button" onclick = "start_stop(this, desert.events);" value = "Start" id = "timer-desert-14-start">
+        <input type = "button" value = "i" onmouseover="showElement('desert-info-box-2'); " onmouseout = "hideElement('desert-info-box-2'); ">  
+      </div>
+
+      <div class = "event-box" id = "desert-15-box">
+        <h1> Drogg </h1>
+        <br><p1 id = "timer-desert-15">12:00</p1>
+        <br><input type = "button" onclick = "start_stop(this, desert.events);" value = "Start" id = "timer-desert-15-start">
+        <input type = "button" value = "i" onmouseover="showElement('desert-info-box-3'); " onmouseout = "hideElement('desert-info-box-3'); ">  
       </div>
 
       <!-- Event info --> 
@@ -278,13 +320,21 @@
       <div id = "desert-info-box-1" class = "event-info">
         Start this timer only after completing the Mordant Cresent event. 
       </div>
+      <!-- Branded Waves -->
+      <div id = "desert-info-box-2" class = "event-info">
+        Start this timer only after completing the Drogg gather + escort event chain. 
+      </div>
+      <!-- Drogg -->
+      <div id = "desert-info-box-3" class = "event-info">
+        Start this timer only after completing the Branded Waves event. 
+      </div>
     
 
 
 
 
        		<!-- Map -->
-			<img class = "map-timer-map" title = "desert Riverlands" src = "../images/desert-highlands/east-map.jpg"> 
+			<img class = "map-timer-map" title = "desert Riverlands" src = "../images/desert-highlands/map.jpg"> 
 
 		</div> <!-- End of map-box --> 
 	</div> <!-- End of map-timer-wrapper -->

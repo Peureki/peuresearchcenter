@@ -1771,6 +1771,7 @@ b{
 	font-size: 20px;
 	color: var(--clr-text);
 	vertical-align: middle;
+	float: right;
 }
 /* Hidden timer - This # is to track how many seconds in an event cooldown */
 .event-sidebox p2{
@@ -8150,23 +8151,23 @@ table.nodes td.nodes-cooldown{
 
 #desert-1-box{ /* Choya */
 	top: 85%;
-	left: 15%;
+	left: 52%;
 }
 #desert-2-box{ /* Sand Shark */
-	top: 75%;
-	left: 40%;
+	top: 70%;
+	left: 69%;
 }
 #desert-3-box{ /* Sand Eel */
-	top: 70%;
-	left: 20%;
+	top: 69%;
+	left: 55%;
 }
 #desert-4-box{ /* Yumma Escort */
-	top: 80%;
-	left: 30%;
+	top: 82%;
+	left: 61%;
 }
 #desert-5-box{ /* Yumug Escort */
 	top: 87.5%;
-	left: 36%;
+	left: 69%;
 }
 #desert-6-box{ /* Nayim Chain */
 	top: 80%;
@@ -8174,33 +8175,53 @@ table.nodes td.nodes-cooldown{
 	opacity: 0;
 }
 #desert-7-box{ /* Asho Escort */
-	top: 67%;
-	left: 26%;
+	top: 65%;
+	left: 61%;
 }
 #desert-8-box{ /* Mordant Crescent */
 	top: 58%;
 	left: 15%;
-	opacity: 0;
+	display: none;
 }
 #desert-9-box{ /* Ogre Escort */
-	top: 37%;
-	left: 68%;
+	top: 28%;
+	left: 82%;
 }
 #desert-10-box{ /* Dammer Escort */
-	top: 60%;
-	left: 2%;
+	top: 56%;
+	left: 40%;
 }
 #desert-11-box{ /* Forged Tormentor */
-	top: 70%;
-	left: 5%;
+	top: 69%;
+	left: 43%;
 }
 #desert-12-box{ /* Hostages */
-	top: 55%;
-	left: 22%;
+	top: 49%;
+	left: 54%;
+}
+#desert-13-box{ /* Tosun Escort */
+	top: 30%;
+	left: 9%;
+}
+#desert-14-box{ /* Branded Waves */
+	top: 26%;
+	left: 61%;
+}
+#desert-15-box{ /* Drogg */
+	top: 22%;
+	left: 54%;
 }
 #desert-info-box-1{ /* Hostages */
-	top: 56%;
-	left: 34%;
+	top: 49%;
+	left: 64%;
+}
+#desert-info-box-2{ /* Branded Waves */
+	top: 8%;
+	left: 64%;
+}
+#desert-info-box-3{ /* Drogg */
+	top: 8%;
+	left: 64%;
 }
 
 #crystal-1-box{ /* Raiding party N1 */

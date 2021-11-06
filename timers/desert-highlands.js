@@ -187,6 +187,51 @@ var desert = {
             num: document.getElementById('numerical-sidetimer-desert-12'),
             doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
+        {   // [13] Tosun Escort
+            status: 0,
+            key: 0,
+            cooldown: 60 * 13, 
+            startButton: document.getElementById('timer-desert-13-start'),
+            startSideButton: document.getElementById('sidetimer-desert-13-start'),
+            resetButton: document.getElementById('timer-desert-13-reset'),
+            resetSideButton: document.getElementById('sidetimer-desert-13-reset'),
+            timeLabel: document.getElementById('timer-desert-13'), 
+            timeSideLabel: document.getElementById('sidetimer-desert-13'),
+            textLabel: document.getElementById('timer-desert-13-text'),
+            sidebox: document.getElementById('desert-13-sidebox'),
+            num: document.getElementById('numerical-sidetimer-desert-13'),
+            doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
+        },
+        {   // [14] Branded Waves
+            status: 0,
+            key: 0,
+            cooldown: 60 * 7, 
+            startButton: document.getElementById('timer-desert-14-start'),
+            startSideButton: document.getElementById('sidetimer-desert-14-start'),
+            resetButton: document.getElementById('timer-desert-14-reset'),
+            resetSideButton: document.getElementById('sidetimer-desert-14-reset'),
+            timeLabel: document.getElementById('timer-desert-14'), 
+            timeSideLabel: document.getElementById('sidetimer-desert-14'),
+            textLabel: document.getElementById('timer-desert-14-text'),
+            sidebox: document.getElementById('desert-14-sidebox'),
+            num: document.getElementById('numerical-sidetimer-desert-14'),
+            doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
+        },
+        {   // [15] Drogg
+            status: 0,
+            key: 0,
+            cooldown: 60 * 12, 
+            startButton: document.getElementById('timer-desert-15-start'),
+            startSideButton: document.getElementById('sidetimer-desert-15-start'),
+            resetButton: document.getElementById('timer-desert-15-reset'),
+            resetSideButton: document.getElementById('sidetimer-desert-15-reset'),
+            timeLabel: document.getElementById('timer-desert-15'), 
+            timeSideLabel: document.getElementById('sidetimer-desert-15'),
+            textLabel: document.getElementById('timer-desert-15-text'),
+            sidebox: document.getElementById('desert-15-sidebox'),
+            num: document.getElementById('numerical-sidetimer-desert-15'),
+            doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
+        },
     ]
 };
 // Dynamically creates unique keys
