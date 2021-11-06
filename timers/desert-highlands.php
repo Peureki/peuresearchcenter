@@ -108,7 +108,7 @@
       </div>	    
 
       <div class = "event-sidebox" id = "desert-11-sidebox">
-        <h1> Forged Tormentor </h1>
+        <h1> (LB) Forged Tormentor </h1>
         <input type = "button" onclick = "start_stop(this, desert.events);" value = "Start" id = "sidetimer-desert-11-start">
         <input type = "button" onclick = "reset(this, desert.events);" value = "&#8635;" id = "sidetimer-desert-11-reset">
         <p1 id = "sidetimer-desert-11">30:00</p1>
@@ -142,34 +142,70 @@
         <input type = "button" onclick = "start_stop(this, desert.events);" value = "Start" id = "sidetimer-desert-15-start">
         <p1 id = "sidetimer-desert-15">12:00</p1>
         <p2 id = "numerical-sidetimer-desert-15">720</p2>
+      </div>
+
+      <div class = "event-sidebox" id = "desert-16-sidebox">
+        <h1> (B) Awakened Occultist </h1>
+        <input type = "button" onclick = "start_stop(this, desert.events);" value = "Start" id = "sidetimer-desert-16-start">
+        <input type = "button" onclick = "reset(this, desert.events);" value = "&#8635;" id = "sidetimer-desert-16-reset">
+        <p1 id = "sidetimer-desert-16">15:00</p1>
+        <p2 id = "numerical-sidetimer-desert-16">900</p2>
+      </div>  
+
+      <div class = "event-sidebox" id = "desert-17-sidebox">
+        <h1> (B) Snag Seizeclaw </h1>
+        <input type = "button" onclick = "start_stop(this, desert.events);" value = "Start" id = "sidetimer-desert-17-start">
+        <input type = "button" onclick = "reset(this, desert.events);" value = "&#8635;" id = "sidetimer-desert-17-reset">
+        <p1 id = "sidetimer-desert-17">15:00</p1>
+        <p2 id = "numerical-sidetimer-desert-17">900</p2>
+      </div> 
+
+      <div class = "event-sidebox" id = "desert-18-sidebox">
+        <h1> (B) Cracking Brandspark </h1>
+        <input type = "button" onclick = "start_stop(this, desert.events);" value = "Start" id = "sidetimer-desert-18-start">
+        <input type = "button" onclick = "reset(this, desert.events);" value = "&#8635;" id = "sidetimer-desert-18-reset">
+        <p1 id = "sidetimer-desert-18">15:00</p1>
+        <p2 id = "numerical-sidetimer-desert-18">900</p2>
+      </div> 
+
+      <div class = "event-sidebox" id = "desert-18-sidebox">
+        <h1> (B) Balthazar's Lost </h1>
+        <input type = "button" onclick = "start_stop(this, desert.events);" value = "Start" id = "sidetimer-desert-18-start">
+        <input type = "button" onclick = "reset(this, desert.events);" value = "&#8635;" id = "sidetimer-desert-19-reset">
+        <p1 id = "sidetimer-desert-18">15:00</p1>
+        <p2 id = "numerical-sidetimer-desert-18">900</p2>
       </div> 
 	    
 	  </div> <!-- End of left side box --> 
 
 	  <div id = "checkboxes" class = "checkboxes">
-      Choya: <input type = "Checkbox" id = "desert-1-checkbox" checked = "true" onclick = "checkboxTimer(this, desert.events, 'all');">
+      All: <input type = "Checkbox" id = "desert-all-checkbox" checked = "true" onclick = "checkboxTimer(this, desert.events, 'all');">
       <br>
-      Branded Waves: <input type = "Checkbox" id = "desert-2-checkbox" checked = "true" onclick = "checkboxTimer(this, desert.events);">
+      Choya: <input type = "Checkbox" id = "desert-1-checkbox" checked = "true" onclick = "checkboxTimer(this, desert.events);">
       <br>
-      Flint: <input type = "Checkbox" id = "desert-3-checkbox" checked = "true" onclick = "checkboxTimer(this, desert.events);">
+      Sand Shark: <input type = "Checkbox" id = "desert-2-checkbox" checked = "true" onclick = "checkboxTimer(this, desert.events);">
       <br>
-      Raiding Party - N: <input type = "Checkbox" id = "desert-4-checkbox" checked = "true" onclick = "checkboxTimer(this, desert.events);">
+      Sand Eel: <input type = "Checkbox" id = "desert-3-checkbox" checked = "true" onclick = "checkboxTimer(this, desert.events);">
       <br>
-      Raiding Party - M: <input type = "Checkbox" id = "desert-5-checkbox" checked = "true" onclick = "checkboxTimer(this, desert.events);">
+      Yumma Escort: <input type = "Checkbox" id = "desert-4-checkbox" checked = "true" onclick = "checkboxTimer(this, desert.events);">
       <br>
-      Raiding Party - S: <input type = "Checkbox" id = "desert-6-checkbox" checked = "true" onclick = "checkboxTimer(this, desert.events);">
+      Yumug Escort: <input type = "Checkbox" id = "desert-5-checkbox" checked = "true" onclick = "checkboxTimer(this, desert.events);">
       <br>
-      Lost Mount: <input type = "Checkbox" id = "desert-7-checkbox" checked = "true" onclick = "checkboxTimer(this, desert.events);">
+      Asho Escort: <input type = "Checkbox" id = "desert-7-checkbox" checked = "true" onclick = "checkboxTimer(this, desert.events);">
       <br>
-      Sand Lion: <input type = "Checkbox" id = "desert-8-checkbox" checked = "true" onclick = "checkboxTimer(this, desert.events);">
+      Ogre Escort: <input type = "Checkbox" id = "desert-9-checkbox" checked = "true" onclick = "checkboxTimer(this, desert.events);">
       <br>
-      Deadhouse: <input type = "Checkbox" id = "desert-9-checkbox" checked = "true" onclick = "checkboxTimer(this, desert.events);">
+      Dammer Escort: <input type = "Checkbox" id = "desert-10-checkbox" checked = "true" onclick = "checkboxTimer(this, desert.events);">
       <br>
-      Jimoh: <input type = "Checkbox" id = "desert-10-checkbox" checked = "true" onclick = "checkboxTimer(this, desert.events);">
+      Forged Tormentor: <input type = "Checkbox" id = "desert-11-checkbox" checked = "true" onclick = "checkboxTimer(this, desert.events);">
       <br>
-      Branded Storm - N: <input type = "Checkbox" id = "desert-11-checkbox" checked = "true" onclick = "checkboxTimer(this, desert.events);">
+      Hostages: <input type = "Checkbox" id = "desert-11-checkbox" checked = "true" onclick = "checkboxTimer(this, desert.events);">
       <br>
-      Branded Storm - S: <input type = "Checkbox" id = "desert-12-checkbox" checked = "true" onclick = "checkboxTimer(this, desert.events);">
+      Tosun Escort: <input type = "Checkbox" id = "desert-11-checkbox" checked = "true" onclick = "checkboxTimer(this, desert.events);">
+      <br>
+      Branded Waves: <input type = "Checkbox" id = "desert-11-checkbox" checked = "true" onclick = "checkboxTimer(this, desert.events);">
+      <br>
+      Drogg: <input type = "Checkbox" id = "desert-11-checkbox" checked = "true" onclick = "checkboxTimer(this, desert.events);">
       <br>
 
 	 </div>
@@ -181,6 +217,14 @@
         <details>
           <summary><b> How to: </b></summary>
 				  There are 2 events that are not displayed on the page, but are considered to be good events to do. It's the Mordant Cresent (near the Hostages event) and Awakened Defense (at the first waypoint). These events go hand-in-hand and won't start until the other event is completed. They cannot occur at the same time.  
+
+          <br><br>
+          <b> Bounties (in rough order) from great to good: </b>
+          <br> - Legendary Forged
+          <br> - Awakened Occultist
+          <br> - Snag Seizeclaw
+          <br> - Cracking Brandspark
+          <br> - Balthazar's Lost
         </details>
 			</div>
 			
@@ -297,8 +341,7 @@
         <h1> Tosun Escort </h1>
         <br><p1 id = "timer-desert-13">13:00</p1>
         <br><input type = "button" onclick = "start_stop(this, desert.events);" value = "Start" id = "timer-desert-13-start">
-        <input type = "button" onclick = "reset(this, desert.events);" value = "&#8635;" id = "timer-desert-13-reset">
-        <input type = "button" value = "i" onmouseover="showElement('desert-info-box-1'); " onmouseout = "hideElement('desert-info-box-1'); ">  
+        <input type = "button" onclick = "reset(this, desert.events);" value = "&#8635;" id = "timer-desert-13-reset"> 
       </div>
 
       <div class = "event-box" id = "desert-14-box">
@@ -313,6 +356,34 @@
         <br><p1 id = "timer-desert-15">12:00</p1>
         <br><input type = "button" onclick = "start_stop(this, desert.events);" value = "Start" id = "timer-desert-15-start">
         <input type = "button" value = "i" onmouseover="showElement('desert-info-box-3'); " onmouseout = "hideElement('desert-info-box-3'); ">  
+      </div>
+
+      <div class = "event-box" id = "desert-16-box">
+        <h1> (B) Awakened Occultist </h1>
+        <br><p1 id = "timer-desert-16">15:00</p1>
+        <br><input type = "button" onclick = "start_stop(this, desert.events);" value = "Start" id = "timer-desert-16-start">
+        <input type = "button" onclick = "reset(this, desert.events);" value = "&#8635;" id = "timer-desert-16-reset">
+      </div>
+
+      <div class = "event-box" id = "desert-17-box">
+        <h1> (B) Snag Seizeclaw </h1>
+        <br><p1 id = "timer-desert-17">15:00</p1>
+        <br><input type = "button" onclick = "start_stop(this, desert.events);" value = "Start" id = "timer-desert-17-start">
+        <input type = "button" onclick = "reset(this, desert.events);" value = "&#8635;" id = "timer-desert-17-reset">
+      </div>
+
+      <div class = "event-box" id = "desert-18-box">
+        <h1> (B) Cracking Brandspark </h1>
+        <br><p1 id = "timer-desert-18">15:00</p1>
+        <br><input type = "button" onclick = "start_stop(this, desert.events);" value = "Start" id = "timer-desert-18-start">
+        <input type = "button" onclick = "reset(this, desert.events);" value = "&#8635;" id = "timer-desert-18-reset">
+      </div>
+
+      <div class = "event-box" id = "desert-19-box">
+        <h1> (B) Bathazar's Lost </h1>
+        <br><p1 id = "timer-desert-19">15:00</p1>
+        <br><input type = "button" onclick = "start_stop(this, desert.events);" value = "Start" id = "timer-desert-19-start">
+        <input type = "button" onclick = "reset(this, desert.events);" value = "&#8635;" id = "timer-desert-19-reset">
       </div>
 
       <!-- Event info --> 

@@ -153,6 +153,12 @@
 
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
+					<span style = "font-weight: bold;">Nov 6, 2021</span>
+				<br>
+					- Updated <a href = "./timers/desert-highlands.php" target = "_blank"><u>Desert Highlands</u></a> timer page with a bigger map
+					<br>- Updated <a href = "./timers/desert-highlands.php" target = "_blank"><u>Desert Highlands</u></a> timer page with 3 new events: Tosun Escort, Drogg, and Branded Waves
+					<br> - Updated all timer pages to make the side timer countdown to float to the right. Makes it easier to read
+				<br><br>
 					<span style = "font-weight: bold;">Nov 1, 2021</span>
 				<br>
 					- Updated <a href = "./maps/silverwastes.php" target = "_blank"><u>Silverwastes</u></a> map guide

@@ -232,6 +232,66 @@ var desert = {
             num: document.getElementById('numerical-sidetimer-desert-15'),
             doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
+        {   // [16] (B) Awakwaned Occultist
+            status: 0,
+            key: 0,
+            cooldown: 60 * 15, 
+            startButton: document.getElementById('timer-desert-16-start'),
+            startSideButton: document.getElementById('sidetimer-desert-16-start'),
+            resetButton: document.getElementById('timer-desert-16-reset'),
+            resetSideButton: document.getElementById('sidetimer-desert-16-reset'),
+            timeLabel: document.getElementById('timer-desert-16'), 
+            timeSideLabel: document.getElementById('sidetimer-desert-16'),
+            textLabel: document.getElementById('timer-desert-16-text'),
+            sidebox: document.getElementById('desert-16-sidebox'),
+            num: document.getElementById('numerical-sidetimer-desert-16'),
+            doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
+        },
+        {   // [17] (B) Snag Seizeclaw
+            status: 0,
+            key: 0,
+            cooldown: 60 * 15, 
+            startButton: document.getElementById('timer-desert-17-start'),
+            startSideButton: document.getElementById('sidetimer-desert-17-start'),
+            resetButton: document.getElementById('timer-desert-17-reset'),
+            resetSideButton: document.getElementById('sidetimer-desert-17-reset'),
+            timeLabel: document.getElementById('timer-desert-17'), 
+            timeSideLabel: document.getElementById('sidetimer-desert-17'),
+            textLabel: document.getElementById('timer-desert-17-text'),
+            sidebox: document.getElementById('desert-17-sidebox'),
+            num: document.getElementById('numerical-sidetimer-desert-17'),
+            doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
+        },
+        {   // [18] (B) Cracking Brandspark
+            status: 0,
+            key: 0,
+            cooldown: 60 * 15, 
+            startButton: document.getElementById('timer-desert-18-start'),
+            startSideButton: document.getElementById('sidetimer-desert-18-start'),
+            resetButton: document.getElementById('timer-desert-18-reset'),
+            resetSideButton: document.getElementById('sidetimer-desert-18-reset'),
+            timeLabel: document.getElementById('timer-desert-18'), 
+            timeSideLabel: document.getElementById('sidetimer-desert-18'),
+            textLabel: document.getElementById('timer-desert-18-text'),
+            sidebox: document.getElementById('desert-18-sidebox'),
+            num: document.getElementById('numerical-sidetimer-desert-18'),
+            doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
+        },
+        {   // [19] (B) Bathazar's Lost
+            status: 0,
+            key: 0,
+            cooldown: 60 * 15, 
+            startButton: document.getElementById('timer-desert-19-start'),
+            startSideButton: document.getElementById('sidetimer-desert-19-start'),
+            resetButton: document.getElementById('timer-desert-19-reset'),
+            resetSideButton: document.getElementById('sidetimer-desert-19-reset'),
+            timeLabel: document.getElementById('timer-desert-19'), 
+            timeSideLabel: document.getElementById('sidetimer-desert-19'),
+            textLabel: document.getElementById('timer-desert-19-text'),
+            sidebox: document.getElementById('desert-19-sidebox'),
+            num: document.getElementById('numerical-sidetimer-desert-19'),
+            doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
+        },
     ]
 };
 // Dynamically creates unique keys

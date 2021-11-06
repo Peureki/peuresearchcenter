@@ -8211,6 +8211,13 @@ table.nodes td.nodes-cooldown{
 	top: 22%;
 	left: 54%;
 }
+#desert-16-box,
+#desert-17-box,
+#desert-18-box,
+#desert-19-box{
+	opacity: 0;
+}
+
 #desert-info-box-1{ /* Hostages */
 	top: 49%;
 	left: 64%;
