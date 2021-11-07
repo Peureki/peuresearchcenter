@@ -130,9 +130,31 @@
       <div class = "event-sidebox" id = "elon-13-sidebox">
         <h1> Doppleganger </h1>
         <input type = "button" onclick = "start_stop(this, elon.events);" value = "Start" id = "sidetimer-elon-13-start">
-        <input type = "button" onclick = "reset(this, elon.events);" value = "&#8635;" id = "sidetimer-elon-13-reset">
         <p1 id = "sidetimer-elon-13">10:00</p1>
         <p2 id = "numerical-sidetimer-elon-13">600</p2>
+      </div>
+
+      <div class = "event-sidebox" id = "elon-14-sidebox">
+        <h1> Champ Djinn </h1>
+        <input type = "button" onclick = "start_stop(this, elon.events);" value = "Start" id = "sidetimer-elon-14-start">
+        <input type = "button" onclick = "reset(this, elon.events);" value = "&#8635;" id = "sidetimer-elon-14-reset">
+        <p1 id = "sidetimer-elon-14">9:15</p1>
+        <p2 id = "numerical-sidetimer-elon-14">555</p2>
+      </div>
+
+      <div class = "event-sidebox" id = "elon-15-sidebox">
+        <h1> Graveyard </h1>
+        <input type = "button" onclick = "start_stop(this, elon.events);" value = "Start" id = "sidetimer-elon-15-start">
+        <p1 id = "sidetimer-elon-15">4:30</p1>
+        <p2 id = "numerical-sidetimer-elon-15">270</p2>
+      </div>
+
+      <div class = "event-sidebox" id = "elon-16-sidebox">
+        <h1> Awakened Caravan </h1>
+        <input type = "button" onclick = "start_stop(this, elon.events);" value = "Start" id = "sidetimer-elon-16-start">
+        <input type = "button" onclick = "reset(this, elon.events);" value = "&#8635;" id = "sidetimer-elon-16-reset">
+        <p1 id = "sidetimer-elon-16">4:30</p1>
+        <p2 id = "numerical-sidetimer-elon-16">270</p2>
       </div>
 
 	 
@@ -282,8 +304,29 @@
         <h1> Doppleganger </h1>
         <br><p1 id = "timer-elon-13">10:00</p1>
         <br><input type = "button" onclick = "start_stop(this, elon.events);" value = "Start" id = "timer-elon-13-start">
-        <input type = "button" onclick = "reset(this, elon.events);" value = "&#8635;" id = "timer-elon-13-reset">
         <br><p2 id = "timer-elon-13-text"></p2>  
+      </div>
+
+      <div class = "event-box" id = "elon-14-box">
+        <h1> Champ Djinn </h1>
+        <br><p1 id = "timer-elon-14">9:15</p1>
+        <br><input type = "button" onclick = "start_stop(this, elon.events);" value = "Start" id = "timer-elon-14-start">
+        <input type = "button" onclick = "reset(this, elon.events);" value = "&#8635;" id = "timer-elon-14-reset">
+        <br><p2 id = "timer-elon-14-text"></p2>  
+      </div>
+
+      <div class = "event-box" id = "elon-15-box">
+        <h1> Graveyard </h1>
+        <br><p1 id = "timer-elon-15">4:30</p1>
+        <br><input type = "button" onclick = "start_stop(this, elon.events);" value = "Start" id = "timer-elon-15-start">
+        <br><p2 id = "timer-elon-15-text"></p2>  
+      </div>
+
+      <div class = "event-box" id = "elon-16-box">
+        <h1> Awakened Caravan </h1>
+        <br><p1 id = "timer-elon-16">4:30</p1>
+        <br><input type = "button" onclick = "start_stop(this, elon.events);" value = "Start" id = "timer-elon-16-start">
+        <br><p2 id = "timer-elon-16-text"></p2>  
       </div>
 
       <!-- Meta -->

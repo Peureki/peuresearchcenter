@@ -3,9 +3,12 @@ sortTimers();
 
 var elon = {
     events: [
-        {   // empty
-            status: 0,
-            key: 0,
+        {   // [0] Path of Ascnesion 
+            timeSideLabel: document.getElementById('sidetimer-elon-meta'),
+            sidebox: document.getElementById('elon-meta-sidebox'),
+            num: document.getElementById('numerical-sidetimer-elon-meta'),
+            area: document.getElementById('elon-shape-2'), // Event area
+            info: document.getElementById('elon-meta-info-2'),
         },
         {   // [1] Choya
             status: 0,
@@ -203,12 +206,50 @@ var elon = {
             area: document.getElementById('elon-shape-1'),
             doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
-        {   // [14] Path of Ascnesion 
-            timeSideLabel: document.getElementById('sidetimer-elon-meta'),
-            sidebox: document.getElementById('elon-meta-sidebox'),
-            num: document.getElementById('numerical-sidetimer-elon-meta'),
-            area: document.getElementById('elon-shape-2'), // Event area
-            info: document.getElementById('elon-meta-info-2'),
+        {   // [14] Champ Djinn
+            status: 0,
+            key: 0,
+            cooldown: 60 * 9 + 15, 
+            startButton: document.getElementById('timer-elon-14-start'),
+            startSideButton: document.getElementById('sidetimer-elon-14-start'),
+            resetButton: document.getElementById('timer-elon-14-reset'),
+            resetSideButton: document.getElementById('sidetimer-elon-14-reset'),
+            timeLabel: document.getElementById('timer-elon-14'), 
+            timeSideLabel: document.getElementById('sidetimer-elon-14'),
+            textLabel: document.getElementById('timer-elon-14-text'),
+            sidebox: document.getElementById('elon-14-sidebox'),
+            num: document.getElementById('numerical-sidetimer-elon-14'),
+            doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
+        },
+        {   // [15] Graveyard
+            status: 0,
+            key: 0,
+            cooldown: 60 * 4 + 30, 
+            startButton: document.getElementById('timer-elon-15-start'),
+            startSideButton: document.getElementById('sidetimer-elon-15-start'),
+            resetButton: document.getElementById('timer-elon-15-reset'),
+            resetSideButton: document.getElementById('sidetimer-elon-15-reset'),
+            timeLabel: document.getElementById('timer-elon-15'), 
+            timeSideLabel: document.getElementById('sidetimer-elon-15'),
+            textLabel: document.getElementById('timer-elon-15-text'),
+            sidebox: document.getElementById('elon-15-sidebox'),
+            num: document.getElementById('numerical-sidetimer-elon-15'),
+            doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
+        },
+        {   // [16] Awakened Caravan
+            status: 0,
+            key: 0,
+            cooldown: 60 * 4 + 30, 
+            startButton: document.getElementById('timer-elon-16-start'),
+            startSideButton: document.getElementById('sidetimer-elon-16-start'),
+            resetButton: document.getElementById('timer-elon-16-reset'),
+            resetSideButton: document.getElementById('sidetimer-elon-16-reset'),
+            timeLabel: document.getElementById('timer-elon-16'), 
+            timeSideLabel: document.getElementById('sidetimer-elon-16'),
+            textLabel: document.getElementById('timer-elon-16-text'),
+            sidebox: document.getElementById('elon-16-sidebox'),
+            num: document.getElementById('numerical-sidetimer-elon-16'),
+            doCountdown: function() { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
        
     ]
@@ -246,8 +287,8 @@ let current_progress = document.getElementById('current-status'),
                 next_progress = "Path of Ascension";
                 meta_name.innerHTML = "Path of Ascension";
 
-                elon.events[14].area.style.opacity = 0;
-                elon.events[14].info.style.opacity = 0;
+                elon.events[0].area.style.opacity = 0;
+                elon.events[0].info.style.opacity = 0;
 
                 max_meta_time = ((end_hour * 3600) + (30 * 60)) - ((btw_hour * 3600) + (0 * 60));
                 new_meta_time = time - ((btw_hour * 3600) + (0 * 60));
@@ -263,11 +304,11 @@ let current_progress = document.getElementById('current-status'),
 
                     // If Doppleganger timer reaches 0, remove effects from Ascension meta
                     if (elon.events[13].area.style.opacity == 0){
-                        elon.events[14].area.style.opacity = 0.5;
-                        elon.events[14].info.style.opacity = 1;
+                        elon.events[0].area.style.opacity = 0.5;
+                        elon.events[0].info.style.opacity = 1;
                     } else {
-                        elon.events[14].area.style.opacity = 0;
-                        elon.events[14].info.style.opacity = 0;
+                        elon.events[0].area.style.opacity = 0;
+                        elon.events[0].info.style.opacity = 0;
                     }
 
                     progress_bar.style.background = meta_color;
@@ -284,8 +325,8 @@ let current_progress = document.getElementById('current-status'),
                 progress_bar.style.width = meta_width + "%";
                 progress_text.innerHTML = getDisplayTime(result) + " &#x27F6; " + next_progress;
 
-                elon.events[14].sidebox.style.background = progress_bar.style.background;
-                elon.events[14].timeSideLabel.innerHTML = getDisplayTime(result);
+                elon.events[0].sidebox.style.background = progress_bar.style.background;
+                elon.events[0].timeSideLabel.innerHTML = getDisplayTime(result);
             }
         } // End of function
 
