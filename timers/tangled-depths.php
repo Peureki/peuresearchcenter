@@ -200,6 +200,14 @@
 	      <p1 id = "sidetimer-tangled-22">38:00</p1>
 	      <p2 id = "numerical-sidetimer-tangled-22">2280</p2>
 	    </div>
+
+	    <div id = "tangled-23-sidebox" class = "event-sidebox">
+	      <h1> Earth Elementals </h1>
+	      <input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "sidetimer-tangled-23-start">
+	      <input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "sidetimer-tangled-23-reset">
+	      <p1 id = "sidetimer-tangled-23">30:00</p1>
+	      <p2 id = "numerical-sidetimer-tangled-23">1800</p2>
+	    </div>
 	    
 	  </div> <!-- End of left side box --> 
 
@@ -281,6 +289,8 @@
 	    Treasure Mushroom: <input type = "Checkbox" id = "tangled-21-checkbox" checked = "true" onclick = "checkboxTimer(this, tangled.events);">
 	    <br>
 	    Chak Driver: <input type = "Checkbox" id = "tangled-22-checkbox" checked = "true" onclick = "checkboxTimer(this, tangled.events);">
+	    <br>
+	    Earth Elementals: <input type = "Checkbox" id = "tangled-23-checkbox" checked = "true" onclick = "checkboxTimer(this, tangled.events);">
 	    <br>
 	    
 	 </div>
@@ -503,6 +513,14 @@
        			<input type = "button" value = "i" onmouseover = "showElement('tangled-info-10');" onmouseout = "hideElement('tangled-info-10');">
        		</div>
 
+       		<div class = "event-box" id = "tangled-23-box">
+				<h1> Earth Elementals </h1>
+       	 		<br><p1 id = "timer-tangled-23">30:00</p1>
+        		<br><input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "timer-tangled-23-start">
+       			<input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "timer-tangled-23-reset">	
+       			<input type = "button" value = "i" onmouseover = "showElement('tangled-info-11');" onmouseout = "hideElement('tangled-info-10');">
+       		</div>
+
        		<!-- Information boxes 
        			 Nuhoch Lane 
        			 Chak Lobber -->
@@ -555,6 +573,11 @@
        		<!-- Other info -->
        		<div class = "event-info" id = "tangled-info-10">
        			This event has a long range of when it can spawn: 32-44 minutes.
+       		</div>
+
+       		<!-- Earth Elemental -->
+       		<div class = "event-info" id = "tangled-info-11">
+       			This event can only be triggered if there are 3 Veteran Earth Elementals at the enterence of the event spawn location.
        		</div>
 
 			<img class = "map-timer-map" title = "Nuhoch" src = "../images/tangled-depths/nuhoch-sector.jpg"> 

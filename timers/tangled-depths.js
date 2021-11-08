@@ -357,6 +357,20 @@ var tangled = {
             num: document.getElementById('numerical-sidetimer-tangled-22'),
             doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
         },
+        {   // [23] Earth Elemental
+            status: 0,
+            key: 0,
+            cooldown: 60 * 30, 
+            startButton: document.getElementById('timer-tangled-23-start'),
+            startSideButton: document.getElementById('sidetimer-tangled-23-start'),
+            resetButton: document.getElementById('timer-tangled-23-reset'),
+            resetSideButton: document.getElementById('sidetimer-tangled-23-reset'),
+            timeLabel: document.getElementById('timer-tangled-23'), 
+            timeSideLabel: document.getElementById('sidetimer-tangled-23'),
+            sidebox: document.getElementById('tangled-23-sidebox'),
+            num: document.getElementById('numerical-sidetimer-tangled-23'),
+            doCountdown: function () { countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.num); }
+        },
 
     ]
 };
