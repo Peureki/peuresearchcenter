@@ -518,7 +518,7 @@
        	 		<br><p1 id = "timer-tangled-23">30:00</p1>
         		<br><input type = "button" onclick = "start_stop(this, tangled.events);" value = "Start" id = "timer-tangled-23-start">
        			<input type = "button" onclick = "reset(this, tangled.events);" value = "&#8635;" id = "timer-tangled-23-reset">	
-       			<input type = "button" value = "i" onmouseover = "showElement('tangled-info-11');" onmouseout = "hideElement('tangled-info-10');">
+       			<input type = "button" value = "i" onmouseover = "showElement('tangled-info-11');" onmouseout = "hideElement('tangled-info-11');">
        		</div>
 
        		<!-- Information boxes 
