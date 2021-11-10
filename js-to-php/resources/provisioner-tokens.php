@@ -3,6 +3,10 @@
 	include_once '../../db/items.php'; 	
 ?>
 
+<?php 
+	$sylvariIDs = "46281,46040,46186,45731,45765,45622";
+?>
+
 <script>
 //	===================================================================================
 //  ========================== PROVISIONER TOKENS =====================================
@@ -46,31 +50,55 @@
 	let prov = <?php echo $provDB->get_all_items('prov_tokens'); ?>; 
 	console.log("prov: ", prov);
 
-	console.log(itemIDs);
+	console.log("itemIDs: ", itemIDs[0].name);
 
+	
 	let factions = {
 		vb_sylvari: [
 			{	
 				name: "", 
 				id: 0,
-				map: "",
-				waypoint: "",
+				map: "Verdant Brink",
+				waypoint: "[&BN4HAAA=]",
 				icon: "",
 				buy_price: 0,
 				sell_price: 0,
 			},
 		],
 	};
+	
 
-	let testObject = {
-	};
+	//let vb_sylvari = {};
 
-	for (i = 0; i < 10; i++){
-		testObject[i] = {
-			num: i,
-		}; 
+	new Array(6).fill(null).forEach((item, i) => {factions.vb_sylvari[i] = {
+		factions.vb_sylvari[i].name = itemIDs[i].name,
+		factions.vb_sylvari[i].id = itemIDs[i].id,
+		factions.vb_sylvari[i].map = "Verdant Brink",
+		factions.vb_sylvari[i].waypoint = "[&BN4HAAA=]",
+		factions.vb_sylvari[i].icon = itemIDs[i].icon,
+		factions.vb_sylvari[i].buy_price = itemIDs[i].buy_unit_price, 
+		factions.vb_sylvari[i].sell_price = itemIDs[i].sell_unit_price,
+	}; });
+
+	console.log(factions);
+
+	/*
+	for (i = 0; i < 6; i++){
+		factions.vb_sylvari[i].name = itemIDs[i].name;
+		factions.vb_sylvari[i].id = itemIDs[i].id;
+		factions.vb_sylvari[i].map = "Verdant Brink";
+		factions.vb_sylvari[i].waypoint = "[&BN4HAAA=]";
+		factions.vb_sylvari[i].icon = itemIDs[i].icon;
+		factions.vb_sylvari[i].buy_price = itemIDs[i].buy_unit_price; 
+		factions.vb_sylvari[i].sell_price = itemIDs[i].sell_unit_price; 
 	}
-	console.log(testObject);
+	*/
+
+	function applyIDs(){
+		let merp = <?php echo $itemsDB->get_array_items("items", $sylvariIDs); ?>;
+		console.log("merp: ", merp); 
+	}
+	console.log(applyIDs());
 
 
 </script>
