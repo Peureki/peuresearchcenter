@@ -3,7 +3,6 @@
 <head>
 	<!-- Defaults -->
 	<?php include('../config.php');?>
-	<?php include ('../js-to-php/resources/provisioner-tokens.php'); ?>
 	<title> Dailies </title>
 	<script type = "text/javascript" src = "<?php echo $base;?>/resources/dailies.js?v=<?php echo $date;?>"></script>
 </head>
@@ -14,12 +13,13 @@
 		====================== NAVIGATION BAR ======================
 		============================================================
 	-->
-	<?php include('../../nav.php'); ?>
+	<?php include('../nav.php'); ?>
 
 	<div id = "bookmark-left" class = "bookmark-left">
 		<ul>
 			<a href = "#dailies"><li> &#10097; Dailies </li></a> 
 			<a href = "#psna"><li> &#10097; PSNA </li></a> 
+			<a href = "#provisioner-tokens"><li> &#10097; Prov Tokens </li></a> 
 		</ul>
 	</div>
 
@@ -101,7 +101,7 @@
 				</table>
 			</div>
 
-			<div class = "section-header">
+			<div id = "provisioner-tokens" class = "section-header">
 				<h1>Provisioner Tokens</h1>
 				<div class = "banner-box"></div>
 				<img src = "../images/assets/banner.svg">
@@ -110,16 +110,32 @@
 			<div class = "section-header-space"></div>
 
 			<div class = "overflow-table">
-				<table class = "prov-tokens">
+				<table class = "prov-tokens-other">
 					<tr>
 						<th> Map </th>
-						<th> Token Exchange </th>
+						<th> Faction </th>
 						<th> Waypoint </th>
 						<th> Name </th>
+						<th> Qty </th>
 						<th> Buy Price </th>
 						<th> Sell Price </th>	
 					</tr>
-					<tbody id = "prov-tokens"></tbody>
+					<tbody id = "prov-tokens-other"></tbody>
+				</table>
+			</div>
+
+			<div class = "overflow-table">
+				<table class = "prov-tokens-cities">
+					<tr>
+						<th> Map </th>
+						<th> Faction </th>
+						<th> Waypoint </th>
+						<th> Name </th>
+						<th> Qty </th>
+						<th> Buy Price </th>
+						<th> Sell Price </th>	
+					</tr>
+					<tbody id = "prov-tokens-cities"></tbody>
 				</table>
 			</div>
 		</div> <!-- End of page box -->
@@ -182,12 +198,15 @@
 
 	</script>
 
+	<?php include ('../js-to-php/resources/provisioner-tokens.php'); ?>
+
 	<!-- 
 		========================================================================
 		====================== FOOTER + DARK MODE ==============================
 		========================================================================
 	-->
 	<?php include("../../footer.php"); ?>
+
 
 </body>
 </html>

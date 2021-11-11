@@ -15,6 +15,17 @@
 
 	24366,24741,19925,24651,24729,46745,19983,19721,24830,43772,24330,24726,46742,24678,24732,46744,66650,24735"); ?>; 
 
+	let ascendedIngres = <?php echo $itemsDB->get_array_items("items", "19735, 19721, 46747"); ?>; 
+	console.log("ascended ids: ", ascendedIngres);
+
+	// Example: recipe("Spool of Thick Elonian Cord", 
+	// 				50, "Cured Thick Leather Square",
+	//				1, "Glob of Ectoplasm",
+	//				10, "Thermocatalytic Reagent");
+	function recipe(product, qty1, ingre1, qty2, ingre2, qty3, ingre3, qty4, ingre4){
+		
+	}
+
 	console.log("items id: ", itemIDs);
 	let prov = <?php echo $provDB->get_all_items('prov_tokens'); ?>; 
 
@@ -49,11 +60,12 @@
 	// minRange = 0, the range where it starts in the ItemsID array
 	// mapName = "Verdant Brink"
 	// waypointName = "[&BN4HAAA=]""
-	function applyIDs(factions, minRange, mapName, waypointName){
+	function applyIDs(factions, minRange, mapName, factionName, waypointName){
 		for (i = 0; i < factions.length; i++){
 			factions[i].name = itemIDs[minRange+i].name;
 			factions[i].id = itemIDs[minRange+i].id;
 			factions[i].map = mapName;
+			factions[i].factionName = factionName;
 			factions[i].waypoint = waypointName;
 			factions[i].icon = itemIDs[minRange+i].icon;
 			factions[i].buy_price = itemIDs[minRange+i].buy_unit_price; 
@@ -68,61 +80,107 @@
 	}
 	// Each of these have 6 options per faction
 	// VB
-	applyIDs(factions.vb_sylvari, 0, "Verdant Brink", "[&BN4HAAA=]"); 
-	applyIDs(factions.vb_itzel, 6, "Verdant Brink", "[&BN4HAAA=]");
-	applyIDs(factions.vb_pact, 12, "Verdant Brink", "[&BN4HAAA=]");
-	applyIDs(factions.vb_noble, 18, "Verdant Brink", "[&BN4HAAA=]");
-	applyIDs(factions.vb_quaggan, 24, "Verdant Brink", "[&BN4HAAA=]");
+	applyIDs(factions.vb_sylvari, 0, "Verdant Brink", "Sylvari", "[&BN4HAAA=]"); 
+	applyIDs(factions.vb_itzel, 6, "Verdant Brink", "Itzel", "[&BN4HAAA=]");
+	applyIDs(factions.vb_pact, 12, "Verdant Brink", "Pact", "[&BN4HAAA=]");
+	applyIDs(factions.vb_noble, 18, "Verdant Brink", "Noble", "[&BN4HAAA=]");
+	applyIDs(factions.vb_quaggan, 24, "Verdant Brink", "Quaggan", "[&BN4HAAA=]");
 
 	// AB
-	applyIDs(factions.ab_priory, 30, "Auric Basin", "[&BNYHAAA=]");
-	applyIDs(factions.ab_exalted, 36, "Auric Basin", "[&BNYHAAA=]");  
-	applyIDs(factions.ab_skritt, 42, "Auric Basin", "[&BNYHAAA=]"); 
+	applyIDs(factions.ab_priory, 30, "Auric Basin", "Priory", "[&BNYHAAA=]");
+	applyIDs(factions.ab_exalted, 36, "Auric Basin", "Exalted", "[&BNYHAAA=]");  
+	applyIDs(factions.ab_skritt, 42, "Auric Basin", "Skritt", "[&BNYHAAA=]"); 
 
 	// TD
-	applyIDs(factions.td_ogre, 48, "Tangled Depths", "[&BMwHAAA=]");
-	applyIDs(factions.td_nuhoch, 54, "Tangled Depths", "[&BMwHAAA=]");
-	applyIDs(factions.td_rata, 60, "Tangled Depths", "[&BMwHAAA=]");
-	applyIDs(factions.td_scar, 66, "Tangled Depths", "[&BMwHAAA=]");
+	applyIDs(factions.td_ogre, 48, "Tangled Depths", "Ogre", "[&BMwHAAA=]");
+	applyIDs(factions.td_nuhoch, 54, "Tangled Depths", "Nuhoch", "[&BMwHAAA=]");
+	applyIDs(factions.td_rata, 60, "Tangled Depths", "Rata", "[&BMwHAAA=]");
+	applyIDs(factions.td_scar, 66, "Tangled Depths", "SCAR", "[&BMwHAAA=]");
 
 	// Each of these have 3 options per faction
 	// Cities
-	applyIDs(factions.black_citadel, 72, "Black Citadel", "[&BKgDAAA=]");
-	applyIDs(factions.hoelbrak, 75, "Hoelbrak", "[&BIYDAAA=]");
-	applyIDs(factions.lions_arch, 78, "Lion's Arch", "[&BAwEAAA=]");
-	applyIDs(factions.rata_sum, 81, "Rata Sum", "[&BLYEAAA=]");
-	applyIDs(factions.divinitys_reach, 84, "Divinity's Reach", "[&BP4EAAA=]");
-	applyIDs(factions.the_grove, 87, "The Grove", "[&BLsEAAA=]");
+	applyIDs(factions.black_citadel, 72, "Black Citadel", "Collector's", "[&BKgDAAA=]");
+	applyIDs(factions.hoelbrak, 75, "Hoelbrak", "Collector's", "[&BIYDAAA=]");
+	applyIDs(factions.lions_arch, 78, "Lion's Arch", "Collector's", "[&BAwEAAA=]");
+	applyIDs(factions.rata_sum, 81, "Rata Sum", "Collector's", "[&BLYEAAA=]");
+	applyIDs(factions.divinitys_reach, 84, "Divinity's Reach", "Collector's", "[&BP4EAAA=]");
+	applyIDs(factions.the_grove, 87, "The Grove", "Collector's", "[&BLsEAAA=]");
 
-	let factionsList = [
+	let othersList = [
 		factions.vb_sylvari,
-		factions.vb_itzel];
+		factions.vb_itzel,
+		factions.vb_pact,
+		factions.vb_noble,
+		factions.vb_quaggan,
+		factions.ab_priory,
+		factions.ab_exalted,
+		factions.ab_skritt,
+		factions.td_ogre,
+		factions.td_nuhoch,
+		factions.td_rata,
+		factions.td_scar];
 
-	console.log(factionsList);
+	let citiesList = [
+		factions.black_citadel,
+		factions.hoelbrak,
+		factions.lions_arch,
+		factions.rata_sum,
+		factions.divinitys_reach,
+		factions.the_grove
+	];
 
-	let currentList,
+	console.log(citiesList);
+
+	let currentNum,
 		currentSell; 
 
-	for (i = 0; i < factionsList.length; i++){
-		console.log(factionsList[i].length);
-		// Loop through items within a faction
-		// Find lowest cost
-		for(j = 0; j < factionsList[i].length; j++){
-			if (j = 0){
-				currentSell = factionsList[i][j].sell_price;
-				continue; 
-			}
-			if (factionsList[i][j].sell_price < currentSell){
-				currentSell = factionsList[i][j].sell_price; 
-			} else {
-				continue; 
+	let html = '',
+		citiesTable = document.getElementById('prov-tokens-cities'),
+		othersTable = document.getElementById('prov-tokens-other');
+
+	// Go through each faction and determine what's the cheapest price
+	for (i = 0; i < othersList.length; i++){
+		currentNum = 0;
+		currentSell = othersList[i][0].sell_price;
+
+		for (j = 1; j < othersList[i].length; j++){
+			if (othersList[i][j].sell_price < currentSell){
+				currentNum = j; 
+				currentSell = othersList[i][j].sell_price; 
 			}
 		}
-		console.log(factionsList[i], currentSell);
+		html += ` <tr>
+			<td> ${othersList[i][currentNum].map} </td>
+			<td> ${othersList[i][currentNum].factionName} </td>
+			<td> ${othersList[i][currentNum].waypoint} </td>
+			<td> ${othersList[i][currentNum].name} </td>
+			<td> ${othersList[i][currentNum].qty} </td>
+			<td> ${displayValues(othersList[i][currentNum].buy_price)} </td>
+			<td> ${displayValues(othersList[i][currentNum].sell_price)} </td>
+		</tr>`;
+		othersTable.innerHTML = html; 
 	}
 
-	let html = '',
-		table = document.getElementById('prov-tokens');
+	html = '';
+
+	// Go through each faction and determine what's the cheapest price
+	for (i = 0; i < citiesList.length; i++){
+		for (j = 1; j < citiesList[i].length; j++){
+			html += ` <tr>
+				<td> ${citiesList[i][j].map} </td>
+				<td> ${citiesList[i][j].factionName} </td>
+				<td> ${citiesList[i][j].waypoint} </td>
+				<td> ${citiesList[i][j].name} </td>
+				<td> ${citiesList[i][j].qty} </td>
+				<td> ${displayValues(citiesList[i][j].buy_price)} </td>
+				<td> ${displayValues(citiesList[i][j].sell_price)} </td>
+			</tr>`;
+
+		}
+		citiesTable.innerHTML = html; 
+	}
+
+	
 
 
 </script>
