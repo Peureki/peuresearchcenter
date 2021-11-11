@@ -112,14 +112,14 @@
 			<div class = "overflow-table">
 				<table class = "prov-tokens">
 					<tr>
-						<th> Icon </th>
-						<th> Name </th>
-						<th> Buy Price </th>
-						<th> Sell Price </th>
 						<th> Map </th>
 						<th> Token Exchange </th>
 						<th> Waypoint </th>
+						<th> Name </th>
+						<th> Buy Price </th>
+						<th> Sell Price </th>	
 					</tr>
+					<tbody id = "prov-tokens"></tbody>
 				</table>
 			</div>
 		</div> <!-- End of page box -->

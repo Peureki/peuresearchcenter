@@ -37,7 +37,7 @@
 			<h1 class = "title"> Peu Research Center </h1>
 
 			<div class = "small-description" style = "text-align: center;">
-				Guild Wars 2 benchmarks, gold farming guides, tools, and choyas!
+				<h1>Guild Wars 2 benchmarks, gold farming guides, tools, and choyas! </h1>
 			</div>
 
 			<div class = "section-header">
