@@ -49,7 +49,7 @@ class Items extends ItemsDB{
 	// FOR SPECIFIC LISTINGS
 	// $table = what DB table to modify
 	// $IDs = string of IDs to modify in the table. ex: "1, 2, 3, 4, etc"
-	public function set_items_listings($table, $IDs){
+	public function set_specific_items_listings($table, $IDs){
 		
 		// Get JSON GW2 API
 		$url = file_get_contents('https://api.guildwars2.com/v2/commerce/listings?ids='.$IDs);
@@ -129,5 +129,7 @@ set_time_limit(1000);
 $itemsDB = new Items();
 $provDB = new Items(); 
 //$itemsDB->set_item_general('items');
+
+$itemsDB->set_specific_items_listings('items', '43773');
 
 ?>

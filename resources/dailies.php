@@ -109,6 +109,19 @@
 			<!-- Hidden space so the header doesn't overlap anything below -->
 			<div class = "section-header-space"></div>
 
+			<div class = "small-description" style = "display: flex; justify-content: center;">
+				<span style = "font-size: 18px; margin-right: 5px;"> Copy Waypoints: </span>
+				<input  type = "text" id = "copyProv" class = "select-button" onclick = "copyValue(this.id);" value = "VB: [&BN4HAAA=] | AB: [&BNYHAAA=] | TD: [&BMwHAAA=] | Rata: [&BLYEAAA=] | Grove: [&BLsEAAA=] | Div Reach: [&BP4EAAA=] | LA: [&BAwEAAA=] | Hoel: [&BIYDAAA=] | Citidal: [&BKgDAAA=]"> </input> 
+			</div>
+
+			<div class = "homepage-title">
+				<h1> HoT Maps </h1>
+			</div>
+
+			<div class = "small-description">
+				These specific NPCs have multiple tabs where there are multiple options to exchange. Only 1 exchange per tab can happen. This table displays <b> the cheapest option </b> within those tabs. 
+			</div>
+
 			<div class = "overflow-table">
 				<table class = "prov-tokens-other">
 					<tr>
@@ -122,6 +135,10 @@
 					</tr>
 					<tbody id = "prov-tokens-other"></tbody>
 				</table>
+			</div>
+
+			<div class = "homepage-title">
+				<h1> Cities </h1>
 			</div>
 
 			<div class = "overflow-table">
@@ -194,7 +211,6 @@
 		getDaily();
 
 		new_Train('hours-0','minutes-0','seconds-0','progress-bar-0','num-0','box-0','name-0','time-0',0);
-		get_all_items();
 
 	</script>
 
