@@ -127,9 +127,7 @@ class Items extends ItemsDB{
 set_time_limit(1000);
 // Initialize map DB
 $itemsDB = new Items();
-$provDB = new Items(); 
 //$itemsDB->set_item_general('items');
 
-$itemsDB->set_specific_items_listings('items', '43773');
 
 ?>

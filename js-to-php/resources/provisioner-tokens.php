@@ -18,6 +18,8 @@
 	let ascendedIngres = <?php echo $itemsDB->get_array_items("items", "19735, 19721, 46747, 19684, 19709"); ?>; 
 	let generalIngres = <?php echo $itemsDB->get_array_items("items", "43773"); ?> ;
 
+	console.log(itemIDs);
+
 	let upgradedMats = [
 		{
 			name: "Charged Quartz Crystal",
@@ -105,8 +107,6 @@
 		product.sell = sell_value;
 	}
 
-	let prov = <?php echo $provDB->get_all_items('prov_tokens'); ?>; 
-
 	// Empty object
 	let factions = {
 		vb_sylvari: [{},{},{},{},{},{},],
@@ -140,7 +140,6 @@
 				attributes = array[counter];
 			}
 		}
-		console.log("attributes: ", attributes);
 		return attributes;
 	}
 
@@ -310,8 +309,5 @@
 		}
 		citiesTable.innerHTML = html; 
 	}
-
-	
-
 
 </script>
