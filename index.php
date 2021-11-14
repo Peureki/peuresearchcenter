@@ -153,6 +153,10 @@
 
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
+					<span style = "font-weight: bold;">Nov 14, 2021</span>
+				<br>
+					- Added a new feature! Added <a href = "./resources/dailies.php"><u> Provisioner Tokens </u></a>. There are two tables: HoT and Cities. The HoT table shows the cheapest option per tab exchange while the Cities show everything (since you can purchase all in one tab). 
+				<br><br>
 					<span style = "font-weight: bold;">Nov 8, 2021</span>
 				<br>
 					- Added "Earth Elemental" event in <a href = "./timers/tangled-depths.php" target = "_blank"><u>Tangled Depths</u></a> timer page

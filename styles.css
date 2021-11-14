@@ -7202,6 +7202,14 @@ table.nodes td.nodes-cooldown{
 	top: 58%;
 	left: 75%;
 }
+#auric-14-box{ /* Stoneheads */
+	top: 80%;
+	left: 15%;
+}
+#auric-15-box{ /* Gold Guzz */
+	top: 17%;
+	left: 29%;
+}
 #auric-event-info-1 { /* Tendril */
 	top: 5%;
 	left: 63%;

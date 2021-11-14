@@ -3,9 +3,10 @@ sortTimers();
 
 let auric = {
     events: [
-        {   // empty
-            status: 0,
-            key: 0,
+        {   // [0] Auric Basin Meta
+            timeSideLabel: document.getElementById('sidetimer-auric-meta'),
+            sidebox: document.getElementById('auric-meta-sidebox'),
+            countdownSec: document.getElementById('numerical-sidetimer-auric-meta')
         },
         {   // [1] Vet vinetooth N
             status: 0,
@@ -193,10 +194,33 @@ let auric = {
             countdownSec: document.getElementById('numerical-sidetimer-auric-13'),
             doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
         },
-        {   // [14] Auric Basin Meta
-            timeSideLabel: document.getElementById('sidetimer-auric-meta'),
-            sidebox: document.getElementById('auric-meta-sidebox'),
-            countdownSec: document.getElementById('numerical-sidetimer-auric-meta')
+        {   // [14] Stoneheads
+            status: 0,
+            key: 0,
+            cooldown: 60 * 10 + 15, 
+            startButton: document.getElementById('timer-auric-14-start'),
+            startSideButton: document.getElementById('sidetimer-auric-14-start'),
+            resetButton: document.getElementById('timer-auric-14-reset'),
+            resetSideButton: document.getElementById('sidetimer-auric-14-reset'),
+            timeLabel: document.getElementById('timer-auric-14'), 
+            timeSideLabel: document.getElementById('sidetimer-auric-14'),
+            sidebox: document.getElementById('auric-14-sidebox'),
+            countdownSec: document.getElementById('numerical-sidetimer-auric-14'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
+        },
+        {   // [15] Gold Guzzler
+            status: 0,
+            key: 0,
+            cooldown: 60 * 9 + 30, 
+            startButton: document.getElementById('timer-auric-15-start'),
+            startSideButton: document.getElementById('sidetimer-auric-15-start'),
+            resetButton: document.getElementById('timer-auric-15-reset'),
+            resetSideButton: document.getElementById('sidetimer-auric-15-reset'),
+            timeLabel: document.getElementById('timer-auric-15'), 
+            timeSideLabel: document.getElementById('sidetimer-auric-15'),
+            sidebox: document.getElementById('auric-15-sidebox'),
+            countdownSec: document.getElementById('numerical-sidetimer-auric-15'),
+            doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
         },
     ]
 };
@@ -261,7 +285,7 @@ let arrow_north = document.getElementById('auric-arrow-1'),
                 hide_multiple_elements(1,20,'auric-img-','opacity'); // All images 
                 hide_multiple_elements(1,12,'auric-info-','opacity'); // All info
 
-                auric.events[14].sidebox.style.background = "transparent";
+                auric.events[0].sidebox.style.background = "transparent";
 
                 max_meta_time = ((btw_hour * 3600) + (45 * 60)) - ((start_hour * 3600) + (30 * 60));
                 new_meta_time = time - ((start_hour * 3600) + (30 * 60));
@@ -271,7 +295,7 @@ let arrow_north = document.getElementById('auric-arrow-1'),
                 if (d.getUTCHours() == btw_hour && d.getUTCMinutes() >= 45){
 
                     progress_bar.style.background = pre_meta_color;
-                    auric.events[14].sidebox.style.background = pre_meta_color;
+                    auric.events[0].sidebox.style.background = pre_meta_color;
                     current_progress.innerHTML = "Status: Prep Phase! Challenges up!";
                     next_progress = "Pre-Meta Event - Mordrem Assault";
                     side_meta_name.innerHTML = "Mordrem Assault";
@@ -305,7 +329,7 @@ let arrow_north = document.getElementById('auric-arrow-1'),
                 if (d.getUTCHours() == end_hour && d.getUTCMinutes() >= 0 && d.getUTCMinutes() < 20 ){
 
                     progress_bar.style.background = meta_color;
-                    auric.events[14].sidebox.style.background = meta_color;
+                    auric.events[0].sidebox.style.background = meta_color;
                     current_progress.innerHTML = "Status: Octovine!";
                     next_progress = "Break";
                     side_meta_name.innerHTML = "Break";
@@ -341,8 +365,8 @@ let arrow_north = document.getElementById('auric-arrow-1'),
                 progress_bar.style.width = meta_width + "%";
                 progress_text.innerHTML = getDisplayTime(result) + " &#x27F6; " + next_progress;
 
-                auric.events[14].sidebox.style.background = progress_bar.style.background;
-                auric.events[14].timeSideLabel.innerHTML = getDisplayTime(result);
+                auric.events[0].sidebox.style.background = progress_bar.style.background;
+                auric.events[0].timeSideLabel.innerHTML = getDisplayTime(result);
             }
         } // End of function
 

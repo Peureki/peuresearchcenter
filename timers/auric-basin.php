@@ -140,6 +140,22 @@
         <p1 id = "sidetimer-auric-13">9:45</p1>
         <p2 id = "numerical-sidetimer-auric-13">585</p2>
       </div>
+
+      <div id = "auric-14-sidebox" class = "event-sidebox" >
+        <h1> Stoneheads </h1>
+        <input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "sidetimer-auric-14-start">
+        <input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "sidetimer-auric-14-reset">
+        <p1 id = "sidetimer-auric-14">10:15</p1>
+        <p2 id = "numerical-sidetimer-auric-14">615</p2>
+      </div>
+
+      <div id = "auric-15-sidebox" class = "event-sidebox" >
+        <h1> Gold Guzzler </h1>
+        <input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "sidetimer-auric-15-start">
+        <input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "sidetimer-auric-15-reset">
+        <p1 id = "sidetimer-auric-15">9:30</p1>
+        <p2 id = "numerical-sidetimer-auric-15">540</p2>
+      </div>
 	    	     
 	    
 	  </div> <!-- End of left side box -->
@@ -318,6 +334,20 @@
             <br><p1 id = "timer-auric-13">9:45</p1>
             <br><input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "timer-auric-13-start">
             <input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "timer-auric-13-reset"> 
+          </div>
+
+          <div class = "event-box" id = "auric-14-box">
+            <h1> Stoneheads </h1>
+            <br><p1 id = "timer-auric-14">10:15</p1>
+            <br><input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "timer-auric-14-start">
+            <input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "timer-auric-14-reset"> 
+          </div>
+
+          <div class = "event-box" id = "auric-15-box">
+            <h1> Gold Guzzler </h1>
+            <br><p1 id = "timer-auric-15">9:30</p1>
+            <br><input type = "button" onclick = "start_stop(this, auric.events);" value = "Start" id = "timer-auric-15-start">
+            <input type = "button" onclick = "reset(this, auric.events);" value = "&#8635;" id = "timer-auric-15-reset"> 
           </div>
 
 
