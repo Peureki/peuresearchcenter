@@ -265,8 +265,8 @@
 		currentSell; 
 
 	let html = '',
-		citiesTable = document.getElementById('prov-tokens-cities'),
-		othersTable = document.getElementById('prov-tokens-other');
+		citiesTable = document.getElementById('prov-tokens-cities-tbody'),
+		othersTable = document.getElementById('prov-tokens-other-tbody');
 
 	// Go through each faction and determine what's the cheapest price
 	for (i = 0; i < othersList.length; i++){

@@ -123,17 +123,17 @@
 			</div>
 
 			<div class = "overflow-table">
-				<table class = "prov-tokens-other">
+				<table id = "prov-tokens-other" class = "prov-tokens-other">
 					<tr>
 						<th> Map </th>
 						<th> Faction </th>
 						<th> Waypoint </th>
 						<th> Name </th>
 						<th> Qty </th>
-						<th> Buy Price </th>
-						<th> Sell Price </th>	
+						<th onclick = "sortTableByPrice('prov-tokens-other', 5, 'ascending');"> Buy Price </th>
+						<th onclick = "sortTableByPrice('prov-tokens-other', 6, 'ascending');"> Sell Price </th>	
 					</tr>
-					<tbody id = "prov-tokens-other"></tbody>
+					<tbody id = "prov-tokens-other-tbody"></tbody>
 				</table>
 			</div>
 
@@ -142,17 +142,17 @@
 			</div>
 
 			<div class = "overflow-table">
-				<table class = "prov-tokens-cities">
+				<table id = "prov-tokens-cities" class = "prov-tokens-cities">
 					<tr>
 						<th> Map </th>
 						<th> Faction </th>
 						<th> Waypoint </th>
 						<th> Name </th>
 						<th> Qty </th>
-						<th> Buy Price </th>
-						<th> Sell Price </th>	
+						<th onclick = "sortTableByPrice('prov-tokens-cities', 5, 'ascending');"> Buy Price </th>
+						<th onclick = "sortTableByPrice('prov-tokens-cities', 6, 'ascending');"> Sell Price </th>	
 					</tr>
-					<tbody id = "prov-tokens-cities"></tbody>
+					<tbody id = "prov-tokens-cities-tbody"></tbody>
 				</table>
 			</div>
 		</div> <!-- End of page box -->

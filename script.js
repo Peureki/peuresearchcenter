@@ -4360,7 +4360,7 @@ function sortTableByGPH_Two(tableName, column){
 }
 
 // Sorted by GPH labeled as xx[gold]xx[silver]
-function sortTableByPrice(tableName, column){
+function sortTableByPrice(tableName, column, order){
 
   var table, rows, switching, i, x, y, shouldSwitch, isNeg;
   let sameNumCheck = 0;
@@ -4481,10 +4481,18 @@ function sortTableByPrice(tableName, column){
       
 
       //check if the two rows should switch place:
-      if (y > x) {
-        //if so, mark as a switch and break the loop:
-        shouldSwitch = true;
-        break;
+      if (order == "ascending"){
+      	if (y < x) {
+	        //if so, mark as a switch and break the loop:
+	        shouldSwitch = true;
+	        break;
+	      }
+      } else {
+      	if (y > x) {
+	        //if so, mark as a switch and break the loop:
+	        shouldSwitch = true;
+	        break;
+	      }
       }
     }
     if (shouldSwitch) {
