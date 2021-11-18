@@ -151,10 +151,94 @@ class Maps extends BenchmarksDB{
 		$json = json_encode($array);
 		return $json;
 	}
-
-
 }
+
+class DWC extends BenchmarksDB{
+	public function set_tracks(){
+		// Get JSON from Google Spreadsheet 
+		$json = file_get_contents('https://script.google.com/macros/s/AKfycbxrOI8g0EYxJPfk-hj-Wkajm13xh0xlYHMKNZebL_xFtKULDipA/exec');
+		$dwcObj = json_decode($json, TRUE);
+
+		foreach ($dwcObj['spreadsheet'] as $ss){
+			$count = 0;
+
+			if ($ss['item'] == "Glory to the Ash Legion" ||
+				$ss['item'] == "Glory to the Flame Legion" ||
+				$ss['item'] == "Glory to the Iron Legion" ||
+				$ss['item'] == "Glory to the Blood Legion" ||
+				$ss['item'] == "Death to the Dominion" ||
+				$ss['item'] == "Death to the Corrupted"){
+				$current_track = $ss['item'];
+				continue; 
+			}
+			if ($ss['item'] == "Total:"){
+				switch ($current_track){
+					case "Glory to the Ash Legion":
+						$track_value = $ss['total'];
+						$comm_value = $track_value / 5000;
+						$count = 1;
+						break;
+					case "Glory to the Flame Legion":
+						$track_value = $ss['total'];
+						$comm_value = $track_value / 5000;
+						$count = 1;
+						break;
+					case "Glory to the Iron Legion":
+						$track_value = $ss['total'];
+						$comm_value = $track_value / 5000;
+						$count = 1;
+						break;
+					case "Glory to the Blood Legion":
+						$track_value = $ss['total'];
+						$comm_value = $track_value / 5000;
+						$count = 1;
+						break;
+					case "Death to the Dominion":
+						$track_value = $ss['total'];
+						$comm_value = $track_value / 5000;
+						$count = 1;
+						break;
+					case "Death to the Corrupted":
+						$track_value = $ss['total'];
+						$comm_value = $track_value / 5000;
+						$count = 1;
+						break;
+				}
+			}
+			
+			if ($count != 0){
+				$sql = "INSERT INTO dwc_tracks (name, track_value, comm_value)
+					VALUES ('$current_track', '$track_value', '$comm_value')
+					ON DUPLICATE KEY UPDATE name = '$current_track', track_value = '$track_value', comm_value = '$comm_value';";
+				// Execute the SQL stmt 
+				$stmt = $this->connect()->exec($sql);
+				$current_track = '';
+			}
+			
+		}	
+	}
+
+	public function get_tracks(){
+		// Get full table and sort by gold_per_hour col and descending
+		$sql = "SELECT * FROM dwc_tracks ORDER BY track_value DESC";
+		$result = $this->connect()->query($sql);
+		// Create empty array
+		$array = Array();
+		// Go thru DB and fetch contents into array
+		while($row = $result->fetch()){
+			$array[] = $row; 
+		}
+		$pdo = null; 
+
+		// Create JSON from the array
+		$json = json_encode($array);
+		return $json;
+	}
+}
+
 // Initialize map DB
 $mapsDB = new Maps();
+$dwcDB = new DWC(); 
+$dwcDB->set_tracks();
 
 ?>

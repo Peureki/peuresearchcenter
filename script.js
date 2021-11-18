@@ -3210,6 +3210,7 @@ async function getDrizzleTrackProofs(){
 			},
 		]
 	};
+	console.log(data);
 
 	let track = data.spreadsheet;
 

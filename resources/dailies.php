@@ -20,6 +20,7 @@
 			<a href = "#dailies"><li> &#10097; Dailies </li></a> 
 			<a href = "#psna"><li> &#10097; PSNA </li></a> 
 			<a href = "#provisioner-tokens"><li> &#10097; Prov Tokens </li></a> 
+			<a href = "#dwc-donations"><li> &#10097; DWC Donations </li></a> 
 		</ul>
 	</div>
 
@@ -155,6 +156,28 @@
 					<tbody id = "prov-tokens-cities-tbody"></tbody>
 				</table>
 			</div>
+
+			<div id = "dwc-donations" class = "section-header">
+				<h1>DWC Material Donations</h1>
+				<div class = "banner-box"></div>
+				<img src = "../images/assets/banner.svg">
+			</div>
+			<!-- Hidden space so the header doesn't overlap anything below -->
+			<div class = "section-header-space"></div>
+
+			<div class = "overflow-table">
+				<table id = "track-table" class = "one-ingre">
+					<thead>
+						<tr>
+							<th> Item </th>
+							<th> </th>
+							<th> Cost </th>
+							<th> /Exchange </th>
+						</tr>	
+					</thead>
+					<tbody id = "track-tableBody"></tbody>
+				</table>
+			</div>
 		</div> <!-- End of page box -->
 
 
@@ -209,12 +232,13 @@
 		}
 
 		getDaily();
-
 		new_Train('hours-0','minutes-0','seconds-0','progress-bar-0','num-0','box-0','name-0','time-0',0);
 
 	</script>
 
-	<?php include ('../js-to-php/resources/provisioner-tokens.php'); ?>
+	<?php include ('../js-to-php/resources/provisioner-tokens.php'); 
+		include ('./material-donations.php');
+	?>
 
 	<!-- 
 		========================================================================

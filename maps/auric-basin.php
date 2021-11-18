@@ -13,6 +13,17 @@
 	-->
 	<?php include('../nav.php'); ?>
 
+	<div id = "bookmark-left" class = "bookmark-left">
+		<ul>
+			<a href = "#summary"><li> &#10097; Summary </li></a> 
+			<a href = "#prep"><li> &#10097; Prep </li></a> 
+			<a href = "#start"><li> &#10097; Start </li></a> 
+			<a href = "#post-south"><li> &#10097; Post South Pylons </li></a> 
+			<a href = "#pre-meta"><li> &#10097; Pre-Meta </li></a>
+			<a href = "#meta"><li> &#10097; Meta </li></a>  
+		</ul>
+	</div>
+
 	<div class = "page-box">
 
 		<div class = "section-header">
@@ -29,25 +40,48 @@
 			<p1><a href="https://docs.google.com/spreadsheets/d/1HOBKHgaPbmc1uMAqupeta824hQzjhiaXBWhPXjORAZs/edit#gid=1455660781" target = "_blank"> Spreadsheet </a></p1>
 		</div>
 
-		<div class = "small-description">
+		<div id = "summary" class = "small-description">
 			
 			<center><iframe width="560" height="315" src="https://www.youtube.com/embed/0vN9WLPb_3A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 			<br>
-			<span style = "font-weight: bold;"> How to: </span>
+			<b> How to: </b>
 			
 			<br>
 			<p1> This farm is only during the week when Auric Basin's map reward includes Shiny Baubles. Otherwise, this farm can be run the same way, but with less gold per hour. Assuming a fresh map, this is the basics of how the map functions:
 			<br><br>
 			- 75 minutes of pylon events/other independent events
-			<br> - 20 minutes of meta/gathering chests
+			<br> ~ 10 minutes of meta/gathering chests
 			<br><br>
-			<b> Throughout the train </b>
+			<b> Priority List </b>
 			<br> 
-			There are 4 Veteran Vinetooths that are at cardinal point of the map near each waypoint. When there's extra time, there are Priory Escorts that also occur. During the train, it is great to stop for a moment to poke those events for extra loot + Shiny Baubles. 
+			Veteran Vinetooths &#8594; South Event Chain (Blighted Saplings) &#8594; Southeast Event Chain (Wyvern) &#8594; Repeatable Pylon Events &#8594; Priory Escort + TM Combo &#8594; Other Specific Pylon Events &#8594; Other Priory Escorts. <b> Throughout the train</b>, it is important to focus on Veteran Vinetooths whenever they are up. These might be in between Pylon events, but these are the easiest sources of Baubles and Unidentfied Gear. 
+
 			<br><br>
-			<b> Start of the train </b>
+			<b> List of repeatable pylon events </b>
+			<br> These events can only start being repeatable after a certain pylon event chain has been completed. This list is also in order from best to worst. Expect the first 2 to be up due to the priority list and rotation. The rest are bonuses if they happen to be up. 
+			<br> Blighted Saplings - South pylon
+			<br> Wyvern - Southeast pylon
+			<br> Golden Ooze - West pylon
+			<br> Gold Guzzler - West-north pylon (whole west chain)
+			<br> Stoneheads - Southwest pylon
+			<br> Tendril - North pylon (whole north chain)
+
+			<div class = "page-picture">
+				<img src = "../images/auric-basin/event-12.jpg" style = "width: 40%;">
+			</div>
+
+			<br><br>
+			<b id = "prep"> Before the train - Prepping the Veteran Vinetooths (xx:21) </b>
+			<br> This part is crucial to have widespread information of how the map/rotation of the train will go. This is the time to run through each of the cardinal waypoints and check for Vinetooths. Each spawn next to each cardinal waypoint, though west's is more south. The ideal rotation is <b> south &#8594; north &#8594; east &#8594; west.</b> You can take a wallow from south &#8594; north and east &#8594; west (or vise versa). Don't expect this rotation to ever be this way, it's just the smoothest. Sometimes you'll have a wacky rotation such as west &#8594; south &#8594; east &#8594; north. It all depends on when the Vinetooths were killed and when you can start keeping track of it. 
+
+			<div class = "page-picture">
+				<img src = "../images/auric-basin/event-10.jpg" style = "width: 40%;">
+			</div>
+
+			<br><br>
+			<b id = "start"> Start of the train (xx:30)</b>
 			<br>
-			I start with the south pylon events. Unlike the other pylons events, south has 3 event chains that can also upscale into champions: southwest pylon, south pylon, and southeast pylon. The priority of these events is <b> south &#8594; southeast &#8594; southwest</b>. 
+			I start with the south pylon events. Unlike the other pylons events, south has 3 event chains that can also upscale into champions: southwest pylon, south pylon, and southeast pylon. The priority of these events is <b> south &#8594; southeast</b>. Southwest is only done if there is nothing else to do after doing all the other events in the main priority list.  
 
 			<br><br>
 			<div >
@@ -66,73 +100,58 @@
 			<br>
 			<b> For the next pylons, keep track of the timer for the Blighted Saplings event.</b> You can check the progress in-game(if you're still doing south pylons), but checking if there's a champion symbol or a regular event symbol at the southern pylon.
 			<br><br>
-			Southeast pylon chain is great too because it's also quick. The first escort may seem a little unncessary, but otherwise, the other events are very fast. There will be many champions from Rolling Devils during the event where you have to destroy debris. After activating the southeast pylon, the Legendary Wyvern can respawn. Use my <a href = "../timers/auric-basin.html"><u>timer page to help with the time for when it spawns</u></a>. Also after the pylon, if no one has completed the Blighted Champion event, the Blighted Sapling events should be up. 
+			Southeast pylon chain is great too because it's also quick. The first escort may seem a little unncessary, but otherwise, the other events are very fast. <b> Pro tip</b>, if possible, send someone or the squad to do the first 3 waves of the escort. The moment the escort reaches an intersection and there's an event timer on the side, you can leave and the event will finish on it's own. You can then work on other events while that progresses such as finishing the south pylon. 
+
+			<br><br> After that event, there will be many champions from Rolling Devils during the event where you have to destroy debris. After activating the southeast pylon, the Legendary Wyvern can respawn. Sometimes, the time it takes to finish the pylon chain, the Blighted Saplings event will spawn (assuming no one tinkered with it).
 
 			<br><br>
 			<div >
 				<img src = "../images/auric-basin/event-4.jpg" style = "display: block; margin-left: auto; margin-right: auto; width: 60%;">
+			</div>	
+
+			<br><br>
+			<b id = "post-south"> Post south + southeast pylon chains </b>
+			<br> At this point, the whole map should be setup to be repeated with events until the meta. In a perfect situation, every event should line up one after the other. <b> Always expect </b> someone to do an event that might mess up the rotation. It's open world so anything could happen. If you knew when something was finished such as a Veteran Vinetooth, estimate when it died, reset your timer for it, and move on. If the rotation is completely botched, then this would be the time to reconsider what other pylon events you could do to fill the time until the main events spawn back. Below are the list of hypotheical situations that could be improvised: 
+
+			<br><br> #1 - Do other pylon events. The general priority for best pylon chains are <b>southwest &#8594; west (to a point) &#8594; east &#8594; north (at a point).</b> 
+
+			<div class = "indent"> - Southwest events are all fairly quick, can spawn champs, except for the very last event where there's two Stoneheads. That event requires major DPS and CC to complete quickly. </div>
+
+			<div class = "indent"> - West events are hit or miss. The best events at west are <b> Vine Crawler &#8594; Speelunkk escort &#8594; Golden Ooze &#8594; Dawkkuura (feast, not the escort) &#8594; Gold Guzzler</b> </div>
+
+			<div class = "indent"> - East events are all extremely slow. The best method to do it is to do 1 east event and in between do a different event on the priority list then come back. Once you get to Vinetooth Prime, you need to prep the squad with major DPS and the best CC they can bring. </div>
+
+			<div class = "indent"> - North is mostly not worth doing. The only parts that are worth is when it's nearly completion when it's at the Tendril Stalk event. Otherwise, avoid north. </div>
+
+			<br> #2 - Do other Priory Escorts. Besides the escort that spawns near the TM, there are two others. Both are not near any events so I don't usually recommend going out of the squad's way to do them, but if there's nothing else, then it could be a good filler. 
+
+			<div class = "page-picture">
+				<img src = "../images/auric-basin/event-11.jpg" style = "width: 40%;">
 			</div>
 
-			<br>
-			Southwest pylon chain is mostly great. It is mostly quick escorts with many champions and small events. But the last event where you have to destroy two champion stoneheads, it can be a mess without great CC and DPS. After defeating the Champion Teragriff event, the Balthazar HP's champion does count as an event. This is an <b> extremely squishy</b> champion, but does need to die before finishing it's channel to where it wipes everyone. Do this HP for an extra champion bag and boost in map rewards. Run back to the main event chain after the HP. After the southwest pylon, if no one has done the Blighted Champion event, the Blighted Sapling events should be up. 
+			<br> 
+			<b id = "pre-meta"> Pre-Meta phase (x1:45) </b>
+			<br> 3 minutes after the pre-meta cue goes off, there are 4 assult events at each gate. Do as many as possible to get more baubles and champion spawns. They are usually done at the same time so pick a lane that you're closest when you finished your last event and take the wallow to the next one. During the pre-meta phase, <b> all pylon events are gone and only the Vinetooths, Priory Escorts, TM, Balthazar HP are up </b>. 
 
-			<br><br>
-			<div style = "display: flex; align-items: center; justify-content: space-between;">
-				<img src = "../images/auric-basin/event-5.jpg" style = "width: 49.5%;">
-				<img src = "../images/auric-basin/event-6.jpg" style = "width: 49.5%;">
+			<div class = "page-picture">
+				<img src = "../images/auric-basin/event-9.jpg" style = "width: 40%;">
 			</div>
 
-			<br>
-			<b> Post South Pylons &#8594; East Pylons</b>
-			<br>
-			While waiting for the 3 Blighted Sapling events and Legendary Wyvern to respawn, I go to east pylons. This is generally very slow events, BUT a lot of PUGs need Vinetooth Prime. This is more of a personal choice for me to do to help folks get their achievements + masteries done while making some profits. If you prefer to just get purely more events, avoid these pylons. 
-			<br><br>
-			<b> In between each east pylon, check the timers for the Blighted Saplings</b>. Since these events take a long time to complete, it is possible to drift off for a bit before Vinetooth to hit the south events. 
-			<br><br>
-			East pylon #1 (south-most): Kill vine tenders in 3 locations on the cliffs above, then DPS the breecher. After completing this chain and assuming the Blighted champion event failed, I like to drift the squad back to southwatch to kill the 3 Blighted Sapling events then head back to the next east pylon. 
-			<br><br>
-			East pylon #2 (mid): CC mobs until the NPC finishes channeling. 
-			<br><br>
-			East pylon #3 (north): Kill snipders ASAP so the NPC can capture the rally points. 
-			<br><br>
-			After all the east pylons, <b>prep the squad with CC and DPS for Vinetooth Prime</b>. If you can break the CC bar, this event will finish extremely quick. If not, this will be a long event, but can be completed with pure DPS (not preferred). 
-			<br><br>
-			After Vinetooth Prime, there could be a Priory Escort or Veteran Vinetooth nearby. 
+			<br> 
+			<b id = "meta"> Meta phase (x2:00) </b>
+			<br> A few minutes before the main meta event begins, check on the status of your map. Is it organized already? Do you need to taxi yourself? This is very dependent whether or not you can keep doing events until the very last second of the timer or you need to stop and prep the map. Here are the basics of the meta: 
 
-			<br><br>
-			<div >
-				<img src = "../images/auric-basin/event-7.jpg" style = "display: block; margin-left: auto; margin-right: auto; width: 30%;">
-			</div>
+			<br><br> There are four lanes: north, east, south, west. Each lane has their own mechanic once you get past their gates. The first thing each lane should do is to kill Breechers, Frogs, and other Mordrem such as Snipers. It will make the map's lives 100% easier to do the mechanics. Each lane has their own Octovine. When one Octovine is defeated, there is a 2 minute timer to destroy the rest of them. If this does not succeed, then they all regenerate some health and the map needs to repeat. 
 
-			<br>
-			<b> Post East Pylons </b>
-			<br> This part is very impromtu. If I know someone needs west pylon events, I'll do them. If none of the west pylon are done, then I won't do them because there's probably not enough time at that point. If all of the pylons are done, then I'll do the events that do respawn such as the Golden Ooze or Gold Guzzler. 
+			<br><br> Each lane will also have Exalted Armors available. Each lane needs at least 2 to be in one to push any Trigger Blossoms or stun enemies from disrupting the group as a whole. This is especially important for west and south lane's mechanics. 
 
-			<br><br>
-			<div >
-				<img src = "../images/auric-basin/event-8.jpg" style = "display: block; margin-left: auto; margin-right: auto; width: 30%;">
-			</div>
+			<div class = "indent"> <b>North</b> - Grab a bramble gun, deploy a turret INSIDE the vine walls surrounding the Octovine. Try to center it so it's facing directly in front. The vine walls have been bugged for years and there's no plan to fix it so far. After the first vulnerable phase, there will no more vine walls and you can continue to deploy turrets + fire them. </div>
 
-			<br>
-			Otherwise, I continue doing any Veteran Vinetooths, the south Blighted Sapling events, and any Priory Escorts laying around until 15 minutes prior to meta. 
-			<br><br>
-			<b> 15 Minutes til Meta (Pre-Meta Phase)</b>
-			<br> Note: All events relating to pylons will disappear. Only independent events such as the Veteran Vinetooth and Priory EScorts will remain active
-			<br><br>
-			There are 4 pre-events that spawn before the main event. Excluding the challenges, there are assaults that happen in front of each cardinal gate. I like to sit at the north side because if the west pylons were completed, then a champion Arrowhead appears every 1 minute and 30 seconds. The pre-events themselves are waves of Mordrem that can spawn multiple champions. If the squad is quick, you can take the wallow next to the gates to the opposite side to quickly tag another event.
+			<div class = "indent"> <b>East</b> - Grab a bomb from the side and take an updraft. Glide towards the Octovine and use your skills to drop the bomb. Rinse and repeat. While this lane is the easiest, pay attention to your DPS on the Octovine. East is usually the first to get their health near completion. Do not finished the lane before the other lanes aren't even close to being ready. </div>
 
-			<br><br>
-			<div >
-				<img src = "../images/auric-basin/event-9.jpg" style = "display: block; margin-left: auto; margin-right: auto; width: 40%;">
-			</div>
+			<div class = "indent"> <b>South</b> - Use CC such as pushes and pulls of an Exalted Bomb to be moved to the Octovine. You need 3 successful bombs to phase. Because this lane is the most difficult, the window to DPS the Octovine is also the longest. It is very possible to 1 shot the Octovine, but be warey of the status of the other lanes. Use your best judgement to determine if it's worth 1 shotting or not.  </div>
 
-			<br>
-			If there's extra time and the map is already organized, a few HPs, Veteran Vinetooth, or Priory Escorts can fill the gap until meta. Just make sure the map is prepared otherwise people will freak out..y'all know how Auric Basin is!  
-			<br><br>
-
-			
-
-			<!--All pylon events end when the pre-meta timer begins (15 minutes prior to meta). In those 15 minutes, I do a variety of HPs starting from the northwest side and towards the east. 3 minutes into the pre-meta timer, pre-meta events begin at each gate of Tarir. I like to stay at the north with the squad because there's a champion Arrowhead that spawns every 1 minute and 30 seconds. He only spawns if the west pylons were completed beforehand. After the pre-meta events, there's usually some time left and I like to finish with some HPs, check for Treasure Mushroom, and some other independent events like the Priory escorts and veteran Vinetooths. -->
+			<div class = "indent"> <b>West</b> - Turn into a shroom at the start of the lane. Go counterclockwise around the death in the center and explode your shroom on the Octovine. You need a total of 15 shroms to make the Octovine vulnerable. </div>
 			</p1>
 
 		</div>

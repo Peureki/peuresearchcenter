@@ -320,6 +320,11 @@ function getBenchmarkAll(table, image){
 			pop = "Common";
 			break;
 
+			case "LS3 Train":
+			link = "";
+			pop = "Rare";
+			break;
+
 			case "LS4 Meta Train":
 			link = "./maps/combo-farms.php#ls4-train";
 			pop = "Common";

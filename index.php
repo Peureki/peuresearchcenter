@@ -153,6 +153,16 @@
 
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
+					<span style = "font-weight: bold;">Nov 17, 2021</span>
+				<br>
+					- Redid the Drizzlewood (South) <a href = "./benchmarks.php"><u> benchmarks </u></a>.
+					<br> - Updated the <a href = "./maps/auric-basin.php"><u> Auric Basin </u></a> farm guide.
+				<br><br>
+					<span style = "font-weight: bold;">Nov 15, 2021</span>
+				<br>
+					- Added a new farm! Added a LS3 Farm in <a href = "./benchmarks.php"><u> Benchmarks </u></a>. There's still some more experimentation to go with this train so we'll see how this number changes over time. 
+					<br>- Added two more events, "Stoneheads" and "Gold Guzzler", to <a href = "./timers/auric-basin.php" target = "_blank"><u>Auric Basin</u></a> timer page
+				<br><br>
 					<span style = "font-weight: bold;">Nov 14, 2021</span>
 				<br>
 					- Added a new feature! Added <a href = "./resources/dailies.php"><u> Provisioner Tokens </u></a>. There are two tables: HoT and Cities. The HoT table shows the cheapest option per tab exchange while the Cities show everything (since you can purchase all in one tab). 
