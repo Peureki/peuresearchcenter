@@ -165,14 +165,43 @@
 			<!-- Hidden space so the header doesn't overlap anything below -->
 			<div class = "section-header-space"></div>
 
+			<div class = "small-description">
+				These values are based on the total value of the reward tracks / 5000 for each commendation. The cost are items needed to be exchanged for the commendations. Note that while there are values per commendation, check your progress in whichever reward track of your choosing to see what reward is coming up. The values are long-term, assuming you work on completing the whole reward track. Ascended items and Mystic Clover values are not considered. Check the full reward track values <a href = "../research/drizzlewood-reward-tracks.php"><u> here.</u></a> 
+			</div>
+
+			<div class = "selections">
+				<div>
+					<b>Cost Value:</b> 
+					<select name = "choose-cost" id = "choose-cost" class = "select-button">
+						<option value = "Sell Price"> Sell Price </option>
+					<option value = "Buy Price"> Buy Price </option>
+					</select>
+				</div>
+
+				<div>
+					<b>Choose Legion for Charr Commendations:</b>
+					<select name = "choose-legion" id = "choose-legion" class = "select-button">
+						<option value = "Avg"> Average </option>
+						<option value = "Ash"> Ash </option>
+						<option value = "Blood"> Blood </option>
+						<option value = "Dominion"> Dominion </option>
+						<option value = "Flame"> Flame </option>
+						<option value = "Frost"> Frost </option>
+						<option value = "Iron"> Iron </option>
+					</select>
+				</div>
+
+				<button  type = "button" id = "calculate" class = "select-button" onclick = "get_material_donations('choose-legion', 'choose-cost');"> Calculate </button>
+			</div>
+
 			<div class = "overflow-table">
 				<table id = "track-table" class = "one-ingre">
 					<thead>
 						<tr>
-							<th> Item </th>
-							<th> </th>
 							<th> Cost </th>
-							<th> /Exchange </th>
+							<th> </th>
+							<th> Commendation </th>
+							<th onclick = "sortTableByPrice('track-table', 3, 'decending');"> /Exchange </th>
 						</tr>	
 					</thead>
 					<tbody id = "track-tableBody"></tbody>

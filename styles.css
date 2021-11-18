@@ -3593,6 +3593,9 @@ table.one-ingre th{
 	color: white;
 	background-color: var(--clr-th-table);
 }
+table.one-ingre th:last-child{
+	cursor: pointer;
+}
 table.one-ingre td,
 table.four-ingre td,
 table.two-ingre td, 
@@ -3609,6 +3612,12 @@ table.one-ingre td{
 	padding-right: 5px;
 	line-height: 1.7;
 }
+/*
+table.one-ingre td img{
+	width: 35px; 
+	height: 35px; 
+	vertical-align: middle;
+} */
 /* Make first/last + second to last (if there's /conversion and /currency) columns have bigger paddings */
 table.one-ingre td:nth-child(1),
 table.two-ingre td:nth-child(1),
@@ -3672,6 +3681,8 @@ table.one-ingre td:last-child,
 table.two-ingre td:last-child,
 table.three-ingre td:last-child,
 table.four-ingre td:last-child{
+	vertical-align: middle;
+	text-align: right;
 	opacity: 0.9;
 	color: black;
 }
@@ -4079,10 +4090,25 @@ table.trinket-slots img{
 	width: 100%;
 	margin-bottom: -8px;
 }
+/* 
+	=====================================
+	============== SELECTIONS ===========
+	=====================================
+	Area where you put buttons for users to select a list from
+*/
+.selections{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: right;
+	color: var(--clr-text);
+}
 .select-button{
 	background-color: rgba(236, 236, 220, .50);
     font-weight: bold;
     font-size: 15px;
+    margin: 5px;
     padding: 5px;
     cursor: pointer;
 }
