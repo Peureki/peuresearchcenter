@@ -1310,6 +1310,9 @@ b{
 
 .page-picture{
 	margin: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .page-picture img{
@@ -1673,7 +1676,7 @@ b{
 	position: fixed;
 	min-width: 100px;
 	left: 0%;
-	top: 10%;
+	top: 11%;
 	background-color: var(--clr-bkg);
 	border-top: 2px solid var(--clr-border);
 	border-bottom: 2px solid var(--clr-border);
@@ -1687,6 +1690,7 @@ b{
 	/* Specifically padding instead of all b/c it makes the transition weird w/ white -> black text while changing backgrounds */
 	-webkit-transition: padding 0.3s ease;
   	transition: padding 0.3s ease;
+  	cursor: pointer;
 }
 /* Defaults for lists */
 .bookmark-left li,
@@ -1737,13 +1741,42 @@ b{
 	text-align: right;
 	overflow: auto;
 }
+/* Button to show/hide bookmark on mobile or smaller screens */
+.bookmark-button{
+	position: fixed;
+	top: 6%;
+	font-size: 20px;
+	width: 5%;
+	text-align: center;
+	padding: 10px;
+	color: var(--clr-text);
+	border: 1px solid var(--clr-border);
+	background-color: var(--clr-bkg);
+	cursor: pointer;
+	z-index: 5000;
+}
+.bookmark-button:hover{
+	background-color: var(--clr-bookmark);
+}
 /* Mobile */
 @media only screen and (max-width: 600px){
 	.bookmark-left,
 	.bookmark-right{
 		display: none;
 	}
+
+	.bookmark-button{
+		display: block;
+	}
 }
+/* Anything not mobile */
+/* Show the bookmark button */
+@media only screen and (min-width: 600px){
+	.bookmark-button{
+		display: none;
+	}
+}
+
 /*
 	================================
 	===== EVENT LIST & SIDEBOX =====
@@ -3305,6 +3338,31 @@ table.exp td:nth-child(2){
 }
 /*
 	=====================================================
+	================== TABLE - INFOS ====================
+	=====================================================
+*/
+table.single-info{
+	margin: 10px;
+}
+table.single-info th{
+	font-size: 18px;
+	padding: 10px;
+	color: white;
+	text-align: center;
+	background-color: var(--clr-th-table);
+	border: 1px solid var(--clr-border);
+}
+table.single-info td{
+	font-size: 16px;
+	padding: 5px;
+	text-align: center;
+	color: var(--clr-text);
+	background-color: var(--clr-bkg-table);
+	border: 1px solid var(--clr-border);
+}
+
+/*
+	=====================================================
 	===== TABLE - BENCHMARKS/META/CHEST/ALT PARKING =====
 	=====================================================
 */
@@ -3336,6 +3394,7 @@ table.gathering-benchmarks th{
 	color: white;
 	background-color: var(--clr-th-table);
 	border: 1px solid var(--clr-border);
+	vertical-align: middle;
 }
 table.benchmarks th:hover,
 table.other-benchmarks th:hover,

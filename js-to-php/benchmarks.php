@@ -527,6 +527,5 @@ function getBenchmarkAll(table, image){
 	//Magic
 	tableBody.innerHTML = dataHTML;
 	sortTableByPrice('benchmarks', 5);
-
 }
 </script>

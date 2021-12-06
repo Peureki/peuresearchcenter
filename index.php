@@ -153,6 +153,10 @@
 
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
+					<span style = "font-weight: bold;">Nov 18, 2021</span>
+				<br>
+					- Added a new feature! Added <a href = "./resources/dailies.php"><u> Drizzlewood Material Donations </u></a>.
+				<br><br>
 					<span style = "font-weight: bold;">Nov 17, 2021</span>
 				<br>
 					- Redid the Drizzlewood (South) <a href = "./benchmarks.php"><u> benchmarks </u></a>.

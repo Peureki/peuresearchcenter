@@ -155,6 +155,8 @@
 	</ul>
 </div>
 
+<div onclick = "show_bookmark_left();" class = "bookmark-button"> &#10097; </div>
+
 <script> 
 	// Grabs the hamburger and shows it when clicking on the icon
 	function showHamburger(){
@@ -231,4 +233,14 @@
 		}
 	}
 	showHamburger();
+
+	function show_bookmark_left(){
+		let bookmark_left = document.getElementById('bookmark-left');
+		console.log(bookmark_left);
+		if (bookmark_left.style.display == "block"){
+			bookmark_left.style.display = "none";
+		} else {
+			bookmark_left.style.display = "block";
+		}
+	}
 </script>

@@ -77,7 +77,7 @@ function get_material_donations(select_legion, select_cost){
 				comm_qty = 250;
 			}
 			switch (i){
-				case 4:
+				case 3:
 				case 7: cost_qty = 200;
 					break;
 				default: cost_qty = 100;

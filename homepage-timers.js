@@ -23,20 +23,6 @@ function whichBonusMap(){
     if ((result[1]+2) == )
 }
 */
-var d1 = new Date(Date.UTC(2021,0,7,20)); 
-var d2 = new Date(); 
-var weeksAgo = Math.floor((d2-d1)/604800000);
-
-switch (weeksAgo % 3){
-    case 0:
-    break;
-
-    case 1: 
-    break;
-
-    case 2: 
-    break;
-}
 
 async function new_Train(dd,hr,min,sec,progressBarHTML,numHTML,boxHTML,nameHTML,timeHTML,placement){
 

@@ -14,6 +14,17 @@
 	-->
 	<?php include('nav.php'); ?>
 
+	<div id = "bookmark-left" class = "bookmark-left">
+		<ul>
+			<a><li id = "farm-benchmark-button" onclick = "revert_benchmarks(this);"> &#10097; Map Farms </li></a> 
+			<a><li id = "meta-benchmark-button" onclick = "revert_benchmarks(this);"> &#10097; Metas </li></a> 
+			<a><li id = "chest-benchmark-button" onclick = "revert_benchmarks(this);"> &#10097; Chests </li></a> 
+			<a><li id = "alt-benchmark-button" onclick = "revert_benchmarks(this);"> &#10097; Alt Parking </li></a> 
+			<a href = "./resources/about-benchmarks.php"><li> &#10097; Benchmark Criteria </li></a> 
+			<a href = "https://docs.google.com/spreadsheets/d/1aLhL_VtVXbcZ6X2yweKD7AQFg9H5j67SW85qSzTPqrg/edit?usp=sharing" target = "_blank"><li> &#10097; Spreadsheet </li></a> 
+		</ul>
+	</div>
+
 	<div style = "position: relative;">
 		<div class = "section-header">
 			<h1>Benchmarks</h1>
@@ -24,30 +35,31 @@
 	<!-- Hidden space so the header doesn't overlap anything below -->
 	<div class = "section-header-space"></div>
 
-	<div class = "page-links">
-		<p1><a href="https://docs.google.com/spreadsheets/d/1HOBKHgaPbmc1uMAqupeta824hQzjhiaXBWhPXjORAZs/edit#gid=1982020967" target = "_blank"> Spreadsheet </a></p1>
-
-		<br><br>
-		<p1><a href="./resources/about-benchmarks.html"> About the benchmarks </a></p1>
-	</div>
-
-	<!--
 	<div class = "page-box">
-		<div class = "small-description">
+		<div class = "flex-description">
+			<table class = "single-info">
+				<tr>
+					<th> HoT Bauble Week </th>
+				</tr>
+				<tr>
+					<td id = "input-bauble"></td>
+				</tr>
+			</table>
 
+			<table class = "single-info">
+				<tr>
+					<th> Map Bonus Week </th>
+				</tr>
+				<tr>
+					<td id = "input-map-bonus"> </td>
+				</tr>
+			</table>
 		</div>
 	</div>
-	-->
+	
 
 	<div style = "position: relative; overflow-x: auto;">
 		<div id = "page-box" class = "page-box" style = "display: flex; flex-direction: column; align-items: center; justify-content: center; align-items: center;">
-			<div id = "revert" class = "red-button" style = "display: flex; align-items: center; justify-content: center; margin: 20px;">
-				<input type = "button" id = "farm-benchmark-button" value = "Farms" style = "margin-left: 10px; margin-right: 10px;" onclick = "revert_benchmarks(this);">
-				<input type = "button" id = "meta-benchmark-button" value = "Metas" style = "margin-left: 10px; margin-right: 10px;" onclick = "revert_benchmarks(this);">
-				<input type = "button" id = "chest-benchmark-button" value = "Chests" style = "margin-left: 10px; margin-right: 10px;" onclick = "revert_benchmarks(this);">
-				<input type = "button" id = "alt-benchmark-button" value = "Alt Parking" style = "margin-left: 10px; margin-right: 10px;" onclick = "revert_benchmarks(this);">
-			</div>
-
 			<img id = "loading-image" class = "loading-image" src = "./images/assets/research-choya-screen.png">
 				<table id = "benchmarks" class = "benchmarks"> 
 					<thead> 
@@ -609,5 +621,6 @@
 		========================================================================
 	-->
 	<?php include("footer.php"); ?>
+	<script type = "text/javascript" src = "<?php echo $base;?>/benchmarks.js?v=<?php echo $date;?>"></script>
 </body>
 </html>

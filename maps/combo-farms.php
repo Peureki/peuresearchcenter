@@ -16,10 +16,12 @@
 	<div id = "bookmark-left" class = "bookmark-left">
 		<ul>
 			<a href = "#amalgamated-key-farm"><li> &#10097; Amalgamated/Keys </li></a> 
+			<a href = "#core-tyria-farm"><li> &#10097; Core Tyria Farm </li></a> 
 			<a href = "#grothmar-bjora"><li> &#10097; Grothmar/Bjora </li></a> 
 			<a href = "#grothmar-kourna"><li> &#10097; Grothmar/Kourna </li></a> 
 			<a href = "#hot-meta-train"><li> &#10097; HoT Meta Train </li></a> 
 			<a href = "#infusion-train"><li> &#10097; Infusion Train [SM] </li></a> 
+			<a href = "#ls3-train"><li > &#10097; LS3 Train </li></a>
 			<a href = "#ls4-train"><li > &#10097; LS4 Train </li></a>
 			<a href = "#pof-meta-train"><li > &#10097; PoF Meta Train </li></a>
 			<a href = "#reset"><li > &#10097; Reset Train </li></a>
@@ -56,6 +58,32 @@
 
 			<br><br>
 			The hardest part about this farm is that each meta needs to be completed on-time or a minute after the next meta. For example, Junundu Wurms overlaps with Doomlore by a minute or two (depending on the DPS), but the escort and meta should still be up. Same with Oil Floes, but that also requires some organization to have everyone split into the three drills.
+		</div>
+
+		<div id = "core-tyria-farm" class = "small-description">
+			<h class = "bookmark-header" style = "background-color: rgb(255, 97, 41);"> Core Tyria Farm </h>
+			<br><br>
+			This farm is unique as it could change depending on what the weekly map bonus rewards are for particular maps. This farm is harder to test as core tyrian maps have an 8 week rotation. Here are great maps to do with great map bonus rewards:
+
+			<br>
+			<br> Cursed Shore - Week 4, 5, 8
+
+			<br><br>
+			Here are maps that *might* be good, but needs testing: 
+			<br> Kessex Hills - Week 2
+			<br> Malchor's Leap - Week 4
+
+			<br><br>
+			The <b> general rotation </b> is: 
+			<br> 1) Start at xx:00 with Karka Queen
+			<br> 2) xx:03 - xx:18: Cursed Shore events
+			<br> 3) xx:20 - xx:22: Ley Line Anomoly 
+			<br> 4) xx:22 - xx:28: Silverwastes Chest Train 
+			<br> 5) xx:30 - xx:36: Awakened (Joko) Invasion
+			<br> 6) xx:36 - ??:??: Silverwastes (either finishing a map or finding a fresh map for RIBA) 
+
+			<br><br>
+			When the train enters Cursed Shore, it all depends on what is up and what is not. For the last few trials, we've gotten at least 1 meta up (temple, Arah, or Penitent). Since we're only there for 15 minutes, it fills the time slot perfectly. The goal is to tag as many mobs as possible and to get a few events in for the map bonus award. Generally, the map bonus is some T6 mat, but <a href = "https://wiki.guildwars2.com/wiki/Map_bonus_reward/profit" target = "_blank"><u>check what they are for each week.</u></a> 
 		</div>
 
 		<div id = "grothmar-bjora" class = "small-description">
@@ -143,6 +171,79 @@
 			<br> - Jahai Bluffs: Death-Branded Shatterer
 			<br> - Desolation: Legendary Awakened Hoarder, Legendary Queen Ishraa
 			<br> - Desolation: Junundu Wurms
+		</div>
+
+		<!-- LS3 meta train -->
+		<div id = "ls3-train" class = "small-description">
+			<h class = "bookmark-header" style = "background-color: rgb(19, 201, 54);"> LS3 Meta Train </h>
+			<br><br>
+			This farm is specifically aimed to hit as many events/metas as possible, in a given amount of time vs. doing every single event for achievements (Aurora). The limit I put myself is 2 hours because anything longer, the event train drags and some events are very slow. 
+
+			<br><br>
+			<b> The general rotation</b> goes as the following:
+			<br> - xx:30 (right before Dusk/Night): Bitterfrost Events/Chest Train
+			<br> - xx:45 (Night): Bloodstone Fen Spirits Meta/Events/Hablion/Maw (if its up)
+			<br> - 1:05: Lake Doric Leather Farm
+			<br> - 1:28: Lake Doric Noran's Homestead Meta
+			<br> - 1:36: Draconis Mons Destroyers Meta
+			<br> - 1:45: Ember Bay Events
+			<br> - 2:00: Draconis Mons Destroyer Meta
+			<br> - 2:10: Siren's Landing Meta/Events/Chest Train
+
+			<br><br>
+			This is the ideal rotation. Each time we do this train, it changes by either extending a map or the opposite. 
+
+			<br><br>
+			<b> Bitterfrost </b>
+			<br>
+			We start here because if there's ever extra time to go back, the Icebound Chests would be back to gather again. Since we're only here for about 15 minutes, there's a good chance the group may not hit the meta. If it does, then great. The main point of this map is to gather the Icebound Chests and complete a few events along the way. Events could be defending a Brazier, lighting up a Brazier, or doing either the Griffon defense or Svanir chain. 
+
+			<div class = "page-picture">
+				<img src = "../images/ls3-train/bitterfrost-1.jpg">
+			</div>
+
+			<br><br>
+			<b> Bloodstone Fen </b>
+			<br>
+			At xx:45, Tyria turns night. This means that the Spirits meta will be up on the ground level. This meta has a pre-event where you have to kill spirits all over the ground level, but it can be heavily upscaled with a squad. In the meantime, there are 3 repeatable events that spawn one after the other (White Mantle Seekers). Do this in a clockwise rotation to get extra loot and champions. Along the way could be a Treasure Mushroom as well. If either the Maw meta or Hablion is up, do that instead. 
+
+			<div class = "page-picture">
+				<img src = "../images/ls3-train/bloodstone-1.jpg">
+			</div>
+
+			<br><br>
+			<b> Lake Doric </b>
+			<br>
+			This part of the train depends how long Bloodstone Fen's events went. If the Maw meta never occured, then the squad should arrive here on time around 1:05. If so, then there's time to do one round of the leather farm. If the train is later than 1:15, it's best to do Lake Doric events instead. The best to past the time are Jade Cannons or Skrimishes. 
+
+			<br><br>
+			No matter what route the squad takes, at xx:28, Noran's Homested will start. If the squad did the leather farm prior, then they can move on to the new map. If not, then do one round of the leather farm. 
+
+			<div class = "page-picture">
+				<img src = "../images/lake-doric/leather-farm.jpg" style = "width: 40%;">
+				<img src = "../images/ls3-train/lake-doric-1.jpg" style = "width: 40%;">
+			</div>
+
+			<br><br>
+			<b> Draconis Mons </b>
+			<br>
+			When entering the map, the main goal is to check the status of the meta. If the meta is not displaying on the side, then the squad should stay in the map and do other events until it spawns. If the meta is already progressed, then do the meta right away (whatever progress it is). Ideally, you want to do the pre-event where you kill wave of Destroyers over and over again to spawn champs. If you get to a map that already has their meta progressed and you finished it, go to the next map. If the meta was near completion before you got there, plan to head back ~16 minutes to get the pre-meta events. 
+
+			<br>
+			Pre-Meta Phase (Destroyer Waves)
+
+			<div class = "page-picture">
+				<img src = "../images/ls3-train/draconis-mons-1.jpg" style = "width: 40%;">
+				<img src = "../images/ls3-train/draconis-mons-2.jpg" style = "width: 40%;">
+			</div>
+
+			<br>
+			Pre-Meta Phase (Destroyer Champs)
+			<div class = "page-picture">
+				<img src = "../images/ls3-train/draconis-mons-3.jpg" style = "width: 40%;">
+				<img src = "../images/ls3-train/draconis-mons-4.jpg" style = "width: 40%;">
+			</div>
+			
 		</div>
 
 		<!-- LS4 meta train -->
