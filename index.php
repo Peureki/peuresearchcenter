@@ -153,6 +153,11 @@
 
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
+					<span style = "font-weight: bold;">Dec 6, 2021</span>
+				<br>
+					- Added a QoL feature. When on mobile, there's a button on the left side that will open and close the bookmarks tab. This would make it easier for longer pages.
+					<br> - Added what map bonus and shiny bauble week it is on <a href = "./benchmarks.php"><u> Benchmarks </u></a>.
+				<br><br>
 					<span style = "font-weight: bold;">Nov 18, 2021</span>
 				<br>
 					- Added a new feature! Added <a href = "./resources/dailies.php"><u> Drizzlewood Material Donations </u></a>.

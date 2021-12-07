@@ -1,3 +1,5 @@
+<div id = "bookmark-button" onclick = "show_bookmark_left(this);" class = "bookmark-button"> &#10097; </div>
+
 <div class = "splatter-container">
 	<div class  = "splatter-bkg"></div>
 </div>
@@ -22,3 +24,29 @@
 		<p1> Associated logos, renderings, images, and other related content are registered trademarks to ArenaNet or NCSOFT.</p1>
 	</div>
 </div>
+
+<script>
+
+function show_bookmark_left(button){
+	let bookmark_left = document.getElementById('bookmark-left');
+	button = document.getElementById(button);
+
+	console.log("this happened");
+	
+	if (bookmark_left == null){
+		button.style.display = "none";
+	}
+
+	try{
+		if (bookmark_left.style.display == "block"){
+			bookmark_left.style.display = "none";
+		} else {
+			bookmark_left.style.display = "block";
+		}
+	} catch (error){}
+
+	
+	
+}
+show_bookmark_left('bookmark-button');
+</script>
