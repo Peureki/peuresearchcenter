@@ -871,6 +871,19 @@ async function refinement(choice, taxChoice){
 				icon: "https://render.guildwars2.com/file/F99BAAD3C841D8AC4E5C621972454E400E3CD85D/2063467.png",
 			},
 			{
+				name: "Gossamer Patch",
+				id: 76614,
+				icon: "https://render.guildwars2.com/file/EE34585260D85E44DCCC980F6C0F1C171101B7C0/1201850.png",
+				recipe: function(){
+					ingredients(this, 
+						findItem("Cured Hardened Leather Square", mats.refinedLeather), 10,
+						findItem("Bolt of Gossamer", mats.refinedCloth), 4,
+						findItem("Spool of Gossamer Thread", mats.vendor), 25,
+					);
+				},
+				discipline: "Armorsmith, Leatherworker, Tailor",
+			},
+			{
 				name: "Lump of Glass",
 				id: 75075,
 				icon: "https://render.guildwars2.com/file/30F2DAAA227CCA9E5C0C0775EB7B67D35A353DDD/1202372.png",
@@ -1556,6 +1569,12 @@ async function refinement(choice, taxChoice){
 				icon: "https://render.guildwars2.com/file/272BFDA5485572127E24F7D4E5409256DB58D9BC/63256.png",
 				value: 40000,
 			},
+			{
+				name: "Spool of Gossamer Thread",
+				id: 19790,
+				icon: "https://render.guildwars2.com/file/B7CFD70F53A845E4ED1212040C18C123FC172910/65959.png",
+				value: 64,
+			},
 			{ 
 				name: "Thermocatalytic Reagent",
 				id: 46747,
@@ -2218,6 +2237,7 @@ async function refinement(choice, taxChoice){
 			findItem("Stormcaller Core", mats.components),
 			findItem("Amalgamated Draconic Lodestone 1", mats.components),
 			findItem("Amalgamated Draconic Lodestone 2", mats.components),
+			findItem("Gossamer Patch", mats.components),
 		];
 
 		for (i = 0; i < resultArray.length; i++){

@@ -7,11 +7,11 @@ let input_bauble = document.getElementById('input-bauble'),
 
 switch (weeksAgo % 3){
     case 0:
-    input_bauble.innerHTML = "Tangled Depths";
+    input_bauble.innerHTML = "Verdant Brink";
     break;
 
     case 1: 
-    input_bauble.innerHTML = "Verdant Brink";
+    input_bauble.innerHTML = "Tangled Depths";
     break;
 
     case 2: 

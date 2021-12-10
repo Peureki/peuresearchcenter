@@ -85,6 +85,7 @@ class Items extends ItemsDB{
 	// $table = what DB table to modify
 	// $IDs = string of IDs to modify in the table. ex: "1, 2, 3, 4, etc"
 	public function update_specific_items_listings($table, $IDs){
+		// Turn string of IDs into an array
 		$list_of_IDs = explode(",", $IDs);
 		// Split entire JSON into batches of 100 
 		$batch = array_chunk($list_of_IDs, 200);
@@ -94,7 +95,7 @@ class Items extends ItemsDB{
 		$url = file_get_contents('https://api.guildwars2.com/v2/commerce/listings?ids='.$IDs);
 		$JSON = json_decode($url, TRUE);
 		*/
-
+		echo print_r($batch[0]) . "<br>";
 		// Iterate through each batch and through each item in each batch
 		for ($i = 0; $i < count($batch); $i++){
 
