@@ -27,12 +27,12 @@
 	<!-- Inner navgation box to the side -->
 	<div id = "side-timer-list" class = "side-timer-list">
 	    <!-- KOURNA EVENTS -->
-	    <div id = "kourna-8-sidebox" class = "event-sidebox" onMouseOver = "showElement('kourna-8-circle-4'); showElement('kourna-8-circle-5'); showElement('kourna-8-circle-6') " onMouseOut = " hideElement('kourna-8-circle-4'); hideElement('kourna-8-circle-5'); hideElement('kourna-8-circle-6') ">
+	    <div id = "kourna-0-sidebox" class = "event-sidebox">
 	      <h1> Scarab Plague</h1>
-	      <input type = "button" onclick = "start_stop(this, kourna.events);" value = "Start" id = "sidetimer-kourna-8-start">
-	      <input type = "button" onclick = "reset(this, kourna.events);" value = "&#8635;" id = "sidetimer-kourna-8-reset">
-	      <p1 id = "sidetimer-kourna-8">30:00</p1>
-	      <p2 id = "numerical-sidetimer-kourna-8">1800</p2> 
+	      <input type = "button" onclick = "start_stop(this, kourna.events);" value = "Start" id = "sidetimer-kourna-0-start">
+	      <input type = "button" onclick = "reset(this, kourna.events);" value = "&#8635;" id = "sidetimer-kourna-0-reset">
+	      <p1 id = "sidetimer-kourna-0">30:00</p1>
+	      <p2 id = "numerical-sidetimer-kourna-0">1800</p2> 
 	    </div>
 
 	    <div id = "kourna-1-sidebox" class = "event-sidebox">
@@ -89,12 +89,52 @@
 	      <p1 id = "sidetimer-kourna-7">8:00</p1>
 	      <p2 id = "numerical-sidetimer-kourna-7">480</p2> 
 	    </div>
+
+	    <div id = "kourna-8-sidebox" class = "event-sidebox">
+	      <h1> LB: Troopmarshal </h1> 
+	      <input type = "button" onclick = "start_stop(this, kourna.events);" value = "Start" id = "sidetimer-kourna-8-start">
+	      <input type = "button" onclick = "reset(this, kourna.events);" value = "&#8635;" id = "sidetimer-kourna-8-reset">
+	      <p1 id = "sidetimer-kourna-8">30:00</p1>
+	      <p2 id = "numerical-sidetimer-kourna-8">1800</p2> 
+	    </div>
+
+	    <div id = "kourna-9-sidebox" class = "event-sidebox">
+	      <h1> B: Agasaya </h1> 
+	      <input type = "button" onclick = "start_stop(this, kourna.events);" value = "Start" id = "sidetimer-kourna-9-start">
+	      <input type = "button" onclick = "reset(this, kourna.events);" value = "&#8635;" id = "sidetimer-kourna-9-reset">
+	      <p1 id = "sidetimer-kourna-9">15:00</p1>
+	      <p2 id = "numerical-sidetimer-kourna-9">900</p2> 
+	    </div>
+
+	    <div id = "kourna-10-sidebox" class = "event-sidebox">
+	      <h1> B: Aspohodel </h1> 
+	      <input type = "button" onclick = "start_stop(this, kourna.events);" value = "Start" id = "sidetimer-kourna-10-start">
+	      <input type = "button" onclick = "reset(this, kourna.events);" value = "&#8635;" id = "sidetimer-kourna-10-reset">
+	      <p1 id = "sidetimer-kourna-10">15:00</p1>
+	      <p2 id = "numerical-sidetimer-kourna-10">900</p2> 
+	    </div>
+
+	    <div id = "kourna-11-sidebox" class = "event-sidebox">
+	      <h1> B: Cabochon </h1> 
+	      <input type = "button" onclick = "start_stop(this, kourna.events);" value = "Start" id = "sidetimer-kourna-11-start">
+	      <input type = "button" onclick = "reset(this, kourna.events);" value = "&#8635;" id = "sidetimer-kourna-11-reset">
+	      <p1 id = "sidetimer-kourna-11">15:00</p1>
+	      <p2 id = "numerical-sidetimer-kourna-11">900</p2> 
+	    </div>
+
+	    <div id = "kourna-12-sidebox" class = "event-sidebox">
+	      <h1> B: Enbilulu </h1> 
+	      <input type = "button" onclick = "start_stop(this, kourna.events);" value = "Start" id = "sidetimer-kourna-12-start">
+	      <input type = "button" onclick = "reset(this, kourna.events);" value = "&#8635;" id = "sidetimer-kourna-12-reset">
+	      <p1 id = "sidetimer-kourna-12">15:00</p1>
+	      <p2 id = "numerical-sidetimer-kourna-12">900</p2> 
+	    </div>
 	  </div> <!-- End of left side box --> 
 
 	  <div id = "checkboxes" class = "checkboxes">
 	    All: <input type = "Checkbox" id = "kourna-all-checkbox" checked = "true" onclick = "checkboxTimer(this, kourna.events, 'all');">
 	    <br>
-	    Meta - Scarab Plague: <input type = "Checkbox" id = "kourna-8-checkbox" checked = "true" onclick = "checkboxTimer(this, kourna.events);">
+	    Meta - Scarab Plague: <input type = "Checkbox" id = "kourna-0-checkbox" checked = "true" onclick = "checkboxTimer(this, kourna.events);">
 	    <br>
 	    Researcher Siris: <input type = "Checkbox" id = "kourna-1-checkbox" checked = "true" onclick = "checkboxTimer(this, kourna.events);">
 	    <br>
@@ -109,6 +149,8 @@
 	    Inquest Lab: <input type = "Checkbox" id = "kourna-6-checkbox" checked = "true" onclick = "checkboxTimer(this, kourna.events);">
 	    <br>
 	    Researcher Maggin: <input type = "Checkbox" id = "kourna-7-checkbox" checked = "true" onclick = "checkboxTimer(this, kourna.events);">
+	    <br>
+	    LB: Troopmarshal: <input type = "Checkbox" id = "kourna-8-checkbox" checked = "true" onclick = "checkboxTimer(this, kourna.events);">
 	    <br><br>
 	    Bounty Locations
 	    <br><br>
@@ -175,26 +217,13 @@
 				<input type = "button" onclick = "reset(this, kourna.events);" value = "&#8635;" id = "timer-[map]-[event #]-reset">
        			<br><p2 id = "timer-[map]-[event #]-text"></p2>	
 			-->
-			<div class = "event-box" id = "kourna-8-box" onMouseOver = "showElement('kourna-8-circle-4'); showElement('kourna-8-circle-5'); showElement('kourna-8-circle-6') " onMouseOut = " hideElement('kourna-8-circle-4'); hideElement('kourna-8-circle-5'); hideElement('kourna-8-circle-6') ">
+			<div class = "event-box" id = "kourna-0-box">
        			<h1> Meta - Scarab Plague </h1>
-       	 		<br><p1 id = "timer-kourna-8">30:00</p1>
-        		<br><input type = "button" onclick = "start_stop(this, kourna.events);" value = "Start" id = "timer-kourna-8-start">
-       			<input type = "button" onclick = "reset(this, kourna.events);" value = "&#8635;" id = "timer-kourna-8-reset">
-       			<br><p2 id = "timer-kourna-8-text"></p2>	
+       	 		<br><p1 id = "timer-kourna-0">30:00</p1>
+        		<br><input type = "button" onclick = "start_stop(this, kourna.events);" value = "Start" id = "timer-kourna-0-start">
+       			<input type = "button" onclick = "reset(this, kourna.events);" value = "&#8635;" id = "timer-kourna-0-reset">
+       			<br><p2 id = "timer-kourna-0-text"></p2>	
        		</div>
-
-       		<div id = "kourna-8-info-box-1" class = "kourna-8-info-box-1">
-       			<h2 id = "kourna-8-info-box-1-text"></h2> 
-       		</div>
-       		<!-- META CIRCLES 
-       				1-3 = light cyan 
-       				4-6 = cyan --> 
-       		<div id = "kourna-8-circle-1" class="kourna-8-circle-1"></div>
-       		<div id = "kourna-8-circle-2" class="kourna-8-circle-2"></div>
-       		<div id = "kourna-8-circle-3" class="kourna-8-circle-3"></div>
-       		<div id = "kourna-8-circle-4" class="kourna-8-circle-4"></div>
-       		<div id = "kourna-8-circle-5" class="kourna-8-circle-5"></div>
-       		<div id = "kourna-8-circle-6" class="kourna-8-circle-6"></div>
 
 			<div class = "event-box" id = "kourna-1-box">
 				<h1> Researcher Siris </h1>
@@ -260,6 +289,46 @@
         		<br><input type = "button" onclick = "start_stop(this, kourna.events);" value = "Start" id = "timer-kourna-7-start">
        			<input type = "button" onclick = "reset(this, kourna.events);" value = "&#8635;" id = "timer-kourna-7-reset">
        			<br><p2 id = "timer-kourna-7-text"></p2>	
+       		</div>
+
+       		<div class = "event-box" id = "kourna-8-box">
+       			<h1> LB: Troopmarshal </h1>
+       	 		<br><p1 id = "timer-kourna-8">30:00</p1>
+        		<br><input type = "button" onclick = "start_stop(this, kourna.events);" value = "Start" id = "timer-kourna-8-start">
+       			<input type = "button" onclick = "reset(this, kourna.events);" value = "&#8635;" id = "timer-kourna-8-reset">
+       			<br><p2 id = "timer-kourna-8-text"></p2>	
+       		</div>
+
+       		<div class = "event-box" id = "kourna-9-box" style = "opacity: 0;">
+       			<h1> B: Agasaya </h1>
+       	 		<br><p1 id = "timer-kourna-9">15:00</p1>
+        		<br><input type = "button" onclick = "start_stop(this, kourna.events);" value = "Start" id = "timer-kourna-9-start">
+       			<input type = "button" onclick = "reset(this, kourna.events);" value = "&#8635;" id = "timer-kourna-9-reset">
+       			<br><p2 id = "timer-kourna-9-text"></p2>	
+       		</div>
+
+       		<div class = "event-box" id = "kourna-10-box" style = "opacity: 0;">
+       			<h1> B: Asphodel </h1>
+       	 		<br><p1 id = "timer-kourna-10">15:00</p1>
+        		<br><input type = "button" onclick = "start_stop(this, kourna.events);" value = "Start" id = "timer-kourna-10-start">
+       			<input type = "button" onclick = "reset(this, kourna.events);" value = "&#8635;" id = "timer-kourna-10-reset">
+       			<br><p2 id = "timer-kourna-10-text"></p2>	
+       		</div>
+
+       		<div class = "event-box" id = "kourna-11-box" style = "opacity: 0;">
+       			<h1> B: Cabochon </h1>
+       	 		<br><p1 id = "timer-kourna-11">15:00</p1>
+        		<br><input type = "button" onclick = "start_stop(this, kourna.events);" value = "Start" id = "timer-kourna-11-start">
+       			<input type = "button" onclick = "reset(this, kourna.events);" value = "&#8635;" id = "timer-kourna-11-reset">
+       			<br><p2 id = "timer-kourna-11-text"></p2>	
+       		</div>
+
+       		<div class = "event-box" id = "kourna-12-box" style = "opacity: 0;">
+       			<h1> B: Enbilulu </h1>
+       	 		<br><p1 id = "timer-kourna-12">15:00</p1>
+        		<br><input type = "button" onclick = "start_stop(this, kourna.events);" value = "Start" id = "timer-kourna-12-start">
+       			<input type = "button" onclick = "reset(this, kourna.events);" value = "&#8635;" id = "timer-kourna-12-reset">
+       			<br><p2 id = "timer-kourna-12-text"></p2>	
        		</div>
 
 

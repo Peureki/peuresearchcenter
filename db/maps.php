@@ -124,7 +124,7 @@ class Maps extends BenchmarksDB{
 						$map = str_replace("'", "\'", $map);
 					}
 					// Insert into DB
-					$sql = "INSERT INTO $table (type, name, time, gold_per_hour, total_gold, karma, spirit_shards, trade_contracts, unbound_magic, volatile_magic)
+					$sql = "INSERT IGNORE INTO $table (type, name, time, gold_per_hour, total_gold, karma, spirit_shards, trade_contracts, unbound_magic, volatile_magic)
 					VALUES ('$farmtype', '$map', '$time', '$gold_per_hour', '$total_gold', '$karma', '$spirit_shards', '$trade_contracts', '$unbound_magic', '$volatile_magic');";
 					// Execute the SQL stmt 
 					$stmt = $this->connect()->exec($sql);

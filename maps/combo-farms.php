@@ -69,11 +69,6 @@
 			<br> Cursed Shore - Week 4, 5, 8
 
 			<br><br>
-			Here are maps that *might* be good, but needs testing: 
-			<br> Kessex Hills - Week 2
-			<br> Malchor's Leap - Week 4
-
-			<br><br>
 			The <b> general rotation </b> is: 
 			<br> 1) Start at xx:00 with Karka Queen
 			<br> 2) xx:03 - xx:18: Cursed Shore events
@@ -238,10 +233,36 @@
 			</div>
 
 			<br>
-			Pre-Meta Phase (Destroyer Champs)
 			<div class = "page-picture">
 				<img src = "../images/ls3-train/draconis-mons-3.jpg" style = "width: 40%;">
 				<img src = "../images/ls3-train/draconis-mons-4.jpg" style = "width: 40%;">
+			</div>
+
+			<br><br>
+			<b> Ember Bay </b>
+			<br>
+			The rotation to get to Ember Bay depends on the status of Draconis Mons. If when you entered Draconis and the meta is near finished and you can track the meta timer, then go to Ember Bay next. If when you enetered Draconis and did the meta from start to finish, then do Ember Bay as the last map. This is because there's nothing special of Ember Bay and it's good as a filler. There are no metas, so the priority of events goes as the following: 
+			<br><br>
+			Dominator &#8594; Sloth (if past the first gathering event) &#8594; Karka &#8594; Drake &#8594; Coalescences
+
+			<br>
+			<div class = "page-picture">
+				<img src = "../images/ls3-train/ember-bay-1.jpg" style = "width: 60%;">
+			</div>
+
+			<br><br>
+			<b> Siren's Landing </b>
+			<br>
+			The most important part of Siren's Landing is hoping to get the meta relatively quickly. The meta itself has an exactly 30 minute cooldown. If you know when the last run was, you can track it. But, in most cases, you'll end up in this map waiting for it. It is important to have the squad members have the Shrines unlocked as well. Some may not be aware of this so...getting everyone on the same page will be difficult because you don't know who does or doesn't have it. In addition to events, it's great to do a quick chest farm. This is great to do coincide with the Winfred escort. 
+
+			<br><br>
+			Priority of events:
+			<br> Meta &#8594; Winfred Escort &#8594; Kingpins &#8594; Fountain &#8594; Champs (Spider, Giant, Wyvern)
+
+			<br>
+			<div class = "page-picture">
+				<img src = "../images/sirens-landing/node-farm.jpg" style = "width: 48%;">
+				<img src = "../images/ls3-train/sirens-landing-1.jpg" style = "width: 48%;">
 			</div>
 			
 		</div>

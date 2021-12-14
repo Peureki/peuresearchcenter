@@ -32,6 +32,7 @@ function showPreferences(id, variable){
 
 		// Refinement
 		case "ascended": getPreferences(id, variable); break;
+		case "bag": getPreferences(id, variable); break;
 		case "basic": getPreferences(id, variable); break;
 		case "gem": getPreferences(id, variable); break;
 		case "jewel": getPreferences(id, variable); break;
@@ -156,6 +157,7 @@ function doPreferences(){
 		case "refinement.php":
 		// Refinement
 		showToggle('ascendedOption1', 'check-ascended', 'ascended', 'bookmark-ascended');
+		showToggle('bagOption1', 'check-bag', 'bag', 'bookmark-bag');
 		showToggle('basicOption1', 'check-basic', 'basic', 'bookmark-basic');
 		showToggle('gemOption1', 'check-gem', 'gem', 'bookmark-gem');
 		showToggle('jewelOption1', 'check-jewel', 'jewel', 'bookmark-jewel');
@@ -164,6 +166,7 @@ function doPreferences(){
 		showToggle('runeOption1', 'check-rune', 'rune', 'bookmark-rune');
 
 		defaultSettings('ascendedDefault', 'ascendedOption1', 'check-ascended', 'ascended', 'bookmark-ascended');
+		defaultSettings('bagDefault', 'bagOption1', 'check-bag', 'bag', 'bookmark-bag');
 		defaultSettings('basicDefault', 'basicOption1', 'check-basic', 'basic', 'bookmark-basic');
 		defaultSettings('gemDefault', 'gemOption1', 'check-gem', 'gem', 'bookmark-gem');
 		defaultSettings('jewelDefault', 'jewelOption1', 'check-jewel', 'jewel', 'bookmark-jewel');

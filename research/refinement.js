@@ -1,5 +1,12 @@
+// HOW THIS SCRIPT WORKS:
+// 1) If you want to add a new refined mat, add the ID in the list matPricesAPI
+// 2) Determine what kind of mat it is (component, gizmo, etc) then find the appropiate object
+// 3) Check if it needs a recipe. If it does, add those ingredients in
+// 4) If there's a new object, add addValues(new object); 
+// 5) Add the new mat in the appropiate function (Misc, Ascended, etc)
+
 async function refinement(choice, taxChoice){
-	var matPricesAPI = "https://api.guildwars2.com/v2/commerce/prices?ids=19718,19739,19741,19743,19748,19745,19720,19740,19742,19744,19747,19746,19723,19726,19727,19724,19722,19725,19710,19713,19714,19711,19709,19712,19719,19728,19730,19731,19729,19732,19738,19733,19734,19736,19735,19737,19697,19699,19703,19698,19702,19700,19701,19680,19679,19683,19687,19682,19688,19686,19681,19684,19685,19721,46741,46738,46739,46736,70992,80723,80714,80791,71334,80775,46743,24341,24288,24299,24276,24282,24294,24350,24356,79410,24514,24518,24532,24533,24524,19721,72436,72010,24520,76491,24515,24884,24510,75654,24515,74988,76179,24772,72315,70957,72504,24522,24773,24508,24516,24502,68063,24358,24289,24300,24277,24283,24295,24351,24357,42010,24512,42006,24519,24511,24509,24473,24521,24474,24475,90339,24359,43773,74042,66913,12815,24503,44941,66993,24305,24340,24330,24325,24320,24315,24310,67015,73034,74090,77256,72224,48917,48884,75075,71641,71580,24830,71425,24821,89271,89216,68942,74202,89258,24833,73399,72852,24800,76100,24762,36044,24756,44957,49460,69370,24818,24803,69370,89103,74328,24335,36041,38024,68437,24720,85713,76166,24821,24827,24839,86601,24,44951,89999,77699,66637,67832,66650,93567,70842,92687";
+	var matPricesAPI = "https://api.guildwars2.com/v2/commerce/prices?ids=19718,19739,19741,19743,19748,19745,19720,19740,19742,19744,19747,19746,19723,19726,19727,19724,19722,19725,19710,19713,19714,19711,19709,19712,19719,19728,19730,19731,19729,19732,19738,19733,19734,19736,19735,19737,19697,19699,19703,19698,19702,19700,19701,19680,19679,19683,19687,19682,19688,19686,19681,19684,19685,19721,46741,46738,46739,46736,70992,80723,80714,80791,71334,80775,46743,24341,24288,24299,24276,24282,24294,24350,24356,79410,24514,24518,24532,24533,24524,19721,72436,72010,24520,76491,24515,24884,24510,75654,24515,74988,76179,24772,72315,70957,72504,24522,24773,24508,24516,24502,68063,24358,24289,24300,24277,24283,24295,24351,24357,42010,24512,42006,24519,24511,24509,24473,24521,24474,24475,90339,24359,43773,74042,66913,12815,24503,44941,66993,24305,24340,24330,24325,24320,24315,24310,67015,73034,74090,77256,72224,48917,48884,75075,71641,71580,24830,71425,24821,89271,89216,68942,74202,89258,24833,73399,72852,24800,76100,24762,36044,24756,44957,49460,69370,24818,24803,69370,89103,74328,24335,36041,38024,68437,24720,85713,76166,24821,24827,24839,86601,24,44951,89999,77699,66637,67832,66650,93567,70842,92687,9585,76614,9593,9581,9584,9591,9594,9574,9571,9572";
 	const response1 = await fetch(matPricesAPI);
 	const matPrices = await response1.json();
 	/*
@@ -826,6 +833,123 @@ async function refinement(choice, taxChoice){
 				icon: "https://render.guildwars2.com/file/EA581B219A5937D31F145E3CD00CE7046216DE22/220942.png",
 			},
 		],
+		bags: [
+			{
+				name: "20 Slot Craftsman's Bag",
+				id: 9572,
+				icon: "https://render.guildwars2.com/file/5F7362DEF112DCAED4D615B94E9D1C3CEA040011/433577.png",
+				recipe: function(){
+					ingredients(this,
+						findItem("Superior Rune of Holding", mats.vendor), 1,
+						findItem("Bolt of Gossamer", mats.refinedCloth), 10,
+						findItem("Ancient Bone", mats.fineT6), 3,
+					);
+				},
+				discipline: "Armorsmith",
+			},
+			{
+				name: "20 Slot Equipment Pack Box",
+				id: 9593,
+				icon: "https://render.guildwars2.com/file/5519EC3E90D9CF07B9052902BFD80C08C364DAE8/433594.png",
+				recipe: function(){
+					ingredients(this,
+						findItem("Superior Rune of Holding", mats.vendor), 1,
+						findItem("Orichalcum Ingot", mats.refinedMetal), 10,
+						findItem("Armored Scale", mats.fineT6), 3,
+					);
+				},
+				discipline: "Armorsmith",
+			},
+			{
+				name: "20 Slot Gossamer Bag",
+				id: 9571,
+				icon: "https://render.guildwars2.com/file/CCCF23C7F9F8AC41D25B2B67A469DA951C669467/219390.png",
+				recipe: function(){
+					ingredients(this,
+						findItem("Superior Rune of Holding", mats.vendor), 1,
+						findItem("Bolt of Gossamer", mats.refinedCloth), 10,
+					);
+				},
+				discipline: "Tailor",
+			},
+			{
+				name: "20 Slot Hardened Leather Pack",
+				id: 9581,
+				icon: "https://render.guildwars2.com/file/A149FD302E9128B0DEFAF7BA71726A5842B7D2EB/222426.png",
+				recipe: function(){
+					ingredients(this,
+						findItem("Superior Rune of Holding", mats.vendor), 1,
+						findItem("Cured Hardened Leather Square", mats.refinedLeather), 10,
+					);
+				},
+				discipline: "Leatherworker",
+			},
+			{
+				name: "20 Slot Invisible Bag",
+				id: 9574,
+				icon: "https://render.guildwars2.com/file/C6D16D1D43120B28C0011277EE5E2AD8085E473B/433579.png",
+				recipe: function(){
+					ingredients(this,
+						findItem("Superior Rune of Holding", mats.vendor), 1,
+						findItem("Bolt of Gossamer", mats.refinedCloth), 10,
+						findItem("Pile of Crystalline Dust", mats.fineT6), 3,
+					);
+				},
+				discipline: "Tailor",
+			},
+			{
+				name: "20 Slot Invisible Pack",
+				id: 9584,
+				icon: "https://render.guildwars2.com/file/B7B7EB4291550C3BBE50C6E7C223C59A15614D33/433587.png",
+				recipe: function(){
+					ingredients(this,
+						findItem("Superior Rune of Holding", mats.vendor), 1,
+						findItem("Cured Hardened Leather Square", mats.refinedLeather), 10,
+						findItem("Pile of Crystalline Dust", mats.fineT6), 3,
+					);
+				},
+				discipline: "Leatherworker",
+			},
+			{
+				name: "20 Slot Oiled Pack",
+				id: 9585,
+				icon: "https://render.guildwars2.com/file/703717137DF44401D7B2C45A736C5C90482F0673/433588.png",
+				recipe: function(){
+					ingredients(this,
+						findItem("Superior Rune of Holding", mats.vendor), 1,
+						findItem("Cured Hardened Leather Square", mats.refinedLeather), 10,
+						findItem("Ancient Bone", mats.fineT6), 3,
+					);
+				},
+				discipline: "Leatherworker",
+			},
+			{
+				name: "20 Slot Orichalcum Box",
+				id: 9591,
+				icon: "https://render.guildwars2.com/file/FE2CFC2DF2AA02C24C9FE810119D0539266CDB42/222418.png",
+				recipe: function(){
+					ingredients(this,
+						findItem("Superior Rune of Holding", mats.vendor), 1,
+						findItem("Orichalcum Ingot", mats.refinedMetal), 10,
+					);
+				},
+				discipline: "Armorsmith",
+			},
+			{
+				name: "20 Slot Safe Box",
+				id: 9594,
+				icon: "https://render.guildwars2.com/file/12F22D0BB1723B256CA44CE0D0B611A1089DCA2B/433595.png",
+				recipe: function(){
+					ingredients(this,
+						findItem("Superior Rune of Holding", mats.vendor), 1,
+						findItem("Orichalcum Ingot", mats.refinedMetal), 10,
+						findItem("Pile of Crystalline Dust", mats.fineT6), 3,
+					);
+				},
+				discipline: "Armorsmith",
+			},
+
+		],
 		components: [
 			{
 				name: "Amalgamated Draconic Lodestone 1",
@@ -1575,6 +1699,12 @@ async function refinement(choice, taxChoice){
 				icon: "https://render.guildwars2.com/file/B7CFD70F53A845E4ED1212040C18C123FC172910/65959.png",
 				value: 64,
 			},
+			{
+				name: "Superior Rune of Holding",
+				id: 13009,
+				icon: "https://render.guildwars2.com/file/CFA856D1EE9F01056490EE1CD2C637C2C1C5CBA6/63501.png",
+				value: 100000,
+			},
 			{ 
 				name: "Thermocatalytic Reagent",
 				id: 46747,
@@ -1641,12 +1771,15 @@ async function refinement(choice, taxChoice){
 	
 	// Things that have recipes 
 	addValues(mats.ascendedDaily);
+	addValues(mats.bags);
 	addValues(mats.components);
 	addValues(mats.gemT5);
 	addValues(mats.gizmo);
 	addValues(mats.runes);
 	addValues(mats.trophy);
 	addValues(mats.utility);
+
+	console.log(mats.bags);
 
 	// FOR THINGS THAT GET TAXED
 	// Finding a specific item in an array and returns those specific attributes
@@ -1722,6 +1855,7 @@ async function refinement(choice, taxChoice){
 		metalBody = document.getElementById('metal-tableBody'),
 		woodBody = document.getElementById('wood-tableBody'),
 		ascendedBody = document.getElementById('ascended-tableBody'),
+		bagBody = document.getElementById('bag-tableBody'),
 		curioBody = document.getElementById("curio-tableBody"),
 		gemBody = document.getElementById("gem-tableBody"),
 		miscBody = document.getElementById('misc-tableBody'),
@@ -1756,6 +1890,7 @@ async function refinement(choice, taxChoice){
 		wood("Buy", "Sell");
 
 		ascended("Buy", "Sell"); 
+		bags("Buy", "Sell");
 		gem("Buy", "Sell");
 		curio("Buy", "Sell");
 		orb("Buy", "Sell");
@@ -1770,6 +1905,7 @@ async function refinement(choice, taxChoice){
 		wood("Sell", "Sell"); 
 
 		ascended("Sell", "Sell");
+		bags("Sell", "Sell");
 		gem("Sell", "Sell");
 		curio("Sell", "Sell");
 		orb("Sell", "Sell");
@@ -1784,6 +1920,7 @@ async function refinement(choice, taxChoice){
 		wood("Buy", "Buy"); 
 
 		ascended("Buy", "Buy");
+		bags("Buy", "Buy");
 		gem("Buy", "Buy");
 		curio("Buy", "Buy");
 		orb("Buy", "Buy");
@@ -1798,6 +1935,7 @@ async function refinement(choice, taxChoice){
 		wood("Sell", "Buy"); 
 
 		ascended("Sell", "Buy");
+		bags("Sell", "Sell");
 		gem("Sell", "Buy");
 		curio("Sell", "Buy");
 		orb("Sell", "Buy");
@@ -2107,6 +2245,78 @@ async function refinement(choice, taxChoice){
 			} // End of if else
 		} 
 	}
+	// Bags
+	function bags(conversionBuyOrSell, resultBuyOrSell){
+		html = ''; // reset HTML so it doesn't copy over the previous list
+		isNegCount = 0; // reset count so it doesn't hide the next table
+		// What result items are presented
+
+		let resultArray = [];
+		for (i = 0; i < mats.bags.length; i++){
+			resultArray.push(mats.bags[i]);
+		}
+
+		for (i = 0; i < resultArray.length; i++){
+			// Assign items and their qty based on their recipes
+			item1Attr = resultArray[i].ingre1; item1Qty = resultArray[i].ingre1Qty;
+			item2Attr = resultArray[i].ingre2; item2Qty = resultArray[i].ingre2Qty;
+			item3Attr = resultArray[i].ingre3; item3Qty = resultArray[i].ingre3Qty;
+			item4Attr = resultArray[i].ingre4; item4Qty = resultArray[i].ingre4Qty;
+
+			// Change output qty for specific items
+			switch(resultArray[i].name){
+				case "Gossamer Patch": resultQty = 5; break;
+				case "Toxic Focusing Crystal": resultQty = 5; break;
+				default: resultQty = 1; break;
+			}
+			resultAttr = resultArray[i]; 
+
+			// If the items are vendored or acc bound items that don't have buy/sell values, return the N/A values
+			if (typeof item3Attr == "undefined" || item3Qty == "undefined"){item3Attr = mats.vendor[0]; item3Qty = 0;}
+			if (typeof item4Attr == "undefined" || item4Qty == "undefined"){item4Attr = mats.vendor[0]; item4Qty = 0;}
+
+			// Change prices depnding on what the choices of <select> are
+			switch (conversionBuyOrSell){
+				case "Buy": item1Value = item1Attr.buy*item1Qty; item2Value = item2Attr.buy*item2Qty; item3Value = item3Attr.buy*item3Qty; item4Value = item4Attr.buy*item4Qty;  
+					initialMat = item1Value + item2Value + item3Value + item4Value; break;
+				case "Sell": item1Value = item1Attr.sell*item1Qty; item2Value = item2Attr.sell*item2Qty; item3Value = item3Attr.sell*item3Qty; item4Value = item4Attr.sell*item4Qty;  
+					initialMat = item1Value + item2Value + item3Value + item4Value; break;
+			}
+			switch (resultBuyOrSell){
+				case "Buy": resultInput = resultAttr.buy*resultQty; break;
+				case "Sell": resultInput = resultAttr.sell*resultQty; break;
+			}
+
+			valueConversion = initialMat; 
+			valueResult = resultInput * tax;
+			profit = valueResult - valueConversion;
+
+			if (profit < 0){ backgroundColor = '#E9C4B4'; isNegCount = isNegCount + 1;} else { backgroundColor = '#CFE9B4'} // change background depending on neg or pos
+			html += `
+				<tr> 
+					<td> ${item1Qty} &nbsp; <img src = "${item1Attr.icon}" style = "${iconSize}"> <span class = "hoverTooltip">${item1Attr.name}</span>
+						<br> <span> ${displayValues(item1Value)} </span> </td> 
+					<td> + </td> 
+					<td> ${item2Qty} &nbsp; <img src = "${item2Attr.icon}" style = "${iconSize}"> <span class = "hoverTooltip">${item2Attr.name}</span>
+						<br> <span> ${displayValues(item2Value)} </span> </td> 
+					<td> + </td> 
+					<td> ${item3Qty} &nbsp; <img src = "${item3Attr.icon}" style = "${iconSize}"> <span class = "hoverTooltip">${item3Attr.name}</span>
+						<br> <span> ${displayValues(item3Value)} </span> </td> 
+					<td> + </td> 
+					<td> ${item4Qty} &nbsp; <img src = "${item4Attr.icon}" style = "${iconSize}"> <span class = "hoverTooltip">${item4Attr.name}</span>
+						<br> <span> ${displayValues(item4Value)} </span> </td> 
+					<td> &#8594; </td>
+					<td> ${resultQty} &nbsp; <img src = "${resultAttr.icon}" style = "${iconSize}"> <span class = "hoverTooltip"><b>${resultAttr.name}</b>
+						<br> <b>Result Value:</b> &nbsp; ${displayValues(valueResult)} (Tax: ${displayValues(valueResult - resultInput)})  
+						<br> <b>Item Value:</b> &nbsp;&nbsp;&nbsp; - ${displayValues(valueConversion)}
+						<br> <b>Discipline:</b> ${resultAttr.discipline}</span>
+						<br> <span> ${displayValues(valueResult)} </span> </td> 
+					<td style = "background-color: ${backgroundColor};"> ${displayValues(profit)}</td> 
+				</tr>
+			`	
+			bagBody.innerHTML = html;
+		}
+	}
 	// gemT6
 	function orb(conversionBuyOrSell, resultBuyOrSell){
 		html = ''; // reset HTML so it doesn't copy over the previous list
@@ -2249,6 +2459,7 @@ async function refinement(choice, taxChoice){
 
 			// Change output qty for specific items
 			switch(resultArray[i].name){
+				case "Gossamer Patch": resultQty = 5; break;
 				case "Toxic Focusing Crystal": resultQty = 5; break;
 				default: resultQty = 1; break;
 			}
@@ -2423,6 +2634,7 @@ async function refinement(choice, taxChoice){
 	sortTableByPrice('wood-table', 3);
 
 	sortTableByPrice('ascended-table', 9); 
+	sortTableByPrice('bag-table', 9);
 	sortTableByPrice('curio-table', 7);
 	sortTableByPrice('gem-table', 9);
 	sortTableByPrice('orb-table', 5);

@@ -16,6 +16,7 @@
 	<div id = "bookmark-left" class = "bookmark-left">
 		<ul>
 			<a href = "#ascended"><li id = "bookmark-ascended" > &#10097; Ascended Materials </li></a> 
+			<a href = "#bag"><li id = "bookmark-bag" > &#10097; Bags </li></a> 
 			<a href = "#basic"><li id = "bookmark-basic" > &#10097; Basic Materials </li></a> 
 			<a href = "#gem"><li id = "bookmark-gem" > &#10097; Gemstones </li></a> 
 			<a href = "#jewel"><li id = "bookmark-jewel" > &#10097; Jewels </li></a> 
@@ -38,6 +39,8 @@
 		<button  type = "button" id = "default" class = "select-button" onclick = "showPreferences(this.id, 0);"> Default </button> 
 	    <br><br>
 	    Ascended Materials <input type = "Checkbox" id = "check-ascended" onclick = "showPreferences(this.id, 'ascended');"> 
+	    <br>
+	    Bags <input type = "Checkbox" id = "check-bag" onclick = "showPreferences(this.id, 'bag');"> 
 	    <br>
 	    Basic Materials <input type = "Checkbox" id = "check-basic" onclick = "showPreferences(this.id, 'basic');"> 
 	    <br>
@@ -110,6 +113,34 @@
 					</tr>	
 				</thead>
 				<tbody id = "ascended-tableBody"></tbody>
+			</table>
+		</div>
+
+		<div id = "bag" style = "margin: 10px;">
+			<div class = "section-header">
+				<h1> Bags </h1>
+				<div class = "banner-box"></div>
+				<img src = "../images/assets/banner.svg">
+			</div>
+			<!-- Hidden space so the header doesn't overlap anything below -->
+			<div class = "section-header-space"></div>
+
+			<table id = "bag-table" class = "four-ingre">
+				<thead>
+					<tr>
+						<th> Item 1 </th>
+						<th> </th>
+						<th> Item 2 </th>
+						<th> </th>
+						<th> Item 3 </th>
+						<th> </th>
+						<th> Item 4 </th>
+						<th> </th>
+						<th> Result</th>
+						<th> /Conversion </th>
+					</tr>	
+				</thead>
+				<tbody id = "bag-tableBody"></tbody>
 			</table>
 		</div>
 
