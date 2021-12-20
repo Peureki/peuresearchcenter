@@ -51,6 +51,18 @@ async function getGemtoGoldConversion(){
 				ele: document.getElementById('choya-mining'),
 				cost: 1000,
 			},
+			{	// Candy Corn Gobbler
+				ele: document.getElementById('candy-corn-gobbler'),
+				cost: 300,
+			},
+			{	// Snowflake Gobbler
+				ele: document.getElementById('snowflake-gobbler'),
+				cost: 320,
+			},
+			{	// Zhataffi Gobbler
+				ele: document.getElementById('zhaitaffy-gobbler'),
+				cost: 400,
+			},
 			{	// Shared inventory
 				ele: document.getElementById('shared-inventory'),
 				cost: 700,
@@ -112,6 +124,9 @@ function mhiInfoBoxLeft(icon){
 		case "Infinite Volatile Magic Gathering Tools": removePopupBoxes(); document.getElementById('popup-volatile-tools').style.display = "block"; break;
 		case "Consortium Harvesting Sickle": removePopupBoxes(); document.getElementById('popup-consortium-sickle').style.display = "block"; break;
 		case "Choya Mining Tool": removePopupBoxes(); document.getElementById('popup-choya-mining').style.display = "block"; break;
+		case "Candy Corn Gobbler": removePopupBoxes(); document.getElementById('popup-candy-corn-gobbler').style.display = "block"; break;
+		case "Snowflake Gobbler": removePopupBoxes(); document.getElementById('popup-snowflake-gobbler').style.display = "block"; break;
+		case "Zhaitaffy Gobbler": removePopupBoxes(); document.getElementById('popup-zhaitaffy-gobbler').style.display = "block"; break;
 		case "Shared Inventory Slot": removePopupBoxes(); document.getElementById('popup-shared-inventory').style.display = "block"; break;
 		case "Mistlock Santuary Passkey": removePopupBoxes(); document.getElementById('popup-mistlock-santuary').style.display = "block"; break;
 		case "Storage Expander": removePopupBoxes(); document.getElementById('popup-storage-expander').style.display = "block"; break;

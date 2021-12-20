@@ -16,7 +16,7 @@
 	<div id = "bookmark-left" class = "bookmark-left">
 		<ul>
 			<a href = "#amalgamated-key-farm"><li> &#10097; Amalgamated/Keys </li></a> 
-			<a href = "#core-tyria-farm"><li> &#10097; Core Tyria Farm </li></a> 
+			<a href = "#core-tyria-train"><li> &#10097; Core Tyria Farm </li></a> 
 			<a href = "#grothmar-bjora"><li> &#10097; Grothmar/Bjora </li></a> 
 			<a href = "#grothmar-kourna"><li> &#10097; Grothmar/Kourna </li></a> 
 			<a href = "#hot-meta-train"><li> &#10097; HoT Meta Train </li></a> 
@@ -60,8 +60,8 @@
 			The hardest part about this farm is that each meta needs to be completed on-time or a minute after the next meta. For example, Junundu Wurms overlaps with Doomlore by a minute or two (depending on the DPS), but the escort and meta should still be up. Same with Oil Floes, but that also requires some organization to have everyone split into the three drills.
 		</div>
 
-		<div id = "core-tyria-farm" class = "small-description">
-			<h class = "bookmark-header" style = "background-color: rgb(255, 97, 41);"> Core Tyria Farm </h>
+		<div id = "core-tyria-train" class = "small-description">
+			<h class = "bookmark-header" style = "background-color: rgb(255, 97, 41);"> Core Tyria Train </h>
 			<br><br>
 			This farm is unique as it could change depending on what the weekly map bonus rewards are for particular maps. This farm is harder to test as core tyrian maps have an 8 week rotation. Here are great maps to do with great map bonus rewards:
 

@@ -41,7 +41,6 @@
 			</div>
 		</div>
 
-		<br><br>
 		<div class = "double-box">
 			<div class = "mhi-section">
 				<b style = "font-size: 30px;"> Gem Store </b>
@@ -122,6 +121,46 @@
 						<img src = "../images/assets/info.png" style = "width: 25px; height: 25px; vertical-align: middle; cursor: pointer;" onclick = "mhiInfoBoxLeft(this);" >
 						<br>1000<img src = "../images/assets/icons/Gem.png" style = "width: 25px; height: 25px; vertical-align: middle;"> | $12.50
 						<br><span id = "choya-mining"></span>
+					</div>
+				</div>
+
+			<!-- Gobblers -->
+				<div class = "mhi-list">
+					<div>
+						<img src = "../images/assets/icons/Candy_Corn_Gobbler.png" style = "vertical-align: middle; width: 64px; height: 64px;">
+					</div>
+
+					<div style = "margin-left: 10px; margin-top: auto; margin-bottom: auto;">
+						<b>Candy Corn Gobbler</b> 
+						<img src = "../images/assets/info.png" style = "width: 25px; height: 25px; vertical-align: middle; cursor: pointer;" onclick = "mhiInfoBoxLeft(this);" >
+						<br>300<img src = "../images/assets/icons/Gem.png" style = "width: 25px; height: 25px; vertical-align: middle;"> | $3.75
+						<br><span id = "candy-corn-gobbler"></span>
+					</div>
+				</div>
+
+				<div class = "mhi-list">
+					<div>
+						<img src = "../images/assets/icons/Snowflake_Gobbler.png" style = "vertical-align: middle; width: 64px; height: 64px;">
+					</div>
+
+					<div style = "margin-left: 10px; margin-top: auto; margin-bottom: auto;">
+						<b>Snowflake Gobbler</b> 
+						<img src = "../images/assets/info.png" style = "width: 25px; height: 25px; vertical-align: middle; cursor: pointer;" onclick = "mhiInfoBoxLeft(this);" >
+						<br>320<img src = "../images/assets/icons/Gem.png" style = "width: 25px; height: 25px; vertical-align: middle;"> | $4
+						<br><span id = "snowflake-gobbler"></span>
+					</div>
+				</div>
+
+				<div class = "mhi-list">
+					<div>
+						<img src = "../images/assets/icons/Zhaitaffy_Gobbler.png" style = "vertical-align: middle; width: 64px; height: 64px;">
+					</div>
+
+					<div style = "margin-left: 10px; margin-top: auto; margin-bottom: auto;">
+						<b>Zhaitaffy Gobbler</b> 
+						<img src = "../images/assets/info.png" style = "width: 25px; height: 25px; vertical-align: middle; cursor: pointer;" onclick = "mhiInfoBoxLeft(this);" >
+						<br>400<img src = "../images/assets/icons/Gem.png" style = "width: 25px; height: 25px; vertical-align: middle;"> | $5
+						<br><span id = "zhaitaffy-gobbler"></span>
 					</div>
 				</div>
 
@@ -417,6 +456,36 @@
 
 					<br><br>
 					The unbreakable tools are good enough for the price, but the Glyphs are what's going to give you long-term profits. Each strike will grant some Volatile Magic. Over time, you'll end up having thousands racked up from purely gathering, which you can exchange for Trophy Shipments via LS4 vendors. Check out <a href = "../research/currency-worth.html" target="_blank"><u>this page</u></a> for how much profits you'd get per Volatile Magic to get a better idea. 
+				</div>
+
+				<div id = "popup-candy-corn-gobbler" class = "popup-box-child">
+					<h1> Candy Corn Gobbler </h1>
+
+					This is a seasonal gobbler that comes during the Halloween festival. Use only 3 candy corns and you can get a random chance to either be transformed into a halloween creature or grant either of these boosts (can stack duration):
+					<br> - 50% EXP All game types, 50% PVP and WVW reward track, 100% EXP from kill streaks
+					<br> - 50% MF, 50% Chance of critical crafting EXP, 33% chance extra gathering strike, 10s of swiftness after gathering, summons a Black Lion Merchant if your inventory is full after gathering (20-min cooldown)
+					<br> - 50% Karma boost
+					<br> - 15% Movement speed
+					<br> - 5% Damage reduction
+					<br> - Regenerate health
+				</div>
+
+				<div id = "popup-snowflake-gobbler" class = "popup-box-child">
+					<h1> Snowflake Gobbler </h1>
+
+					This is a seasonal gobbler that comes during the Wintersday festival. Consume 5 Snowflakes and recieve either a Wintersday Gift or a buff (stacks duration):
+					<br> - 25% EXP from kills
+					<br> - 25% Gold from kills
+					<br> - 25% PVP and WVW Reward track gain
+				</div>
+
+				<div id = "popup-zhaitaffy-gobbler" class = "popup-box-child">
+					<h1> Zhaitaffy Gobbler </h1>
+
+					This is a seasonal gobbler that comes during the Dragonbash festival. Consume 25 Zhaitaffy and recieve either a Dragon Coffer or a buff (stacks duration):
+					<br> - 25% EXP from kills
+					<br> - 25% Gold from kills
+					<br> - 25% PVP and WVW Reward track gain
 				</div>
 
 				<div id = "popup-consortium-sickle" class = "popup-box-child">

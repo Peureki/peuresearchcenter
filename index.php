@@ -153,6 +153,16 @@
 
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
+					<span style = "font-weight: bold;">Dec 19, 2021</span>
+				<br>
+					- Added Gobblers to <a href = "./resources/must-have-items.php" target = "_blank"><u> Must Have Items </u></a>. 
+				<br><br>
+					<span style = "font-weight: bold;">Dec 14, 2021</span>
+				<br>
+					- Added LS3 train and Core Tyria Train guides to <a href = "./maps/combo-farms.php" target = "_blank"><u>Combo Farms</u></a>
+					<br> - Added Bag slots and Gossamer Patches to <a href = "./research/refinement.php"><u> Refinement </u></a>.
+					<br> - Added Kourna bounties to the <a href = "./timers/domain-of-kourna.php"><u> Kourna timer page </u></a>.
+				<br><br>
 					<span style = "font-weight: bold;">Dec 6, 2021</span>
 				<br>
 					- Added a QoL feature. When on mobile, there's a button on the left side that will open and close the bookmarks tab. This would make it easier for longer pages.

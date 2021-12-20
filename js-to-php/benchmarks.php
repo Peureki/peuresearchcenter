@@ -160,6 +160,11 @@ function getBenchmarkAll(table, image){
 			pop = "Rare";
 			break;
 
+			case "Core Tyria Train":
+			link = "./maps/combo-farms.php#core-tyria-train";
+			pop = "Rare";
+			break;
+
 			case "Crystal Oasis":
 			link = "./maps/crystal-oasis.php";
 			pop = "Rare";
@@ -321,7 +326,7 @@ function getBenchmarkAll(table, image){
 			break;
 
 			case "LS3 Train":
-			link = "";
+			link = "./maps/combo-farms.php#ls3-train";
 			pop = "Rare";
 			break;
 
