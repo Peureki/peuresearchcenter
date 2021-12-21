@@ -133,6 +133,62 @@
 			</div> <!-- End of inner double box -->
 
 			<div class = "section-header">
+				<h1> Benchmarks </h1>
+				<div class = "banner-box"></div>
+				<img src = "./images/assets/banner.svg">
+			</div>
+			<!-- Hidden space so the header doesn't overlap anything below -->
+			<div class = "section-header-space"></div>
+
+			<div class = "inner-double-box">
+				<div class = "small-description">
+					Benchmark Button
+				</div>
+
+				<div class = "small-description">
+					Benchmark description
+				</div>
+			</div>
+
+			<div class = "section-header">
+				<h1> Resources </h1>
+				<div class = "banner-box"></div>
+				<img src = "./images/assets/banner.svg">
+			</div>
+			<!-- Hidden space so the header doesn't overlap anything below -->
+			<div class = "section-header-space"></div>
+
+			<div class = "flex-page-box">
+				<ul class = "homepage-list">
+					<li> How To Get </li>
+					<li><a href = "<?php echo $base;?>/resources/ascended-materials.php"> Ascended Materials </a></li>
+					<li><a href = "<?php echo $base;?>/resources/experience.php"> Experience </a></li>
+					<li><a href = "<?php echo $base;?>/resources/ls3-currencies.php"> Living Story 3 Currencies </a></li>
+					<li><a href = "<?php echo $base;?>/resources/ls4-currencies.php"> Living Story 4 Currencies </a></li>
+					<li><a href = "<?php echo $base;?>/resources/must-have-items.php"> Must Have Items </a></li>
+				</ul>
+
+				<ul class = "homepage-list">
+					<li> Tools </li>
+					<li><a href = "<?php echo $base;?>/resources/dailies.php"> Dailies </a></li>
+					<li><a href = "<?php echo $base;?>/resources/living-story-trinkets.php"> Living Story Trinkets </a></li>
+				</ul>
+			</div>
+
+			
+
+			<div class = "page-box">
+				<div class = "small-description">
+					<details>
+						<summary> <b>Life Update (10/1)</b> </summary>
+						This is kind of a different update, but I wanted to share a glimps of my personal life in the past few months for those that have been following my work and my trains. In July, I got laided off. I won't go into detail, but essentially I worked under a grant that allowed me to be a science teacher for rural schools. I was like the Bill-Nye, but for weather lol. Grant work is awesome because it allows me to do whatever I want as long as the work is done, but grant money runs out. Those who have read my bio, I'm a guy that studied the weather. I intially intended to get a career in meteorology, but the job market is extremely rough. So, I took the next best thing that I love right now and I tried out for a junior web developer job. Took a few months of applying and being denied, but I got it! I start later this month. 
+						<br><br>
+						What started as a fun small project for myself with spreadsheets has turned into a new career path. Who knew that playing Guild Wars 2 'professionally' would get me here? With that, I want to thank everyone who reads this for your continued support on this website and joining my trains in-game! 
+					</details>
+				</div>
+			</div>
+
+			<div class = "section-header">
 				<h1>Updates </h1>
 				<div class = "banner-box"></div>
 				<img src = "./images/assets/banner.svg">

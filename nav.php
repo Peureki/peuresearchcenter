@@ -9,6 +9,10 @@
 
 	<ul class = "nav-bar-list">
 		<li class = "nav-dropdown">
+			<a class = "nav-header" href = "<?php echo $base;?>/benchmarks.php"> Benchmarks </a>
+		</li>
+
+		<li class = "nav-dropdown">
 			<a class = "nav-header" href = "#"> Resources </a>
 			<ul class = "sub-menu">
 				<div class = "sub-menu-header">
@@ -31,10 +35,6 @@
 					<li><a href = "<?php echo $base;?>/resources/list-of-resources.php"> Extra Resources </a></li>
 				</div>
 			</ul>
-		</li>
-
-		<li class = "nav-dropdown">
-			<a class = "nav-header" href = "<?php echo $base;?>/benchmarks.php"> Benchmarks </a>
 		</li>
 
 		<li class = "nav-dropdown">
@@ -180,7 +180,7 @@ function showHamburger(){
 			navBarList.style.display = "flex";
 			navBar.style.height = "100%";
 
-			dropdownMenu[0].addEventListener('click', () => selectedDropDown(0));
+			dropdownMenu[1].addEventListener('click', () => selectedDropDown(1));
 			dropdownMenu[2].addEventListener('click', () => selectedDropDown(2));
 			dropdownMenu[3].addEventListener('click', () => selectedDropDown(3));
 			dropdownMenu[4].addEventListener('click', () => selectedDropDown(4));
@@ -192,9 +192,9 @@ function showHamburger(){
 	function selectedDropDown(num){
 		// Switch depending on what is selected to be reverted back from X
 		var menuItem,
-			menuPosition = [0, 2, 3, 4]; // Postition in the list of menu items for headers that can drop down
+			menuPosition = [1, 2, 3, 4]; // Postition in the list of menu items for headers that can drop down
 		switch (num){
-			case 0: menuItem = "Resources"; break;
+			case 1: menuItem = "Resources"; break;
 			case 2: menuItem = "Timers"; break;
 			case 3: menuItem = "Research"; break;
 			case 4: menuItem = "Maps"; break;

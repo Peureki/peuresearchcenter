@@ -1321,7 +1321,8 @@ b{
 	margin-right: auto;
 	width: 70%;
 }
-.page-box {
+.page-box,
+.flex-page-box{
 	position: relative;
 	max-width: 1300px;
 	height: auto;
@@ -1356,15 +1357,10 @@ b{
 	height: auto;
 	margin: auto;
 }
-
-.page-box-community-timer{
-	width: 100%;
-	height: auto;
-	margin: auto;
+.flex-page-box{
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: relative;
+	justify-content: flex-start;
+	align-items: flex-start;
 }
 
 .popup-box,
@@ -1834,6 +1830,34 @@ b{
 }
 .meta-sidebox p2{
 	display: none;
+}
+
+/*
+	==========================
+	===== HOMEPAGE LISTS =====
+	==========================
+*/
+.homepage-list{
+	list-style-type: none;
+	color: var(--clr-text);
+	font-size: 20px;
+	margin: 10px;
+	padding: 20px;
+	border-left: 2px solid var(--clr-link);
+}
+.homepage-list li{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.homepage-list li a{
+	color: var(--clr-text);
+}
+.homepage-list li a:hover{
+	color: var(--clr-link);
+}
+.homepage-list li:nth-child(1){
+	font-weight: bold;
+	color: var(--clr-bold);
 }
 
 
