@@ -141,12 +141,17 @@
 			<div class = "section-header-space"></div>
 
 			<div class = "inner-double-box">
-				<div class = "small-description">
-					Benchmark Button
-				</div>
+				<ul class = "homepage-header-list">
+					<li> Benchmarks </li>
+					<li><a href = "<?php echo $base;?>/benchmarks.php"><img src = "https://wiki.guildwars2.com/images/b/bc/Event_star_%28map_icon%29.png"><span> &#10097; Map Farms </span></a></li>
+					<li><a href = "<?php echo $base;?>/benchmarks.php"><img src = "https://wiki.guildwars2.com/images/b/b0/Red_Boss.png"><span> &#10097; Metas </span></a></li>
+					<li><a href = "<?php echo $base;?>/benchmarks.php"><img src = "https://wiki.guildwars2.com/images/1/13/Buried_Treasure_%28object%29.png"><span> &#10097; Chests </span></a></li>
+					<li><a href = "<?php echo $base;?>/benchmarks.php"><img src = "https://wiki.guildwars2.com/images/3/3c/Armorsmith.png"><span> &#10097; Alt Parking </span></a></li>
+					<li><a href = "<?php echo $base;?>/gathering.php"><img src = "https://wiki.guildwars2.com/images/9/94/Gathering_Merchant.png"><span> &#10097; Gathering </span></a></li>
+				</ul>
 
 				<div class = "small-description">
-					Benchmark description
+					Check out what's popping for gold these days! Benchmarks will be updated every 30 minutes. Benchmarks are deteremined by series of trials and varying squads (16-50) people, both [PRC] and open world pugs. The goal of the benchmarks is to be as realistic as possible for even the most casual farmers, but to also see the potential of a farm. Use my benchmarks as a <i>baseline</i> for what the gold per hour of how you make gold to be. 
 				</div>
 			</div>
 
@@ -159,33 +164,220 @@
 			<div class = "section-header-space"></div>
 
 			<div class = "flex-page-box">
-				<ul class = "homepage-list">
+				<ul class = "homepage-header-list">
 					<li> How To Get </li>
-					<li><a href = "<?php echo $base;?>/resources/ascended-materials.php"> Ascended Materials </a></li>
-					<li><a href = "<?php echo $base;?>/resources/experience.php"> Experience </a></li>
-					<li><a href = "<?php echo $base;?>/resources/ls3-currencies.php"> Living Story 3 Currencies </a></li>
-					<li><a href = "<?php echo $base;?>/resources/ls4-currencies.php"> Living Story 4 Currencies </a></li>
-					<li><a href = "<?php echo $base;?>/resources/must-have-items.php"> Must Have Items </a></li>
+					<ul class = "homepage-sub-list">
+						<li><a href = "<?php echo $base;?>/resources/ascended-materials.php"> Ascended Materials </a></li>
+						<li><a href = "<?php echo $base;?>/resources/ascended-materials.php"><img src = "https://render.guildwars2.com/file/1468C6A946BFF0A42CBD08A70E45F8F05851FED0/631480.png"><span> &#10097; Bloodstone Dust </span></a></li>
+						<li><a href = "<?php echo $base;?>/resources/ascended-materials.php"><img src = "https://render.guildwars2.com/file/D53E69EFB3AFF4C85CC370AA32F1A6A61C03CCE8/631482.png"><span> &#10097; Dragonite Ore </span></a></li>
+						<li><a href = "<?php echo $base;?>/resources/ascended-materials.php"><img src = "https://render.guildwars2.com/file/DE4779014F27DE027BDBE761607B220923DB03D5/631484.png"><span> &#10097; Empyreal Fragments </span></a></li>
+						<li><a href = "<?php echo $base;?>/resources/ascended-materials.php"><img src = "https://render.guildwars2.com/file/0ECB0DB23BF2E0F0FE2103044D5AB06748772CB8/1204962.png"><span> &#10097; Bottle of Airship Oil </span></a></li>
+						<li><a href = "<?php echo $base;?>/resources/ascended-materials.php"><img src = "https://render.guildwars2.com/file/FDC53CC11B9AB85DB076EDB07AF3D274BF47BC3D/1204963.png"><span> &#10097; Pile of Auric Dust </span></a></li>
+						<li><a href = "<?php echo $base;?>/resources/ascended-materials.php"><img src = "https://render.guildwars2.com/file/C4676E0C0FAEB44FB538EFEA4E36F39B012E1A06/1204970.png"><span> &#10097; Ley Line Spark </span></a></li>
+						<li><a href = "<?php echo $base;?>/resources/ascended-materials.php"><img src = "https://render.guildwars2.com/file/1BE52D559C4196100120ADF3E91AC0CC08F4FEF2/631469.png"><span> &#10097; Crystallized Ore </span></a></li>
+					</ul>
+					<ul class = "homepage-sub-list">
+						<li><a href = "<?php echo $base;?>/resources/experience.php"> Experience </a></li>
+						<li><a href = "<?php echo $base;?>/resources/experience.php"><img src = "https://wiki.guildwars2.com/images/b/b7/Mastery_point_%28Central_Tyria%29.png"><span> &#10097; Core EXP </span></a></li>
+						<li><a href = "<?php echo $base;?>/resources/experience.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; HoT EXP </span></a></li>
+						<li><a href = "<?php echo $base;?>/resources/experience.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; PoF EXP </span></a></li>
+						<li><a href = "<?php echo $base;?>/resources/experience.php"><img src = "https://wiki.guildwars2.com/images/2/25/Mastery_point_%28Icebrood_Saga%29.png"><span> &#10097; IBS EXP </span></a></li>
+					</ul>
+					<ul class = "homepage-sub-list">
+						<li><a href = "<?php echo $base;?>/resources/ls3-currencies.php"> Living Story 3 Currencies </a></li>
+						<li><a href = "<?php echo $base;?>/resources/ls3-currencies.php#blood-ruby"><img src = "https://render.guildwars2.com/file/0DA92F9059C30EF00DBC6CB0D233F235E17F12DD/1465570.png"><span> &#10097; Blood Ruby </span></a></li>
+						<li><a href = "<?php echo $base;?>/resources/ls3-currencies.php#petrified-wood"><img src = "https://render.guildwars2.com/file/EC4BA02B3BFEE603551B53BBF5305679AE700776/1493259.png"><span> &#10097; Petrified Wood </span></a></li>
+						<li><a href = "<?php echo $base;?>/resources/ls3-currencies.php#fresh-winterberry"><img src = "https://render.guildwars2.com/file/414B0D0E3E38F73EC360C5BAE8A1DE98D324DCE6/1601463.png"><span> &#10097; Fresh Winterberry </span></a></li>
+						<li><a href = "<?php echo $base;?>/resources/ls3-currencies.php#jade-shard"><img src = "https://render.guildwars2.com/file/B3D1DB6458480968B2FC0C0115476EC892CD0555/1633883.png"><span> &#10097; Jade Shard </span></a></li>
+						<li><a href = "<?php echo $base;?>/resources/ls3-currencies.php#fire-orchid-blossom"><img src = "https://render.guildwars2.com/file/D667F038D601D31EC35F08E96EB1C832026E3A21/1677062.png"><span> &#10097; Fire Orchid Blossom </span></a></li>
+						<li><a href = "<?php echo $base;?>/resources/ls3-currencies.php#orrian-pearl"><img src = "https://render.guildwars2.com/file/F3B0E4096379AA58AFC6CE1ED1FBC5B015C40840/1729789.png"><span> &#10097; Orrian Pearl </span></a></li>
+					</ul>
+					<ul class = "homepage-sub-list">
+						<li><a href = "<?php echo $base;?>/resources/ls4-currencies.php"> Living Story 4 Currencies </a></li>
+						<li><a href = "<?php echo $base;?>/resources/ls4-currencies.php#kralkatite-ore"><img src = "https://render.guildwars2.com/file/380A7E3B250B050C2C39B1106CA39AED65C8396B/1894933.png"><span> &#10097; Kralkatite Ore </span></a></li>
+						<li><a href = "<?php echo $base;?>/resources/ls4-currencies.php#difluorite-crystal"><img src = "https://render.guildwars2.com/file/3148F3239A104D6C7CE4F65DB41BAAB16039C81E/1947318.png"><span> &#10097; Difluorite Crystal </span></a></li>
+						<li><a href = "<?php echo $base;?>/resources/ls4-currencies.php#inscribed-shard"><img src = "https://render.guildwars2.com/file/F5D7B94E53F8B380497CADDE2A562222B30EB793/1998867.png"><span> &#10097; Inscribed Shard </span></a></li>
+						<li><a href = "<?php echo $base;?>/resources/ls4-currencies.php#mistonium"><img src = "https://render.guildwars2.com/file/0D75705348E1AE54CF0679FA65C24E0739A3B79F/2038791.png"><span> &#10097; Lump of Mistonium </span></a></li>
+						<li><a href = "<?php echo $base;?>/resources/ls4-currencies.php#branded-mass"><img src = "https://render.guildwars2.com/file/0C2FD403DACFABF74B9E3824914FB60B3C285804/2083245.png"><span> &#10097; Branded Mass </span></a></li>
+						<li><a href = "<?php echo $base;?>/resources/ls4-currencies.php#mistborn-mote"><img src = "https://render.guildwars2.com/file/E76806D6DF4E27C70EA70A9FAC1F0D036C18659E/2140686.png"><span> &#10097; Mistborn Mote </span></a></li>
+					</ul>
 				</ul>
 
-				<ul class = "homepage-list">
+				<ul class = "homepage-header-list">
 					<li> Tools </li>
-					<li><a href = "<?php echo $base;?>/resources/dailies.php"> Dailies </a></li>
-					<li><a href = "<?php echo $base;?>/resources/living-story-trinkets.php"> Living Story Trinkets </a></li>
+					<ul class = "homepage-sub-list">
+						<li><a href = "<?php echo $base;?>/resources/dailies.php"> Dailies </a></li>
+						<li><a href = "<?php echo $base;?>/resources/dailies.php#dailies"><img src = "https://wiki.guildwars2.com/images/1/14/Daily_Achievement.png"><span> &#10097; Daily Achievement </span></a></li>
+						<li><a href = "<?php echo $base;?>/resources/dailies.php#psna"><img src = "https://render.guildwars2.com/file/2C0705112C2DA3C2555F29D4FB09CEC9BC77179D/904658.png"><span> &#10097; PSNA </span></a></li>
+						<li><a href = "<?php echo $base;?>/resources/dailies.php#provisioner-tokens"><img src = "https://render.guildwars2.com/file/5CF6FC0B62554EBECAC6752AAFA2B8D80F726077/1302745.png"><span> &#10097; Provisioner Tokens </span></a></li>
+						<li><a href = "<?php echo $base;?>/resources/dailies.php#dwc-donations"><img src = "https://render.guildwars2.com/file/5D5AEFC0F1F278E0619F2000241F78A9476A3167/2293277.png"><span> &#10097; Drizzlewood Donations </span></a></li>
+					</ul>
+					<li><a href = "<?php echo $base;?>/resources/living-story-trinkets.php"><img src = "https://render.guildwars2.com/file/D81DE7028031D512B93A1D69CDF89FAD714E9A9D/1465567.png"><span> &#10097; Living Story Trinkets </span></a></li>
+					<li><a href = "<?php echo $base;?>/resources/must-have-items.php"><img src = "https://render.guildwars2.com/file/CC2004000FFDFCEF346AAE296FD0E858C0990548/619581.png"><span> &#10097; Must Have Items </span></a></li>
+				</ul>
+
+				<ul class = "homepage-header-list">
+					<li> About </li> 
+					<li><a href = "<?php echo $base;?>/resources/about-me.php"><img src = "./images/assets/peu-choya.png"><span> &#10097; About Me </span></a></li>
+					<li><a href = "<?php echo $base;?>/resources/list-of-resources.php"><img src = "https://render.guildwars2.com/file/CC2004000FFDFCEF346AAE296FD0E858C0990548/619581.png"><span> &#10097; External Resources </span></a></li>
 				</ul>
 			</div>
 
-			
+			<div class = "section-header">
+				<h1> Timers </h1>
+				<div class = "banner-box"></div>
+				<img src = "./images/assets/banner.svg">
+			</div>
+			<!-- Hidden space so the header doesn't overlap anything below -->
+			<div class = "section-header-space"></div>
 
-			<div class = "page-box">
+			<div class = "flex-page-box">
+				<ul class = "homepage-header-list">
+					<li> Heart of Thorns </li> 
+					<li><a href = "<?php echo $base;?>/timers/verdant-brink.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Verdant Brink </span></a></li>
+					<li><a href = "<?php echo $base;?>/timers/auric-basin.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Auric Basin </span></a></li>
+					<li><a href = "<?php echo $base;?>/timers/tangled-depths.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Tangled Depths </span></a></li>
+				</ul>
+
+				<ul class = "homepage-header-list">
+					<li> Living Story 3 </li>
+					<li><a href = "<?php echo $base;?>/timers/bloodstone-fen.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Bloodstone Fen </span></a></li>
+					<li><a href = "<?php echo $base;?>/timers/ember-bay.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Ember Bay </span></a></li>
+					<li><a href = "<?php echo $base;?>/timers/bitterfrost-frontier.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Bitterfrost Frontier </span></a></li>
+					<li><a href = "<?php echo $base;?>/timers/draconis-mons.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Draconis Mons </span></a></li>
+					<li><a href = "<?php echo $base;?>/timers/sirens-landing.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Siren's Landing </span></a></li>
+				</ul>
+
+				<ul class = "homepage-header-list">
+					<li> Path of Fire </li>
+					<li><a href = "<?php echo $base;?>/timers/desert-highlands.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Desert Highlands </span></a></li>
+					<li><a href = "<?php echo $base;?>/timers/crystal-oasis.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Crystal Oasis </span></a></li>
+					<li><a href = "<?php echo $base;?>/timers/elon-riverlands.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Elon Riverlands </span></a></li>
+					<li><a href = "<?php echo $base;?>/timers/desolation.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Desolation </span></a></li>
+					<li><a href = "<?php echo $base;?>/timers/domain-of-vabbi.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Domain of Vabbi </span></a></li>
+				</ul>
+
+				<ul class = "homepage-header-list">
+					<li> Living Story 4 </li>
+					<li><a href = "<?php echo $base;?>/timers/domain-of-istan.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Domain of Istan </span></a></li>
+					<li><a href = "<?php echo $base;?>/timers/sandswept-isles.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Sandswept Isles </span></a></li>
+					<li><a href = "<?php echo $base;?>/timers/domain-of-kourna.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Domain of Kourna </span></a></li>
+					<li><a href = "<?php echo $base;?>/timers/jahai-bluffs.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Jahai Blufs </span></a></li>
+					<li><a href = "<?php echo $base;?>/timers/thunderhead-peaks.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Thunderhead Peaks </a></li>
+					<li><a href = "<?php echo $base;?>/timers/dragonfall.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Dragonfall </span></a></li>
+				</ul>
+
+				<ul class = "homepage-header-list">
+					<li> Icebrood Saga </li>
+					<li><a href = "<?php echo $base;?>/timers/bjora-marches.php"><img src = "https://wiki.guildwars2.com/images/2/25/Mastery_point_%28Icebrood_Saga%29.png"><span> &#10097; Bjora Marches </span></a></li>
+					<li><a href = "<?php echo $base;?>/timers/drizzlewood-coast.php"><img src = "https://wiki.guildwars2.com/images/2/25/Mastery_point_%28Icebrood_Saga%29.png"><span> &#10097; Drizzlewood Coast </span></a></li>
+				</ul>
+
+				<ul class = "homepage-header-list">
+					<li> Festival </li>
+					<li><a href = "<?php echo $base;?>/timers/labyrinth.php"><img src = "https://wiki.guildwars2.com/images/b/bc/Candy_Corn_%28overhead_icon%29.png"><span> &#10097; Labyrinth </span></a></li>
+				</ul>
+			</div>
+
+			<div class = "section-header">
+				<h1> Research </h1>
+				<div class = "banner-box"></div>
+				<img src = "./images/assets/banner.svg">
+			</div>
+			<!-- Hidden space so the header doesn't overlap anything below -->
+			<div class = "section-header-space"></div>
+
+			<div class = "inner-double-box">
+				<ul class = "homepage-header-list">
+					<li> Research </li>
+					<ul class = "homepage-sub-list">
+						<li><a href = "<?php echo $base;?>/research/currency-worth.php"> Currencies </a></li>
+						<li><a href = "<?php echo $base;?>/research/currency-worth.php#bandit-crests"><img src = "https://wiki.guildwars2.com/images/a/ac/Bandit_Crest.png"><span> &#10097; Bandit Crests </span></a></li>
+						<li><a href = "<?php echo $base;?>/research/currency-worth.php#laurels"><img src = "https://wiki.guildwars2.com/images/0/01/Laurel_Merchant.png"><span> &#10097; Laurels </a></li>
+						<li><a href = "<?php echo $base;?>/research/currency-worth.php#spirit-shards"><img src = "https://wiki.guildwars2.com/images/6/63/Spirit_Shard.png"><span> &#10097; Spirit Shards </span></a></li>
+						<li><a href = "<?php echo $base;?>/research/currency-worth.php#trade-contracts"><img src = "https://wiki.guildwars2.com/images/f/f4/Trade_Contract.png"><span> &#10097; Trade Contracts </span></a></li>
+						<li><a href = "<?php echo $base;?>/research/currency-worth.php#unbound-magic"><img src = "https://wiki.guildwars2.com/images/1/19/Unbound_Magic_%28highres%29.png"><span> &#10097; Unbound Magic </span></a></li>
+						<li><a href = "<?php echo $base;?>/research/currency-worth.php#volatile-magic"><img src = "https://wiki.guildwars2.com/images/5/54/Volatile_Magic.png"><span> &#10097; Volatile Magic </span></a></li>
+					</ul>
+
+					<li><a href = "<?php echo $base;?>/research/drizzlewood-reward-tracks.php"><img src = "https://render.guildwars2.com/file/5D5AEFC0F1F278E0619F2000241F78A9476A3167/2293277.png"><span> &#10097; Drizzlewood Reward Tracks </span></a></li>
+					<li><a href = "<?php echo $base;?>/gathering.php#glyphs"><img src = "https://render.guildwars2.com/file/1A97067CB6B41D3E777CA805D271DF74F2F57943/1998930.png"><span> &#10097; Glyphs </span></a></li>
+
+					<ul class = "homepage-sub-list">
+						<li><a href = "<?php echo $base;?>/research/refinement.php"> Refinement </a></li>
+						<li><a href = "<?php echo $base;?>/research/refinement.php#ascended"><img src = "https://render.guildwars2.com/file/7E7DA70B0EA3DB78CCB2F4FDA400A9BFEF0B0D6C/631489.png"><span> &#10097; Ascended Mats </span></a></li>
+						<li><a href = "<?php echo $base;?>/research/refinement.php#bag"><img src = "https://render.guildwars2.com/file/B7B7EB4291550C3BBE50C6E7C223C59A15614D33/433587.png"><span> &#10097; Bags </span></a></li>
+						<li><a href = "<?php echo $base;?>/research/refinement.php#basic"><img src = "https://render.guildwars2.com/file/7B0701F4092237431EDC72340BC89AA126EA4EF0/65913.png"><span> &#10097; Basic Materials </span></a></li>
+						<li><a href = "<?php echo $base;?>/research/refinement.php#gem"><img src = "https://render.guildwars2.com/file/35BC2D35511C806348730A5E63152B2E260D4A5C/919363.png"><span> &#10097; Gemstones </span></a></li>
+						<li><a href = "<?php echo $base;?>/research/refinement.php#jewel"><img src = "https://render.guildwars2.com/file/62CE38CB99469CBADDAD6FF4A221F75B636AA55D/220957.png"><span> &#10097; Jewels </span></a></li>
+						<li><a href = "<?php echo $base;?>/research/refinement.php#misc"><img src = "https://render.guildwars2.com/file/0411420C4FB4B7287A006AD5B7AB0E41171009B6/855375.png"><span> &#10097; Miscellaneous </span></a></li>
+						<li><a href = "<?php echo $base;?>/research/refinement.php#curio"><img src = "https://render.guildwars2.com/file/A9C0E631560D98A6045E5D2B93E4DEEFA521A40B/1493222.png"><span> &#10097; Mystic Curios </span></a></li>
+						<li><a href = "<?php echo $base;?>/research/refinement.php#rune"><img src = "https://render.guildwars2.com/file/4378ABC0415950DAC6A05C76920392D72E242EC2/220736.png"><span> &#10097; Runes </span></a></li>
+					</ul>
+
+					<li><a href = "<?php echo $base;?>/research/salvage.php"><img src = "https://render.guildwars2.com/file/E37A036C10C33E4242E568690CB2EA55AA65B915/1938436.png"><span> &#10097; Salvage </span></a></li>
+				</ul>
+
 				<div class = "small-description">
-					<details>
-						<summary> <b>Life Update (10/1)</b> </summary>
-						This is kind of a different update, but I wanted to share a glimps of my personal life in the past few months for those that have been following my work and my trains. In July, I got laided off. I won't go into detail, but essentially I worked under a grant that allowed me to be a science teacher for rural schools. I was like the Bill-Nye, but for weather lol. Grant work is awesome because it allows me to do whatever I want as long as the work is done, but grant money runs out. Those who have read my bio, I'm a guy that studied the weather. I intially intended to get a career in meteorology, but the job market is extremely rough. So, I took the next best thing that I love right now and I tried out for a junior web developer job. Took a few months of applying and being denied, but I got it! I start later this month. 
-						<br><br>
-						What started as a fun small project for myself with spreadsheets has turned into a new career path. Who knew that playing Guild Wars 2 'professionally' would get me here? With that, I want to thank everyone who reads this for your continued support on this website and joining my trains in-game! 
-					</details>
+					This area of the website is consistantly being updated. The prices are updated every 5 minutes via the official GW2 API. Depending on the research, use your best judgement on the accuracy. I try my best to get as much data as possible, but be aware some could use more data. To help out, please visit my <a href = "https://discord.com/invite/Rkncc9cn4U" target = "_blank"><u>Discord</u></a>! I alawys appreciate the help!
 				</div>
+			</div>
+
+			<div class = "section-header">
+				<h1> Map Guides </h1>
+				<div class = "banner-box"></div>
+				<img src = "./images/assets/banner.svg">
+			</div>
+			<!-- Hidden space so the header doesn't overlap anything below -->
+			<div class = "section-header-space"></div>
+
+			<div class = "flex-page-box">
+				<ul class = "homepage-header-list">
+					<li> Core Tyria </li>
+					<li><a href = "<?php echo $base;?>/maps/silverwastes.php"><img src = "https://wiki.guildwars2.com/images/b/b7/Mastery_point_%28Central_Tyria%29.png"><span> &#10097; Silverwastes </span></a></li>
+				</ul>
+
+				<ul class = "homepage-header-list">
+					<li> Heart of Thorns </li>
+					<li><a href = "<?php echo $base;?>/maps/verdant-brink.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Verdant Brink </span></a></li>
+					<li><a href = "<?php echo $base;?>/maps/auric-basin.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Auric Basin </span></a></li>
+					<li><a href = "<?php echo $base;?>/maps/tangled-depths.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Tangled Depths </span></a></li>
+				</ul>
+
+				<ul class = "homepage-header-list">
+					<li> Living Story 3 </li>
+					<li><a href = "<?php echo $base;?>/maps/bloodstone-fen.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Bloodstone Fen </span></a></li>
+					<li><a href = "<?php echo $base;?>/maps/ember-bay.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Ember bay </span></a></li>
+					<li><a href = "<?php echo $base;?>/maps/bitterfrost-frontier.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Bitterfrost Frontier </span></a></li>
+					<li><a href = "<?php echo $base;?>/maps/lake-doric.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Lake Doric </span></a></li>
+					<li><a href = "<?php echo $base;?>/maps/draconis-mons.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Draconis Mons </span></a></li>
+					<li><a href = "<?php echo $base;?>/maps/sirens-landing.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Siren's Landing </span></a></li>
+				</ul>
+
+				<ul class = "homepage-header-list">
+					<li> Path of Fire </li>
+					<li><a href = "<?php echo $base;?>/maps/desert-highlands.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Desert Highlands </span></a></li>
+					<li><a href = "<?php echo $base;?>/maps/crystal-oasis.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Crystal Oasis </span></a></li>
+					<li><a href = "<?php echo $base;?>/maps/elon-riverlands.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Elon Riverlands </span></a></li>
+					<li><a href = "<?php echo $base;?>/maps/desolation.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Desolation </span></a></li>
+					<li><a href = "<?php echo $base;?>/maps/domain-of-vabbi.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Domain of Vabbi </span></a></li>
+				</ul>
+
+				<ul class = "homepage-header-list">
+					<li> Living Story 4 </li>
+					<li><a href = "<?php echo $base;?>/maps/domain-of-istan.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Domain of Istan </span></a></li>
+					<li><a href = "<?php echo $base;?>/maps/sandswept-isles.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Sandswept Isles </span></a></li>
+					<li><a href = "<?php echo $base;?>/maps/domain-of-kourna.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Domain of Kourna </span></a></li>
+					<li><a href = "<?php echo $base;?>/maps/jahai-bluffs.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Jahai Bluffs </span></a></li>
+					<li><a href = "<?php echo $base;?>/maps/thunderhead-peaks.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Thunderhead Peaks </a></li>
+					<li><a href = "<?php echo $base;?>/maps/dragonfall.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Dragonfall </span></a></li>
+				</ul>
+
+				<ul class = "homepage-header-list">
+					<li> Icebrood Saga </li>
+					<li><a href = "<?php echo $base;?>/maps/bjora-marches.php"><img src = "https://wiki.guildwars2.com/images/2/25/Mastery_point_%28Icebrood_Saga%29.png"><span> &#10097; Bjora Marches </span></a></li>
+					<li><a href = "<?php echo $base;?>/maps/drizzlewood-coast.php"><img src = "https://wiki.guildwars2.com/images/2/25/Mastery_point_%28Icebrood_Saga%29.png"><span> &#10097; Drizzlewood Coast </span></a></li>
+				</ul>
 			</div>
 
 			<div class = "section-header">
@@ -209,6 +401,19 @@
 
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
+					<span style = "font-weight: bold;">Dec 28, 2021</span>
+				<br>
+					- Added icons to the home page navigation
+				<br><br>
+					<span style = "font-weight: bold;">Dec 27, 2021</span>
+				<br>
+					- Fixed a bug where the entire "Research" section of this homepage lead to a 404 Error :c
+				<br><br>
+					<span style = "font-weight: bold;">Dec 22, 2021</span>
+				<br>
+					- Updated this homepage to add all the links to all the pages + their bookmarks. Hopefully this makes it easier for some people to find content since this website has grown pretty big!
+					<br> - Moved Benchmarks in the nav bar to the front. 
+				<br><br>
 					<span style = "font-weight: bold;">Dec 19, 2021</span>
 				<br>
 					- Added Gobblers to <a href = "./resources/must-have-items.php" target = "_blank"><u> Must Have Items </u></a>. 

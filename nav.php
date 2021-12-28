@@ -30,9 +30,8 @@
 				</div>
 				<div class = "sub-menu-header">
 					<li> About </li> 
-					<li><a href = "<?php echo $base;?>/resources/about-benchmarks.php"> Benchmarks </a></li>
 					<li><a href = "<?php echo $base;?>/resources/about-me.php"> About Me </a></li>
-					<li><a href = "<?php echo $base;?>/resources/list-of-resources.php"> Extra Resources </a></li>
+					<li><a href = "<?php echo $base;?>/resources/list-of-resources.php"> External Resources </a></li>
 				</div>
 			</ul>
 		</li>

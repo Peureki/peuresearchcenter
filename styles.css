@@ -1361,6 +1361,7 @@ b{
 	display: flex;
 	justify-content: flex-start;
 	align-items: flex-start;
+	flex-wrap: wrap;
 }
 
 .popup-box,
@@ -1837,7 +1838,7 @@ b{
 	===== HOMEPAGE LISTS =====
 	==========================
 */
-.homepage-list{
+.homepage-header-list{
 	list-style-type: none;
 	color: var(--clr-text);
 	font-size: 20px;
@@ -1845,21 +1846,50 @@ b{
 	padding: 20px;
 	border-left: 2px solid var(--clr-link);
 }
-.homepage-list li{
-	padding-top: 5px;
-	padding-bottom: 5px;
+.homepage-header-list li{
+	padding-top: 7px;
+	padding-bottom: 7px;
 }
-.homepage-list li a{
+.homepage-header-list li a{
 	color: var(--clr-text);
+	-webkit-transition: padding 0.3s ease;
+  	transition: padding 0.3s ease;
 }
-.homepage-list li a:hover{
-	color: var(--clr-link);
+/* Icons for each header */
+.homepage-header-list img{
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
 }
-.homepage-list li:nth-child(1){
+/* Only the text inside each link */
+.homepage-header-list span{
+	vertical-align: middle;
+}
+.homepage-header-list li:nth-child(1){
 	font-weight: bold;
 	color: var(--clr-bold);
 }
-
+.homepage-sub-list{
+	list-style-type: none;
+	padding-left: 15px;
+}
+/* All sublist indent except for the first one as the subheader */
+.homepage-sub-list li:nth-child(1),
+.homepage-sub-list li:nth-child(1) a{
+	padding-left: 0px;
+	color: var(--clr-bold);
+}
+.homepage-header-list li:nth-child(n+2),
+.homepage-sub-list li:nth-child(n+2){
+	padding-left: 10px;
+}
+.homepage-header-list li:nth-child(n+2) a:hover,
+.homepage-sub-list li:nth-child(n+2) a:hover{
+	color: var(--clr-link);
+	padding: 10px;
+	-webkit-transition: padding 0.3s ease;
+  	transition: padding 0.3s ease;
+}
 
 /* Navs including main nav */
 .nav-side-box,
