@@ -2219,14 +2219,26 @@ table.daily td:nth-child(4){
 	max-width: 300px;
 }
 table.daily td:nth-child(5) input,
-table.psna td:nth-child(4) input{ /* Waypoint */
+table.psna td:nth-child(4) input,
+table.prov-tokens-other td:nth-child(3) input,
+table.prov-tokens-other td:nth-child(4) input,
+table.prov-tokens-cities td:nth-child(3) input,
+table.prov-tokens-cities td:nth-child(4) input{ /* Waypoint */
 	max-width: 105px;
 	border: none;
-	text-align: center;
+	text-align: left;
 	font-size: 15px;
 	background: transparent;
 	color: var(--clr-text-table);
+	cursor: pointer;
 }
+/* For the names of copied TDs, make the max-width bigger to show the full name */ 
+table.prov-tokens-other td:nth-child(4) input,
+table.prov-tokens-cities td:nth-child(4) input{
+	max-width: none;
+	text-overflow: ellipsis;
+}
+
 table.daily td:nth-child(6){ /* Video */
 	max-width: 50px;
 }

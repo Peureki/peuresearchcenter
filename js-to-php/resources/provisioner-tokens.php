@@ -268,6 +268,11 @@
 		citiesTable = document.getElementById('prov-tokens-cities-tbody'),
 		othersTable = document.getElementById('prov-tokens-other-tbody');
 
+	let numID = 0,
+		waypointID = "waypoint-" + 0,
+		nameID = "name-" + 0; 
+
+	// NON-CITIES
 	// Go through each faction and determine what's the cheapest price
 	for (i = 0; i < othersList.length; i++){
 		currentNum = 0;
@@ -282,30 +287,37 @@
 		html += ` <tr>
 			<td> ${othersList[i][currentNum].map} </td>
 			<td> ${othersList[i][currentNum].factionName} </td>
-			<td> ${othersList[i][currentNum].waypoint} </td>
-			<td> ${othersList[i][currentNum].name} </td>
+			<td onclick = "copyWP(this.children[0].id, &quot;${othersList[i][currentNum].waypoint}&quot;);"><input id = "${waypointID}" type = "text" value = "${othersList[i][currentNum].waypoint}"></input> </td>
+			<td onclick = "copyWP(this.children[0].id, &quot;${othersList[i][currentNum].name}&quot;);"><input id = "${nameID}" type = "text" value = "${othersList[i][currentNum].name}"></input> </td>
 			<td> ${othersList[i][currentNum].qty} </td>
 			<td> ${displayValues(othersList[i][currentNum].buy_price)} </td>
 			<td> ${displayValues(othersList[i][currentNum].sell_price)} </td>
 		</tr>`;
 		othersTable.innerHTML = html; 
+		numID += 1; 
+		waypointID = "waypoint-" + numID;
+		nameID = "name-" + numID;
 	}
 
-	html = '';
+	// Reset vars for the new table so I don't have to make more vars
+	html = ''; 
 
+	// CITIES
 	// Go through each faction and determine what's the cheapest price
 	for (i = 0; i < citiesList.length; i++){
 		for (j = 0; j < citiesList[i].length; j++){
 			html += ` <tr>
 				<td> ${citiesList[i][j].map} </td>
 				<td> ${citiesList[i][j].factionName} </td>
-				<td> ${citiesList[i][j].waypoint} </td>
-				<td> ${citiesList[i][j].name} </td>
+				<td onclick = "copyWP(this.children[0].id, &quot;${citiesList[i][j].waypoint}&quot;);"><input id = "${waypointID}" type = "text" value = "${citiesList[i][j].waypoint}"></input> </td>
+				<td onclick = "copyWP(this.children[0].id, &quot;${citiesList[i][j].name}&quot;);"><input id = "${nameID}" type = "text" value = "${citiesList[i][j].name}"></input></td>
 				<td> ${citiesList[i][j].qty} </td>
 				<td> ${displayValues(citiesList[i][j].buy_price)} </td>
 				<td> ${displayValues(citiesList[i][j].sell_price)} </td>
 			</tr>`;
-
+			numID += 1;
+			waypointID = "waypoint-" + numID;
+			nameID = "name-" + numID;
 		}
 		citiesTable.innerHTML = html; 
 	}

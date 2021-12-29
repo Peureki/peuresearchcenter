@@ -402,6 +402,10 @@
 
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
+					<span style = "font-weight: bold;">Dec 29, 2021</span>
+				<br>
+					- Tables in <a href="./resources/dailies.php#provisioner-tokens"><u>Dailies - Provisioner Tokens </u></a> for the Waypoint and Name columns can now be clicked and copied instantly. 
+				<br><br>
 					<span style = "font-weight: bold;">Dec 28, 2021</span>
 				<br>
 					- Added icons to the home page navigation
