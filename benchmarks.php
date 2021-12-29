@@ -1,3 +1,5 @@
+<?php header("Cache-Control: no-cache"); ?>
+
 <!DOCTYPE html> 
 <html>
 <head>

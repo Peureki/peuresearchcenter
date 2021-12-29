@@ -21,17 +21,17 @@
 <!-- Tab icon -->
 <link rel = "icon" href = "<?php echo $base;?>/images/assets/peu-choya.png">
 
+<!-- Main files -->
+<link type = "text/css" rel = "stylesheet" href = "<?php echo $base;?>/styles.css?v=<?php echo $date;?>">
+<script type = "text/javascript" src = "<?php echo $base;?>/script.js?v=<?php echo $date;?>"></script>
+
 <div onclick = "applyMode();" class = "dark-mode">
-	<img id = "mode-moon" src = "<?php echo $base;?>/images/assets/moon.svg" style = "display: none;">
+	<img style = "display: none;" id = "mode-moon" src = "<?php echo $base;?>/images/assets/moon.svg">
 	<span id = "mode-circle"></span>
 </div>
 
 <!-- Include dark mode feature -->
 <script type = "text/javascript" src = "<?php echo $base;?>/mode.js?v=<?php echo $date;?>"></script>
-
-<!-- Main files -->
-<link type = "text/css" rel = "stylesheet" href = "<?php echo $base;?>/styles.css?v=<?php echo $date;?>">
-<script type = "text/javascript" src = "<?php echo $base;?>/script.js?v=<?php echo $date;?>"></script>
 
 <!-- Shortcut Icon + Scalable view -->
 <link rel = "shortcut icon" href = "../images/assets/peu-choya.png">

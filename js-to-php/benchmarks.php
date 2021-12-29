@@ -39,7 +39,7 @@ function getBenchmarkAll(table, image){
 
 	let maps_now = <?php echo $mapsDB->getMaps("maps"); ?>;
 
-	console.log(maps_now[0], maps_24hr[0]);
+	console.log(maps_now, maps_24hr);
 
 	//Loop through all of the named benchmarks until there's an empy cell in the spreadsheet
 	//Places those data into the empty data table
