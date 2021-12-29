@@ -377,6 +377,10 @@ b{
 	-webkit-transition: all 0.5s ease;
   	transition: all 0.5s ease;
 }
+.dark-mode #mode-moon{
+	width: 30%;
+	margin-top: 2px;
+}
 @media only screen and (max-width: 1300px){
 	.dark-mode{
 		right: 15%;

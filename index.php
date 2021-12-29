@@ -319,7 +319,8 @@
 				</ul>
 
 				<div class = "small-description">
-					This area of the website is consistantly being updated. The prices are updated every 5 minutes via the official GW2 API. Depending on the research, use your best judgement on the accuracy. I try my best to get as much data as possible, but be aware some could use more data. To help out, please visit my <a href = "https://discord.com/invite/Rkncc9cn4U" target = "_blank"><u>Discord</u></a>! I alawys appreciate the help!
+
+					This area of the website is consistantly being updated. The prices are updated every 5 minutes via the official GW2 API. Depending on the research, use your best judgement on the accuracy. I try my best to get as much data as possible, but be aware some could use more data. To help out, please visit my <a href = "https://discord.com/invite/Rkncc9cn4U" target = "_blank"><u>Discord</u></a>! I always appreciate the help!
 				</div>
 			</div>
 
@@ -404,6 +405,7 @@
 					<span style = "font-weight: bold;">Dec 28, 2021</span>
 				<br>
 					- Added icons to the home page navigation
+					<br> - Added a moon icon on the Light/Dark Mode switch on the top nav
 				<br><br>
 					<span style = "font-weight: bold;">Dec 27, 2021</span>
 				<br>

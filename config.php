@@ -22,6 +22,7 @@
 <link rel = "icon" href = "<?php echo $base;?>/images/assets/peu-choya.png">
 
 <div onclick = "applyMode();" class = "dark-mode">
+	<img id = "mode-moon" src = "<?php echo $base;?>/images/assets/moon.svg" style = "display: none;">
 	<span id = "mode-circle"></span>
 </div>
 
