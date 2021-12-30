@@ -6378,7 +6378,6 @@ function copyValue(input) {
   	text.value = "Copied!";
   	setTimeout(function(){text.value = tempText}, 1000); 
   }
-  
 }
 
 function copyWP(input, waypoint) {

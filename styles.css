@@ -248,7 +248,7 @@ b{
 	color: #fff;
 	text-decoration: none;
 	letter-spacing: 0.5px;
-	font-size: 20px;
+	font-size: clamp(0.8rem, 20px, 1.4vw);
 	padding: 15px;
 	transition: all ease 0.3s;
 }
@@ -322,7 +322,7 @@ b{
 	border-radius: 10px;
 }
 /* Screens less than desktop sizes and when the headers start getting smooshed */
-@media (max-width: 1300px){
+@media (max-width: 1000px){
 	/* Allow to scroll down for more items */
 	/* Remove flex so it's not two columns and allows nav-bar-list to be on the left */
 	.navbar{
@@ -381,7 +381,7 @@ b{
 	width: 30%;
 	margin-top: 2px;
 }
-@media only screen and (max-width: 1300px){
+@media only screen and (max-width: 1000px){
 	.dark-mode{
 		right: 15%;
 	}
