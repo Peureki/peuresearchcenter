@@ -224,62 +224,6 @@
 			</div>
 
 			<div class = "section-header">
-				<h1> Timers </h1>
-				<div class = "banner-box"></div>
-				<img src = "./images/assets/banner.svg">
-			</div>
-			<!-- Hidden space so the header doesn't overlap anything below -->
-			<div class = "section-header-space"></div>
-
-			<div class = "flex-page-box">
-				<ul class = "homepage-header-list">
-					<li> Heart of Thorns </li> 
-					<li><a href = "<?php echo $base;?>/timers/verdant-brink.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Verdant Brink </span></a></li>
-					<li><a href = "<?php echo $base;?>/timers/auric-basin.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Auric Basin </span></a></li>
-					<li><a href = "<?php echo $base;?>/timers/tangled-depths.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Tangled Depths </span></a></li>
-				</ul>
-
-				<ul class = "homepage-header-list">
-					<li> Living Story 3 </li>
-					<li><a href = "<?php echo $base;?>/timers/bloodstone-fen.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Bloodstone Fen </span></a></li>
-					<li><a href = "<?php echo $base;?>/timers/ember-bay.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Ember Bay </span></a></li>
-					<li><a href = "<?php echo $base;?>/timers/bitterfrost-frontier.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Bitterfrost Frontier </span></a></li>
-					<li><a href = "<?php echo $base;?>/timers/draconis-mons.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Draconis Mons </span></a></li>
-					<li><a href = "<?php echo $base;?>/timers/sirens-landing.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Siren's Landing </span></a></li>
-				</ul>
-
-				<ul class = "homepage-header-list">
-					<li> Path of Fire </li>
-					<li><a href = "<?php echo $base;?>/timers/desert-highlands.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Desert Highlands </span></a></li>
-					<li><a href = "<?php echo $base;?>/timers/crystal-oasis.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Crystal Oasis </span></a></li>
-					<li><a href = "<?php echo $base;?>/timers/elon-riverlands.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Elon Riverlands </span></a></li>
-					<li><a href = "<?php echo $base;?>/timers/desolation.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Desolation </span></a></li>
-					<li><a href = "<?php echo $base;?>/timers/domain-of-vabbi.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Domain of Vabbi </span></a></li>
-				</ul>
-
-				<ul class = "homepage-header-list">
-					<li> Living Story 4 </li>
-					<li><a href = "<?php echo $base;?>/timers/domain-of-istan.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Domain of Istan </span></a></li>
-					<li><a href = "<?php echo $base;?>/timers/sandswept-isles.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Sandswept Isles </span></a></li>
-					<li><a href = "<?php echo $base;?>/timers/domain-of-kourna.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Domain of Kourna </span></a></li>
-					<li><a href = "<?php echo $base;?>/timers/jahai-bluffs.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Jahai Blufs </span></a></li>
-					<li><a href = "<?php echo $base;?>/timers/thunderhead-peaks.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Thunderhead Peaks </a></li>
-					<li><a href = "<?php echo $base;?>/timers/dragonfall.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Dragonfall </span></a></li>
-				</ul>
-
-				<ul class = "homepage-header-list">
-					<li> Icebrood Saga </li>
-					<li><a href = "<?php echo $base;?>/timers/bjora-marches.php"><img src = "https://wiki.guildwars2.com/images/2/25/Mastery_point_%28Icebrood_Saga%29.png"><span> &#10097; Bjora Marches </span></a></li>
-					<li><a href = "<?php echo $base;?>/timers/drizzlewood-coast.php"><img src = "https://wiki.guildwars2.com/images/2/25/Mastery_point_%28Icebrood_Saga%29.png"><span> &#10097; Drizzlewood Coast </span></a></li>
-				</ul>
-
-				<ul class = "homepage-header-list">
-					<li> Festival </li>
-					<li><a href = "<?php echo $base;?>/timers/labyrinth.php"><img src = "https://wiki.guildwars2.com/images/b/bc/Candy_Corn_%28overhead_icon%29.png"><span> &#10097; Labyrinth </span></a></li>
-				</ul>
-			</div>
-
-			<div class = "section-header">
 				<h1> Research </h1>
 				<div class = "banner-box"></div>
 				<img src = "./images/assets/banner.svg">
@@ -382,6 +326,62 @@
 			</div>
 
 			<div class = "section-header">
+				<h1> Timers </h1>
+				<div class = "banner-box"></div>
+				<img src = "./images/assets/banner.svg">
+			</div>
+			<!-- Hidden space so the header doesn't overlap anything below -->
+			<div class = "section-header-space"></div>
+
+			<div class = "flex-page-box">
+				<ul class = "homepage-header-list">
+					<li> Heart of Thorns </li> 
+					<li><a href = "<?php echo $base;?>/timers/verdant-brink.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Verdant Brink </span></a></li>
+					<li><a href = "<?php echo $base;?>/timers/auric-basin.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Auric Basin </span></a></li>
+					<li><a href = "<?php echo $base;?>/timers/tangled-depths.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Tangled Depths </span></a></li>
+				</ul>
+
+				<ul class = "homepage-header-list">
+					<li> Living Story 3 </li>
+					<li><a href = "<?php echo $base;?>/timers/bloodstone-fen.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Bloodstone Fen </span></a></li>
+					<li><a href = "<?php echo $base;?>/timers/ember-bay.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Ember Bay </span></a></li>
+					<li><a href = "<?php echo $base;?>/timers/bitterfrost-frontier.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Bitterfrost Frontier </span></a></li>
+					<li><a href = "<?php echo $base;?>/timers/draconis-mons.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Draconis Mons </span></a></li>
+					<li><a href = "<?php echo $base;?>/timers/sirens-landing.php"><img src = "https://wiki.guildwars2.com/images/8/84/Mastery_point_%28Heart_of_Thorns%29.png"><span> &#10097; Siren's Landing </span></a></li>
+				</ul>
+
+				<ul class = "homepage-header-list">
+					<li> Path of Fire </li>
+					<li><a href = "<?php echo $base;?>/timers/desert-highlands.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Desert Highlands </span></a></li>
+					<li><a href = "<?php echo $base;?>/timers/crystal-oasis.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Crystal Oasis </span></a></li>
+					<li><a href = "<?php echo $base;?>/timers/elon-riverlands.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Elon Riverlands </span></a></li>
+					<li><a href = "<?php echo $base;?>/timers/desolation.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Desolation </span></a></li>
+					<li><a href = "<?php echo $base;?>/timers/domain-of-vabbi.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Domain of Vabbi </span></a></li>
+				</ul>
+
+				<ul class = "homepage-header-list">
+					<li> Living Story 4 </li>
+					<li><a href = "<?php echo $base;?>/timers/domain-of-istan.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Domain of Istan </span></a></li>
+					<li><a href = "<?php echo $base;?>/timers/sandswept-isles.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Sandswept Isles </span></a></li>
+					<li><a href = "<?php echo $base;?>/timers/domain-of-kourna.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Domain of Kourna </span></a></li>
+					<li><a href = "<?php echo $base;?>/timers/jahai-bluffs.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Jahai Blufs </span></a></li>
+					<li><a href = "<?php echo $base;?>/timers/thunderhead-peaks.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Thunderhead Peaks </a></li>
+					<li><a href = "<?php echo $base;?>/timers/dragonfall.php"><img src = "https://wiki.guildwars2.com/images/4/41/Mastery_point_%28Path_of_Fire%29.png"><span> &#10097; Dragonfall </span></a></li>
+				</ul>
+
+				<ul class = "homepage-header-list">
+					<li> Icebrood Saga </li>
+					<li><a href = "<?php echo $base;?>/timers/bjora-marches.php"><img src = "https://wiki.guildwars2.com/images/2/25/Mastery_point_%28Icebrood_Saga%29.png"><span> &#10097; Bjora Marches </span></a></li>
+					<li><a href = "<?php echo $base;?>/timers/drizzlewood-coast.php"><img src = "https://wiki.guildwars2.com/images/2/25/Mastery_point_%28Icebrood_Saga%29.png"><span> &#10097; Drizzlewood Coast </span></a></li>
+				</ul>
+
+				<ul class = "homepage-header-list">
+					<li> Festival </li>
+					<li><a href = "<?php echo $base;?>/timers/labyrinth.php"><img src = "https://wiki.guildwars2.com/images/b/bc/Candy_Corn_%28overhead_icon%29.png"><span> &#10097; Labyrinth </span></a></li>
+				</ul>
+			</div>
+
+			<div class = "section-header">
 				<h1>Updates </h1>
 				<div class = "banner-box"></div>
 				<img src = "./images/assets/banner.svg">
@@ -402,6 +402,11 @@
 
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
+					<span style = "font-weight: bold;">Dec 30, 2021</span>
+				<br>
+					- Moved the order of some of the navigation to be Benchmarks -> Resources -> Research -> Maps -> Timers -> Gathering
+					<br> - Updated the nav bar to work with screens less than 1300px, but above 1000px. There was a weird sweet spot that would break it. 
+				<br><br>
 					<span style = "font-weight: bold;">Dec 29, 2021</span>
 				<br>
 					- Tables in <a href="./resources/dailies.php#provisioner-tokens"><u>Dailies - Provisioner Tokens </u></a> for the Waypoint and Name columns can now be clicked and copied instantly. 

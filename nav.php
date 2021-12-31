@@ -37,52 +37,6 @@
 		</li>
 
 		<li class = "nav-dropdown">
-			<a class = "nav-header" href = "#"> Timers </a>
-			<ul class = "sub-menu">
-				<div class = "sub-menu-header">
-					<li> Heart of Thorns </li> 
-					<li><a href = "<?php echo $base;?>/timers/verdant-brink.php"> Verdant Brink </a></li>
-					<li><a href = "<?php echo $base;?>/timers/auric-basin.php"> Auric Basin </a></li>
-					<li><a href = "<?php echo $base;?>/timers/tangled-depths.php"> Tangled Depths </a></li>
-				</div>
-				<div class = "sub-menu-header">
-					<li> Living Story 3 </li>
-					<li><a href = "<?php echo $base;?>/timers/bloodstone-fen.php"> Bloodstone Fen </a></li>
-					<li><a href = "<?php echo $base;?>/timers/ember-bay.php"> Ember Bay </a></li>
-					<li><a href = "<?php echo $base;?>/timers/bitterfrost-frontier.php"> Bitterfrost Frontier </a></li>
-					<li><a href = "<?php echo $base;?>/timers/draconis-mons.php"> Draconis Mons </a></li>
-					<li><a href = "<?php echo $base;?>/timers/sirens-landing.php"> Siren's Landing </a></li>
-				</div>
-				<div class = "sub-menu-header">
-					<li> Path of Fire </li>
-					<li><a href = "<?php echo $base;?>/timers/desert-highlands.php"> Desert Highlands </a></li>
-					<li><a href = "<?php echo $base;?>/timers/crystal-oasis.php"> Crystal Oasis </a></li>
-					<li><a href = "<?php echo $base;?>/timers/elon-riverlands.php"> Elon Riverlands </a></li>
-					<li><a href = "<?php echo $base;?>/timers/desolation.php"> Desolation </a></li>
-					<li><a href = "<?php echo $base;?>/timers/domain-of-vabbi.php"> Domain of Vabbi </a></li>
-				</div>
-				<div class = "sub-menu-header">
-					<li> Living Story 4 </li>
-					<li><a href = "<?php echo $base;?>/timers/domain-of-istan.php"> Domain of Istan </a></li>
-					<li><a href = "<?php echo $base;?>/timers/sandswept-isles.php"> Sandswept Isles </a></li>
-					<li><a href = "<?php echo $base;?>/timers/domain-of-kourna.php"> Domain of Kourna </a></li>
-					<li><a href = "<?php echo $base;?>/timers/jahai-bluffs.php"> Jahai Blufs </a></li>
-					<li><a href = "<?php echo $base;?>/timers/thunderhead-peaks.php"> Thunderhead Peaks </a></li>
-					<li><a href = "<?php echo $base;?>/timers/dragonfall.php"> Dragonfall </a></li>
-				</div>
-				<div class = "sub-menu-header">
-					<li> Icebrood Saga </li>
-					<li><a href = "<?php echo $base;?>/timers/bjora-marches.php"> Bjora Marches </a></li>
-					<li><a href = "<?php echo $base;?>/timers/drizzlewood-coast.php"> Drizzlewood Coast </a></li>
-				</div>
-				<div class = "sub-menu-header">
-					<li> Festival </li>
-					<li><a href = "<?php echo $base;?>/timers/labyrinth.php"> Labyrinth </a></li>
-				</div>
-			</ul>
-		</li>
-
-		<li class = "nav-dropdown">
 			<a class = "nav-header" href = "#"> Research </a>
 			<ul class = "sub-menu">
 				<div class = "sub-menu-header">
@@ -145,6 +99,52 @@
 		</li>
 
 		<li class = "nav-dropdown">
+			<a class = "nav-header" href = "#"> Timers </a>
+			<ul class = "sub-menu">
+				<div class = "sub-menu-header">
+					<li> Heart of Thorns </li> 
+					<li><a href = "<?php echo $base;?>/timers/verdant-brink.php"> Verdant Brink </a></li>
+					<li><a href = "<?php echo $base;?>/timers/auric-basin.php"> Auric Basin </a></li>
+					<li><a href = "<?php echo $base;?>/timers/tangled-depths.php"> Tangled Depths </a></li>
+				</div>
+				<div class = "sub-menu-header">
+					<li> Living Story 3 </li>
+					<li><a href = "<?php echo $base;?>/timers/bloodstone-fen.php"> Bloodstone Fen </a></li>
+					<li><a href = "<?php echo $base;?>/timers/ember-bay.php"> Ember Bay </a></li>
+					<li><a href = "<?php echo $base;?>/timers/bitterfrost-frontier.php"> Bitterfrost Frontier </a></li>
+					<li><a href = "<?php echo $base;?>/timers/draconis-mons.php"> Draconis Mons </a></li>
+					<li><a href = "<?php echo $base;?>/timers/sirens-landing.php"> Siren's Landing </a></li>
+				</div>
+				<div class = "sub-menu-header">
+					<li> Path of Fire </li>
+					<li><a href = "<?php echo $base;?>/timers/desert-highlands.php"> Desert Highlands </a></li>
+					<li><a href = "<?php echo $base;?>/timers/crystal-oasis.php"> Crystal Oasis </a></li>
+					<li><a href = "<?php echo $base;?>/timers/elon-riverlands.php"> Elon Riverlands </a></li>
+					<li><a href = "<?php echo $base;?>/timers/desolation.php"> Desolation </a></li>
+					<li><a href = "<?php echo $base;?>/timers/domain-of-vabbi.php"> Domain of Vabbi </a></li>
+				</div>
+				<div class = "sub-menu-header">
+					<li> Living Story 4 </li>
+					<li><a href = "<?php echo $base;?>/timers/domain-of-istan.php"> Domain of Istan </a></li>
+					<li><a href = "<?php echo $base;?>/timers/sandswept-isles.php"> Sandswept Isles </a></li>
+					<li><a href = "<?php echo $base;?>/timers/domain-of-kourna.php"> Domain of Kourna </a></li>
+					<li><a href = "<?php echo $base;?>/timers/jahai-bluffs.php"> Jahai Blufs </a></li>
+					<li><a href = "<?php echo $base;?>/timers/thunderhead-peaks.php"> Thunderhead Peaks </a></li>
+					<li><a href = "<?php echo $base;?>/timers/dragonfall.php"> Dragonfall </a></li>
+				</div>
+				<div class = "sub-menu-header">
+					<li> Icebrood Saga </li>
+					<li><a href = "<?php echo $base;?>/timers/bjora-marches.php"> Bjora Marches </a></li>
+					<li><a href = "<?php echo $base;?>/timers/drizzlewood-coast.php"> Drizzlewood Coast </a></li>
+				</div>
+				<div class = "sub-menu-header">
+					<li> Festival </li>
+					<li><a href = "<?php echo $base;?>/timers/labyrinth.php"> Labyrinth </a></li>
+				</div>
+			</ul>
+		</li>
+
+		<li class = "nav-dropdown">
 			<a class = "nav-header" href = "<?php echo $base;?>/gathering.php"> Gathering </a>
 		</li>
 
@@ -194,9 +194,9 @@ function showHamburger(){
 			menuPosition = [1, 2, 3, 4]; // Postition in the list of menu items for headers that can drop down
 		switch (num){
 			case 1: menuItem = "Resources"; break;
-			case 2: menuItem = "Timers"; break;
-			case 3: menuItem = "Research"; break;
-			case 4: menuItem = "Maps"; break;
+			case 2: menuItem = "Research"; break;
+			case 3: menuItem = "Maps"; break;
+			case 4: menuItem = "Timers"; break;
 		}
 		// dropdownMenu.children[0] = Subheader
 		// dropdownMenu.children[1] = The sub menu

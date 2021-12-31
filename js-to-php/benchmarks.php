@@ -122,6 +122,7 @@ function getBenchmarkAll(table, image){
 
 		let link = '',
 			 pop,
+			 expan,
 			 popColor;
 
 		switch (maps_now[i].name){
@@ -136,8 +137,9 @@ function getBenchmarkAll(table, image){
 			break;
 
 			case "Auric Basin (Baubles)":
-			link = "./maps/auric-basin.php"
+			link = "./maps/auric-basin.php";
 			pop = "Uncommon";
+			expan = "HoT"; 
 			break;
 
 			case "Bitterfrost Frontier":
@@ -527,10 +529,30 @@ function getBenchmarkAll(table, image){
 		<td>${tradecontract}</td>
 		<td>${unboundmagic}</td>
 		<td>${volatilemagic}</td>
+		<td>${expan}</td>
 		</tr>`;
 	}
 	//Magic
 	tableBody.innerHTML = dataHTML;
 	sortTableByPrice('benchmarks', 5);
+}
+
+function select_option(selectedIndex){
+	console.log(selectedIndex.value);
+	switch(selectedIndex.value){
+		case "24hr Change (+/-)": sortTableByQuantity('benchmarks', 0); break;
+		case "Farm Type": sortTableByAlphabet('benchmarks', 1); break;
+		case "Popularity": sortTableByAlphabet('benchmarks', 2); break;
+		case "Map": sortTableByAlphabet('benchmarks', 3); break;
+		case "Time": sortTableByTime('benchmarks', 4); break;
+		case "Gold/Hour": sortTableByPrice('benchmarks', 5); break;
+		case "Total Gold": sortTableByPrice('benchmarks', 6); break;
+		case "Karma": sortTableByQuantity('benchmarks', 7); break;
+		case "Spirit Shards": sortTableByQuantity('benchmarks', 8); break;
+		case "Trade Contracts": sortTableByQuantity('benchmarks', 9); break; 
+		case "Unbound Magic": sortTableByQuantity('benchmarks', 10); break;
+		case "Volatile Magic": sortTableByQuantity('benchmarks', 11); break;
+		default: sortTableByPrice('benchmarks', 5); break;
+	}
 }
 </script>

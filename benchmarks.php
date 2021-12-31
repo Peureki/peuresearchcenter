@@ -56,6 +56,30 @@
 					<td id = "input-map-bonus"> </td>
 				</tr>
 			</table>
+
+			<table class = "single-info">
+				<tr>
+					<th> Sort Table By: </th>
+				</tr>
+				<tr>
+					<td><select name = "sort-bench" id = "sort-map" onchange = "select_option(this);">
+							<option value = "24hr Change (+/-)"> 24hr Change (+/-) </option>
+							<option  value = "Farm Type"> Farm Type </option>
+							<option value = "Popularity"> Popularity </option>
+							<option value = "Map"> Map </option>
+							<option value = "Time"> Time </option>
+							<option selected = "selected" value = "Gold/Hour"> Gold/Hour </option>
+							<option value = "Total Gold"> Total Gold </option>
+							<option value = "Karma"> Karma </option>
+							<option value = "Spirit Shards"> Spirit Shards </option>
+							<option value = "Trade Contracts"> Trade Contracts </option>
+							<option value = "Unbound Magic"> Unbound Magic </option>
+							<option value = "Volatile Magic"> Volatile Magic </option>
+							<option value = "Expansion Type"> Expansion Type </option>
+						</select>
+					</td>
+				</tr>
+			</table>
 		</div>
 	</div>
 	
@@ -78,6 +102,7 @@
 							<th onclick = "sortTableByQuantity('benchmarks', 9);"> <img title = "Trade Contract" src = ".\images\assets\Trade_Contract.png" style = "width: 50%;"> </th>
 							<th onclick = "sortTableByQuantity('benchmarks', 10);"> <img title = "UM" src = ".\images\assets\Unbound_Magic.png" style = "width: 50%;"></th>
 							<th onclick = "sortTableByQuantity('benchmarks', 11);"> <img title = "VM" src = ".\images\assets\Volatile_Magic.png" style = "width: 50%;"> </th>
+							<th> Option </th>
 						</tr>
 					</thead>
 					<tbody id = "tableData"></tbody>
