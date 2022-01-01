@@ -552,6 +552,8 @@ function select_option(selectedIndex){
 		case "Trade Contracts": sortTableByQuantity('benchmarks', 9); break; 
 		case "Unbound Magic": sortTableByQuantity('benchmarks', 10); break;
 		case "Volatile Magic": sortTableByQuantity('benchmarks', 11); break;
+
+		
 		default: sortTableByPrice('benchmarks', 5); break;
 	}
 }

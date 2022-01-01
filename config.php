@@ -27,6 +27,7 @@
 
 <div onclick = "applyMode();" class = "dark-mode">
 	<img style = "display: none;" id = "mode-moon" src = "<?php echo $base;?>/images/assets/moon.svg">
+	<img style = "display: none;" id = "mode-sun" src = "<?php echo $base;?>/images/assets/sun.svg">
 	<span id = "mode-circle"></span>
 </div>
 

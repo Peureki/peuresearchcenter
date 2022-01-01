@@ -122,6 +122,7 @@
       <p1 id = "sidetimer-ember-15">10:00</p1>
       <p2 id = "numerical-sidetimer-ember-15">600</p2>
     </div> 
+
   </div> <!-- End of left side box --> 
              
   <div id = "checkboxes" class = "checkboxes">

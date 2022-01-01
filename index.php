@@ -402,6 +402,10 @@
 
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
+					<span style = "font-weight: bold;">Dec 31, 2021</span>
+				<br>
+					- Added Captain Huuhes event in <a href="./timers/ember-bay.php"><u>Ember Bay timers </u></a>
+				<br><br>
 					<span style = "font-weight: bold;">Dec 30, 2021</span>
 				<br>
 					- Moved the order of some of the navigation to be Benchmarks -> Resources -> Research -> Maps -> Timers -> Gathering

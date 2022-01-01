@@ -35,15 +35,18 @@ cssVar('clr-bkg-button'); // Buttons
 // Apply whether or not the user choose dark/light mode
 // First check what it is currently 
 let modeCircle = document.getElementById('mode-circle'),
-	modeMoon = document.getElementById('mode-moon');
+	modeMoon = document.getElementById('mode-moon'),
+	modeSun = document.getElementById('mode-sun');
 
 if (localStorage.getItem('mode') == "dark"){
 	modeCircle.style.left = "0%";
 	modeMoon.style.display = "block";
+	modeSun.style.display = "none";
 	applyMode();
 } else {
 	modeCircle.style.left = "65%"; 
 	modeMoon.style.display = "none";
+	modeSun.style.display = "block";
 	applyMode();
 }
 
@@ -56,6 +59,7 @@ function applyMode(){
 
 		modeCircle.style.left = "65%";
 		modeMoon.style.display = "block";
+		modeSun.style.display = "none";
 		cssVar('clr-bkg', '#2A2B2E'); // dark gray
 		cssVar('clr-bold', '#93CDDD'); // LIght blue
 		cssVar('clr-border', '#1A687D'); // Dark blue
@@ -85,6 +89,7 @@ function applyMode(){
 
 		modeCircle.style.left = "0%";
 		modeMoon.style.display = "none";
+		modeSun.style.display = "block";
 		// Bring back the defaults 
 		cssVar('clr-bkg', '#E4E8E4'); // Background of the whole pages
 		cssVar('clr-bold', '#1A687D'); // Dark blue
