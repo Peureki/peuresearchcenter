@@ -1,4 +1,4 @@
-<div id = "bookmark-button" onclick = "show_bookmark_left(this);" class = "bookmark-button"> &#10097; </div>
+<div id = "bookmark-button" onclick = "show_bookmark_left(this.id);" class = "bookmark-button"> </div>
 
 <div class = "splatter-container">
 	<div class  = "splatter-bkg"></div>
@@ -27,26 +27,25 @@
 
 <script>
 
+// For mobile
+// Show button on the top left to remove and show the bookmarks on the side
+// It is defaulted to show it, but if there's a page where there isn't bookmarks, then it won't show at all
 function show_bookmark_left(button){
 	let bookmark_left = document.getElementById('bookmark-left');
 	button = document.getElementById(button);
-
-	console.log("this happened");
-	
+	// Check if the page has the bookmarks at all
+	// If not, don't show the button
 	if (bookmark_left == null){
 		button.style.display = "none";
 	}
 
-	try{
-		if (bookmark_left.style.display == "block"){
-			bookmark_left.style.display = "none";
-		} else {
-			bookmark_left.style.display = "block";
-		}
-	} catch (error){}
-
-	
-	
+	if (bookmark_left.style.display == "block"){
+		bookmark_left.style.display = "none";
+		button.innerHTML = "\u2771";
+	} else {
+		bookmark_left.style.display = "block";
+		button.innerHTML = "\u2770"; 
+	}	
 }
 show_bookmark_left('bookmark-button');
 </script>

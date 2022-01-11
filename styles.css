@@ -1750,7 +1750,7 @@ b{
 /* Button to show/hide bookmark on mobile or smaller screens */
 .bookmark-button{
 	position: fixed;
-	top: 10%;
+	top: 8%;
 	font-size: 20px;
 	width: 5%;
 	text-align: center;
