@@ -38,14 +38,16 @@ function show_bookmark_left(button){
 	if (bookmark_left == null){
 		button.style.display = "none";
 	}
-
-	if (bookmark_left.style.display == "block"){
-		bookmark_left.style.display = "none";
-		button.innerHTML = "\u2771";
-	} else {
-		bookmark_left.style.display = "block";
-		button.innerHTML = "\u2770"; 
-	}	
+	try{
+		if (bookmark_left.style.display == "block"){
+			bookmark_left.style.display = "none";
+			button.innerHTML = "\u2771";
+		} else {
+			bookmark_left.style.display = "block";
+			button.innerHTML = "\u2770"; 
+		}
+	} catch (error){}
+		
 }
 show_bookmark_left('bookmark-button');
 </script>
