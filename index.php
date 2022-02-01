@@ -41,7 +41,7 @@
 			</div>
 
 			<div class = "section-header">
-				<h1>Peu Train</h1>
+				<h1>Community</h1>
 				<div class = "banner-box"></div>
 				<img src = "./images/assets/banner.svg">
 			</div>
@@ -50,15 +50,12 @@
 
 			<div class = "inner-double-box">
 				<div class = "small-description">
-					<p1 style = "font-size: 20px;"> Join me for unique trains such as Auric Basin, Tangled Depth Baubles, LS4, POF, and more! <b>/sqjoin Peureki.3647</b> around 15 minutes before a train to join squad and say hi!
-
-					<br><br>
-					Join the community in my <a href = "https://discord.com/invite/Rkncc9cn4U" target = "_blank"><u>Discord</u></a>!
+					<p1 style = "font-size: 20px;"> Join me for unique trains such as Auric Basin, Tangled Depth Baubles, LS4, POF, and more. My goal is to show how fun a map could be, even if the map is considered a dead or non-farmable map. Join the community at my <a href = "https://discord.com/invite/Rkncc9cn4U" target = "_blank"><u>Discord</u></a>! All choyas are welcomed!
 					</p1>
 				</div>
-
+				<!--
 				<div class = "small-description">
-					<div id = "box-0" class = "inner-page-box"> <!-- Start of Peu Train -->
+					<div id = "box-0" class = "inner-page-box"> <!~~ Start of Peu Train ~~>
 						<div class = "full-timer-name">
 							<b>Official: </b><p1 id = "name-0"></p1> <p1 id = "time-0"></p1>
 						</div>
@@ -71,30 +68,30 @@
 								<div class = "full-timer">
 									Days
 									<br>
-									<p1 id = "days-0">00</p1> <!-- Day -->
+									<p1 id = "days-0">00</p1> <!~~ Day ~~>
 								</div>
 								<div class = "full-timer">
 									Hours
 									<br>
-									<p1 id = "hours-0">00</p1> <!-- Hour -->
+									<p1 id = "hours-0">00</p1> <!~~ Hour ~~>
 								</div>
 								<div class = "full-timer">
 									Minutes 
 									<br>
-									<p1 id = "minutes-0">00</p1> <!-- Minutes -->
+									<p1 id = "minutes-0">00</p1> <!~~ Minutes ~~>
 								</div>
 								<div class = "full-timer">
 									Seconds
 									<br>
-									<p1 id = "seconds-0">00</p1> <!-- Seconds -->
+									<p1 id = "seconds-0">00</p1> <!~~ Seconds ~~>
 								</div>
 							</div>
 						</div>
 
 						<p2 id = "num-0" style = "display: none;"> </p2>
-					</div> <!-- End of peu train -->
+					</div> <!~~ End of peu train ~~>
 
-					<div id = "box-1" class = "inner-page-box"> <!-- Start of impromtu -->
+					<div id = "box-1" class = "inner-page-box"> <!~~ Start of impromtu ~~>
 						<div class = "full-timer-name">
 							<b>Impromtu: </b><p1 id = "name-1"></p1> <p1 id = "time-1"></p1>
 						</div>
@@ -107,31 +104,34 @@
 								<div class = "full-timer">
 									Days
 									<br>
-									<p1 id = "days-1">00</p1> <!-- Day -->
+									<p1 id = "days-1">00</p1> <!~~ Day ~~>
 								</div>
 								<div class = "full-timer">
 									Hours
 									<br>
-									<p1 id = "hours-1">00</p1> <!-- Hour -->
+									<p1 id = "hours-1">00</p1> <!~~ Hour ~~>
 								</div>
 								<div class = "full-timer">
 									Minutes 
 									<br>
-									<p1 id = "minutes-1">00</p1> <!-- Minutes -->
+									<p1 id = "minutes-1">00</p1> <!~~ Minutes ~~>
 								</div>
 								<div class = "full-timer">
 									Seconds
 									<br>
-									<p1 id = "seconds-1">00</p1> <!-- Seconds -->
+									<p1 id = "seconds-1">00</p1> <!~~ Seconds ~~>
 								</div>
 							</div>
 						</div>
  
 						<p2 id = "num-1" style = "display: none;"> </p2>
-					</div> <!-- End of impromtu -->
-				</div> <!-- End of peu train desc -->
+					</div> <!~~ End of impromtu ~~>
+				</div> <!~~ End of peu train desc ~~>
+				-->
+				<div class = "page-picture">
+					<img title = "Discord" onclick = "window.open('https://discord.com/invite/Rkncc9cn4U')" style = "width: 30%; cursor: pointer;" src = "./images/assets/icons/discord.png">
+				</div>
 			</div> <!-- End of inner double box -->
-
 			<div class = "section-header">
 				<h1> Benchmarks </h1>
 				<div class = "banner-box"></div>
@@ -402,6 +402,12 @@
 
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
+					<span style = "font-weight: bold;">Jan 31, 2022</span>
+				<br>
+					- Added a new farm! <a href="./gathering/mussel-farm.php"><u>Mussel Farm</u></a>
+					<br> - Removed the timer on the front page for the Peu Trains because I kept forgetting.. :c It would just be easier to join the Discord as I ping there all the time. 
+					<br> - Updated the <a href="./gathering.php"><u>Node Farm Calculator</u></a> to have the Mussel Farm. 
+				<br><br>
 					<span style = "font-weight: bold;">Dec 31, 2021</span>
 				<br>
 					- Added Captain Huuhes event in <a href="./timers/ember-bay.php"><u>Ember Bay timers </u></a>

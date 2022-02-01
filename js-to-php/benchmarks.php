@@ -534,7 +534,6 @@ function getBenchmarkAll(table, image){
 		<td>${tradecontract}</td>
 		<td>${unboundmagic}</td>
 		<td>${volatilemagic}</td>
-		<td>${expan}</td>
 		</tr>`;
 	}
 	//Magic
