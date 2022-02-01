@@ -342,6 +342,11 @@ function getBenchmarkAll(table, image){
 			pop = "Rare";
 			break;
 
+			case "Mussel Farm":
+			link = "./gathering/mussel-farm.php";
+			pop = "Uncommon";
+			break;
+
 			case "Orr Node Farm (w/ Volatile)":
 			link = "./gathering/orr-node-farm.php";
 			pop = "Rare";

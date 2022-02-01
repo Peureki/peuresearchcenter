@@ -2,10 +2,11 @@
 <html>
 <head>
 	<!-- Defaults -->
-	<?php include('../config.php'); ?>
-	<title> Dredgehaunt Node Farm </title>
+	<?php include('../config.php');?>
+	<title> Mussel Farm </title>
 </head>
 <body>
+
 	<!-- 
 		============================================================
 		====================== NAVIGATION BAR ======================
@@ -13,10 +14,18 @@
 	-->
 	<?php include('../nav.php'); ?>
 
-	<!-- Main box -->
+	<div id = "bookmark-left" class = "bookmark-left">
+		<ul>
+			<a href = "#dailies"><li> &#10097; Dailies </li></a> 
+			<a href = "#psna"><li> &#10097; PSNA </li></a> 
+			<a href = "#provisioner-tokens"><li> &#10097; Prov Tokens </li></a> 
+			<a href = "#dwc-donations"><li> &#10097; DWC Donations </li></a> 
+		</ul>
+	</div>
+
 	<div class = "page-box">
 		<div class = "section-header">
-			<h1>Dredgehaunt Node Farm</h1>
+			<h1>Mussel Farm</h1>
 			<div class = "banner-box"></div>
 			<img src = "../images/assets/banner.svg">
 		</div>
@@ -31,7 +40,7 @@
 			<br><br>
 			<b> Spreadsheet</b>
 			<br>
-			To find averages, specific loots, and more, check out the  <a href = "https://docs.google.com/spreadsheets/d/1HOBKHgaPbmc1uMAqupeta824hQzjhiaXBWhPXjORAZs/edit#gid=1556176364" target = "_blank"><u> spreadsheet</u></a>.
+			To find averages, specific loots, and more, check out the  <a href = "https://docs.google.com/spreadsheets/d/1aLhL_VtVXbcZ6X2yweKD7AQFg9H5j67SW85qSzTPqrg/edit#gid=1982020967" target = "_blank"><u> spreadsheet</u></a>.
 
 			<br><br>
 			<b> Node Farm Calculator</b>
@@ -41,24 +50,25 @@
 			<br><br>
 			<span style = "font-weight: bold;"> Route:</span>
 			<br>
-			Start at Graupel Waypoint [&BGICAAA=] and head in a counterclockwise rotation. In general, it's best to gather mainly Iron Ore and Seasoned Wood Logs. With Glyph of Volatility, it's good to gather plants for quick Volatile Magic. Though, the plants in this map are generally low profit such:
-			<br> - Root Vegetables
-			<br> - Zucchini
-			<br> - Mushrooms
+			Start at Shipwreck Peak Waypoint <b>[&BN4HAAA=]</b> and head below the waypoint. They'll be a trail of mussels throughout. Afterwards, head to Allied Encampment Waypoint <b>[&BFcLAAA=]</b> in Domain of Kourna. Follow the picture for the route as you'll use the waypoint twice. 
 		</div>
 
 		<!-- Gathering Picture -->
 		<div class = "page-picture">
-			<img title = "Dredgehaunt Cliffs" style = "width: 50%;" src = "..\images\dredgehaunt-cliffs\dredgehaunt-cliffs-node-farm.jpg">
+			<img title = "Verdant Brink Mussel Route" style = "width: 50%;" src = "../images/mussel-farm/map-1.jpg">
 		</div>
-
-	</div> <!-- End of page-box -->
+		<div class = "page-picture">
+			<img title = "Verdant Brink Mussel Route" style = "width: 50%;" src = "../images/mussel-farm/map-2.jpg">
+		</div>
+	</div>
 
 	<!-- 
 		========================================================================
 		====================== FOOTER + DARK MODE ==============================
 		========================================================================
 	-->
-	<?php include("../../footer.php"); ?>
+	<?php include("../footer.php"); ?>
+
+
 </body>
 </html>

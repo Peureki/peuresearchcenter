@@ -53,7 +53,9 @@
 							<option value = "Dredgehaunt Cliffs"> Dredgehaunt Cliffs </option>
 							<option value = "Flax"> Flax </option>
 							<option value = "Lake Doric"> Lake Doric </option>
+							<option value = "Maguuma Lily Farm"> Maguuma Lily Farm </option>
 							<option value = "Mount Maelstrom"> Mount Maelstrom </option>
+							<option value = "Mussel Farm"> Mussel Farm </option>
 							<option value = "Orr"> Orr </option>
 							<option value = "Rich Nodes"> Rich Nodes </option>
 							<option value = "Sandswept Isles"> Sandswept Isles </option>

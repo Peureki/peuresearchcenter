@@ -63,6 +63,10 @@ var node = {
 		sawgill_mushroom: 8, 
 		lotus: 1},
 
+		{map: "Maguuma Lily Farm", 
+		jungle_plant: 44,
+		},
+
 		{map: "Mount Maelstrom", 
 		platinum: 7,
 		rich_platinum: 3,
@@ -73,6 +77,10 @@ var node = {
 		verdant_herb: 4,
 		asparagus: 2,
 		mature_herb: 3
+		},
+
+		{map: "Mussel Farm", 
+		mussel: 39,
 		},
 
 		{map: "Orr", 
@@ -625,6 +633,24 @@ async function display_values(selected_map, selected_sickle, selected_axe, selec
 		do_work();
 		break;
 
+		case "Maguuma Lily Farm":
+		directed_page = "maguuma-lily-node-farm";
+		levels = 7180;
+		q = match_map(map);
+		// Proof 
+		// url: picture
+		// name: name to display on the table
+		// qty: q.[name of node from node[] table]
+		// node_value: match_api("[name of the node in spreadsheet exactly")
+		// glyph_value: match_[tool](tool)
+		info = {
+			all: [
+				{url: "./images/assets/nodes/Maguuma_Lily.png", name: "Jungle Plant", qty: q.jungle_plant, node_value: match_api("Jungle Plant"), glyph_value: match_sickle(sickle)},
+			]
+		};
+		do_work();
+		break;
+
 		case "Mount Maelstrom":
 		directed_page = "mount-maelstrom-node-farm";
 		levels = 5670;
@@ -646,6 +672,24 @@ async function display_values(selected_map, selected_sickle, selected_axe, selec
 				{url: "./images/assets/nodes/Varietal_Clove_Seed.png", name: "Verdant Herb", qty: q.verdant_herb, node_value: match_api("Verdant Herbs (Maguuma Jungle)"), glyph_value: match_sickle(sickle)},
 				{url: "./images/assets/nodes/Asparagus_Spear.png", name: "Asparagus", qty: q.asparagus, node_value: match_api("Asparagus"), glyph_value: match_sickle(sickle)},
 				{url: "./images/assets/nodes/Varietal_Clove_Seed.png", name: "Mature Herb", qty: q.mature_herb, node_value: match_api("Mature Herbs (Maguuma Jungle)"), glyph_value: match_sickle(sickle)}
+			]
+		};
+		do_work();
+		break;
+
+		case "Mussel Farm":
+		directed_page = "mussel-node-farm";
+		levels = 7180;
+		q = match_map(map);
+		// Proof 
+		// url: picture
+		// name: name to display on the table
+		// qty: q.[name of node from node[] table]
+		// node_value: match_api("[name of the node in spreadsheet exactly")
+		// glyph_value: match_[tool](tool)
+		info = {
+			all: [
+				{url: "./images/assets/nodes/Mussel.png", name: "Mussel", qty: q.mussel, node_value: match_api("Mussel"), glyph_value: match_sickle(sickle)}
 			]
 		};
 		do_work();
