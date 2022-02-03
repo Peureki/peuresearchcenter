@@ -236,9 +236,35 @@ class DWC extends BenchmarksDB{
 	}
 }
 
+class Gathering extends BenchmarksDB{
+	public function set_values(){
+		$nodeAPI = file_get_contents("https://script.google.com/macros/s/AKfycbwS4UH9UXEsHuJGBYkmT2pEveLcW7eEyRqSLGwt7op-X3AWaEYw/exec");
+		$glyphAPI = file_get_contents("https://script.google.com/macros/s/AKfycbzFqLJFdm5TeCDGhrUPIZvIhW87IfdgTWS2uYWTWH4dhTcepYFg/exec");
+
+		$nodeData = json_decode($nodeAPI, TRUE);
+		$glyphData = json_decode($glyphAPI, TRUE); 
+
+		foreach ($nodeData['spreadsheet'] as $nodeSS){
+			$item = $nodeSS['item'];
+			$worth = $nodeSS['worth']; 
+
+			// Insert into DB
+			$sql = "INSERT IGNORE INTO nodes (node, value)
+			VALUES ('$item', '$worth');";
+			// Execute the SQL stmt 
+			$stmt = $this->connect()->exec($sql);
+		}
+
+		
+	}
+}
+
 // Initialize map DB
 $mapsDB = new Maps();
 $dwcDB = new DWC(); 
 $dwcDB->set_tracks();
+
+$nodesDB = new Gathering(); 
+$nodesDB->set_values();
 
 ?>

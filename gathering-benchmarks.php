@@ -1,11 +1,9 @@
-<?php header("Cache-Control: no-cache"); ?>
-
 <!DOCTYPE html> 
 <html>
 <head>
 	<!-- Defaults, CSS/JS main files -->
 	<?php include('config.php'); ?>
-	<title> Benchmarks </title>
+	<title> Gathering Benchmarks </title>
 </head>
 <body>
 	<!-- 
@@ -15,19 +13,21 @@
 	-->
 	<?php include('nav.php'); ?>
 
-	<div id = "bookmark-left" class = "bookmark-left">
-		<ul>
-			<a><li id = "farm-benchmark-button" onclick = "revert_benchmarks(this);"> &#10097; Map Farms </li></a> 
-			<a><li id = "meta-benchmark-button" onclick = "revert_benchmarks(this);"> &#10097; Metas </li></a> 
-			<a><li id = "chest-benchmark-button" onclick = "revert_benchmarks(this);"> &#10097; Chests </li></a> 
-			<a><li id = "alt-benchmark-button" onclick = "revert_benchmarks(this);"> &#10097; Alt Parking </li></a> 
-			<a href = "./resources/about-benchmarks.php"><li> &#10097; Benchmark Criteria </li></a> 
-			<a href = "https://docs.google.com/spreadsheets/d/1aLhL_VtVXbcZ6X2yweKD7AQFg9H5j67SW85qSzTPqrg/edit?usp=sharing" target = "_blank"><li> &#10097; Spreadsheet </li></a> 
-		</ul>
-	</div>
-
 	<div class = "page-box">
-
+		<table id = "gathering-benchmarks" class = "benchmarks" style = "display: block; opacity: 1;"> 
+			<thead> 
+				<tr>
+					<th onclick = "sortTableByAlphabet('gathering-benchmarks', 0);"> Map </th>
+					<th onclick = "sortTableByPrice('gathering-benchmarks', 1);"> Pick </th>
+					<th onclick = "sortTableByPrice('gathering-benchmarks', 2);"> Axe </th>
+					<th onclick = "sortTableByPrice('gathering-benchmarks', 3);"> Sickle </th>
+					<th onclick = "sortTableByPrice('gathering-benchmarks', 4);"> GPH </th>
+					<th onclick = "sortTableByPrice('gathering-benchmarks', 4);"> Gold /Char </th>
+					<th onclick = "sortTableByPrice('gathering-benchmarks', 4);"> Time /Char </th>
+				</tr>
+			</thead>
+			<tbody id = "gathering-tableData"></tbody>
+		</table>
 	</div>
 
 	<!-- 
