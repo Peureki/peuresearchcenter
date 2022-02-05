@@ -250,7 +250,7 @@ async function getDaily(choice){
 				acc: "Core",
 			},
 			{ // Cursed Shore Event Completer
-				id: 1945,
+				id: 1941,
 				waypoint: '[&BBkDAAA=] | [&BB4DAAA=] | [&BB8DAAA=]',
 				difficulty: 'Easy',
 				howto: 'Check LFG, tags, or callouts in map chat. The map in general is very active for events.',
@@ -1799,6 +1799,8 @@ async function getDaily(choice){
 				case 'Hard': colorDiff = '#F23D3D'; break;
 				default: colorDiff = '#ECECDE'; break;
 			}
+
+			console.log(todaysList);
 
 			dataHTML += `<tr>
 			<td style = "background-color: ${colorType};"><center><img src = ${icon} style = ""></center></td>

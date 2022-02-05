@@ -236,26 +236,125 @@ class DWC extends BenchmarksDB{
 	}
 }
 
-class Gathering extends BenchmarksDB{
+class Nodes extends BenchmarksDB{
 	public function set_values(){
 		$nodeAPI = file_get_contents("https://script.google.com/macros/s/AKfycbwS4UH9UXEsHuJGBYkmT2pEveLcW7eEyRqSLGwt7op-X3AWaEYw/exec");
-		$glyphAPI = file_get_contents("https://script.google.com/macros/s/AKfycbzFqLJFdm5TeCDGhrUPIZvIhW87IfdgTWS2uYWTWH4dhTcepYFg/exec");
-
 		$nodeData = json_decode($nodeAPI, TRUE);
+
+		// Check if the table is empty
+		$checkEmpty = "SELECT * FROM nodes";
+		$resultEmpty = $this->connect()->query($checkEmpty);
+		// Check if there's any rows 
+		// If yes => Update data
+		// If no => Create table and fill in data
+		if ($resultEmpty->rowCount() > 0){
+			foreach ($nodeData['spreadsheet'] as $nodeSS){
+				$item = $nodeSS['item'];
+				$worth = $nodeSS['worth']; 
+
+				// Insert into DB
+				$sql = "UPDATE nodes
+				SET node = '$item', value = '$worth'
+				WHERE node = '$item';";
+				// Execute the SQL stmt 
+				$stmt = $this->connect()->exec($sql);
+			}
+		} else {
+			foreach ($nodeData['spreadsheet'] as $nodeSS){
+				$item = $nodeSS['item'];
+				$worth = $nodeSS['worth']; 
+
+				// Insert into DB
+				$sql = "INSERT IGNORE INTO nodes (node, value)
+				VALUES ('$item', '$worth');";
+				// Execute the SQL stmt 
+				$stmt = $this->connect()->exec($sql);
+			}
+		}
+		
+	}
+
+	public function get_values(){
+		// Get full table and sort by value and descending
+		$sql = "SELECT * FROM nodes ORDER BY value DESC";
+		$result = $this->connect()->query($sql);
+		// Create empty array
+		$array = Array();
+		// Go thru DB and fetch contents into array
+		while($row = $result->fetch()){
+			$array[] = $row; 
+		}
+		$pdo = null; 
+
+		// Create JSON from the array
+		$json = json_encode($array);
+		return $json;
+	}
+}
+
+class Glyphs extends BenchmarksDB{
+	public function set_values(){
+		$glyphAPI = file_get_contents("https://script.google.com/macros/s/AKfycbzFqLJFdm5TeCDGhrUPIZvIhW87IfdgTWS2uYWTWH4dhTcepYFg/exec");
 		$glyphData = json_decode($glyphAPI, TRUE); 
 
-		foreach ($nodeData['spreadsheet'] as $nodeSS){
-			$item = $nodeSS['item'];
-			$worth = $nodeSS['worth']; 
-
+		// Check if the table is empty
+		$checkEmpty = "SELECT * FROM glyphs";
+		$resultEmpty = $this->connect()->query($checkEmpty);
+		// Check if there's any rows 
+		// If yes => Update data
+		// If no => Create table and fill in data
+		if ($resultEmpty->rowCount() > 0){
 			// Insert into DB
-			$sql = "INSERT IGNORE INTO nodes (node, value)
-			VALUES ('$item', '$worth');";
-			// Execute the SQL stmt 
-			$stmt = $this->connect()->exec($sql);
-		}
+			foreach ($glyphData['spreadsheet'] as $glyphSS){
+				$glyph = $glyphSS['glyph'];
+				$tool = $glyphSS['tool'];
+				$level = $glyphSS['level'];
+				$vps = $glyphSS['vps'];
+				$vpn = $glyphSS['vpn']; 
 
+				$sql = "UPDATE glyphs
+				SET glyph = '$glyph', 
+					tool = '$tool', 
+					level = '$level',
+					vps = '$vps',
+					vpn = '$vpn'
+				WHERE glyph = '$glyph';";
+				// Execute the SQL stmt 
+				$stmt = $this->connect()->exec($sql);
+			}
+		} else {
+			foreach ($glyphData['spreadsheet'] as $glyphSS){
+				$glyph = $glyphSS['glyph'];
+				$tool = $glyphSS['tool'];
+				$level = $glyphSS['level'];
+				$vps = $glyphSS['vps'];
+				$vpn = $glyphSS['vpn']; 
+
+				// Insert into DB
+				$sql = "INSERT IGNORE INTO glyphs (glyph, tool, level, value_per_strike, value_per_node)
+				VALUES ('$glyph', '$tool', '$level', '$vps', '$vpn');";
+				// Execute the SQL stmt 
+				$stmt = $this->connect()->exec($sql);
+			}
+		}
 		
+	}
+
+	public function get_values(){
+		// Get full table and sort by value and descending
+		$sql = "SELECT * FROM glyphs ORDER BY value_per_node DESC";
+		$result = $this->connect()->query($sql);
+		// Create empty array
+		$array = Array();
+		// Go thru DB and fetch contents into array
+		while($row = $result->fetch()){
+			$array[] = $row; 
+		}
+		$pdo = null; 
+
+		// Create JSON from the array
+		$json = json_encode($array);
+		return $json;
 	}
 }
 
@@ -264,7 +363,11 @@ $mapsDB = new Maps();
 $dwcDB = new DWC(); 
 $dwcDB->set_tracks();
 
-$nodesDB = new Gathering(); 
+// Gathering DBs
+$nodesDB = new Nodes(); 
 $nodesDB->set_values();
+
+$glyphsDB = new Glyphs(); 
+$glyphsDB->set_values();
 
 ?>
