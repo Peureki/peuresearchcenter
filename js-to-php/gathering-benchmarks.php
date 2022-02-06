@@ -15,7 +15,6 @@
 	//echo var_dump($glyphsData);
 
 	$farms = array(
-		
 		array(
 			"map" => "Bjora Marches",
 			"zone" => "Shiverpeaks", 
@@ -44,7 +43,7 @@
 			"map" => "Draconis Mons",
 			"zone" => "Maguuma Jungle",
 			"level" => "71-80",
-			"time" => 3600,
+			"time" => 502,
 			"mats" => array("Mithril Ore", 5, "Pick",
 				"Palm Sapling", 19, "Axe",
 				"Primordial Orchid", 13, "Axe",
@@ -54,7 +53,7 @@
 			"map" => "Dredgehaunt Cliffs",
 			"zone" => "Shiverpeaks",
 			"level" => "41-55",
-			"time" => 3600,
+			"time" => 664,
 			"mats" => array("Iron Ore (Level > 25 Zone)", 11, "Pick",
 				"Rich Iron Ore", 1, "Pick",
 				"Gold Ore", 8, "Pick",
@@ -83,7 +82,7 @@
 			"map" => "Lake Doric",
 			"zone" => "Maguuma Jungle",
 			"level" => "71-80",
-			"time" => 3600,
+			"time" => 434,
 			"mats" => array("Mithril Ore", 7, "Pick",
 				"Orichalcum Ore", 2, "Pick",
 				"Rich Orichalcum Ore", 1, "Pick",
@@ -145,10 +144,10 @@
 				"Coral", 10, "Sickle",
 				"Artichoke", 4, "Sickle",
 				"Passiflora", 2, "Sickle",
-				"Lentil", 6, "Sickle",),
+				"Lentil", 6, "Sickle"),
 		), 
 		array(
-			"map" => "Siren's Landing",
+			"map" => "Sirens Landing",
 			"zone" => "Orr",
 			"level" => "71-80",
 			"time" => 3600,
@@ -158,21 +157,20 @@
 				"Orrian Oyster", 5, "Sickle",
 				"Omnomberry", 2, "Sickle",
 				"Orrian Truffle", 4, "Sickle",
-				"Black Crocus", 2, "Sickle",),
+				"Black Crocus", 2, "Sickle"),
 		), 
 		array(
 			"map" => "Sparkfly Fen",
-			"zone" => "Crystal Desert",
+			"zone" => "Maguuma Jungle",
 			"level" => "56-70",
 			"time" => 3600,
 			"mats" => array("Platinum Ore", 13, "Pick",
 				"Rich Platinum Ore", 3, "Pick",
 				"Banyan Sapling", 25, "Axe",
-				"Variegated Taproot", 4, "Sickle",
+				"Varietgated Taproot", 4, "Sickle",
 				"Leek", 4, "Sickle",
-				"Flax", 10, "Sickle",
 				"Blackberry", 4, "Sickle",
-				"Verdant Herb (Maguuma Jungle)", 2, "Sickle",),
+				"Verdant Herbs (Maguuma Jungle)", 2, "Sickle"),
 		), 
 		array(
 			"map" => "Timberline Falls",
@@ -185,11 +183,11 @@
 				"Rich Platinum Ore", 1, "Pick",
 				"Fir Sapling", 4, "Axe",
 				"Pine Sapling", 19, "Axe",
-				"Variegated Taproot", 5, "Sickle",
+				"Varietgated Taproot", 5, "Sickle",
 				"Portobello Mushroom", 1, "Sickle",
 				"Scallion", 4, "Sickle",
 				"Blackberry", 4, "Sickle",
-				"Mature Herb (Shiverpeaks)", 8, "Sickle",),
+				"Mature Herbs (Shiverpeaks)", 8, "Sickle"),
 		), 
 		array(
 			"map" => "Winterberry",
@@ -202,12 +200,8 @@
 				"Winterberry Bush", 38, "Sickle",
 				"Winter Root Vegetable", 1, "Sickle",
 				"Leek", 2, "Sickle",
-				"Verdant Herb (Shiverpeaks)", 2, "Sickle",),
+				"Verdant Herbs (Shiverpeaks)", 2, "Sickle"),
 		), 
-
-		
-		
-		
 		/*
 		array(
 			"map" => "Rich Nodes",
@@ -220,7 +214,8 @@
 				"Gold Ore", 2, "Pick",
 				"Mature Herbs (Ascalon)", 1, "Sickle",
 				"Young Herbs (Ascalon)", 1, "Sickle"),
-		), */
+		), 
+		*/
 	);
 
 	class Gathering extends BenchmarksDB{
@@ -303,7 +298,6 @@
 				case 2: array_push($toolsArray, $farm['mats'][$i]); break;
 			}
 		} 
-
 		//echo "map: " . var_dump($farm['map']);
 
 		//echo "this is nodesArray: " . var_dump($nodesArray); 
@@ -396,10 +390,10 @@
 										// Bounty check 
 										if ($glyphsData[$k]['glyph'] == "Bounty"){
 											$total = ($nodesData[$j]['value'] * $glyphsData[$k]['value_per_node']) * $qtyArray[$i];
-											//echo "node: " . $nodesData[$j]['node'] . " | node value: " . $nodesData[$j]['value'] . " | total value: " . $total . "<br>";
 										} else { // Not bounty
 											$total = ($nodesData[$j]['value'] + $glyphsData[$k]['value_per_node']) * $qtyArray[$i]; 
 										}
+										//echo "glyph: " . $glyphsData[$k] . " total: " . $total . "<br>"; 
 										array_push($overviewSickle, array($glyphsData[$k]['glyph'], $total));
 									} else if ($farm['level'] == $glyphsData[$k]['level']){
 										$total = ($nodesData[$j]['value'] + $glyphsData[$k]['value_per_node']) * $qtyArray[$i]; 

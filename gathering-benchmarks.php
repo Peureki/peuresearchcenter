@@ -2,7 +2,10 @@
 <html>
 <head>
 	<!-- Defaults, CSS/JS main files -->
-	<?php include('config.php'); ?>
+	<?php include('config.php'); 
+	include ("./js-to-php/get-gathering-benchmarks.php");
+	//include ('./js-to-php/gathering-benchmarks.php');
+	?>
 	<title> Gathering Benchmarks </title>
 </head>
 <body>
@@ -28,6 +31,11 @@
 			</thead>
 			<tbody id = "gathering-tableData"></tbody>
 		</table>
+
+		<form method = "post" action = "get-gathering-benchmarks.php">
+			Name: <input type = "text" name = "FirstName"><br>
+			<input type = "submit" name = "submit" value = "Submit">
+		</form>
 	</div>
 
 	<!-- 

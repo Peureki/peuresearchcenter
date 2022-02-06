@@ -399,6 +399,25 @@ class Nodes extends BenchmarksDB{
 	}
 }
 
+class Gathering extends BenchmarksDB{
+	public function get_values(){
+		// Get full table and sort by gold_per_hour col and descending
+		$sql = "SELECT * FROM gathering ORDER BY gold_per_hour DESC";
+		$result = $this->connect()->query($sql);
+		// Create empty array
+		$array = Array();
+		// Go thru DB and fetch contents into array
+		while($row = $result->fetch()){
+			$array[] = $row; 
+		}
+		$pdo = null; 
+
+		// Create JSON from the array
+		$json = json_encode($array);
+		return $json;
+	}
+}
+
 // Initialize map DB
 $mapsDB = new Maps();
 $dwcDB = new DWC(); 
@@ -410,5 +429,7 @@ $nodesDB->set_values();
 
 $glyphsDB = new Glyphs();
 $glyphsDB->set_values();
+
+$gatheringDB = new Gathering(); 
 
 ?>

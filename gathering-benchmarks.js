@@ -4,7 +4,7 @@ console.log('this is the gathering benchmarks');
 
 
 
-
+/*
 async function display_benchmarks(){
 
 	let node = {
@@ -224,3 +224,4 @@ async function display_benchmarks(){
 
 display_benchmarks();
 
+*/
