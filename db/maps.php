@@ -400,9 +400,24 @@ class Nodes extends BenchmarksDB{
 }
 
 class Gathering extends BenchmarksDB{
-	public function get_values(){
-		// Get full table and sort by gold_per_hour col and descending
-		$sql = "SELECT * FROM gathering ORDER BY gold_per_hour DESC";
+	
+	public function get_specific_values($request){
+		switch ($request){
+			// Get everything
+			case "All":
+			$sql = "SELECT * FROM gathering 
+				WHERE gold_per_hour IN 
+					( SELECT MAX(gold_per_hour) FROM gathering GROUP BY name) 
+				ORDER BY `gathering`.`gold_per_hour` DESC";
+			break; 
+			// Get the top gph of each farm only
+			case "Top of each farm": 
+			$sql = "SELECT * FROM gathering 
+				WHERE gold_per_hour IN 
+					( SELECT MAX(gold_per_hour) FROM gathering GROUP BY name) 
+				ORDER BY `gathering`.`gold_per_hour` DESC";
+			break;
+		}
 		$result = $this->connect()->query($sql);
 		// Create empty array
 		$array = Array();
@@ -416,6 +431,7 @@ class Gathering extends BenchmarksDB{
 		$json = json_encode($array);
 		return $json;
 	}
+
 }
 
 // Initialize map DB

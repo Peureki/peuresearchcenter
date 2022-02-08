@@ -38,6 +38,8 @@
 		</form>
 	</div>
 
+	<script> get_gathering_benchmarks(); console.log("why isnt this showing up anymore");</script>
+
 	<!-- 
 		========================================================================
 		====================== FOOTER + DARK MODE ==============================

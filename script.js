@@ -6439,3 +6439,47 @@ function fadeOutandBack(div){
 		div.style.opacity = 1;
 	}, 300);
 }
+
+// For the gathering-workspace buttons
+// When user clicks on the +1, +2, etc buttons, add value to the output area
+function add_num_to_node(button){
+	let subNodes = button.parentNode.getElementsByClassName("workspace-sub")[0].children[0],
+		subStrikes = button.parentNode.getElementsByClassName("workspace-sub")[0].children[1]; 
+
+	let nodeName = button.parentNode.parentNode.getElementsByClassName("node-name")[0];
+	let placeholder = nodeName.placeholder; 
+
+	let sumNodes = 0,
+		sumStrikes = 0;
+	// Check if there's 'rich' in the name
+	function check_node_type(){
+		if (nodeName.value.includes("rich") || nodeName.value.includes("Rich")){
+			subStrikes.value = parseInt(subStrikes.value) + 10; 
+		} else if (placeholder != "Plant"){
+			subStrikes.value = parseInt(subStrikes.value) + 3;
+		} else {
+			subStrikes.value = parseInt(subStrikes.value) + 1;
+		}
+	}
+
+	// Depending on what the value of the button pressed, add that value to the output
+	switch (button.value){
+		case "+1": 
+		subNodes.value = parseInt(subNodes.value) + 1; 
+		check_node_type(); 
+		break;
+		case "+2": 
+		subNodes.value = parseInt(subNodes.value) + 2; 
+		subStrikes.value = parseInt(subStrikes.value) + 2; 
+		break;
+		case "+3": 
+		subNodes.value = parseInt(subNodes.value) + 3; 
+		subStrikes.value = parseInt(subStrikes.value) + 3; 
+		break;
+		case "+4": 
+		subNodes.value = parseInt(subNodes.value) + 4; 
+		subStrikes.value = parseInt(subStrikes.value) + 4;
+		break;
+
+	}
+}

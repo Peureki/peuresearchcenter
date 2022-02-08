@@ -15,6 +15,7 @@
 	//echo var_dump($glyphsData);
 
 	$farms = array(
+		/*
 		array(
 			"map" => "Bjora Marches",
 			"zone" => "Shiverpeaks", 
@@ -70,13 +71,9 @@
 			"map" => "Flax",
 			"zone" => "Maguuma Jungle",
 			"level" => "71-80",
-			"time" => 3600,
-			"mats" => array("Mithril Ore", 1, "Pick",
-				"Orichalcum Ore", 2, "Pick",
-				"Bloodstone Crystal", 1, "Pick",
-				"Palm Sapling", 1, "Axe",
-				"Ancient Sapling", 1, "Axe",
-				"Flax", 36, "Sickle"),
+			"time" => 260,
+			"mats" => array(
+				"Flax", 34, "Sickle"),
 		),
 		array(
 			"map" => "Lake Doric",
@@ -97,7 +94,7 @@
 			"map" => "Maguuma Lily Farm",
 			"zone" => "Maguuma Jungle",
 			"level" => "71-80",
-			"time" => 3600,
+			"time" => 535,
 			"mats" => array(
 				"Jungle Plant", 44, "Sickle"),
 		), 
@@ -202,11 +199,18 @@
 				"Leek", 2, "Sickle",
 				"Verdant Herbs (Shiverpeaks)", 2, "Sickle"),
 		), 
-		/*
+		*/
 		array(
 			"map" => "Rich Nodes",
 			"zone" => "Maguuma Jungle",
-			"level" => "56-70",
+			"level" => array("16-40",
+				"16-40",
+				"56-70",
+				"56-70",
+				"41-55",
+				"56-70",
+				"41-55"),
+			"time" => 871,
 			"mats" => array("Iron Ore (Level <= 25 Zone)", 2, "Pick",
 				"Rich Iron Ore", 12, "Pick",
 				"Platinum Ore", 4, "Pick",
@@ -214,11 +218,10 @@
 				"Gold Ore", 2, "Pick",
 				"Mature Herbs (Ascalon)", 1, "Sickle",
 				"Young Herbs (Ascalon)", 1, "Sickle"),
-		), 
-		*/
+		), 		
 	);
 
-	class Gathering extends BenchmarksDB{
+	class Set_Gathering extends BenchmarksDB{
 		public function set_benchmarks($farm, $time, $pick, $axe, $sickle){
 			// Check if the table is empty or not
 			$checkEmpty = "SELECT * FROM gathering"; 
@@ -226,7 +229,7 @@
 			// Count how many rows are active. If there are none, then $rowCount = 0
 			$rowCount = $resultEmpty->rowCount(); 
 			// Go thru each tool and get their values for each glyph
-
+			//echo "pick: " . count($pick) . " axe: " . count($axe) . " sickle: " . count($sickle);
 			for ($i = 0; $i < count($pick); $i++){
 				for ($j = 0; $j < count($axe); $j++){
 					for ($k = 0; $k < count($sickle); $k++){
@@ -272,7 +275,7 @@
 					}
 				}
 			}
-		}	
+		}
 	}
 
 	function set_gathering_benchmarks($farm, $nodesData, $glyphsData){
@@ -320,11 +323,26 @@
 				//echo "node array: " . $nodesArray[$i] . "data: " . $nodesData[$j]['node'] . "<br>"; 
 				if ($nodesArray[$i] == $nodesData[$j]['node']){
 					for ($k = 0; $k < count($glyphsData); $k++){
+						// Check if the tools for the current node match the tools in the glyph data
 						if ($toolsArray[$i] == $glyphsData[$k]['tool']){
+							// Switch between each tool
 							switch ($glyphsData[$k]['tool']){
 								case "Pick":
 								if ($pickCount == 0){
-									if ($farm['level'] == "71-80" && $glyphsData[$k]['level'] == "All"){
+									// Check if the level of the farm has multiple or not
+									if (is_array($farm['level']) == TRUE){
+										if ($glyphsData[$k]['level'] == "All"){
+											$total = ($nodesData[$j]['value'] + $glyphsData[$k]['value_per_node']) * $qtyArray[$i]; 
+										} else if ($farm['level'][$i] == $glyphsData[$k]['level']){
+											$total = ($nodesData[$j]['value'] + $glyphsData[$k]['value_per_node']) * $qtyArray[$i];
+											//echo "glyph: " .  $glyphsData[$k]['glyph'] . " | total: " . $total . "<br>"; 
+										}
+										//echo "Gylph: " . $glyphsData[$k]['glyph'] . " value: " . $glyphsData[$k]['value_per_node']. "<br>";
+										//echo "glyph: " .  $glyphsData[$k]['glyph'] . " | total: " . $total . "<br>"; 
+										array_push($overviewPick, array($glyphsData[$k]['glyph'], $total));
+									}
+									// If not multiple levels => check if higher level and if glyph is for all
+									else if ($farm['level'] == "71-80" && $glyphsData[$k]['level'] == "All"){
 										// Bounty check 
 										if ($glyphsData[$k]['glyph'] == "Bounty"){
 											$total = ($nodesData[$j]['value'] * $glyphsData[$k]['value_per_node']) * $qtyArray[$i];
@@ -332,12 +350,23 @@
 											$total = ($nodesData[$j]['value'] + $glyphsData[$k]['value_per_node']) * $qtyArray[$i]; 
 										}
 										array_push($overviewPick, array($glyphsData[$k]['glyph'], $total));
+									// If not either => match the levels
 									} else if ($farm['level'] == $glyphsData[$k]['level']){
 										$total = ($nodesData[$j]['value'] + $glyphsData[$k]['value_per_node']) * $qtyArray[$i]; 
 										array_push($overviewPick, array($glyphsData[$k]['glyph'], $total));
 									}
 								}  else {
-									if ($farm['level'] == "71-80" && $glyphsData[$k]['level'] == "All"){
+									// Check if the level of the farm has multiple or not
+									if (is_array($farm['level']) == TRUE){
+										if ($glyphsData[$k]['level'] == "All"){
+											$total = ($nodesData[$j]['value'] + $glyphsData[$k]['value_per_node']) * $qtyArray[$i]; 
+										} else if ($farm['level'][$i] == $glyphsData[$k]['level']){
+											$total = ($nodesData[$j]['value'] + $glyphsData[$k]['value_per_node']) * $qtyArray[$i];
+										}
+										$overviewPick[$overviewCounter][1] += $total;
+										$overviewCounter += 1; 
+									}
+									else if ($farm['level'] == "71-80" && $glyphsData[$k]['level'] == "All"){
 										// Bounty check 
 										if ($glyphsData[$k]['glyph'] == "Bounty"){
 											$total = ($nodesData[$j]['value'] * $glyphsData[$k]['value_per_node']) * $qtyArray[$i];
@@ -355,7 +384,16 @@
 								break;
 								case "Axe":
 								if ($axeCount == 0){ 
-									if ($farm['level'] == "71-80" && $glyphsData[$k]['level'] == "All"){
+									// Check if the level of the farm has multiple or not
+									if (is_array($farm['level']) == TRUE){
+										if ($glyphsData[$k]['level'] == "All"){
+											$total = ($nodesData[$j]['value'] + $glyphsData[$k]['value_per_node']) * $qtyArray[$i]; 
+										} else if ($farm['level'][$i] == $glyphsData[$k]['level']){
+											$total = ($nodesData[$j]['value'] + $glyphsData[$k]['value_per_node']) * $qtyArray[$i];
+										}
+										array_push($overviewAxe, array($glyphsData[$k]['glyph'], $total));
+									}
+									else if ($farm['level'] == "71-80" && $glyphsData[$k]['level'] == "All"){
 										// Bounty check 
 										if ($glyphsData[$k]['glyph'] == "Bounty"){
 											$total = ($nodesData[$j]['value'] * $glyphsData[$k]['value_per_node']) * $qtyArray[$i];
@@ -368,7 +406,17 @@
 										array_push($overviewAxe, array($glyphsData[$k]['glyph'], $total));
 									}
 								}  else {
-									if ($farm['level'] == "71-80" && $glyphsData[$k]['level'] == "All"){
+									// Check if the level of the farm has multiple or not
+									if (is_array($farm['level']) == TRUE){
+										if ($glyphsData[$k]['level'] == "All"){
+											$total = ($nodesData[$j]['value'] + $glyphsData[$k]['value_per_node']) * $qtyArray[$i]; 
+										} else if ($farm['level'][$i] == $glyphsData[$k]['level']){
+											$total = ($nodesData[$j]['value'] + $glyphsData[$k]['value_per_node']) * $qtyArray[$i];
+										}
+										$overviewAxe[$overviewCounter][1] += $total;
+										$overviewCounter += 1; 
+									}
+									else if ($farm['level'] == "71-80" && $glyphsData[$k]['level'] == "All"){
 										// Bounty check 
 										if ($glyphsData[$k]['glyph'] == "Bounty"){
 											$total = ($nodesData[$j]['value'] * $glyphsData[$k]['value_per_node']) * $qtyArray[$i];
@@ -386,7 +434,16 @@
 								break;
 								case "Sickle":
 								if ($sickleCount == 0){ 
-									if ($farm['level'] == "71-80" && $glyphsData[$k]['level'] == "All"){
+									// Check if the level of the farm has multiple or not
+									if (is_array($farm['level']) == TRUE){
+										if ($glyphsData[$k]['level'] == "All"){
+											$total = ($nodesData[$j]['value'] + $glyphsData[$k]['value_per_node']) * $qtyArray[$i]; 
+										} else if ($farm['level'][$i] == $glyphsData[$k]['level']){
+											$total = ($nodesData[$j]['value'] + $glyphsData[$k]['value_per_node']) * $qtyArray[$i];
+										}
+										array_push($overviewSickle, array($glyphsData[$k]['glyph'], $total));
+									}
+									else if ($farm['level'] == "71-80" && $glyphsData[$k]['level'] == "All"){
 										// Bounty check 
 										if ($glyphsData[$k]['glyph'] == "Bounty"){
 											$total = ($nodesData[$j]['value'] * $glyphsData[$k]['value_per_node']) * $qtyArray[$i];
@@ -400,7 +457,17 @@
 										array_push($overviewSickle, array($glyphsData[$k]['glyph'], $total));
 									}
 								}  else {
-									if ($farm['level'] == "71-80" && $glyphsData[$k]['level'] == "All"){
+									// Check if the level of the farm has multiple or not
+									if (is_array($farm['level']) == TRUE){
+										if ($glyphsData[$k]['level'] == "All"){
+											$total = ($nodesData[$j]['value'] + $glyphsData[$k]['value_per_node']) * $qtyArray[$i]; 
+										} else if ($farm['level'][$i] == $glyphsData[$k]['level']){
+											$total = ($nodesData[$j]['value'] + $glyphsData[$k]['value_per_node']) * $qtyArray[$i];
+										}
+										$overviewSickle[$overviewCounter][1] += $total;
+										$overviewCounter += 1; 
+									}
+									else if ($farm['level'] == "71-80" && $glyphsData[$k]['level'] == "All"){
 										// Bounty check 
 										if ($glyphsData[$k]['glyph'] == "Bounty"){
 											$total = ($nodesData[$j]['value'] * $glyphsData[$k]['value_per_node']) * $qtyArray[$i];
@@ -432,8 +499,8 @@
 		if (count($overviewAxe) == 0){
 			array_push($overviewAxe, array("N/A", 0));
 		}
-		$gatheringDB = new Gathering(); 
-		$gatheringDB->set_benchmarks($farm['map'], $farm['time'], $overviewPick, $overviewAxe, $overviewSickle);
+		$setGatheringDB = new Set_Gathering(); 
+		$setGatheringDB->set_benchmarks($farm['map'], $farm['time'], $overviewPick, $overviewAxe, $overviewSickle);
 		/*
 		function add_data_into_array($toolCount, $overviewArray){
 			if ($toolCount == 0){ 
