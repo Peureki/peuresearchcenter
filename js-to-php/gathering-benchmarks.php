@@ -15,7 +15,6 @@
 	//echo var_dump($glyphsData);
 
 	$farms = array(
-		/*
 		array(
 			"map" => "Bjora Marches",
 			"zone" => "Shiverpeaks", 
@@ -79,19 +78,17 @@
 			"map" => "Lake Doric",
 			"zone" => "Maguuma Jungle",
 			"level" => "71-80",
-			"time" => 434,
-			"mats" => array("Mithril Ore", 7, "Pick",
+			"time" => 399,
+			"mats" => array("Mithril Ore", 4, "Pick",
 				"Orichalcum Ore", 2, "Pick",
 				"Rich Orichalcum Ore", 1, "Pick",
-				"Jade Fragment", 10, "Pick",
-				"Baoba Sapling (Non-Maguuma)", 14, "Axe",
+				"Jade Fragment", 8, "Pick",
+				"Baoba Sapling (Non-Maguuma)", 11, "Axe",
 				"Ancient Sapling", 2, "Axe",
-				"Verdant Herbs (Kryta)", 11, "Sickle",
-				"Sawgill Mushroom", 8, "Sickle",
-				"Lotus Root", 1, "Sickle"),
+				"Verdant Herbs (Kryta)", 11, "Sickle"),
 		), 
 		array(
-			"map" => "Maguuma Lily Farm",
+			"map" => "Maguuma Lilies",
 			"zone" => "Maguuma Jungle",
 			"level" => "71-80",
 			"time" => 535,
@@ -115,7 +112,7 @@
 				"Asparagus", 2, "Sickle"),
 		),
 		array(
-			"map" => "Mussel Farm",
+			"map" => "Mussels",
 			"zone" => "Maguuma Jungle",
 			"level" => "71-80",
 			"time" => 475,
@@ -199,25 +196,30 @@
 				"Leek", 2, "Sickle",
 				"Verdant Herbs (Shiverpeaks)", 2, "Sickle"),
 		), 
-		*/
+		// FOR THIS FARM SPECIFICALLY:
+		// For each node, add the levels cooresponding to it too
 		array(
 			"map" => "Rich Nodes",
 			"zone" => "Maguuma Jungle",
 			"level" => array("16-40",
 				"16-40",
+				"16-40",
 				"56-70",
 				"56-70",
 				"41-55",
 				"56-70",
-				"41-55"),
-			"time" => 871,
+				"41-55",
+				"16-40"),
+			"time" => 874.5,
 			"mats" => array("Iron Ore (Level <= 25 Zone)", 2, "Pick",
+				"Iron Ore (Level > 25 Zone)", 1.5, "Pick",
 				"Rich Iron Ore", 12, "Pick",
-				"Platinum Ore", 4, "Pick",
-				"Rich Platinum Ore", 13, "Pick",
-				"Gold Ore", 2, "Pick",
+				"Platinum Ore", 7.5, "Pick",
+				"Rich Platinum Ore", 11, "Pick",
+				"Gold Ore", 1, "Pick",
 				"Mature Herbs (Ascalon)", 1, "Sickle",
-				"Young Herbs (Ascalon)", 1, "Sickle"),
+				"Young Herbs (Ascalon)", 1, "Sickle",
+				"Herb Seedling (Ascalon)", 0.5, "Sickle"),
 		), 		
 	);
 

@@ -431,6 +431,24 @@ class Gathering extends BenchmarksDB{
 		$json = json_encode($array);
 		return $json;
 	}
+	// Return only a specific map
+	// ex: $request = "Sandswept Isles"
+	public function get_specific_map($request){
+		$sql = "SELECT * FROM `gathering` WHERE `name` LIKE '$request' ORDER BY `gold_per_hour` DESC";
+
+		$result = $this->connect()->query($sql);
+		// Create empty array
+		$array = Array();
+		// Go thru DB and fetch contents into array
+		while($row = $result->fetch()){
+			$array[] = $row; 
+		}
+		$pdo = null; 
+
+		// Create JSON from the array
+		$json = json_encode($array);
+		return $json;
+	}
 
 }
 
@@ -441,10 +459,10 @@ $dwcDB->set_tracks();
 
 // Gathering DBs
 $nodesDB = new Nodes();
-$nodesDB->set_values();
+//$nodesDB->set_values();
 
 $glyphsDB = new Glyphs();
-$glyphsDB->set_values();
+//$glyphsDB->set_values();
 
 $gatheringDB = new Gathering(); 
 
