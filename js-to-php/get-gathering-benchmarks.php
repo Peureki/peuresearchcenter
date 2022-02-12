@@ -8,7 +8,7 @@
 let topofEachFarm = <?php echo $gatheringDB->get_specific_values("Top of each farm"); ?>,
 	specificMap = <?php echo $gatheringDB->get_specific_map("Mussels");?> ; 
 
-function get_gathering_benchmarks(){
+function get_top_gathering_benchmarks(){
 	let table = document.getElementById('gathering-benchmarks'),
 	tableBody = document.getElementById('gathering-tableData'),
 	dataHTML = ``;

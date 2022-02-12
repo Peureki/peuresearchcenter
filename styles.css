@@ -3515,8 +3515,10 @@ table.gathering-benchmarks{
 	width: auto;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
 	padding: 0 auto;
-	opacity: 0;
+	opacity: 1;
 	-webkit-transition: all 0.5s ease;
   	transition: all 0.5s ease;
   	color: var(--clr-text);

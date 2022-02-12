@@ -5,8 +5,31 @@
 <head>
 	<!-- Defaults, CSS/JS main files -->
 	<?php include('config.php'); 
-		include ('./js-to-php/benchmarks.php'); ?>
+		include ('./js-to-php/benchmarks.php'); 
+		include ("../js-to-php/get-gathering-benchmarks.php");?>
 	<title> Benchmarks </title>
+	<script> 
+		// AJAX to show the gathering farm once users have selected the drop down menu of gathering farms
+		function show_gathering_farm(str) {
+			let div = document.getElementById('gathering-map-tableData');
+		  	if (str == "") {
+		    	div.innerHTML = "";
+		    	return;
+		  	} else {
+		    	var xmlhttp = new XMLHttpRequest();
+		    	xmlhttp.onreadystatechange = function() {
+		      	if (this.readyState == 4 && this.status == 200) {
+		        	div.innerHTML = this.responseText;
+		        	let arr = div.getElementsByTagName('script')
+					for (let n = 0; n < arr.length; n++)
+					    eval(arr[n].innerHTML)//run script inside div
+		      	}
+		    };
+		    xmlhttp.open("GET","./js-to-php/get-specific-gathering-map.php?q="+str,true);
+		    xmlhttp.send();
+		  }
+		}
+	</script>
 </head>
 <body>
 	<!-- 
@@ -62,20 +85,21 @@
 					<th> Sort Table By: </th>
 				</tr>
 				<tr>
-					<td><select name = "sort-bench" id = "sort-map" onchange = "select_option(this);">
-							<option value = "24hr Change (+/-)"> 24hr Change (+/-) </option>
-							<option  value = "Farm Type"> Farm Type </option>
-							<option value = "Popularity"> Popularity </option>
-							<option value = "Map"> Map </option>
-							<option value = "Time"> Time </option>
-							<option selected = "selected" value = "Gold/Hour"> Gold/Hour </option>
-							<option value = "Total Gold"> Total Gold </option>
-							<option value = "Karma"> Karma </option>
-							<option value = "Spirit Shards"> Spirit Shards </option>
-							<option value = "Trade Contracts"> Trade Contracts </option>
-							<option value = "Unbound Magic"> Unbound Magic </option>
-							<option value = "Volatile Magic"> Volatile Magic </option>
-							<option value = "Expansion Type"> Expansion Type </option>
+					<td>
+						<select name = "sort-bench" id = "sort-map" onchange = "select_option(this);">
+						<option value = "24hr Change (+/-)"> 24hr Change (+/-) </option>
+						<option  value = "Farm Type"> Farm Type </option>
+						<option value = "Popularity"> Popularity </option>
+						<option value = "Map"> Map </option>
+						<option value = "Time"> Time </option>
+						<option selected = "selected" value = "Gold/Hour"> Gold/Hour </option>
+						<option value = "Total Gold"> Total Gold </option>
+						<option value = "Karma"> Karma </option>
+						<option value = "Spirit Shards"> Spirit Shards </option>
+						<option value = "Trade Contracts"> Trade Contracts </option>
+						<option value = "Unbound Magic"> Unbound Magic </option>
+						<option value = "Volatile Magic"> Volatile Magic </option>
+						<option value = "Expansion Type"> Expansion Type </option>
 						</select>
 					</td>
 				</tr>
@@ -160,6 +184,74 @@
 				getAltBenchmarkAll('alt-benchmarks');
 			 </script>
 		</div>
+	</div>
+
+	<div class = "page-box">
+		<div style = "position: relative;">
+			<div class = "section-header">
+				<h1>Estimated Gathering</h1>
+				<div class = "banner-box"></div>
+				<img src = "./images/assets/banner.svg">
+			</div>
+		</div>
+		<!-- Hidden space so the header doesn't overlap anything below -->
+		<div class = "section-header-space"></div>
+
+		<table id = "gathering-benchmarks" class = "gathering-benchmarks"> 
+			<thead> 
+				<tr>
+					<th onclick = "sortTableByAlphabet('gathering-benchmarks', 0);"> Map </th>
+					<th onclick = "sortTableByPrice('gathering-benchmarks', 1);"> Pick </th>
+					<th onclick = "sortTableByPrice('gathering-benchmarks', 2);"> Axe </th>
+					<th onclick = "sortTableByPrice('gathering-benchmarks', 3);"> Sickle </th>
+					<th onclick = "sortTableByPrice('gathering-benchmarks', 4);"> Gold/Hour </th>
+					<th onclick = "sortTableByPrice('gathering-benchmarks', 4);"> Gold/Char </th>
+					<th onclick = "sortTableByPrice('gathering-benchmarks', 4);"> Time/Char </th>
+				</tr>
+			</thead>
+			<tbody id = "gathering-tableData"></tbody>
+		</table>
+
+		<form method = "GET" action = "" id = "benchmark-form">
+			<select name = "node-farm" id = "node-farm" name = "node-farm" onchange="show_gathering_farm(this.value);">
+				<option value = "Bjora Marches"> Bjora Marches </option>
+				<option value = "Bloodstone Fen"> Bloodstone Fen </option>
+				<option value = "Draconis Mons"> Draconis Mons </option>
+				<option value = "Dredgehaunt Cliffs"> Dredgehaunt Cliffs </option>
+				<option value = "Flax"> Flax </option>
+				<option value = "Lake Doric"> Lake Doric </option>
+				<option value = "Maguuma Lilies"> Maguuma Lilies </option>
+				<option value = "Mount Maelstrom"> Mount Maelstrom </option>
+				<option value = "Mussels"> Mussels </option>
+				<option value = "Orr"> Orr </option>
+				<option value = "Rich Nodes"> Rich Nodes </option>
+				<option value = "Sandswept Isles"> Sandswept Isles </option>
+				<option value = "Siren's Landing"> Siren's Landing </option>
+				<option value = "Sparkfly Fen"> Sparkfly Fen </option>
+				<option value = "Timberline Falls"> Timberline Falls </option>
+				<option value = "Winterberry"> Winterberry </option>
+			</select>
+			<input type = "submit">
+		</form>
+
+		<table id = 'gathering-benchmarks' class = 'gathering-benchmarks'> 
+			<thead> 
+				<tr>
+					<th onclick = "sortTableByAlphabet('gathering-benchmarks', 0);"> Map </th>
+					<th onclick = "sortTableByPrice('gathering-benchmarks', 1);"> Pick </th>
+					<th onclick = "sortTableByPrice('gathering-benchmarks', 2);"> Axe </th>
+					<th onclick = "sortTableByPrice('gathering-benchmarks', 3);"> Sickle </th>
+					<th onclick = "sortTableByPrice('gathering-benchmarks', 4);"> GPH </th>
+					<th onclick = "sortTableByPrice('gathering-benchmarks', 4);"> Gold /Char </th>
+					<th onclick = "sortTableByPrice('gathering-benchmarks', 4);"> Time /Char </th>
+				</tr>
+			</thead>
+			<tbody id = 'gathering-map-tableData'>
+			</tbody>
+		</table>
+	</div>
+
+	<script> get_top_gathering_benchmarks(); </script>
 
 		<div id = "info-box" class = "page-box" style = "position: fixed; top: 35%; left: 20%; display: none;">
 			<div id = "info-close" onclick = "closeBox(this);" class = "alt-x">
