@@ -1687,7 +1687,7 @@ b{
 	border-top: 2px solid var(--clr-border);
 	border-bottom: 2px solid var(--clr-border);
 	border-right: 2px solid var(--clr-border);
-	font-size: 18px;
+	font-size: clamp(0.9rem, 18px, 1vw);;
 	z-index: 1000;
 }
 /* Defaults for the <a> tag */
@@ -3518,7 +3518,6 @@ table.gathering-benchmarks{
 	margin-top: 30px;
 	margin-bottom: 30px;
 	padding: 0 auto;
-	opacity: 1;
 	-webkit-transition: all 0.5s ease;
   	transition: all 0.5s ease;
   	color: var(--clr-text);
@@ -3579,6 +3578,9 @@ table.gathering-benchmarks td:nth-child(1):hover{
 	color: white;
 	transition: 0.5s;
 	cursor: pointer;
+}
+table.gathering-benchmarks td:nth-child(7){
+	text-align: center;
 }
 table.benchmarks td:nth-child(5){
 	padding: auto;
@@ -3655,7 +3657,34 @@ table.benchmark-table td{
 table.other-benchmarks td:nth-child(1){
 	color: black;
 }
-
+/*
+	=======================================================
+	============== BENCHMARKS TABLE FORMS =================
+	=======================================================
+*/
+.benchmark-form{
+	display: flex;
+	justify-content: center;
+}
+.benchmark-form select{
+	background-color: var(--clr-bkg);
+	border: 2px solid var(--clr-border);
+	color: var(--clr-text);
+	font-weight: bold;
+	font-size: 20px;
+	padding: 5px;
+	cursor: pointer;
+}
+.benchmark-form img{
+	width: 10%;
+	display: none;
+	max-width: 50px;
+	max-height: 50px;
+	animation-name: animate_rolling;
+	animation-duration: 1000ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
 
 /* ****************************************************
    **************Start of node-bench***************

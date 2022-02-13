@@ -5,6 +5,7 @@
 
 	$farm = json_decode($nodeJSON, TRUE);
 	$dataHTML = ""; 
+	
 	for ($i = 0; $i < 10; $i++){
 		$gphID = "gathering-map-gph".$i; 
 		$gpcID = "gathering-map-gpc".$i;
@@ -20,7 +21,6 @@
 		<script type = 'text/javascript'> let gphID".$i." = document.getElementById('".$gphID."'), 
 			gpcID".$i." = document.getElementById('".$gpcID."'); 
 
-		console.log('merp');
 		gphID".$i.".innerHTML = displayValues(".$farm[$i]['gold_per_hour'].", 0);
 		gpcID".$i.".innerHTML = displayValues(".$farm[$i]['gold_per_char'].", 0);"."</script>"."";
 	}

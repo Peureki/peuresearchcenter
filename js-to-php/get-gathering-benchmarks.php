@@ -11,12 +11,26 @@ let topofEachFarm = <?php echo $gatheringDB->get_specific_values("Top of each fa
 function get_top_gathering_benchmarks(){
 	let table = document.getElementById('gathering-benchmarks'),
 	tableBody = document.getElementById('gathering-tableData'),
-	dataHTML = ``;
+	dataHTML = ``,
+	mapPage;
 
 	for (let i = 0; i < topofEachFarm.length; i++){
+		switch (topofEachFarm[i].name){
+			case "Bjora Marches": mapPage = "./maps/bjora-marches.php"; break; 
+			case "Bloodstone Fen": mapPage = "./maps/bloodstone-fen.php#nodes"; break;
+			case "Draconis Mons": mapPage = "./maps/draconis-mons.php#nodes"; break; 
+			case "Dredgehaunt Cliffs": mapPage = "./gathering/dredgehaunt-node-farm.php"; break; 
+			case "Flax": mapPage = "./gathering/flax-farm.php"; break;
+			case "Lake Doric": mapPage = "./maps/lake-doric#node-farm"; break;
+			case "Maguuma Lilies": mapPage = "./gathering/maguuma-lilies.php"; break; 
+			case "Mussels": mapPage = "./gathering/mussels.php"; break; 
+			case "Rich Nodes": mapPage = "./gathering/rich-node-farm.php"; break;
+			case "Sandswept Isles": mapPage = "./maps/sandswept-isles#node-farm.php"; break;
+		}
+
 		dataHTML += `
 		<tr>
-		<td> ${topofEachFarm[i].name} </td>
+		<td onclick = "location.href = '${mapPage}';"> ${topofEachFarm[i].name} </td>
 		<td> ${topofEachFarm[i].pick} </td>
 		<td> ${topofEachFarm[i].axe} </td>
 		<td> ${topofEachFarm[i].sickle} </td>
@@ -27,26 +41,6 @@ function get_top_gathering_benchmarks(){
 	}
 	tableBody.innerHTML = dataHTML;
 }
-function get_gathering_maps(){
-	let table = document.getElementById('gathering-benchmarks'),
-	tableBody = document.getElementById('gathering-map-tableData'),
-	dataHTML = ``;
-
-	for (let i = 0; i < specificMap.length; i++){
-		dataHTML += `
-		<tr>
-		<td> ${specificMap[i].name} </td>
-		<td> ${specificMap[i].pick} </td>
-		<td> ${specificMap[i].axe} </td>
-		<td> ${specificMap[i].sickle} </td>
-		<td> ${displayValues(specificMap[i].gold_per_hour, 0)} </td>
-		<td> ${displayValues(specificMap[i].gold_per_char, 0)} </td>
-		<td> ${specificMap[i].time_per_char} </td>
-		</tr>`;
-	}
-	tableBody.innerHTML = dataHTML;
-}
-
 
 
 // Get highest gph for each farm 

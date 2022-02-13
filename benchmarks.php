@@ -11,18 +11,27 @@
 	<script> 
 		// AJAX to show the gathering farm once users have selected the drop down menu of gathering farms
 		function show_gathering_farm(str) {
-			let div = document.getElementById('gathering-map-tableData');
+			let div = document.getElementById('gathering-map-tableData'),
+				loading = document.getElementById('loading-choya');
+			// Show the loading choya when collecting data
+			loading.style.display = "block"; 
+			// If none selected, show nothing
 		  	if (str == "") {
 		    	div.innerHTML = "";
 		    	return;
 		  	} else {
+		  		// Otherwise, send request to php file that collects data
 		    	var xmlhttp = new XMLHttpRequest();
 		    	xmlhttp.onreadystatechange = function() {
 		      	if (this.readyState == 4 && this.status == 200) {
 		        	div.innerHTML = this.responseText;
+		        	// Check if the php file contains <script> tags. 
+		        	// Activate them
+		        	// If we don't do this, it will show up as regular text and not work
 		        	let arr = div.getElementsByTagName('script')
 					for (let n = 0; n < arr.length; n++)
 					    eval(arr[n].innerHTML)//run script inside div
+					loading.style.display = "none"; 
 		      	}
 		    };
 		    xmlhttp.open("GET","./js-to-php/get-specific-gathering-map.php?q="+str,true);
@@ -41,16 +50,17 @@
 
 	<div id = "bookmark-left" class = "bookmark-left">
 		<ul>
-			<a><li id = "farm-benchmark-button" onclick = "revert_benchmarks(this);"> &#10097; Map Farms </li></a> 
-			<a><li id = "meta-benchmark-button" onclick = "revert_benchmarks(this);"> &#10097; Metas </li></a> 
-			<a><li id = "chest-benchmark-button" onclick = "revert_benchmarks(this);"> &#10097; Chests </li></a> 
-			<a><li id = "alt-benchmark-button" onclick = "revert_benchmarks(this);"> &#10097; Alt Parking </li></a> 
+			<a href = "#map-farms"><li> &#10097; Map Farms </li></a> 
+			<a href = "#metas"><li> &#10097; Metas </li></a> 
+			<a href = "#chests" ><li> &#10097; Chests </li></a> 
+			<a href = "#alt-parking" ><li> &#10097; Alt Parking </li></a>
+			<a href = "#gathering"><li> &#10097; Gathering </li></a>
 			<a href = "./resources/about-benchmarks.php"><li> &#10097; Benchmark Criteria </li></a> 
 			<a href = "https://docs.google.com/spreadsheets/d/1aLhL_VtVXbcZ6X2yweKD7AQFg9H5j67SW85qSzTPqrg/edit?usp=sharing" target = "_blank"><li> &#10097; Spreadsheet </li></a> 
 		</ul>
 	</div>
 
-	<div style = "position: relative;">
+	<div style = "position: relative;" id = "map-farms">
 		<div class = "section-header">
 			<h1>Benchmarks</h1>
 			<div class = "banner-box"></div>
@@ -79,7 +89,7 @@
 					<td id = "input-map-bonus"> </td>
 				</tr>
 			</table>
-
+			<!--
 			<table class = "single-info">
 				<tr>
 					<th> Sort Table By: </th>
@@ -104,89 +114,124 @@
 					</td>
 				</tr>
 			</table>
+			-->
 		</div>
 	</div>
 	
-
 	<div style = "position: relative; overflow-x: auto;">
-		<div id = "page-box" class = "page-box" style = "display: flex; flex-direction: column; align-items: center; justify-content: center; align-items: center;">
+		<div class = "page-box">
 			<img id = "loading-image" class = "loading-image" src = "./images/assets/research-choya-screen.png">
-				<table id = "benchmarks" class = "benchmarks"> 
-					<thead> 
-						<tr>
-							<th onclick = "sortTableByQuantity('benchmarks', 0);"> +/- </th>
-							<th onclick = "sortTableByAlphabet('benchmarks', 1);"> Farm <br> Type </th>
-							<th onclick = "sortTableByAlphabet('benchmarks', 2);"> Popularity </th>
-							<th onclick = "sortTableByAlphabet('benchmarks', 3);"> Map </th>
-							<th onclick = "sortTableByTime('benchmarks', 4);"> Time <br>(H:M) </th>
-							<th onclick = "sortTableByPrice('benchmarks', 5);"> Gold/Hour </th>
-							<th onclick = "sortTableByPrice('benchmarks', 6);"> Total Gold </th>
-							<th onclick = "sortTableByQuantity('benchmarks', 7);"> <img title = "Karma" src = ".\images\assets\Karma.png" style = "width: 30%;"> </th>
-							<th onclick = "sortTableByQuantity('benchmarks', 8);"> <img title = "Spirit Shard" src = ".\images\assets\Spirit_Shard.png" style = "width: 50%;"> </th>
-							<th onclick = "sortTableByQuantity('benchmarks', 9);"> <img title = "Trade Contract" src = ".\images\assets\Trade_Contract.png" style = "width: 50%;"> </th>
-							<th onclick = "sortTableByQuantity('benchmarks', 10);"> <img title = "UM" src = ".\images\assets\Unbound_Magic.png" style = "width: 50%;"></th>
-							<th onclick = "sortTableByQuantity('benchmarks', 11);"> <img title = "VM" src = ".\images\assets\Volatile_Magic.png" style = "width: 50%;"> </th>
-							<th> Option </th>
-						</tr>
-					</thead>
-					<tbody id = "tableData"></tbody>
-				</table>
-
-				<table id = "meta-benchmarks" class = "other-benchmarks" style = "display: none;"> 
-					<thead> 
-						<tr>
-							<th onclick = "sortTableByAlphabet('meta-benchmarks', 0);"> Farm Type </th>
-							<th onclick = "sortTableByAlphabet('meta-benchmarks', 1);"> Map: Meta </th>
-							<th onclick = "sortTableByTime('meta-benchmarks', 2);"> Time<br>(M:S) </th>
-							<th onclick = "sortTableByPrice('meta-benchmarks', 3);"> Gold/Mins </th>
-							<th onclick = "sortTableByPrice('meta-benchmarks', 4);"> Total Gold </th>
-							<th onclick = "sortTableByQuantity('meta-benchmarks', 5);"> <img title = "Karma" src = ".\images\assets\Karma.png" style = "width: 30%;"> </th>
-							<th onclick = "sortTableByQuantity('meta-benchmarks', 6);"> <img title = "Spirit Shard" src = ".\images\assets\Spirit_Shard.png" style = "width: 50%;"> </th>
-							<th onclick = "sortTableByQuantity('meta-benchmarks', 7);"> <img title = "Trade Contract" src = ".\images\assets\Trade_Contract.png" style = "width: 50%;"> </th>
-							<th onclick = "sortTableByQuantity('meta-benchmarks', 8);"> <img title = "Elegy Mosaic" src = ".\images\assets\Elegy_Mosaic.png" style = "width: 50%;"> </th>
-							<th onclick = "sortTableByQuantity('meta-benchmarks', 9);"> <img title = "UM" src = ".\images\assets\Unbound_Magic.png" style = "width: 50%;"></th>
-							<th onclick = "sortTableByQuantity('meta-benchmarks', 10);"> <img title = "VM" src = ".\images\assets\Volatile_Magic.png" style = "width: 50%;"> </th>
-						</tr>
-					</thead>
-					<tbody id = "meta-tableData"></tbody>
-				</table>
-
-				<table id = "chest-benchmarks" class = "other-benchmarks" style = "display: none;"> 
-					<thead> 
-						<tr>
-							<th onclick = "sortTableByAlphabet('chest-benchmarks', 0);"> Type </th>
-							<th onclick = "sortTableByAlphabet('chest-benchmarks', 1);"> Map </th>
-							<th onclick = "sortTableByAlphabet('chest-benchmarks', 2);"> Chest </th>
-							<th onclick = "sortTableByPrice('chest-benchmarks', 3);"> Gold/Chest </th>
-						</tr>
-					</thead>
-					<tbody id = "chest-tableData"></tbody>
-				</table>
-
-				<table id = "alt-benchmarks" class = "other-benchmarks" style = "display: none;"> 
-					<thead> 
-						<tr>
-							<th onclick = "sortTableByAlphabet('alt-benchmarks', 0);"> Type </th>
-							<th onclick = "sortTableByAlphabet('alt-benchmarks', 1);"> Repeat </th>
-							<th onclick = "sortTableByAlphabet('alt-benchmarks', 2);"> Map </th>
-							<th onclick = "sortTableByAlphabet('alt-benchmarks', 3);"> Name </th>
-							<th onclick = "sortTableByPrice('alt-benchmarks', 4);"> Benchmark </th>
-							<th> Info </th>
-						</tr>
-					</thead>
-					<tbody id = "alt-tableData"></tbody>
-				</table>
-
-			<script>
-				getBenchmarkAll('benchmarks','loading-image');
-				getMetaBenchmarkAll('meta-benchmarks');
-				getChestBenchmarkAll('chest-benchmarks');
-				getAltBenchmarkAll('alt-benchmarks');
-			 </script>
+			<table id = "benchmarks" class = "benchmarks"> 
+				<thead> 
+					<tr>
+						<th onclick = "sortTableByQuantity('benchmarks', 0);"> +/- </th>
+						<th onclick = "sortTableByAlphabet('benchmarks', 1);"> Farm <br> Type </th>
+						<th onclick = "sortTableByAlphabet('benchmarks', 2);"> Popularity </th>
+						<th onclick = "sortTableByAlphabet('benchmarks', 3);"> Map </th>
+						<th onclick = "sortTableByTime('benchmarks', 4);"> Time <br>(H:M) </th>
+						<th onclick = "sortTableByPrice('benchmarks', 5);"> Gold/Hour </th>
+						<th onclick = "sortTableByPrice('benchmarks', 6);"> Total Gold </th>
+						<th onclick = "sortTableByQuantity('benchmarks', 7);"> <img title = "Karma" src = ".\images\assets\Karma.png" style = "width: 30%;"> </th>
+						<th onclick = "sortTableByQuantity('benchmarks', 8);"> <img title = "Spirit Shard" src = ".\images\assets\Spirit_Shard.png" style = "width: 50%;"> </th>
+						<th onclick = "sortTableByQuantity('benchmarks', 9);"> <img title = "Trade Contract" src = ".\images\assets\Trade_Contract.png" style = "width: 50%;"> </th>
+						<th onclick = "sortTableByQuantity('benchmarks', 10);"> <img title = "UM" src = ".\images\assets\Unbound_Magic.png" style = "width: 50%;"></th>
+						<th onclick = "sortTableByQuantity('benchmarks', 11);"> <img title = "VM" src = ".\images\assets\Volatile_Magic.png" style = "width: 50%;"> </th>
+						<!--<th> Option </th>-->
+					</tr>
+				</thead>
+				<tbody id = "tableData"></tbody>
+			</table>
 		</div>
 	</div>
 
-	<div class = "page-box">
+	<div class = "page-box" id = "metas">
+		<div style = "position: relative;">
+			<div class = "section-header">
+				<h1>Metas</h1>
+				<div class = "banner-box"></div>
+				<img src = "./images/assets/banner.svg">
+			</div>
+		</div>
+		<!-- Hidden space so the header doesn't overlap anything below -->
+		<div class = "section-header-space"></div>
+
+		<table id = "meta-benchmarks" class = "other-benchmarks"> 
+			<thead> 
+				<tr>
+					<th onclick = "sortTableByAlphabet('meta-benchmarks', 0);"> Farm Type </th>
+					<th onclick = "sortTableByAlphabet('meta-benchmarks', 1);"> Map: Meta </th>
+					<th onclick = "sortTableByTime('meta-benchmarks', 2);"> Time<br>(M:S) </th>
+					<th onclick = "sortTableByPrice('meta-benchmarks', 3);"> Gold/Mins </th>
+					<th onclick = "sortTableByPrice('meta-benchmarks', 4);"> Total Gold </th>
+					<th onclick = "sortTableByQuantity('meta-benchmarks', 5);"> <img title = "Karma" src = ".\images\assets\Karma.png" style = "width: 30%;"> </th>
+					<th onclick = "sortTableByQuantity('meta-benchmarks', 6);"> <img title = "Spirit Shard" src = ".\images\assets\Spirit_Shard.png" style = "width: 50%;"> </th>
+					<th onclick = "sortTableByQuantity('meta-benchmarks', 7);"> <img title = "Trade Contract" src = ".\images\assets\Trade_Contract.png" style = "width: 50%;"> </th>
+					<th onclick = "sortTableByQuantity('meta-benchmarks', 8);"> <img title = "Elegy Mosaic" src = ".\images\assets\Elegy_Mosaic.png" style = "width: 50%;"> </th>
+					<th onclick = "sortTableByQuantity('meta-benchmarks', 9);"> <img title = "UM" src = ".\images\assets\Unbound_Magic.png" style = "width: 50%;"></th>
+					<th onclick = "sortTableByQuantity('meta-benchmarks', 10);"> <img title = "VM" src = ".\images\assets\Volatile_Magic.png" style = "width: 50%;"> </th>
+				</tr>
+			</thead>
+			<tbody id = "meta-tableData"></tbody>
+		</table>
+	</div>
+
+	<div class = "page-box" id = "chests">
+		<div style = "position: relative;">
+			<div class = "section-header">
+				<h1>Chests</h1>
+				<div class = "banner-box"></div>
+				<img src = "./images/assets/banner.svg">
+			</div>
+		</div>
+		<!-- Hidden space so the header doesn't overlap anything below -->
+		<div class = "section-header-space"></div>
+
+		<table id = "chest-benchmarks" class = "other-benchmarks"> 
+			<thead> 
+				<tr>
+					<th onclick = "sortTableByAlphabet('chest-benchmarks', 0);"> Type </th>
+					<th onclick = "sortTableByAlphabet('chest-benchmarks', 1);"> Map </th>
+					<th onclick = "sortTableByAlphabet('chest-benchmarks', 2);"> Chest </th>
+					<th onclick = "sortTableByPrice('chest-benchmarks', 3);"> Gold/Chest </th>
+				</tr>
+			</thead>
+			<tbody id = "chest-tableData"></tbody>
+		</table>
+	</div>
+
+	<div class = "page-box" id = "alt-parking">
+		<div style = "position: relative;">
+			<div class = "section-header">
+				<h1>Alt Parking</h1>
+				<div class = "banner-box"></div>
+				<img src = "./images/assets/banner.svg">
+			</div>
+		</div>
+		<!-- Hidden space so the header doesn't overlap anything below -->
+		<div class = "section-header-space"></div>
+
+		<table id = "alt-benchmarks" class = "other-benchmarks"> 
+			<thead> 
+				<tr>
+					<th onclick = "sortTableByAlphabet('alt-benchmarks', 0);"> Type </th>
+					<th onclick = "sortTableByAlphabet('alt-benchmarks', 1);"> Repeat </th>
+					<th onclick = "sortTableByAlphabet('alt-benchmarks', 2);"> Map </th>
+					<th onclick = "sortTableByAlphabet('alt-benchmarks', 3);"> Name </th>
+					<th onclick = "sortTableByPrice('alt-benchmarks', 4);"> Benchmark </th>
+					<th> Info </th>
+				</tr>
+			</thead>
+			<tbody id = "alt-tableData"></tbody>
+		</table>
+	</div>
+
+	<!-- 
+		============================================================================
+		====================== ESTIMATED GATHERING BENCHMARKS ======================
+		============================================================================
+	-->
+
+	<div class = "page-box" id = "gathering">
 		<div style = "position: relative;">
 			<div class = "section-header">
 				<h1>Estimated Gathering</h1>
@@ -196,6 +241,24 @@
 		</div>
 		<!-- Hidden space so the header doesn't overlap anything below -->
 		<div class = "section-header-space"></div>
+
+		<div class = "small-description">
+			<details>
+				<summary>About: </summary>
+				These benchmarks are estimates on gathering farms. These numbers are calculated by taking the average value of a node, glyph, the time it takes for one character to do a round of a particular farm and combining those values to create an estimate. 
+				<br><br>
+				For example, we'll use the Bloodstone Fen farm. Focusing on wood and plants, the average amount of nodes in a single map is around 15 Palm Saplings (Elder), 1 Ancient, 14 Jungle Plants, and 4 Mussels. 
+				<br><br>
+				The math goes as the following: 
+				<br> (Avg value of node * avg glyph used) * avg qty of node. Sum of all of the rest of the nodes and that's the avg total for one run. Take the time it takes to do one run and multiply that to get an hour and that's the estimated gold per hour. 
+				<br><br>
+				Note: These farms do not include random drops that you may get from fighting mobs or tagging an event along the way. Normally, that doesn't happen often so it doesn't affect the benchmark too much. But, a good example of this is the farm "Rich Nodes" which includes a lot of mob killing along the way in lower level maps. It does affect it by a lot, especially when it comes to T3-T4 mats. With that, refer to the real benchmarks above (though only recorded using Volatile tools as the baseline). 
+			</details>
+		</div>
+
+		<div class = "small-description-center">
+			Top estimated benchmark using the best tools for each recorded farm
+		</div>
 
 		<table id = "gathering-benchmarks" class = "gathering-benchmarks"> 
 			<thead> 
@@ -212,8 +275,13 @@
 			<tbody id = "gathering-tableData"></tbody>
 		</table>
 
-		<form method = "GET" action = "" id = "benchmark-form">
+		<div class = "small-description-center">
+			Top 10 estimated benchmark using the best tools for a particular farm
+		</div>
+
+		<form method = "GET" action = "" class = "benchmark-form">
 			<select name = "node-farm" id = "node-farm" name = "node-farm" onchange="show_gathering_farm(this.value);">
+				<option value = "" disabled selected> Pick Node Farm </option>
 				<option value = "Bjora Marches"> Bjora Marches </option>
 				<option value = "Bloodstone Fen"> Bloodstone Fen </option>
 				<option value = "Draconis Mons"> Draconis Mons </option>
@@ -231,7 +299,7 @@
 				<option value = "Timberline Falls"> Timberline Falls </option>
 				<option value = "Winterberry"> Winterberry </option>
 			</select>
-			<input type = "submit">
+			<img src = "./images/assets/rolling-choya.png" id = "loading-choya">
 		</form>
 
 		<table id = 'gathering-benchmarks' class = 'gathering-benchmarks'> 
@@ -241,15 +309,22 @@
 					<th onclick = "sortTableByPrice('gathering-benchmarks', 1);"> Pick </th>
 					<th onclick = "sortTableByPrice('gathering-benchmarks', 2);"> Axe </th>
 					<th onclick = "sortTableByPrice('gathering-benchmarks', 3);"> Sickle </th>
-					<th onclick = "sortTableByPrice('gathering-benchmarks', 4);"> GPH </th>
-					<th onclick = "sortTableByPrice('gathering-benchmarks', 4);"> Gold /Char </th>
-					<th onclick = "sortTableByPrice('gathering-benchmarks', 4);"> Time /Char </th>
+					<th onclick = "sortTableByPrice('gathering-benchmarks', 4);"> Gold/Hour </th>
+					<th onclick = "sortTableByPrice('gathering-benchmarks', 4);"> Gold/Char </th>
+					<th onclick = "sortTableByPrice('gathering-benchmarks', 4);"> Time/Char </th>
 				</tr>
 			</thead>
 			<tbody id = 'gathering-map-tableData'>
 			</tbody>
 		</table>
 	</div>
+
+	<script>
+		getBenchmarkAll('benchmarks','loading-image');
+		getMetaBenchmarkAll('meta-benchmarks');
+		getChestBenchmarkAll('chest-benchmarks');
+		getAltBenchmarkAll('alt-benchmarks');
+	 </script>
 
 	<script> get_top_gathering_benchmarks(); </script>
 

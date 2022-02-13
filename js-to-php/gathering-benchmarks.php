@@ -32,11 +32,10 @@
 			"map" => "Bloodstone Fen",
 			"zone" => "Maguuma Jungle",
 			"level" => "71-80",
-			"time" => 397,
-			"mats" => array("Bloodstone Crystal", 5, "Pick",
-				"Palm Sapling", 19, "Axe",
+			"time" => 280,
+			"mats" => array("Palm Sapling", 15, "Axe",
 				"Ancient Sapling", 1, "Axe",
-				"Jungle Plant", 15, "Sickle",
+				"Jungle Plant", 14, "Sickle",
 				"Mussel", 4, "Sickle"),
 		),
 		array(
@@ -78,14 +77,14 @@
 			"map" => "Lake Doric",
 			"zone" => "Maguuma Jungle",
 			"level" => "71-80",
-			"time" => 399,
-			"mats" => array("Mithril Ore", 4, "Pick",
+			"time" => 301,
+			"mats" => array("Mithril Ore", 3, "Pick",
 				"Orichalcum Ore", 2, "Pick",
-				"Rich Orichalcum Ore", 1, "Pick",
-				"Jade Fragment", 8, "Pick",
-				"Baoba Sapling (Non-Maguuma)", 11, "Axe",
-				"Ancient Sapling", 2, "Axe",
-				"Verdant Herbs (Kryta)", 11, "Sickle"),
+				"Rich Orichalcum Ore", 0, "Pick",
+				"Jade Fragment", 0, "Pick",
+				"Baoba Sapling (Non-Maguuma)", 13, "Axe",
+				"Ancient Sapling", 1, "Axe",
+				"Verdant Herbs (Kryta)", 10, "Sickle"),
 		), 
 		array(
 			"map" => "Maguuma Lilies",
@@ -95,7 +94,7 @@
 			"mats" => array(
 				"Jungle Plant", 44, "Sickle"),
 		), 
-		
+		/*
 		array(
 			"map" => "Mount Maelstrom",
 			"zone" => "Maguuma Jungle",
@@ -110,7 +109,7 @@
 				"Verdant Herbs (Maguuma Jungle)", 4, "Sickle",
 				"Leek", 7, "Sickle",
 				"Asparagus", 2, "Sickle"),
-		),
+		), */
 		array(
 			"map" => "Mussels",
 			"zone" => "Maguuma Jungle",
@@ -119,6 +118,31 @@
 			"mats" => array(
 				"Mussel", 39, "Sickle"),
 		),
+		// FOR THIS FARM SPECIFICALLY:
+		// For each node, add the levels cooresponding to it too
+		array(
+			"map" => "Rich Nodes",
+			"zone" => "Maguuma Jungle",
+			"level" => array("16-40",
+				"16-40",
+				"16-40",
+				"56-70",
+				"56-70",
+				"41-55",
+				"56-70",
+				"41-55",
+				"16-40"),
+			"time" => 874.5,
+			"mats" => array("Iron Ore (Level <= 25 Zone)", 2, "Pick",
+				"Iron Ore (Level > 25 Zone)", 1.5, "Pick",
+				"Rich Iron Ore", 12, "Pick",
+				"Platinum Ore", 7.5, "Pick",
+				"Rich Platinum Ore", 11, "Pick",
+				"Gold Ore", 1, "Pick",
+				"Mature Herbs (Ascalon)", 1, "Sickle",
+				"Young Herbs (Ascalon)", 1, "Sickle",
+				"Herb Seedling (Ascalon)", 0.5, "Sickle"),
+		), 
 		array(
 			"map" => "Sandswept Isles",
 			"zone" => "Crystal Desert",
@@ -139,7 +163,8 @@
 				"Artichoke", 4, "Sickle",
 				"Passiflora", 2, "Sickle",
 				"Lentil", 6, "Sickle"),
-		), 
+		),
+		/*
 		array(
 			"map" => "Sirens Landing",
 			"zone" => "Orr",
@@ -195,32 +220,8 @@
 				"Winter Root Vegetable", 1, "Sickle",
 				"Leek", 2, "Sickle",
 				"Verdant Herbs (Shiverpeaks)", 2, "Sickle"),
-		), 
-		// FOR THIS FARM SPECIFICALLY:
-		// For each node, add the levels cooresponding to it too
-		array(
-			"map" => "Rich Nodes",
-			"zone" => "Maguuma Jungle",
-			"level" => array("16-40",
-				"16-40",
-				"16-40",
-				"56-70",
-				"56-70",
-				"41-55",
-				"56-70",
-				"41-55",
-				"16-40"),
-			"time" => 874.5,
-			"mats" => array("Iron Ore (Level <= 25 Zone)", 2, "Pick",
-				"Iron Ore (Level > 25 Zone)", 1.5, "Pick",
-				"Rich Iron Ore", 12, "Pick",
-				"Platinum Ore", 7.5, "Pick",
-				"Rich Platinum Ore", 11, "Pick",
-				"Gold Ore", 1, "Pick",
-				"Mature Herbs (Ascalon)", 1, "Sickle",
-				"Young Herbs (Ascalon)", 1, "Sickle",
-				"Herb Seedling (Ascalon)", 0.5, "Sickle"),
 		), 		
+		*/
 	);
 
 	class Set_Gathering extends BenchmarksDB{
@@ -243,9 +244,19 @@
 						$resultAxe = $axe[$j][0];
 						$resultSickle = $sickle[$k][0];
 						$gph = (3600/$time) * $gpc;
-						
+
+						// Format the time as in mins : seconds
+						$leftNum = floor($time/60); 
+						$rightNum = $time - ($leftNum * 60);
+						if (strlen($rightNum) <= 1){
+							$rightNum = "0".$rightNum; 
+						} else if (strlen($rightNum) > 1){
+							$rightNum = substr($rightNum, 0, 2);
+						}
+						$duration = $leftNum . ":" . $rightNum;
+
 						$sql = "INSERT IGNORE INTO gathering (name, pick, axe, sickle, gold_per_hour, gold_per_char, time_per_char)
-							VALUES ('$farm', '$resultPick', '$resultAxe', '$resultSickle', '$gph', '$gpc', '$time')
+							VALUES ('$farm', '$resultPick', '$resultAxe', '$resultSickle', '$gph', '$gpc', '$duration')
 							ON DUPLICATE KEY UPDATE 
 								name = VALUES(name),
 								pick = VALUES(pick),
@@ -255,25 +266,6 @@
 								gold_per_char = VALUES(gold_per_char),
 								time_per_char = VALUES(time_per_char);";
 						$stmt = $this->connect()->exec($sql);	
-						/*
-						if ($rowCount > 0){
-							$sql = "UPDATE gathering
-							SET name = '$farm',
-								pick = '$resultPick',
-								axe = '$resultAxe',
-								sickle = '$resultSickle',
-								gold_per_char = '$gpc'
-							WHERE name = '$farm'
-							AND	pick = '$resultPick'
-							AND	axe = '$resultAxe'
-							AND	sickle = '$resultSickle';";
-							$stmt = $this->connect()->exec($sql);	
-						} else {
-							$sql = "INSERT IGNORE INTO gathering (name, pick, axe, sickle, gold_per_char)
-							VALUES ('$farm', '$resultPick', '$resultAxe', '$resultSickle', '$gpc');";
-							$stmt = $this->connect()->exec($sql);	
-						} 
-						*/
 					}
 				}
 			}
