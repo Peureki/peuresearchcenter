@@ -364,124 +364,12 @@
 			<p1> Node locations are subject to change due to new/different instances and new days</p1>
 		</div>
 
-		<div class = "map-image-box">
-			<img class = "map-image" title = "Top Floor" src = "../images/bloodstone-fen/top-floor-nodes.jpg">
-			<img class = "map-image" title = "Middle Floor" src = "../images/bloodstone-fen/middle-floor-nodes.jpg">
-			<img class = "map-image" title = "Bottom Floor" src = "../images/bloodstone-fen/bottom-floor-nodes.jpg">
+		<div class = "page-picture">
+			<img src = "../images/bloodstone-fen/node-farm-1.jpg" style = "width:50%;">
+			<img src = "../images/bloodstone-fen/node-farm-2.jpg" style = "width:50%;">
 		</div>
 
-		<div class = "page-header">
-			<h2> Criteria</h2>
-		</div>
-
-		<div class = "small-description">
-			<p1> These are the categories for how abundant the nodes are available in this zone</p1>
-		</div>
-
-		<div class = "high-quantity-box">
-			<h3> High Quantity </h3>
-		</div>
-
-		<div class = "meh-quantity-box">
-			<h3> Meh Quantity </h3>
-		</div>
-
-		<div class = "low-quantity-box">
-			<h3> Low Quantity </h3>
-		</div>
-
-		<div class = "overflow-table">
-			<table id = "nodes-sort" class = "nodes">
-				<tr> 
-					<th> Type </th>
-					<th> </th>
-					<th> Node </th>
-					<th> Info </th>
-					<th> Cooldown </th>
-				</tr>
-
-				<tr> 
-					<td id = "1" class = "nodes-high-box"> Ore </td> 
-					<td><img class = "nodes-image" title = "Blood Ruby" src = "https://wiki.guildwars2.com/images/1/14/Blood_Ruby.png">
-					</td>
-					<td class = "nodes-node"> Blood Ruby </td>
-					<td class = "nodes-info"> Use to exchange for ascended trinkets or consume for Unbound Magic. There is a daily account limit </td>
-					<td class = "nodes-cooldown"> 24 hours</td>
-				</tr>
-
-				<tr> 
-					<td id = "2" class = "nodes-meh-box"> Ore </td> 
-					<td><img class = "nodes-image" title = "Mithril Ore" src = "https://wiki.guildwars2.com/images/e/ee/Mithril_Ore.png">
-					</td>
-					<td class = "nodes-node"> Mithril Ore </td>
-					<td class = "nodes-info"> Chance to receive crystals</td>
-					<td class = "nodes-cooldown"> 1 hour</td>
-				</tr>
-
-				<tr> 
-					<td id = "3" class = "nodes-low-box"> Ore </td> 
-					<td><img class = "nodes-image" title = "Orichalcum Ore" src = "https://wiki.guildwars2.com/images/4/43/Orichalcum_Ore.png">
-					</td>
-					<td class = "nodes-node"> Orichalcum Ore </td>
-					<td class = "nodes-info"> Chance to receive rare orbs</td>
-					<td class = "nodes-cooldown"> 24 hours </td>
-				</tr>
-
-				<tr> 
-					<td id = "1" class = "nodes-high-box"> Log </td> 
-					<td><img class = "nodes-image" title = "Palm Sapling" src = "https://wiki.guildwars2.com/images/a/a7/Elder_Wood_Log.png">
-					</td>
-					<td class = "nodes-node"> Palm Sapling </td>
-					<td class = "nodes-info"> Chance to receive Foxfire Clusters, Hidden Troves (crystals), or rare Palm Lumber Cores </td>
-					<td class = "nodes-cooldown"> 1 hour </td>
-				</tr>
-
-				<tr> 
-					<td id = "3" class = "nodes-low-box"> Log </td> 
-					<td><img class = "nodes-image" title = "Ancient Sapling" src = "https://wiki.guildwars2.com/images/0/01/Ancient_Wood_Log.png">
-					</td>
-					<td class = "nodes-node"> Ancient Sapling </td>
-					<td class = "nodes-info"> Chance to receive Foxfire Clusters, Hidden Treasures (orbs), or rare Palm Lumber Cores </td>
-					<td class = "nodes-cooldown"> 24 hours </td>
-				</tr>
-
-				<tr> 
-					<td id = "1" class = "nodes-high-box"> Plant </td> 
-					<td><img class = "nodes-image" title = "Pile of Flax Seeds" src = "https://wiki.guildwars2.com/images/f/fa/Pile_of_Flax_Seeds.png">
-					</td>
-					<td class = "nodes-node"> Pile of Flax Seeds </td>
-					<td class = "nodes-info"> Chance to receive Flax Fiber, rare Flax Blossom </td>
-					<td class = "nodes-cooldown"> 1 hour </td>
-				</tr>
-
-				<tr> 
-					<td id = "1" class = "nodes-high-box"> Plant </td> 
-					<td><img class = "nodes-image" title = "Jungle Plant (image = Maguuma Lily)" src = "https://wiki.guildwars2.com/images/6/6c/Maguuma_Lily.png">
-					</td>
-					<td class = "nodes-node"> Jungle Plant </td>
-					<td class = "nodes-info"> Chance to receive Cassava Root, Clove, Lemongrass, Pile of Allspice Berries, and the very rare Maguuma Lily </td>
-					<td class = "nodes-cooldown"> 1 hour </td>
-				</tr>
-
-				<tr> 
-					<td id = "2" class = "nodes-meh-box"> Plant </td> 
-					<td><img class = "nodes-image" title = "Mussel" src = "https://wiki.guildwars2.com/images/a/aa/Mussel.png">
-					</td>
-					<td class = "nodes-node"> Mussel </td>
-					<td class = "nodes-info"> Chance to receive the very rare Freshwater Pearl </td>
-					<td class = "nodes-cooldown"> 1 hour </td>
-				</tr>
-
-				<tr> 
-					<td id = "3" class = "nodes-low-box"> Plant </td> 
-					<td><img class = "nodes-image" title = "Sawgill Mushroom" src = "https://wiki.guildwars2.com/images/3/39/Sawgill_Mushroom.png">
-					</td>
-					<td class = "nodes-node"> Sawgill Mushroom </td>
-					<td class = "nodes-info"> Chance to receive the very rare Giant Mushroom Spore </td>
-					<td class = "nodes-cooldown"> 1 hour </td>
-				</tr>
-			</table>
-		</div>
+		
 	</div> <!-- End of page-box -->
 
 	<!-- 

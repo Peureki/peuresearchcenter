@@ -6446,8 +6446,10 @@ function add_num_to_node(button){
 	let subNodes = button.parentNode.getElementsByClassName("workspace-sub")[0].children[0],
 		subStrikes = button.parentNode.getElementsByClassName("workspace-sub")[0].children[1]; 
 
-	let nodeName = button.parentNode.parentNode.getElementsByClassName("node-name")[0];
+	let nodeName = button.parentNode.getElementsByClassName("node-name")[0];
 	let placeholder = nodeName.placeholder; 
+
+	console.log(nodeName);
 
 	let sumNodes = 0,
 		sumStrikes = 0;
