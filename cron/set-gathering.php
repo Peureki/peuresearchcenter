@@ -72,12 +72,31 @@ $glyphsDB->set_values();
 				"Scallion", 1, "Sickle"),
 		),
 		array(
+			"map" => "Fireheart Rise",
+			"zone" => "Ascalon",
+			"level" => "56-70",
+			"time" => 308,
+			"mats" => array("Platinum Ore", 6, "Pick",
+				"Rich Platinum Ore", 3, "Pick",
+				"Inglewood Sapling", 9, "Axe",
+				"Verdant Herbs (Ascalon)", 6, "Sickle"),
+		),
+		array(
 			"map" => "Flax",
 			"zone" => "Maguuma Jungle",
 			"level" => "71-80",
 			"time" => 260,
 			"mats" => array(
 				"Flax", 34, "Sickle"),
+		),
+		array(
+			"map" => "Iron Marches",
+			"zone" => "Maguuma Jungle",
+			"level" => "56-70",
+			"time" => 302,
+			"mats" => array("Platinum Ore", 10, "Pick",
+				"Rich Platinum Ore", 2, "Pick",
+				"Inglewood Sapling", 10, "Axe"),
 		),
 		array(
 			"map" => "Lake Doric",
@@ -100,22 +119,19 @@ $glyphsDB->set_values();
 			"mats" => array(
 				"Jungle Plant", 44, "Sickle"),
 		), 
-		/*
+		
 		array(
 			"map" => "Mount Maelstrom",
 			"zone" => "Maguuma Jungle",
 			"level" => "56-70",
-			"time" => 3600,
-			"mats" => array("Mithril Ore", 2, "Pick",
-				"Platinum Ore", 7, "Pick",
-				"Rich Platinum Ore", 3, "Pick",
-				"Banyan Sapling", 12, "Axe",
-				"Baoba Sapling (Maguuma Jungle)", 6, "Axe",
-				"Mature Herbs (Maguuma Jungle)", 3, "Sickle",
-				"Verdant Herbs (Maguuma Jungle)", 4, "Sickle",
-				"Leek", 7, "Sickle",
-				"Asparagus", 2, "Sickle"),
-		), */
+			"time" => 237,
+			"mats" => array("Mithril Ore", 0, "Pick",
+				"Platinum Ore", 5, "Pick",
+				"Rich Platinum Ore", 2, "Pick",
+				"Banyan Sapling", 7, "Axe",
+				"Baoba Sapling (Maguuma Jungle)", 4, "Axe",
+				"Verdant Herbs (Maguuma Jungle)", 4, "Sickle"),
+		), 
 		array(
 			"map" => "Mussels",
 			"zone" => "Maguuma Jungle",
@@ -184,19 +200,18 @@ $glyphsDB->set_values();
 				"Orrian Truffle", 4, "Sickle",
 				"Black Crocus", 2, "Sickle"),
 		), 
+		*/
 		array(
 			"map" => "Sparkfly Fen",
 			"zone" => "Maguuma Jungle",
 			"level" => "56-70",
-			"time" => 3600,
-			"mats" => array("Platinum Ore", 13, "Pick",
+			"time" => 342,
+			"mats" => array("Platinum Ore", 9, "Pick",
 				"Rich Platinum Ore", 3, "Pick",
-				"Banyan Sapling", 25, "Axe",
-				"Varietgated Taproot", 4, "Sickle",
-				"Leek", 4, "Sickle",
-				"Blackberry", 4, "Sickle",
-				"Verdant Herbs (Maguuma Jungle)", 2, "Sickle"),
+				"Banyan Sapling", 14, "Axe",
+				"Verdant Herbs (Maguuma Jungle)", 3, "Sickle"),
 		), 
+		/*
 		array(
 			"map" => "Timberline Falls",
 			"zone" => "Shiverpeaks",
@@ -499,6 +514,9 @@ $glyphsDB->set_values();
 		if (count($overviewAxe) == 0){
 			array_push($overviewAxe, array("N/A", 0));
 		}
+		if (count($overviewSickle) == 0){
+			array_push($overviewSickle, array("N/A", 0));
+		}
 		$setGatheringDB = new Set_Gathering(); 
 		$setGatheringDB->set_benchmarks($farm['map'], $farm['time'], $overviewPick, $overviewAxe, $overviewSickle);
 		/*
@@ -539,6 +557,4 @@ $glyphsDB->set_values();
 
 	//echo var_dump($farm['mats'][0]);
 	//echo var_dump($node->farms->mats);
-
-
 ?>

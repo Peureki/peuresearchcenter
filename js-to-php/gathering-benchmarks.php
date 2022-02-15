@@ -94,22 +94,19 @@
 			"mats" => array(
 				"Jungle Plant", 44, "Sickle"),
 		), 
-		/*
+		
 		array(
 			"map" => "Mount Maelstrom",
 			"zone" => "Maguuma Jungle",
 			"level" => "56-70",
-			"time" => 3600,
-			"mats" => array("Mithril Ore", 2, "Pick",
-				"Platinum Ore", 7, "Pick",
-				"Rich Platinum Ore", 3, "Pick",
-				"Banyan Sapling", 12, "Axe",
-				"Baoba Sapling (Maguuma Jungle)", 6, "Axe",
-				"Mature Herbs (Maguuma Jungle)", 3, "Sickle",
-				"Verdant Herbs (Maguuma Jungle)", 4, "Sickle",
-				"Leek", 7, "Sickle",
-				"Asparagus", 2, "Sickle"),
-		), */
+			"time" => 237,
+			"mats" => array("Mithril Ore", 0, "Pick",
+				"Platinum Ore", 5, "Pick",
+				"Rich Platinum Ore", 2, "Pick",
+				"Banyan Sapling", 7, "Axe",
+				"Baoba Sapling (Maguuma Jungle)", 4, "Axe",
+				"Verdant Herbs (Maguuma Jungle)", 4, "Sickle"),
+		), 
 		array(
 			"map" => "Mussels",
 			"zone" => "Maguuma Jungle",

@@ -289,7 +289,7 @@
 				<option value = "Flax"> Flax </option>
 				<option value = "Lake Doric"> Lake Doric </option>
 				<option value = "Maguuma Lilies"> Maguuma Lilies </option>
-				<!--<option value = "Mount Maelstrom"> Mount Maelstrom </option>-->
+				<option value = "Mount Maelstrom"> Mount Maelstrom </option>
 				<option value = "Mussels"> Mussels </option>
 				<!--<option value = "Orr"> Orr </option> -->
 				<option value = "Rich Nodes"> Rich Nodes </option>

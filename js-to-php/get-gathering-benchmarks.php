@@ -6,7 +6,10 @@
 <script>
 
 let topofEachFarm = <?php echo $gatheringDB->get_specific_values("Top of each farm"); ?>,
-	specificMap = <?php echo $gatheringDB->get_specific_map("Mussels");?> ; 
+	specificMap = <?php echo $gatheringDB->get_specific_map("Mussels");?> ,
+	glyphs = <?php echo $glyphsJSON = $glyphsDB->get_values(); ?>;
+
+	console.log('glyphs:', glyphs); 
 
 function get_top_gathering_benchmarks(){
 	let table = document.getElementById('gathering-benchmarks'),
@@ -24,6 +27,7 @@ function get_top_gathering_benchmarks(){
 			case "Lake Doric": mapPage = "./maps/lake-doric#node-farm"; break;
 			case "Maguuma Lilies": mapPage = "./gathering/maguuma-lilies.php"; break; 
 			case "Mussels": mapPage = "./gathering/mussels.php"; break; 
+			case "Mount Maelstrom": mapPage = "./gathering/mount-maelstrom-node-farm.php"; break;
 			case "Rich Nodes": mapPage = "./gathering/rich-node-farm.php"; break;
 			case "Sandswept Isles": mapPage = "./maps/sandswept-isles#node-farm.php"; break;
 		}
