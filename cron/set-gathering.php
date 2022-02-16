@@ -72,6 +72,16 @@ $glyphsDB->set_values();
 				"Scallion", 1, "Sickle"),
 		),
 		array(
+			"map" => "Ember Bay",
+			"zone" => "Maguuma Jungle",
+			"level" => "71-80",
+			"time" => 215,
+			"mats" => array(
+				"Palm Sapling", 14, "Axe",
+				"Jungle Plant", 4, "Sickle",
+				"Passiflora", 2, "Sickle"),
+		),
+		array(
 			"map" => "Fireheart Rise",
 			"zone" => "Ascalon",
 			"level" => "56-70",

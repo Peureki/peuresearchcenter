@@ -22,7 +22,9 @@ function get_top_gathering_benchmarks(){
 			case "Bjora Marches": mapPage = "./maps/bjora-marches.php"; break; 
 			case "Bloodstone Fen": mapPage = "./maps/bloodstone-fen.php#nodes"; break;
 			case "Draconis Mons": mapPage = "./maps/draconis-mons.php#nodes"; break; 
-			case "Dredgehaunt Cliffs": mapPage = "./gathering/dredgehaunt-node-farm.php"; break; 
+			case "Dredgehaunt Cliffs": mapPage = "./gathering/dredgehaunt-node-farm.php"; break;
+			case "Ember Bay": mapPage = "./maps/ember-bay.php#nodes"; break; 
+			case "Fireheart Rise": mapPage = "./gathering/fireheart-rise-node-farm.php"; break; 
 			case "Flax": mapPage = "./gathering/flax-farm.php"; break;
 			case "Lake Doric": mapPage = "./maps/lake-doric#node-farm"; break;
 			case "Maguuma Lilies": mapPage = "./gathering/maguuma-lilies.php"; break; 
@@ -30,6 +32,7 @@ function get_top_gathering_benchmarks(){
 			case "Mount Maelstrom": mapPage = "./gathering/mount-maelstrom-node-farm.php"; break;
 			case "Rich Nodes": mapPage = "./gathering/rich-node-farm.php"; break;
 			case "Sandswept Isles": mapPage = "./maps/sandswept-isles#node-farm.php"; break;
+			case "Sparkfly Fen": mapPage = "./gathering/sparkfly-fen-node-farm.php"; break; 
 		}
 
 		dataHTML += `
