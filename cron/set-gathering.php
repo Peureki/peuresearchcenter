@@ -44,6 +44,15 @@ $glyphsDB->set_values();
 				"Jungle Plant", 14, "Sickle",
 				"Mussel", 4, "Sickle"),
 		),
+		/*
+		array(
+			"map" => "Coral",
+			"zone" => "Kryta",
+			"level" => "71-80",
+			"time" => 101,
+			"mats" => array(
+				"Coral (Level 80 Zone)", 9, "Sickle"),
+		), */
 		array(
 			"map" => "Draconis Mons",
 			"zone" => "Maguuma Jungle",
@@ -146,9 +155,9 @@ $glyphsDB->set_values();
 			"map" => "Mussels",
 			"zone" => "Maguuma Jungle",
 			"level" => "71-80",
-			"time" => 475,
+			"time" => 309,
 			"mats" => array(
-				"Mussel", 39, "Sickle"),
+				"Mussel", 29, "Sickle"),
 		),
 		// FOR THIS FARM SPECIFICALLY:
 		// For each node, add the levels cooresponding to it too

@@ -28,7 +28,7 @@ function get_top_gathering_benchmarks(){
 			case "Flax": mapPage = "./gathering/flax-farm.php"; break;
 			case "Lake Doric": mapPage = "./maps/lake-doric#node-farm"; break;
 			case "Maguuma Lilies": mapPage = "./gathering/maguuma-lilies.php"; break; 
-			case "Mussels": mapPage = "./gathering/mussels.php"; break; 
+			case "Mussels": mapPage = "./gathering/mussel-node-farm.php"; break; 
 			case "Mount Maelstrom": mapPage = "./gathering/mount-maelstrom-node-farm.php"; break;
 			case "Rich Nodes": mapPage = "./gathering/rich-node-farm.php"; break;
 			case "Sandswept Isles": mapPage = "./maps/sandswept-isles#node-farm.php"; break;

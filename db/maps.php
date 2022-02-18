@@ -153,6 +153,82 @@ class Maps extends BenchmarksDB{
 	}
 }
 
+class Chests extends BenchmarksDB{
+	
+	public function set_values(){
+		$chestAPI = file_get_contents("https://script.google.com/macros/s/AKfycbyXE3uJeUftQvlzCorAJ_DL4fsZa25GVx16Pr8MyX99DaZ2q6HX9mamMw/exec");
+		$chestData = json_decode($chestAPI, TRUE);
+
+		// Check if the table is empty or not
+		$checkEmpty = "SELECT * FROM nodes"; 
+		$resultEmpty = $this->connect()->query($checkEmpty);
+		// Check if there's any rows 
+		// If yes => Update data
+		// If no => Create table and fill in data
+		if ($resultEmpty->rowCount() > 0){
+			foreach ($chestData['spreadsheet'] as $chestSS){
+				$type = $chestSS['type'];
+				$map = $chestSS['map']; 
+				$chest = $chestSS['chest'];
+				$value = $chestSS['benchmark'];
+
+				// Insert into DB
+				$sql = "UPDATE chests
+				SET type = '$type', map = '$map', chest = '$chest', value = '$value'
+				WHERE map = '$map',;";
+				// Execute the SQL stmt 
+				$stmt = $this->connect()->exec($sql);
+			}
+		} else {
+			foreach ($chestData['spreadsheet'] as $chestSS){
+				$item = $chestSS['item'];
+				$worth = $chestSS['worth']; 
+				$sql = "INSERT IGNORE INTO nodes (node, value)
+				VALUES ('$item', '$worth');";
+				// Execute the SQL stmt 
+				$stmt = $this->connect()->exec($sql);
+			}
+		}
+
+		foreach ($chestData['spreadsheet'] as $chestSS){
+			$type = $chestSS['type'];
+			$map = $chestSS['map']; 
+			$chest = $chestSS['chest'];
+			$value = $chestSS['benchmark'];
+
+			$sql = "INSERT IGNORE INTO chests (type, map, chest, value)
+			VALUES ('$type', '$map', '$chest', '$value')
+			ON DUPLICATE KEY UPDATE 
+				glyph = VALUES(glyph),
+				tool = VALUES(tool),
+				level = VALUES(level),
+				value_per_strike = VALUES(value_per_strike),
+				value_per_node = VALUES(value_per_node);";
+			$stmt = $this->connect()->exec($sql);
+		}
+		
+	}
+	// Return only a specific map
+	// ex: $request = "Sandswept Isles"
+	public function get_specific_map($request){
+		$sql = "SELECT * FROM `gathering` WHERE `name` LIKE '$request' ORDER BY `gold_per_hour` DESC";
+
+		$result = $this->connect()->query($sql);
+		// Create empty array
+		$array = Array();
+		// Go thru DB and fetch contents into array
+		while($row = $result->fetch()){
+			$array[] = $row; 
+		}
+		$pdo = null; 
+
+		// Create JSON from the array
+		$json = json_encode($array);
+		return $json;
+	}
+
+}
+
 class DWC extends BenchmarksDB {
 	public function set_tracks(){
 		// Get JSON from Google Spreadsheet 
@@ -240,48 +316,6 @@ class Glyphs extends BenchmarksDB{
 	public function set_values(){
 		$glyphsJSON = file_get_contents('https://script.google.com/macros/s/AKfycbzFqLJFdm5TeCDGhrUPIZvIhW87IfdgTWS2uYWTWH4dhTcepYFg/exec');
 		$glyphsData = json_decode($glyphsJSON, TRUE); 
-		/*
-		// Check if the table is empty or not
-		$checkEmpty = "SELECT * FROM glyphs"; 
-		$resultEmpty = $this->connect()->query($checkEmpty);
-		// Count how many rows are active. If there are none, then $rowCount = 0
-		$rowCount = $resultEmpty->rowCount(); 
-
-		if ($resultEmpty->rowCount() > 0){
-			// Insert into DB
-			foreach ($glyphsData['spreadsheet'] as $glyphSS){
-				$glyph = $glyphSS['glyph'];
-				$tool = $glyphSS['tool'];
-				$level = $glyphSS['level'];
-				$vps = $glyphSS['vps'];
-				$vpn = $glyphSS['vpn']; 
-
-				$sql = "UPDATE glyphs
-				SET glyph = '$glyph', 
-					tool = '$tool', 
-					level = '$level',
-					value_per_strike = '$vps',
-					value_per_node = '$vpn'
-				WHERE glyph = '$glyph' 
-				AND tool = '$tool'
-				AND level = '$level';";
-				$stmt = $this->connect()->exec($sql);
-			}
-		} else {
-			foreach ($glyphsData['spreadsheet'] as $glyphSS){
-				$glyph = $glyphSS['glyph'];
-				$tool = $glyphSS['tool'];
-				$level = $glyphSS['level'];
-				$vps = $glyphSS['vps'];
-				$vpn = $glyphSS['vpn']; 
-
-				// Insert into DB
-				$sql = "INSERT IGNORE INTO glyphs (glyph, tool, level, value_per_strike, value_per_node)
-				VALUES ('$glyph', '$tool', '$level', '$vps', '$vpn');";
-				// Execute the SQL stmt 
-				$stmt = $this->connect()->exec($sql);
-			}
-		} */
 
 		foreach ($glyphsData['spreadsheet'] as $glyphSS){
 			$glyph = $glyphSS['glyph'];
@@ -300,31 +334,6 @@ class Glyphs extends BenchmarksDB{
 				value_per_node = VALUES(value_per_node);";
 			$stmt = $this->connect()->exec($sql);
 		}
-
-		
-		/*
-		foreach ($glyphsData['spreadsheet'] as $ss){
-			$glyph = $ss['glyph'];
-			$tool = $ss['tool'];
-			$level = $ss['level'];
-			$value_per_strike = $ss['vps'];
-			$value_per_node = $ss['vpn'];
-
-			if ($rowCount > 0){
-				$sql = "UPDATE nodes 
-				SET glyph = '$glyph',
-					tool = '$tool',
-					level = '$level',
-					value_per_strike = '$value_per_strike',
-					value_per_node = '$value_per_node'
-				WHERE glyph = '$glyph'
-				AND tool = '$tool';";
-			} else {
-				$sql = "INSERT IGNORE INTO glyphs (glyph, tool, level, value_per_strike, value_per_node)
-				VALUES ('$glyph', '$tool', '$level', '$value_per_strike', '$value_per_node');";
-			}
-			$stmt = $this->connect()->exec($sql);
-		} */
 	}
 
 	public function get_values(){

@@ -3,7 +3,7 @@
 <head>
 	<!-- Defaults -->
 	<?php include('../config.php');?>
-	<title> Mussel Farm </title>
+	<title> Mussel Node Farm </title>
 </head>
 <body>
 
