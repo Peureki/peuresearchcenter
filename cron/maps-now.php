@@ -5,5 +5,7 @@
 ?>
 
 <?php 
+	// Set benchmarks
 	$mapsDB->setMaps('maps');
+	$chestsDB->set_values();
 ?>

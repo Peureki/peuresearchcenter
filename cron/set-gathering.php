@@ -10,12 +10,14 @@ $glyphsDB->set_values();
 ?>
 
 <?php
-
+	// Get the data from the dbs
 	$nodesJSON = $nodesDB->get_values(); 
 	$glyphsJSON = $glyphsDB->get_values(); 
+	$chestsJSON = $chestsDB->get_values();
 
 	$nodesData = json_decode($nodesJSON, TRUE); 
 	$glyphsData = json_decode($glyphsJSON, TRUE);
+	$chestsData = json_decode($chestsJSON, TRUE);
 	//echo $nodesData[0]['node'] . "+" . $nodesData[0]['value'];
 	//echo var_dump($nodesData);
 	//echo var_dump($glyphsData);
@@ -205,21 +207,21 @@ $glyphsDB->set_values();
 				"Passiflora", 2, "Sickle",
 				"Lentil", 6, "Sickle"),
 		),
-		/*
+		
 		array(
-			"map" => "Sirens Landing",
+			"map" => "Siren\'s Landing",
 			"zone" => "Orr",
 			"level" => "71-80",
-			"time" => 3600,
-			"mats" => array("Mithril Ore", 2, "Pick",
-				"Cypress Sapling (Non-Magu, Non-Shiv)", 17, "Axe",
-				"Ancient Sapling", 3, "Axe",
-				"Orrian Oyster", 5, "Sickle",
-				"Omnomberry", 2, "Sickle",
-				"Orrian Truffle", 4, "Sickle",
-				"Black Crocus", 2, "Sickle"),
+			"time" => 312,
+			"mats" => array(
+				"Cypress Sapling (Non-Magu, Non-Shiv)", 16, "Axe",
+				"Orrian Sapling", 1, "Axe",
+				"Orrian Oyster", 4, "Sickle",
+				"Omnomberry", 4, "Sickle",
+				"Orrian Truffle", 3, "Sickle",
+				"Black Crocus", 2, "Sickle",
+				"Waterlogged Chest", 16, "Chest"),
 		), 
-		*/
 		array(
 			"map" => "Sparkfly Fen",
 			"zone" => "Maguuma Jungle",
@@ -229,7 +231,7 @@ $glyphsDB->set_values();
 				"Rich Platinum Ore", 3, "Pick",
 				"Banyan Sapling", 14, "Axe",
 				"Verdant Herbs (Maguuma Jungle)", 3, "Sickle"),
-		), 
+		),
 		/*
 		array(
 			"map" => "Timberline Falls",
@@ -265,7 +267,7 @@ $glyphsDB->set_values();
 	);
 
 	class Set_Gathering extends BenchmarksDB{
-		public function set_benchmarks($farm, $time, $pick, $axe, $sickle){
+		public function set_benchmarks($farm, $time, $pick, $axe, $sickle, $chests){
 			// Check if the table is empty or not
 			$checkEmpty = "SELECT * FROM gathering"; 
 			$resultEmpty = $this->connect()->query($checkEmpty);
@@ -276,43 +278,46 @@ $glyphsDB->set_values();
 			for ($i = 0; $i < count($pick); $i++){
 				for ($j = 0; $j < count($axe); $j++){
 					for ($k = 0; $k < count($sickle); $k++){
-						// The [1] is the value of the glyph
-						// Example: $pick[0][1] is array('watchknight', 12345)
-						// Sum all the values of each glyph with each tool
-						$gpc = ($pick[$i][1] + $axe[$j][1] + $sickle[$k][1]) * 0.85;
-						$resultPick = $pick[$i][0];
-						$resultAxe = $axe[$j][0];
-						$resultSickle = $sickle[$k][0];
-						$gph = (3600/$time) * $gpc;
+						for ($l = 0; $l < count($chests); $l++){
+							// The [1] is the value of the glyph
+							// Example: $pick[0][1] is array('watchknight', 12345)
+							// Sum all the values of each glyph with each tool
+							$gpc = ($pick[$i][1] + $axe[$j][1] + $sickle[$k][1] + $chests[$l][1]) * 0.85;
+							$resultPick = $pick[$i][0];
+							$resultAxe = $axe[$j][0];
+							$resultSickle = $sickle[$k][0];
+							$gph = (3600/$time) * $gpc;
 
-						// Format the time as in mins : seconds
-						$leftNum = floor($time/60); 
-						$rightNum = $time - ($leftNum * 60);
-						if (strlen($rightNum) <= 1){
-							$rightNum = "0".$rightNum; 
-						} else if (strlen($rightNum) > 1){
-							$rightNum = substr($rightNum, 0, 2);
+							// Format the time as in mins : seconds
+							$leftNum = floor($time/60); 
+							$rightNum = $time - ($leftNum * 60);
+							if (strlen($rightNum) <= 1){
+								$rightNum = "0".$rightNum; 
+							} else if (strlen($rightNum) > 1){
+								$rightNum = substr($rightNum, 0, 2);
+							}
+							$duration = $leftNum . ":" . $rightNum;
+
+							$sql = "INSERT IGNORE INTO gathering (name, pick, axe, sickle, gold_per_hour, gold_per_char, time_per_char)
+								VALUES ('$farm', '$resultPick', '$resultAxe', '$resultSickle', '$gph', '$gpc', '$duration')
+								ON DUPLICATE KEY UPDATE 
+									name = VALUES(name),
+									pick = VALUES(pick),
+									axe = VALUES(axe),
+									sickle = VALUES(sickle),
+									gold_per_hour = VALUES(gold_per_hour),
+									gold_per_char = VALUES(gold_per_char),
+									time_per_char = VALUES(time_per_char);";
+							$stmt = $this->connect()->exec($sql);
 						}
-						$duration = $leftNum . ":" . $rightNum;
-
-						$sql = "INSERT IGNORE INTO gathering (name, pick, axe, sickle, gold_per_hour, gold_per_char, time_per_char)
-							VALUES ('$farm', '$resultPick', '$resultAxe', '$resultSickle', '$gph', '$gpc', '$duration')
-							ON DUPLICATE KEY UPDATE 
-								name = VALUES(name),
-								pick = VALUES(pick),
-								axe = VALUES(axe),
-								sickle = VALUES(sickle),
-								gold_per_hour = VALUES(gold_per_hour),
-								gold_per_char = VALUES(gold_per_char),
-								time_per_char = VALUES(time_per_char);";
-						$stmt = $this->connect()->exec($sql);	
+							
 					}
 				}
 			}
 		}
 	}
 
-	function set_gathering_benchmarks($farm, $nodesData, $glyphsData){
+	function set_gathering_benchmarks($farm, $nodesData, $glyphsData, $chestsData){
 		$nodesArray = [];
 		$qtyArray = []; 
 		$toolsArray = []; 
@@ -320,11 +325,16 @@ $glyphsDB->set_values();
 		$overviewPick = [];
 		$overviewAxe = [];
 		$overviewSickle = [];
+		$overviewChests = [];
 
 		$pickCount = 0;
 		$axeCount = 0;
 		$sickleCount = 0;
+		$chestsCount = 0;
 
+		// Go through the farm['mats'] array and check the parameters
+		// There are 3 parameters: Node name, Node qty, and Tool type
+		// Push each paramater into their own arrays
 		for($i = 0; $i < count($farm['mats']); $i++){
 			switch ($i % 3){
 				// Node names
@@ -335,14 +345,11 @@ $glyphsDB->set_values();
 				case 2: array_push($toolsArray, $farm['mats'][$i]); break;
 			}
 		} 
-		//echo "map: " . var_dump($farm['map']);
 
-		//echo "this is nodesArray: " . var_dump($nodesArray); 
-
-		//echo var_dump($nodesData[1]['node']);
-		// Go thru amount of nodes in a farm
+		// Go thru each node listed in each farm above
 		for ($i = 0; $i < count($nodesArray); $i++){
 			if ($i == 0){
+				// If the previous tool type matches the current one, then add to the respective count
 			} else if ($toolsArray[$i-1] == $toolsArray[$i]){
 				switch ($toolsArray[$i]){
 					case "Pick": $pickCount += 1; break;
@@ -517,9 +524,17 @@ $glyphsDB->set_values();
 									}
 								} 
 								break;
-
 							}
 						}
+					}
+				}
+			} // End of nodes check loop
+			// Check if there's a chest in the farm
+			if ($toolsArray[$i] == "Chest"){
+				for ($l = 0; $l < count($chestsData); $l++){
+					if ($nodesArray[$i] == $chestsData[$l]['chest']){
+						$total = $chestsData[$l]['value'] * $qtyArray[$i];
+						array_push($overviewChests, array($chestsData[$l]['chest'], $total)); 
 					}
 				}
 			}
@@ -536,8 +551,11 @@ $glyphsDB->set_values();
 		if (count($overviewSickle) == 0){
 			array_push($overviewSickle, array("N/A", 0));
 		}
+		if (count($overviewChests) == 0){
+			array_push($overviewChests, array("N/A", 0));
+		}
 		$setGatheringDB = new Set_Gathering(); 
-		$setGatheringDB->set_benchmarks($farm['map'], $farm['time'], $overviewPick, $overviewAxe, $overviewSickle);
+		$setGatheringDB->set_benchmarks($farm['map'], $farm['time'], $overviewPick, $overviewAxe, $overviewSickle, $overviewChests);
 		/*
 		function add_data_into_array($toolCount, $overviewArray){
 			if ($toolCount == 0){ 
@@ -563,7 +581,7 @@ $glyphsDB->set_values();
 	}
 	for ($f = 0; $f < count($farms); $f++){
 		//echo var_dump($farms);
-		set_gathering_benchmarks($farms[$f], $nodesData, $glyphsData); 
+		set_gathering_benchmarks($farms[$f], $nodesData, $glyphsData, $chestsData); 
 	}
 	
 	

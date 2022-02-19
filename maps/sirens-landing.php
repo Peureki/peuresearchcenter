@@ -341,7 +341,6 @@
 		</div>
 
 		<div class = "small-description">
-			<center><iframe width="560" height="315" src="https://www.youtube.com/embed/AQbsEOZV0Hc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 			<span style = "font-weight: bold;"> Disclaimer:</span>
 			<br>
@@ -360,7 +359,7 @@
 			<br><br>
 			<span style = "font-weight: bold;"> Route:</span>
 			<br>
-			Start at Camp Reclamation Waypoint [&BO8JAAA=]. While this is a "node farm", there a lot of free chests that are along the way. This will net lots of Unidentified Gear while obtaining Elder Wood Logs. It is best to have the Shrines unlocked in the map. I did this in about 8-9 characters to acehieve a 1 hour farm. 
+			Start at Camp Reclamation Waypoint [&BO8JAAA=]. While this is a "node farm", there a lot of free chests that are along the way. This will net lots of Unidentified Gear while obtaining Elder Wood Logs. It is best to have the Shrines unlocked in the map. I did this in about 10-11 characters in 1 hour. 
 			<br><br>
 			While this farm uses specific Glyphs, check out the <a href = "../gathering.html#calculator" target = "_blank"><u> Node Farm Calcaulator</u></a> to test out the estimated profits with different Glyphs. 
 		</div>
@@ -373,7 +372,7 @@
 		<script> getGatheringBenchmark("benchmark-table","Siren's Landing Node Farm (w/ Volatile)"); </script>
 
 		<!-- Gathering Picture -->
-		<div class = "page-gathering-picture">
+		<div class = "page-picture">
 			<img title = "Siren's Landing" style = "width: 70%;" src = "../images/sirens-landing/node-farm.jpg">
 		</div>
 	</div> <!-- End of page-box -->

@@ -165,54 +165,32 @@ class Chests extends BenchmarksDB{
 		// Check if there's any rows 
 		// If yes => Update data
 		// If no => Create table and fill in data
-		if ($resultEmpty->rowCount() > 0){
-			foreach ($chestData['spreadsheet'] as $chestSS){
-				$type = $chestSS['type'];
-				$map = $chestSS['map']; 
-				$chest = $chestSS['chest'];
-				$value = $chestSS['benchmark'];
-
-				// Insert into DB
-				$sql = "UPDATE chests
-				SET type = '$type', map = '$map', chest = '$chest', value = '$value'
-				WHERE map = '$map',;";
-				// Execute the SQL stmt 
-				$stmt = $this->connect()->exec($sql);
-			}
-		} else {
-			foreach ($chestData['spreadsheet'] as $chestSS){
-				$item = $chestSS['item'];
-				$worth = $chestSS['worth']; 
-				$sql = "INSERT IGNORE INTO nodes (node, value)
-				VALUES ('$item', '$worth');";
-				// Execute the SQL stmt 
-				$stmt = $this->connect()->exec($sql);
-			}
-		}
-
 		foreach ($chestData['spreadsheet'] as $chestSS){
 			$type = $chestSS['type'];
-			$map = $chestSS['map']; 
+			$map = addslashes($chestSS['map']); 
 			$chest = $chestSS['chest'];
 			$value = $chestSS['benchmark'];
-
-			$sql = "INSERT IGNORE INTO chests (type, map, chest, value)
-			VALUES ('$type', '$map', '$chest', '$value')
-			ON DUPLICATE KEY UPDATE 
-				glyph = VALUES(glyph),
-				tool = VALUES(tool),
-				level = VALUES(level),
-				value_per_strike = VALUES(value_per_strike),
-				value_per_node = VALUES(value_per_node);";
-			$stmt = $this->connect()->exec($sql);
+			// Check if there's no value at all
+			// If yes => skip, continue loop
+			// Otherwise => print to sql db
+			if ($value == ""){
+				echo "value: ".$value;
+				continue;
+			} else {
+				$sql = "INSERT IGNORE INTO chests (type, map, chest, value)
+				VALUES ('$type', '$map', '$chest', '$value')
+				ON DUPLICATE KEY UPDATE 
+					type = VALUES(type),
+					map = VALUES(map),
+					chest = VALUES(chest),
+					value = VALUES(value);";
+				$stmt = $this->connect()->exec($sql);
+			}
 		}
-		
 	}
-	// Return only a specific map
-	// ex: $request = "Sandswept Isles"
-	public function get_specific_map($request){
-		$sql = "SELECT * FROM `gathering` WHERE `name` LIKE '$request' ORDER BY `gold_per_hour` DESC";
-
+	public function get_values(){
+		// Get full table and sort by gold_per_hour col and descending
+		$sql = "SELECT * FROM chests ORDER BY value DESC";
 		$result = $this->connect()->query($sql);
 		// Create empty array
 		$array = Array();
@@ -474,5 +452,8 @@ $glyphsDB = new Glyphs();
 //$glyphsDB->set_values();
 
 $gatheringDB = new Gathering(); 
+
+// Chests
+$chestsDB = new Chests(); 
 
 ?>
