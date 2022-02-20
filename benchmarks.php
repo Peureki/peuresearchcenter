@@ -10,9 +10,10 @@
 	<title> Benchmarks </title>
 	<script> 
 		// AJAX to show the gathering farm once users have selected the drop down menu of gathering farms
-		function show_gathering_farm(str) {
+		function get_gathering_farm(str) {
+			console.log("this is gathering farm");
 			let div = document.getElementById('gathering-map-tableData'),
-				loading = document.getElementById('loading-choya');
+				loading = document.getElementById('loading-choya-1');
 			// Show the loading choya when collecting data
 			loading.style.display = "block"; 
 			// If none selected, show nothing
@@ -35,6 +36,41 @@
 		      	}
 		    };
 		    xmlhttp.open("GET","./js-to-php/get-specific-gathering-map.php?q="+str,true);
+		    xmlhttp.send();
+		  }
+		}
+
+		// AJAX to show the gathering tools once users have selected the drop down menu of gathering farms
+		function get_gathering_tools(userPick, userAxe, userSickle) {
+			console.log("this is gathering tools");
+			let div = document.getElementById('gathering-specific-tools-tableData'),
+				pick = document.getElementById(userPick).value, 
+				axe = document.getElementById(userAxe).value,
+				sickle = document.getElementById(userSickle).value,
+				loading = document.getElementById('loading-choya-2');
+			// Show the loading choya when collecting data
+			loading.style.display = "block"; 
+			// If none selected, show nothing
+		  	if (userPick == "" || userAxe == "" || userSickle == "") {
+		    	div.innerHTML = "";
+		    	return;
+		  	} else {
+		  		// Otherwise, send request to php file that collects data
+		    	var xmlhttp = new XMLHttpRequest();
+		    	xmlhttp.onreadystatechange = function() {
+		      	if (this.readyState == 4 && this.status == 200) {
+		        	div.innerHTML = this.responseText;
+		        	// Check if the php file contains <script> tags. 
+		        	// Activate them
+		        	// If we don't do this, it will show up as regular text and not work
+		        	let arr = div.getElementsByTagName('script')
+		        	console.log(div);
+					for (let n = 0; n < arr.length; n++)
+					    eval(arr[n].innerHTML)//run script inside div
+					loading.style.display = "none"; 
+		      	}
+		    };
+		    xmlhttp.open("GET","./js-to-php/get-specific-tools.php?q="+pick+","+axe+","+sickle,true);
 		    xmlhttp.send();
 		  }
 		}
@@ -280,7 +316,7 @@
 		</div>
 
 		<form method = "GET" action = "" class = "benchmark-form">
-			<select name = "node-farm" id = "node-farm" name = "node-farm" onchange="show_gathering_farm(this.value);">
+			<select name = "node-farm" id = "node-farm" name = "node-farm" onchange="get_gathering_farm(this.value);">
 				<option value = "" disabled selected> Pick Node Farm </option>
 				<option value = "Bjora Marches"> Bjora Marches </option>
 				<option value = "Bloodstone Fen"> Bloodstone Fen </option>
@@ -299,7 +335,7 @@
 				<option value = "Timberline Falls"> Timberline Falls </option>
 				<option value = "Winterberry"> Winterberry </option>-->
 			</select>
-			<img src = "./images/assets/rolling-choya.png" id = "loading-choya">
+			<img src = "./images/assets/rolling-choya.png" id = "loading-choya-1">
 		</form>
 
 		<table id = 'gathering-benchmarks' class = 'gathering-benchmarks'> 
@@ -315,6 +351,74 @@
 				</tr>
 			</thead>
 			<tbody id = 'gathering-map-tableData'>
+			</tbody>
+		</table>
+
+		<div class = "small-description-center">
+			Choose a combination of glyphs and see what the best estimated farms would be. 
+		</div>
+
+		<form method = "GET" action = "" class = "benchmark-form">
+			<select name = "node-farm" id = "node-pick" name = "node-farm">
+				<option value = "" disabled selected> Pick </option>
+				<option value = "Bounty"> Bounty </option>
+				<option value = "Forester"> Forester </option>
+				<option value = "Herbalist"> Herbalist </option>
+				<option value = "Leatherworker"> Leatherworker </option>
+				<option value = "Prospector"> Prospector </option>
+				<option value = "Scavenger"> Scavenger </option>
+				<option value = "Tailor"> Tailor </option>
+				<option value = "Unbound"> Unbound </option>
+				<option value = "Volatile"> Volatile </option>
+				<option value = "Watchknight"> Watchknight </option>
+			</select>
+
+			<select name = "node-farm" id = "node-axe" name = "node-farm">
+				<option value = "" disabled selected> Axe </option>
+				<option value = "Bounty"> Bounty </option>
+				<option value = "Forester"> Forester </option>
+				<option value = "Herbalist"> Herbalist </option>
+				<option value = "Leatherworker"> Leatherworker </option>
+				<option value = "Prospector"> Prospector </option>
+				<option value = "Scavenger"> Scavenger </option>
+				<option value = "Tailor"> Tailor </option>
+				<option value = "Unbound"> Unbound </option>
+				<option value = "Volatile"> Volatile </option>
+				<option value = "Watchknight"> Watchknight </option>
+			</select>
+
+			<select name = "node-farm" id = "node-sickle" name = "node-farm">
+				<option value = "" disabled selected> Sickle </option>
+				<option value = "Bounty"> Bounty </option>
+				<option value = "Forester"> Forester </option>
+				<option value = "Herbalist"> Herbalist </option>
+				<option value = "Leatherworker"> Leatherworker </option>
+				<option value = "Prospector"> Prospector </option>
+				<option value = "Scavenger"> Scavenger </option>
+				<option value = "Tailor"> Tailor </option>
+				<option value = "Unbound"> Unbound </option>
+				<option value = "Volatile"> Volatile </option>
+				<option value = "Watchknight"> Watchknight </option>
+			</select>
+
+			<input class = "select-button" type = "button" value = "Enter Selection" onclick = "get_gathering_tools('node-pick', 'node-axe', 'node-sickle');">
+
+			<img src = "./images/assets/rolling-choya.png" id = "loading-choya-2">
+		</form>
+
+		<table id = 'gathering-specific-tools' class = 'gathering-benchmarks'> 
+			<thead> 
+				<tr>
+					<th onclick = "sortTableByAlphabet('gathering-benchmarks', 0);"> Map </th>
+					<th onclick = "sortTableByPrice('gathering-benchmarks', 1);"> Pick </th>
+					<th onclick = "sortTableByPrice('gathering-benchmarks', 2);"> Axe </th>
+					<th onclick = "sortTableByPrice('gathering-benchmarks', 3);"> Sickle </th>
+					<th onclick = "sortTableByPrice('gathering-benchmarks', 4);"> Gold/Hour </th>
+					<th onclick = "sortTableByPrice('gathering-benchmarks', 4);"> Gold/Char </th>
+					<th onclick = "sortTableByPrice('gathering-benchmarks', 4);"> Time/Char </th>
+				</tr>
+			</thead>
+			<tbody id = 'gathering-specific-tools-tableData'>
 			</tbody>
 		</table>
 	</div>

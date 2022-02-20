@@ -3669,6 +3669,8 @@ table.other-benchmarks td:nth-child(1){
 .benchmark-form select{
 	background-color: var(--clr-bkg);
 	border: 2px solid var(--clr-border);
+	margin-left: 5px;
+	margin-right: 5px;
 	color: var(--clr-text);
 	font-weight: bold;
 	font-size: 20px;
@@ -4339,7 +4341,9 @@ table.trinket-slots img{
 	color: var(--clr-text);
 }
 .select-button{
-	background-color: rgba(236, 236, 220, .50);
+	background-color: var(--clr-bkg-button);
+	color: var(--clr-text);
+	border: 2px solid var(--clr-border);
     font-weight: bold;
     font-size: 15px;
     margin: 5px;

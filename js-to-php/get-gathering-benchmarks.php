@@ -32,6 +32,7 @@ function get_top_gathering_benchmarks(){
 			case "Mount Maelstrom": mapPage = "./gathering/mount-maelstrom-node-farm.php"; break;
 			case "Rich Nodes": mapPage = "./gathering/rich-node-farm.php"; break;
 			case "Sandswept Isles": mapPage = "./maps/sandswept-isles#node-farm.php"; break;
+			case "Siren's Landing": mapPage = "./maps/sirens-landing.php#node-farm"; break;
 			case "Sparkfly Fen": mapPage = "./gathering/sparkfly-fen-node-farm.php"; break; 
 		}
 

@@ -402,6 +402,11 @@
 
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
+					<span style = "font-weight: bold;">Feb 20, 2022</span>
+				<br>
+					- Added a revamped Siren's Landing Node Farm in <a href="./benchmarks.php"><u>Benchmarks</u></a>.
+					<br> - Added a new estimated gathering benchmark table that allows the user to select 3 different combinations of glyphs to output what would the best farms be in <a href="./benchmarks.php"><u>Benchmarks</u></a>. 
+				<br><br>
 					<span style = "font-weight: bold;">Feb 13, 2022</span>
 				<br>
 					- Added new benchmarks! In the <a href="./benchmarks.php"><u>Benchmarks</u></a>, there are new tables called "Estimated Gathering". This shows an estimate gold per hour (or per character) for a specific gathering run for every combination of glyphs. At the moment, it's only showing the top few as there are hundreds of different combinations per farm. 

@@ -7,6 +7,7 @@ set_time_limit(1000);
 //Gathering DBs
 $nodesDB->set_values(); 
 $glyphsDB->set_values();
+$chestsDB->set_values();
 ?>
 
 <?php

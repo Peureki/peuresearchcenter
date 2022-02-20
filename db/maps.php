@@ -436,6 +436,29 @@ class Gathering extends BenchmarksDB{
 		$json = json_encode($array);
 		return $json;
 	}
+	// Return gathering farms based on the user's selection of tools
+	// Ex: Leatherworker, Leatherworker, Leatherwork
+	// Return all benchmarks with leatherworker
+	public function get_specific_tools($pick, $axe, $sickle){
+		$sql = "SELECT * FROM `gathering` 
+		WHERE (pick = 'N/A' OR pick = '$pick')
+		AND (axe = 'N/A' OR axe = '$axe')
+    	AND (sickle = 'N/A' OR sickle = '$sickle')
+		ORDER BY gold_per_hour DESC;";
+
+		$result = $this->connect()->query($sql);
+		// Create empty array
+		$array = Array();
+		// Go thru DB and fetch contents into array
+		while($row = $result->fetch()){
+			$array[] = $row; 
+		}
+		$pdo = null; 
+
+		// Create JSON from the array
+		$json = json_encode($array);
+		return $json;
+	}
 
 }
 
