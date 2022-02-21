@@ -3,9 +3,9 @@
 	include_once '../db/maps.php'; 	
 ?>
 <script>
-//	===========================================================================
-//  ========================== BENCHMARKS =====================================
-// 	===========================================================================
+//	===============================================================================
+//  ========================== MAP BENCHMARKS =====================================
+// 	===============================================================================
 // Grabs all the benchmarks from the main Google Spreadsheet: 
 function getBenchmarkAll(table, image){
 
@@ -38,8 +38,6 @@ function getBenchmarkAll(table, image){
 		maps_1w = <?php echo $mapsDB->getMaps("maps_1w"); ?>;
 
 	let maps_now = <?php echo $mapsDB->getMaps("maps"); ?>;
-
-	console.log(maps_now, maps_24hr);
 
 	//Loop through all of the named benchmarks until there's an empy cell in the spreadsheet
 	//Places those data into the empty data table
@@ -560,5 +558,107 @@ function select_option(selectedIndex){
 		
 		default: sortTableByPrice('benchmarks', 5); break;
 	}
+}
+//	=======================================================================================
+//  ========================== ALT PARKING BENCHMARKS =====================================
+// 	=======================================================================================
+function get_alt_benchmarks(){
+	let altData = <?php echo $altParkingDB->get_values(); ?>;
+	let table = document.getElementById('alt-tableData'),
+		dataHTML = ``;
+
+
+	let bkg = "";
+	// Go thru entire list of alts
+	for (let i = 0; i < altData.length; i++){
+		// Check if the chest is repeatable or a daily
+		// Change color of bkg depending on what it is
+		switch(altData[i].type){
+			case "Gathering": bkg = "#fab52a"; break;
+			case "Jumping Puzzle": bkg = "#C4B4E9"; break; 
+			case "Mixed": bkg = "#EAD1DC"; break;
+		}
+
+		dataHTML += `<tr>
+		<td style = "background-color:${bkg}"> ${altData[i].type} </td>
+		<td> ${altData[i].repeatable} </td>
+		<td>${altData[i].map}</td>
+		<td>${altData[i].name}</td>
+		<td> ${displayValues(altData[i].value, 0)} </td>
+		<td onclick = "infoBox(this);" style = "cursor: pointer;"><img src = "./images/assets/info.png" style = "margin: -8px;"></td>
+		</tr>
+		`;
+	}
+	table.innerHTML = dataHTML;
+
+
+}
+
+//	=================================================================================
+//  ========================== CHEST BENCHMARKS =====================================
+// 	=================================================================================
+function get_chest_benchmarks(){
+	let chestData = <?php echo $chestsDB->get_values(); ?>; 
+	let table = document.getElementById('chest-tableData'),
+		dataHTML = ``;
+
+	let bkg = ""; 
+	// Go thru entire list of chests
+	for (let i = 0; i < chestData.length; i++){
+		// Check if the chest is repeatable or a daily
+		// Change color of bkg depending on what it is
+		switch(chestData[i].type){
+			case "Repeatable": bkg = "#4CCD38"; break;
+			case "Daily": bkg = "#84F473"; break; 
+		}
+
+		dataHTML += `<tr>
+		<td style = "background-color:${bkg}"> ${chestData[i].type} </td>
+		<td> ${chestData[i].map} </td>
+		<td> ${chestData[i].chest} </td>
+		<td> ${displayValues(chestData[i].value, 0)} </td>
+		</tr>
+		`;
+	} 
+	table.innerHTML = dataHTML; 
+}
+
+//	=================================================================================
+//  ========================== METAS BENCHMARKS =====================================
+// 	=================================================================================
+function get_meta_benchmarks(){
+	let metaData = <?php echo $metasDB->get_values(); ?>;
+	let table = document.getElementById('meta-tableData'),
+		dataHTML = ``;
+
+
+	let bkg = "";
+	// Go thru entire list of metas
+	for (let i = 0; i < metaData.length; i++){
+		// Check if the chest is repeatable or a daily
+		// Change color of bkg depending on what it is
+		switch(metaData[i].type){
+			case "Repeatable": bkg = "#4CCD38"; break;
+			case "Daily": bkg = "#84F473"; break; 
+		}
+		let time = metaData[i].time.substring(4, 8); 
+
+		dataHTML += `<tr>
+		<td style = "background-color:${bkg}"> ${metaData[i].type} </td>
+		<td> ${metaData[i].map} </td>
+		<td> ${metaData[i].meta} </td>
+		<td> ${time} </td>
+		<td> ${displayValues(metaData[i].gold_per_min, 0)} </td>
+		<td> ${displayValues(metaData[i].total_gold, 0)} </td>
+		<td> ${metaData[i].karma} </td>
+		<td> ${metaData[i].spirit_shards} </td>
+		<td> ${metaData[i].trade_contracts} </td>
+		<td> ${metaData[i].elegy_mosaics} </td>
+		<td> ${metaData[i].unbound_magic} </td>
+		<td> ${metaData[i].volatile_magic} </td>
+		</tr>
+		`;
+	}
+	table.innerHTML = dataHTML;
 }
 </script>

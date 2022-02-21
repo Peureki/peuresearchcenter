@@ -7,5 +7,7 @@
 <?php 
 	// Set benchmarks
 	$mapsDB->setMaps('maps');
+	$altParkingDB->set_values();
 	$chestsDB->set_values();
+	$metasDB->set_values();
 ?>

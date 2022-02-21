@@ -1045,227 +1045,6 @@ async function getGatheringBenchmarkAll(table, image){
 	sortTableByGPH('benchmarks',2);
 }
 
-// Grabs all the meta benchmarks from the main Google Spreadsheet: 
-async function getMetaBenchmarkAll(table){
-
-	//Grabs the JSON URL file from the Google App Script 
-	const api_url = 'https://script.google.com/macros/s/AKfycbx-5f0DZD1b1TUkZTEd_-Suit3MGIfrfptc19RZ/exec';
-	const response = await fetch(api_url);
-	const data = await response.json();
-
-	//The table that all the data will be sto#802020 in
-	const tableBody = document.getElementById('meta-tableData');
-	var tableName = document.getElementById(table);
-
-	tableName.style.opacity = 1;
-
-	//Empty data table
-	let dataHTML = '';
-
-	var count = 0;
-	//Loop through all of the named benchmarks until there's an empy cell in the spreadsheet
-	//Places those data into the empty data table
-	for (i = 0; i < data.spreadsheet.length; i++){
-		if (data.spreadsheet[i].farmtype != ""){
-
-			count++; 
-
-			var background_color = "";
-
-			switch(data.spreadsheet[i].farmtype){
-
-				case "R":
-				data.spreadsheet[i].farmtype = "Repeatable";
-				background_color = "#4ccd38";
-				break;
-
-				case "D":
-				data.spreadsheet[i].farmtype = "Daily";
-				background_color = "#84F473";
-				break;
-
-				case "G":
-				data.spreadsheet[i].farmtype = "Gathering";
-				background_color = "#fab52a";
-				break;
-
-				case "S":
-				data.spreadsheet[i].farmtype = "Solo";
-				background_color = "#1f8ce7";
-				break;
-			}
-
-			
-			const karma = Math.floor(data.spreadsheet[i].karma);
-			const spiritshard = Math.floor(data.spreadsheet[i].spiritshard);
-			const tradecontract = Math.floor(data.spreadsheet[i].tradecontract);
-			const elegymosaic = Math.floor(data.spreadsheet[i].elegymosaic);
-			const unboundmagic = Math.floor(data.spreadsheet[i].unboundmagic);
-			const volatilemagic = Math.floor(data.spreadsheet[i].volatilemagic);
-
-			var time = Math.floor(data.spreadsheet[i].time), 
-				hours = Math.floor(time / 100),
-				minutes = time % 100; 
-
-			if (minutes < 10){
-				minutes = "0" + minutes; 
-			}
-
-			time = hours + ":" + minutes;
-
-			var link = '';
-
-			switch (data.spreadsheet[i].map){
-				case "Amal / Key Metas (PoF/LS4 & 5)":
-				link = "./maps/amal-key-metas.php";
-				break;
-			}
-		
-			dataHTML += `<tr>
-			<td style = "background-color:${background_color}">${data.spreadsheet[i].farmtype}</td>
-			<td onclick = "location.href = '${link}'" >${data.spreadsheet[i].map}</td>
-			<td>${time}</td>
-			<td>${format_values(data.spreadsheet[i].goldss).gold}${format_values(data.spreadsheet[i].goldss).silver}${format_values(data.spreadsheet[i].goldss).copper}</td>
-			<td>${format_values(data.spreadsheet[i].gold).gold}${format_values(data.spreadsheet[i].gold).silver}${format_values(data.spreadsheet[i].gold).copper}</td>
-			<td>${karma}</td>
-			<td>${spiritshard}</td>
-			<td>${tradecontract}</td>
-			<td>${elegymosaic}</td> 
-			<td>${unboundmagic}</td>
-			<td>${volatilemagic}</td>
-			</tr>`;
-
-		} else {
-			break;
-		}
-	}
-	//Magic
-	tableBody.innerHTML = dataHTML;
-	sortTableByPrice('meta-benchmarks', 3);
-
-}
-
-// Grabs all the open world chests 
-async function getChestBenchmarkAll(table){
-
-	//Grabs the JSON URL file from the Google App Script 
-	const api_url = 'https://script.google.com/macros/s/AKfycbyXE3uJeUftQvlzCorAJ_DL4fsZa25GVx16Pr8MyX99DaZ2q6HX9mamMw/exec';
-	const response = await fetch(api_url);
-	const data = await response.json();
-
-	//The table that all the data will be sto#802020 in
-	const tableBody = document.getElementById('chest-tableData');
-	var tableName = document.getElementById(table);
-
-	tableName.style.opacity = 1;
-
-	//Empty data table
-	let dataHTML = '';
-
-	var count = 0;
-	//Loop through all of the named benchmarks until there's an empy cell in the spreadsheet
-	//Places those data into the empty data table
-	for (i = 0; i < data.spreadsheet.length; i++){
-		if (data.spreadsheet[i].type != ""){
-
-			count++; 
-
-			var background_color = "";
-
-			switch(data.spreadsheet[i].type){
-
-				case "R":
-				data.spreadsheet[i].type = "Repeatable";
-				background_color = "#4ccd38";
-				break;
-
-				case "D":
-				data.spreadsheet[i].type = "Daily";
-				background_color = "#84F473";
-				break;
-			}
-		
-			dataHTML += `<tr>
-			<td style = "background-color:${background_color}">${data.spreadsheet[i].type}</td>
-			<td>${data.spreadsheet[i].map}</td>
-			<td>${data.spreadsheet[i].chest}</td>
-			<td>${format_values(data.spreadsheet[i].benchmark).gold}${format_values(data.spreadsheet[i].benchmark).silver}${format_values(data.spreadsheet[i].benchmark).copper}</td>
-			</tr>`;
-
-		} else {
-			break;
-		}
-	}
-	//Magic
-	tableBody.innerHTML = dataHTML;
-	sortTableByPrice('chest-benchmarks', 3);
-
-}
-
-// Grabs all the alt parking benchmarks 
-async function getAltBenchmarkAll(table){
-
-	//Grabs the JSON URL file from the Google App Script 
-	const api_url = 'https://script.google.com/macros/s/AKfycbzfNQgjkDxz5yMDTEbhXFGU7_AQL4GUuxf-iBYc-togAvRBrhWjuQcAtw/exec';
-	const response = await fetch(api_url);
-	const data = await response.json();
-
-	//The table that all the data will be sto#802020 in
-	const tableBody = document.getElementById('alt-tableData');
-	var tableName = document.getElementById(table);
-
-	tableName.style.opacity = 1;
-
-	//Empty data table
-	let dataHTML = '';
-
-	var count = 0;
-	//Loop through all of the named benchmarks until there's an empy cell in the spreadsheet
-	//Places those data into the empty data table
-	for (i = 0; i < data.spreadsheet.length; i++){
-		if (data.spreadsheet[i].type != ""){
-
-			count++; 
-
-			var background_color = "";
-
-			switch(data.spreadsheet[i].type){
-
-				case "G":
-				data.spreadsheet[i].type = "Gathering";
-				background_color = "#fab52a";
-				break;
-
-				case "JP":
-				data.spreadsheet[i].type = "Jumping Puzzle";
-				background_color = "#C4B4E9";
-				break;
-
-				case "M":
-				data.spreadsheet[i].type = "Mix";
-				background_color = "#EAD1DC";
-				break;
-			}
-		
-			dataHTML += `<tr>
-			<td style = "background-color:${background_color}">${data.spreadsheet[i].type}</td>
-			<td>${data.spreadsheet[i].repeat}</td>
-			<td>${data.spreadsheet[i].map}</td>
-			<td style = "text-align: left;">${data.spreadsheet[i].name}</td>
-			<td>${format_values(data.spreadsheet[i].benchmark).gold}${format_values(data.spreadsheet[i].benchmark).silver}${format_values(data.spreadsheet[i].benchmark).copper}</td>
-			<td onclick = "infoBox(this);" style = "cursor: pointer;"><img src = "./images/assets/info.png" style = "margin: -8px;"></td>
-			</tr>`;
-
-		} else {
-			break;
-		}
-	}
-	//Magic
-	tableBody.innerHTML = dataHTML;
-	sortTableByPrice('alt-benchmarks', 4);
-
-}
-
 function closeBox(div){
 	div.parentNode.style.display = "none";
 }
@@ -1281,50 +1060,48 @@ function infoBox(td){
 			altBox[i].style.display = "none";
 		}
 	}
-
+	removeAltBoxes();
 	switch (mapName){
-		case "Bitterfrost Frontier": removeAltBoxes(); document.getElementById('alt-bitterfrost').style.display = "block"; break;
-		case "Bjora Marches": removeAltBoxes(); document.getElementById('alt-bjora').style.display = "block"; break;
-		case "Blazeridge Steppes": removeAltBoxes(); document.getElementById('alt-blazeridge').style.display = "block"; break;
-		case "Bloodtide Coast": removeAltBoxes(); document.getElementById('alt-bloodtide').style.display = "block"; break;
-		case "Brisband Wildlands": removeAltBoxes(); document.getElementById('alt-brisband').style.display = "block"; break;
-		case "Caledon Forest": removeAltBoxes(); document.getElementById('alt-caledon').style.display = "block"; break;
-		case "Crystal Oasis": removeAltBoxes(); document.getElementById('alt-crystal').style.display = "block"; break;
-		case "Desert Highlands": removeAltBoxes(); document.getElementById('alt-desert').style.display = "block"; break;
-		case "Desolation": removeAltBoxes(); document.getElementById('alt-desolation').style.display = "block"; break;
-		case "Diessa Plateau": removeAltBoxes(); document.getElementById('alt-diessa').style.display = "block"; break;
-		case "Domain of Kourna": removeAltBoxes(); document.getElementById('alt-kourna').style.display = "block"; break;
-		case "Domain of Vabbi": removeAltBoxes(); document.getElementById('alt-vabbi').style.display = "block"; break;
-		case "Draconis Mons": removeAltBoxes(); document.getElementById('alt-draconis').style.display = "block"; break;
-		case "D#802020gehaunt Cliffs": removeAltBoxes(); document.getElementById('alt-d#802020gehaunt').style.display = "block"; break;
-		case "Drizzlewood Coast": removeAltBoxes(); document.getElementById('alt-drizzlewood').style.display = "block"; break;
-		case "Dry Top": removeAltBoxes(); document.getElementById('alt-drytop').style.display = "block"; break;
-		case "Ember Bay": removeAltBoxes(); document.getElementById('alt-ember').style.display = "block"; break;
-		case "Field of Ruins": removeAltBoxes(); document.getElementById('alt-field').style.display = "block"; break;
-		case "Fireheart Rise": removeAltBoxes(); document.getElementById('alt-fireheart').style.display = "block"; break;
-		case "Frostgorge Sound": removeAltBoxes(); document.getElementById('alt-frostgorge').style.display = "block"; break;
-		case "Gendarran Fields": removeAltBoxes(); document.getElementById('alt-gendarran').style.display = "block"; break;
-		case "Harathi Hinterlands": removeAltBoxes(); document.getElementById('alt-harathi').style.display = "block"; break;
-		case "Iron Marches": removeAltBoxes(); document.getElementById('alt-iron').style.display = "block"; break;
-		case "Kessex Hills": removeAltBoxes(); document.getElementById('alt-kessex').style.display = "block"; break;
-		case "Lion's Arch": removeAltBoxes(); document.getElementById('alt-lions').style.display = "block"; break;
-		case "Lornar's Pass": removeAltBoxes(); document.getElementById('alt-lornars').style.display = "block"; break;
-		case "Malchor's Leap": removeAltBoxes(); document.getElementById('alt-malchors').style.display = "block"; break;
-		case "Metrica Province": removeAltBoxes(); document.getElementById('alt-metrica').style.display = "block"; break;
-		case "Mount Maelstrom": removeAltBoxes(); document.getElementById('alt-mount').style.display = "block"; break;
-		case "Plains of Ashford": removeAltBoxes(); document.getElementById('alt-plains').style.display = "block"; break;
-		case "Queensdale": removeAltBoxes(); document.getElementById('alt-queensdale').style.display = "block"; break;
-		case "Sandswept Isles": removeAltBoxes(); document.getElementById('alt-sandswept').style.display = "block"; break;
-		case "Siren's Landing": removeAltBoxes(); document.getElementById('alt-sirens').style.display = "block"; break;
-		case "Snowden Drifts": removeAltBoxes(); document.getElementById('alt-snowden').style.display = "block"; break;
-		case "Straits of Devestation": removeAltBoxes(); document.getElementById('alt-straits').style.display = "block"; break;
-		case "Tangled Depths": removeAltBoxes(); document.getElementById('alt-tangled').style.display = "block"; break;
-		case "Thunderhead Peaks": removeAltBoxes(); document.getElementById('alt-thunderhead').style.display = "block"; break;
-		case "Timberline Falls": removeAltBoxes(); document.getElementById('alt-timber').style.display = "block"; break;
-		case "Variety": removeAltBoxes(); document.getElementById('alt-variety').style.display = "block"; break;
-		case "Verdant Brink": removeAltBoxes(); document.getElementById('alt-verdant').style.display = "block"; break;
-		
-
+		case "Bitterfrost Frontier": document.getElementById('alt-bitterfrost').style.display = "block"; break;
+		case "Bjora Marches": document.getElementById('alt-bjora').style.display = "block"; break;
+		case "Blazeridge Steppes": document.getElementById('alt-blazeridge').style.display = "block"; break;
+		case "Bloodtide Coast": document.getElementById('alt-bloodtide').style.display = "block"; break;
+		case "Brisband Wildlands": document.getElementById('alt-brisband').style.display = "block"; break;
+		case "Caledon Forest": document.getElementById('alt-caledon').style.display = "block"; break;
+		case "Crystal Oasis": document.getElementById('alt-crystal').style.display = "block"; break;
+		case "Desert Highlands": document.getElementById('alt-desert').style.display = "block"; break;
+		case "Desolation": document.getElementById('alt-desolation').style.display = "block"; break;
+		case "Diessa Plateau": document.getElementById('alt-diessa').style.display = "block"; break;
+		case "Domain of Kourna": document.getElementById('alt-kourna').style.display = "block"; break;
+		case "Domain of Vabbi": document.getElementById('alt-vabbi').style.display = "block"; break;
+		case "Draconis Mons": document.getElementById('alt-draconis').style.display = "block"; break;
+		case "Dredgehaunt Cliffs": document.getElementById('alt-dredgehaunt').style.display = "block"; break;
+		case "Drizzlewood Coast": document.getElementById('alt-drizzlewood').style.display = "block"; break;
+		case "Dry Top": document.getElementById('alt-drytop').style.display = "block"; break;
+		case "Ember Bay": document.getElementById('alt-ember').style.display = "block"; break;
+		case "Field of Ruins": document.getElementById('alt-field').style.display = "block"; break;
+		case "Fireheart Rise": document.getElementById('alt-fireheart').style.display = "block"; break;
+		case "Frostgorge Sound": document.getElementById('alt-frostgorge').style.display = "block"; break;
+		case "Gendarran Fields": document.getElementById('alt-gendarran').style.display = "block"; break;
+		case "Harathi Hinterlands": document.getElementById('alt-harathi').style.display = "block"; break;
+		case "Iron Marches": document.getElementById('alt-iron').style.display = "block"; break;
+		case "Kessex Hills": document.getElementById('alt-kessex').style.display = "block"; break;
+		case "Lion's Arch": document.getElementById('alt-lions').style.display = "block"; break;
+		case "Lornar's Pass": document.getElementById('alt-lornars').style.display = "block"; break;
+		case "Malchor's Leap": document.getElementById('alt-malchors').style.display = "block"; break;
+		case "Metrica Province": document.getElementById('alt-metrica').style.display = "block"; break;
+		case "Mount Maelstrom": document.getElementById('alt-mount').style.display = "block"; break;
+		case "Plains of Ashford": document.getElementById('alt-plains').style.display = "block"; break;
+		case "Queensdale": document.getElementById('alt-queensdale').style.display = "block"; break;
+		case "Sandswept Isles": document.getElementById('alt-sandswept').style.display = "block"; break;
+		case "Siren's Landing": document.getElementById('alt-sirens').style.display = "block"; break;
+		case "Snowden Drifts": document.getElementById('alt-snowden').style.display = "block"; break;
+		case "Straits of Devestation": document.getElementById('alt-straits').style.display = "block"; break;
+		case "Tangled Depths": document.getElementById('alt-tangled').style.display = "block"; break;
+		case "Thunderhead Peaks": document.getElementById('alt-thunderhead').style.display = "block"; break;
+		case "Timberline Falls": document.getElementById('alt-timber').style.display = "block"; break;
+		case "Variety": document.getElementById('alt-variety').style.display = "block"; break;
+		case "Verdant Brink": document.getElementById('alt-verdant').style.display = "block"; break;
 	}
 }
 
@@ -1536,7 +1313,7 @@ async function getOres(table){
 	const data_info = await response_info.json();
 
 	//The table that all the data will be sto#802020 in
-	const tableBody = document.getElementById('o#802020ata');
+	const tableBody = document.getElementById('oreData');
 	var tableName = document.getElementById(table);
 
 	tableName.style.opacity = 1;
@@ -2256,7 +2033,7 @@ async function getWoodNodes(table, image){
 			pic = "./images/assets/nodes/Hard_Wood_Log.png";
 			break;
 
-			case "#802020 Oak Sapling":
+			case "Red Oak Sapling":
 			pic = "./images/assets/nodes/Elder_Wood_Log.png";
 			break; 
 
@@ -2467,7 +2244,7 @@ async function getPlantNodes(table, image){
 			break;
 
 			case "Lentil":
-			pic = "./images/assets/nodes/Handful_of_#802020_Lentils.png"; 
+			pic = "./images/assets/nodes/Handful_of_Red_Lentils.png"; 
 			break;
 
 			case "Lettuce":

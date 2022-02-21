@@ -1,18 +1,62 @@
-<?php 
+<?php
+// Include creds 
+chdir(dirname(__FILE__));
+include "../db/class.php"; 
 
-class BenchmarksDB{
-	private $host = "localhost";
-	private $user = "root";
-	private $pwd = "";
-	private $dbName = "benchmarks";
+class AltParking extends BenchmarksDB{
+	public function set_values(){
+		$altAPI = file_get_contents("https://script.google.com/macros/s/AKfycbzfNQgjkDxz5yMDTEbhXFGU7_AQL4GUuxf-iBYc-togAvRBrhWjuQcAtw/exec");
+		$altData = json_decode($altAPI, TRUE);
 
-	protected function connect(){
-		$dsn = "mysql:host=" . $this->host . ";dbname=" . $this->dbName; 
-		$pdo = new PDO($dsn, $this->user, $this->pwd);
-		$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-		return $pdo;
+		// Check if the table is empty or not
+		$checkEmpty = "SELECT * FROM nodes"; 
+		$resultEmpty = $this->connect()->query($checkEmpty);
+		// Check if there's any rows 
+		// If yes => Update data
+		// If no => Create table and fill in data
+		foreach ($altData['spreadsheet'] as $altSS){
+			$type = $altSS['type'];
+			$repeat = $altSS['repeat']; 
+			$map = addslashes($altSS['map']);
+			$name = addslashes($altSS['name']);
+			$value = $altSS['benchmark'];
+			// Check if there's no value at all
+			// If yes => skip, continue loop
+			// Otherwise => print to sql db
+			if ($value == ""){
+				echo "value: ".$value;
+				continue;
+			} else {
+				$sql = "INSERT IGNORE INTO alt_parking (type, repeatable, map, name, value)
+				VALUES ('$type', '$repeat', '$map', '$name', '$value')
+				ON DUPLICATE KEY UPDATE 
+					type = VALUES(type),
+					repeatable = VALUES(repeatable),
+					map = VALUES(map),
+					name = VALUES(name),
+					value = VALUES(value);";
+				$stmt = $this->connect()->exec($sql);
+			}
+		}
+	}
+	public function get_values(){
+		// Get full table and sort by gold_per_hour col and descending
+		$sql = "SELECT * FROM alt_parking ORDER BY value DESC";
+		$result = $this->connect()->query($sql);
+		// Create empty array
+		$array = Array();
+		// Go thru DB and fetch contents into array
+		while($row = $result->fetch()){
+			$array[] = $row; 
+		}
+		$pdo = null; 
+
+		// Create JSON from the array
+		$json = json_encode($array);
+		return $json;
 	}
 }
+
 class Maps extends BenchmarksDB{
 	public function setMaps($table){
 		// Get JSON from Google Spreadsheet 
@@ -332,6 +376,73 @@ class Glyphs extends BenchmarksDB{
 	}
 }
 
+class Metas extends BenchmarksDB{
+	public function set_values(){
+		$metaAPI = file_get_contents("https://script.google.com/macros/s/AKfycbx-5f0DZD1b1TUkZTEd_-Suit3MGIfrfptc19RZ/exec");
+		$metaData = json_decode($metaAPI, TRUE);
+
+		// Check if the table is empty or not
+		$checkEmpty = "SELECT * FROM nodes"; 
+		$resultEmpty = $this->connect()->query($checkEmpty);
+		// Check if there's any rows 
+		// If yes => Update data
+		// If no => Create table and fill in data
+		foreach ($metaData['spreadsheet'] as $metaSS){
+			$type = $metaSS['farmtype'];
+			$map = addslashes($metaSS['map']); 
+			$meta = addslashes($metaSS['meta']);
+			$time = $metaSS['time'];
+			$total_gold = $metaSS['gold'];
+			$gold_per_min = $metaSS['goldss'];
+			$karma = $metaSS['karma'];
+			$spirit_shards = $metaSS['spiritshard'];
+			$trade_contracts = $metaSS['tradecontract'];
+			$elegy_mosaic = $metaSS['elegymosaic'];
+			$unbound_magic = $metaSS['unboundmagic'];
+			$volatile_magic = $metaSS['volatilemagic'];
+
+			// Check if there's any value in total_gold
+			// If not, skip the loop
+			if ($total_gold == ""){
+				continue;
+			} else {
+				$sql = "INSERT IGNORE INTO metas (type, map, meta, time, total_gold, gold_per_min, karma, spirit_shards, trade_contracts, elegy_mosaics, unbound_magic, volatile_magic)
+				VALUES ('$type', '$map', '$meta', '$time', '$total_gold', '$gold_per_min', '$karma', '$spirit_shards', '$trade_contracts', 'elegy_mosaics', '$unbound_magic', '$volatile_magic')
+				ON DUPLICATE KEY UPDATE 
+					type = VALUES(type),
+					map = VALUES(map),
+					meta = VALUES(meta),
+					time = VALUES(time),
+					total_gold = VALUES(total_gold),
+					gold_per_min = VALUES(gold_per_min),
+					karma = VALUES(karma),
+					spirit_shards = VALUES(spirit_shards),
+					trade_contracts = VALUES(trade_contracts),
+					elegy_mosaics = VALUES(elegy_mosaics),
+					unbound_magic = VALUES(unbound_magic),
+					volatile_magic = VALUES(volatile_magic);";
+				$stmt = $this->connect()->exec($sql);
+			}
+		}
+	}
+	public function get_values(){
+		// Get full table and sort by gold_per_hour col and descending
+		$sql = "SELECT * FROM metas ORDER BY gold_per_min DESC";
+		$result = $this->connect()->query($sql);
+		// Create empty array
+		$array = Array();
+		// Go thru DB and fetch contents into array
+		while($row = $result->fetch()){
+			$array[] = $row; 
+		}
+		$pdo = null; 
+
+		// Create JSON from the array
+		$json = json_encode($array);
+		return $json;
+	}
+}
+
 class Nodes extends BenchmarksDB{
 	public function set_values(){
 		$nodeAPI = file_get_contents("https://script.google.com/macros/s/AKfycbwS4UH9UXEsHuJGBYkmT2pEveLcW7eEyRqSLGwt7op-X3AWaEYw/exec");
@@ -476,7 +587,12 @@ $glyphsDB = new Glyphs();
 
 $gatheringDB = new Gathering(); 
 
+// Alt parking
+$altParkingDB = new AltParking();
+
 // Chests
 $chestsDB = new Chests(); 
 
+// Metas
+$metasDB = new Metas();
 ?>
