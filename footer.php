@@ -28,25 +28,31 @@
 <script>
 
 // For mobile
+// This is in the footer because page needs to load first to determine if it has a bookmark at all
+
 // Show button on the top left to remove and show the bookmarks on the side
 // It is defaulted to show it, but if there's a page where there isn't bookmarks, then it won't show at all
 function show_bookmark_left(button){
-	let bookmark_left = document.getElementById('bookmark-left');
+	let bookmark_left = document.getElementById('bookmark-left'),
+		width = window.innerWidth;
+		console.log("width:", width);
 	button = document.getElementById(button);
 	// Check if the page has the bookmarks at all
 	// If not, don't show the button
-	if (bookmark_left == null){
-		button.style.display = "none";
-	}
-	try{
-		if (bookmark_left.style.display == "block"){
-			bookmark_left.style.display = "none";
-			button.innerHTML = "\u2771";
-		} else {
-			bookmark_left.style.display = "block";
-			button.innerHTML = "\u2770"; 
+	if (width <= 600){
+		if (bookmark_left == null){
+			button.style.display = "none";
 		}
-	} catch (error){}
+		try{
+			if (bookmark_left.style.display == "none"){
+				bookmark_left.style.display = "block";
+				button.innerHTML = "\u2770";
+			} else {
+				bookmark_left.style.display = "none";
+				button.innerHTML = "\u2771"; 
+			}
+		} catch (error){}
+	}
 		
 }
 show_bookmark_left('bookmark-button');

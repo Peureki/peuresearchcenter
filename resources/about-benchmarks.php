@@ -1,23 +1,9 @@
 <!DOCTYPE html> 
 <html>
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160103677-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-160103677-1');
-	</script>
-	<title> About the Benchmarks </title>
-	
-	<!-- Initialize main files -->
-	<link id = "css-main" type = "text/css" rel = "stylesheet" href = "../styles.css">
-	<script id = "js-main" type = "text/javascript" src = "../script.js"></script>
-
-	<link rel = "shortcut icon" href = "../images/assets/peu-choya.png">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Defaults -->
+	<?php include('../config.php');?>
+	<title> About Benchmarks </title>
 </head>
 <body>
 	<?php

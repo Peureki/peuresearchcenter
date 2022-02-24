@@ -97,6 +97,14 @@
 		      <p1 id = "sidetimer-sandswept-9">7:00</p1>
 		      <p2 id = "numerical-sidetimer-sandswept-9">420</p2>
 	    	</div>
+
+	    	<div id = "sandswept-10-sidebox" class = "event-sidebox">
+		      <h1> Inquest Core </h1>
+		      <input type = "button" onclick = "start_stop(this, sandswept.events);" value = "Start" id = "sidetimer-sandswept-10-start">
+		      <input type = "button" onclick = "reset(this, sandswept.events);" value = "&#8635;" id = "sidetimer-sandswept-10-reset">
+		      <p1 id = "sidetimer-sandswept-10">12:00</p1>
+		      <p2 id = "numerical-sidetimer-sandswept-10">720</p2>
+	    	</div>
 	     
 	    
 	  </div> <!-- End of left side box --> 
@@ -117,6 +125,8 @@
 	  	Scarabs: <input type = "Checkbox" id = "sandswept-8-checkbox" checked = "true" onclick = "checkboxTimer(this, sandswept.events);">
 	  	<br>
 	  	Inquest Data: <input type = "Checkbox" id = "sandswept-9-checkbox" checked = "true" onclick = "checkboxTimer(this, sandswept.events);">
+	  	<br>
+	  	Inquest Core: <input type = "Checkbox" id = "sandswept-10-checkbox" checked = "true" onclick = "checkboxTimer(this, sandswept.events);">
 	  	<br><br>
 	  	Deselect bounties: <input type = "button" id = "sandswept-deselect" checked = "true" value = "&#x2637;" onclick = "sandswept_Deselect(this);" style = "background-color: #802020; color: white;">
 	  	<br><br>
@@ -332,6 +342,14 @@
        				onmouseover = "showElement('sandswept-img-7'); showElement('sandswept-img-8'); showElement('sandswept-img-9');"
        				onmouseout = "hideElement('sandswept-img-7'); hideElement('sandswept-img-8'); hideElement('sandswept-img-9');">
        			<br><p2 id = "timer-sandswept-9-text"></p2>	
+       		</div>
+
+       		<div class = "event-box" id = "sandswept-10-box">
+				<h1> Inquest Core </h1>
+       	 		<br><p1 id = "timer-sandswept-10">12:00</p1>
+        		<br><input type = "button" onclick = "start_stop(this, sandswept.events);" value = "Start" id = "timer-sandswept-10-start">
+       			<input type = "button" onclick = "reset(this, sandswept.events);" value = "&#8635;" id = "timer-sandswept-10-reset">
+       			<br><p2 id = "timer-sandswept-10-text"></p2>	
        		</div>
 
        		<!-- Bounty Icons --> 

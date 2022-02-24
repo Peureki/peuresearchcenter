@@ -1751,10 +1751,10 @@ b{
 .bookmark-button{
 	position: fixed;
 	top: 8%;
-	font-size: 20px;
+	font-size: 15px;
 	width: 5%;
 	text-align: center;
-	padding: 10px;
+	padding: 8px;
 	color: var(--clr-text);
 	border: 1px solid var(--clr-border);
 	background-color: var(--clr-bkg);
@@ -9462,6 +9462,10 @@ table.nodes td.nodes-cooldown{
 #sandswept-9-box { /* Inquest Data */
 	top: 56%;
 	right: 0%;
+}
+#sandswept-10-box { /* Inquest Core */
+	top: 51%;
+	right: 13%;
 }
 .sandswept-bounty-target-1 { /* Starcaller */
 	top: 6%;
