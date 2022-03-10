@@ -573,6 +573,65 @@ class Gathering extends BenchmarksDB{
 
 }
 
+class Fishing extends BenchmarksDB{
+	public function set_values(){
+		$fishingAPI = file_get_contents("https://script.google.com/macros/s/AKfycbxwrmQn4LFWBQSDpvrLvviW1OOqd3en1goVu6BBpZHObc_1O5drwCwQ_bqdUTMq-Uu3_w/exec");
+		$fishingData = json_decode($fishingAPI, TRUE);
+
+		// Check if the table is empty or not
+		$checkEmpty = "SELECT * FROM fishing"; 
+		$resultEmpty = $this->connect()->query($checkEmpty);
+		// Check if there's any rows 
+		// If yes => Update data
+		// If no => Create table and fill in data
+		foreach ($fishingData['spreadsheet'] as $fishingSS){
+			$fish = addslashes($fishingSS['fish']);
+			$rarity = $fishingSS['rarity']; 
+			$mats = $fishingSS['mats'];
+			$dr = str_replace("%","",$fishingSS['dr']);
+			$size = $fishingSS['size'];
+			$value = $fishingSS['value'];
+			$map = addslashes($fishingSS['map']);
+			$hole = $fishingSS['hole'];
+			$bait = $fishingSS['bait'];
+			$time = $fishingSS['time'];
+
+			$sql = "INSERT IGNORE INTO fishing (fish, rarity, mats, dr, size, value, map, hole, bait, time)
+			VALUES ('$fish', '$rarity', '$mats', '$dr', '$size', '$value', '$map', '$hole', '$bait', '$time')
+			ON DUPLICATE KEY UPDATE 
+				fish = VALUES(fish),
+				rarity = VALUES(rarity),
+				mats = VALUES(mats),
+				dr = VALUES(dr),
+				size = VALUES(size),
+				value = VALUES(value),
+				map = VALUES(map),
+				hole = VALUES(hole),
+				bait = VALUES(bait),
+				time = VALUES(time);";
+			$stmt = $this->connect()->exec($sql);
+		}
+	}
+
+	public function get_values(){
+		// Get full table and sort by gold_per_hour col and descending
+		$sql = "SELECT * FROM fishing";
+		$result = $this->connect()->query($sql);
+		// Create empty array
+		$array = Array();
+		// Go thru DB and fetch contents into array
+		while($row = $result->fetch()){
+			$array[] = $row; 
+		}
+		$pdo = null; 
+
+		// Create JSON from the array
+		$json = json_encode($array);
+		return $json;
+	}
+
+}
+
 // Initialize map DB
 $mapsDB = new Maps();
 $dwcDB = new DWC(); 
@@ -595,4 +654,8 @@ $chestsDB = new Chests();
 
 // Metas
 $metasDB = new Metas();
+
+// Fishing
+$fishingDB = new Fishing();
+//$fishingDB->set_values();
 ?>

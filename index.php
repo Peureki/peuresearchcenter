@@ -402,6 +402,11 @@
 
 			<div class = "small-description" style = "overflow-y: scroll; height: 500px; width: 80%; margin-left: auto; margin-right: auto;">
 				<p1>
+					<span style = "font-weight: bold;">Feb 23, 2022</span>
+				<br>
+					- Added "Inquest Core" event in <a href="./timers/sandswept-isles.php"><u>Sandswept Timers</u></a>. 
+					- Updated the bookmarks on each page on mobile. It is now defaulted to where it doesn't show up so it doesn't block the whole half of the screen. The button is still there to bring it back though. 
+				<br><br>
 					<span style = "font-weight: bold;">Feb 20, 2022</span>
 				<br>
 					- Added a revamped Siren's Landing Node Farm in <a href="./benchmarks.php"><u>Benchmarks</u></a>.
