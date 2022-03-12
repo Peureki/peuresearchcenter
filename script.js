@@ -6181,6 +6181,7 @@ function copyText(input) {
 
 function copyValue(input) {
   var text = document.getElementById(input);
+  console.log(input);
   var tempText = text.value;
   if (text.value == "Copied!"){
   	text.value = tempText;
@@ -6193,6 +6194,21 @@ function copyValue(input) {
   	text.value = "Copied!";
   	setTimeout(function(){text.value = tempText}, 1000); 
   }
+}
+// USE THIS FUNCTION, THE MOST UPDATED
+function copy_value(input){
+	let temp = input.value;
+	if (input.value == "Copied!"){
+  		input.value = temp;
+  	} else {
+	  	temp = input.value;
+	  	input.select();
+	  	input.setSelectionRange(0, 99999)
+	  	document.execCommand("copy");
+
+	  	input.value = "Copied!";
+	  	setTimeout(function(){input.value = temp}, 1000); 
+  	}
 }
 
 function copyWP(input, waypoint) {

@@ -657,5 +657,5 @@ $metasDB = new Metas();
 
 // Fishing
 $fishingDB = new Fishing();
-//$fishingDB->set_values();
+$fishingDB->set_values();
 ?>

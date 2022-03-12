@@ -49,7 +49,7 @@ class Items extends ItemsDB{
 	public function set_specific_items_general($table, $IDs){
 		$list_of_IDs = explode(",", $IDs);
 		// Split entire JSON into batches of 100 
-		$batch = array_chunk($list_of_IDs, 200);
+		$batch = array_chunk($list_of_IDs, 100);
 
 		/*
 		// Get JSON GW2 API
@@ -60,10 +60,11 @@ class Items extends ItemsDB{
 		// Iterate through each batch and through each item in each batch
 		for ($i = 0; $i < count($batch); $i++){
 
-			$api = file_get_contents('https://api.guildwars2.com/v2/items?ids='.implode(",", $batch[$i]));
-			$result = json_decode($api, TRUE);
+			// Get the IDs and basic info from the items
+			$apiItems = file_get_contents('https://api.guildwars2.com/v2/items?ids='.implode(",", $batch[$i]));
+			$resultItems = json_decode($apiItems, TRUE);
 
-			foreach ($result as $attr){
+			foreach ($resultItems as $attr){
 				$name = $attr['name']; 
 				$id = $attr['id'];
 				$vendor = $attr['vendor_value'];
@@ -75,10 +76,16 @@ class Items extends ItemsDB{
 				}
 				// Insert into DB
 				$sql = "INSERT IGNORE INTO $table (name, id, vendor, icon)
-				VALUES ('$name', '$id', '$vendor', '$icon');";
+				VALUES ('$name', '$id', '$vendor', '$icon')
+				ON DUPLICATE KEY UPDATE 
+					name = VALUES(name),
+					id = VALUES(id),
+					vendor = VALUES(vendor),
+					icon = VALUES(icon);";
 				// Execute the SQL stmt 
 				$stmt = $this->connect()->exec($sql);
 			}
+				
 		}		
 	}
 	// FOR SPECIFIC LISTINGS
@@ -176,4 +183,37 @@ $craftingIDs = '19725,19712,19742,19746,19720,19744,19747,19740,19679,12990,1973
 
 // DWC items such as commendations
 $dwcIDs = '93627,93525,93625,93868,93496,93899,93624';
+
+// Fishing Items and Food Recipes
+// Cannot get IDs of: Amber Trout, Albino Gourami, Albino Axoltl, Boxfish, Sheatfish, Giant Gourami, Unicorn Fish, Jade Sea Turtle, Chambered Nautilus, Cutthroat Trout, Brook Trout, Smallmouth Bass, Rock Bass, Catfish, Black Crappie, Largemouth Bass, Steelhead Trout, Redfin Barb, Leafy Seas Dragon, 
+/* 
+Redfin Barb [NO ID????]
+Leafy Sea Dragon [NO ID????] 
+Electric Eel [NO ID????]
+Vampire Squid [NO ID????]
+Flapjack Octopus [NO ID????]
+Horseshoe Crab [NO ID????]
+Sea Robin [NO ID????]
+
+Bloodfish [NO ID????]
+Bonefish [NO ID????]
+Venomfish [NO ID????]
+
+Tigerfish [NO ID????]
+
+Firemouth [NO ID????]
+Redtail Catfish [NO ID????]
+Geyser Batfin [NO ID????]
+Flamefin Betta [NO ID????]
+Scorpion Fish [NO ID????]
+
+Orrian Anglerfish [NO ID????]
+Giant Octopus [NO ID????]
+Risen Sea Bass [NO ID????]
+Shipwreck Moray [NO ID????]
+Unholy Mackerel [NO ID????]
+*/
+
+$fishingIDs = '96762,97690,96943,95663,95673,96347,95847,96285,96898,97771';
+$fishes = "95894,97865,96757,96350,96719,96071,97278,95936,96944,96425,97692,97061,97604,97722,97714,95603,96523,96318,97753,95926,97181,96494,96899,97612,96876,95633,96933,95797,96839,97772,97507,96145,96053,97830,97792,95951,96344,96238,97463,97857,96863,96401,97654,96196,96807,96096,96195,95596,96017,96310,96834,96792,95584,97716,97559,96913,97814,95729,97853,95670,97183,95699,96817,96297,97584,97885,96226,97887,96985,96672,97479,96105,95874,97163,95609,97004,96081,95961,97462,96001,96032,96740,95881,97341,97785,97787,97509,97005,95819,97103,96667,95731,96571,97409,96543,97485,97527,97799,95766,96276,97364,97713,96643,97356,97866,97456,95668,95822,97496,95896,96619,96373,96218,97301,96954,96882,95723,97225,95654,96265,96082,96110,97241,95968,97534,96852,97388,96635,96116,95624,95682,96108,96304,97497,97097,95870,97369,95890,96085,96397,95794,97844,97756,97001,97746,97443,96513,95849,96225,97489,96445,96349,96854,96367,96308,97755,97744,96676,95859,97848,97109,95608,96769,96428,97187,96724,96094,97466,97763,95929,96597,96361,96020,96201,96983,97568,95751,96653,96325,96191,97546,96320,97841,96645,97057,97644,97122,96692,97465,97543,97078,95908,96439,96132,95924,95873,97035,96055,96666,96723,97556,96701,97770,96631,96551,97470,97302,96813,96332";
 ?>

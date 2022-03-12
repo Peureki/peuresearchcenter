@@ -3577,7 +3577,7 @@ table.details th{
 table.benchmarks th:hover,
 table.other-benchmarks th:hover,
 table.gathering-benchmarks th:hover,
-table.fishing th:hover{
+table.fishing th:nth-child(n+2):hover{
 	background-color: black;
 	-webkit-transition: all 0.5s ease;
   	transition: all 0.5s ease;
@@ -3587,7 +3587,6 @@ table.fishing th:hover{
 table.benchmarks td,
 table.other-benchmarks td,
 table.gathering-benchmarks td,
-table.fishing td,
 table.fishing-fp td,
 table.details td{
 	font-size: 16px;
@@ -3595,7 +3594,25 @@ table.details td{
 	border: 1px solid var(--clr-border);
 	background-color: var(--clr-bkg-table);
 }
+table.fishing td{
+	font-size: 16px;
+	vertical-align: middle;
+	text-align: center;
+	border: 1px solid var(--clr-border);
+	background-color: var(--clr-bkg-table);
+}
+table.fishing td:not(:first-child) {
+	padding: 5px;
+}
 table.fishing td:nth-child(1){
+	padding: 0;
+	width: 40px;
+	height: 40px;
+}
+table.fishing td:nth-child(1) img{
+	width: 100%;
+}
+table.fishing td:nth-child(2){
 	color: black;
 }
 table.fishing td:last-child{
