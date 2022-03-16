@@ -7,5 +7,7 @@
 // Crafting materials
 $itemsDB->update_specific_items_listings('items', $craftingIDs); 
 // DWC commendations
-//$itemsDB->update_specific_items_listings('items', $dwcIDs);
+$itemsDB->update_specific_items_listings('items', $dwcIDs);
+// Fishing
+$itemsDB->update_specific_items_listings('items', $fishingIDs);
 ?>

@@ -12,7 +12,6 @@ $itemsDB->set_specific_items_general('items', $dwcIDs);
 
 // Fishing recipes
 $itemsDB->set_specific_items_general('items', $fishingIDs);
-$itemsDB->update_specific_items_listings('items', $fishingIDs);
 // Fish Names and Icons
 $itemsDB->set_specific_items_general('items', $fishes);
 ?>

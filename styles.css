@@ -131,6 +131,7 @@ b{
 	--clr-text: black; /* For normal texts */
 	--clr-link: black; /* Default for links unless specified */
 	--clr-bookmark: #656765;
+	--clr-tooltip: #444548;
 
 	/* Specific containers */
 	--clr-left-homepage: #87E6FF; /* light blue - made own var because it changes for darkmode */ 
@@ -696,6 +697,13 @@ b{
 	line-height: 1.6;
 	border-radius: 10px;
 	color: var(--clr-text);
+}
+.small-description input[type="text"]{
+	background-color: var(--clr-bkg);
+	border: none;
+	font-size: 20px;
+	color: var(--clr-link);
+	width: 7em;
 }
 /* Same as small description, but for descriptions that are lists that
 	need to be changed in mobile 
@@ -1320,18 +1328,29 @@ b{
 }
 
 
-.page-picture{
+.page-picture,
+.page-img{
 	margin: 10px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.page-picture img{
+.page-picture img,
+.page-img img{
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 70%;
+	width: 50%;
+}
+@media only screen and (max-width: 600px){
+	.page-picture img,
+	.page-img img{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 95%;
+	}
 }
 .page-box,
 .flex-page-box{
@@ -1692,6 +1711,14 @@ b{
 	border-right: 2px solid var(--clr-border);
 	font-size: clamp(0.9rem, 18px, 1vw);;
 	z-index: 1000;
+	opacity: 0.5;
+	-webkit-transition: 0.3s ease;
+  	transition: 0.3s ease;
+}
+.bookmark-left:hover{
+	opacity: 1;
+	-webkit-transition: 0.3s ease;
+  	transition: 0.3s ease;
 }
 /* Defaults for the <a> tag */
 .bookmark-left a{
@@ -1772,6 +1799,7 @@ b{
 	.bookmark-left,
 	.bookmark-right{
 		display: none;
+		opacity: 1;
 	}
 
 	.bookmark-button{
@@ -2004,6 +2032,18 @@ b{
 .nav-side-box-content a:hover{
 	color: #8B0000;
 }
+/*
+	=========================
+	===== LEFT INNER BOX=====
+	=========================
+	Used for boxes that are within a div that is half/half 
+*/
+.left-inner-box{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
 /*
 	=========================
 	===== LEFT SIDE BOX =====
@@ -3573,11 +3613,14 @@ table.fishing th,
 table.fishing-fp th,
 table.details th{
 	text-align: center;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 table.benchmarks th:hover,
 table.other-benchmarks th:hover,
 table.gathering-benchmarks th:hover,
-table.fishing th:nth-child(n+2):hover{
+table.fishing th:nth-child(n+2):hover,
+#fishing-exchange th:last-child:hover{
 	background-color: black;
 	-webkit-transition: all 0.5s ease;
   	transition: all 0.5s ease;
@@ -3594,26 +3637,58 @@ table.details td{
 	border: 1px solid var(--clr-border);
 	background-color: var(--clr-bkg-table);
 }
-table.fishing td{
+table.details td:last-child{
+	text-align: right;
+}
+table.fishing td,
+#fishing-exchange td{
 	font-size: 16px;
 	vertical-align: middle;
 	text-align: center;
 	border: 1px solid var(--clr-border);
 	background-color: var(--clr-bkg-table);
 }
+
 table.fishing td:not(:first-child) {
 	padding: 5px;
 }
-table.fishing td:nth-child(1){
+#fishing-exchange td:nth-child(1){
+	border-right: none;
+}
+#fishing-exchange td:nth-child(2){
+	border-left: none;
+}
+table.fishing td:nth-child(1),
+#fishing-exchange td:nth-child(2),
+#fishing-exchange td:nth-child(4){
 	padding: 0;
 	width: 40px;
 	height: 40px;
 }
-table.fishing td:nth-child(1) img{
+table.fishing td:nth-child(1) img,
+#fishing-exchange td:nth-child(2) img,
+#fishing-exchange td:nth-child(4) img{
+	display: block;
 	width: 100%;
+}
+/* Make images fit in mobile */
+@media only screen and (max-width: 600px){
+	table.fishing td:nth-child(1) img,
+	#fishing-exchange td:nth-child(2) img,
+	#fishing-exchange td:nth-child(4) img{
+		display: block;
+		width: 50px;
+	}
+} 
+#fishing-exchange td:last-child{
+	color: black;
+	text-align: right;
 }
 table.fishing td:nth-child(2){
 	color: black;
+}
+table.fishing td:nth-child(2):hover .tooltip{
+	display: block;
 }
 table.fishing td:last-child{
 	text-align: right;
@@ -3657,10 +3732,26 @@ table.benchmarks td:nth-child(7){
 	text-align: right;
 }
 /*
-	============================================================
-	=============== HOVER TOOLTIP FOR BENCHMARKS ===============
-	============================================================
+	=================================================
+	=============== HOVER TOOLTIPs ==================
+	=================================================
 */
+.tooltip{
+	color: var(--clr-text);
+	background-color: var(--clr-hover-bkg);
+	position: absolute;
+	display: none;
+	z-index: 1000;
+	line-height: 1.5;
+	border: 1px solid var(--clr-border);
+    margin-left: 10%;
+    margin-top: -2.5%;
+    text-align: left;
+    padding: 10px;
+}
+.tooltip h1{
+	color: var(--clr-bold);
+}
 table.benchmarks .hoverTooltip{
 	display: none;
 	text-align: left;

@@ -26,6 +26,7 @@
 				<div class = "sub-menu-header">
 					<li> Tools </li> 
 					<li><a href = "<?php echo $base;?>/resources/dailies.php"> Dailies </a></li>
+					<li><a href = "<?php echo $base;?>/resources/fishing.php"> Fishing </a></li>
 					<li><a href = "<?php echo $base;?>/resources/living-story-trinkets.php"> Living Story Trinkets </a></li>
 				</div>
 				<div class = "sub-menu-header">

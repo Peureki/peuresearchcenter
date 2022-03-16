@@ -212,6 +212,7 @@
 						<li><a href = "<?php echo $base;?>/resources/dailies.php#provisioner-tokens"><img src = "https://render.guildwars2.com/file/5CF6FC0B62554EBECAC6752AAFA2B8D80F726077/1302745.png"><span> &#10097; Provisioner Tokens </span></a></li>
 						<li><a href = "<?php echo $base;?>/resources/dailies.php#dwc-donations"><img src = "https://render.guildwars2.com/file/5D5AEFC0F1F278E0619F2000241F78A9476A3167/2293277.png"><span> &#10097; Drizzlewood Donations </span></a></li>
 					</ul>
+					<li><a href = "<?php echo $base;?>/resources/fishing.php"><img src = "https://render.guildwars2.com/file/6458143840570AA77E9798AE6FA06AC2E0BACE6C/2594685.png"><span> &#10097; Fishing </span></a></li>
 					<li><a href = "<?php echo $base;?>/resources/living-story-trinkets.php"><img src = "https://render.guildwars2.com/file/D81DE7028031D512B93A1D69CDF89FAD714E9A9D/1465567.png"><span> &#10097; Living Story Trinkets </span></a></li>
 					<li><a href = "<?php echo $base;?>/resources/must-have-items.php"><img src = "https://render.guildwars2.com/file/CC2004000FFDFCEF346AAE296FD0E858C0990548/619581.png"><span> &#10097; Must Have Items </span></a></li>
 				</ul>

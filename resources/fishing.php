@@ -15,6 +15,13 @@
 	-->
 	<?php include('../nav.php'); ?>
 
+	<div id = "bookmark-left" class = "bookmark-left">
+		<ul id = "fishing-bookmarks">
+			<a href = "#fish-values"><li> &#10097; Fish Values </li></a> 
+			<a href = "#fishing-tips"><li> &#10097; Fishing Tips </li></a> 
+		</ul>
+	</div>
+
 	<div class = "page-box">
 		<div style = "position: relative;">
 			<div class = "section-header">
@@ -26,12 +33,12 @@
 		<!-- Hidden space so the header doesn't overlap anything below -->
 		<div class = "section-header-space"></div>
 
-		<div class = "homepage-title">
+		<div id = "fish-values" class = "homepage-title">
 			<h1> Pick an area </h1> 
 		</div>
 
 		<div class = "flex-description">
-			<select class = "select-button" onchange = "get_map(this.value);">
+			<select class = "select-button" onchange = "get_map(this.value); show_map(this.value);">
 				<option value = "" disabled selected> Map </option>
 				<option value = "Seitung Province"> Seitung Province </option>
 				<option value = "New Kaineng City"> New Kaineng City </option>
@@ -43,26 +50,44 @@
 				<option value = "Orr"> Orr </option>
 				<option value = "Maguuma Jungle"> Maguuma Jungle </option>
 				<option value = "Crystal Desert"> Crystal Desert </option>
-				
+				<option value = "Desert Isles"> Desert Isles </option>
 				<option value = "Ember Bay"> Ember Bay </option>
 				<option value = "Draconis Mons"> Draconis Mons </option>
 			</select>
 		</div>
 
-		<div class = "flex-description" style = "line-height: 1; align-items: flex-start;">
-			<table class = "fishing" id = 'fishing'>
-				<thead>
-					<tr>
-						<th> </th>
-						<th onclick = "sortTableByAlphabet('fishing', 0);"> Name </th>
-						<th onclick = "sortTableByAlphabet('fishing', 1);"> Fishing Hole </th>
-						<th onclick = "sortTableByAlphabet('fishing', 2);"> Bait </th>
-						<th onclick = "sortTableByAlphabet('fishing', 3);"> Time </th>
-						<th onclick = "sortTableByPrice('fishing', 4);"> Value </th>
-					</tr>
-				</thead>
-				<tbody id = "fishing-data"></tbody>
-			</table>
+		<div class = "flex-description" style = "line-height: 1; align-items: flex-start; overflow-x: auto;">
+			<div>
+				<div class = "overflow-table">
+					<table class = "fishing" id = 'local-fishing'>
+						<thead>
+							<tr>
+								<th> </th>
+								<th onclick = "sortTableByAlphabet('local-fishing', 1);"> Local Fish </th>
+								<th onclick = "sortTableByAlphabet('local-fishing', 2);"> Fishing Hole </th>
+								<th onclick = "sortTableByAlphabet('local-fishing', 3);"> Bait </th>
+								<th onclick = "sortTableByAlphabet('local-fishing', 4);"> Time </th>
+								<th onclick = "sortTableByPrice('local-fishing', 5);"> Value </th>
+							</tr>
+						</thead>
+						<tbody id = "local-fishing-data"></tbody>
+					</table>
+
+					<table class = "fishing" id = 'global-fishing'>
+					<thead>
+						<tr>
+							<th> </th>
+							<th onclick = "sortTableByAlphabet('global-fishing', 1);"> Global Fish </th>
+							<th onclick = "sortTableByAlphabet('global-fishing', 2);"> Fishing Hole </th>
+							<th onclick = "sortTableByAlphabet('global-fishing', 3);"> Bait </th>
+							<th onclick = "sortTableByAlphabet('global-fishing', 4);"> Time </th>
+							<th onclick = "sortTableByPrice('global-fishing', 5);"> Value </th>
+						</tr>
+					</thead>
+						<tbody id = "global-fishing-data"></tbody>
+					</table>
+				</div>
+			</div>
 
 			<div class = "fishing-box" style = "display: flex; flex-direction: column; justify-content: center;">
 				<table class = "fishing-fp" id = "seitung-fp">
@@ -140,6 +165,181 @@
 					</tbody>
 				</table>
 
+				<!-- ASCALON FISHING POWER -->
+
+				<table class = "fishing-fp" id = "ascalon-fp">
+					<thead>
+						<tr>
+							<th> Fishing Hole </th>
+							<th> Fishing Power </th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td> Open Waters </td>
+							<td> 400 </td>
+						</tr>
+						<tr>
+							<td> Lake Fish </td>
+							<td> 450 </td>
+						</tr>
+						<tr>
+							<td> Noxious Water Fish </td>
+							<td> 500 </td>
+						</tr>
+					</tbody>
+				</table>
+
+				<!-- KRYTA FISHING POWER -->
+
+				<table class = "fishing-fp" id = "kryta-fp">
+					<thead>
+						<tr>
+							<th> Fishing Hole </th>
+							<th> Fishing Power </th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td> Open Waters </td>
+							<td> 300 </td>
+						</tr>
+						<tr>
+							<td> River Fish </td>
+							<td> 350 </td>
+						</tr>
+						<tr>
+							<td> Lake Fish </td>
+							<td> 400 </td>
+						</tr>
+						<tr>
+							<td> Coastal Fish </td>
+							<td> 450 </td>
+						</tr>
+					</tbody>
+				</table>
+
+				<!-- SHIVERPEAKS FISHING POWER -->
+
+				<table class = "fishing-fp" id = "shiverpeaks-fp">
+					<thead>
+						<tr>
+							<th> Fishing Hole </th>
+							<th> Fishing Power </th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td> Open Waters </td>
+							<td> 350 </td>
+						</tr>
+						<tr>
+							<td> Lake Fish </td>
+							<td> 400 </td>
+						</tr>
+						<tr>
+							<td> Boreal Fish </td>
+							<td> 450 </td>
+						</tr>
+					</tbody>
+				</table>
+
+				<!-- ORR FISHING POWER -->
+
+				<table class = "fishing-fp" id = "orr-fp">
+					<thead>
+						<tr>
+							<th> Fishing Hole </th>
+							<th> Fishing Power </th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td> Open Waters </td>
+							<td> 600 </td>
+						</tr>
+						<tr>
+							<td> Shore Fish </td>
+							<td> 650 </td>
+						</tr>
+						<tr>
+							<td> Offshore Fish </td>
+							<td> 700 </td>
+						</tr>
+					</tbody>
+				</table>
+
+				<!-- MAGUUMA JUNGLE FISHING POWER -->
+
+				<table class = "fishing-fp" id = "maguuma-fp">
+					<thead>
+						<tr>
+							<th> Fishing Hole </th>
+							<th> Fishing Power </th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td> Open Waters </td>
+							<td> 450 </td>
+						</tr>
+						<tr>
+							<td> Freshwater Fish </td>
+							<td> 500 </td>
+						</tr>
+						<tr>
+							<td> Saltwater Fish </td>
+							<td> 550 </td>
+						</tr>
+					</tbody>
+				</table>
+
+				<!-- CRYSTAL DESERT FISHING POWER -->
+
+				<table class = "fishing-fp" id = "crystal-fp">
+					<thead>
+						<tr>
+							<th> Fishing Hole </th>
+							<th> Fishing Power </th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td> Open Waters </td>
+							<td> 500 </td>
+						</tr>
+						<tr>
+							<td> Desert Fish </td>
+							<td> 550 </td>
+						</tr>
+					</tbody>
+				</table>
+
+				<!-- DESERT ISLES FISHING POWER -->
+
+				<table class = "fishing-fp" id = "desert-fp">
+					<thead>
+						<tr>
+							<th> Fishing Hole </th>
+							<th> Fishing Power </th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td> Open Waters </td>
+							<td> 550 </td>
+						</tr>
+						<tr>
+							<td> Shore Fish </td>
+							<td> 600 </td>
+						</tr>
+						<tr>
+							<td> Offshore Fish </td>
+							<td> 650 </td>
+						</tr>
+					</tbody>
+				</table>
+
 				<!-- DRAGON'S END FISHING POWER -->
 
 				<table class = "fishing-fp" id = "dragons-fp">
@@ -208,6 +408,30 @@
 					</tbody>
 				</table>
 
+				<!-- List of checkboxes for GENERAL. Users can check or uncheck to remove them from the main table -->
+				<table class = "fishing-fp" id = "fish-general">
+					<thead>
+						<tr>
+							<th id = "fish-general-name"> General </th>
+							<th> </th>
+						</tr>
+					</thead>
+					<tbody id = "fish-general-data">
+						<tr>
+							<td> Currently Available Fish </td>
+							<td> <input type = "checkbox" checked = "false" id = "fish-general-checkbox" onclick = "customize_fishing_table(this, 0);"> </td>
+						</tr>
+						<tr>
+							<td> Tax </td>
+							<td> <select class = "checkbox-select" id = "fish-tax" onchange = "customize_fishing_table(this, 5);">
+									<option value = "0.85" selected = "selected"> 85% </option>
+									<option value = "0.9"> 90% </option>
+									<option value = "1"> None </option>
+								</select> </td>
+						</tr>
+					</tbody>
+				</table>
+
 				<!-- List of checkboxes for FISHING HOLES. Users can check or uncheck to remove them from the main table -->
 				<table class = "fishing-fp" id = "fish-hole">
 					<thead>
@@ -257,18 +481,42 @@
 			</div>
 		</div>
 
-		<div class = "page-picture">
-			<img id = "fishing-img">
+		<div class = "page-img">
+			<img>
 		</div>
 
-		<div class = "flex-description" style = "align-items: flex-start;">
-			<div>
+		<div class = "page-img">
+			<img>
+		</div>
+
+		<div class = "page-img">
+			<img>
+		</div>	
+
+		<div class = "page-img">
+			<img>
+		</div>	
+
+		<div class = "page-img">
+			<img>
+		</div>	
+
+		<div class = "page-img">
+			<img>
+		</div>	
+
+		<div class = "page-img">
+			<img>
+		</div>	
+
+		<div id = "fishing-tips" class = "flex-description" style = "align-items: flex-start; overflow-x: auto;">
+			<div class = "left-inner-box">
 				<table class = "details" id = "fishing-buffs">
 					<thead>
 						<tr>
 							<th> </th>
 							<th> Fishing Buffs </th>
-							<th> Fishing Power </th>
+							<th> Power </th>
 						</tr>
 					</thead>
 					<tbody id = "fishing-buff-values">
@@ -283,14 +531,24 @@
 							<td> 50 </td>
 						</tr>
 						<tr>
-							<td><input type = "checkbox" onclick = "fishing_buff_value();" value = "100" checked = "true"></td>
-							<td> Bait </td>
-							<td> 100 </td>
+							<td><input type = "checkbox" onclick = "fishing_buff_value();" value = "0" id = "fishing-bait" checked = "true"></td>
+							<td> <select class = "checkbox-select" onchange = "select_bait(this);">
+									<option value = "" disabled selected> Bait </option>
+									<option value = "Not Mackerel"> Not Mackerel </option>
+									<option value = "Mackerel"> Mackerel </option>
+								</select> </td>
+							<td id = "fishing-bait-value"> </td>
 						</tr>
 						<tr>
-							<td><input type = "checkbox" onclick = "fishing_buff_value();" value = "100" checked = "true"></td>
-							<td> Lure </td>
-							<td> 100 </td>
+							<td><input type = "checkbox" onclick = "fishing_buff_value();" value = "0" id = "fishing-lure" checked = "true"></td>
+							<td> <select class = "checkbox-select" onchange = "select_lure(this);">
+									<option value = "" disabled selected> Lure </option>
+									<option value = "Wooden Fishing Lure"> Wood Fishing Lure (+50) </option>
+									<option value = "Antique Fishing Lure"> Antique Fishing Lure (+75) </option>
+									<option value = "Amber Fishing Lure"> Amber Fishing Lure (+100) </option>
+									<option value = "Jade Fishing Lure"> Jade Fishing Lure (+100) </option>
+								</select>  </td>
+							<td id = "fishing-lure-value"> </td>
 						</tr>
 						<tr>
 							<td><input type = "checkbox" onclick = "fishing_buff_value();" value = "0" id = "fishing-food" checked = "true"></td>
@@ -314,9 +572,16 @@
 							<td> 100 </td>
 						</tr>
 						<tr>
-							<td><input type = "checkbox" onclick = "fishing_buff_value();" value = "100" checked = "true"></td>
-							<td> Mastery </td>
-							<td> 100 </td>
+							<td><input type = "checkbox" onclick = "fishing_buff_value();" value = "0" id = "fishing-mastery" checked = "true"></td>
+							<td> <select class = "checkbox-select" onchange = "select_mastery(this);">
+									<option value = "" disabled selected> Mastery </option>
+									<option value = "Tier 1"> Fishing Hole Master (+20) </option>
+									<option value = "Tier 2"> Angler Sense (+40) </option>
+									<option value = "Tier 3"> Fishing on a Full Tank (+60) </option>
+									<option value = "Tier 4"> Master Caster (+80) </option>
+									<option value = "Tier 5"> Local Legend (+100) </option>
+								</select> </td>
+							<td id = "fishing-mastery-value"> </td>
 						</tr>
 						<tr>
 							<td><input type = "checkbox" onclick = "fishing_buff_value();" value = "0" id = "fishing-party" checked = "true"></td>
@@ -343,22 +608,102 @@
 				<thead>
 					<tr>
 						<th> Food </th>
-						<th> Fishing Power </th>
-						<th> Value </th>
+						<th> Power </th>
 					</tr>
 				</thead>
 				<tbody id = "fishing-buff-values">
 					<tr>
-						<td> Whitefish Sushi </td>
+						<td><a href = "https://wiki.guildwars2.com/wiki/Whitefish_Sushi" target = "_blank">Whitefish Sushi</a></td>
 						<td> 75 </td>
-						<td> Something </td>
+					</tr>
+					<tr>
+						<td><a href = "https://wiki.guildwars2.com/wiki/Yellowfish_Sushi" target = "_blank">Yellowfish Sushi</a></td>
+						<td> 100 </td>
+					</tr>
+					<tr>
+						<td><a href = "https://wiki.guildwars2.com/wiki/Orangefish_Sushi" target = "_blank">Orangefish Sushi</a></td>
+						<td> 125 </td>
+					</tr>
+					<tr>
+						<td><a href = "https://wiki.guildwars2.com/wiki/Redfish_Sushi" target = "_blank">Redfish Sushi</a></td>
+						<td> 150 </td>
+					</tr>
+					<tr>
+						<td><a href = "https://wiki.guildwars2.com/wiki/Bowl_of_Fish_Stew" target = "_blank">Bowl of Fish Stew</a></td>
+						<td> 150 </td>
+					</tr>
+					<tr>
+						<td><a href = "https://wiki.guildwars2.com/wiki/Bowl_of_Echovald_Hotpot" target = "_blank">Bowl of Echovald Hotpot</a></td>
+						<td> 150 </td>
+					</tr>
+					<tr>
+						<td><a href = "https://wiki.guildwars2.com/wiki/Bowl_of_Jade_Sea_Bounty" target = "_blank">Bowl of Jade Sea Bounty</a></td>
+						<td> 150 </td>
+					</tr>
+					<tr>
+						<td><a href = "https://wiki.guildwars2.com/wiki/Plate_of_Crispy_Fish_Pancakes" target = "_blank">Plate of Crispy Fish Pancakes </a></td>
+						<td> 150 </td>
+					</tr>
+					<tr>
+						<td><a href = "https://wiki.guildwars2.com/wiki/Plate_of_Imperial_Palace_Special" target = "_blank">Plate of Imperial Palace Special </td>
+						<td> 150 </td>
 					</tr>
 				</tbody>
-			</table>
+
+				<table class = "details" id = "fishing-buffs">
+					<thead>
+						<tr>
+							<th> Fishing Party </th>
+							<th> Power </th>
+						</tr>
+					</thead>
+					<tbody id = "fishing-buff-values">
+						<tr>
+							<td> Tier 1, 1 Fish </td>
+							<td> 50 </td>
+						</tr>
+						<tr>
+							<td> Tier 2, 10 Fish </td>
+							<td> 100 </td>
+						</tr>
+						<tr>
+							<td> Tier 3, 25 Fish </td>
+							<td> 150 </td>
+						</tr>
+						<tr>
+							<td> Tier 4, 45 Fish </td>
+							<td> 200 </td>
+						</tr>
+						<tr>
+							<td> Tier 5, 70 Fish </td>
+							<td> 250 </td>
+						</tr>
+						<tr>
+							<td> Tier 6, 99+ Fish </td>
+							<td> 300 </td>
+						</tr>
+					</tbody>
+				</table>
+
+				<table class = "details" id = "fishing-exchange">
+					<thead>
+						<tr>
+							<th> Qty </th>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th onclick = "sortTableByPrice(this, 4);"> Result Value </th>
+						</tr>
+					</thead>
+					<tbody id = "fishing-exchange-data">
+					</tbody>
+				</table>
 			</div>
 
 			<div class = "small-description">
-				The checklist on the right is the available fishing power you can obtain. Check or uncheck to see what you could potentially achieve. 
+				<b> General Tips and Info </b>
+				<br> - Fishing holes have ~9 minute respawn rate. Depending on the area and travel, a good loop is an area with ~7 fish holes.
+				<br> - During dusk/dawn, all fish become available regardless of time requirement. Also the best time to farm Mackerels in any open saltwater. 
 
 				<br><br>
 				<b> Fishing Rods </b>
@@ -366,23 +711,24 @@
 
 				<br><br>
 				<b> Tips on Fishing </b>
-				<br> This is a +50 Fishing Power, 1 hour buff that can purchase from the heart vendor at <input type = "text" onclick = "copy_value(this);" value = "[&BO4MAAA=]"> (southeast). Simply fish around the area to complete the heart. You are able to map travel with the buff. 
+				<br> This is a 1 hour +50 Fishing Power buff that can purchase from the heart vendor at <input type = "text" onclick = "copy_value(this);" value = "[&BO4MAAA=]"> (southeast). Simply fish around the area to complete the heart. You are able to map travel with the buff. If you have access to the Canthan guild hall, you can exit there to quickly travel to the heart.
 
 				<br><br>
 				<b> Bait </b>
-				<br> All bait, except Mackerels, are +100 Fishing Power. Mackerels are +150. You can obtain these in Saltwater at anytime with very low chance, but have a high chance of dropping during dusk/dawn in open water. 
+				<br> All bait, except Mackerels, are +100 Fishing Power. Mackerels are +150. You can obtain these by exchange 5 Fine Fish Fillets at the Fishmonger in Arborstone or in saltwater at anytime with very low chance, but have a high chance of dropping during dusk/dawn in open water. In addition, Fish Eggs can be purchased at this vendor <input type = "text" onclick = "copy_value(this);" value = "[&BDULAAA=]"> in Sandswept. 
 
 				<br><br>
 				<b> Lure </b>
-				<br> Lure can be purchased through a couple of vendors. If you have Arborstone level 1+, you can purchase the Wooden Fishing Lure and the Amber Fishing Lure. 
+				<br> Lure can be purchased through a couple of vendors. If you have Arborstone mastery level 1+, you have access to fishing merchants. If you have max fishing mastery, you have access to Amber/Jade fishing lures. 
 				<br> - Wooden Fishing Lure, +50 Fishing Power at <input type = "text" onclick = "copy_value(this);" value = "[&BO4MAAA=]"> via Tournament Vendor, Vendor at the docks, or the heart. 
 				<br> - Antique Fishing Lure, +75 Fishing Power at <input type = "text" onclick = "copy_value(this);" value = "[&BMYMAAA=]">
 				<br> - Amber Fishing Lure, +100 Fishing Power at Arborstone (Mastery Level 1+, northwest)
+				<br> - Jade Fishing Lure, +100 Fishing Power south of <input type = "text" onclick = "copy_value(this);" value = "[&BKIMAAA=]">
 
 				<br><br>
 				<b> Food </b>
-				<br> Non-ascended Fishing Power food is obtained automatically if you have a Chef. Ascended feasts can be purchased easily from either of these two vendors: 
-				<br> - Canach Club in Arborstone. Enterence is northwest, in a cave. If you have the fishing or turtle merchants, it is next to them. 
+				<br> Non-ascended food recipes are obtained automatically if you have a Chef leveled up. Ascended recipes can be purchased easily from either of these two vendors: 
+				<br> - Canach Club in Arborstone. Enter through the northwest, in a cave. If you have the fishing or turtle merchants, it is next to them. 
 				<br> - Archaeologist vendor at Echovald <input type = "text" onclick = "copy_value(this);" value = "[&BMoMAAA=]">
 
 				<br><br>
@@ -391,9 +737,9 @@
 
 				<br><br>
 				<b> Fishing Party </b>
-				<br> This is the last mastery in the Fishing line. Once obtained, while you fish in a Fishing Hole, you gain a stack for you and those within your Skiff. Your party members can also contribute to the stack for each successful fish captured in a hole. Check the Fishing Buffs table for the breakdown of each tier. 
+				<br> This is the last mastery in the Skiff line. Once obtained, after each successful catch in a Fishing Hole, you gain a stack for you and those within your Skiff. Your party members can also contribute to the stack for each successful fish captured in a hole. Check the Fishing Buffs table for the breakdown of each tier. 
 
-				<br><br> - With 1 person, it will take 99 fishes, 33 Fishing Holes to gain max stacks. With 5, it will take 20 Fishing Holes. 
+				<br><br> - With 1 person, it will take 99 fish, 33 Fishing Holes to gain max stacks. With 5, it will take 20 Fishing Holes. 
 				<br> - You can "share" the fishing buff from other party member's skiffs. If you just joined in a party with 50 stacks already, you can get the 50 stacks by going on the skiff. You could also take the buff to your skiff. This does not work when the stack hits beyond 99+ (bug?). 
 			</div>
 		</div>
@@ -405,9 +751,9 @@
 	    ====================== PROGRESS BARS ==============================
 	    ===================================================================
 	  -->
-	  	<div class = "bottom-sticky" id = "tyria-timer-box" style = "">
+	  	<div class = "bottom-sticky" id = "tyria-timer-box" style = "bottom: 4%;">
 	      	<div id = "progress-box-tyria" class = "progress-box">
-	        	<h1 id = "progress-text-tyria" class = "progress-text"> </h1>
+	        	<h1 id = "progress-text-tyria" class = "progress-text"></h1>
 	        	<div id = "progress-bar-tyria" class = "progress-bar"></div>
 	      	</div>
 	  	</div>
@@ -425,7 +771,7 @@
 		====================== FOOTER + DARK MODE ==============================
 		========================================================================
 	-->
-	<?php include ("../cron/set-fishing.php"); ?>
+	<?php include("../js-to-php/resources/fishing.php"); ?>
 	<?php include("../footer.php"); ?>
 
 

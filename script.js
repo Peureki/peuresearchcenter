@@ -4185,6 +4185,7 @@ function sortTableByPrice(tableName, column, order){
   	  s,
   	  g;
   table = document.getElementById(tableName);
+  console.log(table);
   // The .match creates an array with the nums from the spreadsheet. ex: 1g 23s 45c = [1,2,3,4,5]
   // Returns the array [1,2,3,4,5] -> 12345
   function currency(array){	
