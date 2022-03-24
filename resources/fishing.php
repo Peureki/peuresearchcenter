@@ -1,3 +1,4 @@
+<?php header("Cache-Control: no-cache"); ?>
 <!DOCTYPE html> 
 <html>
 <head>
@@ -509,6 +510,10 @@
 			<img>
 		</div>	
 
+		<div class = "page-img">
+			<img>
+		</div>	
+
 		<div id = "fishing-tips" class = "flex-description" style = "align-items: flex-start; overflow-x: auto;">
 			<div class = "left-inner-box">
 				<table class = "details" id = "fishing-buffs">
@@ -707,7 +712,7 @@
 
 				<br><br>
 				<b> Fishing Rods </b>
-				<br> Rods are only available at +25 by completing the first story chapter or EoD. There's a +50 by completing the achievement, "Cod Swimming Amongst Mere Minnows" (good luck :D).
+				<br> Rods are only available at +25 by completing the first story chapter or EoD.
 
 				<br><br>
 				<b> Tips on Fishing </b>
@@ -739,7 +744,7 @@
 				<b> Fishing Party </b>
 				<br> This is the last mastery in the Skiff line. Once obtained, after each successful catch in a Fishing Hole, you gain a stack for you and those within your Skiff. Your party members can also contribute to the stack for each successful fish captured in a hole. Check the Fishing Buffs table for the breakdown of each tier. 
 
-				<br><br> - With 1 person, it will take 99 fish, 33 Fishing Holes to gain max stacks. With 5, it will take 20 Fishing Holes. 
+				<br><br> - With 1 person, it will take 99 fish, 33 Fishing Holes to gain max stacks. With 5, it will take ~7 Fishing Holes. 
 				<br> - You can "share" the fishing buff from other party member's skiffs. If you just joined in a party with 50 stacks already, you can get the 50 stacks by going on the skiff. You could also take the buff to your skiff. This does not work when the stack hits beyond 99+ (bug?). 
 			</div>
 		</div>

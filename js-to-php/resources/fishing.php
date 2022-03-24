@@ -116,7 +116,7 @@
             	if (min >= 35 && min < 40){
             		// For a moment, make all faded fish not fade
             		if (min == 35 && sec <= 5){
-            			dusk_dawn("Cantha");
+            			dusk_dawn();
             		}
             		canthaStatus = "Dusk";
             		nextProgress = "Nighttime";
@@ -129,7 +129,7 @@
             	if (min >= 40){
             		// For a moment, change fish row to fade appropiately
             		if (min == 40 && sec <= 5){
-            			daytime_nighttime(canthaStatus);
+            			daytime_nighttime();
             		}
             		canthaStatus = "Nighttime";
             		nextProgress = "Dawn";
@@ -155,7 +155,7 @@
             	if (min >= 35 && min < 40){
             		// For a moment, make all faded fish not fade
             		if (min == 35 && sec <= 5){
-            			dusk_dawn("Cantha");
+            			dusk_dawn();
             		}
             		canthaStatus = "Dawn";
             		nextProgress = "Daytime";
@@ -168,7 +168,7 @@
             	if (min >= 40){
             		// For a moment, change fish row to fade appropiately
             		if (min == 40 && sec <= 5){
-            			daytime_nighttime(canthaStatus);
+            			daytime_nighttime(); 
             		}
             		canthaStatus = "Daytime";
             		nextProgress = "Dusk";
@@ -188,6 +188,7 @@
             } else {
             	progressTextCantha.innerHTML = "Cantha " + canthaStatus + " | " + getDisplayTime(result) + " &#x27F6; " + nextProgress;
             }
+            console.log(hr, min, sec);
           
         } // End of function
 
@@ -252,7 +253,7 @@
             	if (min >= 40 && min < 45){
             		// For a moment, make all faded fish not fade
             		if (min == 40 && sec <= 5){
-            			dusk_dawn("Tyria");
+            			dusk_dawn();
             		}
             		tyriaStatus = "Dusk";
             		nextProgress = "Nighttime";
@@ -266,7 +267,7 @@
             	if (min >= 45){
             		// For a moment, change fish row to fade appropiately
             		if (min == 45 && sec <= 5){
-            			daytime_nighttime(tyriaStatus);
+            			daytime_nighttime();
             		}
             		tyriaStatus = "Nighttime";
             		nextProgress = "Dawn";
@@ -292,7 +293,7 @@
             	if (min >= 25 && min < 30){
             		// For a moment, make all faded fish not fade
             		if (min == 25 && sec <= 5){
-            			dusk_dawn("Tyria");
+            			dusk_dawn();
             		}
             		tyriaStatus = "Dawn";
             		nextProgress = "Daytime";
@@ -305,7 +306,7 @@
             	if (min >= 30){
             		// For a moment, change fish row to fade appropiately
             		if (min == 30 && sec <= 5){
-            			daytime_nighttime(tyriaStatus);
+            			daytime_nighttime();
             		}
             		tyriaStatus = "Daytime";
             		nextProgress = "Dusk";
@@ -324,8 +325,6 @@
             } else {
             	progressTextTyria.innerHTML = "Tyria " + tyriaStatus + " | " + getDisplayTime(result) + " &#x27F6; " + nextProgress;
             }
-            
-
           
         } // End of function
 
@@ -355,6 +354,7 @@
     function only_unique(value, index, self){
     	return self.indexOf(value) === index;
     }
+    console.log(fishingDB);
 	
 
 	// When the user selects a map, display table and map 
@@ -474,23 +474,26 @@
 			case "Kryta": 
 				status = tyriaStatus;
 				krytaFP.style.display = "block";
-				pageImg[0].children[0].src = "../images/harathi-hinterlands/fishing.jpg";
-				pageImg[1].children[0].src = "../images/gendarran-fields/fishing.jpg";
-				pageImg[2].children[0].src = "../images/lions-arch/fishing.jpg";
-				pageImg[3].children[0].src = "../images/southsun-cove/fishing.jpg";
-				pageImg[4].children[0].src = "../images/kessex-hills/fishing.jpg";
-				pageImg[5].children[0].src = "../images/queensdale/fishing.jpg";
-				pageImg[6].children[0].src = "../images/lake-doric/fishing.jpg";
-				show_img(7);
-				pageImg[0].id = "harathi-hinterlands";
-				pageImg[1].id = "gendarran-fields";
-				pageImg[2].id = "lions-arch";
-				pageImg[3].id = "southsun-cove";
-				pageImg[4].id = "kessex-hills";
-				pageImg[5].id = "queensdale";
-				pageImg[6].id = "lake-doric";
+				pageImg[0].children[0].src = "../images/bloodtide-coast/fishing.jpg";
+				pageImg[1].children[0].src = "../images/harathi-hinterlands/fishing.jpg";
+				pageImg[2].children[0].src = "../images/gendarran-fields/fishing.jpg";
+				pageImg[3].children[0].src = "../images/lions-arch/fishing.jpg";
+				pageImg[4].children[0].src = "../images/southsun-cove/fishing.jpg";
+				pageImg[5].children[0].src = "../images/kessex-hills/fishing.jpg";
+				pageImg[6].children[0].src = "../images/queensdale/fishing.jpg";
+				pageImg[7].children[0].src = "../images/lake-doric/fishing.jpg";
+				show_img(8);
+				pageImg[0].id = "bloodtide-coast";
+				pageImg[1].id = "harathi-hinterlands";
+				pageImg[2].id = "gendarran-fields";
+				pageImg[3].id = "lions-arch";
+				pageImg[4].id = "southsun-cove";
+				pageImg[5].id = "kessex-hills";
+				pageImg[6].id = "queensdale";
+				pageImg[7].id = "lake-doric";
 				bookmarksHTML = `
 					<a href = "#fish-values"><li> &#10097; Fish Values </li></a> 
+					<a href = "#bloodtide-coast"><li> &#10097; Bloodtide Coast </li></a>
 					<a href = "#harathi-hinterlands"><li> &#10097; Harathi Hinterlands </li></a>
 					<a href = "#gendarran-fields"><li> &#10097; Gendarran Fields </li></a>
 					<a href = "#lions-arch"><li> &#10097; Lion's Arch </li></a>
@@ -610,6 +613,7 @@
 					<a href = "#fishing-tips"><li> &#10097; Fishing Tips </li></a> `;
 				break;
 			case "Ember Bay":
+				status = tyriaStatus;
 				emberFP.style.display = "block";
 				pageImg[0].children[0].src = "../images/ember-bay/fishing.jpg";
 				show_img(1);
@@ -649,7 +653,7 @@
 					icon = "";
 				}
 			}
-			if (fishingDB[i].map == map || fishingDB[i].map == "World"){
+			if (fishingDB[i].map == map || fishingDB[i].map == "World" || fishingDB[i].map == "Saltwater"){
 				// Push unique holes into the array
 				holeArray.push(fishingDB[i].hole); 
 				// Push bait into the array
@@ -713,7 +717,7 @@
 				if (fishingDB[i].map == map){
 					localHTML += `<tr style = "opacity: ${opacity};">
 					<td><img src = "${icon}"> </td>
-					<td onmouseover = "show_row(this.parentNode, '${status}', '${fishingDB[i].time}');" onmouseout = "hide_row(this.parentNode, '${status}', '${fishingDB[i].time}');" style = 'background-color: ${color};'>${fishingDB[i].fish}
+					<td onmouseover = "show_row(this.parentNode);" onmouseout = "hide_row(this.parentNode, '${fishingDB[i].time}');" style = 'background-color: ${color};'>${fishingDB[i].fish}
 						<div class = "tooltip">
 							<h1> ${fishingDB[i].fish} - Possible drops </h1>
 							<p1> Size: ${fishingDB[i].size} </p1>
@@ -730,7 +734,7 @@
 				if (fishingDB[i].map == "World" || fishingDB[i].map == "Saltwater"){
 					globalHTML += `<tr style = "opacity: ${opacity};">
 					<td><img src = "${icon}"> </td>
-					<td onmouseover = "show_row(this.parentNode, '${status}', '${fishingDB[i].time}');" onmouseout = "hide_row(this.parentNode, '${status}', '${fishingDB[i].time}');" style = 'background-color: ${color};'>${fishingDB[i].fish}
+					<td onmouseover = "show_row(this.parentNode);" onmouseout = "hide_row(this.parentNode, '${fishingDB[i].time}');" style = 'background-color: ${color};'>${fishingDB[i].fish}
 						<div class = "tooltip">
 							<h1> ${fishingDB[i].fish} - Possible drops </h1>
 							<p1> Size: ${fishingDB[i].size} </p1>
@@ -801,6 +805,7 @@
 		fishGeneral.style.display = "block";
 		let fishGeneralCheckbox = document.getElementById('fish-general-checkbox'); 
 		fishGeneralCheckbox.checked = false; 
+
 	}
 	/*
 	function show_details(td){
@@ -911,61 +916,90 @@
 	// When it hits dusk/dawn, hit this function
 	// Make the main fishing table opacity = 1 instead of some being 0 because all fishes are availalbe during dusk/dawn
 	// This function gets called in the timers
-	function dusk_dawn(region){
-		if (region == "Cantha"){
-			if (map == "Seitung Province" || map == "New Kaineng City" || map == "Echovald Wilds" || map == "Dragon's End"){
-				for (let i = 0, row; row = localData.rows[i]; i++){
-					row.style.opacity = 1;
-				}
-				for (let i = 0, row; row = globalData.rows[i]; i++){
-					row.style.opacity = 1;
-				}
+	function dusk_dawn(){
+		if (map == "Seitung Province" || map == "New Kaineng City" || map == "Echovald Wilds" || map == "Dragon's End"){
+			for (let i = 0, row; row = localData.rows[i]; i++){
+				row.style.opacity = 1;
 			}
-		} 
-		if (region == "Tyria"){
-			if (map != "Seitung Province" || map != "New Kaineng City" || map != "Echovald Wilds" || map != "Dragon's End"){
-				for (let i = 0, row; row = localData.rows[i]; i++){
-					row.style.opacity = 1;
-				}
-				for (let i = 0, row; row = globalData.rows[i]; i++){
-					row.style.opacity = 1;
-				}
+			for (let i = 0, row; row = globalData.rows[i]; i++){
+				row.style.opacity = 1;
+			}
+		} else {
+			for (let i = 0, row; row = localData.rows[i]; i++){
+				row.style.opacity = 1;
+			}
+			for (let i = 0, row; row = globalData.rows[i]; i++){
+				row.style.opacity = 1;
 			}
 		}
 		
 	}
-	function daytime_nighttime(status){
-		for (let i = 0, row; row = localData.rows[i]; i++){
-			// For some reason, there's unnecssary spaces that make the strings not match
-			// Removed spaced so that it does
-			let time = row.children[4].innerHTML.replace(/\s/g, '');
-			if (time == status || time == "Any"){
-				row.style.opacity = 1; 
-			} else {
-				row.style.opacity = 0.4;
+	function daytime_nighttime(){
+		if (map == "Seitung Province" || map == "New Kaineng City" || map == "Echovald Wilds" || map == "Dragon's End"){
+			console.log('does this happen')
+			for (let i = 0, row; row = localData.rows[i]; i++){
+				// For some reason, there's unnecssary spaces that make the strings not match
+				// Removed spaced so that it does
+				let time = row.children[4].innerHTML.replace(/\s/g, '');
+				if (time == canthaStatus || time == "Any"){
+					row.style.opacity = 1; 
+				} else {
+					row.style.opacity = 0.4;
+				}
+			}
+
+			for (let i = 0, row; row = globalData.rows[i]; i++){
+				let time = row.children[4].innerHTML.replace(/\s/g, '');
+				if (time == canthaStatus || time == "Any"){
+					row.style.opacity = 1; 
+				} else {
+					row.style.opacity = 0.4;
+				}
+			}
+		} else {
+			for (let i = 0, row; row = localData.rows[i]; i++){
+				// For some reason, there's unnecssary spaces that make the strings not match
+				// Removed spaced so that it does
+				let time = row.children[4].innerHTML.replace(/\s/g, '');
+				if (time == tyriaStatus || time == "Any"){
+					row.style.opacity = 1; 
+				} else {
+					row.style.opacity = 0.4;
+				}
+			}
+
+			for (let i = 0, row; row = globalData.rows[i]; i++){
+				let time = row.children[4].innerHTML.replace(/\s/g, '');
+				if (time == tyriaStatus || time == "Any"){
+					row.style.opacity = 1; 
+				} else {
+					row.style.opacity = 0.4;
+				}
 			}
 		}
-		for (let i = 0, row; row = globalData.rows[i]; i++){
-			let time = row.children[4].innerHTML.replace(/\s/g, '');
-			if (time == status || time == "Any"){
-				row.style.opacity = 1; 
-			} else {
-				row.style.opacity = 0.4;
-			}
-		}
+
+		
 	}
 	// Call this function when hovering over the main fishing table under Name column
 	// When hovering, if  the row is already hidden, show it to display the potential drops of the fish
 	// When hoving out, if the current time and the required time do not match, then hide the row
-	function show_row(row, status, time){
+	function show_row(row){
 		if (row.style.opacity == 0.4)
 			row.style.opacity = 1;		
 	}
-	function hide_row(row, status, time){
-		if (time == status || time == "Any" || status == "Dusk" || status == "Dawn"){
-			row.style.opacity = 1;
+	function hide_row(row, time){
+		if (map == "Seitung Province" || map == "New Kaineng City" || map == "Echovald Wilds" || map == "Dragon's End"){
+			if (canthaStatus == time || time == "Any" || canthaStatus == "Dusk" || canthaStatus == "Dawn"){
+				row.style.opacity = 1; 
+			} else {
+				row.style.opacity = 0.4;
+			}
 		} else {
-			row.style.opacity = 0.4;
+			if (tyriaStatus == time || time == "Any" || tyriaStatus == "Dusk" || tyriaStatus == "Dawn"){
+				row.style.opacity = 1; 
+			} else {
+				row.style.opacity = 0.4; 
+			}
 		}
 	}
 
