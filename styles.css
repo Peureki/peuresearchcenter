@@ -2021,7 +2021,13 @@ b{
 	right: 1%;
 	text-align: right;
 	overflow: auto;
-	height: 70vh;
+	max-height: 70vh;
+	opacity: 0.5;
+	transition: ease 0.3s all;
+}
+.nav-right-sidetimer-box-overflow:hover{
+	opacity: 1;
+	transition: ease 0.3s all;
 }
 
 .nav-side-box-content{
@@ -3647,6 +3653,39 @@ table.fishing td,
 	text-align: center;
 	border: 1px solid var(--clr-border);
 	background-color: var(--clr-bkg-table);
+}
+#catches td{
+	text-align: left;
+}
+#catches td:nth-child(1){
+	padding-left: 5px;
+	padding-right: 5px;
+}
+#catches td:nth-child(2){
+	color: var(--clr-text);
+}
+#catches td:last-child{
+	text-align: right;
+}
+#catches-details td{
+	text-align: left;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+#catches-details td:nth-child(2){
+	text-align: center;
+	color: var(--clr-text);
+}
+#catches-details td:nth-child(3){
+	text-align: right;
+}
+#fishing-benchmarks td:nth-child(1){
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: left;
+}
+#fishing-benchmarks td:nth-child(2){
+	color: var(--clr-text);
 }
 
 table.fishing td:not(:first-child) {
@@ -10759,8 +10798,7 @@ table.nodes td.nodes-cooldown{
 	left: 81%;
 }
 #de-1-box{ /* Jade Maw */
-	top: 31%;
-	left: 50%;
+	opacity: 0;
 }
 #de-2-box{ /* Shipments */
 	top: 9%;
@@ -10775,15 +10813,15 @@ table.nodes td.nodes-cooldown{
 	left: 31%;
 }
 #de-5-box{ /* Naga */
-	top: 21%;
-	left: 59%;
+	top: 26%;
+	left: 66%;
 }
 #de-6-box{ /* Risen Void */
 	top: 76%;
 	left: 59%;
 }
 #de-7-box{ /* NE Void */
-	top: 32%;
+	top: 40%;
 	left: 66%;
 }
 #de-8-box{ /* Icebrood Void */
@@ -10825,6 +10863,60 @@ table.nodes td.nodes-cooldown{
 #de-17-box{ /* Brotherhood */
 	top: 20%;
 	left: 26%;
+}
+/* JADE MAW EVENT */
+#de-img-1{ /* Circle */
+	top: 29%;
+	left: 47%;
+}
+#de-img-2{ /* Boss */
+	top: 32%;
+	left: 50%;
+}
+#de-text-1{ /* Title */
+	top: 27%;
+	left: 48%;
+}
+/* BATTLE FOR THE JADE SEA */
+#de-img-3{ /* Red circle */
+	top: 50%;
+	left: 50%;
+}
+#de-img-3 img{
+	width: 157%;
+}
+#de-text-2{ /* Title */
+	top: 16%;
+	left: 31%;
+}
+/* REGULAR EVENT INFO */
+#de-event-info-1{
+	top: 5%;
+	left: 40%;
+}
+#de-event-info-2{ /* Shipments */
+	top: 5%;
+	left: 40%;
+}
+#de-event-info-3{ /* Sangsa */ 
+	top: 65%;
+	left: 38%;
+}
+#de-event-info-10{ /* Lau */
+	top: 65%;
+	left: 38%;
+}
+#de-event-info-12{ /* Shrine Guardian */
+	top: 65%;
+	left: 38%;
+}
+#de-event-info-13{ /* Speaker Outpost */
+	top: 5%;
+	left: 40%;
+}
+#de-event-info-17{ /* Brotherhood */
+	top: 5%;
+	left: 40%;
 }
 
 

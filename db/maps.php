@@ -575,7 +575,7 @@ class Gathering extends BenchmarksDB{
 
 class Fishing extends BenchmarksDB{
 	public function set_values(){
-		$fishingAPI = file_get_contents("https://script.google.com/macros/s/AKfycbxwrmQn4LFWBQSDpvrLvviW1OOqd3en1goVu6BBpZHObc_1O5drwCwQ_bqdUTMq-Uu3_w/exec");
+		$fishingAPI = file_get_contents("https://script.google.com/macros/s/AKfycbxbFUw06Ky56YWoos-f21Jln4ccEZ3atGKbrUYhtq7OPfOvJnqcVaEdzYYnZ9y0-o91dg/exec");
 		$fishingData = json_decode($fishingAPI, TRUE);
 
 		// Check if the table is empty or not
@@ -590,32 +590,80 @@ class Fishing extends BenchmarksDB{
 			$mats = $fishingSS['mats'];
 			$dr = str_replace("%","",$fishingSS['dr']);
 			$size = $fishingSS['size'];
-			$value = $fishingSS['value'];
 			$map = addslashes($fishingSS['map']);
 			$hole = $fishingSS['hole'];
 			$bait = $fishingSS['bait'];
 			$time = $fishingSS['time'];
 
-			$sql = "INSERT IGNORE INTO fishing (fish, rarity, mats, dr, size, value, map, hole, bait, time)
-			VALUES ('$fish', '$rarity', '$mats', '$dr', '$size', '$value', '$map', '$hole', '$bait', '$time')
+
+			$sql = "INSERT IGNORE INTO fishing (fish, rarity, mats, dr, size, map, hole, bait, time)
+			VALUES ('$fish', '$rarity', '$mats', '$dr', '$size', '$map', '$hole', '$bait', '$time')
 			ON DUPLICATE KEY UPDATE 
 				fish = VALUES(fish),
 				rarity = VALUES(rarity),
 				mats = VALUES(mats),
 				dr = VALUES(dr),
 				size = VALUES(size),
-				value = VALUES(value),
 				map = VALUES(map),
 				hole = VALUES(hole),
 				bait = VALUES(bait),
 				time = VALUES(time);";
 			$stmt = $this->connect()->exec($sql);
 		}
+		// CATCHES
+		foreach ($fishingData['catches'] as $fishingSS){
+			$map = addslashes($fishingSS['map']);
+			$hole = $fishingSS['hole']; 
+			$bait = $fishingSS['bait'];
+			$time = $fishingSS['time'];
+			$mats = addslashes($fishingSS['mats']);
+			$dr = $fishingSS['dr'];
+			$size = $fishingSS['size'];
+			$value = $fishingSS['value'];
+
+			$sql = "INSERT IGNORE INTO catches (map, hole, bait, time, mats, dr, size, value)
+			VALUES ('$map', '$hole', '$bait', '$time', '$mats', '$dr', '$size', '$value')
+			ON DUPLICATE KEY UPDATE 
+				map = VALUES(map),
+				hole = VALUES(hole),
+				bait = VALUES(bait),
+				time = VALUES(time),
+				mats = VALUES(mats),
+				dr = VALUES(dr),
+				size = VALUES(size),
+				value = VALUES(value);";
+			$stmt = $this->connect()->exec($sql);
+		}
+		// BENCHMARKS
+		foreach ($fishingData['benchmarks'] as $fishingSS){
+			$map = addslashes($fishingSS['map']);
+			$hole = $fishingSS['hole']; 
+			$bait = $fishingSS['bait'];
+			$time = $fishingSS['time'];
+			$fp = $fishingSS['fp'];
+			$avgNodes = $fishingSS['avgNodes'];
+			$avgTime = $fishingSS['avgTime'];
+			$value = $fishingSS['value'];
+
+			$sql = "INSERT IGNORE INTO fishing_benchmarks (map, hole, bait, time, fp, avg_nodes, avg_time, value)
+			VALUES ('$map', '$hole', '$bait', '$time', '$fp', '$avgNodes', '$avgTime', '$value')
+			ON DUPLICATE KEY UPDATE 
+				map = VALUES(map),
+				hole = VALUES(hole),
+				bait = VALUES(bait),
+				time = VALUES(time),
+				fp = VALUES(fp),
+				avg_nodes = VALUES(avg_nodes),
+				avg_time = VALUES(avg_time),
+				value = VALUES(value);";
+			$stmt = $this->connect()->exec($sql);
+		}
+
 	}
 
-	public function get_values(){
+	public function get_values($table){
 		// Get full table and sort by gold_per_hour col and descending
-		$sql = "SELECT * FROM fishing";
+		$sql = "SELECT * FROM $table";
 		$result = $this->connect()->query($sql);
 		// Create empty array
 		$array = Array();
@@ -657,5 +705,7 @@ $metasDB = new Metas();
 
 // Fishing
 $fishingDB = new Fishing();
+$catchesDB = new Fishing(); 
+$fishingBenchmarksDB = new Fishing();
 //$fishingDB->set_values();
 ?>

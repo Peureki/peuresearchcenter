@@ -139,9 +139,15 @@
 					<li><a href = "<?php echo $base;?>/timers/drizzlewood-coast.php"> Drizzlewood Coast </a></li>
 				</div>
 				<div class = "sub-menu-header">
+					<li> End of Dragons </li>
+					<li><a href = "<?php echo $base;?>/timers/dragons-end.php"> Dragon's End </a></li>
+				</div>
+				<!--
+				<div class = "sub-menu-header">
 					<li> Festival </li>
 					<li><a href = "<?php echo $base;?>/timers/labyrinth.php"> Labyrinth </a></li>
 				</div>
+				-->
 			</ul>
 		</li>
 

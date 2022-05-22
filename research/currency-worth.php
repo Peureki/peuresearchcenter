@@ -485,7 +485,7 @@
 				<button  type = "button" id = "calculate" class = "select-button" onclick = "showMagic('results-magic');"> Calculate </button>
 			</div>
 
-			<div id = "vmum" class = "double-box">
+			<div id = "vmum" class = "flex-description">
 				<div id = "volatile-magic" style = "margin: 10px;">
 					<div class = "homepage-title">
 						<h1> Volatile Magic </h1> 

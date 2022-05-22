@@ -1630,6 +1630,8 @@ async function getDaily(choice){
 	const response = await fetch(api);
 	const dailyNum = await response.json();
 
+	console.log("daily num: ", dailyNum);
+
 	// Get tomorrow's daily IDs
 	var api2 = "https://api.guildwars2.com/v2/achievements/daily/tomorrow";
 	const response2 = await fetch(api2);
@@ -1800,8 +1802,6 @@ async function getDaily(choice){
 				default: colorDiff = '#ECECDE'; break;
 			}
 
-			console.log(todaysList);
-
 			dataHTML += `<tr>
 			<td style = "background-color: ${colorType};"><center><img src = ${icon} style = ""></center></td>
 			<td style = "background-color: ${colorDiff};">${showDiff}</td>
@@ -1945,7 +1945,6 @@ function removeRepeat(tableName, column){
       }
       if (y.innerHTML.includes('Minidungeon') && x.innerHTML.includes('Minidungeon')){
       	miniCounter = miniCounter + 1;
-      	console.log(miniCounter)
       	if (miniCounter == 1){
       		table.deleteRow(i+1);
       	}
@@ -1974,7 +1973,6 @@ function removeRepeat(tableName, column){
       // Remove dungeon duplicates
       if (dungeon.indexOf(y.innerHTML) != -1){
       	dungCounter = dungCounter + 1;
-      	console.log(dungCounter)
 
       	if (dungCounter == 2){
 	      	table.deleteRow(i);

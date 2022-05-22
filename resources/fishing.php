@@ -18,7 +18,9 @@
 
 	<div id = "bookmark-left" class = "bookmark-left">
 		<ul id = "fishing-bookmarks">
-			<a href = "#fish-values"><li> &#10097; Fish Values </li></a> 
+			<a href = "#fish-values"><li> &#10097; Fish Values </li></a>
+			<a href = "#benchmarks"><li> &#10097; Est Benchmarks </li></a> 
+			<a href = "#catch-values"><li> &#10097; Catch Values </li></a>
 			<a href = "#fishing-tips"><li> &#10097; Fishing Tips </li></a> 
 		</ul>
 	</div>
@@ -514,6 +516,108 @@
 			<img>
 		</div>	
 
+		<div id = "benchmarks" class = "homepage-title">
+			<h1> Estimated Benchmarks </h1> 
+		</div>
+
+		<div class = "small-description">
+			<p1><b> Disclaimer:  </b> While some of these gph values look extremely high, there's a huge variance in what you could actually get in 1 hour. For example, a farm could be 35gph, but the range of possible gph could be about 20gph to 37gph. Fishing is truly RNG. The more catches you can get, the more of a chance to get those high valued fish. The higher the bench, the higher your avg gph run will be. 
+			<br><br>
+			Avg Node => Avg amount of nodes in a route
+			<br> Avg Time => Avg amount of time to complete a route
+			<br> Bench => (Avg Nodes * (Catch Rate * 3)) * (60 / Avg Time)
+
+			<br><br> Routes change per instance. General routes can be found by <a href = "#fish-values"> picking an area </a>on the top of the page marked by arrows. I recommend fish farming a map that contains <b>both a good day and nighttime gph</b>. Testing still needs to be made for more maps and routes so stay tuned for more. 
+			</p1>
+		</div>
+
+		<div class = "overflow-table">
+			<div class = "flex-description" style = "align-items: flex-start;">
+				<table class = "fishing" id = "fishing-benchmarks">
+					<thead>
+						<tr>
+							<th> Map </th>
+							<th> Fishing Hole </th>
+							<th> Bait </th>
+							<th> Time </th>
+							<th> FP </th>
+							<th> Avg Nodes </th>
+							<th> Avg Time </th>
+							<th> Bench </th>
+						</tr>
+					</thead>
+					<tbody id = "bench-table-values">
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div id = "catch-values" class = "homepage-title">
+			<h1> Catch Values </h1> 
+		</div>
+
+		<div class = "small-description">
+			<p1> All values were caught with 875 fishing power except Seitung pools. Those are including the "Tips on Fishing" heart bonus from <input type = "text" onclick = "copy_value(this);" value = "[&BO4MAAA=]">. </p1>
+		</div>
+
+		<div class = "overflow-table">
+			<div class = "flex-description" style = "align-items: flex-start;">
+				<table class = "fishing" id = "catches">
+					<thead>
+						<tr>
+							<th> Region </th>
+							<th> Fishing Hole </th>
+							<th> Bait </th>
+							<th> Time </th>
+							<th> Details </th>
+							<th> Value </th>
+						</tr>
+					</thead>
+					<tbody id = "catch-table-values">
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class = "overflow-table">
+			<div class = "flex-description"> 
+				<table class = "fishing" id = "catches-details">
+					<thead>
+						<tr>
+							<th> Type </th>
+							<th> Drop Rate </th>
+						</tr>
+					</thead>
+					<tbody id = "dr-details-table-values">
+					</tbody>
+				</table>
+
+				<table class = "fishing" id = "fishing-dr">
+					<thead>
+						<tr>
+							<th> Fish </th>
+							<th> DR </th>
+						</tr>
+					</thead>
+					<tbody id = "dr-saltwater-table-values">
+					</tbody>
+				</table> 
+
+				<table class = "fishing" id = "fishing-dr">
+					<thead>
+						<tr>
+							<th> Fish </th>
+							<th> DR </th>
+						</tr>
+					</thead>
+					<tbody id = "dr-world-class-table-values">
+					</tbody>
+				</table> 
+			</div>
+		</div>
+
+		
+
 		<div id = "fishing-tips" class = "flex-description" style = "align-items: flex-start; overflow-x: auto;">
 			<div class = "left-inner-box">
 				<table class = "details" id = "fishing-buffs">
@@ -619,15 +723,15 @@
 				<tbody id = "fishing-buff-values">
 					<tr>
 						<td><a href = "https://wiki.guildwars2.com/wiki/Whitefish_Sushi" target = "_blank">Whitefish Sushi</a></td>
-						<td> 75 </td>
+						<td> 150 </td>
 					</tr>
 					<tr>
 						<td><a href = "https://wiki.guildwars2.com/wiki/Yellowfish_Sushi" target = "_blank">Yellowfish Sushi</a></td>
-						<td> 100 </td>
+						<td> 150 </td>
 					</tr>
 					<tr>
 						<td><a href = "https://wiki.guildwars2.com/wiki/Orangefish_Sushi" target = "_blank">Orangefish Sushi</a></td>
-						<td> 125 </td>
+						<td> 150 </td>
 					</tr>
 					<tr>
 						<td><a href = "https://wiki.guildwars2.com/wiki/Redfish_Sushi" target = "_blank">Redfish Sushi</a></td>
@@ -712,7 +816,7 @@
 
 				<br><br>
 				<b> Fishing Rods </b>
-				<br> Rods are only available at +25 by completing the first story chapter or EoD.
+				<br> Rods are only available at +25 by completing the first story chapter of EoD.
 
 				<br><br>
 				<b> Tips on Fishing </b>
@@ -745,7 +849,7 @@
 				<br> This is the last mastery in the Skiff line. Once obtained, after each successful catch in a Fishing Hole, you gain a stack for you and those within your Skiff. Your party members can also contribute to the stack for each successful fish captured in a hole. Check the Fishing Buffs table for the breakdown of each tier. 
 
 				<br><br> - With 1 person, it will take 99 fish, 33 Fishing Holes to gain max stacks. With 5, it will take ~7 Fishing Holes. 
-				<br> - You can "share" the fishing buff from other party member's skiffs. If you just joined in a party with 50 stacks already, you can get the 50 stacks by going on the skiff. You could also take the buff to your skiff. This does not work when the stack hits beyond 99+ (bug?). 
+				<br> - You can "share" the fishing buff from other party member's skiffs. If you join a party with stacks, you can hop on their skiff to obtain the stack for yourself. You can transfer the stack back to your skiff. 
 			</div>
 		</div>
 

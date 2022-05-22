@@ -50,6 +50,11 @@
 			</div> 
 		</div>
 
+		<div class = "small-description">
+			<b> UPDATE as of 3/28 </b>
+			<br> Anet has confirmed that the api for https://api.guildwars2.com/v2/achievements/daily is currently broken. They are working on a fix for it. Sorry for the inconvience!
+		</div>
+
 		<div id = "revert" class = "red-button" style = "display: flex; align-items: center; justify-content: center; margin: 20px;">
 			<input type = "button" id = "today-button" value = "Today's Dailies" style = "margin-left: 10px; margin-right: 10px;" onclick = "getDaily(1);">
 			<input type = "button" id = "tomorrow-button" value = "Tomorrow's Dailies" style = "margin-left: 10px; margin-right: 10px;" onclick = "getDaily(2);">

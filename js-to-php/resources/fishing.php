@@ -19,8 +19,8 @@
 	    currentTime = 0,
 	    maxTime = 0;
 
-	// Get data from database
-	let fishingDB = <?php echo $fishingDB->get_values(); ?>;
+	// Get fish data from database
+	let fishingDB = <?php echo $fishingDB->get_values('fishing'); ?>;
 	// Get fishing pictures from items database
 	let fishIcons = <?php echo $itemsDB->get_array_items('items', $fishes); ?>; 
 	// Get all the general items in the general items db
@@ -79,6 +79,40 @@
     	map = getMap; 
     }
 
+    let worldClassList = [
+		"Armored Scalefish",
+		"Bloodfish",
+		"Bonefish",
+		"Clawfish",
+		"Dustfish",
+		"Fangfish",
+		"Goldfish",
+		"Moonfin Striker",
+		"Red Herring",
+		"Silverfish",
+		"Sunscale Striker",
+		"Totemfish",
+		"Twlight Striker",
+		"Venomfish"
+	];
+
+	let saltwaterList = [
+		"Aurelian Herring",
+		"Electric Eel",
+		"Flapjack Octopus",
+		"Googly-Eyed Squid",
+		"Horseshoe Crab",
+		"Leafy Sea Dragon",
+		"Mantis Shrimp",
+		"Red Gurnard",
+		"Redfin Barb",
+		"Rockfish",
+		"Sea Robin",
+		"Seahorse",
+		"Shimmering Squid",
+		"Vampire Squid",
+	];
+
 	// TIMER FOR CANTHA AREA
 	let timerCantha = setInterval(function(){
     let d = new Date();
@@ -116,7 +150,7 @@
             	if (min >= 35 && min < 40){
             		// For a moment, make all faded fish not fade
             		if (min == 35 && sec <= 5){
-            			dusk_dawn();
+            			dusk_dawn("Cantha");
             		}
             		canthaStatus = "Dusk";
             		nextProgress = "Nighttime";
@@ -155,7 +189,7 @@
             	if (min >= 35 && min < 40){
             		// For a moment, make all faded fish not fade
             		if (min == 35 && sec <= 5){
-            			dusk_dawn();
+            			dusk_dawn("Cantha");
             		}
             		canthaStatus = "Dawn";
             		nextProgress = "Daytime";
@@ -188,7 +222,6 @@
             } else {
             	progressTextCantha.innerHTML = "Cantha " + canthaStatus + " | " + getDisplayTime(result) + " &#x27F6; " + nextProgress;
             }
-            console.log(hr, min, sec);
           
         } // End of function
 
@@ -253,7 +286,7 @@
             	if (min >= 40 && min < 45){
             		// For a moment, make all faded fish not fade
             		if (min == 40 && sec <= 5){
-            			dusk_dawn();
+            			dusk_dawn("Tyria");
             		}
             		tyriaStatus = "Dusk";
             		nextProgress = "Nighttime";
@@ -293,7 +326,7 @@
             	if (min >= 25 && min < 30){
             		// For a moment, make all faded fish not fade
             		if (min == 25 && sec <= 5){
-            			dusk_dawn();
+            			dusk_dawn("Tyria");
             		}
             		tyriaStatus = "Dawn";
             		nextProgress = "Daytime";
@@ -354,7 +387,6 @@
     function only_unique(value, index, self){
     	return self.indexOf(value) === index;
     }
-    console.log(fishingDB);
 	
 
 	// When the user selects a map, display table and map 
@@ -408,6 +440,8 @@
 				bookmarksHTML = `
 					<a href = "#fish-values"><li> &#10097; Fish Values </li></a> 
 					<a href = "#seitung-province"><li> &#10097; Seitung Province </li></a>
+					<a href = "#benchmarks"><li> &#10097; Est Benchmarks </li></a> 
+					<a href = "#catch-values"><li> &#10097; Catch Values </li></a>
 					<a href = "#fishing-tips"><li> &#10097; Fishing Tips </li></a> `;
 				break;
 			case "New Kaineng City": 
@@ -419,6 +453,8 @@
 				bookmarksHTML = `
 					<a href = "#fish-values"><li> &#10097; Fish Values </li></a> 
 					<a href = "#new-kaineng-city"><li> &#10097; New Kaineng City </li></a>
+					<a href = "#benchmarks"><li> &#10097; Est Benchmarks </li></a> 
+					<a href = "#catch-values"><li> &#10097; Catch Values </li></a>
 					<a href = "#fishing-tips"><li> &#10097; Fishing Tips </li></a> `;
 				break;
 				break;
@@ -431,6 +467,8 @@
 				bookmarksHTML = `
 					<a href = "#fish-values"><li> &#10097; Fish Values </li></a> 
 					<a href = "#echovald-wilds"><li> &#10097; Echovald Wilds </li></a>
+					<a href = "#benchmarks"><li> &#10097; Est Benchmarks </li></a> 
+					<a href = "#catch-values"><li> &#10097; Catch Values </li></a>
 					<a href = "#fishing-tips"><li> &#10097; Fishing Tips </li></a> `;
 				break;
 				break;
@@ -443,6 +481,8 @@
 				bookmarksHTML = `
 					<a href = "#fish-values"><li> &#10097; Fish Values </li></a> 
 					<a href = "#dragons-end"><li> &#10097; Dragon's End </li></a>
+					<a href = "#benchmarks"><li> &#10097; Est Benchmarks </li></a> 
+					<a href = "#catch-values"><li> &#10097; Catch Values </li></a>
 					<a href = "#fishing-tips"><li> &#10097; Fishing Tips </li></a> `;
 				break;
 			case "Ascalon": 
@@ -469,6 +509,8 @@
 					<a href = "#grothmar-valley"><li> &#10097; Grothmar Valley </li></a>
 					<a href = "#field-of-ruin"><li> &#10097; Field of Ruin </li></a>
 					<a href = "#iron-marches"><li> &#10097; Iron Marches </li></a>
+					<a href = "#benchmarks"><li> &#10097; Est Benchmarks </li></a> 
+					<a href = "#catch-values"><li> &#10097; Catch Values </li></a>
 					<a href = "#fishing-tips"><li> &#10097; Fishing Tips </li></a> `;
 				break;
 			case "Kryta": 
@@ -501,6 +543,8 @@
 					<a href = "#kessex-hills"><li> &#10097; Kessex Hills </li></a>
 					<a href = "#queensdale"><li> &#10097; Queensdale </li></a>
 					<a href = "#lake-doric"><li> &#10097; Lake Doric </li></a>
+					<a href = "#benchmarks"><li> &#10097; Est Benchmarks </li></a> 
+					<a href = "#catch-values"><li> &#10097; Catch Values </li></a>
 					<a href = "#fishing-tips"><li> &#10097; Fishing Tips </li></a> `;
 				break;
 			case "Shiverpeaks": 
@@ -530,6 +574,8 @@
 					<a href = "#lornars-pass"><li> &#10097; Lornar's Pass </li></a>
 					<a href = "#snowden-drifts"><li> &#10097; Snowden Drifts </li></a>
 					<a href = "#wayfarer-foothills"><li> &#10097; Warferer Foothills </li></a>
+					<a href = "#benchmarks"><li> &#10097; Est Benchmarks </li></a> 
+					<a href = "#catch-values"><li> &#10097; Catch Values </li></a>
 					<a href = "#fishing-tips"><li> &#10097; Fishing Tips </li></a> `;
 				break;
 			case "Orr": 
@@ -550,29 +596,39 @@
 					<a href = "#straits-of-devestation"><li> &#10097; Straits of Devestation </li></a>
 					<a href = "#malchors-leap"><li> &#10097; Malchor's Leap </li></a>
 					<a href = "#cursed-shore"><li> &#10097; Cursed Shore </li></a>
+					<a href = "#benchmarks"><li> &#10097; Est Benchmarks </li></a> 
+					<a href = "#catch-values"><li> &#10097; Catch Values </li></a>
 					<a href = "#fishing-tips"><li> &#10097; Fishing Tips </li></a> `;
 				break;
 			case "Maguuma Jungle": 
 				status = tyriaStatus;
 				maguumaFP.style.display = "block";
-				pageImg[0].children[0].src = "../images/sparkfly-fen/fishing.jpg";
-				pageImg[1].children[0].src = "../images/mount-maelstrom/fishing.jpg";
-				pageImg[2].children[0].src = "../images/caledon-forest/fishing.jpg";
-				pageImg[3].children[0].src = "../images/metrica-province/fishing.jpg";
-				pageImg[4].children[0].src = "../images/brisband-wildlands/fishing.jpg";
-				show_img(5);
-				pageImg[0].id = "sparkfly-fen";
-				pageImg[1].id = "mount-maelstrom";
-				pageImg[2].id = "caledon-forest";
-				pageImg[3].id = "metrica-province";
-				pageImg[4].id = "brisband-wildlands";
+				pageImg[0].children[0].src = "../images/mount-maelstrom/fishing.jpg";
+				pageImg[1].children[0].src = "../images/rata-sum/fishing.jpg";
+				pageImg[2].children[0].src = "../images/sparkfly-fen/fishing.jpg";
+				pageImg[3].children[0].src = "../images/caledon-forest/fishing.jpg";
+				pageImg[4].children[0].src = "../images/tangled-depths/fishing.jpg";
+				pageImg[5].children[0].src = "../images/metrica-province/fishing.jpg";
+				pageImg[6].children[0].src = "../images/brisband-wildlands/fishing.jpg";
+				show_img(7);
+				pageImg[0].id = "mount-maelstrom";
+				pageImg[1].id = "rata-sum";
+				pageImg[2].id = "sparkfly-fen";
+				pageImg[3].id = "caledon-forest";
+				pageImg[4].id = "tangled-depths";
+				pageImg[5].id = "metrica-province";
+				pageImg[6].id = "brisband-wildlands";
 				bookmarksHTML = `
 					<a href = "#fish-values"><li> &#10097; Fish Values </li></a> 
-					<a href = "#sparkfly-fen"><li> &#10097; Sparkfly Fen </li></a>
 					<a href = "#mount-maelstrom"><li> &#10097; Mount Maelstrom </li></a>
+					<a href = "#rata-sum"><li> &#10097; Rata Sum </li></a>
+					<a href = "#sparkfly-fen"><li> &#10097; Sparkfly Fen </li></a>
 					<a href = "#caledon-forest"><li> &#10097; Caledon Forest </li></a>
+					<a href = "#tangled-depths"><li> &#10097; Tangled Depths </li></a>
 					<a href = "#metrica-province"><li> &#10097; Metrica Province </li></a>
 					<a href = "#brisband-wildlands"><li> &#10097; Brisband Wildlands </li></a>
+					<a href = "#benchmarks"><li> &#10097; Est Benchmarks </li></a> 
+					<a href = "#catch-values"><li> &#10097; Catch Values </li></a>
 					<a href = "#fishing-tips"><li> &#10097; Fishing Tips </li></a> `;
 				break;
 			case "Crystal Desert":
@@ -596,20 +652,24 @@
 					<a href = "#desolation"><li> &#10097; Desolation </li></a>
 					<a href = "#elon-riverlands"><li> &#10097; Elon Riverlands </li></a>
 					<a href = "#desert-highlands"><li> &#10097; Desert Highlands </li></a>
+					<a href = "#benchmarks"><li> &#10097; Est Benchmarks </li></a> 
+					<a href = "#catch-values"><li> &#10097; Catch Values </li></a>
 					<a href = "#fishing-tips"><li> &#10097; Fishing Tips </li></a> `;
 				break;
 			case "Desert Isles": 
 				status = canthaStatus; 
 				desertFP.style.display = "block";
-				pageImg[0].children[0].src = "../images/domain-of-istan/fishing.jpg";
-				pageImg[1].children[0].src = "../images/sandswept-isles/fishing.jpg";
+				pageImg[0].children[0].src = "../images/sandswept-isles/fishing.jpg";
+				pageImg[1].children[0].src = "../images/domain-of-istan/fishing.jpg";
 				show_img(2);
-				pageImg[0].id = "domain-of-istan";
-				pageImg[1].id = "sandswept-isles";
+				pageImg[0].id = "sandswept-isles";
+				pageImg[1].id = "domain-of-istan";
 				bookmarksHTML = `
 					<a href = "#fish-values"><li> &#10097; Fish Values </li></a> 
-					<a href = "#domain-of-istan"><li> &#10097; Domain of Istan </li></a>
 					<a href = "#sandswept-isles"><li> &#10097; Sandswept Isles </li></a>
+					<a href = "#domain-of-istan"><li> &#10097; Domain of Istan </li></a>
+					<a href = "#benchmarks"><li> &#10097; Est Benchmarks </li></a> 
+					<a href = "#catch-values"><li> &#10097; Catch Values </li></a>
 					<a href = "#fishing-tips"><li> &#10097; Fishing Tips </li></a> `;
 				break;
 			case "Ember Bay":
@@ -621,7 +681,9 @@
 				bookmarksHTML = `
 					<a href = "#fish-values"><li> &#10097; Fish Values </li></a> 
 					<a href = "#ember-bay"><li> &#10097; Ember Bay </li></a>
-					<a href = "#fishing-tips"><li> &#10097; Fishing Tips </li></a> `;
+					<a href = "#benchmarks"><li> &#10097; Est Benchmarks </li></a> 
+					<a href = "#catch-values"><li> &#10097; Catch Values </li></a>
+					<a href = "#fishing-tips"><li> &#10097; Fishing Tips </li></a>`;
 				break;
 			case "Draconis Mons":
 				draconisFP.style.display = "block";
@@ -630,6 +692,8 @@
 				bookmarksHTML = `
 					<a href = "#fish-values"><li> &#10097; Fish Values </li></a> 
 					<a href = "#draconis-mons"><li> &#10097; Draconis Mons </li></a>
+					<a href = "#benchmarks"><li> &#10097; Est Benchmarks </li></a> 
+					<a href = "#catch-values"><li> &#10097; Catch Values </li></a>
 					<a href = "#fishing-tips"><li> &#10097; Fishing Tips </li></a> `;
 				show_img(1);
 				break;
@@ -916,27 +980,31 @@
 	// When it hits dusk/dawn, hit this function
 	// Make the main fishing table opacity = 1 instead of some being 0 because all fishes are availalbe during dusk/dawn
 	// This function gets called in the timers
-	function dusk_dawn(){
-		if (map == "Seitung Province" || map == "New Kaineng City" || map == "Echovald Wilds" || map == "Dragon's End"){
-			for (let i = 0, row; row = localData.rows[i]; i++){
-				row.style.opacity = 1;
-			}
-			for (let i = 0, row; row = globalData.rows[i]; i++){
-				row.style.opacity = 1;
+	function dusk_dawn(region){
+		if (region == "Cantha"){
+			if (map == "Seitung Province" || map == "New Kaineng City" || map == "Echovald Wilds" || map == "Dragon's End"){
+				for (let i = 0, row; row = localData.rows[i]; i++){
+					row.style.opacity = 1;
+				}
+				for (let i = 0, row; row = globalData.rows[i]; i++){
+					row.style.opacity = 1;
+				}
 			}
 		} else {
-			for (let i = 0, row; row = localData.rows[i]; i++){
-				row.style.opacity = 1;
-			}
-			for (let i = 0, row; row = globalData.rows[i]; i++){
-				row.style.opacity = 1;
+			if (map != "Seitung Province" || map != "New Kaineng City" || map != "Echovald Wilds" || map != "Dragon's End"){
+				for (let i = 0, row; row = localData.rows[i]; i++){
+					row.style.opacity = 1;
+				}
+				for (let i = 0, row; row = globalData.rows[i]; i++){
+					row.style.opacity = 1;
+				}
 			}
 		}
+		
 		
 	}
 	function daytime_nighttime(){
 		if (map == "Seitung Province" || map == "New Kaineng City" || map == "Echovald Wilds" || map == "Dragon's End"){
-			console.log('does this happen')
 			for (let i = 0, row; row = localData.rows[i]; i++){
 				// For some reason, there's unnecssary spaces that make the strings not match
 				// Removed spaced so that it does
@@ -1124,7 +1192,6 @@
 				if (requiredFish[i] == generalItems[j].name){
 					requiredValue = generalItems[j].sell_unit_price;
 					requiredIcon = generalItems[j].icon;
-					//console.log(generalItems[j].name, requiredIcon);
 				}
 				if (resultFish[i] == generalItems[j].name){
 					resultValue = generalItems[j].sell_unit_price; 
@@ -1160,9 +1227,141 @@
 	fish_exchange();
 	fishing_buff_value();
 
-
+	console.log(fishingDB);
 
 </script>
+
+<!-- 
+	=====================================================
+	====================== CATCHES ======================
+	=====================================================
+-->
+
+<script>
+	// Get catches data from spreadsheet db
+	let catches = <?php echo $catchesDB->get_values('catches');?>; 
+	let catchTableBody = document.getElementById('catch-table-values'),
+		catchHTML = ``; 
+
+	// List out all the catch data and their values onto the catch table
+	for (let i = 0; i < catches.length; i++){
+		// If the sample size is < 50, don't include
+		if (catches[i].value == 0 || catches[i].size < 50){
+			continue; 
+		} 
+		catchHTML += `<tr>
+		<td>${catches[i].map}</td>
+		<td>${catches[i].hole}</td>
+		<td>${catches[i].bait}</td>
+		<td>${catches[i].time}</td>
+		<td onclick = "catch_details(this.parentNode);"> Details </td>
+		<td>${displayValues(catches[i].value,1)}</td> 
+		</tr>`;
+	}
+	catchTableBody.innerHTML = catchHTML;
+	sortTableByPrice("catches", 4);
+
+	
+	function catch_details(td){
+		// Get the dr list from respective hole from the catch table
+		let catchMap = td.children[0].innerHTML; 
+		let detailsTableBody = document.getElementById('catch-detail-table-values');
+		let detailsHTML = ``;
+
+		let saltwaterTableBody = document.getElementById('dr-saltwater-table-values'),
+			worldClassTableBody = document.getElementById('dr-world-class-table-values'); 
+
+		let saltwaterHTML = ``,
+			worldClassHTML = ``;
+
+		for (let i = 0; i < catches.length; i++){
+			// Check if map matches
+			if (catchMap == catches[i].map){
+				// Make array of the fish names, drop rates
+				let catchFish = catches[i].mats.split(","); 
+				let catchDr = catches[i].dr.split(",");
+				for (let j = 0; j < catchFish.length; j++){
+					let catchValue = 0;
+					if (catchFish[j] == ""){
+						continue;
+					}
+					/*
+					for (let k = 0; k < fishingDB.length; k++){
+						if (catchFish[j] == fishingDB[k].fish){
+							catchValue = fishingDB[k].value;
+						}
+					} 
+					*/
+					for (let k = 0; k < fishingDB.length; k++){
+						if (fishingDB[k].fish.includes(catchFish[j]) && fishingDB[k].map == "Saltwater"){
+							saltwaterHTML += `<tr>
+							<td>${catchFish[j]}</td>
+							<td>${(catchDr[j]*100).toFixed(2) + "%"}
+							</tr>`;
+						}
+						
+						if (fishingDB[k].fish.includes(catchFish[j]) && fishingDB[k].map == "World Class"){
+							worldClassHTML += `<tr>
+							<td>${catchFish[j]}</td>
+							<td>${(catchDr[j]*100).toFixed(2) + "%"}
+							</tr>`;
+						} 
+					}
+					
+
+					/*
+					detailsHTML += `<tr>
+					<td>${catchFish[j]}</td>
+					<td>${(catchDr[j]*100).toFixed(2) + "%"}</td>
+					</tr>`;
+					*/
+				}
+			}
+		}
+		//detailsTableBody.innerHTML = detailsHTML;
+		saltwaterTableBody.innerHTML = saltwaterHTML;
+		worldClassTableBody.innerHTML = worldClassHTML;
+	}
+	
+</script>
+
+<!-- 
+	========================================================
+	====================== BENCHMARKS ======================
+	========================================================
+-->
+
+<script>
+
+	let benchmarks = <?php echo $fishingBenchmarksDB->get_values('fishing_benchmarks');?>,
+		benchTableBody = document.getElementById('bench-table-values'),
+		benchHTML = ``;
+
+	// List out all the catch data and their values onto the catch table
+	for (let i = 0; i < benchmarks.length; i++){
+		if (benchmarks[i].value == 0){
+			continue;
+		}
+		// On the spreadsheet, the time is labeled numerically (if that makes sense) and not something like 14mins 56secs.
+		// Instead 14:56 = 14.93333
+		// So this avgTime converts the 14.93 => 14:56
+		let avgTime = (Math.round(benchmarks[i].avg_time) + ((benchmarks[i].avg_time % 1) * 60)/100).toFixed(2).replace(".",":"); 
+		benchHTML += `<tr>
+		<td>${benchmarks[i].map}</td>
+		<td>${benchmarks[i].hole}</td>
+		<td>${benchmarks[i].bait}</td>
+		<td>${benchmarks[i].time}</td>
+		<td>${benchmarks[i].fp}</td>
+		<td>${(Math.round(benchmarks[i].avg_nodes * 100)/100).toFixed(2)}</td>
+		<td>${avgTime}</td>
+		<td>${displayValues(benchmarks[i].value,1)}</td> 
+		</tr>`;
+	}
+	benchTableBody.innerHTML = benchHTML;
+	sortTableByPrice("fishing-benchmarks", 7);
+
+</script>
+
 
 <script>
 
@@ -1236,6 +1435,5 @@
 		product.buy = buy_value;
 		product.sell = sell_value;
 	}
-	console.log(food);
 
 </script>
