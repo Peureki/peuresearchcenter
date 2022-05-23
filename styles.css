@@ -3587,6 +3587,7 @@ table.gathering-benchmarks{
   	white-space: nowrap;
 }
 table.fishing,
+table.two-col,
 table.fishing-fp,
 table.details{
 	-webkit-transition: all 0.5s ease;
@@ -3606,6 +3607,7 @@ table.other-benchmarks th,
 table.gathering-benchmarks th,
 table.fishing th,
 table.fishing-fp th,
+table.two-col th,
 table.details th{
 	font-size: 18px;
 	padding-top: 10px;
@@ -3614,6 +3616,7 @@ table.details th{
 	background-color: var(--clr-th-table);
 	border: 1px solid var(--clr-border);
 	vertical-align: middle;
+	text-align: center;
 }
 table.fishing th,
 table.fishing-fp th,
@@ -3637,11 +3640,13 @@ table.benchmarks td,
 table.other-benchmarks td,
 table.gathering-benchmarks td,
 table.fishing-fp td,
+table.two-col td,
 table.details td{
 	font-size: 16px;
 	padding: 8px;
 	border: 1px solid var(--clr-border);
 	background-color: var(--clr-bkg-table);
+	vertical-align: middle;
 }
 table.details td:last-child{
 	text-align: right;
@@ -3697,6 +3702,22 @@ table.fishing td:not(:first-child) {
 #fishing-exchange td:nth-child(2){
 	border-left: none;
 }
+#dr-local-table td:nth-child(2),
+#dr-saltwater-table td:nth-child(2),
+#dr-world-class-table td:nth-child(2),
+#dr-junk-table td:nth-child(2),
+#dr-bag-table td:nth-child(2),
+#dr-tonic-table td:nth-child(2),
+#dr-other-table td:nth-child(2){
+	color: black;
+}
+#dr-local-table td:nth-child(1),
+#dr-saltwater-table td:nth-child(1),
+#dr-world-class-table td:nth-child(1),
+#dr-junk-table td:nth-child(1),
+#dr-bag-table td:nth-child(1),
+#dr-tonic-table td:nth-child(1),
+#dr-other-table td:nth-child(1),
 table.fishing td:nth-child(1),
 #fishing-exchange td:nth-child(2),
 #fishing-exchange td:nth-child(4){
@@ -3704,11 +3725,19 @@ table.fishing td:nth-child(1),
 	width: 40px;
 	height: 40px;
 }
+#dr-local-table td:nth-child(1) img,
+#dr-saltwater-table td:nth-child(1) img,
+#dr-world-class-table td:nth-child(1) img,
+#dr-junk-table td:nth-child(1) img,
+#dr-bag-table td:nth-child(1) img,
+#dr-tonic-table td:nth-child(1) img,
+#dr-other-table td:nth-child(1) img,
 table.fishing td:nth-child(1) img,
 #fishing-exchange td:nth-child(2) img,
 #fishing-exchange td:nth-child(4) img{
 	display: block;
-	width: 100%;
+	max-width:100%;
+    height: auto;
 }
 /* Make images fit in mobile */
 @media only screen and (max-width: 600px){

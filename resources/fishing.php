@@ -516,6 +516,12 @@
 			<img>
 		</div>	
 
+		<!-- 
+			==================================================================
+			====================== ESTIMATED BENCHMARKS ======================
+			==================================================================
+		-->
+
 		<div id = "benchmarks" class = "homepage-title">
 			<h1> Estimated Benchmarks </h1> 
 		</div>
@@ -552,6 +558,12 @@
 			</div>
 		</div>
 
+		<!-- 
+			==========================================================
+			====================== CATCH VALUES ======================
+			==========================================================
+		-->
+
 		<div id = "catch-values" class = "homepage-title">
 			<h1> Catch Values </h1> 
 		</div>
@@ -579,8 +591,12 @@
 			</div>
 		</div>
 
+		<div id = "catch-values" class = "homepage-title">
+			<h1> Drop Rates </h1> 
+		</div>
+
 		<div class = "overflow-table">
-			<div class = "flex-description"> 
+			<div class = "flex-description">
 				<table class = "fishing" id = "catches-details">
 					<thead>
 						<tr>
@@ -591,26 +607,98 @@
 					<tbody id = "dr-details-table-values">
 					</tbody>
 				</table>
+			</div>
+		</div>
 
-				<table class = "fishing" id = "fishing-dr">
+		<div class = "overflow-table">
+			<div class = "flex-description" style = "align-items: flex-start; flex-wrap: wrap;"> 
+				<!-- Local -->
+				<table class = "two-col" id = "dr-local-table">
 					<thead>
 						<tr>
-							<th> Fish </th>
-							<th> DR </th>
+							<th> </th>
+							<th> Local </th>
+							<th onclick = "sortTableByPercent('dr-local-table', 1);"> DR </th>
+						</tr>
+					</thead>
+					<tbody id = "dr-local-table-values">
+					</tbody>
+				</table> 
+
+				<table class = "two-col" id = "dr-saltwater-table">
+					<thead>
+						<tr>
+							<th> </th>
+							<th> Saltwater </th>
+							<th onclick = "sortTableByPercent('dr-saltwater-table', 1);"> DR </th>
 						</tr>
 					</thead>
 					<tbody id = "dr-saltwater-table-values">
 					</tbody>
 				</table> 
 
-				<table class = "fishing" id = "fishing-dr">
+				<table class = "two-col" id = "dr-world-class-table">
 					<thead>
 						<tr>
-							<th> Fish </th>
+							<th> </th>
+							<th> World Class </th>
 							<th> DR </th>
 						</tr>
 					</thead>
 					<tbody id = "dr-world-class-table-values">
+					</tbody>
+				</table> 
+
+				<table class = "two-col" id = "dr-junk-table">
+					<thead>
+						<tr>
+							<th> </th>
+							<th> Junk </th>
+							<th> DR </th>
+						</tr>
+					</thead>
+					<tbody id = "dr-junk-table-values">
+					</tbody>
+				</table> 
+
+				<!-- Bags -->
+				<table class = "two-col" id = "dr-bag-table">
+					<thead>
+						<tr>
+							<th> </th>
+							<th> Bags </th>
+							<th> DR </th>
+						</tr>
+					</thead>
+					<tbody id = "dr-bag-table-values">
+					</tbody>
+				</table> 
+
+				<!-- Tonics -->
+				<table class = "two-col" id = "dr-tonic-table">
+					<thead>
+						<tr>
+							<th> </th>
+							<th> Tonics </th>
+							<th> DR </th>
+						</tr>
+					</thead>
+					<tbody id = "dr-tonic-table-values">
+					</tbody>
+				</table> 
+
+
+
+				<!-- Others -->
+				<table class = "two-col" id = "dr-other-table">
+					<thead>
+						<tr>
+							<th> </th>
+							<th> Other </th>
+							<th> DR </th>
+						</tr>
+					</thead>
+					<tbody id = "dr-other-table-values">
 					</tbody>
 				</table> 
 			</div>

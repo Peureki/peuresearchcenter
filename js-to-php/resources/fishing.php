@@ -79,38 +79,34 @@
     	map = getMap; 
     }
 
-    let worldClassList = [
-		"Armored Scalefish",
-		"Bloodfish",
-		"Bonefish",
-		"Clawfish",
-		"Dustfish",
-		"Fangfish",
-		"Goldfish",
-		"Moonfin Striker",
-		"Red Herring",
-		"Silverfish",
-		"Sunscale Striker",
-		"Totemfish",
-		"Twlight Striker",
-		"Venomfish"
+    let otherList = [
+		"Antique Fishing Lure",
+		"Can of Glow Worms",
+		"Can of Worms",
+		"Lost Bait Cage",
+		"Mackerel",
 	];
 
-	let saltwaterList = [
-		"Aurelian Herring",
-		"Electric Eel",
-		"Flapjack Octopus",
-		"Googly-Eyed Squid",
-		"Horseshoe Crab",
-		"Leafy Sea Dragon",
-		"Mantis Shrimp",
-		"Red Gurnard",
-		"Redfin Barb",
-		"Rockfish",
-		"Sea Robin",
-		"Seahorse",
-		"Shimmering Squid",
-		"Vampire Squid",
+	let junkList = [
+		"Antique Diving Helm",
+		"Broken Bottle",
+		"Broken Brass Spyglass",
+		"Broken Fishing Hook",
+		"Broken Fishing Rod",
+		"Broken Oar",
+		"Broken Trident",
+		"Crumbled Ancient Statue",
+		"Fish-Shaped Stone",
+		"Golden Merlion Statuette",
+		"Piece of Driftwood",
+		"Pockmarked Vase",
+		"Rotten Fish Head",
+		"Rusted Mechanism",
+		"Shattered Fishing Cage",
+		"Tarnished Brass Compass",
+		"Tarnished Bronze Astrolabe",
+		"Tarnished Silver Sextant",
+		"Weathered Peg Leg",
 	];
 
 	// TIMER FOR CANTHA AREA
@@ -1259,27 +1255,57 @@
 		</tr>`;
 	}
 	catchTableBody.innerHTML = catchHTML;
-	sortTableByPrice("catches", 4);
+	sortTableByPrice("catches", 5);
 
 	
 	function catch_details(td){
 		// Get the dr list from respective hole from the catch table
-		let catchMap = td.children[0].innerHTML; 
-		let detailsTableBody = document.getElementById('catch-detail-table-values');
+		let region = td.children[0].innerHTML,
+			hole = td.children[1].innerHTML,
+			bait = td.children[2].innerHTML,
+			time = td.children[3].innerHTML; 
+		let detailsTableBody = document.getElementById('dr-details-table-values');
 		let detailsHTML = ``;
 
 		let saltwaterTableBody = document.getElementById('dr-saltwater-table-values'),
-			worldClassTableBody = document.getElementById('dr-world-class-table-values'); 
+			worldClassTableBody = document.getElementById('dr-world-class-table-values'),
+			junkTableBody = document.getElementById('dr-junk-table-values'),
+			tonicTableBody = document.getElementById('dr-tonic-table-values'),
+			localTableBody = document.getElementById('dr-local-table-values'),
+			bagTableBody = document.getElementById('dr-bag-table-values'),
+			otherTableBody = document.getElementById('dr-other-table-values'); 
 
 		let saltwaterHTML = ``,
-			worldClassHTML = ``;
+			worldClassHTML = ``,
+			junkHTML = ``,
+			tonicHTML = ``,
+			localHTML = ``,
+			bagHTML = ``,
+			otherHTML = ``;
+
+		let saltwaterTotal = 0,
+			worldClassTotal = 0,
+			localTotal = 0,
+			legendaryTotal = 0, ascendedTotal = 0, rareTotal = 0, masterworkTotal = 0, fineTotal = 0, basicTotal = 0,
+			junkTotal = 0,
+			tonicTotal = 0, 
+			bagTotal = 0,
+			otherTotal = 0;
+
+		let color = "",
+			icon = "";
 
 		for (let i = 0; i < catches.length; i++){
 			// Check if map matches
-			if (catchMap == catches[i].map){
+			if (region == catches[i].map
+				&& hole == catches[i].hole
+				&& bait == catches[i].bait 
+				&& time == catches[i].time){
 				// Make array of the fish names, drop rates
 				let catchFish = catches[i].mats.split(","); 
 				let catchDr = catches[i].dr.split(",");
+				console.log("catch fish: ", catchFish);
+
 				for (let j = 0; j < catchFish.length; j++){
 					let catchValue = 0;
 					if (catchFish[j] == ""){
@@ -1292,21 +1318,85 @@
 						}
 					} 
 					*/
+					// Iterate through the fish DB and check if the current catches match and match their specific type
 					for (let k = 0; k < fishingDB.length; k++){
-						if (fishingDB[k].fish.includes(catchFish[j]) && fishingDB[k].map == "Saltwater"){
-							saltwaterHTML += `<tr>
-							<td>${catchFish[j]}</td>
-							<td>${(catchDr[j]*100).toFixed(2) + "%"}
-							</tr>`;
+						if (fishingDB[k].fish.includes(catchFish[j])){
+							switch (fishingDB[k].rarity){
+								case "Basic": color = "#e4e8e4"; break;
+								case "Fine": color = "#62a4df"; break;
+								case "Masterwork": color = "#1a9353"; break;
+								case "Rare": color = "#fcd056"; break;
+								case "Exotic": color = "#fda405"; break;
+								case "Ascended": color = "#fb72b8"; break;
+								case "Legendary": color = "#6e1bf5"; break;
+							}
+							for (let l = 0; l < fishIcons.length; l++){
+								if (fishingDB[k].fish == fishIcons[l].name){
+									icon = fishIcons[l].icon; 
+								}
+							}
+
+							if (fishingDB[k].map == region){
+								localHTML += `<tr>
+								<td><img src = "${icon}"> </td>
+								<td style = "background-color: ${color};">${catchFish[j]}</td>
+								<td>${(catchDr[j]*100).toFixed(2) + "%"}
+								</tr>`;
+								localTotal += parseFloat(catchDr[j]);
+							}
+							if (fishingDB[k].map == "Saltwater"){
+								saltwaterHTML += `<tr>
+								<td><img src = "${icon}"> </td>
+								<td style = "background-color: ${color};">${catchFish[j]}</td>
+								<td>${(catchDr[j]*100).toFixed(2) + "%"}
+								</tr>`;
+								saltwaterTotal += parseFloat(catchDr[j]); 
+							}
+							if (fishingDB[k].map == "World"){
+								worldClassHTML += `<tr>
+								<td><img src = "${icon}"> </td>
+								<td style = "background-color: ${color};">${catchFish[j]}</td>
+								<td>${(catchDr[j]*100).toFixed(2) + "%"}
+								</tr>`;
+								worldClassTotal += parseFloat(catchDr[j]);
+							} 
 						}
 						
-						if (fishingDB[k].fish.includes(catchFish[j]) && fishingDB[k].map == "World Class"){
-							worldClassHTML += `<tr>
-							<td>${catchFish[j]}</td>
-							<td>${(catchDr[j]*100).toFixed(2) + "%"}
-							</tr>`;
-						} 
+						
 					}
+					// Check junk
+					if (junkList.includes(catchFish[j])){
+						junkHTML += `<tr>
+						<td style = "background-color: #aab1c5";>${catchFish[j]}</td>
+						<td>${(catchDr[j]*100).toFixed(2) + "%"}
+						</tr>`;
+						junkTotal += parseFloat(catchDr[j]);
+					}
+					// Check Tonics
+					if (catchFish[j].includes("Tonic")){
+						tonicHTML += `<tr>
+						<td style = "background-color: #1a9353;">${catchFish[j]}</td>
+						<td>${(catchDr[j]*100).toFixed(2) + "%"}
+						</tr>`;
+						tonicTotal += parseFloat(catchDr[j]);
+					}
+					// Check bags
+					if (catchFish[j].includes("Box") || catchFish[j].includes("Bag")){
+						bagHTML += `<tr>
+						<td style = "background-color: #fda405;">${catchFish[j]}</td>
+						<td>${(catchDr[j]*100).toFixed(2) + "%"}
+						</tr>`;
+						bagTotal += parseFloat(catchDr[j]);
+					}
+					// Check others
+					if (otherList.includes(catchFish[j])){
+						otherHTML += `<tr>
+						<td style = "background-color: #e4e8e4;">${catchFish[j]}</td>
+						<td>${(catchDr[j]*100).toFixed(2) + "%"}
+						</tr>`;
+						otherTotal += parseFloat(catchDr[j]);
+					}
+					
 					
 
 					/*
@@ -1318,9 +1408,59 @@
 				}
 			}
 		}
-		//detailsTableBody.innerHTML = detailsHTML;
+		detailsHTML = `
+		</tr>
+		<tr>
+		<td> Local </td>
+		<td> ${(localTotal * 100).toFixed(2) + "%"} </td>
+		</tr>
+		<tr>
+		<td> Saltwater </td>
+		<td> ${(saltwaterTotal * 100).toFixed(2) + "%"} </td>
+		</tr>
+		<tr>
+		<td> World Class </td>
+		<td> ${(worldClassTotal * 100).toFixed(2) + "%"} </td>
+		</tr>
+		</tr>
+		<tr>
+		<td> Junk </td>
+		<td> ${(junkTotal * 100).toFixed(2) + "%"} </td>
+		</tr>
+		</tr>
+		<tr>
+		<td> Bags </td>
+		<td> ${(bagTotal * 100).toFixed(2) + "%"} </td>
+		</tr>
+		</tr>
+		<tr>
+		<td> Tonics </td>
+		<td> ${(tonicTotal * 100).toFixed(2) + "%"} </td>
+		</tr>
+		</tr>
+		<tr>
+		<td> Other </td>
+		<td> ${(otherTotal * 100).toFixed(2) + "%"} </td>
+		</tr>`;
+
+		detailsTableBody.innerHTML = detailsHTML;
+		localTableBody.innerHTML = localHTML;
 		saltwaterTableBody.innerHTML = saltwaterHTML;
 		worldClassTableBody.innerHTML = worldClassHTML;
+		junkTableBody.innerHTML = junkHTML;
+		tonicTableBody.innerHTML = tonicHTML;
+		bagTableBody.innerHTML = bagHTML;
+		otherTableBody.innerHTML = otherHTML;
+
+		sortTableByPercent("catches-details", 2);
+		sortTableByPercent('dr-local-table', 2);
+		sortTableByPercent('dr-saltwater-table', 2);
+		sortTableByPercent('dr-world-class-table', 2);
+		sortTableByPercent('dr-junk-table', 2);
+		sortTableByPercent('dr-bag-table', 2);
+		sortTableByPercent('dr-tonic-table', 2);
+		sortTableByPercent('dr-other-table', 2);
+
 	}
 	
 </script>
