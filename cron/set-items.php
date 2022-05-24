@@ -14,4 +14,10 @@ $itemsDB->set_specific_items_general('items', $dwcIDs);
 $itemsDB->set_specific_items_general('items', $fishingIDs);
 // Fish Names and Icons
 $itemsDB->set_specific_items_general('items', $fishes);
+$itemsDB->set_specific_items_general('items', $fishJunkIDs);
+$itemsDB->set_specific_items_general('items', $tonicIDs); 
+$itemsDB->set_specific_items_general('items', $otherFishIDs);
+
+// Bags
+$itemsDB->set_specific_items_general('items', $bagIDs); 
 ?>

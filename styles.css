@@ -736,8 +736,10 @@ b{
 		flex-direction: column;
 	}
 }
-.select-options{
-
+/* Align text to the right in paragraphs */
+.p-right{
+	float: right;
+	padding-left: 10px;
 }
 /* 
 	===========================
@@ -3587,7 +3589,7 @@ table.gathering-benchmarks{
   	white-space: nowrap;
 }
 table.fishing,
-table.two-col,
+table.general,
 table.fishing-fp,
 table.details{
 	-webkit-transition: all 0.5s ease;
@@ -3607,11 +3609,10 @@ table.other-benchmarks th,
 table.gathering-benchmarks th,
 table.fishing th,
 table.fishing-fp th,
-table.two-col th,
+table.general th,
 table.details th{
 	font-size: 18px;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding: 7px;
 	color: white;
 	background-color: var(--clr-th-table);
 	border: 1px solid var(--clr-border);
@@ -3640,7 +3641,7 @@ table.benchmarks td,
 table.other-benchmarks td,
 table.gathering-benchmarks td,
 table.fishing-fp td,
-table.two-col td,
+table.general td,
 table.details td{
 	font-size: 16px;
 	padding: 8px;
@@ -3661,6 +3662,7 @@ table.fishing td,
 }
 #catches td{
 	text-align: left;
+	transition: 0.5s all ease;
 }
 #catches td:nth-child(1){
 	padding-left: 5px;
@@ -3668,6 +3670,11 @@ table.fishing td,
 }
 #catches td:nth-child(2){
 	color: var(--clr-text);
+}
+#catches td:nth-child(7):hover{
+	background-color: var(--clr-button-hover);
+	transition: 0.5s all ease;
+	cursor: pointer;
 }
 #catches td:last-child{
 	text-align: right;
@@ -3701,6 +3708,9 @@ table.fishing td:not(:first-child) {
 }
 #fishing-exchange td:nth-child(2){
 	border-left: none;
+}
+#catches-local-type td:nth-child(1){
+	color: black;
 }
 #dr-local-table td:nth-child(2),
 #dr-saltwater-table td:nth-child(2),
@@ -3843,7 +3853,6 @@ table.benchmarks td:hover .hoverTooltip{
 }
 .hoverTooltip-right{
 	float: right;
-	margin-left: 10px;
 }
 
 table.benchmark-table{

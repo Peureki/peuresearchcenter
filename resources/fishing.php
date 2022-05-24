@@ -21,6 +21,7 @@
 			<a href = "#fish-values"><li> &#10097; Fish Values </li></a>
 			<a href = "#benchmarks"><li> &#10097; Est Benchmarks </li></a> 
 			<a href = "#catch-values"><li> &#10097; Catch Values </li></a>
+			<a href = "#drop-rates"><li> &#10097; Drop Rates </li></a>
 			<a href = "#fishing-tips"><li> &#10097; Fishing Tips </li></a> 
 		</ul>
 	</div>
@@ -533,7 +534,7 @@
 			<br> Avg Time => Avg amount of time to complete a route
 			<br> Bench => (Avg Nodes * (Catch Rate * 3)) * (60 / Avg Time)
 
-			<br><br> Routes change per instance. General routes can be found by <a href = "#fish-values"> picking an area </a>on the top of the page marked by arrows. I recommend fish farming a map that contains <b>both a good day and nighttime gph</b>. Testing still needs to be made for more maps and routes so stay tuned for more. 
+			<br><br> Routes change per instance. General routes can be found by <a href = "#fish-values"><u>picking an area</u></a>on the top of the page marked by arrows. I recommend fish farming a map that contains <b>both a good day and nighttime gph</b>. Testing still needs to be made for more maps and routes so stay tuned for more. 
 			</p1>
 		</div>
 
@@ -581,7 +582,9 @@
 							<th> Fishing Hole </th>
 							<th> Bait </th>
 							<th> Time </th>
-							<th> Details </th>
+							<th> FP </th>
+							<th> Sample </th>
+							<th> Drop Rates </th>
 							<th> Value </th>
 						</tr>
 					</thead>
@@ -591,13 +594,35 @@
 			</div>
 		</div>
 
-		<div id = "catch-values" class = "homepage-title">
+		<!-- 
+			==========================================================
+			====================== CATCH VALUES ======================
+			==========================================================
+		-->
+
+		<div id = "drop-rates" class = "homepage-title">
 			<h1> Drop Rates </h1> 
 		</div>
 
+		<div class = "small-description">
+			<p1> Select a <a href = "#catch-values"><u> catch value</u></a> above to see the drop rates. Disclaimer: Take the sample size into consideration. These take a very long time to accumulate so some may have a lot more than others. </p1>
+		</div>
+
 		<div class = "overflow-table">
-			<div class = "flex-description">
-				<table class = "fishing" id = "catches-details">
+			<div class = "flex-description" style = "align-items: flex-start;">
+				<div class = "small-description" style = "min-width: 275px;">
+					<p1> 
+						<b> Region: </b><span class = "p-right" id = "dr-region"> </span>
+						<br><b> Fishing Hole: </b><span class = "p-right" id = "dr-hole"> </span>
+						<br><b> Bait: </b><span class = "p-right" id = "dr-bait"> </span>
+						<br><b> Time: </b><span class = "p-right" id = "dr-time"> </span>
+						<br><b> Fishing Power: </b><span class = "p-right" id = "dr-fp"> </span>
+						<br><b> Sample Size: </b><span class = "p-right" id = "dr-size"> </span>
+
+					</p1>
+				</div>
+
+				<table class = "general" id = "catches-details">
 					<thead>
 						<tr>
 							<th> Type </th>
@@ -607,13 +632,24 @@
 					<tbody id = "dr-details-table-values">
 					</tbody>
 				</table>
+
+				<table class = "general" id = "catches-local-type">
+					<thead>
+						<tr>
+							<th> Local Type </th>
+							<th onclick = "sortTableByPercent('catches-local-type', 1);"> Drop Rate </th>
+						</tr>
+					</thead>
+					<tbody id = "dr-local-type-table-values">
+					</tbody>
+				</table>
 			</div>
 		</div>
 
 		<div class = "overflow-table">
 			<div class = "flex-description" style = "align-items: flex-start; flex-wrap: wrap;"> 
 				<!-- Local -->
-				<table class = "two-col" id = "dr-local-table">
+				<table class = "general" id = "dr-local-table">
 					<thead>
 						<tr>
 							<th> </th>
@@ -625,7 +661,7 @@
 					</tbody>
 				</table> 
 
-				<table class = "two-col" id = "dr-saltwater-table">
+				<table class = "general" id = "dr-saltwater-table">
 					<thead>
 						<tr>
 							<th> </th>
@@ -637,7 +673,7 @@
 					</tbody>
 				</table> 
 
-				<table class = "two-col" id = "dr-world-class-table">
+				<table class = "general" id = "dr-world-class-table">
 					<thead>
 						<tr>
 							<th> </th>
@@ -649,7 +685,7 @@
 					</tbody>
 				</table> 
 
-				<table class = "two-col" id = "dr-junk-table">
+				<table class = "general" id = "dr-junk-table">
 					<thead>
 						<tr>
 							<th> </th>
@@ -662,7 +698,7 @@
 				</table> 
 
 				<!-- Bags -->
-				<table class = "two-col" id = "dr-bag-table">
+				<table class = "general" id = "dr-bag-table">
 					<thead>
 						<tr>
 							<th> </th>
@@ -675,7 +711,7 @@
 				</table> 
 
 				<!-- Tonics -->
-				<table class = "two-col" id = "dr-tonic-table">
+				<table class = "general" id = "dr-tonic-table">
 					<thead>
 						<tr>
 							<th> </th>
@@ -690,7 +726,7 @@
 
 
 				<!-- Others -->
-				<table class = "two-col" id = "dr-other-table">
+				<table class = "general" id = "dr-other-table">
 					<thead>
 						<tr>
 							<th> </th>

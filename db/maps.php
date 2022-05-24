@@ -616,18 +616,20 @@ class Fishing extends BenchmarksDB{
 			$hole = $fishingSS['hole']; 
 			$bait = $fishingSS['bait'];
 			$time = $fishingSS['time'];
+			$fp = $fishingSS['fp'];
 			$mats = addslashes($fishingSS['mats']);
 			$dr = $fishingSS['dr'];
 			$size = $fishingSS['size'];
 			$value = $fishingSS['value'];
 
-			$sql = "INSERT IGNORE INTO catches (map, hole, bait, time, mats, dr, size, value)
-			VALUES ('$map', '$hole', '$bait', '$time', '$mats', '$dr', '$size', '$value')
+			$sql = "INSERT IGNORE INTO catches (map, hole, bait, time, fp, mats, dr, size, value)
+			VALUES ('$map', '$hole', '$bait', '$time', '$fp', '$mats', '$dr', '$size', '$value')
 			ON DUPLICATE KEY UPDATE 
 				map = VALUES(map),
 				hole = VALUES(hole),
 				bait = VALUES(bait),
 				time = VALUES(time),
+				fp = VALUES(fp),
 				mats = VALUES(mats),
 				dr = VALUES(dr),
 				size = VALUES(size),

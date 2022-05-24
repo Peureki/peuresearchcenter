@@ -1223,8 +1223,6 @@
 	fish_exchange();
 	fishing_buff_value();
 
-	console.log(fishingDB);
-
 </script>
 
 <!-- 
@@ -1239,6 +1237,8 @@
 	let catchTableBody = document.getElementById('catch-table-values'),
 		catchHTML = ``; 
 
+	console.log("catches: ", catches)
+
 	// List out all the catch data and their values onto the catch table
 	for (let i = 0; i < catches.length; i++){
 		// If the sample size is < 50, don't include
@@ -1250,12 +1250,14 @@
 		<td>${catches[i].hole}</td>
 		<td>${catches[i].bait}</td>
 		<td>${catches[i].time}</td>
-		<td onclick = "catch_details(this.parentNode);"> Details </td>
+		<td>${catches[i].fp} </td>
+		<td>${catches[i].size}</td>
+		<td onclick = "catch_details(this.parentNode); location.href = '#drop-rates'"> Show </td>
 		<td>${displayValues(catches[i].value,1)}</td> 
 		</tr>`;
 	}
 	catchTableBody.innerHTML = catchHTML;
-	sortTableByPrice("catches", 5);
+	sortTableByPrice("catches", 7);
 
 	
 	function catch_details(td){
@@ -1263,7 +1265,9 @@
 		let region = td.children[0].innerHTML,
 			hole = td.children[1].innerHTML,
 			bait = td.children[2].innerHTML,
-			time = td.children[3].innerHTML; 
+			time = td.children[3].innerHTML,
+			fp = td.children[4].innerHTML,
+			size = td.children[5].innerHTML; 
 		let detailsTableBody = document.getElementById('dr-details-table-values');
 		let detailsHTML = ``;
 
@@ -1272,20 +1276,30 @@
 			junkTableBody = document.getElementById('dr-junk-table-values'),
 			tonicTableBody = document.getElementById('dr-tonic-table-values'),
 			localTableBody = document.getElementById('dr-local-table-values'),
+			localTypeTableBody = document.getElementById('dr-local-type-table-values'),
 			bagTableBody = document.getElementById('dr-bag-table-values'),
 			otherTableBody = document.getElementById('dr-other-table-values'); 
+
+		let regionSpan = document.getElementById('dr-region'),
+			holeSpan = document.getElementById('dr-hole'),
+			baitSpan = document.getElementById('dr-bait'),
+			timeSpan = document.getElementById('dr-time'),
+			fpSpan = document.getElementById('dr-fp'),
+			sizeSpan = document.getElementById('dr-size');
 
 		let saltwaterHTML = ``,
 			worldClassHTML = ``,
 			junkHTML = ``,
 			tonicHTML = ``,
 			localHTML = ``,
+			localTypeHTML = ``,
 			bagHTML = ``,
 			otherHTML = ``;
 
 		let saltwaterTotal = 0,
 			worldClassTotal = 0,
 			localTotal = 0,
+			localFineTotal = 0, localMasterworkTotal = 0, localRareTotal = 0, localExoticTotal = 0, localAscendedTotal = 0, localLegendaryTotal = 0,
 			legendaryTotal = 0, ascendedTotal = 0, rareTotal = 0, masterworkTotal = 0, fineTotal = 0, basicTotal = 0,
 			junkTotal = 0,
 			tonicTotal = 0, 
@@ -1294,6 +1308,15 @@
 
 		let color = "",
 			icon = "";
+
+
+		regionSpan.innerHTML = region; 
+		holeSpan.innerHTML = hole; 
+		baitSpan.innerHTML = bait;  
+		timeSpan.innerHTML = time; 
+		fpSpan.innerHTML = fp;
+		sizeSpan.innerHTML = size;
+
 
 		for (let i = 0; i < catches.length; i++){
 			// Check if map matches
@@ -1311,16 +1334,9 @@
 					if (catchFish[j] == ""){
 						continue;
 					}
-					/*
-					for (let k = 0; k < fishingDB.length; k++){
-						if (catchFish[j] == fishingDB[k].fish){
-							catchValue = fishingDB[k].value;
-						}
-					} 
-					*/
 					// Iterate through the fish DB and check if the current catches match and match their specific type
 					for (let k = 0; k < fishingDB.length; k++){
-						if (fishingDB[k].fish.includes(catchFish[j])){
+						if (fishingDB[k].fish == catchFish[j]){
 							switch (fishingDB[k].rarity){
 								case "Basic": color = "#e4e8e4"; break;
 								case "Fine": color = "#62a4df"; break;
@@ -1343,6 +1359,16 @@
 								<td>${(catchDr[j]*100).toFixed(2) + "%"}
 								</tr>`;
 								localTotal += parseFloat(catchDr[j]);
+
+								// Using color because it is asscioated with the type of fish since catchFish and catchDr do not have the rarities of the fish included 
+								switch (color){
+									case "#62a4df": localFineTotal += parseFloat(catchDr[j]); break;
+									case "#1a9353": localMasterworkTotal += parseFloat(catchDr[j]); break;
+									case "#fcd056": localRareTotal += parseFloat(catchDr[j]); break;
+									case "#fda405": localExoticTotal += parseFloat(catchDr[j]); break;
+									case "#fb72b8": localAscendedTotal += parseFloat(catchDr[j]); break;
+									case "#6e1bf5": localLegendaryTotal += parseFloat(catchDr[j]); break;
+								}
 							}
 							if (fishingDB[k].map == "Saltwater"){
 								saltwaterHTML += `<tr>
@@ -1366,7 +1392,13 @@
 					}
 					// Check junk
 					if (junkList.includes(catchFish[j])){
+						for (let l = 0; l < generalItems.length; l++){
+							if (catchFish[j] == generalItems[l].name){
+								icon = generalItems[l].icon; 
+							}
+						}
 						junkHTML += `<tr>
+						<td><img src = "${icon}"> </td>
 						<td style = "background-color: #aab1c5";>${catchFish[j]}</td>
 						<td>${(catchDr[j]*100).toFixed(2) + "%"}
 						</tr>`;
@@ -1374,7 +1406,13 @@
 					}
 					// Check Tonics
 					if (catchFish[j].includes("Tonic")){
+						for (let l = 0; l < generalItems.length; l++){
+							if (catchFish[j] == generalItems[l].name){
+								icon = generalItems[l].icon; 
+							}
+						}
 						tonicHTML += `<tr>
+						<td><img src = "${icon}"> </td>
 						<td style = "background-color: #1a9353;">${catchFish[j]}</td>
 						<td>${(catchDr[j]*100).toFixed(2) + "%"}
 						</tr>`;
@@ -1382,7 +1420,13 @@
 					}
 					// Check bags
 					if (catchFish[j].includes("Box") || catchFish[j].includes("Bag")){
+						for (let l = 0; l < generalItems.length; l++){
+							if (catchFish[j] == generalItems[l].name){
+								icon = generalItems[l].icon; 
+							}
+						}
 						bagHTML += `<tr>
+						<td><img src = "${icon}"> </td>
 						<td style = "background-color: #fda405;">${catchFish[j]}</td>
 						<td>${(catchDr[j]*100).toFixed(2) + "%"}
 						</tr>`;
@@ -1390,7 +1434,13 @@
 					}
 					// Check others
 					if (otherList.includes(catchFish[j])){
+						for (let l = 0; l < generalItems.length; l++){
+							if (catchFish[j] == generalItems[l].name){
+								icon = generalItems[l].icon; 
+							}
+						}
 						otherHTML += `<tr>
+						<td><img src = "${icon}"> </td>
 						<td style = "background-color: #e4e8e4;">${catchFish[j]}</td>
 						<td>${(catchDr[j]*100).toFixed(2) + "%"}
 						</tr>`;
@@ -1409,7 +1459,6 @@
 			}
 		}
 		detailsHTML = `
-		</tr>
 		<tr>
 		<td> Local </td>
 		<td> ${(localTotal * 100).toFixed(2) + "%"} </td>
@@ -1443,8 +1492,36 @@
 		<td> ${(otherTotal * 100).toFixed(2) + "%"} </td>
 		</tr>`;
 
+		localTypeHTML = `
+		<tr>
+		<td style = "background-color: #62a4df;"> Fine </td>
+		<td> ${(localFineTotal * 100).toFixed(2) + "%"} </td>
+		</tr>
+		<tr>
+		<td style = "background-color: #1a9353;"> Masterwork </td>
+		<td> ${(localMasterworkTotal * 100).toFixed(2) + "%"} </td>
+		</tr>
+		<tr>
+		<td style = "background-color: #fcd056;"> Rare </td>
+		<td> ${(localRareTotal * 100).toFixed(2) + "%"} </td>
+		</tr>
+		<tr>
+		<td style = "background-color: #fda405;"> Exotic </td>
+		<td> ${(localExoticTotal * 100).toFixed(2) + "%"} </td>
+		</tr>
+		<tr>
+		<td style = "background-color: #fb72b8;"> Ascended </td>
+		<td> ${(localAscendedTotal * 100).toFixed(2) + "%"} </td>
+		</tr>
+		<tr>
+		<td style = "background-color: #6e1bf5;"> Legendary </td>
+		<td> ${(localLegendaryTotal * 100).toFixed(2) + "%"} </td>
+		</tr>
+		`;
+
 		detailsTableBody.innerHTML = detailsHTML;
 		localTableBody.innerHTML = localHTML;
+		localTypeTableBody.innerHTML = localTypeHTML;
 		saltwaterTableBody.innerHTML = saltwaterHTML;
 		worldClassTableBody.innerHTML = worldClassHTML;
 		junkTableBody.innerHTML = junkHTML;
@@ -1452,8 +1529,9 @@
 		bagTableBody.innerHTML = bagHTML;
 		otherTableBody.innerHTML = otherHTML;
 
-		sortTableByPercent("catches-details", 2);
+		sortTableByPercent("catches-details", 1);
 		sortTableByPercent('dr-local-table', 2);
+		sortTableByPercent('catches-local-type', 1);
 		sortTableByPercent('dr-saltwater-table', 2);
 		sortTableByPercent('dr-world-class-table', 2);
 		sortTableByPercent('dr-junk-table', 2);
