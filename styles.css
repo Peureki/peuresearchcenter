@@ -1827,7 +1827,7 @@ b{
 }
 /* Whole container itself */
 .event-sidebox{
-	padding: 10px;
+	padding: 7px;
 	color: var(--clr-text);
 	background-color: var(--clr-bkg);
 	border: 1px solid var(--clr-border);
@@ -6260,7 +6260,6 @@ table.nodes td.nodes-cooldown{
 #dragonfall-21-sidebox,
 #dragonfall-22-sidebox{
 	background: transparent;
-	padding: 5px;
 	border: 1px solid black;
 	text-align: left;
 	display: block;

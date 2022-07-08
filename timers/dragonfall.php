@@ -398,7 +398,7 @@
 
        		<div class = "event-box" id = "dragonfall-11-box">
       			<h1> O: Cull E </h1>
-       	 		<br><p1 id = "timer-dragonfall-11">30:00</p1>
+       	 		<br><p1 id = "timer-dragonfall-11">4:00</p1>
         		<br><input type = "button" onclick = "start_stop(this, dragonfall.events);" value = "Start" id = "timer-dragonfall-11-start">
        			<input type = "button" onclick = "reset(this, dragonfall.events);" value = "&#8635;" id = "timer-dragonfall-11-reset">
        		</div>

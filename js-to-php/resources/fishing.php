@@ -438,6 +438,7 @@
 					<a href = "#seitung-province"><li> &#10097; Seitung Province </li></a>
 					<a href = "#benchmarks"><li> &#10097; Est Benchmarks </li></a> 
 					<a href = "#catch-values"><li> &#10097; Catch Values </li></a>
+					<a href = "#drop-rates"><li> &#10097; Drop Rates </li></a>
 					<a href = "#fishing-tips"><li> &#10097; Fishing Tips </li></a> `;
 				break;
 			case "New Kaineng City": 
@@ -451,6 +452,7 @@
 					<a href = "#new-kaineng-city"><li> &#10097; New Kaineng City </li></a>
 					<a href = "#benchmarks"><li> &#10097; Est Benchmarks </li></a> 
 					<a href = "#catch-values"><li> &#10097; Catch Values </li></a>
+					<a href = "#drop-rates"><li> &#10097; Drop Rates </li></a>
 					<a href = "#fishing-tips"><li> &#10097; Fishing Tips </li></a> `;
 				break;
 				break;
@@ -465,6 +467,7 @@
 					<a href = "#echovald-wilds"><li> &#10097; Echovald Wilds </li></a>
 					<a href = "#benchmarks"><li> &#10097; Est Benchmarks </li></a> 
 					<a href = "#catch-values"><li> &#10097; Catch Values </li></a>
+					<a href = "#drop-rates"><li> &#10097; Drop Rates </li></a>
 					<a href = "#fishing-tips"><li> &#10097; Fishing Tips </li></a> `;
 				break;
 				break;
@@ -479,6 +482,7 @@
 					<a href = "#dragons-end"><li> &#10097; Dragon's End </li></a>
 					<a href = "#benchmarks"><li> &#10097; Est Benchmarks </li></a> 
 					<a href = "#catch-values"><li> &#10097; Catch Values </li></a>
+					<a href = "#drop-rates"><li> &#10097; Drop Rates </li></a>
 					<a href = "#fishing-tips"><li> &#10097; Fishing Tips </li></a> `;
 				break;
 			case "Ascalon": 
@@ -507,6 +511,7 @@
 					<a href = "#iron-marches"><li> &#10097; Iron Marches </li></a>
 					<a href = "#benchmarks"><li> &#10097; Est Benchmarks </li></a> 
 					<a href = "#catch-values"><li> &#10097; Catch Values </li></a>
+					<a href = "#drop-rates"><li> &#10097; Drop Rates </li></a>
 					<a href = "#fishing-tips"><li> &#10097; Fishing Tips </li></a> `;
 				break;
 			case "Kryta": 
@@ -541,6 +546,7 @@
 					<a href = "#lake-doric"><li> &#10097; Lake Doric </li></a>
 					<a href = "#benchmarks"><li> &#10097; Est Benchmarks </li></a> 
 					<a href = "#catch-values"><li> &#10097; Catch Values </li></a>
+					<a href = "#drop-rates"><li> &#10097; Drop Rates </li></a>
 					<a href = "#fishing-tips"><li> &#10097; Fishing Tips </li></a> `;
 				break;
 			case "Shiverpeaks": 
@@ -572,6 +578,7 @@
 					<a href = "#wayfarer-foothills"><li> &#10097; Warferer Foothills </li></a>
 					<a href = "#benchmarks"><li> &#10097; Est Benchmarks </li></a> 
 					<a href = "#catch-values"><li> &#10097; Catch Values </li></a>
+					<a href = "#drop-rates"><li> &#10097; Drop Rates </li></a>
 					<a href = "#fishing-tips"><li> &#10097; Fishing Tips </li></a> `;
 				break;
 			case "Orr": 
@@ -594,6 +601,7 @@
 					<a href = "#cursed-shore"><li> &#10097; Cursed Shore </li></a>
 					<a href = "#benchmarks"><li> &#10097; Est Benchmarks </li></a> 
 					<a href = "#catch-values"><li> &#10097; Catch Values </li></a>
+					<a href = "#drop-rates"><li> &#10097; Drop Rates </li></a>
 					<a href = "#fishing-tips"><li> &#10097; Fishing Tips </li></a> `;
 				break;
 			case "Maguuma Jungle": 
@@ -625,6 +633,7 @@
 					<a href = "#brisband-wildlands"><li> &#10097; Brisband Wildlands </li></a>
 					<a href = "#benchmarks"><li> &#10097; Est Benchmarks </li></a> 
 					<a href = "#catch-values"><li> &#10097; Catch Values </li></a>
+					<a href = "#drop-rates"><li> &#10097; Drop Rates </li></a>
 					<a href = "#fishing-tips"><li> &#10097; Fishing Tips </li></a> `;
 				break;
 			case "Crystal Desert":
@@ -650,6 +659,7 @@
 					<a href = "#desert-highlands"><li> &#10097; Desert Highlands </li></a>
 					<a href = "#benchmarks"><li> &#10097; Est Benchmarks </li></a> 
 					<a href = "#catch-values"><li> &#10097; Catch Values </li></a>
+					<a href = "#drop-rates"><li> &#10097; Drop Rates </li></a>
 					<a href = "#fishing-tips"><li> &#10097; Fishing Tips </li></a> `;
 				break;
 			case "Desert Isles": 
@@ -666,6 +676,7 @@
 					<a href = "#domain-of-istan"><li> &#10097; Domain of Istan </li></a>
 					<a href = "#benchmarks"><li> &#10097; Est Benchmarks </li></a> 
 					<a href = "#catch-values"><li> &#10097; Catch Values </li></a>
+					<a href = "#drop-rates"><li> &#10097; Drop Rates </li></a>
 					<a href = "#fishing-tips"><li> &#10097; Fishing Tips </li></a> `;
 				break;
 			case "Ember Bay":
@@ -679,6 +690,7 @@
 					<a href = "#ember-bay"><li> &#10097; Ember Bay </li></a>
 					<a href = "#benchmarks"><li> &#10097; Est Benchmarks </li></a> 
 					<a href = "#catch-values"><li> &#10097; Catch Values </li></a>
+					<a href = "#drop-rates"><li> &#10097; Drop Rates </li></a>
 					<a href = "#fishing-tips"><li> &#10097; Fishing Tips </li></a>`;
 				break;
 			case "Draconis Mons":
@@ -690,6 +702,7 @@
 					<a href = "#draconis-mons"><li> &#10097; Draconis Mons </li></a>
 					<a href = "#benchmarks"><li> &#10097; Est Benchmarks </li></a> 
 					<a href = "#catch-values"><li> &#10097; Catch Values </li></a>
+					<a href = "#drop-rates"><li> &#10097; Drop Rates </li></a>
 					<a href = "#fishing-tips"><li> &#10097; Fishing Tips </li></a> `;
 				show_img(1);
 				break;
