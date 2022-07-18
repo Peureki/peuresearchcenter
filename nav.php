@@ -140,6 +140,7 @@
 				</div>
 				<div class = "sub-menu-header">
 					<li> End of Dragons </li>
+					<li><a href = "<?php echo $base;?>/timers/echovald-wilds.php"> Echovald Wilds </a></li>
 					<li><a href = "<?php echo $base;?>/timers/dragons-end.php"> Dragon's End </a></li>
 				</div>
 				<!--
