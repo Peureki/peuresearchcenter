@@ -10956,6 +10956,48 @@ table.nodes td.nodes-cooldown{
 	left: 40%;
 }
 
+#echovald-1-box{ /* N Spirits */
+	top: 25%;
+	left: 57%;
+}
+#echovald-2-box{ /* S Spirits */
+	top: 76%;
+	left: 50%;
+}
+#echovald-3-box{ /* NE Spirits */
+	top: 10%;
+	left: 74%;
+}
+#echovald-4-box{ /* Champ IGO */
+	top: 10%;
+	left: 48%;
+}
+#echovald-5-box{ /* Tomiko Escort */
+	top: 68%;
+	left: 10%;
+}
+#echovald-6-box{ /* Qinkai Chain */
+	top: 38%;
+	left: 82%;
+}
+#echovald-7-box{ /* Farmer Shi */
+	top: 53%;
+	left: 64%;
+}
+#echovald-8-box{ /* Grenadier */
+	top: 51%;
+	left: 36%;
+}
+#echovald-9-box{ /* Arborstone Defense */
+	top: 19%;
+	left: 8%;
+}
+#echovald-10-box{ /* Black Moa */
+	top: 49%;
+	left: 28%;
+}
+
+
 
 
 
