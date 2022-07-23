@@ -129,6 +129,22 @@
 	      	<p2 id = "numerical-sidetimer-echovald-10">945</p2>
 	    </div>
 
+	    <div id = "echovald-11-sidebox" class = "event-sidebox" >
+	      	<h1> Speaker Patrol </h1>
+	      	<input type = "button" onclick = "start_stop(this, echovald.events);" value = "Start" id = "sidetimer-echovald-11-start">
+	      	<input type = "button" onclick = "reset(this, echovald.events);" value = "&#8635;" id = "sidetimer-echovald-11-reset">
+	      	<p1 id = "sidetimer-echovald-11">12:45</p1>
+	      	<p2 id = "numerical-sidetimer-echovald-11">765</p2>
+	    </div>
+
+	    <div id = "echovald-12-sidebox" class = "event-sidebox" >
+	      	<h1> Tree Sap </h1>
+	      	<input type = "button" onclick = "start_stop(this, echovald.events);" value = "Start" id = "sidetimer-echovald-12-start">
+	      	<input type = "button" onclick = "reset(this, echovald.events);" value = "&#8635;" id = "sidetimer-echovald-12-reset">
+	      	<p1 id = "sidetimer-echovald-12">13:00</p1>
+	      	<p2 id = "numerical-sidetimer-echovald-12">780</p2>
+	    </div>
+
 	    <!-- USE THIS AS THE COPY PASTA -->
 	    <!--
 	    <div id = "echovald-7-sidebox" class = "event-sidebox" >
@@ -231,6 +247,20 @@
        	 		<br><p1 id = "timer-echovald-10">15:45</p1>
         		<br><input type = "button" onclick = "start_stop(this, echovald.events);" value = "Start" id = "timer-echovald-10-start">
        			<input type = "button" onclick = "reset(this, echovald.events);" value = "&#8635;" id = "timer-echovald-10-reset">	
+       		</div>
+
+       		<div class = "event-box" id = "echovald-11-box">
+      			<h1> Speaker Patrol </h1>
+       	 		<br><p1 id = "timer-echovald-11">12:45</p1>
+        		<br><input type = "button" onclick = "start_stop(this, echovald.events);" value = "Start" id = "timer-echovald-11-start">
+       			<input type = "button" onclick = "reset(this, echovald.events);" value = "&#8635;" id = "timer-echovald-11-reset">	
+       		</div>
+
+       		<div class = "event-box" id = "echovald-12-box">
+      			<h1> Tree Sap </h1>
+       	 		<br><p1 id = "timer-echovald-12">13:00</p1>
+        		<br><input type = "button" onclick = "start_stop(this, echovald.events);" value = "Start" id = "timer-echovald-12-start">
+       			<input type = "button" onclick = "reset(this, echovald.events);" value = "&#8635;" id = "timer-echovald-12-reset">	
        		</div>
 
 			<!-- USE THIS AS THE COPY PASTA -->

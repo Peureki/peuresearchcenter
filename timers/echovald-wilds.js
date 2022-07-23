@@ -150,11 +150,11 @@ let echovald = {
             countdownSec: document.getElementById('numerical-sidetimer-echovald-10'),
             doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
         },
-        /*
-        {   // [11] Enraged Kappa
+        
+        {   // [11] Speaker Patrol
             status: 0,
             key: 0,
-            cooldown: 60 * 8 + 15, 
+            cooldown: 60 * 12 + 45, 
             startButton: document.getElementById('timer-echovald-11-start'),
             startSideButton: document.getElementById('sidetimer-echovald-11-start'),
             resetButton: document.getElementById('timer-echovald-11-reset'),
@@ -165,10 +165,11 @@ let echovald = {
             countdownSec: document.getElementById('numerical-sidetimer-echovald-11'),
             doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
         },
-        {   // [12] Shrine Guardian
+        
+        {   // [12] Tree Sap
             status: 0,
             key: 0,
-            cooldown: 60 * 8 + 45, 
+            cooldown: 60 * 13, 
             startButton: document.getElementById('timer-echovald-12-start'),
             startSideButton: document.getElementById('sidetimer-echovald-12-start'),
             resetButton: document.getElementById('timer-echovald-12-reset'),
@@ -179,6 +180,7 @@ let echovald = {
             countdownSec: document.getElementById('numerical-sidetimer-echovald-12'),
             doCountdown: function() {countdown(this.status, this.key, this.cooldown, this.timeLabel, this.timeSideLabel, this.sidebox, this.countdownSec);},
         },
+        /*
         {   // [13] Speaker Outpost
             status: 0,
             key: 0,
