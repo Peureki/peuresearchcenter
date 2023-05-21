@@ -3618,6 +3618,7 @@ table.details th{
 	border: 1px solid var(--clr-border);
 	vertical-align: middle;
 	text-align: center;
+	cursor: pointer;
 }
 table.fishing th,
 table.fishing-fp th,
@@ -10702,137 +10703,41 @@ table.nodes td.nodes-cooldown{
 	========= NEW KAINENG CITY =========
 	====================================
 */
-#kaineng-1-box{ /* Elite Brotherhood (Baedal) */
-	top: 23%;
+#kaineng-1-box{ /* Repair Crew (N) */
+	top: 5%;
 	left: 54%;
 }
-#kaineng-2-box{ /* Technician (Baedal) */
-	top: 21%;
-	left: 78%;
-}
-#kaineng-3-box{ /* Servitor (Baedal) */
-	top: 83%;
-	left: 15%;
-}
-#kaineng-4-box{ /* Teleporter (Baedal) */
-	top: 55%;
-	left: 50%;
-}
-#kaineng-5-box{ /* Servitor (Bori) */
-	top: 29%;
-	left: 11%;
-}
-#kaineng-6-box{ /* Teleporter (Bori) */
-	top: 9%;
-	left: 31%;
-}
-#kaineng-7-box{ /* Volatile Sparks (Bori) */
-	top: 22%;
-	left: 41%;
-}
-#kaineng-8-box{ /* Repair Crew (Bori) */
-	top: 12%;
-	left: 56%;
-}
-#kaineng-9-box{ /* Elite Brotherhood (Bori) */
-	top: 31%;
-	left: 50%;
-}
-#kaineng-10-box{ /* Food Cart (Bori) */
-	top: 50%;
-	left: 50%;
-}
-#kaineng-11-box{ /* Volatile Sparks (Nahpui) */
-	top: 45%;
-	left: 12%;
-}
-#kaineng-12-box{ /* Servitor (Nahpui) */
-	top: 10%;
-	left: 21%;
-}
-#kaineng-13-box{ /* Teleporter (Nahpui) */
-	top: 21%;
-	left: 35%;
-}
-#kaineng-14-box{ /* Technicians (Nahpui) */
-	top: 15%;
+#kaineng-2-box{ /* Repair Crew (S) */
+	top: 75%;
 	left: 57%;
 }
-#kaineng-15-box{ /* Elite Brotherhood (Lut) */
-	top: 27%;
-	left: 52%;
+#kaineng-3-box{ /* Food Cart (N) */
+	top: 24%;
+	left: 54%;
 }
-#kaineng-16-box{ /* Technicians (Lut) */
-	top: 38%;
+#kaineng-4-box{ /* Food Cart (S) */
+	top: 69%;
 	left: 46%;
 }
-#kaineng-17-box{ /* Teleporter (Lut) */
-	top: 57%;
-	left: 46%;
+#kaineng-5-box{ /* Boat House */
+	top: 41%;
+	left: 81%;
 }
-#kaineng-18-box{ /* Servitor (Lut) */
-	top: 75%;
-	left: 36%;
-}
-#kaineng-19-box{ /* Servitor (Cobble) */
-	top: 10%;
-	left: 47%;
-}
-#kaineng-20-box{ /* Repair Crew (Cobble) */
-	top: 27%;
-	left: 31%;
-}
-#kaineng-21-box{ /* Volatile Sparks (Cobble) */
-	top: 63%;
-	left: 36%;
-}
-#kaineng-22-box{ /* Elite Brotherhood (Cobble) */
-	top: 46%;
-	left: 15%;
-}
-#kaineng-23-box{ /* Technician (Cobble) */
-	top: 66%;
-	left: 21%;
-}
-#kaineng-24-box{ /* Food Cart (Cobble) */
-	top: 27%;
-	left: 11%;
-}
-#kaineng-25-box{ /* Teleporter (Baedal) */
-	top: 55%;
-	left: 50%;
-}
-#kaineng-26-box{ /* Volatile Sparks (Gwan) */
-	top: 68%;
+#kaineng-6-box{ /* Aligators */
+	top: 34%;
 	left: 63%;
 }
-#kaineng-27-box{ /* Elite Brotherhood (Gwan) */
-	top: 69%;
-	left: 42%;
+#kaineng-7-box{ /* Naga Cages */
+	top: 8%;
+	left: 9%;
 }
-#kaineng-28-box{ /* Technicians (Gwan) */
-	top: 28%;
-	left: 34%;
+#kaineng-8-box{ /* Corvus */
+	top: 80%;
+	left: 83%;
 }
-#kaineng-29-box{ /* Servitor (Power, Up) */
-	top: 29%;
-	left: 30%;
-}
-#kaineng-30-box{ /* Servitor (Power, Down) */
-	top: 44%;
-	left: 56%;
-}
-#kaineng-31-box{ /* Servitor (Power, Down) */
-	top: 23%;
-	left: 40%;
-}
-#kaineng-32-box{ /* Servitor (Power, Down) */
-	top: 38%;
-	left: 43%;
-}
-#kaineng-33-box{ /* Servitor (Power, Down) */
-	top: 46%;
-	left: 81%;
+#kaineng-9-box{ /* Fisherman Daegu */
+	top: 86%;
+	left: 11%;
 }
 #de-1-box{ /* Jade Maw */
 	opacity: 0;

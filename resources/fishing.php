@@ -543,14 +543,14 @@
 				<table class = "fishing" id = "fishing-benchmarks">
 					<thead>
 						<tr>
-							<th> Map </th>
-							<th> Fishing Hole </th>
-							<th> Bait </th>
-							<th> Time </th>
-							<th> FP </th>
-							<th> Avg Nodes </th>
-							<th> Avg Time </th>
-							<th> Bench </th>
+							<th onclick = "sortTableByAlphabet('fishing-benchmarks', 0);"> Map </th>
+							<th onclick = "sortTableByAlphabet('fishing-benchmarks', 1);"> Fishing Hole </th>
+							<th onclick = "sortTableByAlphabet('fishing-benchmarks', 2);"> Bait </th>
+							<th onclick = "sortTableByAlphabet('fishing-benchmarks', 3);"> Time </th>
+							<th onclick = "sortTableByQuantity('fishing-benchmarks', 4);"> FP </th>
+							<th onclick = "sortTableByQuantity('fishing-benchmarks', 5);"> Avg Nodes </th>
+							<th onclick = "sortTableByQuantity('fishing-benchmarks', 6);"> Avg Time </th>
+							<th onclick = "sortTableByPrice('fishing-benchmarks', 7);"> Bench </th>
 						</tr>
 					</thead>
 					<tbody id = "bench-table-values">
@@ -578,14 +578,14 @@
 				<table class = "fishing" id = "catches">
 					<thead>
 						<tr>
-							<th> Region </th>
-							<th> Fishing Hole </th>
-							<th> Bait </th>
-							<th> Time </th>
-							<th> FP </th>
-							<th> Sample </th>
+							<th onclick = "sortTableByAlphabet('catches', 0);"> Region </th>
+							<th onclick = "sortTableByAlphabet('catches', 1);"> Fishing Hole </th>
+							<th onclick = "sortTableByAlphabet('catches', 2);"> Bait </th>
+							<th onclick = "sortTableByAlphabet('catches', 3);"> Time </th>
+							<th onclick = "sortTableByQuantity('catches', 4);"> FP </th>
+							<th onclick = "sortTableByQuantity('catches', 5);"> Sample </th>
 							<th> Drop Rates </th>
-							<th> Value </th>
+							<th onclick = "sortTableByPrice('catches', 7);"> Value </th>
 						</tr>
 					</thead>
 					<tbody id = "catch-table-values">
